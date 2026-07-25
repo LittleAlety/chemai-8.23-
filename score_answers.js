@@ -341,21 +341,9 @@ async function scoreAnswer(question, aiAnswer) {
   return { accuracy: 0, completeness: 0, source_usage: 0, clarity: 0, total: 0, brief_comment: '评分失败: 无法解析JSON响应' };
 }
 
-// ---- Chapter names for display ----
-const CHAPTER_NAMES = {
-  'ch1': '实验概述与背景',
-  'ch2': '化合物性质详解',
-  'ch3': '制备原理深度解析',
-  'ch4': '操作步骤完全指南',
-  'ch5': '配合物性质实验',
-  'ch6': '光化学性质',
-  'ch7': '晶体场理论',
-  'ch8': '安全规范与废液处理',
-  'ch9': '教学反思与改进',
-  'ch10': '扩展知识',
-  'ch11': '实验报告撰写规范',
-  'ch12': '常见实验故障排查'
-};
+// ---- Chapter names for display (从统一分类总集读取) ----
+const CATEGORIES_JSON = readJSON(path.join(__dirname, 'data', 'categories.json'));
+const CHAPTER_NAMES = CATEGORIES_JSON.chapters || {};
 
 // ===================== MAIN EXECUTION =====================
 async function main() {
@@ -601,13 +589,27 @@ async function main() {
     };
   }
 
-  const reportPath = path.join(__dirname, 'score_report_round18.json');
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+  // 写入总集 reports_master.json
+  const masterPath = path.join(__dirname, 'reports_master.json');
+  let master = { version: 'unified', runs: [] };
+  if (fs.existsSync(masterPath)) {
+    try { master = JSON.parse(fs.readFileSync(masterPath, 'utf8')); } catch (e) { }
+  }
+  const runName = 'score-round' + ROUND;
+  master.runs = master.runs.filter(r => r.name !== runName);
+  master.runs.push({
+    name: runName,
+    description: '评分报告 第' + ROUND + '轮',
+    generatedAt: new Date().toISOString(),
+    data: report
+  });
+  master.summary = { ...(master.summary || {}), lastScoreRound: ROUND, lastUpdated: new Date().toISOString() };
+  fs.writeFileSync(masterPath, JSON.stringify(master, null, 2), 'utf8');
 
   console.log('');
   console.log('='.repeat(70));
   console.log('AVERAGE SCORE: ' + avgScore + ' / 100');
-  console.log('Report saved to: ' + reportPath);
+  console.log('Report saved to: reports_master.json (' + runName + ')');
   console.log('='.repeat(70));
 }
 

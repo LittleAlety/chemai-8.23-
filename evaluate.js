@@ -475,10 +475,24 @@ for (const [type, data] of Object.entries(results.byType).sort((a, b) => b[1].to
   console.log('  ' + type + ': ' + data.correct + '/' + data.total + ' (' + pct + '%) ' + '█'.repeat(Math.round(data.correct / data.total * 20)));
 }
 
-const reportPath = path.join(__dirname, 'eval_report_round' + round + '.json');
-fs.writeFileSync(reportPath, JSON.stringify(results, null, 2), 'utf8');
+// 写入总集 reports_master.json
+const masterPath = path.join(__dirname, 'reports_master.json');
+let master = { version: 'unified', runs: [] };
+if (fs.existsSync(masterPath)) {
+  try { master = JSON.parse(fs.readFileSync(masterPath, 'utf8')); } catch (e) { }
+}
+const runName = 'eval-round' + round;
+master.runs = master.runs.filter(r => r.name !== runName);
+master.runs.push({
+  name: runName,
+  description: '评测报告 第' + round + '轮',
+  generatedAt: new Date().toISOString(),
+  data: results
+});
+master.summary = { ...(master.summary || {}), lastEvalRound: parseInt(round), lastUpdated: new Date().toISOString() };
+fs.writeFileSync(masterPath, JSON.stringify(master, null, 2), 'utf8');
 console.log('');
-console.log('Report saved to:', reportPath);
+console.log('Report saved to: reports_master.json (' + runName + ')');
 console.log('');
 console.log(parseFloat(accuracy) >= 90 ? '✓ ACCURACY >= 90% - TRAINING COMPLETE' : '✗ ACCURACY < 90% - NEEDS MORE TRAINING');
 process.exit(parseFloat(accuracy) >= 90 ? 0 : 1);

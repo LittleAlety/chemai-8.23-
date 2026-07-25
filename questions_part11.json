@@ -1,8 +1,0 @@
-[
-{"q":"第二步氧化反应中为何要加K2C2O4？不加会有什么后果？","category":"反应原理","difficulty":"中等","expected_faq_title":"氧化时为何加草酸钾","corpus_ref":"manual ch3-s3","answer_key_points":"K2C2O4提供C2O42-与生成的Fe3+立即配位形成[Fe(C2O4)3]3-保护Fe3+不被进一步水解；不加则Fe3+全部水解为Fe(OH)3→后续需要更多草酸且产率降低；同时提供K+作为外界阳离子"},
-{"q":"第四步结晶中过饱和度Δμ=RTln(C/Csat)的化学意义是什么？如何控制过饱和度获得优质晶体？","category":"反应原理","difficulty":"较难","expected_faq_title":"溶剂替换法结晶原理","corpus_ref":"manual ch3-s5","answer_key_points":"Δμ>0结晶自发进行；Δμ越大成核驱动力越大；过高→爆发成核→细小晶体；适中→晶核生长为主→大晶体；控制Δμ：控制溶液浓度/乙醇加入速度/温度；最佳过饱和度理论指导实践生长速率与成核速率平衡"},
-{"q":"产物的颜色来自d-d跃迁。d-d跃迁为什么能在可见光区被观测到？Δo的数量级是多少？","category":"结构表征","difficulty":"中等","expected_faq_title":"颜色与dd跃迁","corpus_ref":"manual ch7-s4","answer_key_points":"Δo≈14000-17000cm-1→λ=hc/Δo≈590-710nm在可见光区(橙红光)；振动耦合部分解除Laporte禁阻→ε≈1-100L/(mol·cm)；自旋允许(高自旋d5 ΔS=0)→吸收带明显；颜色翠绿为互补色"},
-{"q":"如何通过粉末XRD图谱确定产物纯度？杂质K2C2O4或K2SO4的衍射峰在什么位置？","category":"结构表征","difficulty":"较难","expected_faq_title":"结构表征方法概述","corpus_ref":"corpus id:40,43,44","answer_key_points":"与标准PDF卡片(产物)比对衍射峰位置和相对强度；K2C2O4最强峰约2θ=18°/25°等；K2SO4最强峰约2θ=21°/29°/30°/43°等；杂质衍射峰独立出现不重叠；Rietveld精修定量各物相含量"},
-{"q":"草酸根的配位模式有哪几种？各有什么结构特点和应用？","category":"配位理论","difficulty":"中等","expected_faq_title":"草酸根配位模式","corpus_ref":"manual ch10-s1","answer_key_points":"①螯合双齿(最常见)一个C2O42-与同一金属离子配位形成五元螯合环→单体配合物；②桥连双齿一个C2O42-连接两个金属离子→多核配合物/配位聚合物/分子磁体；③单齿(少见)仅用一个O原子配位→需特殊位阻条件；丰富的配位模式导致结构多样性"},
-{"q":"配合物[Fe(C2O4)3]3-中是否存在反馈π键？从实验证据(键长/振动频率/稳定性)如何论证？","category":"配位理论","difficulty":"较难","expected_faq_title":"配位键本质","corpus_ref":"manual ch2-s3","answer_key_points":"存在反馈π键(程度较弱)：Fe2+t2g填满d轨道→草酸根π*空轨道→π反馈→键级增强；证据：①Fe-O键长2.00-2.05Å短于纯σ配位键预期(约2.1Å)；②IR ν(Fe-O)频率偏高(580cm-1)说明键强度增强；③Kf=1.6×1020通过π反馈得到额外稳定化"}
-]

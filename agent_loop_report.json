@@ -5,37 +5,37 @@
       "generated": 200,
       "valid": 180,
       "invalid": 20,
-      "avgScore": 63.4,
-      "avgAccuracy": 67.5,
-      "avgCompleteness": 58.3,
-      "avgManualCompliance": 61.7,
-      "avgSafety": 95.3,
-      "generatedAt": "2026-08-06T11:24:41.305Z"
+      "avgScore": 64,
+      "avgAccuracy": 68.3,
+      "avgCompleteness": 59,
+      "avgManualCompliance": 62,
+      "avgSafety": 95.6,
+      "generatedAt": "2026-08-06T11:57:15.679Z"
     },
     {
       "round": 2,
       "generated": 200,
       "valid": 170,
       "invalid": 30,
-      "avgScore": 72,
-      "avgAccuracy": 76.8,
-      "avgCompleteness": 68.1,
-      "avgManualCompliance": 69.3,
-      "avgSafety": 98.7,
-      "generatedAt": "2026-08-06T11:36:34.274Z"
+      "avgScore": 71.7,
+      "avgAccuracy": 76.2,
+      "avgCompleteness": 67.7,
+      "avgManualCompliance": 68.7,
+      "avgSafety": 98.6,
+      "generatedAt": "2026-08-06T11:57:24.990Z"
     },
     {
       "round": 3,
       "generated": 200,
       "valid": 179,
       "invalid": 21,
-      "avgScore": 63.4,
-      "avgAccuracy": 65.9,
-      "avgCompleteness": 60.1,
-      "avgManualCompliance": 61.8,
-      "avgSafety": 96.6,
-      "generatedAt": "2026-08-06T11:49:03.399Z"
+      "avgScore": 64.1,
+      "avgAccuracy": 66.7,
+      "avgCompleteness": 60.8,
+      "avgManualCompliance": 62.3,
+      "avgSafety": 96.3,
+      "generatedAt": "2026-08-06T11:57:25.004Z"
     }
   ],
-  "generatedAt": "2026-08-06T11:49:03.409Z"
+  "generatedAt": "2026-08-06T11:57:25.005Z"
 }

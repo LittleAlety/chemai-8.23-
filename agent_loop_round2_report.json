@@ -3,10 +3,10 @@
   "generated": 200,
   "valid": 170,
   "invalid": 30,
-  "avgScore": 72,
-  "avgAccuracy": 76.8,
-  "avgCompleteness": 68.1,
-  "avgManualCompliance": 69.3,
-  "avgSafety": 98.7,
-  "generatedAt": "2026-08-06T11:36:34.274Z"
+  "avgScore": 71.7,
+  "avgAccuracy": 76.2,
+  "avgCompleteness": 67.7,
+  "avgManualCompliance": 68.7,
+  "avgSafety": 98.6,
+  "generatedAt": "2026-08-06T11:57:24.990Z"
 }

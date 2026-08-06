@@ -1,2 +1,5 @@
 ﻿*.mp4
 *.mp4
+.claude/
+.pipeline_checkpoint.json
+.pipeline.log

@@ -12,7 +12,11 @@ const KB = readJSON(path.join(__dirname, 'data', 'kb.json'));
 const FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
 const CORPUS = readJSON(path.join(__dirname, 'data', 'corpus.json'));
 
-const API_KEY = 'sk-cd6926d91adf4252a2529a9f9f3f1aef';
+const API_KEY = process.env.DEEPSEEK_KEY || '';
+if (!API_KEY) {
+  console.error('缺少 DEEPSEEK_KEY 环境变量，请先设置后运行');
+  process.exit(1);
+}
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 // ===== Simplified local search (same logic as assistant.html) =====

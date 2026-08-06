@@ -476,7 +476,7 @@ async function init(){
 }
 async function loadCorpus(){
   try{
-    const r=await fetch('data/corpus.json',{cache:'no-store'});
+    const r=await fetch('data/corpus.json',{cache:'default'});
     if(!r.ok)throw new Error('HTTP '+r.status);
     const d=await r.json();
     baseEntries=Array.isArray(d.entries)?d.entries:[];
@@ -734,7 +734,7 @@ function makeEntry(file,text){
 async function loadKG(){
   if(kgNodes)return kgNodes;
   try{
-    const r=await fetch('data/kg.json',{cache:'no-store'});
+    const r=await fetch('data/kg.json',{cache:'default'});
     if(!r.ok)throw 0;
     const d=await r.json();
     kgNodes=Array.isArray(d.nodes)?d.nodes:[];

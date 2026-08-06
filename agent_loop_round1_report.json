@@ -1,0 +1,12 @@
+{
+  "round": 1,
+  "generated": 200,
+  "valid": 180,
+  "invalid": 20,
+  "avgScore": 63.4,
+  "avgAccuracy": 67.5,
+  "avgCompleteness": 58.3,
+  "avgManualCompliance": 61.7,
+  "avgSafety": 95.3,
+  "generatedAt": "2026-08-06T11:24:41.305Z"
+}

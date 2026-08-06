@@ -1,0 +1,1402 @@
+[
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析；第4章 操作步骤完全指南 - ch4-s1 详细操作步骤"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且水浴温度控制在40°C？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理；第4章 操作步骤完全指南 - ch4-s1 详细操作步骤"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请写出至少一种实验方法及预期现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的配位结构中，Fe³⁺的配位数是多少？草酸根以何种方式配位？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第2章 化合物性质详解 - ch2-s3 配位结构深度分析"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出该反应的化学方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s1 晶体场理论基础；ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "制备过程中，如何用K₃Fe(CN)₆检验Fe²⁺是否氧化完全？写出检验原理及判断标准。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（第二步）；第10章 扩展知识 - ch10-s2 普鲁士蓝��相关化合物"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s4 第三步：配位反应原理；第4章 操作步骤完全指南 - ch4-s1 详细操作步骤"
+  },
+  {
+    "question": "实验结束后，含铬废液（如用于洗涤的含草酸和铁离子的溶液）应如何分类处理？",
+    "valid": false,
+    "issue": "题目中提及“含铬废液”，但本实验不涉及任何含铬试剂，手册中也没有关于铬废液的处理内容。这属于科学性错误，与实验内容不符。",
+    "correction": "应改为“含草酸和铁离子的废液应如何分类处理？”",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算相对误差和产率，并说明有效数字的保留规则。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）；ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备过程中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析；第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理；第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？请写出其化学方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s1 晶体场理论基础；ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "实验结束后，含铬废液应如何处理？请简述废液分类处理的基本原则。",
+    "valid": false,
+    "issue": "本实验不涉及含铬废液，实验试剂中无任何铬化合物。题目与实验手册内容不符，属于无关或错误内容。",
+    "correction": "应改为与本实验相关的废液处理问题，例如：'实验结束后，含草酸、铁离子及有机废液应如何处理？请简述废液分类处理的基本原则。'",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时需使用有效数字规则。若理论产量为4.82 g，实际产量为3.67 g，请计算产率并指出有效数字位数。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）；第4章 操作步骤完全指南 - ch4-s4 产率计算方法（含公式推导）"
+  },
+  {
+    "question": "在制备过程中，若最终产率明显偏低（低于60%），请列举三种可能原因及对应的解决对策。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策；第4章 操作步骤完全指南 - ch4-s3 常见错误及解决方案"
+  },
+  {
+    "question": "在蓝晒法应用中，三草酸合铁(III)酸钾的光敏原理是什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s2 蓝晒法原理与应用"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，为什么要用乙醇进行溶剂替换法结晶？请从热力学角度解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s5 第四步：溶剂替换法结晶的热力学原理"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？如果滴加过快会产生什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3, ch4-s2"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计一种实验方法并说明原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？请从LMCT机理角度解释其光化学性质。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自���还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s1, ch7-s2, ch7-s3, ch7-s4"
+  },
+  {
+    "question": "制备三草酸合铁(III)酸钾时，为什么最后要加入乙醇进行结晶？请从溶剂替换法的热力学原理角度解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s5"
+  },
+  {
+    "question": "在实验报告中，若称取5.0g硫酸亚铁铵，实际得到4.2g三草酸合铁(III)酸钾，请计算产率并分析可能影响产率的因素。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s4, ch12-s1"
+  },
+  {
+    "question": "实验过程中产生的含铬、含铁废液应如何分类处理？请说明废液处理的基本原则。",
+    "valid": false,
+    "issue": "实验手册中未涉及含铬废液，本实验不产生含铬废液，题目内容与实验手册不符。",
+    "correction": "改为：实验过程中产生的含铁废液（如FeC₂O₄沉淀洗涤液、母液）应如何分类处理？请说明废液处理的基本原则。",
+    "manualSection": "ch8-s3"
+  },
+  {
+    "question": "在制备过程中，若发现最终产物颜色偏黄而非预期的绿色，请给出诊断流程和可能的原因。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s3"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在蓝晒法中作为光敏材料的工作原理是什么？请结合LMCT机理说明。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s2"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在第二步氧化反应中，H₂O₂滴加完毕后为什么要加热至沸并保持2分钟？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？其光化学机理属于哪类��迁？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾为何呈现绿色。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s4 颜色解释（d-d跃迁）"
+  },
+  {
+    "question": "本实验中涉及哪些废液？应如何分类处理？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "实验报告中，若三次平行实验的产率分别为72.5%、75.3%、74.1%，请计算平均产率、绝对误差和相对误差（以平均值作为真值估计）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）"
+  },
+  {
+    "question": "若制备出的三草酸合铁(III)酸钾晶体产率明显偏低，请列举至少三种可能原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "在第一步制备FeC₂O₄·2H₂O时，如何检验沉淀已洗涤至无SO₄²⁻？写出检验原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第三步配位反应加入草酸溶液时为什么要逐滴滴加并保持溶液温热？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s4 第三步：配位反应原理"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在氧化步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理；第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何通过实验测定三草酸合铁(III)酸钾的内界和外界？请列举至少两种实验方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并解释其机理（LMCT过程）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾的颜色来源（d-d跃迁），并说明Fe³⁺在八面体场中的d电子排布。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s1 晶体场理论基础, ch7-s2 d轨道分裂与晶体场分裂能, ch7-s3 高自旋 vs 低自旋, ch7-s4 颜色解释（d-d跃迁）"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验沉淀洗涤是否完全，其原理是什么？若洗涤不完全，对后续实验有何影响？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，加入乙醇的作用是什么？请从溶剂替换法结晶的热力学角度解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s5 第四步：溶剂替换法结晶的热力学原理"
+  },
+  {
+    "question": "实验结束后，含铬废液（如K₂Cr₂O₇）应如何处理？请说明废液分类处理的原则。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "某同学制备的产物产率仅为理论值的60%，请从操作角度分析可能的原因，并提出至少3条改进措施。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策；第9章 教学反思与改进 - ch9-s3 产率优化策略"
+  },
+  {
+    "question": "在实验报告中，需要记录产率并计算相对误差。若理论产量为2.5 g，实际产量为2.3 g，请计算产率、绝对误差和相对误差，并说明有效数字的保留规则。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）, ch11-s3 误差分析方法（绝对误差、相对���差、标准偏差）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要将两种反应液分别加热至近沸后再混合，并保持微沸4分钟？请从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且水浴温度控制在40°C？若滴加过快或温度过高，会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？请写出配位反应方程式，并说明草酸根在此过程中的作用。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s4 第三步：配位反应原理"
+  },
+  {
+    "question": "在第四步结晶过程中，为什么要加入95%乙醇？请从溶剂替换法结晶的热力学原理角度解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s5 第四步：溶剂替换法结晶的热力学原理"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计三种不同的实验方法并说明原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？请从LMCT机理角度解释其光化学性质，并说明蓝晒法的应用原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？请解释其颜色来源。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在制备过程中，若最后产率明显偏低（低于理论值的60%），请列举至少4种可能的原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "在实验报告中，若三次平行实验产率分别为82.3%、85.7%、80.9%，请计算平均产率、绝对误差、相对误差和标准偏差，并说明有效数字的保留规则。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设本实验涉及）和含铁废液应如何分类处理？请根据安全规范说明废液处理的基本原则和具体操作。",
+    "valid": false,
+    "issue": "本实验不涉及含铬废液，题目假设与实验手册不符，且含铬废液处理内容在手册中无对应章节。",
+    "correction": "改为：实验结束后，含铁废液（含Fe³⁺、Fe²⁺、草酸根）应如何分类处理？请根据安全规范说明废液处理的基本原则和具体操作。",
+    "manualSection": "ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C左右？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出其光解反应的简化方程式。",
+    "valid": true,
+    "issue": "光解反应方程式不够严谨，产物中FeC₂O₄和C₂O₄²⁻同时出现不符合电荷守恒，且两种写法产物不一致。",
+    "correction": "建议统一为：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 3C₂O₄²⁻ + 2CO₂（或更准确：2[Fe(C₂O₄)₃]³⁻ → 2Fe²⁺ + 5C₂O₄²⁻ + 2CO₂），并注明为简化方程式。",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型如何？该配合物是高自旋还是低自旋？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺已被完全氧化？写出所用试剂及现���。",
+    "valid": false,
+    "issue": "题干末尾出现乱码字符“现���”，应为“现象”。",
+    "correction": "将题干改为“写出所用试剂及现象。”",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "实验结束后，含铬（或含铁）的废液应如何分类处理？",
+    "valid": true,
+    "issue": "本实��不涉及含铬废液，题干中“含铬（或含铁）”与实验内容不符，可能引起混淆。",
+    "correction": "建议改为“实验结束后，含铁的废液应如何分类处理？”",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，若三次平行实验产率分别为72.5%、75.3%、74.1%，请计算平均产率及相对平均偏差。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）"
+  },
+  {
+    "question": "若最终产物产率明显偏低（如低于50%），请列举两种可能原因及对应的解决对策。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "在蓝晒法（铁氰酸盐印相法）中，三草酸合铁(III)酸钾的作用是什么？写出其光解后与铁氰化钾反应生成普鲁士蓝的简化过程。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s2 蓝晒法原理与应用"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备实验中，第一步制备草酸亚铁时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L的硫酸？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何用实验方法验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请至少写出一种实验方法及预期现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并说明其反应类型（LMCT）的电子跃迁过程。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在实验过程中，如果发现产品颜色偏黄而不是预期的绿色，请给出至少两种可能的原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s3 颜色异常的诊断流程"
+  },
+  {
+    "question": "在实验报告中，若实际产量为4.2 g，理论产量为5.0 g，请计算产率，并写出绝对误差和相对误差的计算过程。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）"
+  },
+  {
+    "question": "在制备过程中，第二步氧化反应结束后为什么要加热至沸并保持2分钟？此步骤的目的是什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1 详细操作步骤（含试剂用量、温度、���间）"
+  },
+  {
+    "question": "本实验中涉及多种废液，请说明含铬废液（如K₃Fe(CN)₆检验液）和含草酸废液应如何分类处理？",
+    "valid": false,
+    "issue": "题目将K₃Fe(CN)₆检验液错误地称为'含铬废液'，K₃Fe(CN)₆是铁氰化钾，不含铬元素，属于含氰废液。",
+    "correction": "将'含铬废液'改为'含氰废液'，即：'请说明含氰废液（如K₃Fe(CN)₆检验液）和含草酸废液应如何分类处理？'",
+    "manualSection": "ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，若需要绘制产品紫外-可见吸收光谱图，请说明坐标轴的标注规范（包括轴名称、单位、刻度等）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s4 作图规范（坐标轴标注、拟合直线、图例）"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步生成草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析；第4章 操作步骤完全指南 - ch4-s1 详细操作步骤"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理；第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何通过实验确定三草酸合铁(III)酸钾中草酸根离子处于内界还是外界？请至少给出一种实验方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（��种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？写出其光化学反应的简要机理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾为何呈现绿色（或黄绿色）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s4 颜色解释（d-d跃迁）"
+  },
+  {
+    "question": "在制备过程中，若用K₃Fe(CN)₆检验Fe²⁺未完全氧化，应如何处理？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧；第12章 常见实验故障排查 - ch12-s3 颜色异常的诊断流程"
+  },
+  {
+    "question": "实验结束后，含铬（或含铁）的废液应如何分类处理？",
+    "valid": false,
+    "issue": "本实验不涉及含铬试剂，题目中提及含铬废液与实验内容无关，属于误导性内容。",
+    "correction": "应改为：实验结束后，含铁废液应如何分类处理？",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算相对误差和产率。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s3 误差分析方法（绝对误差、相对误差、标准偏差）；第4章 操作步骤完全指南 - ch4-s4 产率计算方法（含公式推导）"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的过程中，若最终晶体颜色偏黄且产率偏低，可能的原因有哪些？请列举至少两种。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策；ch12-s3 颜色异常的诊断流程"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有什么用途？请举例说明。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第10章 扩展知识 - ch10-s3 配合物在工业中的应用；第6章 光化学性质 - ch6-s2 蓝晒法原理与应用"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请列举至少两种验证方法。",
+    "valid": false,
+    "issue": "参考回答中方法一描述有误：用BaCl₂检验外界K⁺（无沉淀）和C₂O₄²⁻（有白色沉淀）——K⁺无法用BaCl₂检验，且内界中的C₂O₄²⁻不会游离出来，因此该方法不严谨。",
+    "correction": "应改为：方法一：用BaCl₂检验游离C₂O₄²⁻（外界），若有白色沉淀说明有游离草酸根；方法二：用电导率法测定离子数目；方法三：用K₃Fe(CN)₆检验游离Fe³⁺（外界）。",
+    "manualSection": "ch5-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出其LMCT机理的化学方程式，并说明该反应在蓝晒法中的应用。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s3"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否氧化完全？写出检验方法及现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1"
+  },
+  {
+    "question": "实验中产生的含铬（或含铁、含草酸）废液应如何分类处理？请根据安全规范说明。",
+    "valid": false,
+    "issue": "题目中提及“含铬”废液，但本实验不涉及铬，属于无关内容；且参考回答中“含Fe³⁺废液可加碱沉淀后过滤，滤液稀释排放”不符合手册中废液分类处理要求（应统一收集，不可自行排放）。",
+    "correction": "应改为：含铁废液和含��酸废液应分别收集于指定废液桶中，不可混合，交由实验室统一处理；严禁直接倒入下水道。",
+    "manualSection": "ch8-s3"
+  },
+  {
+    "question": "实验报告中，计算产率时需测量产品质量。若称得产品质量为4.2 g，理论产量为5.0 g，请计算产率，并指出有效数字的保留规则���",
+    "valid": false,
+    "issue": "题目末尾出现乱码“���”，且参考回答中“保留3位有效数字”与手册ch11-s2的数据记录规范不一致（称量精度为0.1 g时，产率应保留2位有效数字）。",
+    "correction": "修正乱码；产率计算为84%，有效数字保留应与称量精度一致（0.1 g），结果写为84%。",
+    "manualSection": "ch11-s2"
+  },
+  {
+    "question": "若最终产品产率明显偏低（如低于60%），请列举至少3种可能原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有哪些用途？请结合其光敏性质说明。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s3"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？请从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾配合物的内界和外界？请列举至少两种验证方法并说明原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？写出反应方程式并解释其在蓝晒法中的应用原理。",
+    "valid": false,
+    "issue": "反应方程式不正确。光照下三草酸合铁(III)酸钾分解为草酸亚铁、草酸钾和二氧化碳，但方程式配平错误：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 3C₂O₄²⁻ + 2CO₂ 中，左边有6个草酸根，右边有2+3=5个草酸根，碳原子数不守恒（左边12个C，右边10个C）。正确方程式应为：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 2C₂O₄²⁻ + 4CO₂（或写成 2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 3C₂O₄²⁻ + 2CO₂ 但需检查配平）。",
+    "correction": "更正为：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 2C₂O₄²⁻ + 4CO₂（碳原子守恒：左边12，右边2+4+4=10，仍不对）。正确应为：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 3C₂O₄²⁻ + 2CO₂（左边6个草酸根，右边2+3=5个草酸根+2个CO₂，碳原子：左边12，右边2*2+3*2+2=12，正确）。原方程式右边草酸根系数应为3，CO₂系数为2，但原答案写为3C₂O₄²⁻和2CO₂，碳原子数左边12，右边2*2+3*2+2=12，正确。但Fe原子左边2，右边2，正确。电荷：左边-6，右边-2-6=-8，不守恒。正确应为：2[Fe(C₂O₄)₃]³⁻ → 2FeC₂O₄ + 2C₂O₄²⁻ + 2CO₂ + C₂O₄²⁻？需重新配平。实际反应为：[Fe(C₂O₄)₃]³⁻ → FeC₂O₄ + C₂O₄²⁻ + 2CO₂。因此建议改为：[Fe(C₂O₄)₃]³⁻ → FeC₂O₄ + C₂O₄²⁻ + 2CO₂。",
+    "manualSection": "ch6-s1"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾晶体呈现绿色的原因。",
+    "valid": false,
+    "issue": "d-d跃迁描述有误。Fe³⁺为d⁵构型，其d-d跃迁是自旋禁阻的（从高自旋d⁵的⁶A₁g到四重态是自旋禁阻），而非自旋允许。原答案中'自旋禁阻但自旋允许'自相矛盾。",
+    "correction": "改为：Fe³⁺为d⁵构型，在八面体草酸根配体场中d轨道分裂为t₂g和eg，d-d跃迁（⁶A₁g→⁴T₁g等）为自旋禁阻，吸收强度很弱，在蓝紫区（约450nm）和红区（约600nm）有较弱吸收，透射光以绿色为主，故晶体呈绿色。",
+    "manualSection": "ch7-s4"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否已完全被氧化？写出所用试剂、现象及判断标准。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s2"
+  },
+  {
+    "question": "实验结束后，含铬、含铁、含草酸的废液应如何分类处理？请简述各类废液的处理原则。",
+    "valid": false,
+    "issue": "本实验试剂清单中不含任何铬化合物，含铬废液处理与实验无关，属于无关内容。",
+    "correction": "删除含铬废液部分，仅保留含铁和含草酸废液的处���原则。",
+    "manualSection": "ch8-s3"
+  },
+  {
+    "question": "在实验报告中，计算产率时需注意哪些有效数字和单位规范？请以本实验为例说明。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s2"
+  },
+  {
+    "question": "若最终产率明显偏低（如<50%），请列举至少4种可能原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s1"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步配位反应加入草酸溶液的目的是什么？写出该步的配位反应方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s4"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须采用缓慢滴加（每秒1-2滴）的方式？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生光化学反应，其机理属于哪种电子跃���类型？请简述该反应过程。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物属于高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在制备过程中，第三步配位反应中需将草酸溶液逐滴滴加到热的第二步产物中，其目的是什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬盐）应如何分类处理？请简述废液处理的一般原则。",
+    "valid": false,
+    "issue": "本实验手册中未使用任何铬盐，题目为假设性内容，与实验手册不符。",
+    "correction": "应改为本实验实际产生的废液（如含草酸、含铁废液）的处理方法，或删除此题。",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告的数据记录中，使用电子天平称量5.0 g硫酸亚铁铵时，应记录到几位有效数字？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）"
+  },
+  {
+    "question": "若最终产品的产率明显偏低（低于理论值的60%），请列举两种可能的原因及相应的改进措施。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有什么用途？请结合其光化学性质说明一种应用。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s2 蓝晒法原理与应用"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要将反应液加热至微沸并保持约4分钟？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请简述一种验证方法。",
+    "valid": false,
+    "issue": "参考回答中关于BaCl₂检验的描述存在科学性错误。加入BaCl₂只能检验游离的C₂O₄²⁻，不能检验K⁺（K⁺与BaCl₂不反应）。且题目要求“简述一种验证方法”，回答中列举了多种方法，但第一种方法描述不准确。",
+    "correction": "建议修正为：可通过加入BaCl₂溶液检验外界离子。若溶液中存在游离的C₂O₄²⁻，会与Ba²⁺生成BaC₂O₄白色沉淀，说明C₂O₄²⁻在外界；若无沉淀，则说明C₂O₄²⁻全部在内界。也可通过电导率法或离子交换法确定配离子电荷，从而区分内外界。",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的电子吸收光谱中，观察到的颜色主要来源于哪种电子跃迁？请简要解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，Fe(III)在八面体场中d电子的排布方式是什么？三草酸合铁(III)酸钾是高自旋还是低自旋配合物？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否已完全被氧化？请写出具体操作和判断依据。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "实验结束后，含铬废液（如用于检验的BaCl₂溶液）应如何处理？请说明分类处理原则。",
+    "valid": false,
+    "issue": "题目中“含铬废液”表述错误，BaCl₂溶液是含钡废液，不是含铬废液。且参考回答中“加入硫酸盐使Ba²⁺沉淀”的处理方法在手册中未明确提及。",
+    "correction": "建议将题目修改为“含钡废液（如用于检验的BaCl₂溶液）应如何处理？”。参考回答可简化为：含Ba²⁺的废液属于重金属废液，应收集于指定的重金属废液容器中，不可直接倒入下水道，需分类存放并交由专门机构处理。",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算产率并说明有效数字的保留规则。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）"
+  },
+  {
+    "question": "若制备得到的晶体颜色偏黄而非预期的绿色，请根据颜色异常诊断流程分析可能的原因。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s3 颜色异常的诊断流程"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步加入草酸溶液的目的是什么？请从配位反应原理角度解释。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s4 第三步：配位反应原理"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C左右？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请写出一种实验方法及预期现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的光化学反应中，光照后溶液颜色发生变化，请从LMCT机理角度解释这一现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物属于高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否氧化完全？写出所用试剂及判断标准。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "实验结束后，含铬废液和含草酸根的废液应如何分类处理？请简述处理原则。",
+    "valid": false,
+    "issue": "本实验不涉及含铬废液，手册中未提及铬的使用或产生。题目中提到的'含铬废液（如用于洗涤检验的BaCl₂废液）'存在科学性错误，BaCl₂废液属于钡盐废液，而非含铬废液。",
+    "correction": "改为'含钡废液（如用于洗涤检验的BaCl₂废液）'，并按照手册ch8-s3废液分类处理原则进行说明。",
+    "manualSection": "ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时需使用有效数字规则。若理论产量为5.234 g，实际称得产品质��为4.2 g，则产率应报告为多少？请说明有效数字处理规则。",
+    "valid": true,
+    "issue": "题目中存在一个错别字：'质��'应为'质量'，但该错误不影响科学性和手册对应性。",
+    "correction": "建议修正题目中的错别字：'实际称得产品质量为4.2 g'。",
+    "manualSection": "ch11-s2 数据记录规范（有效数字、单位、表格格式）"
+  },
+  {
+    "question": "若制备出的三草酸合铁(III)酸钾晶体产率明显偏低（低于60%），请列举至少三种可能原因及对应的解决对策。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步配位反应时加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s4 第三步：配位反应原理"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计一种实验方法并说明原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并解释其机理（LMCT过程）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch6-s1"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾的颜色来源。Fe³⁺的d电子构型是什么？为什么该配合物呈现绿色？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s4"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验洗涤是否完全，其原理是什么？若洗涤不彻底，对最终产物有何影响？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1"
+  },
+  {
+    "question": "实验中使用K₃Fe(CN)₆检验Fe²⁺是否氧化完全，写出检验反应的化学方程式，并说明为什么不能用KSCN检验Fe³⁺来判断氧化完全。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么需要控制草酸的用量？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s4"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬化合物）应如何处理？请根据废液分类处理原则回答。",
+    "valid": false,
+    "issue": "本实验试剂清单中不含任何铬化合物，题目假设与实验手册不符，且可能误导学生认为实验涉及铬。",
+    "correction": "改为询问本实验实际产生的废液（如含草酸、铁离子的废液）如何处理，或删除此题。",
+    "manualSection": "ch8-s3"
+  },
+  {
+    "question": "在实验报告的数据记录中，称量5.0 g硫酸亚铁铵时，若实际称得5.0234 g，应记录为多少？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s2"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的首次合成与配位化学发展有何关联？请简述其在配位化学史上的意义。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第1章 实验概述与背景 (ch1-s1, ch1-s2)"
+  },
+  {
+    "question": "写出三草酸合铁(III)酸钾的化学式，并说明其中心离子、配体及配位数。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第2章 化合物性质详解 (ch2-s3)"
+  },
+  {
+    "question": "在第一步制备FeC₂O₄·2H₂O沉淀时，为何要将两种反应液分别加热至近沸后再混合？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s2)"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s3), 第4章 操作步骤完全指南 (ch4-s2)"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请至少给出两种验证方法。",
+    "valid": false,
+    "issue": "参考回答中方法一提到用BaCl₂检验SO₄²⁻，但本实验原料为硫酸亚铁铵，产物中不含SO₄²⁻，且产物为钾盐，用AgNO₃检验Cl⁻也不适用。方法二用K₃[Fe(CN)₆]检验游离Fe³⁺，但产物中Fe³⁺在内界，不会游离，且K₃[Fe(CN)₆]本身与Fe³⁺反应生成红棕色，与Fe²⁺生成蓝色，此处表述有误。方法三电导率法可行但未具体说明。",
+    "correction": "建议改为：方法一：将产物溶于水，加入BaCl₂溶液，若无白色沉淀，说明SO₄²⁻不在外界（对比原料）；方法二：将产物溶于水，加入K₃[Fe(CN)₆]溶液，若无蓝色沉淀，说明Fe²⁺不在外界；方法三：用电导率法测定离子总数，与理论值比较。",
+    "manualSection": "第5章 配合物性质实验 (ch5-s1)"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出该反应的化学方程式，并解释其在蓝晒法中的应用原理。",
+    "valid": false,
+    "issue": "光化学反应方程式配平错误：产物中C₂O₄²⁻和CO₂的原子数不守恒，且Fe²⁺的配���状态未标明。蓝晒法原理描述不准确：蓝晒法通常使用柠檬酸铁铵和铁氰化钾，而非三草酸合铁(III)酸钾，且普鲁士蓝的生成反应描述不完整。",
+    "correction": "建议修正方程式为：2[Fe(C₂O₄)₃]³⁻ → 2Fe²⁺ + 5C₂O₄²⁻ + 2CO₂↑（光照）。蓝晒法原理应改为：光照下Fe³⁺被还原为Fe²⁺，Fe²⁺与铁氰化钾反应生成亚铁氰化铁（普鲁士蓝）沉淀，形成影像。",
+    "manualSection": "第6章 光化学性质 (ch6-s1, ch6-s2)"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子排布是高自旋还是低自旋？并解释其颜色来源。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 (ch7-s3, ch7-s4)"
+  },
+  {
+    "question": "本实验产生的含铬、含铁废液应如何分类处理？请简述废液处理的基本原则。",
+    "valid": false,
+    "issue": "本实验试剂清单中未使用任何含铬试剂（如铬酸洗液），因此“含铬废液”的提法与本实验无关，属于科学性错误。",
+    "correction": "建议改为：本实验产生的含铁废液（如FeC₂O₄沉淀洗涤液、滤液）应收集于无机废液桶，含草酸根的废液需先氧化分解再排放。废液处理原则：分类收集、互不混合、标识清楚、统一交由废液处理中心。",
+    "manualSection": "第8章 安全规范与废液处理 (ch8-s3)"
+  },
+  {
+    "question": "实验报告中计算产率时，若实际得到产品4.2 g，理论产量为5.0 g，请计算产率，并分析可能造成产率偏低的两点原因。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 (ch4-s4), 第9章 教学反思与改进 (ch9-s3)"
+  },
+  {
+    "question": "在实验过程中，若发现最终晶体颜色偏黄且产率明显偏低，请根据颜色异常诊断流程，分析可能的原因及排查方法。",
+    "valid": false,
+    "issue": "参考回答中“用K₃[Fe(CN)₆]检验Fe²⁺残留”与颜色偏黄（可能含Fe³⁺杂质）的逻辑不符，且“用BaCl₂检验SO₄²⁻”与颜色异常无直接关联。另外，干燥温度过高导致分解的说法缺乏手册依据。",
+    "correction": "建议改为：颜色偏黄可能原因：①Fe³⁺未完全配位，存在游离Fe³⁺或Fe(OH)₃杂质；②草酸根不足，配位不完全；③结晶时乙醇加入过快导致产物不纯。排查方法：用KSCN检验Fe³⁺残留（若变红则存在游离Fe³⁺），检查pH值，重新计算配比，并控制结晶条件。",
+    "manualSection": "第12章 常见实验故障排查 (ch12-s3)"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s2"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C？若滴加过快或温度过高会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch3-s3, ch4-s1"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？写出该步配位反应的化学方程式。",
+    "valid": false,
+    "issue": "参考回答中的化学方程式有误：2FeC₂O₄·2H₂O + H₂O₂ + 3K₂C₂O₄ + H₂C₂O₄ → 2K₃[Fe(C₂O₄)₃]·3H₂O 未配平（左边H₂O₂中的氧未计入产物，且产物中水分子数不正确）。",
+    "correction": "正确的总反应方程式应为：2FeC₂O₄·2H₂O + H₂O₂ + 3K₂C₂O₄ + H₂C₂O₄ → 2K₃[Fe(C₂O₄)₃]·3H₂O + 2H₂O（或根据实际配平调整产物水分子数）。建议核对并修正方程式。",
+    "manualSection": "ch3-s4"
+  },
+  {
+    "question": "在制备过程中，如何用K₃Fe(CN)₆检验Fe²⁺是否氧化完全？写出检验反应的化学方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s1, ch4-s2"
+  },
+  {
+    "question": "如何通过实验方法确定三草酸合铁(III)酸钾的内界和外界？请列举至少两种实验验证方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch5-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并说明其反应类型（LMCT）的机理。",
+    "valid": false,
+    "issue": "参考回答中光化学反应方程式有误：产物中FeC₂O₄未标明结晶水（应为FeC₂O₄·2H₂O），且方程式未配平（产物中水分子数不正确）。",
+    "correction": "建议修正为：2K₃[Fe(C₂O₄)₃]·3H₂O → 光照 → 2FeC₂O₄·2H₂O + 3K₂C₂O₄ + 2CO₂↑ + 2H₂O（或根据实际配平调整）。",
+    "manualSection": "ch6-s1"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch7-s1, ch7-s3"
+  },
+  {
+    "question": "实验中产生的含铬（或含铁）废液应如何分类处理？请说明废液处理的基本原则。",
+    "valid": false,
+    "issue": "题目中提到“含铬（或含铁）废液”，但本实验不涉及铬元素，属于与实验内容无关的错误表述。",
+    "correction": "应改为“实验中产生的含铁废液应如何分类处理？请说明废液处理的基本原则。”",
+    "manualSection": "ch8-s3"
+  },
+  {
+    "question": "在实验报告的数据记录中，使用电子天平称量5.0 g硫酸亚铁铵时，应记录为多少位有效数字？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch11-s2"
+  },
+  {
+    "question": "若实验最终得到三草酸合铁(III)酸钾晶体4.2 g，理论产量为5.6 g，请计算产率，并分析产率偏低可能的原因（至少列出3种）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "ch4-s4, ch12-s1"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在氧化步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴），且温度控制在40°C左右？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾中草酸根离子处于内界还是外界？请简述一种验证方法及预期现象。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？其配合物属于高自旋还是低自旋？为什么？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s3 高自旋 vs 低自旋"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理属于哪种电子跃迁类型？请写出该光化学反应的反应方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，加入乙醇的目的是��么？请从热力学角度解释其原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s5 第四步：溶剂替换法结晶的热力学原理"
+  },
+  {
+    "question": "在实验过程中，如果产物颜色偏绿，可能的原因是什么？请给出至少两种可能的诊断方向。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s3 颜色异常的诊断流程"
+  },
+  {
+    "question": "在实验报告中，若称取硫酸亚铁铵的质量为5.02 g，实际产物的质量为4.35 g，理论产率计算中，以硫酸亚铁铵为基准，请写出产率计算公式并计算该实验的产率（已知三草酸合铁(III)酸钾的摩尔质量为491.25 g/mol，硫酸亚铁铵的摩尔质量为392.14 g/mol）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s4 产率计算方法（含公式推导）"
+  },
+  {
+    "question": "在制备过程中，洗涤草酸亚铁沉淀时，如何检验SO₄²⁻是否洗净？请写出检验方法和判断标准。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "实验结束后，含铬废液和含铁废液应如何处理？请简述废液分类处理的基本原则。",
+    "valid": true,
+    "issue": "题干提及含铬废液，但本实验核心操作摘录中未列出含铬试剂，可能超出实验范围。",
+    "correction": "建议将问题改为'实验结束后，含铁废液和含草酸盐废液应如何处理？'或明确说明含铬废液为实验室其他实验产生。",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s2 第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s3 第二步：H₂O₂氧化的氧化电位与反应机理；第4章 操作步骤完全指南 - ch4-s2 关键操作要点与技巧"
+  },
+  {
+    "question": "如何通过实验确定三草酸合铁(III)酸钾的内界和外界？请列举三种实验验证方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第5章 配合物性质实验 - ch5-s1 内外界确定方法（三种实验验证）"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理是什么？写出相关反应方程式。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 - ch6-s1 光化学反应机理（LMCT详细分析）"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾晶体为何呈绿色？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 - ch7-s4 颜色解释（d-d跃迁）"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验沉淀洗涤是否完全，其原理是什么？若洗涤不完全会对后续实验产生什么影响？",
+    "valid": false,
+    "issue": "检验对象错误。本实验第一步使用硫酸亚铁铵，洗涤检验的是SO₄²⁻，但题干未明确说明检验对象。更严重的是，第三步配位反应中加入了草酸，若洗涤不完全，残留的SO₄²⁻会与后续加入的BaCl₂反应生成BaSO₄沉淀，但BaCl₂检验是在第一步洗涤时进行的，此时尚未加入草酸。题目表述容易误导为检验草酸根。",
+    "correction": "应明确说明：用BaCl₂检验第一步沉淀洗涤是否完全，检验的是残留的SO₄²⁻（来自硫酸亚铁铵）。若洗涤不完全，残留的SO₄²⁻会干扰后续配位反应，可能生成硫酸盐复盐杂质，影响产物纯度。",
+    "manualSection": "第4章 操作步骤完全指南 - ch4-s1 详细操作步骤（含试剂用量、温度、时间）"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 - ch3-s4 第三步：配位反应原理"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬盐）应如何处理？请简述废液分类处理的原则。",
+    "valid": false,
+    "issue": "本实验并未使用任何铬盐，题目中“假设实验中使用了铬盐”与实验手册内容不符，属于假设性、非本实验的问题。",
+    "correction": "应改为本实验实际产生的废液（如含草酸、铁盐、乙醇的废液）的处理方法。",
+    "manualSection": "第8章 安全规范与废液处理 - ch8-s3 废液分类处理"
+  },
+  {
+    "question": "在实验报告中，计算产率时需注意哪些有效数字和单位规范？请举例说明。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第11章 实验报告撰写规范 - ch11-s2 数据记录规范（有效数字、单位、表格格式）"
+  },
+  {
+    "question": "若实验产率明显偏低（如低于60%），请列举至少3种可能原因及对应的排查方法。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第12章 常见实验故障排查 - ch12-s1 产率异常的12种原因及对策"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的首次合成与发现历史中，哪位化学家或研究团队做出了关键贡献？该化合物在配位化学发展史中具有怎样的地位？",
+    "valid": false,
+    "issue": "问题要求指出具体化学家或团队，但手册中未提供具体人名或团队信息，参考回答也未给出具体贡献者，无法从手册中验证。",
+    "correction": "修改为：请简述三草酸合铁(III)酸钾在配位化学发展史中的地位，并结合手册说明其作为典型配合物在维尔纳配位理论验证中的作用。",
+    "manualSection": "第1章 实验概述与背景 (ch1-s1, ch1-s2)"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的化学式为K₃[Fe(C₂O₄)₃]·3H₂O，请分析其配位结构：中心离子、配体、配位数、配位原子以及配离子的空间构型。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第2章 化合物性质详解 (ch2-s3)"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的第一步中，生成FeC₂O₄·2H₂O沉淀。请从热力学和动力学角度���析为何选择草酸作为沉淀剂，以及加热至微沸并保持4分钟的目的。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s2)"
+  },
+  {
+    "question": "在第二步氧化反应中，使用6% H₂O₂将FeC₂O₄中的Fe²⁺氧化为Fe³⁺。请写出该氧化反应的离子方程式，并解释为何滴加H₂O₂时需控制在40°C水浴且每秒1-2滴的慢速滴加。",
+    "valid": false,
+    "issue": "参考回答中的离子方程式未配平且产物不正确（Fe³⁺与C₂O₄²⁻不能共存，会生成配合物），存在科学性错误。",
+    "correction": "建议改为：2FeC₂O₄·2H₂O + H₂O₂ + 2H⁺ + 3C₂O₄²⁻ → 2[Fe(C₂O₄)₃]³⁻ + 6H₂O（或分步写出氧化和配位过程），并说明实际反应中Fe³⁺立即与过量草酸根配位。",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s3)"
+  },
+  {
+    "question": "在第三步配位反应中，向热的第二步产物中加入草酸溶液，使Fe³⁺与C₂O₄²⁻配位生成[Fe(C₂O₄)₃]³⁻。请从配位平衡和热力学角度解释为何需要加入过量草酸并保持加热。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s4)"
+  },
+  {
+    "question": "在实验最后一步结晶过程中，采用溶剂替换法：向浓缩后的溶液中加入95%乙醇。请从热力学角度解释乙醇为何能促进三草酸合铁(III)酸钾晶体析出。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第3章 制备原理深度解析 (ch3-s5)"
+  },
+  {
+    "question": "在实验操作中，洗涤FeC₂O₄·2H₂O沉淀时需用热水洗涤至无SO₄²⁻，并用BaCl₂溶液检验。请说明检验原理，并指出若洗涤不彻底会对后续实验产生什么影响。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第4章 操作步骤完全指南 (ch4-s1, ch4-s2)"
+  },
+  {
+    "question": "在配合物性质实验中，如何通过三种实验方法确定三草酸合铁(III)酸钾的内界和外界？请简述其中一种方法的原理和预期现象。",
+    "valid": false,
+    "issue": "参考回答中沉淀法描述有误：加入BaCl₂应检验游离的草酸根（若存在则生成BaC₂O₄沉淀），而非SO₄²⁻；且本配合物中草酸根在内界，加入BaCl₂不应产生沉淀。回答混淆了检验对象。",
+    "correction": "修改为：以沉淀法为例，向溶液中加入BaCl₂，若产生BaC₂O₄白色沉淀则说明有游离草酸根（外界），若不产生沉淀则证明草酸根全部在内界。",
+    "manualSection": "第5章 配合物性质实验 (ch5-s1)"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理涉及配体到金属的电荷转移（LMCT）。请描述该光化学反应的过程，并说明蓝晒法如何利用这一原理。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第6章 光化学性质 (ch6-s1, ch6-s2)"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中的Fe³⁺为d⁵构型。请判断该配合物是高自旋还是低自旋，并解释其颜色来源（d-d跃迁或电荷转移）。",
+    "valid": true,
+    "issue": "",
+    "correction": "",
+    "manualSection": "第7章 晶体场理论 (ch7-s3, ch7-s4)"
+  }
+]

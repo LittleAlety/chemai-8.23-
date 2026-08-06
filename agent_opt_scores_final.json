@@ -1,0 +1,1802 @@
+[
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "score": 70,
+    "accuracy": 70,
+    "completeness": 70,
+    "manualCompliance": 70,
+    "safety": 100,
+    "comment": "回答侧重防氧化，但未提及关键的水解问题，与参考答案核心不符。"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且水浴温度控制在40°C？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答全面准确，涵盖分解、氧化完全、温度控制及安全警示，优于参考答案。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请写出至少一种实验方法及预期现象。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "提供了多种方法，但首选方法用BaCl₂而非CaCl₂，与参考答案略有差异，但原理正确。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的配位结构中，Fe³⁺的配位数是多少？草酸根以何种方式配位？",
+    "score": 100,
+    "accuracy": 100,
+    "completeness": 100,
+    "manualCompliance": 100,
+    "safety": 100,
+    "comment": "回答完全正确，简洁准确。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出该反应的化学方程式。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "反应类型和方程式正确，但方程式与参考答案不完全一致，且多写了安全警示。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "score": 100,
+    "accuracy": 100,
+    "completeness": 100,
+    "manualCompliance": 100,
+    "safety": 100,
+    "comment": "回答准确详尽，包含数据佐证，与参考答案完全一致。"
+  },
+  {
+    "question": "制备过程中，如何用K₃Fe(CN)₆检验Fe²⁺是否氧化完全？写出检验原理及判断标准。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答完整准确，补充了安全警示，优于参考答案。"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答全面，包含反应方程式和终点判断，与参考答案一致。"
+  },
+  {
+    "question": "实验结束后，含铬废液（如用于洗涤的含草酸和铁离子的溶液）应如何分类处理？",
+    "score": 80,
+    "accuracy": 80,
+    "completeness": 80,
+    "manualCompliance": 80,
+    "safety": 100,
+    "comment": "回答详细但偏离参考答案，未提及草酸氧化处理，且含铬废液处理方式与参考答案不同。"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算相对误差和产率，并说明有效数字的保留规则。",
+    "score": 100,
+    "accuracy": 100,
+    "completeness": 100,
+    "manualCompliance": 100,
+    "safety": 100,
+    "comment": "计算和有效数字��则完全正确。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备过程中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确全面，补充了动力学优化和产率数据，但未提及避免沉淀老化这一参考要点。"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答详尽，涵盖分解、氧化控制和观察进程，并附加安全警示，优于参考答案。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？",
+    "score": 98,
+    "accuracy": 98,
+    "completeness": 98,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "三种方法描述细致，步骤清晰，结论明确，安全提示到位，几乎完美。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？请写出其化学方程式。",
+    "score": "7",
+    "accuracy": "7",
+    "completeness": "7",
+    "manualCompliance": "7",
+    "safety": 100,
+    "comment": "score: 7; comment: 反应类型和离子方程式正确，但总方程式未配平且未包含结晶水，与参考答案的完整方程式有差异。"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确，补充了Δ₀和P数值及磁矩验证，增强说服力。"
+  },
+  {
+    "question": "实验结束后，含铬废液应如何处理？请简述废液分类处理的基本原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "处理方法和分类原则详细，但未提及Cr⁶⁺还原步骤的具体试剂，略有不足。"
+  },
+  {
+    "question": "在实验报告中，计算产率时需使用有效数字规则。若理论产量为4.82 g，实际产量为3.67 g，请计算产率并指出有效数字位数。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "计算正确，补充了产率偏高分析，但偏离题目核心，略显冗余。"
+  },
+  {
+    "question": "在制备过程中，若最终产率明显偏低（低于60%），请列举三种可能原因及对应的解决对策。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 98,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "原因分析深入，对策具体可操作，远超参考答案的深度。"
+  },
+  {
+    "question": "在蓝晒法应用中，三草酸合铁(III)酸钾的光敏原理是什么？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "原理描述准确，方程式完整，但未提及未曝光区域水洗留白的具体操作。"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，为什么要用乙醇进行溶剂替换法结晶？请从热力学角度解释。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "热力学解释清晰，补充了晶体生长细节，但未明确提及介电常数降低的具体数值。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？从热力学和动力学角度分析。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面深入，从热力学和动力学角度详细分析，并指出操作矛盾，安全提示到位，但略有冗余。"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？如果滴加过快会产生什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确完整，原因和后果分析清晰，安全警示恰当，与参考答案高度一致。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计一种实验方法并说明原理。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "实验设计合理，原理阐述清楚，但FeCl₃检验部分略显复杂，可更简洁。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？请从LMCT机理角度解释其光化学性质。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "LMCT机理阐述清晰，步骤完整，实验验证和安全提示到位，质量高。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 80,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "核心结论正确，但未提及d-d跃迁与颜色关系，完整性稍欠。"
+  },
+  {
+    "question": "制备三草酸合铁(III)酸钾时，为什么最后要加入乙醇进行结晶？请从溶剂替换法的热力学原理角度解释。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "热力学原理阐述透彻，结合Born方程和过饱和度，解释清晰，质量高。"
+  },
+  {
+    "question": "在实验报告中，若称取5.0g硫酸亚铁铵，实际得到4.2g三草酸合铁(III)酸钾，请计算产率并分析可能影响产率的因素。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "计算准确，影响因素分析全面，安全警示到位，与参考答案高度一致。"
+  },
+  {
+    "question": "实验过程中产生的含铬、含铁废液应如何分类处理？请说明废液处理的基本原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "分类处理原则阐述清晰，安全警示到位，但含铬废液处理细节可更具体。"
+  },
+  {
+    "question": "在制备过程中，若发现最终产物颜色偏黄而非预期的绿色，请给出诊断流程和可能的原因。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "诊断流程逻辑清晰，原因分析全面，安全提示恰当，质量良好。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在蓝晒法中作为光敏材料的工作原理是什么？请结合LMCT机理说明。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "LMCT机理阐述完整，结合蓝晒法应用，安全警示到位，质量高。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 90,
+    "comment": "回答全面且深入，但引入了与参考答案矛盾的FAQ说明，可能造成混淆。"
+  },
+  {
+    "question": "在第二步氧化反应中，H₂O₂滴加完毕后为什么要加热至沸并保持2分钟？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 90,
+    "comment": "回答准确简洁，完全覆盖参考答案要点，并补充了注意事项。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "score": 70,
+    "accuracy": 60,
+    "completeness": 75,
+    "manualCompliance": 70,
+    "safety": 90,
+    "comment": "方法选择错误，使用BaCl₂无法有效区分内外界，且结论与参考答案不符。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？其光化学机理属于哪类跃迁？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确完整，包含反应方程式和机理说明，与参考答案一致。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾为何呈现绿色。",
+    "score": 80,
+    "accuracy": 75,
+    "completeness": 80,
+    "manualCompliance": 80,
+    "safety": 95,
+    "comment": "解释基本正确，但吸收波长描述与参考答案略有出入，整体合理。"
+  },
+  {
+    "question": "本实验中涉及哪些废液？应如何分类处理？",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 95,
+    "comment": "回答详尽且分类清晰，但含氰废液部分与实验实际关联度不高。"
+  },
+  {
+    "question": "实验报告中，若三次平行实验的产率分别为72.5%、75.3%、74.1%，请计算平均产率、绝对误差和相对误差（以平均值作为真值估计）。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "计算正确，补充了标准差和RSD，但相对误差定义与参考答案略有不同。"
+  },
+  {
+    "question": "若制备出的三草酸合铁(III)酸钾晶体产率明显偏低，请列举至少三种可能原因及对应的排查方法。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答非常全面，列举了五种原因及详细排查方法，超出参考答案要求。"
+  },
+  {
+    "question": "在第一步制备FeC₂O₄·2H₂O时，如何检验沉淀已洗涤至无SO₄²⁻？写出检验原理。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 90,
+    "comment": "回答准确完整，包含检验方法、原理和安全提示，与参考答案一致。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第三步配位反应加入草酸溶液时为什么要逐滴滴加并保持溶液温热？",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "回答基本正确，但未提及控制局部酸度过高导致产物分解的要点。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 90,
+    "comment": "回答全面，热力学和动力学分析合理，但部分表述（如草酸电离度增大）不够精确，且未明确提及消除溶解氧这一关键点。"
+  },
+  {
+    "question": "在氧化步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答详尽准确，原因和后果分析透彻，安全警示到位，几乎完美。"
+  },
+  {
+    "question": "如何通过实验���定三草酸合铁(III)酸钾的内界和外界？请列举至少两种实验方法。",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答方法合理，但未完全对应题目要求（如电导率法、沉淀法），且部分表述需更严谨。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并解释其机理（LMCT过程）。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "方程式和机理描述详细，LMCT过程解释清晰，但方程式与参考略有出入，且未提及蓝晒法应用。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾的颜色来源（d-d跃迁），并说明Fe³⁺在八面体场中的d电子排布。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "d电子排布和颜色来源解释准确，并补充了LMCT对颜色的贡献，但d-d跃迁描述与参考略有差异。"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验沉淀洗涤是否完全，其原理是什么？若洗涤不完全，对后续实验有何影响？",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "原理和影响分析准确，回答简洁完整，符合要求。"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，加入乙醇的作���是什么？请从溶剂替换法结晶的热力学角度解释。",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答准确，从介电常数和自由能角度补充了热力学解释，但未明确提及“化学势增大”这一关键点，略有欠缺。"
+  },
+  {
+    "question": "实验结束后，含铬废液（如K₂Cr₂O₇）应如何处理？请说明废液分类处理的原则。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "处理步骤和分类原则详尽准确，安全警示到位，非常优秀。"
+  },
+  {
+    "question": "某同学制备的产物产率仅为理论值的60%，请从操作角度分析可能的原因，并提出至少3条改进措施。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "原因分析全面，改进措施具体可行，但部分原因（如莫尔盐氧化）与参考略有差异，且未提及沉淀转移损失。"
+  },
+  {
+    "question": "在实验报告中，需要记录产率并计算相对误差。若理论产量为2.5 g，实际产量为2.3 g，请计算产率、绝对误差和相对误差，并说明有效数字的保留规则。",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 90,
+    "comment": "计算正确，有效数字规则说明详细，但额外补充的理论产量计算与题目无关，略显冗余。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要将两种反应液分别加热至近沸后再混合，并保持微沸4分钟？请从热力学和动力学角度分析。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面深入，从热力学和动力学角度详细阐述，并补充了安全提示，但个别表述如Ksp数值可进一步核实。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且水浴温度控制在40°C？若滴加过快或温度过高，会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确完整，清晰解释了缓慢滴加和控温的原因及后果，并包含安全警示，质量很高。"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？请写出配位反应方程式，并说明草酸根在此过程中的作用。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答基本正确，方程式和草酸根作用说明到位，但未提及草酸根作为双齿配体形成螯合环的细节，完整性稍欠。"
+  },
+  {
+    "question": "在第四步结晶过程中，为什么要加入95%乙醇？请从溶剂替换法结晶的热力学原理角度解释。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答准确，从介电常数和化学势角度解释了热力学原理，但未提及同离子效应，完整性略有不足。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计三种不同的实验方法并说明原理。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答非常全面，三种方法原理清晰，操作描述详细，并包含安全警示，质量优秀。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？请从LMCT机理角度解释其光化学性质，并说明蓝晒法的应用原理。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答深入准确，LMCT机理阐述清晰，蓝晒法原理说明到位，并包含安全提示，质量很高。"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？请解释其颜色来源。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答准确，d电子构型、高自旋判断和颜色来源解释正确，但未提及LMCT对颜色的贡献，完整性稍欠。"
+  },
+  {
+    "question": "在制备过程中，若最后产率明显偏低（低于理论值的60%），请列举至少4种可能的原因及对应的排查方法。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答非常全面，列举了4种原因及排查方法，并补充了理论产量计算和产物验证建议，质量优秀。"
+  },
+  {
+    "question": "在实验报告中，若三次平行实验产率分别为82.3%、85.7%、80.9%，请计算平均产率、绝对误差、相对误差和标准偏差，并说明有效数字的保留规则。",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 计算过程正确，有效数字规则阐述详细，但未严格按参考答案格式给出最终数值，且对绝对误差/相对误差的讨论稍显冗余。"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设本实验涉及）和含铁废液应如何分类处理？请根据安全规范说明废液处理的基本原则和具体操作。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答非常全面，分类处理原则和具体操作详细，并特别警示含氰废液的处理，质量优秀。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 90,
+    "comment": "回答准确且补充了防氧化和草酸根形态的细节，但未明确提及近沸条件，略有偏离参考答案核心。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C左右？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面，涵盖分解、氧化速率、观察和安全，但部分表述稍显冗长。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "方法正确且补充了电导率法，但BaCl₂与参考答案的CaCl₂不同，略有偏差。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出其光解反应的简化方程式。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 90,
+    "comment": "回答准确，方程式与参考答案一致，并补充了本质说明。"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型如何？该配合物是高自旋还是低自旋？",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答详细且准确，补充了数值和磁矩，但略超参考答案范围。"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺已被完全氧化？写出所用试剂及现���。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答正确，补充了补加H₂O₂的操作，但现象描述中“现���”为乱码，略有瑕疵。"
+  },
+  {
+    "question": "实验结束后，含铬（或含铁）的废液应如何分类处理？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 95,
+    "comment": "回答详细且安全提示到位，但处理细节超出参考答案，略有冗余。"
+  },
+  {
+    "question": "在实验报告中，若三次平行实验产率分别为72.5%、75.3%、74.1%，请计算平均产率及相对平均偏差。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "计算准确，补充了产率范围提醒，但略偏离参考答案的简洁性。"
+  },
+  {
+    "question": "若最终产物产率明显偏低（如低于50%），请列举两种可能原因及对应的解决对策。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "原因和对策合理，但未提及洗涤过度，与参考答案略有差异。"
+  },
+  {
+    "question": "在蓝晒法（铁氰酸盐印相法）中，三草酸合铁(III)酸钾的作用是什么？写出其光解后与铁氰化钾反应生成普鲁士蓝的简化过程。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确且补充了安全提示，但方程式���复杂，与参考答案基本一致。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备实验中，第一步制备草酸亚铁时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L的硫酸？",
+    "score": "4",
+    "accuracy": "4",
+    "completeness": "4",
+    "manualCompliance": "4",
+    "safety": 100,
+    "comment": "score: 4; comment: 回答准确且补充了防氧化和操作安全，但防氧化非主要目的，略有偏离参考答案核心。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答准确覆盖参考答案要点，并补充了观察反应进程和安全警示，逻辑清晰；但未明确提及Fe³⁺过早与草酸根配位损失这一关键点，略有遗漏。"
+  },
+  {
+    "question": "如何用实验方法验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请至少写出一种实验方法及预期现象。",
+    "score": "95",
+    "accuracy": "95",
+    "completeness": "95",
+    "manualCompliance": "95",
+    "safety": 100,
+    "comment": "score: 95; comment: 回答准确完整，方法、原理、预期现象清晰，且补充了BaCl₂选项，与参考答案高度一致，仅未提及离子交换或电导法，但已满足题目要求。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并说明其反应类型（LMCT）的电子跃迁过程。",
+    "score": "8",
+    "accuracy": "8",
+    "completeness": "8",
+    "manualCompliance": "8",
+    "safety": 100,
+    "comment": "score: 8; comment: 回答完整，方程式与LMCT机理正确，补充了量子产率和安全提示；但离子式未明确标出FeC₂O₄沉淀，且“t₂g/d轨道”表述略含糊，可更精确。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "score": "9",
+    "accuracy": "9",
+    "completeness": "9",
+    "manualCompliance": "9",
+    "safety": 100,
+    "comment": "score: 9; comment: 回答准确完整，包含d⁵构型、高自旋判断及Δ₀<P的定量依据，逻辑清晰，仅未提及LMCT跃迁细节，略逊于参考答案。"
+  },
+  {
+    "question": "在实验过程中，如果发现产品颜色偏黄而不是预期的绿色，请给出至少两种可能的原因及对应的排查方法。",
+    "score": "8",
+    "accuracy": "8",
+    "completeness": "8",
+    "manualCompliance": "8",
+    "safety": 100,
+    "comment": "score: 8; comment: 回答覆盖了参考答案中的多个关键原因，并补充了操作细节和安全提示，逻辑清晰；但未明确提及光照光解这一原因，且部分表述稍显冗长。"
+  },
+  {
+    "question": "在实验报告中，若���际产量为4.2 g，理论产量为5.0 g，请计算产率，并写出绝对误差和相对误差的计算过程。",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 计算过程正确，产率、绝对误差和相对误差公式及数值均无误，但绝对误差和相对误差未取绝对值，与参考答案符号不一致；额外分析虽合理但超出题目要求，略显冗余。"
+  },
+  {
+    "question": "在制备过程中，第二步氧化反应结束后为什么要加热至沸并保持2分钟？此步骤的目的是什么？",
+    "score": "95",
+    "accuracy": "95",
+    "completeness": "95",
+    "manualCompliance": "95",
+    "safety": 100,
+    "comment": "score: 95; comment: 回答准确完整，涵盖目的、反应式及残留危害，并补充操作注意事项，优于参考答案。"
+  },
+  {
+    "question": "本实验中涉及多种废液，请说明含铬废液（如K₃Fe(CN)₆检验液）和含草酸废液应如何分类处理？",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答详细且补充了反应方程式和操作细节，但草酸废液处理中“少量兑大量水排放”与参考答案“不能直接倒入下水道”存在偏差，建议强调统一收集交由学校处理。"
+  },
+  {
+    "question": "在实验报告中，若需要绘制产品紫外-可见吸收光谱图，请说明坐标轴的标注规范（包括轴名称、单位、刻度等）。",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答内容完整，坐标轴标注规范清晰，并补充了特征峰标注和安全提示，但未明确提及测量条件（如溶剂、浓度、光程）的标注，略逊于参考答案的全面性。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步生成草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面准确，涵盖速率、晶体质量、防氧化及安全提示，但个别表述略冗余。"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "原因与后果分析详尽，逻辑清晰，安全提示到位，接近满分。"
+  },
+  {
+    "question": "如何通过实验确定三草酸合铁(III)酸钾中草酸根离子处于内界还��外界？请至少给出一种实验方法。",
+    "score": "4",
+    "accuracy": "4",
+    "completeness": "4",
+    "manualCompliance": "4",
+    "safety": 100,
+    "comment": "score: 4; comment: 方法正确且原理阐述清晰，但未提及沉淀法等更直接简便的验证手段，且电导率对比需依赖经验数据，略有局限。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？写出其光化学反应的简要机理。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "机理详细准确，含方程式和量子产率，安全提示恰当，非常优秀。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾为何呈现绿色（或黄绿色）。",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 85,
+    "comment": "晶体场理论解释基本正确，但吸收波长与颜色对应关系表述略有偏差。"
+  },
+  {
+    "question": "在制备过程中，若用K₃Fe(CN)₆检验Fe²⁺未完全氧化，应如何处理？",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "处理步骤正确，补充了除过量H₂O₂的细节，符合实验要求。"
+  },
+  {
+    "question": "实验结束后，含铬（或含铁）的废液应如何分类处理？",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 85,
+    "comment": "分类收集和沉淀法处理正确，但未强调铬的毒性还原步骤，略有不足。"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算相对误差和产率。",
+    "score": 100,
+    "accuracy": 100,
+    "completeness": 100,
+    "manualCompliance": 100,
+    "safety": 100,
+    "comment": "计算完全正确，格式规范，无任何错误。"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的过程中，若最终晶体颜色偏黄且产率偏低，可能的原因有哪些？请列举至少两种。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "原因分析合理且具体，覆盖原料氧化和H₂O₂分解，符合实际。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有什么用途？请举例说明。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "用途列举全面，包含蓝晒法、光剂量计等，安全提示到位，优秀。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面深入，热力学与动力学分析准确，且补充了安全警示，仅个别表述可更精炼。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 93,
+    "accuracy": 96,
+    "completeness": 92,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "原因与后果分析清晰，安全提示到位，但可补充H₂O₂分解的催化因素。"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请列举至少两种验证方法。",
+    "score": 90,
+    "accuracy": 94,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "三种方法详实，原理正确，但方法一酒石酸氢钠检验K⁺的灵敏度略低，可优化。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出其LMCT机理的化学方程式，并说明该反应在蓝晒法中的应用。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "机理分步清晰，蓝晒法应用描述准确，但总反应方程式配平可再核对。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "score": 96,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答精准，数据支撑充分，高自旋判断逻辑严密。"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否氧化完全？写出检验方法及现象。",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 92,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "方法正确，现象描述清晰，补充了反应方程式，实用性强。"
+  },
+  {
+    "question": "实验中产生的含铬（或含铁、含草酸）废液应如何分类处理？请根据安全规范说明。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 88,
+    "manualCompliance": 85,
+    "safety": 92,
+    "comment": "分类处理详细，安全警示到位，但含氰废液处理部分与题目关联度稍弱。"
+  },
+  {
+    "question": "实验报告中，计算产率时需测量产品质量。若称得产品质量为4.2 g，理论产量为5.0 g，请计算产率，并指出有效数字的保留规则���",
+    "score": "8",
+    "accuracy": "8",
+    "completeness": "8",
+    "manualCompliance": "8",
+    "safety": 100,
+    "comment": "score: 8; comment: 计算正确，有效数字规则解释合理，但未提及参考答案中“84.0%”的另一种常见保留方式，略有不足。"
+  },
+  {
+    "question": "若最终产品产率明显偏低（如低于60%），请列举至少3种可能原因及对应的排查方法。",
+    "score": 94,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "原因列举全面，排查方法具体可操作，覆盖多个环节，实用性强。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有哪些用途？请结合其光敏性质说明。",
+    "score": 90,
+    "accuracy": 93,
+    "completeness": 90,
+    "manualCompliance": 88,
+    "safety": 92,
+    "comment": "应用领域描述准确，光敏性质结合紧密，但可补充更多工业实例。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？请从热力学和动力学角度分析。",
+    "score": 75,
+    "accuracy": 80,
+    "completeness": 70,
+    "manualCompliance": 75,
+    "safety": 80,
+    "comment": "回答内容全面但部分热力学表述不准确，如范特霍夫方程应用不当，且未明确提及降低过饱和度利于过滤的核心点。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 80,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "回答准确完整，涵盖了分解控制、氧化速率和温度影响，安全提示到位。"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾配合物的内界和外界？请列举至少两种验证方法并说明原理。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 85,
+    "comment": "方法选择合理，原理阐述清晰，补充验证增强了说服力，安全提示恰当。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生什么反应？写出反应方程式并解释其在蓝晒法中的应用原理。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 85,
+    "comment": "反应方程式和蓝晒法原理描述准确，应用领域扩展恰当，安全提示合理。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾晶体呈现绿色的原因。",
+    "score": 70,
+    "accuracy": 75,
+    "completeness": 65,
+    "manualCompliance": 70,
+    "safety": 80,
+    "comment": "晶体场理论应用基本正确，但吸收波长描述与参考答案有偏差，未提及自旋禁阻等关键点。"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否已完全被氧化？写出所用试剂、现象及判断标准。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 85,
+    "comment": "试剂、现象、判断标准及方程式均正确，安全提示到位。"
+  },
+  {
+    "question": "实验结束后，含铬、含铁、含草酸的废液应如何分类处理？请简述各类废液的处理原则。",
+    "score": 80,
+    "accuracy": 85,
+    "completeness": 75,
+    "manualCompliance": 80,
+    "safety": 90,
+    "comment": "分类处理原则基本正确，但含铬废液处理描述不够具体，未明确还原剂用量。"
+  },
+  {
+    "question": "在实验报告中，计算产率时需注意哪些有效数字和单位规范？请以本实验为例说明。",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 80,
+    "comment": "有效数字和单位规范阐述详细，示例计算清晰，但部分表述略显冗长。"
+  },
+  {
+    "question": "若最终产率明显偏低（如<50%），请列举至少4种可能原因及对应的排查方法。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 85,
+    "comment": "原因列举全面，排查方法具体可操作，安全提示恰当。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步配位反应加入草酸溶液的目的是什么？写出该步的配位反应方程式。",
+    "score": 80,
+    "accuracy": 85,
+    "completeness": 75,
+    "manualCompliance": 80,
+    "safety": 80,
+    "comment": "目的阐述正确，方程式基本正确但未明确过量草酸维持酸性的作用。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答准确且补充了防氧化细节，但略偏离参考答案中防止水解的核心目的。"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须采用缓慢滴加（每秒1-2滴）的方式？若滴加过快会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答全面，涵盖控制速率、防分解、安全及操作细节，与参考答案高度一致。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请简述一种方法。",
+    "score": 98,
+    "accuracy": 100,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "方法正确，描述清晰，并补充了配合物结构，优于参考答案。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下会发生光化学反应，其机理属于哪种电子跃迁类型？请简述该反应过程。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "跃迁类型正确，反应过程详细，但总反应方程式略有瑕疵。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物属于高自旋还是低自旋？为什么？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答准确，补充了磁化率数据，但未明确说明草酸根为弱场配体。"
+  },
+  {
+    "question": "在制备过程中，第三步配位反应中需将草酸溶液逐滴滴加到热的第二步产物中，其目的是什么？",
+    "score": 93,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答全面，补充了反应终点判断和方程式，但略偏离参考答案核心。"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬盐）应如何分类处理？请简述废液处理的一般原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答详细，但未明确提及Cr(VI)还原步骤，与参考答案略有差异。"
+  },
+  {
+    "question": "在实验报告的数据记录中，使用电子天平称量5.0 g硫酸亚铁铵时，应记录到几位有效数字？为什么？",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "回答正确但未提及天平精度可能为0.01g的情况，不够全面。"
+  },
+  {
+    "question": "若最终产品的产率明显偏低（低于理论值的60%），请列举两种可能的原因及相应的改进措施。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答详细，补充了检验方法和诊断思路，优于参考答案。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在工业或实际应用中有什么用途？请结合其光化学性质说明一种应用。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "���答准确，详细描述了蓝晒法原理，与参考答案一致。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要将反应液加热至微沸并保持约4分钟？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答准确且深入，从成核与晶体生长角度解释，补充了过滤洗涤优势，但未明确提及排除气体这一细节。"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答全面，涵盖分解控制、氧化速率、观察终点及过快后果，并附安全警示，优于参考答案。"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请简述一种验证方法。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "方法合理，用KSCN和焰色反应验证内外界，但未提及BaCl₂检验草酸根这一更直接的方法。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的电子吸收光谱中，观察到的颜色主要来源于哪种电子跃迁？请简要解释。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "准确指出LMCT为主，并解释d-d跃迁自旋禁阻，逻辑清晰，与参考答案一致。"
+  },
+  {
+    "question": "根据晶体场理论，Fe(III)在八面体场中d电子的排布方式是什么？三草酸合铁(III)酸钾是高自旋还是低自旋配合物？",
+    "score": 97,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答精确，给出Δ₀和P数值及磁矩验证，远超参考答案的深度。"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否已���全被氧化？请写出具体操作和判断依据。",
+    "score": "9",
+    "accuracy": "9",
+    "completeness": "9",
+    "manualCompliance": "9",
+    "safety": 100,
+    "comment": "score: 9; comment: 回答完整准确，操作步骤清晰，判断依据明确，补充了反应方程式和安全提示，内容详实且实用性强。"
+  },
+  {
+    "question": "实验结束后，含铬废液（如用于检验的BaCl₂溶液）应如何处理？请说明分类处理原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答详细，涵盖分类、沉淀法及安全警示，但题目提及BaCl₂，回答侧重铬处理，略有偏差。"
+  },
+  {
+    "question": "在实验报告中，计算产率时若实际产量为4.2 g，理论产量为5.0 g，请计算产率并说明有效数字的保留规则。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "计算正确，有效数字规则解释清晰，与参考答案一致。"
+  },
+  {
+    "question": "若制备得到的晶体颜色偏黄而非预期的绿色，请根据颜色异常诊断流程分析可能的原因。",
+    "score": 92,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "诊断流程合理，提供补救措施，但未提及光谱分析等其他诊断手段。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步加入草酸溶液的目的是什么？请从配位反应原理角度解释。",
+    "score": 93,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答准确，含反应方程式和稳定常数，但未强调调节酸度促进配位平衡。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第一步制备FeC₂O₄·2H₂O沉淀时，为什么要在硫酸亚铁铵溶液中加入数滴3 mol/L H₂SO₄？",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 100,
+    "comment": "回答准确且补充了防氧化和草酸根存在形式，但未明确提及防止Fe²⁺水解生成Fe(OH)₂这一核心目的。"
+  },
+  {
+    "question": "在氧化反应步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C左右？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答全面，涵盖分解、速率控制、观察和配位促进，并附安全警示，优于参考答案。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请写出一种实验方法及预期现象。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "方法正确，原理清晰，并补充安全提示，但未提及对照组或空白实验。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的光化学反应中，光照后溶液颜色发生变化，请从LMCT机理角度解释这一现象。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "机理阐述详尽，涵盖激发、电荷转移、自由基分解和产物形成，但颜色描述与参考答案略有差异。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？该配合物属于高自旋还是低自旋？为什么？",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "回答正确，补充了Δ₀和P数值，但未说明草酸根为弱场配体的原因。"
+  },
+  {
+    "question": "在制备过程中，如何检验Fe²⁺是否氧化完全？写出所用试剂及判断标准。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "方法正确，补充了补加H₂O₂的步骤和废液处理，但未提及铁氰化钾的毒性警示。"
+  },
+  {
+    "question": "实验结束后，含铬废液和含草酸根的废液应如何分类处理？请简述处理原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "回答详细，涵盖分类、处理方法和安全警示，但本实验未涉及含铬废液，略显冗余。"
+  },
+  {
+    "question": "在实验报告中，计算产率时需使用有效数字规则。若理论产量为5.234 g，实际称得产品质��为4.2 g，则产率应报告为多少？请说明有效数字处理规则。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "计算正确，规则阐述清晰，但未提及修约规则（四舍六入五成双）。"
+  },
+  {
+    "question": "若制备出的三草酸合铁(III)酸钾晶体产率明显偏低（低于60%），请列举至少三种可能原因及对应的解决对策。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "列举了5种原因及对策，远超要求，且逻辑清晰，但未提及结晶时乙醇用量不足的可能。"
+  },
+  {
+    "question": "在三草酸合铁(III)酸钾的制备中，第三步配位反应时加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答准确且补充了反应方程式和稳定常数，逻辑清晰；但未明确提及“提供过量草酸根促进配位平衡移动”这一要点，且“趁热过滤”与题目所问“热条件下进行”的原因关联稍弱。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下保持约4分钟？从热力学和动力学角度分析。",
+    "score": "92",
+    "accuracy": "92",
+    "completeness": "92",
+    "manualCompliance": "92",
+    "safety": 100,
+    "comment": "score: 92; comment: 回答全面且逻辑清晰，从热力学和动力学角度深入分析，并补充了安全警示。但热力学部分对“温度过高可能导致草酸分解”的提及略简，可稍作展开。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": "95",
+    "accuracy": "95",
+    "completeness": "95",
+    "manualCompliance": "95",
+    "safety": 100,
+    "comment": "score: 95; comment: 回答全面准确，涵盖机理、后果及安全细节，逻辑清晰，超出参考答案深度。"
+  },
+  {
+    "question": "如何通过实验验证三草酸合铁(III)酸钾中草酸根离子处于外界还是内界？请设计一种实验方法并说明原理。",
+    "score": "90",
+    "accuracy": "90",
+    "completeness": "90",
+    "manualCompliance": "90",
+    "safety": 100,
+    "comment": "score: 90; comment: 回答完整，方法设计合理且补充了AgNO₃和BaCl₂检测，原理阐述清晰，安全提示加分；但略冗长，且未提及参考答案中的离子交换或电导法，略有不足。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并解释其机理（LMCT过程）。",
+    "score": "95",
+    "accuracy": "95",
+    "completeness": "95",
+    "manualCompliance": "95",
+    "safety": 100,
+    "comment": "score: 95; comment: 回答准确完整，方程式与参考答案一致，机理分步清晰且补充了波长和量子产率，逻辑严谨，仅未明确标注总反应中FeC₂O₄的沉淀状态，但整体优秀。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾的颜色来源。Fe³⁺的d电子构型是什么？为什么该配合物呈现绿色？",
+    "score": "4",
+    "accuracy": "4",
+    "completeness": "4",
+    "manualCompliance": "4",
+    "safety": 100,
+    "comment": "score: 4; comment: 回答基本正确，但颜色来源解释有误，将d-d跃迁作为主因，未突出LMCT主导，且吸收波长描述不准确。"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验洗涤是否完全，其原理是什么？若洗涤不彻底，对最终产物有何影响？",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 原理阐述清晰且补充了反应方程式，杂质影响分析合理；但未提及产率偏高或晶体质量下降，且未明确指向K⁺或Fe³⁺杂质，略逊于参考答案的完整性。"
+  },
+  {
+    "question": "实验中使用K₃Fe(CN)₆检验Fe²⁺是否氧化完全，写出检验反应的化学方程式，并说明为什么不能用KSCN检验Fe³⁺来判断氧化完全。",
+    "score": "9",
+    "accuracy": "9",
+    "completeness": "9",
+    "manualCompliance": "9",
+    "safety": 100,
+    "comment": "score: 9; comment: 回答完整准确，方程式和原理均正确，解释清晰，仅未提及产物含Fe³⁺干扰的细节，略逊于参考答案。"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么需要控制草酸的用量？",
+    "score": "85",
+    "accuracy": "85",
+    "completeness": "85",
+    "manualCompliance": "85",
+    "safety": 100,
+    "comment": "score: 85; comment: 回答准确，涵盖目的和用量控制原因，但未提及过量可能形成其他草酸配合物，可补充。"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬化合物）应如何处理？请根据废液分类处理原则回答。",
+    "score": "90",
+    "accuracy": "90",
+    "completeness": "90",
+    "manualCompliance": "90",
+    "safety": 100,
+    "comment": "score: 90; comment: 回答完整准确，涵盖分类收集、还原、沉淀、过滤及安全警示，逻辑清晰；但未明确提及“黄标签”为参考答案中的“重金属废液”分类，且细节稍显冗余，扣少量分。"
+  },
+  {
+    "question": "在实验报告的数据记录中，称量5.0 g硫酸亚铁铵时，若实际称得5.0234 g，应记录为多少？为什么？",
+    "score": 45,
+    "accuracy": 40,
+    "completeness": 50,
+    "manualCompliance": 30,
+    "safety": 100,
+    "comment": "回答错误，应记录为5.0234 g，且引用了不存在的实验手册，未按有效数字规则解释。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的首次合成与配位化学发展有何关联？请简述其在配位化学史上的意义。",
+    "score": 85,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 100,
+    "comment": "回答内容详实且历史脉络清晰，但部分表述（如蓝晒工艺）超出题目要求，略显冗余。"
+  },
+  {
+    "question": "写出三草酸合铁(III)酸钾的化学式，并说明其中心离子、配体及配位数。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答准确完整，补充了电子构型和对称性，但略超出题目要求。"
+  },
+  {
+    "question": "在第一步制备FeC₂O₄·2H₂O沉淀时，为何要将两种反应液分别加热至近沸后再混合？从热力学和动力学角度分析。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 95,
+    "comment": "分析全面，热力学和动力学角度均有涉及，但个别表述（如过饱和度增大）与参考答案略有偏差。"
+  },
+  {
+    "question": "第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确，原因和后果分析清晰，安全提示到位。"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾的内界和外界？请至少给出两种验证方法。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "方法合理且原理说明清楚，但补充方法部分稍显冗余。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应的类型是什么？写出该反应的化学方程式，并解释其在蓝晒法中的应用原理。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "反应类型和方程式正确，蓝晒法原理解释清晰，但方程式写法与参考答案略有差异。"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子排布是高自旋还是低自旋？并解释其颜色来源。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 100,
+    "comment": "回答准确，自旋态和颜色来源解释到位，数据补充合理。"
+  },
+  {
+    "question": "本实验产生的含铬、含铁废液应如何分类处理？请简述废液处理的基本原则。",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 95,
+    "comment": "分类处理原则正确，但个别细节（如含铬废液来源）与参考答案略有出入。"
+  },
+  {
+    "question": "实验报告中计算产率时，若实际得到产品4.2 g，理论产量为5.0 g，请计算产率，并分析可能造成产率偏低的两点原因。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "计算正确，原因分析合理，但补充原因稍显多余。"
+  },
+  {
+    "question": "在实验过程中，若发现最终晶体颜色偏黄且产率明显偏低，请根据颜色异常诊断流程，分析可能的原因及排查方法。",
+    "score": 88,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "诊断流程清晰，原因和排查方法全面，但部分表述可更简洁。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答全面准确，从热力学和动力学角度深入分析，并补充了安全警示，优于参考答案。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）且温度控制在40°C？若滴加过快或温度过高会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答详细准确，涵盖分解、氧化速率、副反应等多方面，后果分析全面，安全提示到位。"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？写出该步配位反应的化学方程式。",
+    "score": 85,
+    "accuracy": 80,
+    "completeness": 85,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "目的解释正确，但化学方程式与参考答案不完全一致，缺少总反应方程式，略有不足。"
+  },
+  {
+    "question": "在制备过程中，如何用K₃Fe(CN)₆检验Fe²⁺是否氧化完全？写出检验反应的化学方程式。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 90,
+    "comment": "检验方法和方程式完全正确，操作描述清晰，与参考答案高度一致。"
+  },
+  {
+    "question": "如何通过实验方法确定三草酸合铁(III)酸钾的内界和外界？请列举至少两种实验验证方法。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "列举了三种方法，思路正确，但方法三中关于C₂O₄²⁻的鉴定表述不够严谨，略有瑕疵。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，写出该反应的化学方程式，并说明其反应类型（LMCT）的机理。",
+    "score": 93,
+    "accuracy": 90,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "方程式和LMCT机理描述详细准确，四步机理清晰，安全警示恰当，整体优秀。"
+  },
+  {
+    "question": "根据晶体场理论，[Fe(C₂O₄)₃]³⁻中Fe³⁺的d电子构型是什么？该配合物是高自旋还是低自旋？为什么？",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答完全正确，d⁵构型、高自旋判断及原因解释准确，补充磁矩数据增强说服力。"
+  },
+  {
+    "question": "实验中产生的含铬（或含铁）废液应如何分类处理？请说明废液处理的基本原则。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "处理方法和原则全面，但含铬废液处理细节略多，与问题核心略有偏离，整体良好。"
+  },
+  {
+    "question": "在实验报告的数据记录中，使用电子天平称量5.0 g硫酸亚铁铵时，应记录为多少位有效数字？为什么？",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 90,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确，有效数字位数和原因解释正确，引用实验手册增强规范性。"
+  },
+  {
+    "question": "若实验最终得到三草酸合铁(III)酸钾晶体4.2 g，理论产量为5.6 g，请计算产率，并分析产率偏低可能的原因（至少列出3种）。",
+    "score": 95,
+    "accuracy": 100,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "产率计算正确，原因分析全面且具体，列出6种可能原因，超过要求，非常优秀。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成草酸亚铁沉淀时，为什么要将两种反应液分别加热至近沸后再混合？",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确全面，从动力学、热力学、防氧化等多角度阐述，并补充了安全警示，优于参考答案。"
+  },
+  {
+    "question": "在氧化步骤中，为什么H₂O₂必须缓慢滴加（每秒1-2滴），且温度控制在40°C左右？",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确，从分解抑制、氧化完全、防水解及安全角度全面解释，并补充了配位常数等细节。"
+  },
+  {
+    "question": "如何用实验方法确定三草酸合铁(III)酸钾中草酸根离子处于内界还是外界？请简述一种验证方法及预期现象。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 90,
+    "comment": "方法正确，现象描述准确，但未明确说明需用稀溶液及排除其他离子干扰，略有不足。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中Fe³⁺的d电子构型是什么？其配合物属于高自旋还是低自旋？为什么？",
+    "score": 95,
+    "accuracy": 98,
+    "completeness": 95,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "回答准确，给出了Δ₀与P的数值对比，并补充了磁矩数据，逻辑清晰。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理属于哪种电子跃迁类型？请写出该光化学反应的反应方程式。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 92,
+    "manualCompliance": 88,
+    "safety": 92,
+    "comment": "LMCT判断正确，方程式基本正确，但第二个方程式配平有误（电荷不守恒），需修正。"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的最后一步中，加入乙醇的目的是��么？请从热力学角度解释其原理。",
+    "score": "95",
+    "accuracy": "95",
+    "completeness": "95",
+    "manualCompliance": "95",
+    "safety": 100,
+    "comment": "score: 95; comment: 回答完整准确，热力学解释清晰，并补充了操作细节，略超参考答案。"
+  },
+  {
+    "question": "在实验过程中，如果产物颜色偏绿，可能的原因是什么？请给出至少两种可能的诊断方向。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 92,
+    "manualCompliance": 88,
+    "safety": 92,
+    "comment": "诊断方向合理，检验方法正确，处理建议具体，安全警示到位。"
+  },
+  {
+    "question": "在实验报告中，若称取硫酸亚铁铵的质量为5.02 g，实际产物的质量为4.35 g，理论产率计算中，以硫酸亚铁铵为基准，请写出产率计算公式并计算该实验的产率（已知三草酸合铁(III)酸钾的摩尔质量为491.25 g/mol，硫酸亚铁铵的摩尔质量为392.14 g/mol）。",
+    "score": 100,
+    "accuracy": 100,
+    "completeness": 100,
+    "manualCompliance": 100,
+    "safety": 100,
+    "comment": "计算过程完整准确，公式正确，结果精确，无任何错误。"
+  },
+  {
+    "question": "在制备过程中，洗涤草酸亚铁沉淀时，如何检验SO₄²⁻是否洗净？请写出检验方法和判断标准。",
+    "score": 92,
+    "accuracy": 95,
+    "completeness": 92,
+    "manualCompliance": 88,
+    "safety": 92,
+    "comment": "检验方法正确，判断标准明确，补充了洗涤温度、次数等注意事项，但略超参考答案范围。"
+  },
+  {
+    "question": "实验结束后，含铬废液和含铁废液应如何处理？请简述废液分类处理的基本原则。",
+    "score": 90,
+    "accuracy": 95,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 92,
+    "comment": "处理原则正确，分类详细，但含铬废液处理中Cr(VI)还原剂选择可更具体，总体良好。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的制备过程中，第一步生成FeC₂O₄·2H₂O沉淀时，为什么要在微沸条件下加热约4分钟？从热力学和动力学角度分析。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答全面，从热力学和动力学角度深入分析，并补充了安全警示，与参考答案高度一致。"
+  },
+  {
+    "question": "在第二步氧化反应中，为什么H₂O₂必须缓慢滴加（每秒1-2滴）？若滴加过快会有什么后果？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确，详细阐述了缓慢滴加的原因和滴加过快的后果，并包含安全警示，符合参考答案。"
+  },
+  {
+    "question": "如何通过实验确定三草酸合铁(III)酸钾的内界和外界？请列举三种实验验证方法。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 90,
+    "comment": "回答提供了三种方法，但方法三分析稍显复杂，且与参考答案的沉淀反应法略有出入，整体完整。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理是什么？写出相关反应方程式。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答详细描述了LMCT机理的四步过程，并给出了正确的反应方程式，与参考答案一致。"
+  },
+  {
+    "question": "根据晶体场理论，解释三草酸合铁(III)酸钾晶体为何呈绿色？",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 85,
+    "comment": "回答提到了d-d跃迁和吸收蓝绿光，但未明确提及自旋禁阻和LMCT跃迁，与参考答案相比略有不足。"
+  },
+  {
+    "question": "在制备过程中，用BaCl₂检验沉淀洗涤是否完全，其原理是什么？若洗涤不完全会对后续实验产生什么影响？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答准确解释了原理和影响，与参考答案高度一致，内容完整。"
+  },
+  {
+    "question": "在第三步配位反应中，加入草酸溶液的目的是什么？为什么要在热的条件下进行？",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答清晰说明了目的和热条件的必要性，并补充了反应方程式，与参考答案一致。"
+  },
+  {
+    "question": "实验结束后，含铬废液（假设实验中使用了铬盐）应如何处理？请简述废液分类处理的原则。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答详细说明了含铬废液的处理方法和分类原则，并包含安全警示，符合参考答案。"
+  },
+  {
+    "question": "在实验报告中，计算产率时需注意哪些有效数字和单位规范？请举例说明。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答全面，详细说明了有效数字和单位规范，并给出了具体示例，与参考答案一致。"
+  },
+  {
+    "question": "若实验产率明显偏低（如低于60%），请列举至少3种可能原因及对应的排查方法。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 95,
+    "comment": "回答列举了5种可能原因及排查方法，内容详细且合理，与参考答案高度一致。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的首次合成与发现历史中，哪位化学家或研究团队做出了关键贡献？该化合物在配位化学发展史中具有怎样的地位？",
+    "score": 72,
+    "accuracy": 70,
+    "completeness": 75,
+    "manualCompliance": 70,
+    "safety": 100,
+    "comment": "回答诚实指出资料未记载具体人名，但未能补充维尔纳等关键人物信息，历史地位阐述较充分。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾的化学式为K₃[Fe(C₂O₄)₃]·3H₂O，请分析其配位结构：中心离子、配体、配位数、配位原子以及配离子的空间构型。",
+    "score": 95,
+    "accuracy": 95,
+    "completeness": 95,
+    "manualCompliance": 95,
+    "safety": 100,
+    "comment": "回答全面准确，补充了电子构型和D₃对称性，与参考答案高度一致。"
+  },
+  {
+    "question": "在制备三草酸合铁(III)酸钾的第一步中，生成FeC₂O₄·2H₂O沉淀。请从热力学和动力学角度分析为何选择草酸作为沉淀剂，以及加热至微沸并保持4分钟的目的。",
+    "score": 88,
+    "accuracy": 85,
+    "completeness": 90,
+    "manualCompliance": 85,
+    "safety": 95,
+    "comment": "回答详尽，热力学动力学分析到位，但Ksp数值和方程式细节略有瑕疵。"
+  },
+  {
+    "question": "在第二步氧化反应中，使用6% H₂O₂将FeC₂O₄中的Fe²⁺氧化为Fe³⁺。请写出该氧化反应的离子方程式，并解释为何滴加H₂O₂时需控制在40°C水浴且每秒1-2滴的慢速滴加。",
+    "score": 65,
+    "accuracy": 55,
+    "completeness": 75,
+    "manualCompliance": 60,
+    "safety": 95,
+    "comment": "方程式配平反复出错，影响准确性；但温度控制和慢速滴加的原因解释较完整。"
+  },
+  {
+    "question": "在第三步配位反应中，向热的第二步产物中加入草酸溶液，使Fe³⁺与C₂O₄²⁻配位生成[Fe(C₂O₄)₃]³⁻。请从配位平衡和热力学角度解释为何需要加入过量草酸并保持加热。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "从勒夏特列原理和螯合效应熵驱动两方面分析透彻，逻辑清晰。"
+  },
+  {
+    "question": "在实验最后一步结晶过程中，采用溶剂替换法：向浓缩后的溶液中加入95%乙醇。请从热力学角度解释乙醇为何能促进三草酸合铁(III)酸钾晶体析出。",
+    "score": 92,
+    "accuracy": 92,
+    "completeness": 92,
+    "manualCompliance": 92,
+    "safety": 100,
+    "comment": "从极性降低、溶解度下降和过饱和驱动结晶角度解释完整，符合参考答案。"
+  },
+  {
+    "question": "在实验操作中，洗涤FeC₂O₄·2H₂O沉淀时需用热水洗涤至无SO₄²⁻，并用BaCl₂溶液检验。请说明检验原理，并指出若洗涤不彻底会对后续实验产生什么影响。",
+    "score": 85,
+    "accuracy": 85,
+    "completeness": 85,
+    "manualCompliance": 85,
+    "safety": 100,
+    "comment": "检验原理和影响说明正确，但影响描述略简略，未提及对产率的定量影响。"
+  },
+  {
+    "question": "在配合物性质实验中，如何通过三种实验方法确定三草酸合铁(III)酸钾的内界和外界？请简述其中一种方法的原理和预期现象。",
+    "score": 78,
+    "accuracy": 75,
+    "completeness": 80,
+    "manualCompliance": 75,
+    "safety": 100,
+    "comment": "提出了三种方法但未完全对应参考答案，K⁺鉴定方法可行但原理阐述不够清晰。"
+  },
+  {
+    "question": "三草酸合铁(III)酸钾在光照下发生光化学反应，其机理涉及配体到金属的电荷转移（LMCT）。请描述该光化学反应的过程，并说明蓝晒法如何利用这一原理。",
+    "score": 90,
+    "accuracy": 90,
+    "completeness": 90,
+    "manualCompliance": 90,
+    "safety": 95,
+    "comment": "LMCT机理和蓝晒法原理描述准确详细，量子产率信息为加分项。"
+  },
+  {
+    "question": "根据晶体场理论，三草酸合铁(III)酸钾中的Fe³⁺为d⁵构型。请判断该配合物是高自旋还是低自旋，并解释其颜色来源（d-d跃迁或电荷转移）。",
+    "score": 82,
+    "accuracy": 80,
+    "completeness": 85,
+    "manualCompliance": 80,
+    "safety": 100,
+    "comment": "高自旋判断正确，但颜色来源解释与参考答案相反，且未提及自旋禁阻概念。"
+  }
+]

@@ -637,9 +637,13 @@ function matchFAQ(q){
     let kh=0,longKey=0;
     for(const k of f.keys){if(nq.includes(norm(k))){kh++;if(norm(k).length>=3)longKey++;}}
     let eh=0;for(const en of (f.ents||[])){if(nq.includes(norm(en)))eh++;}
-    const trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2);
+    const title=norm(f.title||''), q=norm(f.q||f.title||'');
+    const titleHit=!!(title&&(nq.includes(title)||title.includes(nq)));
+    const qHit=!!(q&&(nq.includes(q)||q.includes(nq)));
+    const trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||titleHit||qHit;
     if(!trig)continue;
-    const score=kh*2+eh*3+longKey*0.5;
+    const diffBoost=(/区别|比较|对比|vs/.test(nq)&&/vs|比较|区别|对比/.test(f.title||''))?8:0;
+    const score=kh*2+eh*3+longKey*0.5+(titleHit?10:0)+(qHit?6:0)+diffBoost;
     if(score>=bestScore){bestScore=score;best=f;}
   }
   return best;

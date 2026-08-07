@@ -476,12 +476,15 @@ function renderFormula(tex){
   t=t.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,"($1)/($2)");
   t=t.replace(/\\sqrt\[?([^\]{}]*)\]?\{([^{}]*)\}/g,"√($2)");
   t=t.replace(/\\bar\{([^{}]*)\}/g,"$1̄");
-  var G={cdot:"·",times:"×",div:"÷",approx:"≈",sim:"∼",neq:"≠",gg:"≫",ll:"≪",geq:"≥",geq:"≥",leq:"≤",pm:"±",mp:"∓",
-    rightarrow:"→",to:"→",longrightarrow:"→",implies:"⇒",rightleftharpoons:"⇌",leftrightarrow:"↔",leftarrow:"←",
-    uparrow:"↑",downarrow:"↓",Delta:"Δ",delta:"δ",alpha:"α",beta:"β",gamma:"γ",lambda:"λ",mu:"μ",nu:"ν",
+  var G={cdot:"·",times:"×",div:"÷",approx:"≈",sim:"∼",neq:"≠",gg:"≫",ll:"≪",geq:"≥",leq:"≤",pm:"±",mp:"∓",
+    rightarrow:"→",to:"→",longrightarrow:"→",implies:"⇒",Rightleftharpoons:"⇌",rightleftharpoons:"⇌",leftrightarrow:"↔",leftarrow:"←",
+    longleftarrow:"⟵",xrightarrow:"→",xleftarrow:"←",xrightleftharpoons:"⇌",
+    uparrow:"↑",downarrow:"↓",updownarrow:"↕",nearrow:"↗",nwarrow:"↖",
+    Delta:"Δ",delta:"δ",alpha:"α",beta:"β",gamma:"γ",lambda:"λ",mu:"μ",nu:"ν",
     pi:"π",sigma:"σ",theta:"θ",phi:"φ",varphi:"φ",rho:"ρ",omega:"ω",Omega:"Ω",kappa:"κ",eta:"η",
     varepsilon:"ε",epsilon:"ε",infty:"∞",partial:"∂",nabla:"∇",circ:"°",degree:"°",bullet:"•",ast:"∗",star:"★",
     lg:"lg",ln:"ln",log:"log",sin:"sin",cos:"cos",tan:"tan",exp:"exp",max:"max",min:"min",lim:"lim",
+    rightleftharpoons:"⇌","rightleftarrows":"⇄","leftrightharpoons":"⇋",
     mathrm:"",text:"",mbox:"",quad:" ",qquad:"  ",hspace:" ",":":" ",";":" ",",":" ","!":"",left:"",right:"",Big:"",big:"",displaystyle:""};
   t=t.replace(/\\([a-zA-Z]+)/g,function(m,n){return Object.prototype.hasOwnProperty.call(G,n)?G[n]:n;});
   t=t.replace(/\\(.)/g,"$1");                  // \% \' 等

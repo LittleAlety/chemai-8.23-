@@ -96,6 +96,10 @@ a:hover{color:var(--em)}
 .ans-line{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.85}
 .ans-head{display:block;font-weight:700;margin:10px 0 4px;color:var(--teal);overflow-wrap:anywhere;line-height:1.7}
 .ans-eq{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.9;font-family:ui-monospace,Consolas,monospace}
+.ans-eq-block{display:block;margin:6px 0;padding:8px 14px;font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.92em;line-height:2.1;background:rgba(0,0,0,.22);border-radius:10px;border-left:2px solid var(--em);overflow-x:auto;white-space:pre}
+.ans-inline-math{font-family:"Cambria Math","Latin Modern Math",ui-monospace,serif;font-style:italic;color:var(--teal)}
+.ans-sub{font-size:.82em;vertical-align:sub;line-height:0}
+.ans-sup{font-size:.82em;vertical-align:super;line-height:0}
 .ref-toggle{width:100%;margin-top:4px;text-align:left;background:var(--bg2);border:1px solid var(--bd2);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;color:var(--teal);cursor:pointer;font-family:inherit;transition:.2s}
 .ref-toggle:hover{border-color:rgba(45,212,191,.4);background:var(--hover)}
 .ref-toggle[aria-expanded="true"]{border-radius:12px 12px 0 0;border-bottom-color:transparent}
@@ -808,7 +812,9 @@ function videoCardHTML(ops,q){
 function renderRichAnswer(text){
   const raw=String(text==null?'':text).replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim();
   if(!raw) return '';
-  const blocks=raw.split(/\n{2,}/).map(b=>b.replace(/\n+/g,'\n').trim()).filter(Boolean);
+  // 预处理: 将 $$...$$ 和 $...$ 中的 LaTeX 转 Unicode
+  const rendered=renderLatexToUnicode(raw);
+  const blocks=rendered.split(/\n{2,}/).map(b=>b.replace(/\n+/g,'\n').trim()).filter(Boolean);
   if(!blocks.length) return '';
   return blocks.map(block=>{
     const lines=block.split('\n').map(l=>l.trim()).filter(Boolean);
@@ -838,6 +844,69 @@ function inlineRich(line){
   h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
   return h;
 }
+
+/* LaTeX → Unicode 转换器（无需 KaTeX，轻量级）*/
+function renderLatexToUnicode(text){
+  const G={
+    '\\alpha':'α','\\beta':'β','\\gamma':'γ','\\delta':'δ','\\epsilon':'ε','\\varepsilon':'ε',
+    '\\zeta':'ζ','\\eta':'η','\\theta':'θ','\\vartheta':'ϑ','\\iota':'ι','\\kappa':'κ',
+    '\\lambda':'λ','\\mu':'μ','\\nu':'ν','\\xi':'ξ','\\pi':'π','\\rho':'ρ','\\sigma':'σ',
+    '\\tau':'τ','\\upsilon':'υ','\\phi':'φ','\\chi':'χ','\\psi':'ψ','\\omega':'ω',
+    '\\Gamma':'Γ','\\Delta':'Δ','\\Theta':'Θ','\\Lambda':'Λ','\\Xi':'Ξ','\\Pi':'Π',
+    '\\Sigma':'Σ','\\Phi':'Φ','\\Psi':'Ψ','\\Omega':'Ω',
+    '\\infty':'∞','\\approx':'≈','\\equiv':'≡','\\neq':'≠','\\leq':'≤','\\geq':'≥',
+    '\\ll':'≪','\\gg':'≫','\\pm':'±','\\mp':'∓','\\times':'×','\\cdot':'·',
+    '\\rightarrow':'→','\\longrightarrow':'⟶','\\Rightarrow':'⇒','\\leftarrow':'←',
+    '\\longleftarrow':'⟵','\\Leftarrow':'⇐','\\leftrightarrow':'↔','\\rightleftharpoons':'⇌',
+    '\\uparrow':'↑','\\downarrow':'↓','\\updownarrow':'↕','\\mapsto':'↦',
+    '\\partial':'∂','\\nabla':'∇','\\infty':'∞','\\propto':'∝','\\sim':'∼',
+    '\\simeq':'≃','\\cong':'≅','\\perp':'⊥','\\parallel':'∥','\\angle':'∠',
+    '\\triangle':'△','\\square':'□','\\diamond':'◇','\\circ':'∘','\\bullet':'•',
+    '\\int':'∫','\\iint':'∬','\\iiint':'∭','\\oint':'∮','\\sum':'Σ','\\prod':'∏',
+    '\\sqrt':'√','\\hbar':'ℏ','\\ell':'ℓ','\\Re':'ℜ','\\Im':'ℑ','\\wp':'℘',
+    '\\forall':'∀','\\exists':'∃','\\neg':'¬','\\wedge':'∧','\\vee':'∨',
+    '\\cup':'∪','\\cap':'∩','\\subset':'⊂','\\supset':'⊃','\\subseteq':'⊆',
+    '\\in':'∈','\\notin':'∉','\\emptyset':'∅','\\varnothing':'∅',
+    '\\xrightarrow':'→','\\xleftarrow':'←','\\xrightleftharpoons':'⇌',
+    '\\ce':'(ce)','\\text':'','\\mathrm':'','\\pu':'','\\rm':'',
+    '\\,' :'','\\;':'','\\ ':' ','\\!':''
+  };
+  // 先清理 LaTeX 块分隔符
+  let t=text;
+  // $$...$$ 块
+  t=t.replace(/\$\$([\s\S]*?)\$\$/g,function(m,body){
+    return '<span class="ans-eq-block">' + renderLatexBody(body, G) + '</span>';
+  });
+  // $...$ 内联
+  t=t.replace(/\$([^$\n]{1,300}?)\$/g,function(m,body){
+    return '<span class="ans-inline-math">' + renderLatexBody(body, G) + '</span>';
+  });
+  // 孤立 \command 回退
+  t=renderLatexBody(t, G);
+  return t;
+}
+
+function renderLatexBody(body, G){
+  let s=body;
+  // 下标: a_{xyz} → a<sub>xyz</sub>, a_1 → a<sub>1</sub>
+  s=s.replace(/_\{([^{}]+)\}/g,'<sub class="ans-sub">$1</sub>');
+  s=s.replace(/_([a-zA-Z0-9])/g,'<sub class="ans-sub">$1</sub>');
+  // 上标: ^{xyz} → <sup>, ^1 → <sup>
+  s=s.replace(/\^\{([^{}]+)\}/g,'<sup class="ans-sup">$1</sup>');
+  s=s.replace(/\^([a-zA-Z0-9+\-])/g,'<sup class="ans-sup">$1</sup>');
+  // \\frac{n}{d} → (n)/(d) 简洁表示
+  s=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'($1)/($2)');
+  // 多字母命令
+  for(const cmd in G){
+    s=s.split(cmd).join(G[cmd]);
+  }
+  // 残留反斜线
+  s=s.replace(/\\([a-zA-Z]+)/g,'$1');
+  s=s.replace(/\\/g,'');
+  return s;
+}
+
+/* 显示 FAQ 答案时自动跑 LaTeX 翻译 */
 
 /* 实体补充句（无 FAQ 命中时用于丰富"核心解答"，均为本实验准确事实） */
 const ENT_TIPS={

@@ -302,7 +302,7 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
       <section id="panel-assess" class="panel hidden">
         <div class="panel-bar">
           <div class="assess-progress">
-            <div class="ap-txt"><span id="apTxt">知识点 <b>0/8</b> · 第 <b>0</b> 轮</span><span id="apHint">8 个知识点 · 权重满分 100 · 轮次 8~16 动态调整</span></div>
+            <div class="ap-txt"><span id="apTxt">知识点 <b>0/12</b> · 第 <b>0</b> 轮</span><span id="apHint">12 个知识点 · 权重满分 155 · 轮次 10~20 动态调整</span></div>
             <div class="ap-bar"><i id="apBar"></i></div>
           </div>
           <button class="btn warn sm" id="asFinish">⏹ 结束并生成报告</button>
@@ -1058,61 +1058,89 @@ CHIPS.forEach(c=>{
 
 /* ================= 掌握度测评 Tab ================= */
 const KP=[
- {name:'实验目的与产物认知',weight:10,subfield:'实验教学',knode:'产物结构与配位组成',videos:[0],
+ {name:'实验目的与产物认知',weight:10,subfield:'实验教学',knode:'产物结构与配位组成',videos:[0],dim:'theory',
   main:'我们先从基础开始：本实验要制备的<b>目标产物</b>是什么？请写出它的化学式，并说说它的配位组成（中心离子、配体、外界、配位数）。',
   follow:'苏格拉底式提示：名称"三草酸合铁(Ⅲ)酸钾"里藏着答案——"三草酸合铁"说明配体有几个？中心离子是几价铁？外界又是什么离子呢？',
   hint:'提示：产物的内界是 [Fe(C₂O₄)₃]³⁻ 配离子，想一想它由什么中心离子和几个什么配体组成，外界是什么阳离子。',
   groups:[['三草酸合铁酸钾','草酸铁钾','k3[fe(c2o4)3]'],['化学式','分子式','c2o4','草酸根'],['fe3+','三价铁','fe(ⅲ)','fe(iii)','铁离子'],['配体','配位','双齿','螯合'],['钾','k+','k⁺','外界'],['翠绿色','绿色','晶体','配合物','络合物']],
   explain:'<b>直接讲解：</b>目标产物是<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O</b>，翠绿色晶体，属配位化合物（配合物）。配位组成：中心离子 <b>Fe³⁺</b>（+3 价），配体为 3 个双齿的<b>草酸根 C₂O₄²⁻</b>——每个 C₂O₄²⁻ 用两个 O 原子配位，故配位数为 6，形成三个五元螯合环；内界是配离子 [Fe(C₂O₄)₃]³⁻，外界是 3 个 K⁺，另含 3 分子结晶水。Fe³⁺ 为 3d⁵ 构型，在八面体场中呈高自旋态。建议到知识图谱查看"产物结构与配位组成"节点巩固。'},
- {name:'实验原理（沉淀/氧化/配位反应）',weight:20,subfield:'合成制备',knode:'三步反应原理',videos:[0,2],
+ {name:'实验原理（沉淀/氧化/配位反应）',weight:20,subfield:'合成制备',knode:'三步反应原理',videos:[0,2],dim:'theory',
   main:'请描述本实验的<b>反应原理</b>：以莫尔盐为原料制备三草酸合铁酸钾，主要经历哪几步反应？能写出（或描述）各步的反应方程式吗？',
   follow:'提示：想想 Fe 元素的价态变化路线——莫尔盐里 Fe 是 +2 价，产物里是 +3 价。中间先形成了什么沉淀？是谁把 Fe(Ⅱ) 变成了 Fe(Ⅲ)？最后谁和 Fe³⁺ 配位？',
   hint:'提示：路线是"先生成 FeC₂O₄ 沉淀 → 用某氧化剂氧化 → 再与草酸根配位"。试着说出每一步的反应物与生成物。',
   groups:[['fec2o4','草酸亚铁','黄色沉淀','沉淀'],['过氧化氢','h2o2','双氧水','氧化剂'],['氧化','fe2+','二价铁','fe(ⅱ)'],['fe3+','三价铁','fe(ⅲ)'],['配位','配合','草酸根','c2o4','k2c2o4'],['方程式','反应式','k3[fe(c2o4)3]']],
   explain:'<b>直接讲解：</b>三步反应——①<b>沉淀</b>：(NH₄)₂Fe(SO₄)₂·6H₂O + H₂C₂O₄ → FeC₂O₄·2H₂O↓(黄色) + (NH₄)₂SO₄ + H₂SO₄ + 4H₂O；②<b>氧化</b>（40℃ 水浴）：6FeC₂O₄·2H₂O + 3H₂O₂ + 6K₂C₂O₄ → 4K₃[Fe(C₂O₄)₃] + 2Fe(OH)₃↓ + 12H₂O，H₂O₂ 把 Fe(Ⅱ) 氧化为 Fe(Ⅲ)；③<b>配位溶解</b>：2Fe(OH)₃ + 3H₂C₂O₄ + 3K₂C₂O₄ → 2K₃[Fe(C₂O₄)₃] + 6H₂O。理解"先沉淀除杂、再氧化调价态、后配位成产物"的设计逻辑是本实验最核心（权重 20）的考点，务必能默写三步方程式并说明每步目的。'},
- {name:'试剂与仪器认知',weight:10,subfield:'实验教学',knode:'试剂作用与仪器清单',videos:[2],
+ {name:'试剂与仪器认知',weight:10,subfield:'实验教学',knode:'试剂作用与仪器清单',videos:[2],dim:'experiment',
   main:'说说本实验用到的<b>主要试剂与仪器</b>：莫尔盐、草酸、H₂O₂、乙醇分别起什么作用？抽滤需要哪些仪器？',
   follow:'提示：从"每种试剂解决了什么问题"去想——谁提供 Fe²⁺？谁提供 C₂O₄²⁻？谁负责氧化？乙醇加进去后晶体为什么容易析出？',
   hint:'提示：四种试剂对应"铁源 / 沉淀与配位剂 / 氧化剂 / 降低溶解度促结晶"四个角色，试着对号入座。',
   groups:[['莫尔盐','硫酸亚铁铵','铁源'],['草酸','乙二酸','配位','沉淀剂'],['过氧化氢','双氧水','h2o2','氧化'],['乙醇','酒精','降低溶解度','洗涤'],['布氏漏斗','吸滤瓶','抽滤','真空泵'],['水浴','烧杯','玻璃棒','天平','量筒']],
   explain:'<b>直接讲解：</b>四种关键试剂各司其职：<b>莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O</b> 是稳定的 Fe(Ⅱ) 铁源，兼作产率计算基准（组成确定、不易被氧化）；<b>草酸</b> 先作沉淀剂生成黄色 FeC₂O₄、后作配位剂形成 [Fe(C₂O₄)₃]³⁻；<b>H₂O₂</b> 是绿色氧化剂（还原产物为水、不引入杂质），把 Fe(Ⅱ) 氧化为 Fe(Ⅲ)；<b>乙醇</b> 降低产物溶解度促结晶并用于洗涤除杂。仪器：抽滤装置（布氏漏斗+吸滤瓶+真空泵）用于收集晶体，另有恒温水浴锅、烧杯、玻璃棒、胶头滴管、电子天平、棕色试剂瓶（避光保存产品）等。'},
- {name:'操作流程与关键参数',weight:20,subfield:'合成制备',knode:'操作流程与关键参数',videos:[0,3],
+ {name:'操作流程与关键参数',weight:20,subfield:'合成制备',knode:'操作流程与关键参数',videos:[0,3],dim:'experiment',
   main:'请按顺序描述本实验的<b>操作流程</b>，并指出关键操作参数（温度、加料方式、洗涤与结晶条件、避光要求等）。',
   follow:'提示：回忆"称量 → 溶解 → 沉淀 → 氧化 → 配位 → 结晶 → 抽滤洗涤 → 干燥称量"这条主线，每一步的温度和加料方式你有印象吗？比如 H₂O₂ 是快速倒入还是逐滴加入？',
   hint:'提示：关键参数包括——40℃ 左右水浴、H₂O₂ 逐滴加入并搅拌、热水洗沉淀、加乙醇后暗处冷却结晶、乙醇洗涤、避光干燥。',
   groups:[['溶解','稀硫酸','加水'],['水浴','40','加热','控温'],['逐滴','滴加','搅拌'],['洗涤','热水','洗沉淀'],['乙醇','酒精','冷却','结晶'],['抽滤','过滤','避光','暗处','干燥']],
   explain:'<b>直接讲解：</b>标准流程：莫尔盐加蒸馏水与少量稀硫酸溶解（防水解）→ 加饱和草酸、水浴加热得黄色 FeC₂O₄·2H₂O 沉淀，热水洗涤 2~3 次 → 沉淀转入饱和 K₂C₂O₄ 溶液，<b>40℃ 水浴下逐滴加 H₂O₂</b> 并搅拌至黄色消失（氧化完全）→ 微沸 2~3 min 除尽过量 H₂O₂ → 滴加饱和草酸至红褐色恰好溶解，得翠绿色清液 → 加无水乙醇（约 1:1）、<b>暗处冷却结晶</b> → 抽滤、乙醇洗涤 2~3 次 → 避光晾干至恒重后称量。关键参数：40℃ 控温、逐滴加料、避光、乙醇促晶，四者缺一不可。'},
- {name:'产率计算与数据处理',weight:15,subfield:'分析测定',knode:'产率计算与基准试剂',videos:[2],
+ {name:'产率计算与数据处理',weight:15,subfield:'分析测定',knode:'产率计算与基准试剂',videos:[2],dim:'comprehensive',
   main:'<b>产率如何计算？</b>本实验应以哪种试剂为基准计算理论产量？为什么选它？',
   follow:'提示：想想"Fe 原子守恒"——1 mol 起始铁源理论上生成几 mol 产物？哪种试剂的量决定了理论产量的上限（限量试剂）？',
   hint:'提示：基准试剂是"限量且组成确定"的那种，其余试剂都过量。产物与它的摩尔比是 1:1（按 Fe 守恒）。',
   groups:[['产率','百分产率'],['理论产量','实际产量'],['莫尔盐','硫酸亚铁铵','基准','限量'],['100%','百分比','除以'],['摩尔','物质的量','n(','1:1','计量比'],['491','392','摩尔质量','相对分子质量']],
   explain:'<b>直接讲解：</b>产率 = 实际产量 ÷ 理论产量 × 100%。基准试剂为<b>莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O</b>（M=392.14 g/mol）：它是限量试剂（草酸、K₂C₂O₄、H₂O₂ 均过量），且 Fe 原子守恒，1 mol 莫尔盐理论生成 1 mol K₃[Fe(C₂O₄)₃]·3H₂O（M=491.24 g/mol），故理论产量 = m(莫尔盐) × 491.24/392.14——例如 5.00 g 莫尔盐对应约 6.26 g 产物。注意产物必须<b>干燥至恒重</b>再称量，否则残留溶剂会使产率虚高甚至超过 100%。'},
- {name:'误差分析',weight:10,subfield:'综合研究',knode:'误差来源与产率异常',videos:[3],
+ {name:'误差分析',weight:10,subfield:'综合研究',knode:'误差来源与产率异常',videos:[3],dim:'comprehensive',
   main:'如果测得的<b>产率明显偏低（或超过 100%）</b>，可能有哪些原因？请从操作角度做误差分析。',
   follow:'提示：沿着流程找"损失点"——沉淀转移、洗涤、过滤、结晶、干燥，哪一步会让产物变少？反过来，什么情况会让称量值"虚高"？',
   hint:'提示：偏低——转移损失、洗涤液过多、氧化不完全、结晶不完全、见光分解；偏高——未干燥恒重、杂质共沉淀。',
   groups:[['损失','转移','洒落','残留'],['洗涤','溶解','过多','过量'],['结晶不完全','未析出','析晶'],['氧化','不完全','h2o2'],['分解','见光','受热','光解'],['干燥','恒重','杂质','水分','未干']],
   explain:'<b>直接讲解：</b>产率<b>偏低</b>的常见原因：① 转移、过滤时沉淀或晶体洒落残留；② 洗涤用水或乙醇过多，产物溶解流失；③ H₂O₂ 量不足或受热分解导致氧化不完全（残留黄色 FeC₂O₄）；④ 乙醇量不足、冷却时间不够导致结晶不完全；⑤ 见光或受热分解。产率<b>偏高（>100%）</b>多为：产物未干燥至恒重（含乙醇/水分）、杂质共沉淀。规范的误差分析要把每条原因对应到具体操作环节，并给出改进措施——少量多次洗涤、补足乙醇、冰水浴冷却、全程避光、恒重后称量。'},
- {name:'安全与废液处理',weight:5,subfield:'实验教学',knode:'安全规范与废液分类',videos:[],
+ {name:'安全与废液处理',weight:5,subfield:'实验教学',knode:'安全规范与废液分类',videos:[],dim:'experiment',
   main:'说说本实验的<b>安全注意事项</b>，以及实验结束后的<b>废液应如何处理</b>？',
   follow:'提示：想一想本实验"最危险"的两种试剂——有腐蚀性强氧化性的是谁？有毒的是谁？含铁和草酸盐的废液能直接倒下水道吗？',
   hint:'提示：H₂O₂（腐蚀/强氧化）与草酸（有毒）是防护重点；含 Fe 与草酸盐的废液属重金属废液，需回收处理。',
   groups:[['过氧化氢','双氧水','h2o2','腐蚀','氧化性'],['草酸','毒','有毒'],['护目镜','手套','防护','通风'],['废液','回收','分类'],['重金属','中和','沉淀','排放'],['加热','烫伤','明火','乙醇','易燃']],
   explain:'<b>直接讲解：</b>安全要点：<b>H₂O₂（实验用6%，浓溶液腐蚀性更强）有氧化性、腐蚀皮肤</b>，<b>草酸及其盐有毒</b>——须戴护目镜与手套、在通风处操作，沾到试剂立即用大量水冲洗；水浴加热防烫伤，滴加 H₂O₂ 防暴沸飞溅；乙醇易燃须远离明火。废液处理：含 Fe³⁺/Fe²⁺ 与草酸盐的母液、洗液属<b>重金属废液</b>，必须倒入专用回收桶（可加碱中和沉淀铁后按无机废液处置），严禁直排下水道；残余 H₂O₂ 用大量水稀释后排放，含乙醇洗液入有机废液桶，滤纸与废晶体入固废收集。'},
- {name:'配合物稳定性与课后思考',weight:10,subfield:'光化学应用',knode:'光化学性质与蓝晒拓展',videos:[1],
+ {name:'配合物稳定性与课后思考',weight:10,subfield:'光化学应用',knode:'光化学性质与蓝晒拓展',videos:[1],dim:'comprehensive',
   main:'最后一题：<b>[Fe(C₂O₄)₃]³⁻ 的稳定性受哪些因素影响？</b>为什么要避光保存？它还有哪些有趣的应用（比如蓝晒）？',
   follow:'提示：蓝晒工艺就是利用这种配合物"怕光"的性质——光照下 Fe³⁺ 会发生什么变化？除光以外，温度和酸碱度会有什么影响？',
   hint:'提示：从光、热、pH 三方面考虑；光照下 Fe³⁺ 被还原为 Fe²⁺，草酸根被氧化为 CO₂。',
   groups:[['光','光照','见光','光化学'],['还原','fe2+','二价铁','光还原'],['分解','co2','二氧化碳','光解'],['温度','热','受热'],['ph','酸','碱','酸碱'],['蓝晒','感光','晒图','剂量计','磁化率','应用']],
-  explain:'<b>直接讲解：</b>[Fe(C₂O₄)₃]³⁻ 的稳定性受三类因素影响：①<b>光</b>——光化学还原 2[Fe(C₂O₄)₃]³⁻+hν→2Fe²⁺+5C₂O₄²⁻+2CO₂↑，故产品须用棕色瓶避光保存；②<b>热</b>——受热先失结晶水、继而配离子分解，不可烘干蒸干；③<b>pH</b>——强酸使 C₂O₄²⁻ 质子化、配离子解离，强碱生成 Fe(OH)₃ 沉淀。应用：利用光敏性可作<b>蓝晒感光剂</b>（Fe²⁺ 与铁氰化钾生成普鲁士蓝）与<b>光化学剂量计</b>；d⁵ 高自旋 Fe³⁺ 还可用古埃磁天平测磁化率（μeff≈5.92 B.M.）。可到"科普探索"体验蓝晒实验。'}
+  explain:'<b>直接讲解：</b>[Fe(C₂O₄)₃]³⁻ 的稳定性受三类因素影响：①<b>光</b>——光化学还原 2[Fe(C₂O₄)₃]³⁻+hν→2Fe²⁺+5C₂O₄²⁻+2CO₂↑，故产品须用棕色瓶避光保存；②<b>热</b>——受热先失结晶水、继而配离子分解，不可烘干蒸干；③<b>pH</b>——强酸使 C₂O₄²⁻ 质子化、配离子解离，强碱生成 Fe(OH)₃ 沉淀。应用：利用光敏性可作<b>蓝晒感光剂</b>（Fe²⁺ 与铁氰化钾生成普鲁士蓝）与<b>光化学剂量计</b>；d⁵ 高自旋 Fe³⁺ 还可用古埃磁天平测磁化率（μeff≈5.92 B.M.）。可到"科普探索"体验蓝晒实验。'},
+ {name:'配位化学理论基础',weight:15,subfield:'配位化学理论',knode:'晶体场理论与CFSE',videos:[1],dim:'theory',
+  main:'【进阶】请用<b>晶体场理论</b>解释 [Fe(C₂O₄)₃]³⁻ 的颜色和磁性：d 轨道在八面体场中如何分裂？什么是高/低自旋？CFSE 怎么算？',
+  follow:'苏格拉底式引导：Fe³⁺ 是 d⁵ 离子，它的 5 个 d 电子在八面体场中怎么排布？会先填满 t₂g 还是 eg？这决定了它的自旋状态——进而决定了颜色和磁性。',
+  hint:'提示：八面体场中 d 轨道分裂为 t₂g（三重简并）和 eg（二重简并），Δ₀ 大小决定高/低自旋。d⁵ 在弱场（Δ₀小）→高自旋 t₂g³ eg²，CFSE=0Δ₀；在强场→低自旋 t₂g⁵ eg⁰。',
+  groups:[['八面体','配位','6配位'],['d轨道','分裂','t2g','eg'],['晶体场','cft','配体场'],['高自旋','低自旋','自旋'],['cfse','稳定化能','分裂能'],['颜色','d-d跃迁','吸收','翠绿']],
+  explain:'<b>直接讲解：</b>八面体场中 Fe³⁺ 的 5 个 d 轨道分裂为 t₂g(dxy,dyz,dzx) 和 eg(dz²,dx²-y²)，能级差 Δ₀=10Dq。草酸根是弱场配体（Δ₀≈14,300 cm⁻¹），电子排布为高自旋 t₂g³ eg²，CFSE=(-0.4×3+0.6×2)Δ₀=0Δ₀——无稳定化能，但因螯合效应和熵增，配合物仍稳定。d-d 跃迁吸收橙红光(560nm)，透射翠绿色。磁性 μeff≈√35≈5.92 B.M.，对应 5 个未成对电子——这是高自旋 d⁵ 的"指纹性"磁矩。光谱化学序中 C₂O₄²⁻ 位于弱-中交界处，与 H₂O 接近。'},
+ {name:'磁性研究基础',weight:10,subfield:'磁性研究',knode:'磁化率与自旋磁矩',videos:[],dim:'theory',
+  main:'【进阶】如何通过<b>磁化率测定</b>判断 Fe³⁺ 的电子构型？仅自旋磁矩公式是什么？古埃磁天平的原理简要说明即可。',
+  follow:'提示：Gouy 天平的核心思路——样品管在非均匀磁场中受力 Fz，可通过比较法求 μeff。然后反推未成对电子数 n，n=5 对应高自旋 d⁵。',
+  hint:'提示：μeff=2.828√(χM·T)=√[n(n+2)] B.M.（仅自旋公式）。d⁵ 高自旋 n=5→√35≈5.92。若测得值接近，则确证高自旋。',
+  groups:[['磁性','磁化率','磁矩'],['gouy','古埃','磁天平'],['未成对','自旋','电子'],['5.92','5.9','sqrt35'],['仅自旋','玻尔磁子','b.m.'],['顺磁','抗磁','校正']],
+  explain:'<b>直接讲解：</b>Gouy 磁天平：样品管在非均匀磁场中受力 Fz=½χg·A·(H²-H₀²)，通过与已知标准物的比较法标定求得 χg→χM（经 Pascal 常数抗磁校正）→ μeff=2.828√(χM·T)。μeff=√[n(n+2)]≈√35≈5.92 B.M.（n=5，高自旋 d⁵）。若产物实测 μeff≈5.8-6.0 B.M.，确证 Fe³⁺ 为高自旋态、草酸根是弱场配体。这是磁性数据验证晶体场理论的经典案例。处理数据时注意量纲 (e.m.u./c.g.s. 制与其他制式的换算) 和 Pascal 抗磁校正表。'},
+ {name:'结构表征方法',weight:10,subfield:'结构表征',knode:'UV-Vis/IR/XRD应用',videos:[],dim:'comprehensive',
+  main:'【进阶】本实验产物的结构可以通过哪些<b>表征方法</b>验证？请说说 UV-Vis、IR 和 XRD 分别能提供什么样的结构信息。',
+  follow:'提示：每种方法回答一个核心问题——XRD 回答"晶体长什么样"（晶胞参数）、IR 回答"配体怎么连"（配位模式）、UV-Vis 回答"为什么是翠绿色"（d-d 跃迁能量）。',
+  hint:'提示：XRD→单斜晶系 P2₁/c、a=7.72Å；IR→νas(COO⁻)-νs(COO⁻)=Δν≈320cm⁻¹，双齿配位特征；UV-Vis→λmax≈560nm（d-d 跃迁）。',
+  groups:[['xrd','单晶','衍射','晶胞','空间群'],['红外','ir','特征频率','配位模式'],['紫外可见','uv-vis','d-d','跃迁','吸收'],['表征','验证','鉴定','结构'],['单斜','p21/c','八面体'],['ir峰','cm-1','波数']],
+  explain:'<b>直接讲解：</b>三种正交方法互验结构——①<b>XRD 单晶衍射</b>：单斜晶系、空间群 P2₁/c、a=7.72Å, b=19.73Å, c=10.26Å, β=94.8°，确证八面体构型（维尔纳理论实验验据）；②<b>IR 红外光谱</b>：νas(COO⁻)≈1710cm⁻¹, νs(COO⁻)≈1390cm⁻¹, Δν≈320cm⁻¹<自由草酸根的Δν（≈365cm⁻¹），这是双齿螯合配位的特征判据（双齿→M-O键削弱C-O键→Δν减小）；③<b>UV-Vis 可见吸收</b>：λmax≈560nm（橙红光区），对应 d-d 跃迁（⁶A₁g→⁴T₂g），产物呈翠绿色（互补色）。三者交叉验证 = 严谨的结构确证逻辑链。'},
+ {name:'热分析/热分解',weight:10,subfield:'热分析',knode:'TG-DSC曲线解读',videos:[],dim:'comprehensive',
+  main:'【进阶】K₃[Fe(C₂O₄)₃]·3H₂O 受热时依次发生哪些变化？TG-DSC 曲线的三步失重分别对应什么过程？各步失重比例的理论值是多少？',
+  follow:'提示：热分解分三步走——先失水、再草酸根分解、最后形成碳酸盐。算一算 3 分子结晶水占总分子量的百分比是多少？',
+  hint:'提示：M(产物)=491.25 g/mol，3H₂O=54.06 → 第一步失重≈11.0%。第二步草酸根分解失去 3C₂O₄²⁻ → 3CO+3CO₂（约43%）。第三步 K₂CO₃ 与 Fe₂O₃ 形成。',
+  groups:[['tg','dsc','热重','热分析'],['结晶水','脱水','110℃','第一步'],['分解','草酸根','第二步','280','400'],['碳酸盐','第三步','400','600'],['失重比','百分','理论值','11%','43%'],['热稳定','温度','失重']],
+  explain:'<b>直接讲解：</b>TG-DSC 三步分解：①<b>失结晶水（70-130℃）</b>：K₃[Fe(C₂O₄)₃]·3H₂O→K₃[Fe(C₂O₄)₃]+3H₂O↑，DSC 吸热峰 ~110℃。理论失重=54.06/491.25×100%=11.0%。②<b>草酸根分解（280-400℃）</b>：K₃[Fe(C₂O₄)₃]→3/2K₂CO₃+½Fe₂O₃+3/2CO↑+3/2CO₂↑，DSC 强放热峰 ~350℃。失重约 43%（C₂O₄²⁻→CO+CO₂）。③<b>碳酸盐进一步分解（400-600℃）</b>：残余碳酸盐→氧化物+CO₂↑。总失重约 59%。TG-DSC 是判断产物纯度的关键——若第一步失重偏离 11.0%，说明结晶水含量异常；若多出不明失重台阶，说明有杂质共沉淀。'}
 ];
-const MAX_ROUND=16,MIN_ROUND=8;
+const PROGRESS_PREFIX='已测 ';
+const MAX_ROUND=20,MIN_ROUND=10;  // 12知识点需要更多轮次
+const TOTAL_WEIGHT=155;  // 总权重（归一化：实际总分 = sum/155*100）
 const A={
   started:false,finished:false,idx:0,round:0,
   stage:'main', // main | retry | follow | retest
   retestQueue:[],inRetest:false,
-  results:KP.map(()=>({mastery:null,note:''}))
+  results:KP.map(()=>({mastery:null,note:'',startedAt:null})),
+  timings:[],  // {kpIndex, stage, duration_sec}
+  startTime:null
 };
 const asChat=$('#asChat'),asInput=$('#asInput'),asSend=$('#asSend');
 let asBusy=false;
@@ -1126,9 +1154,14 @@ function coverageOf(text,groups){
 async function llmScoreAnswer(question, referenceAnswer, userAnswer){
   if(!LLM.enabled||!LLM.apiKey) return null;
   try{
-    const prompt='你是化学教学评分官。对学生的回答进行语义理解评分（0-100%），而非关键词匹配。\n'+
+    const prompt='你是化学教学评分官。对学生的回答进行多维度语义理解评分（0-100%），而非关键词匹配。\n'+
       '【问题】'+question+'\n【参考答案要点】'+referenceAnswer.slice(0,400)+'\n【学生回答】'+userAnswer.slice(0,500)+'\n\n'+
-      '评判标准：语义正确即给分，即使措辞完全不同。\n输出JSON：{"score":0-100,"rationale":"简短理由","gaps":["缺失要点"]}';
+      '评判标准：\n'+
+      '1）准确性（60%）：核心化学事实是否正确，方程式/公式是否准确\n'+
+      '2）完整性（25%）：是否覆盖所有关键要点\n'+
+      '3）专业表达（15%）：术语使用是否规范，表述是否清晰\n'+
+      '语义正确即给分，即使措辞完全不同——化学本质正确 > 措辞一致。\n'+
+      '输出JSON：{"score":0-100,"accuracy":0-60,"completeness":0-25,"expression":0-15,"rationale":"15字以内简短理由","gaps":["缺失要点"]}';
     const resp=await fetch(LLM.endpoint,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+LLM.apiKey},
       body:JSON.stringify({model:LLM.model,messages:[{role:'system',content:'你是评分官。只输出JSON。'},{role:'user',content:prompt}],max_tokens:400,temperature:0.1})});
     if(!resp.ok) return null;
@@ -1148,7 +1181,8 @@ function isDontKnow(t){
 }
 function updateProgress(){
   const done=A.results.filter(r=>r.mastery!==null).length;
-  const shown=Math.min(8,Math.max(done,A.idx+(A.finished?0:0)));
+  const total=KP.length;
+  const shown=Math.min(total,Math.max(done,A.idx+(A.finished?0:0)));
   $('#apTxt').innerHTML='知识点 <b>'+Math.min(8,shown)+'/8</b> · 第 <b>'+A.round+'</b> 轮'+(A.inRetest?' · 薄弱点复测中':'');
   $('#apBar').style.width=Math.round(done/8*100)+'%';
 }
@@ -1169,7 +1203,7 @@ function nextQuestion(){
       A.retestQueue=KP.map((p,i)=>i).filter(i=>A.results[i].mastery!==null&&A.results[i].mastery<0.6);
       if(A.retestQueue.length&&A.round<MAX_ROUND){
         A.inRetest=true;
-        aiSay('8 个知识点已测完一轮 🎉。你中有 '+A.retestQueue.length+' 个知识点掌握度偏低，我们换个问法<b>复测</b>一下（不影响已得成绩，只可能加分）：',()=>setTimeout(askCurrent,650));
+        aiSay('所有知识点已测完一轮 🎉。你中有 '+A.retestQueue.length+' 个知识点掌握度偏低，我们换个问法<b>复测</b>一下（不影响已得成绩，只可能加分）：',()=>setTimeout(askCurrent,650));
         return;
       }
       finishAssess();return;
@@ -1274,8 +1308,8 @@ function praise(){const p=['回答得很好！👏','非常棒，要点齐全！
 
 function startAssess(){
   if(A.started)return;
-  A.started=true;
-  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。接下来通过<b>多轮对话</b>检测你对「三草酸合铁酸钾制备实验」的掌握水平：</p><ul style="margin-left:18px"><li>共 <b>8 个知识点</b>（权重合计 100 分），每个知识点 1 道主问题；</li><li>回答得好 → 直接过关；答得不全 → <b>引导式追问</b>；答不出 → 先给提示，仍不会则<b>直接讲解</b>；</li><li>薄弱知识点最后会<b>换问法复测</b>，轮次 8~16 动态调整；</li><li>可随时点「结束并生成报告」，报告支持导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？我们开始第一题 👇</p>',
+  A.started=true;A.startTime=Date.now();
+  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。接下来通过<b>多轮对话</b>检测你对「三草酸合铁酸钾制备实验」的掌握水平：</p><ul style="margin-left:18px"><li>共 <b>12 个知识点</b>（权重合计 155 分），含基础（8题）与进阶（4题：配位化学理论/磁性/结构表征/热分析）；</li><li>回答得好 → 直接过关；答得不全 → <b>引导式追问</b>；答不出 → 先给提示，仍不会则<b>直接讲解</b>；</li><li>薄弱知识点最后会<b>换问法复测</b>，轮次 10~20 动态调整；</li><li>跳过会提供完整讲解，帮助理解；</li><li>可随时点「结束并生成报告」，报告含<b>维度分析、时间统计、学习建议</b>，支持导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？我们开始第一题 👇</p>',
     ()=>setTimeout(nextQuestion,900));
 }
 function kpComment(m){
@@ -1291,14 +1325,36 @@ function gradeOf(total){
   return['不及格','g-fail'];
 }
 function buildReportData(){
-  let total=0;KP.forEach((kp,i)=>{total+=kp.weight*(A.results[i].mastery||0);});
+  let total=0,totalWeight=0;
+  KP.forEach((kp,i)=>{
+    const m=A.results[i].mastery||0;
+    total+=kp.weight*m;
+    totalWeight+=kp.weight;
+  });
   total=Math.round(total*10)/10;
-  const items=KP.map((kp,i)=>({name:kp.name,weight:kp.weight,m:A.results[i].mastery,note:A.results[i].note,kp}));
+  total=Math.round(total/totalWeight*1000)/10;  // 归一化到0-100
+  const items=KP.map((kp,i)=>({
+    name:kp.name,weight:kp.weight,m:A.results[i].mastery,
+    note:A.results[i].note,kp:kp,dim:kp.dim||'comprehensive'
+  }));
   const assessed=items.filter(x=>x.m!==null);
   const strengths=assessed.filter(x=>x.m>=0.8).sort((a,b)=>b.m-a.m);
   const weakness=assessed.filter(x=>x.m<0.6).sort((a,b)=>a.m-b.m);
   const unassessed=items.filter(x=>x.m===null);
-  return{total,items,strengths,weakness,unassessed,rounds:A.round,date:new Date()};
+  // 维度分析
+  const dims={theory:{total:0,weight:0},experiment:{total:0,weight:0},comprehensive:{total:0,weight:0}};
+  assessed.forEach(x=>{
+    const d=x.dim||'comprehensive';
+    dims[d].total+=x.weight*(x.m||0);dims[d].weight+=x.weight;
+  });
+  const dimScores={};
+  for(const[k,v] of Object.entries(dims)){
+    dimScores[k]=v.weight>0?Math.round(v.total/v.weight*100):0;
+  }
+  // 时间统计
+  const totalSec=A.startTime?Math.round((Date.now()-A.startTime)/1000):0;
+  const avgSec=assessed.length>0?Math.round(totalSec/assessed.length):0;
+  return{total,items,strengths,weakness,unassessed,rounds:A.round,date:new Date(),dimScores,totalSec,avgSec};
 }
 function suggestHTML(w){
   const kp=w.kp;
@@ -1329,9 +1385,18 @@ function finishAssess(reason){
    +'<div class="rp-sub">三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验 · 测评时间 '+dateStr+' · 共 '+d.rounds+' 轮对话'+(reason?(' · '+esc(reason)):'')+'</div>'
    +'<div class="rp-top"><div class="ring">'+ringSVG(d.total)+'<div class="ring-txt"><b>'+d.total+'</b><span>总分 / 100</span></div></div>'
    +'<div class="rp-grade"><span class="g-tag '+gcls+'">'+gname+'</span>'
-   +'<div class="rp-meta">已测知识点 '+d.items.filter(x=>x.m!==null).length+'/8 · 优势项 '+d.strengths.length+' 个 · 薄弱项 '+d.weakness.length+' 个'
-   +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ 提前结束：'+d.unassessed.length+' 个知识点未测评，按 0 计入总分</span>'):'')
+   +'<div class="rp-meta">已测 '+d.items.filter(x=>x.m!==null).length+'/'+d.items.length+' 个知识点'
+   +' · 耗时 '+Math.floor(d.totalSec/60)+'分'+(d.totalSec%60)+'秒 · 平均 '+(d.avgSec)+'秒/题'
+   +' · 优势项 '+d.strengths.length+' · 薄弱项 '+d.weakness.length
+   +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ '+d.unassessed.length+' 个知识点未测评，按 0 计入总分</span>'):'')
    +'</div></div></div>'
+   // 维度分析
+   +'<div class="rp-sec"><h3>📐 三维度分析</h3>'
+   +'<div style="display:flex;gap:12px;flex-wrap:wrap">'
+   +'<div class="dim-card" style="flex:1;min-width:100px"><div class="dim-label">📖 理论基础</div><div class="dim-score">'+d.dimScores.theory+'%</div><div class="dim-bar"><i style="width:'+d.dimScores.theory+'%;background:#3b82f6"></i></div></div>'
+   +'<div class="dim-card" style="flex:1;min-width:100px"><div class="dim-label">🔬 实验技能</div><div class="dim-score">'+d.dimScores.experiment+'%</div><div class="dim-bar"><i style="width:'+d.dimScores.experiment+'%;background:#10b981"></i></div></div>'
+   +'<div class="dim-card" style="flex:1;min-width:100px"><div class="dim-label">🧠 综合应用</div><div class="dim-score">'+d.dimScores.comprehensive+'%</div><div class="dim-bar"><i style="width:'+d.dimScores.comprehensive+'%;background:#a855f7"></i></div></div>'
+   +'</div></div>'
    +'<div class="rp-sec"><h3>📊 各知识点掌握度（权重 × 掌握度 = 得分）</h3>';
   d.items.forEach(x=>{
     const m=x.m||0,pct=Math.round(m*100);

@@ -986,6 +986,286 @@
     "lab-safety",
     "waste-treatment"
    ]
+  },
+  {
+   "id": "werner-bio",
+   "name": "维尔纳生平",
+   "category": "coordination",
+   "level": 3,
+   "description": "阿尔弗雷德·维尔纳（Alfred Werner, 1866-1919），瑞士化学家，26岁发表配位理论，提出主价/副价和配位数概念，1913年获诺贝尔化学奖，是配位化学的唯一诺贝尔奖得主。",
+   "symbolSize": 22,
+   "parent": "complex-concept",
+   "formulas": ["M(NH_3)_6^{n+} \\text{ 型配合物的八面体构型}"],
+   "connectionToExperiment": "维尔纳的八面体配位假说精确预言了[Fe(C₂O₄)₃]³⁻的空间构型，后被X射线单晶衍射确证（空间群P2₁/c）。",
+   "difficulty": 1,
+   "relatedNodes": ["complex-concept", "octahedral", "tassaert-discovery"]
+  },
+  {
+   "id": "tassaert-discovery",
+   "name": "塔萨厄尔发现",
+   "category": "coordination",
+   "level": 3,
+   "description": "1798年法国化学家塔萨厄尔（B.M.Tassaert）偶然发现[Co(NH₃)₆]Cl₃——历史上第一个配位化合物，打破了\"两个独立稳定化合物不能再结合\"的传统观念。",
+   "symbolSize": 22,
+   "parent": "complex-concept",
+   "formulas": ["[Co(NH_3)_6]Cl_3 \\xrightarrow{1798} \\text{首次合成}"],
+   "connectionToExperiment": "塔萨厄尔发现的六氨合钴为配位化学奠定了基础，三草酸合铁酸钾正是继其后的经典配位化合物合成代表。",
+   "difficulty": 1,
+   "relatedNodes": ["complex-concept", "werner-bio", "naming"]
+  },
+  {
+   "id": "nobel-prize",
+   "name": "配位化学诺贝尔奖",
+   "category": "coordination",
+   "level": 3,
+   "description": "维尔纳1913年获诺贝尔化学奖（配位理论），后续获诺奖的配位化学相关贡献包括：1964年Hodgkin（VB₁₂结构/X射线晶体学）、1973年Wilkinson/Fischer（二茂铁夹心结构）、1987年Pedersen/Cram/Lehn（超分子配位化学）等。",
+   "symbolSize": 22,
+   "parent": "werner-bio",
+   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻的八面体螯合结构是配位化学教科书中的典范，实验中被学生合成了上百年。",
+   "difficulty": 1,
+   "relatedNodes": ["werner-bio", "octahedral", "chelate"]
+  },
+  {
+   "id": "magnetic-susceptibility",
+   "name": "磁化率测定",
+   "category": "physical",
+   "level": 2,
+   "description": "通过测量物质在磁场中的响应获取未成对电子数的方法，磁性数据直接验证配位化合物中金属离子的电子构型和自旋态。",
+   "symbolSize": 40,
+   "parent": "physical",
+   "formulas": ["\\chi_M = \\chi_{para} + \\chi_{dia}", "\\chi_{para}T = \\frac{Ng^2\\mu_B^2}{3k}S(S+1)"],
+   "connectionToExperiment": "三草酸合铁(III)酸钾的磁化率测定证实Fe³⁺为高自旋d⁵构型，μeff≈5.92 B.M.（5个未成对电子），有力支持了晶体场理论对配位场强度的判断。",
+   "difficulty": 3,
+   "relatedNodes": ["physical", "high-spin-d5", "crystal-field", "gouy-balance"]
+  },
+  {
+   "id": "gouy-balance",
+   "name": "古埃磁天平",
+   "category": "physical",
+   "level": 3,
+   "description": "Gouy磁天平是最常用的固体磁化率测量仪器，样品管在非均匀磁场中受力ΔW=Fz，通过比较法标定后求得摩尔磁化率χM。",
+   "symbolSize": 22,
+   "parent": "magnetic-susceptibility",
+   "formulas": ["F_z = \\frac{1}{2}\\chi_g A (H^2 - H_0^2)", "\\chi_M = \\chi_g \\cdot M"],
+   "connectionToExperiment": "实验中用古埃磁天平测量产物粉末，结合修正的居里定律，计算Fe³⁺的未成对电子数n=5。",
+   "difficulty": 3,
+   "relatedNodes": ["magnetic-susceptibility", "high-spin-d5", "spin-only"]
+  },
+  {
+   "id": "high-spin-d5",
+   "name": "高自旋d⁵磁矩",
+   "category": "physical",
+   "level": 3,
+   "description": "Fe³⁺（3d⁵）在八面体弱场（如C₂O₄²⁻）中为高自旋态，t₂g³eg²排布，5个未成对电子，仅自旋磁矩μs.o.=√(5×7)=√35≈5.92 B.M.，与实验值吻合。",
+   "symbolSize": 25,
+   "parent": "magnetic-susceptibility",
+   "formulas": ["\\mu_{s.o.} = \\sqrt{n(n+2)} = \\sqrt{35} \\approx 5.92\\,\\text{B.M.}"],
+   "connectionToExperiment": "产物的有效磁矩≈5.92 B.M.恰好对应高自旋d⁵，说明草酸根是弱场配体，不能迫使d电子成对——这是判断配体场强的最直接实验证据。",
+   "difficulty": 2,
+   "relatedNodes": ["magnetic-susceptibility", "spin-only", "crystal-field", "spectral-series"]
+  },
+  {
+   "id": "spin-only",
+   "name": "仅自旋磁矩公式",
+   "category": "physical",
+   "level": 3,
+   "description": "对第一过渡系金属（3dⁿ），轨道角动量大部分被配体场猝灭（quenching），实测磁矩接近仅自旋公式 μ=√[n(n+2)] B.M.，来自量子力学S²算符的本征值。",
+   "symbolSize": 22,
+   "parent": "high-spin-d5",
+   "formulas": ["\\mu_{s.o.} = 2\\sqrt{S(S+1)}\\mu_B = \\sqrt{n(n+2)}\\,\\text{B.M.}"],
+   "connectionToExperiment": "使用仅自旋公式时注意：对d⁶-d⁹八面体配合物，由于自旋-轨道耦合，实测值通常略高于仅自旋预测值，但对高自旋d⁵预测准确。",
+   "difficulty": 2,
+   "relatedNodes": ["high-spin-d5", "magnetic-susceptibility", "crystal-field"]
+  },
+  {
+   "id": "effective-moment",
+   "name": "有效磁矩计算",
+   "category": "physical",
+   "level": 3,
+   "description": "从实验磁化率χM（经抗磁校正后）出发计算有效磁矩：μeff=2.828√(χM·T) B.M.（室温，T=298K）。再反推未成对电子数n。",
+   "symbolSize": 22,
+   "parent": "magnetic-susceptibility",
+   "formulas": ["\\mu_{eff} = 2.828\\sqrt{\\chi_M T} \\,\\text{B.M.} \\quad (T=298\\,\\text{K})", "n \\approx \\frac{\\sqrt{1+4\\mu_{eff}^2}-1}{2}"],
+   "connectionToExperiment": "实验数据处理流程：天平读数→磁化率→经Pascal常数抗磁校正→χM→μeff→n→与理论值对比，完成磁性分析。",
+   "difficulty": 2,
+   "relatedNodes": ["magnetic-susceptibility", "high-spin-d5", "spin-only"]
+  },
+  {
+   "id": "green-chemistry",
+   "name": "绿色化学理念",
+   "category": "analytical",
+   "level": 2,
+   "description": "绿色化学12条原则（Anastas & Warner, 1998）：原子经济性、使用可再生原料、减少衍生物、催化优于计量反应、设计可降解产物、实时污染防控等。",
+   "symbolSize": 40,
+   "parent": "safety-direction",
+   "formulas": ["\\text{原子经济性} = \\frac{M_{目标产物}}{\\sum M_{所有反应物}} \\times 100\\%"],
+   "connectionToExperiment": "本实验水为溶剂、H₂O₂还原产物为水（无污染副产物）、乙醇可回收、含铁废液分类处理——是践行绿色化学教学理念的经典案例。",
+   "difficulty": 1,
+   "relatedNodes": ["safety-direction", "waste-treatment", "lab-safety"]
+  },
+  {
+   "id": "waste-classification",
+   "name": "废液分类标准",
+   "category": "analytical",
+   "level": 3,
+   "description": "化学实验室废液按GB 18597-2023分类：无机废液（含重金属、含氰、含氟、酸碱）、有机废液（含卤、不含卤）、固体废弃物等，必须分类收集、标识清晰。",
+   "symbolSize": 22,
+   "parent": "waste-treatment",
+   "connectionToExperiment": "实验母液含Fe³⁺和过量草酸盐，属含重金属无机废液→专用回收桶→碱中和沉淀→按无机废液处置；含乙醇洗液→有机废液桶。严禁混合排放。",
+   "difficulty": 1,
+   "relatedNodes": ["waste-treatment", "lab-safety", "green-chemistry"]
+  },
+  {
+   "id": "first-aid",
+   "name": "急救措施",
+   "category": "analytical",
+   "level": 3,
+   "description": "化学实验常见急救：酸/碱灼伤→大量清水冲洗15min以上；草酸/草酸盐误食→催吐后送医；H₂O₂溅眼→撑开眼睑清水冲洗≥15min；烫伤→冷流水冲洗后覆盖无菌纱布。",
+   "symbolSize": 22,
+   "parent": "lab-safety",
+   "connectionToExperiment": "本实验涉及草酸（有毒）和H₂O₂（腐蚀/强氧化），操作时必须戴护目镜和手套，实验台配备洗眼器和急救箱。",
+   "difficulty": 1,
+   "relatedNodes": ["lab-safety", "waste-treatment", "green-chemistry"]
+  },
+  {
+   "id": "lab-report-scoring",
+   "name": "报告评分标准",
+   "category": "analytical",
+   "level": 2,
+   "description": "武汉大学基础化学实验报告评分细则：实验目的(5%)+原理(10%)+操作步骤(10%)+数据记录与处理(35%)+结果讨论与误差分析(30%)+思考题(10%)。规范性与书写整洁度±5%。",
+   "symbolSize": 40,
+   "parent": "report-writing",
+   "connectionToExperiment": "本实验报告重点考察产率计算（15%）、误差分析（15%）、三步反应方程式（10%）、光化学性质解释（5%）——合计占总分45%。",
+   "difficulty": 1,
+   "relatedNodes": ["report-writing", "error-analysis", "effective-digit"]
+  },
+  {
+   "id": "teaching-history",
+   "name": "武大教学沿革",
+   "category": "analytical",
+   "level": 3,
+   "description": "武汉大学化学与分子科学学院自1960年代起将三草酸合铁酸钾制备实验纳入基础化学实验课程体系，历经六十余年教学实践，成为化学专业必修实验。2023年修订版讲义更加强调绿色化学和安全规范。",
+   "symbolSize": 22,
+   "parent": "report-writing",
+   "connectionToExperiment": "六十余年的教学积累沉淀了丰富的经验参数（最佳氧化温度40℃、乙醇用量1:1、避光保存要求等），这些参数在知识图谱和FAQ中均有详细记录。",
+   "difficulty": 1,
+   "relatedNodes": ["report-writing", "yield-optimization", "troubleshooting"]
+  },
+  {
+   "id": "curriculum-design",
+   "name": "课程设计理念",
+   "category": "analytical",
+   "level": 3,
+   "description": "本实验课程基于OBE（成果导向教育）理念设计：通过一个综合性实验串联沉淀、氧化还原和配位三大核心化学过程，搭配产物产率计算、误差分析、光化学性质验证等环节，实现知识-能力-素养三位一体的教学目标。",
+   "symbolSize": 22,
+   "parent": "lab-report-scoring",
+   "connectionToExperiment": "实验教学不再只是\"照着步骤做\"，而是通过知识图谱、AI助手和掌握度测评，帮助学生理解每一步操作的化学原理——这正是本ChemAI平台的教育价值所在。",
+   "difficulty": 1,
+   "relatedNodes": ["lab-report-scoring", "teaching-history", "troubleshooting"]
+  },
+  {
+   "id": "spectrochemical-series-detail",
+   "name": "光谱化学序详解",
+   "category": "physical",
+   "level": 3,
+   "description": "配体按分裂能力从小到大：I⁻<Br⁻<S²⁻<SCN⁻<Cl⁻<NO₃⁻<F⁻<OH⁻<C₂O₄²⁻≈H₂O<NCS⁻<CH₃CN<NH₃<en<bipy<phen<NO₂⁻<CN⁻<CO。C₂O₄²⁻位于中等偏弱区域（Δ₀≈14,000-18,000 cm⁻¹），在[Ni(H₂O)₆]²⁺与[Ni(en)₃]²⁺的正中间区域。",
+   "symbolSize": 25,
+   "parent": "spectral-series",
+   "formulas": ["\\text{I}^- < \\text{Br}^- < \\text{Cl}^- < \\text{F}^- < \\text{C}_2\\text{O}_4^{2-} < \\text{H}_2\\text{O} < \\text{NH}_3 < \\text{en} < \\text{CN}^-"],
+   "connectionToExperiment": "C₂O₄²⁻在光谱化学序中的位置决定了[Fe(C₂O₄)₃]³⁻为高自旋配合物，Δ₀≈14,300 cm⁻¹对应吸收波长约700nm（红光区），透射翠绿光的补色——565nm（绿-青色）。",
+   "difficulty": 2,
+   "relatedNodes": ["spectral-series", "crystal-field", "high-spin-d5", "dd-transition"]
+  },
+  {
+   "id": "jahn-teller-detail",
+   "name": "姜-泰勒效应详解",
+   "category": "coordination",
+   "level": 3,
+   "description": "姜-泰勒定理（Jahn-Teller Theorem）：非线性分子在简并电子基态下不稳定，会自动发生几何畸变以消除简并并降低能量。八面体场中最显著的是d⁹（Cu²⁺）和d⁴高自旋（Mn³⁺），造成轴向拉长或压缩。",
+   "symbolSize": 25,
+   "parent": "crystal-field",
+   "formulas": ["E_{JT} = -\\frac{1}{2}\\delta \\cdot \\Delta n_{e_g}", "\\text{畸变模式：} z\\text{-out (拉长) > } z\\text{-in (压缩)}"],
+   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻（Fe³⁺, d⁵高自旋, t₂g³eg²）eg轨道均匀占据——无姜-泰勒效应，保持理想八面体构型，这是其晶体稳定生长、易于获得单晶的重要原因。",
+   "difficulty": 3,
+   "relatedNodes": ["crystal-field", "octahedral", "delta-splitting", "dd-transition"]
+  },
+  {
+   "id": "xrd-characterization",
+   "name": "X射线衍射表征",
+   "category": "physical",
+   "level": 2,
+   "description": "X射线单晶/粉末衍射（XRD）是确定配合物晶体结构的决定性方法。布拉格方程 nλ=2d·sinθ 将衍射角与晶面间距关联，通过衍射图谱指数化确定晶胞参数和空间群。",
+   "symbolSize": 40,
+   "parent": "physical",
+   "formulas": ["n\\lambda = 2d\\sin\\theta", "d_{hkl} = \\frac{1}{\\sqrt{h^2/a^2 + k^2/b^2 + l^2/c^2}} \\quad (\\text{正交晶系})"],
+   "connectionToExperiment": "三草酸合铁(III)酸钾单晶XRD结果为单斜晶系、空间群P2₁/c、a=7.72Å, b=19.73Å, c=10.26Å, β=94.8°——这是维尔纳八面体理论的直接实验证认。",
+   "difficulty": 2,
+   "relatedNodes": ["physical", "octahedral", "crystal-field", "spectrophotometry"]
+  },
+  {
+   "id": "ir-spectroscopy",
+   "name": "红外光谱表征",
+   "category": "physical",
+   "level": 2,
+   "description": "红外光谱（IR）通过检测化学键振动频率获取配位信息。C₂O₄²⁻的νas(COO⁻)和νs(COO⁻)的频率差Δν可区分单齿、双齿和桥式配位模式——双齿Δν<单齿Δν。",
+   "symbolSize": 40,
+   "parent": "physical",
+   "formulas": ["\\Delta\\nu = \\nu_{as}(\\text{COO}^-) - \\nu_s(\\text{COO}^-)", "\\Delta\\nu_{\\text{bidentate}} < \\Delta\\nu_{\\text{monodentate}}"],
+   "connectionToExperiment": "产物IR谱中νas(COO⁻)≈1710 cm⁻¹, νs(COO⁻)≈1390cm⁻¹,Δν≈320cm⁻¹＜自由草酸根的Δν≈365cm⁻¹，证实了C₂O₄²⁻的双齿配位模式。",
+   "difficulty": 2,
+   "relatedNodes": ["physical", "xrd-characterization", "spectrophotometry", "chelate"]
+  },
+  {
+   "id": "tg-dsc-analysis",
+   "name": "TG-DSC热分析",
+   "category": "physical",
+   "level": 2,
+   "description": "热重-差示扫描量热联用（TG-DSC）同步测量质量变化和热流变化，定量解析分解步骤。K₃[Fe(C₂O₄)₃]·3H₂O的TG曲线显示三步失重：失结晶水（70-130℃）→草酸根分解（280-400℃）→碳酸盐形成（400-600℃）。",
+   "symbolSize": 40,
+   "parent": "physical",
+   "formulas": ["\\Delta m_1 = \\frac{3 \\times 18.02}{491.25} \\times 100\\% \\approx 11.0\\% \\quad (\\text{结晶水})", "\\Delta m_2 \\approx 43\\% \\quad (\\text{草酸根分解})"],
+   "connectionToExperiment": "TG-DSC数据是判断产物纯度的重要指标——若第一步失重偏离11.0%说明结晶水含量异常；加热实验中产物的分解温度和失重比例可以反推配合物的热稳定性。",
+   "difficulty": 3,
+   "relatedNodes": ["physical", "crystal-field", "xrd-characterization"]
+  },
+  {
+   "id": "born-equation",
+   "name": "Born溶剂化模型",
+   "category": "physical",
+   "level": 3,
+   "description": "Born模型定量描述离子在溶剂中的溶剂化自由能：ΔGsolv=-(NAz²e²/8πε₀r)(1-1/ε)。乙醇的介电常数(ε≈24.3)远小于水(ε≈78.5)，因此加入乙醇后离子溶剂化能减小、沉淀/结晶驱动力增大。",
+   "symbolSize": 22,
+   "parent": "thermodynamics",
+   "formulas": ["\\Delta G_{solv} = -\\frac{N_A z^2 e^2}{8\\pi\\varepsilon_0 r}\\left(1 - \\frac{1}{\\varepsilon}\\right)", "\\varepsilon_{\\text{EtOH}} \\approx 24.3 \\ll \\varepsilon_{\\text{H}_2\\text{O}} \\approx 78.5"],
+   "connectionToExperiment": "向产物水溶液中加入乙醇降低溶剂介电常数→ΔGsolv增加（溶剂化能力下降）→配合物溶解度降低→翠绿色晶体析出。这是溶剂替换结晶法的热力学本质。",
+   "difficulty": 3,
+   "relatedNodes": ["thermodynamics", "kinetics", "chelate"]
+  },
+  {
+   "id": "mohr-salt-chemistry",
+   "name": "莫尔盐化学",
+   "category": "redox",
+   "level": 2,
+   "description": "莫尔盐（Mohr's Salt）即六水合硫酸亚铁铵(NH₄)₂Fe(SO₄)₂·6H₂O，M=392.14 g/mol，浅绿色单斜晶体。比纯FeSO₄更抗空气氧化——因为NH₄⁺降低了晶格中Fe²⁺的活动性，且微酸性。是分析化学中标定KMnO₄和K₂Cr₂O₇的基准物质。",
+   "symbolSize": 40,
+   "parent": "redox",
+   "formulas": ["(\\text{NH}_4)_2\\text{Fe}(\\text{SO}_4)_2 \\cdot 6\\text{H}_2\\text{O}", "\\text{Fe}^{2+} + \\text{MnO}_4^- + 8\\text{H}^+ \\rightarrow \\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}"],
+   "connectionToExperiment": "本实验中莫尔盐作为Fe(Ⅱ)铁源（组成确定、不易被空气氧化），产率计算以其为限量基准——1mol莫尔盐理论生成1mol K₃[Fe(C₂O₄)₃]·3H₂O。",
+   "difficulty": 2,
+   "relatedNodes": ["redox", "redox-titration", "standard-solution"]
+  },
+  {
+   "id": "oxalate-comparison",
+   "name": "草酸配合物对比",
+   "category": "coordination",
+   "level": 2,
+   "description": "草酸根与不同金属离子形成多样的配合物：K₃[Fe(C₂O₄)₃]（翠绿色，八面体）、K₂[Cu(C₂O₄)₂]（蓝色，平面四方）、K₃[Cr(C₂O₄)₃]（深紫色，八面体d³）、K₃[Co(C₂O₄)₃]（绿色，八面体d⁶低自旋）。配位模式均为双齿螯合，但颜色和磁性因金属不同而异。",
+   "symbolSize": 40,
+   "parent": "chelate",
+   "formulas": ["\\text{K}_3[\\text{Fe}(\\text{C}_2\\text{O}_4)_3] - \\text{翠绿色，d}^5 \\text{高自旋}", "\\text{K}_3[\\text{Cr}(\\text{C}_2\\text{O}_4)_3] - \\text{深紫色，d}^3 \\text{八面体}"],
+   "connectionToExperiment": "对比不同金属草酸配合物的颜色和磁性是理解晶体场理论的最佳实验序列——同样的配体、同样的配位数，只因中心离子的d电子数不同而呈现截然不同的物理化学性质。",
+   "difficulty": 2,
+   "relatedNodes": ["chelate", "crystal-field", "high-spin-d5", "spectrochemical-series-detail"]
   }
  ],
  "links": [
@@ -1680,6 +1960,176 @@
     "opacity": 0.4,
     "color": "#3b82f6"
    }
+  },
+  {
+   "source": "safety-direction",
+   "target": "green-chemistry",
+   "lineStyle": { "width": 2, "color": "#3b82f6" }
+  },
+  {
+   "source": "coordination",
+   "target": "werner-bio",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
+  },
+  {
+   "source": "werner-bio",
+   "target": "tassaert-discovery",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
+  },
+  {
+   "source": "werner-bio",
+   "target": "nobel-prize",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
+  },
+  {
+   "source": "physical",
+   "target": "magnetic-susceptibility",
+   "lineStyle": { "width": 2, "color": "#a855f7" }
+  },
+  {
+   "source": "magnetic-susceptibility",
+   "target": "gouy-balance",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "magnetic-susceptibility",
+   "target": "high-spin-d5",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "high-spin-d5",
+   "target": "spin-only",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "magnetic-susceptibility",
+   "target": "effective-moment",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "lab-safety",
+   "target": "first-aid",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
+  },
+  {
+   "source": "waste-treatment",
+   "target": "waste-classification",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
+  },
+  {
+   "source": "report-writing",
+   "target": "lab-report-scoring",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
+  },
+  {
+   "source": "lab-report-scoring",
+   "target": "curriculum-design",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
+  },
+  {
+   "source": "report-writing",
+   "target": "teaching-history",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
+  },
+  {
+   "source": "spectral-series",
+   "target": "spectrochemical-series-detail",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "crystal-field",
+   "target": "jahn-teller-detail",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "physical",
+   "target": "xrd-characterization",
+   "lineStyle": { "width": 2, "color": "#a855f7" }
+  },
+  {
+   "source": "physical",
+   "target": "ir-spectroscopy",
+   "lineStyle": { "width": 2, "color": "#a855f7" }
+  },
+  {
+   "source": "physical",
+   "target": "tg-dsc-analysis",
+   "lineStyle": { "width": 2, "color": "#a855f7" }
+  },
+  {
+   "source": "thermodynamics",
+   "target": "born-equation",
+   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
+  },
+  {
+   "source": "redox",
+   "target": "mohr-salt-chemistry",
+   "lineStyle": { "width": 2, "color": "#f59e0b" }
+  },
+  {
+   "source": "chelate",
+   "target": "oxalate-comparison",
+   "lineStyle": { "width": 2, "color": "#2dd4bf" }
+  },
+  {
+   "source": "magnetic-susceptibility",
+   "target": "crystal-field",
+   "label": "磁性-结构验证",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
+  },
+  {
+   "source": "xrd-characterization",
+   "target": "octahedral",
+   "label": "构型确证",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
+  },
+  {
+   "source": "ir-spectroscopy",
+   "target": "chelate",
+   "label": "配位模式",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
+  },
+  {
+   "source": "tg-dsc-analysis",
+   "target": "thermodynamics",
+   "label": "热力学",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
+  },
+  {
+   "source": "born-equation",
+   "target": "chelate",
+   "label": "溶解-结晶驱动力",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#2dd4bf" }
+  },
+  {
+   "source": "mohr-salt-chemistry",
+   "target": "redox-titration",
+   "label": "基准物质",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#f59e0b" }
+  },
+  {
+   "source": "oxalate-comparison",
+   "target": "crystal-field",
+   "label": "晶体场对比",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#2dd4bf" }
+  },
+  {
+   "source": "green-chemistry",
+   "target": "yield-optimization",
+   "label": "绿色合成",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
+  },
+  {
+   "source": "teaching-history",
+   "target": "curriculum-design",
+   "label": "教学传承",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
+  },
+  {
+   "source": "first-aid",
+   "target": "green-chemistry",
+   "label": "安全-绿色一体",
+   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
   }
  ]
 }

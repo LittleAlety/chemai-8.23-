@@ -630,6 +630,7 @@ const FAQ_FALLBACK=[{"q":"产物名称与化学式","answer":"本实验的目标
 
 
 
+
 /* FAQ 匹配：多关键词命中率 + 化学实体加权；单关键词命中但实体不匹配时不触发 */
 function matchFAQ(q){
   const src=(FAQ.length>0)?FAQ:FAQ_FALLBACK;

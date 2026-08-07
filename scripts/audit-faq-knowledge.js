@@ -78,7 +78,7 @@ FAQ.forEach(item => {
     }
   }
 
-  if (!item.corpus_refs && !/manual(?:\.json)?|语料#|文献#|corpus/i.test(text)) {
+  if (!item.corpus_refs && !item.manual_refs && !/manual(?:\.json)?|语料#|文献#|corpus/i.test(text)) {
     report.noSourceRefs.push(title);
   }
 
@@ -91,7 +91,10 @@ FAQ.forEach(item => {
     /(?:25|2[05])\s*mL\s*(?:95\s*%|乙醇)/
   ];
   opChecks.forEach((re, idx) => {
-    if (re.test(text)) report.operationIssues.push({ title, check: idx });
+    if (!re.test(text)) return;
+    if (idx === 0 && /严禁|K₂C₂O₄|草酸钾|TGA|热重|恒重法|失结晶水|失水温度/.test(text)) return;
+    if (idx === 1 && /需稀释|>30%|危险|非30%/.test(text)) return;
+    report.operationIssues.push({ title, check: idx });
   });
 });
 

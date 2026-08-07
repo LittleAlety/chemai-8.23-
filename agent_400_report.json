@@ -1,0 +1,13 @@
+{
+  "total": 400,
+  "validated": 400,
+  "valid": 341,
+  "invalid": 59,
+  "scored": 400,
+  "avgScore": 90.5,
+  "avgAccuracy": 91.3,
+  "avgCompleteness": 89.9,
+  "avgManualCompliance": 92.1,
+  "avgSafety": 100,
+  "generatedAt": "2026-08-07T06:03:23.077Z"
+}

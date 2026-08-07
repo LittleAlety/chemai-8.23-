@@ -1,5 +1,8 @@
-const fs = require('fs'); const path = require('path');
-function readJSON(fp) { let r = fs.readFileSync(fp, 'utf8'); if (r.charCodeAt(0)===0xFEFF) r=r.slice(1); return JSON.parse(r); }
+// debug_trace: BM25 FAQ trace diagnostic tool
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const { readJSON } = require('./scripts/rag-utils');
 const KB = readJSON('data/kb.json');
 const FAQ = readJSON('data/faq_unified.json');
 const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};

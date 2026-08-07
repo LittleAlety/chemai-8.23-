@@ -8,22 +8,18 @@
  *   node faq_tools.js refine            — 精炼 FAQ: 自动分类 + 质量检查
  *   node faq_tools.js add               — 增量添加 FAQ 条目到 assistant.html
  *   node faq_tools.js apply-fixes <file> — 从工作流输出提取并应用修复
- *   node faq_tools.js stats             — 显示 FAQ 统计信息
+ *   node faq_tools.js stats             — 显示 FAQ 统计信息（含质量报告）
+ *   node faq_tools.js sync-kg           — 同步 FAQ 数据到知识图谱节点
  */
 'use strict';
 const fs = require('fs');
 const path = require('path');
 const { normalize } = require('./scripts/category-utils');
+const { readJSON } = require('./scripts/rag-utils');
 
 const BASE = __dirname;
 const FAQ_PATH = path.join(BASE, 'data', 'faq_unified.json');
 const HTML_PATH = path.join(BASE, 'assistant.html');
-
-function readJSON(fp) {
-  let r = fs.readFileSync(fp, 'utf8');
-  if (r.charCodeAt(0) === 0xFEFF) r = r.slice(1);
-  return JSON.parse(r);
-}
 
 function esc(s) {
   return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '');
@@ -342,25 +338,137 @@ function cmdApplyFixes(inputFile) {
   console.log('✓ 已应用: ' + applied + ' (新条目: ' + newEntries + ', 修改: ' + (applied - newEntries) + ', 跳过: ' + skipped + ')');
 }
 
-// ===== stats: FAQ 统计 =====
+// ===== stats: FAQ 统计（含质量报告）=====
 function cmdStats() {
   console.log('=== FAQ 统计 ===');
-  const faq = readJSON(FAQ_PATH);
+  var faq = readJSON(FAQ_PATH);
   console.log('总条目: ' + faq.length);
 
-  const dist = {};
-  faq.forEach(e => { dist[e.subfield] = (dist[e.subfield] || 0) + 1; });
+  // 分类分布
+  var dist = {};
+  faq.forEach(function (e) {
+    var c = normalize(e.subfield || '未分类');
+    dist[c] = (dist[c] || 0) + 1;
+  });
   console.log('\n分类分布:');
-  Object.entries(dist).sort((a, b) => b[1] - a[1]).forEach(([cat, n]) => {
-    console.log('  ' + cat.padEnd(16) + ' ' + n);
+  var sorted = Object.entries(dist).sort(function (a, b) { return b[1] - a[1]; });
+  var maxCount = sorted[0][1];
+  sorted.forEach(function (pair) {
+    var cat = pair[0], n = pair[1];
+    var bar = '';
+    var barLen = Math.round(n / maxCount * 30);
+    for (var i = 0; i < barLen; i++) bar += '█';
+    console.log('  ' + cat.padEnd(18) + String(n).padStart(3) + ' ' + bar);
   });
 
-  const avgAnswerLen = Math.round(faq.reduce((s, e) => s + (e.answer || '').length, 0) / faq.length);
-  const avgKeys = Math.round(faq.reduce((s, e) => s + (e.keys || []).length, 0) / faq.length);
-  const withDetail = faq.filter(e => e.detail && e.detail.trim()).length;
-  console.log('\n平均答案长度: ' + avgAnswerLen + ' 字');
+  // 统计指标
+  var avgAnswerLen = Math.round(faq.reduce(function (s, e) { return s + (e.answer || '').length; }, 0) / faq.length);
+  var avgKeys = Math.round(faq.reduce(function (s, e) { return s + (e.keys || []).length; }, 0) / faq.length);
+  var withDetail = faq.filter(function (e) { return e.detail && e.detail.trim(); }).length;
+  var shortAnswers = faq.filter(function (e) { return (e.answer || '').length < 60; }).length;
+  var emptyDetail = faq.filter(function (e) { return !e.detail || !e.detail.trim(); }).length;
+  var fewKeys = faq.filter(function (e) { return (e.keys || []).length < 3; }).length;
+
+  console.log('\n=== 数据质量 ===');
+  console.log('平均答案长度: ' + avgAnswerLen + ' 字');
   console.log('平均关键词: ' + avgKeys + ' 个');
-  console.log('含detail: ' + withDetail + '/' + faq.length);
+  console.log('含 detail: ' + withDetail + '/' + faq.length +
+    ' (' + Math.round(withDetail / faq.length * 100) + '%)');
+  console.log('短答案 (<60字): ' + shortAnswers + '/' + faq.length +
+    ' (' + Math.round(shortAnswers / faq.length * 100) + '%)');
+  console.log('缺 detail: ' + emptyDetail + '/' + faq.length +
+    ' (' + Math.round(emptyDetail / faq.length * 100) + '%)');
+  console.log('关键词 <3: ' + fewKeys + '/' + faq.length +
+    ' (' + Math.round(fewKeys / faq.length * 100) + '%)');
+
+  // 需要关注的条目
+  console.log('\n=== 需要关注的条目 ===');
+  console.log('(缺detail | 答案<60字)\n');
+
+  var needsAttention = faq.map(function (e, i) {
+    var issues = [];
+    if (!e.detail || !e.detail.trim()) issues.push('缺detail');
+    if ((e.answer || '').length < 60) issues.push('答案' + (e.answer || '').length + '字');
+    return { index: i, entry: e, issues: issues };
+  }).filter(function (x) { return x.issues.length > 0; });
+
+  needsAttention.slice(0, 30).forEach(function (item) {
+    var entry = item.entry;
+    var title = (entry.title || entry.q || '?').slice(0, 50);
+    console.log('  [' + (item.index + 1) + '] ' + title + ' → ' + item.issues.join(', '));
+  });
+  if (needsAttention.length > 30) {
+    console.log('  ... 还有 ' + (needsAttention.length - 30) + ' 条');
+  }
+  console.log('\n总计需关注: ' + needsAttention.length + ' 条');
+}
+
+// ===== sync-kg: 同步 FAQ 数据到知识图谱 =====
+function cmdSyncKG() {
+  console.log('=== 知识图谱同步 (FAQ → KG) ===');
+  var faq = readJSON(FAQ_PATH);
+  var kgPath = path.join(BASE, 'data', 'kg.json');
+  var kg = readJSON(kgPath);
+
+  // 计算每个知识方向的 FAQ 数量
+  var catToDirection = {
+    '合成制备': 'coord',
+    '反应原理': 'redox',
+    '实验操作': 'analytical',
+    '分析测定': 'analytical',
+    '光化学应用': 'physical',
+    '结构表征': 'physical',
+    '磁性研究': 'physical',
+    '热分析': 'physical',
+    '安全与废物处理': 'analytical',
+    '配位化学理论': 'coord',
+    '实验教学': 'coord',
+    '综合研究': 'coord',
+    '化学史': 'coord',
+    '高等理论': 'physical',
+    '蓝晒工艺': 'physical',
+    '摩尔盐相关': 'redox',
+    '草酸配合物': 'coord'
+  };
+
+  var dirStats = {
+    coord: { faqCount: 0, total: 0 },
+    redox: { faqCount: 0, total: 0 },
+    analytical: { faqCount: 0, total: 0 },
+    physical: { faqCount: 0, total: 0 }
+  };
+
+  faq.forEach(function (e) {
+    var dir = catToDirection[normalize(e.subfield || '综合研究')] || 'coord';
+    if (dirStats[dir]) dirStats[dir].faqCount++;
+    dirStats[dir].total++;
+  });
+
+  // 更新知识图谱节点
+  var now = new Date().toISOString();
+  var nodes = kg.nodes || [];
+  var updatedCount = 0;
+
+  nodes.forEach(function (node) {
+    var stats = dirStats[node.id];
+    if (stats && node.category !== 'center') {
+      node.faqCount = stats.faqCount;
+      node.updatedAt = now;
+      updatedCount++;
+      console.log('  ' + node.name + ': ' + stats.faqCount + ' 条FAQ');
+    }
+    // 也更新中心节点
+    if (node.id === 'center-exp') {
+      node.faqCount = faq.length;
+      node.updatedAt = now;
+    }
+  });
+
+  fs.writeFileSync(kgPath, JSON.stringify(kg, null, 1), 'utf8');
+  console.log('');
+  console.log('✓ 已更新 ' + updatedCount + ' 个方向的 FAQ 统计');
+  console.log('  中心节点: ' + faq.length + ' 条FAQ');
+  console.log('  时间戳: ' + now);
 }
 
 // ===== MAIN =====
@@ -372,6 +480,7 @@ switch (cmd) {
   case 'add':          cmdAdd(); break;
   case 'apply-fixes':  cmdApplyFixes(process.argv[3]); break;
   case 'stats':        cmdStats(); break;
+  case 'sync-kg':      cmdSyncKG(); break;
   default:
     console.log('ChemAI FAQ 统一管理工具');
     console.log('');
@@ -383,6 +492,7 @@ switch (cmd) {
     console.log('  refine            精炼 FAQ: 自动分类 + 质量检查');
     console.log('  add               增量添加 FAQ 到 assistant.html');
     console.log('  apply-fixes <file> 从工作流输出提取并应用修复');
-    console.log('  stats             显示 FAQ 统计信息');
+    console.log('  stats             显示 FAQ 统计信息（含质量报告）');
+    console.log('  sync-kg           同步 FAQ 数据到知识图谱节点');
     process.exit(1);
 }

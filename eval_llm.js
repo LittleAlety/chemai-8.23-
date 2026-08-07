@@ -4,8 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-
-function readJSON(fp) { let r = fs.readFileSync(fp, 'utf8'); if (r.charCodeAt(0)===0xFEFF) r=r.slice(1); return JSON.parse(r); }
+const { readJSON } = require('./scripts/rag-utils');
 
 const QUESTIONS = readJSON(path.join(__dirname, 'test_questions_round3.json'));
 const KB = readJSON(path.join(__dirname, 'data', 'kb.json'));

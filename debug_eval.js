@@ -1,13 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const { readJSON } = require('./scripts/rag-utils');
 
-function readJSON(fp) {
-  let r = fs.readFileSync(fp, 'utf8');
-  if (r.charCodeAt(0) === 0xFEFF) r = r.slice(1);
-  return JSON.parse(r);
-}
-
-// Inline just what we need
+// Inline just what we need (debug-specific overloads)
 const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
 const norm = s => String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');
 

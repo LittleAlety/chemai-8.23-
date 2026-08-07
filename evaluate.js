@@ -6,23 +6,14 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-
-function readJSON(fp) {
-  let r = fs.readFileSync(fp, 'utf8');
-  if (r.charCodeAt(0) === 0xFEFF) r = r.slice(1);
-  return JSON.parse(r);
-}
+const { readJSON, norm, matchFAQ, bm25MatchKB, createKBIndex } = require('./scripts/rag-utils');
 
 const KB_DATA = readJSON(path.join(__dirname, 'data', 'kb.json'));
 const AUTO_FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
 const round = process.argv[2] || '2';
 const QUESTIONS = readJSON(path.join(__dirname, 'test_questions_round' + round + '.json'));
 
-// Utilities
-const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
-const norm = s => String(s||'').toLowerCase().replace(/[₀-₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');
-
-// Ambiguous keys that match too broadly
+// Ambiguous keys that match too broadly (extended set for evaluation)
 const AMBIGUOUS_KEYS = new Set(['℃','°c','40','40℃','100','100℃','0','0℃','20','20℃',
   'g','ml','mol','%','h','ph','水','酸','碱','盐','色','热','光','铁','氧','氢','碳',
   'k','na','ca','fe','cu','zn','mn','co','ni']);

@@ -30,11 +30,7 @@ const MODEL = 'deepseek-chat';
 const RATE_LIMIT_MS = 500;
 
 // ===================== FILE LOADING =====================
-function readJSON(filePath) {
-  let raw = fs.readFileSync(filePath, 'utf8');
-  if (raw.charCodeAt(0) === 0xFEFF) raw = raw.slice(1); // strip BOM
-  return JSON.parse(raw);
-}
+const { readJSON } = require('./scripts/rag-utils');
 
 // Resolve input file: try r5 → r4 → r3 → r2 → core → round1
 let questionFile = path.join(__dirname, 'test_questions_core_r14.json');

@@ -6,12 +6,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-
-function readJSON(fp) {
-  let r = fs.readFileSync(fp, 'utf8');
-  if (r.charCodeAt(0) === 0xFEFF) r = r.slice(1);
-  return JSON.parse(r);
-}
+const { readJSON } = require('./scripts/rag-utils');
 
 const KB = readJSON(path.join(__dirname, 'data', 'kb.json'));
 const MANUAL = readJSON(path.join(__dirname, 'data', 'manual.json'));

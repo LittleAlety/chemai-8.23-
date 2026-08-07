@@ -25,7 +25,9 @@ function esc(s) {
   return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '');
 }
 
-// ===== sync: FAQ → HTML =====
+// DEPRECATED since v31: assistant.html loads FAQ via fetch()
+// ===== sync: FAQ → HTML (DEPRECATED - no longer needed) =====
+/*
 function cmdSync() {
   console.log('=== FAQ → HTML 同步 ===');
   const faq = readJSON(FAQ_PATH);
@@ -67,6 +69,7 @@ function cmdSync() {
   fs.writeFileSync(HTML_PATH, newHtml, 'utf8');
   console.log('✓ HTML 已更新: ' + cnt + ' 条 FAQ (文件大小: ' + newHtml.length + ' bytes)');
 }
+*/
 
 // ===== merge: faq_auto + faq_auto_fixed → faq_unified =====
 function cmdMerge() {
@@ -190,7 +193,9 @@ function cmdRefine() {
   console.log('\n✓ 精炼完成: ' + faq.length + ' 条');
 }
 
-// ===== add: 增量添加 FAQ 到 assistant.html =====
+// DEPRECATED since v31: assistant.html loads FAQ via fetch()
+// ===== add: 增量添加 FAQ 到 assistant.html (DEPRECATED) =====
+/*
 function cmdAdd() {
   console.log('=== FAQ 增量添加 ===');
   const cp = require('child_process');
@@ -229,6 +234,7 @@ function cmdAdd() {
   fs.writeFileSync(HTML_PATH, html, 'utf8');
   console.log('✓ 已添加 ' + cnt + ' 条 FAQ 到 assistant.html');
 }
+*/
 
 // ===== apply-fixes: 从工作流输出提取并应用修复 =====
 function cmdApplyFixes(inputFile) {
@@ -472,12 +478,11 @@ function cmdSyncKG() {
 }
 
 // ===== MAIN =====
+// DEPRECATED since v31: 'sync' and 'add' removed — assistant.html loads FAQ via fetch()
 const cmd = process.argv[2];
 switch (cmd) {
-  case 'sync':         cmdSync(); break;
   case 'merge':        cmdMerge(); break;
   case 'refine':       cmdRefine(); break;
-  case 'add':          cmdAdd(); break;
   case 'apply-fixes':  cmdApplyFixes(process.argv[3]); break;
   case 'stats':        cmdStats(); break;
   case 'sync-kg':      cmdSyncKG(); break;
@@ -487,10 +492,8 @@ switch (cmd) {
     console.log('用法: node faq_tools.js <命令> [参数]');
     console.log('');
     console.log('命令:');
-    console.log('  sync              同步 faq_unified.json → assistant.html');
     console.log('  merge             合并 faq_auto.json + faq_auto_fixed.json');
     console.log('  refine            精炼 FAQ: 自动分类 + 质量检查');
-    console.log('  add               增量添加 FAQ 到 assistant.html');
     console.log('  apply-fixes <file> 从工作流输出提取并应用修复');
     console.log('  stats             显示 FAQ 统计信息（含质量报告）');
     console.log('  sync-kg           同步 FAQ 数据到知识图谱节点');

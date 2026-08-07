@@ -6,7 +6,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { readJSON, norm, matchFAQ, bm25MatchKB, createKBIndex } = require('./scripts/rag-utils');
+const { readJSON, norm, bm25MatchKB, createKBIndex } = require('./scripts/rag-utils');
 
 const KB_DATA = readJSON(path.join(__dirname, 'data', 'kb.json'));
 const AUTO_FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
@@ -18,6 +18,7 @@ const AMBIGUOUS_KEYS = new Set(['℃','°c','40','40℃','100','100℃','0','0�
   'g','ml','mol','%','h','ph','水','酸','碱','盐','色','热','光','铁','氧','氢','碳',
   'k','na','ca','fe','cu','zn','mn','co','ni']);
 
+// NOTE: local matchFAQ/kbTokens retained for custom scoring logic
 // FAQ Matching (v6: keyword + bigram overlap hybrid)
 function matchFAQ(q) {
   const nq = norm(q);
@@ -148,6 +149,7 @@ function qaCalc(q) {
   return null;
 }
 
+// NOTE: local matchFAQ/kbTokens retained for custom scoring logic
 // BM25 Search
 function kbTokens(text) {
   const s = norm(String(text || ''));

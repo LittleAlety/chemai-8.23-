@@ -61,6 +61,7 @@ const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆
 const norm = s => String(s || '').toLowerCase().replace(/[₀-₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');
 const AMBIGUOUS = new Set(['℃','°c','40','40℃','100','100℃','0','0℃','20','20℃','g','ml','mol','%','h','ph','水','酸','碱','盐','色','热','光','铁','氧','氢','碳']);
 
+// NOTE: local matchFAQ/kbTokens retained for custom scoring logic
 // ---- FAQ keyword + bigram match ----
 function matchFAQ(q) {
   const nq = norm(q);
@@ -92,6 +93,7 @@ function matchFAQ(q) {
   return best;
 }
 
+// NOTE: local matchFAQ/kbTokens retained for custom scoring logic
 // ---- BM25 KB search ----
 function kbTokens(text) {
   const s = norm(String(text || ''));

@@ -1132,7 +1132,7 @@
    "name": "报告评分标准",
    "category": "analytical",
    "level": 2,
-   "description": "武汉大学基础化学实验报告评分细则：实验目的(5%)+原理(10%)+操作步骤(10%)+数据记录与处理(35%)+结果讨论与误差分析(30%)+思考题(10%)。规范性与书写整洁度±5%。",
+   "description": "基础化学实验报告评分细则：实验目的(5%)+原理(10%)+操作步骤(10%)+数据记录与处理(35%)+结果讨论与误差分析(30%)+思考题(10%)。规范性与书写整洁度±5%。",
    "symbolSize": 40,
    "parent": "report-writing",
    "connectionToExperiment": "本实验报告重点考察产率计算（15%）、误差分析（15%）、三步反应方程式（10%）、光化学性质解释（5%）——合计占总分45%。",
@@ -1144,7 +1144,7 @@
    "name": "武大教学沿革",
    "category": "analytical",
    "level": 3,
-   "description": "武汉大学化学与分子科学学院自1960年代起将三草酸合铁酸钾制备实验纳入基础化学实验课程体系，历经六十余年教学实践，成为化学专业必修实验。2023年修订版讲义更加强调绿色化学和安全规范。",
+   "description": "自1960年代起，三草酸合铁酸钾制备实验被纳入许多高校基础化学实验课程体系，历经六十余年教学实践，成为化学专业必修实验。2023年修订版讲义更加强调绿色化学和安全规范。",
    "symbolSize": 22,
    "parent": "report-writing",
    "connectionToExperiment": "六十余年的教学积累沉淀了丰富的经验参数（最佳氧化温度40℃、乙醇用量1:1、避光保存要求等），这些参数在知识图谱和FAQ中均有详细记录。",
@@ -1266,6 +1266,71 @@
    "connectionToExperiment": "对比不同金属草酸配合物的颜色和磁性是理解晶体场理论的最佳实验序列——同样的配体、同样的配位数，只因中心离子的d电子数不同而呈现截然不同的物理化学性质。",
    "difficulty": 2,
    "relatedNodes": ["chelate", "crystal-field", "high-spin-d5", "spectrochemical-series-detail"]
+  },
+  {
+   "id": "werner-theory-original",
+   "name": "维尔纳配位理论原文",
+   "category": "coordination",
+   "level": 2,
+   "description": "1893年维尔纳在Z. Anorg. Chem.发表的配位理论原文详解：主价(Hauptvalenz)对应氧化数，副价(Nebenvalenz)对应配位数。提出\"配位数\"概念解释为何CoCl₃能结合6个NH₃形成[Co(NH₃)₆]Cl₃。1907年拆分[Co(en)₃]³⁺对映体实验验证八面体构型，为1913年诺贝尔奖奠定基础。",
+   "symbolSize": 35,
+   "parent": "coord",
+   "connectionToExperiment": "维尔纳配位理论是理解三草酸合铁(III)酸钾结构的基础：Fe³⁺主价+3与C₂O₄²⁻副价配位，配位数6形成八面体[Fe(C₂O₄)₃]³⁻配离子。",
+   "difficulty": 2,
+   "relatedNodes": ["complex-concept", "chelate", "isomerism", "naming"],
+   "formulas": ["[Co(NH_3)_6]Cl_3", "[Co(en)_3]^{3+}"]
+  },
+  {
+   "id": "molecular-orbital-coord",
+   "name": "分子轨道理论在配位化学中的应用",
+   "category": "physical",
+   "level": 3,
+   "description": "MO理论解释配位键本质：σ-给体配体（如NH₃、H₂O）的孤对电子填入金属d轨道空穴；π-受体配体（如CO、CN⁻）通过反馈π键增强配位键。草酸根C₂O₄²⁻既是σ-给体又是弱π-给体，MO处理解释了光谱化学序列的电子结构基础。",
+   "symbolSize": 28,
+   "parent": "crystal-field",
+   "connectionToExperiment": "MO理论补充晶体场理论解释[Fe(C₂O₄)₃]³⁻中草酸根的σ-给电子和弱π-给电子效应，影响分裂能Δo大小和光化学LMCT过程。",
+   "difficulty": 3,
+   "relatedNodes": ["crystal-field", "dd-transition", "photochem", "spectrochem-series"],
+   "formulas": ["\\sigma-donor: L \\rightarrow M(d)", "\\pi-acceptor: M(d_\\pi) \\rightarrow L(\\pi^*)"]
+  },
+  {
+   "id": "temperature-control",
+   "name": "温度控制原理",
+   "category": "analytical",
+   "level": 3,
+   "description": "本实验温度控制的物理化学原理。Arrhenius方程 k=A·e^(-Ea/RT)：H₂O₂氧化Fe²⁺的Ea≈50 kJ/mol，40°C时速率约为25°C时的3倍。温度上限由H₂O₂分解（>60°C剧烈分解）和Fe³⁺水解（>50°C促进Fe(OH)₃胶体形成）决定。微沸（~100°C）用于配位步骤以加速草酸溶解Fe(OH)₃，但需避免过度沸腾导致草酸分解。",
+   "symbolSize": 28,
+   "parent": "yield-optimization",
+   "connectionToExperiment": "本实验中40°C水浴氧化是最优操作温度：既能加速氧化反应又避免H₂O₂过快分解和Fe³⁺水解。微沸状态溶解Fe(OH)₃是第三步配位反应的关键温度条件。",
+   "difficulty": 2,
+   "relatedNodes": ["redox-potential", "kinetics-coord", "yield-optimization"],
+   "formulas": ["k = A e^{-E_a/RT}", "\\frac{k_{313}}{k_{298}} = \\exp\\left[\\frac{E_a}{R}\\left(\\frac{1}{298}-\\frac{1}{313}\\right)\\right]"]
+  },
+  {
+   "id": "ethanol-crystallization",
+   "name": "乙醇促结晶机理",
+   "category": "analytical",
+   "level": 3,
+   "description": "溶剂替换法结晶的热力学与动力学。Born溶剂化模型：离子溶剂化能ΔG_solv ∝ -1/ε_r，加入乙醇（ε_r=24.5，水ε_r=78.5）降低溶剂介电常数，溶质溶剂化能减小，化学势升高，溶液过饱和度增大。K₃[Fe(C₂O₄)₃]·3H₂O在乙醇-水混合溶剂中溶解度急剧下降——乙醇浓度40%(v/v)时溶解度仅为纯水中的~5%。",
+   "symbolSize": 28,
+   "parent": "yield-optimization",
+   "connectionToExperiment": "本实验第四步加入95%乙醇约10 mL（终体积~40%），使产物因溶解度急剧下降而结晶析出。这是溶剂替换法（非蒸发法）的经典教学案例。",
+   "difficulty": 2,
+   "relatedNodes": ["yield-optimization", "solubility-product", "error-analysis"],
+   "formulas": ["\\Delta G_{solv} = -\\frac{z^2e^2}{8\\pi\\varepsilon_0 r}\\left(1-\\frac{1}{\\varepsilon_r}\\right)", "\\varepsilon_r(H_2O)=78.5,\\ \\varepsilon_r(EtOH)=24.5"]
+  },
+  {
+   "id": "photochemical-kinetics",
+   "name": "光化学动力学",
+   "category": "physical",
+   "level": 3,
+   "description": "光化学反应的动力学特征。量子产率Φ = 反应分子数/吸收光子数。对于[Fe(C₂O₄)₃]³⁻光分解：Φ(254 nm)≈1.2（链式反应使Φ>1），Φ(400 nm)≈0.9。化学光量计：草酸铁钾光量计（ferrioxalate actinometer）利用该反应精确测量光子通量——标准光量计在254-500 nm范围Φ已精确标定。光化学第一定律(Grotthuss-Draper)：只有被吸收的光才能引起光化学反应。第二定律(Stark-Einstein)：一个分子吸收一个光子后被活化。",
+   "symbolSize": 28,
+   "parent": "photochem",
+   "connectionToExperiment": "三草酸合铁(III)酸钾的光化学性质是蓝晒法的基础，其光分解量子产率接近1，是化学光量计的标准反应体系。",
+   "difficulty": 3,
+   "relatedNodes": ["photochem", "dd-transition", "spectrochem-series", "kinetics-coord"],
+   "formulas": ["\\Phi = \\frac{n_{rxn}}{n_{h\\nu}}", "\\Phi(254\\ nm) \\approx 1.2", "\\Phi(400\\ nm) \\approx 0.9"]
   }
  ],
  "links": [
@@ -2130,6 +2195,50 @@
    "target": "green-chemistry",
    "label": "安全-绿色一体",
    "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
+  },
+  {
+   "source": "coord",
+   "target": "werner-theory-original",
+   "type": "solid",
+   "lineStyle": { "width": 2, "color": "#2dd4bf" }
+  },
+  {
+   "source": "crystal-field",
+   "target": "molecular-orbital-coord",
+   "type": "dashed",
+   "lineStyle": { "width": 1.5, "color": "#a855f7" }
+  },
+  {
+   "source": "yield-optimization",
+   "target": "temperature-control",
+   "type": "dashed",
+   "lineStyle": { "width": 1.5, "color": "#3b82f6" }
+  },
+  {
+   "source": "yield-optimization",
+   "target": "ethanol-crystallization",
+   "type": "dashed",
+   "lineStyle": { "width": 1.5, "color": "#3b82f6" }
+  },
+  {
+   "source": "photochem",
+   "target": "photochemical-kinetics",
+   "type": "dashed",
+   "lineStyle": { "width": 1.5, "color": "#a855f7" }
+  },
+  {
+   "source": "temperature-control",
+   "target": "ethanol-crystallization",
+   "type": "dashed",
+   "lineStyle": { "width": 1, "color": "#3b82f6", "opacity": 0.4 },
+   "label": "结晶条件优化"
+  },
+  {
+   "source": "werner-theory-original",
+   "target": "crystal-field",
+   "type": "dashed",
+   "lineStyle": { "width": 1, "color": "#2dd4bf", "opacity": 0.4 },
+   "label": "理论演进"
   }
  ]
 }

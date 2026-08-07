@@ -1140,7 +1140,10 @@ const A={
   retestQueue:[],inRetest:false,
   results:KP.map(()=>({mastery:null,note:'',startedAt:null})),
   timings:[],  // {kpIndex, stage, duration_sec}
-  startTime:null
+  startTime:null,
+  consecutiveCorrect:0,  // adaptive: track streak for skip-follow
+  consecutiveWrong:0,     // adaptive: track failures for encouragement
+  completedCount:0        // progress encouragement: count completed KPs
 };
 const asChat=$('#asChat'),asInput=$('#asInput'),asSend=$('#asSend');
 let asBusy=false;
@@ -1183,8 +1186,8 @@ function updateProgress(){
   const done=A.results.filter(r=>r.mastery!==null).length;
   const total=KP.length;
   const shown=Math.min(total,Math.max(done,A.idx+(A.finished?0:0)));
-  $('#apTxt').innerHTML='知识点 <b>'+Math.min(8,shown)+'/8</b> · 第 <b>'+A.round+'</b> 轮'+(A.inRetest?' · 薄弱点复测中':'');
-  $('#apBar').style.width=Math.round(done/8*100)+'%';
+  $('#apTxt').innerHTML='知识点 <b>'+Math.min(total,shown)+'/12</b> · 第 <b>'+A.round+'</b> 轮'+(A.inRetest?' · 薄弱点复测中':'');
+  $('#apBar').style.width=Math.round(done/total*100)+'%';
 }
 function aiSay(html,cb){
   asBusy=true;asSend.disabled=true;
@@ -1217,7 +1220,7 @@ function askCurrent(){
   const i=A.inRetest?A.retestQueue[0]:A.idx;
   const kp=KP[i];
   A.stage=A.inRetest?'retest':'main';
-  const tag=A.inRetest?('🔄 复测 · 知识点 '+(i+1)+'/8（'+kp.name+'，权重 '+kp.weight+'）'):('📌 知识点 '+(i+1)+'/8：'+kp.name+'（权重 '+kp.weight+' 分）');
+  const tag=A.inRetest?('🔄 复测 · 知识点 '+(i+1)+'/12（'+kp.name+'，权重 '+kp.weight+'）'):('📌 知识点 '+(i+1)+'/12：'+kp.name+'（权重 '+kp.weight+' 分）');
   const q=A.inRetest?kp.follow.replace('提示：','')||kp.main:kp.main;
   aiSay('<div class="muted" style="margin-bottom:5px">'+tag+' · 第 '+A.round+' 轮</div>'+(A.inRetest?retestText(i):kp.main),()=>{});
   updateProgress();
@@ -1254,6 +1257,13 @@ function handleAnswer(text){
     }).catch(()=>{});
   }
   if(A.stage==='retest'){
+    // A.4: Retest skip — if mastery already > 0.8, auto-skip this retest entry
+    if((res.mastery||0)>0.8){
+      A.retestQueue.shift();
+      if(!A.retestQueue.length)A.inRetest=false;
+      aiSay('该知识点已掌握良好（'+(Math.round((res.mastery||0)*100))+'%），自动跳过复测 ✅',()=>setTimeout(nextQuestion,650));
+      return;
+    }
     let nm=cov>=0.6?0.85:(cov>=0.3?0.6:0.3);
     const old=res.mastery||0;
     res.mastery=Math.max(old,nm);
@@ -1265,20 +1275,57 @@ function handleAnswer(text){
     return;
   }
   if(A.stage==='main'){
+    // A.2: Better "I don't know" handling — friendly message before explanation
     if(dk||cov<0.3){
+      if(dk){
+        // Friendly encouragement for "I don't know"
+        aiSay('没关系，这是进阶内容 📖 我为你讲解一下，后续复测再巩固。好的，下面是对这个知识点的讲解：<br>'+kp.hint+'<div class="muted" style="margin-top:6px">（讲解后掌握度暂记 30%，后面会复测）</div>');
+        res.mastery=0.3;res.note='学生表示不知道，先讲解后暂记 30%';
+        A.consecutiveWrong++;A.consecutiveCorrect=0;
+        // A.1: Extra encouragement after 2 failures
+        if(A.consecutiveWrong>=2){
+          aiSay('💪 别气馁，配位化学确实有难度，你已经在进步了！继续加油~');
+        }
+        // A.3: Progress encouragement every 4 completed KPs
+        A.completedCount++;
+        if(A.completedCount%4===0){
+          const doneCnt=A.completedCount;
+          const sumScore=A.results.reduce((s,r,i)=>s+(r.mastery||0)*KP[i].weight,0);
+          const approxTotal=Math.round(sumScore/155*100);
+          setTimeout(()=>{aiSay('🎉 进度播报：已完成 <b>'+doneCnt+'/12</b> 个知识点，目前总分约 <b>'+approxTotal+'</b> 分，继续加油！');},1000);
+        }
+        A.idx++;setTimeout(nextQuestion,650);
+        return;
+      }
       A.stage='retry';
-      aiSay('没关系 🤝 先给你一个提示，请<b>再试答一次</b>：<br>'+kp.hint+'<div class="muted" style="margin-top:6px">（仍答不出我会直接讲解；也可以点"跳过本题"）</div>');
+      A.consecutiveWrong++;
+      A.consecutiveCorrect=0;
+      // A.1: Extra encouragement after 2 failures
+      const encExtra=(A.consecutiveWrong>=2)?' 💪 别灰心，坚持就是胜利！':'';
+      aiSay('没关系 🤝 先给你一个提示，请<b>再试答一次</b>：<br>'+kp.hint+'<div class="muted" style="margin-top:6px">（仍答不出我会直接讲解；也可以点"跳过本题"）</div>'+encExtra);
       return;
     }
     if(cov<0.6){
       res.mastery=0.5;res.note='主问题覆盖 '+pct+'%（部分掌握），追加引导式追问';
+      A.consecutiveCorrect=0;A.consecutiveWrong=0;
       A.stage='follow';
       aiSay('你答到了要点（'+esc(hit.slice(0,3).join('、'))+'），但还不够完整（覆盖 '+pct+'%）。我们深入一步：<br>'+kp.follow);
       return;
     }
+    A.consecutiveCorrect++;A.consecutiveWrong=0;
     res.mastery=Math.min(1,0.85+((cov-0.6)/0.4)*0.15);
     res.note='主问题覆盖 '+pct+'%，掌握良好';
-    aiSay(praise()+' 覆盖度 '+pct+'%，该知识点掌握度记 <b>'+Math.round(res.mastery*100)+'%</b> ✅',()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
+    // A.3: Progress encouragement every 4 completed KPs
+    A.completedCount++;
+    const encMsg=(A.consecutiveCorrect>=3&&A.consecutiveCorrect%3===0)?' 🔥 你已连续答对 '+A.consecutiveCorrect+' 题，太厉害了！':'';
+    if(A.completedCount%4===0){
+      const doneCnt=A.completedCount;
+      const sumScore=A.results.reduce((s,r,i)=>s+(r.mastery||0)*KP[i].weight,0);
+      const approxTotal=Math.round(sumScore/155*100);
+      aiSay(praise()+' 覆盖度 '+pct+'%，该知识点掌握度记 <b>'+Math.round(res.mastery*100)+'%</b> ✅'+encMsg+'<br>🎉 进度播报：已完成 <b>'+doneCnt+'/12</b> 个知识点，目前总分约 <b>'+approxTotal+'</b> 分，继续加油！',()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
+      return;
+    }
+    aiSay(praise()+' 覆盖度 '+pct+'%，该知识点掌握度记 <b>'+Math.round(res.mastery*100)+'%</b> ✅'+encMsg,()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
     return;
   }
   if(A.stage==='retry'){
@@ -1366,6 +1413,70 @@ function suggestHTML(w){
   }
   return s+'完成后可回到本页重新测评检验提升效果。</li>';
 }
+// B.1: 3-axis SVG radar chart (120deg angles)
+function radarChartSVG(tScore,eScore,cScore){
+  const cx=80,cy=80,r=60;
+  const angles=[-90,30,150]; // theory(top), experiment(bottom-right), comprehensive(bottom-left)
+  function polar(angleDeg,dist){
+    const rad=angleDeg*Math.PI/180;
+    return [cx+r*dist/100*Math.cos(rad), cy-r*dist/100*Math.sin(rad)];
+  }
+  // Grid rings
+  const gridP=[40,70,100].map(d=>{
+    const ps=angles.map(a=>polar(a,d));
+    return '<polygon points="'+ps.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+'" fill="none" stroke="rgba(148,163,184,.1)" stroke-width="1"/>';
+  }).join('');
+  // Axis lines
+  const axisLines=angles.map(a=>{
+    const ep=polar(a,100);
+    return '<line x1="'+cx+'" y1="'+cy+'" x2="'+ep[0].toFixed(1)+'" y2="'+ep[1].toFixed(1)+'" stroke="rgba(148,163,184,.2)" stroke-width="1"/>';
+  }).join('');
+  // Data polygon
+  const pts=[tScore,eScore,cScore].map((s,i)=>polar(angles[i],Math.max(5,Math.min(100,s))));
+  const ptsS=pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  // Labels
+  const labels=[
+    {text:'理论基础',score:tScore,ap:polar(-90,112)},
+    {text:'实验技能',score:eScore,ap:polar(30,112)},
+    {text:'综合应用',score:cScore,ap:polar(150,112)}
+  ];
+  const labelHTML=labels.map(l=>{
+    const x=l.ap[0],y=l.ap[1];
+    return '<text x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" text-anchor="middle" fill="#94a3b8" font-size="11">'+l.text+' ('+l.score+'%)</text>';
+  }).join('');
+  return '<div style="text-align:center;margin:8px 0"><svg width="180" height="170" viewBox="0 0 160 160">'
+    +gridP+axisLines
+    +'<polygon points="'+ptsS+'" fill="rgba(16,185,129,.25)" stroke="#10b981" stroke-width="2"/>'
+    +labelHTML
+    +'</svg></div>';
+}
+// B.2: Mastery distribution histogram
+function masteryHistogram(items){
+  const bands=[
+    {label:'0-30% (薄弱)',min:0,max:0.3,color:'#f87171'},
+    {label:'30-60% (待提高)',min:0.3,max:0.6,color:'#fbbf24'},
+    {label:'60-85% (良好)',min:0.6,max:0.85,color:'#2dd4bf'},
+    {label:'85-100% (优秀)',min:0.85,max:1.01,color:'#10b981'}
+  ];
+  const counts=bands.map(b=>{
+    const cnt=items.filter(x=>x.m!==null&&x.m>=b.min&&x.m<b.max).length;
+    return {...b,count:cnt};
+  });
+  const maxCount=Math.max(1,...counts.map(c=>c.count));
+  const total=counts.reduce((s,c)=>s+c.count,0);
+  let html='<div style="margin-top:8px">';
+  counts.forEach(c=>{
+    const pct=total>0?Math.round(c.count/total*100):0;
+    const barW=Math.round(c.count/maxCount*100);
+    html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">'
+      +'<span style="font-size:11px;min-width:110px;color:var(--t2)">'+c.label+'</span>'
+      +'<div style="flex:1;height:14px;border-radius:7px;background:var(--card);overflow:hidden;border:1px solid var(--bd)">'
+      +'<div style="height:100%;width:'+barW+'%;background:'+c.color+';border-radius:7px;transition:width 1s ease"></div></div>'
+      +'<span style="font-size:11px;color:var(--t2);min-width:55px;text-align:right">'+c.count+'条 ('+pct+'%)</span>'
+      +'</div>';
+  });
+  return html+'</div>';
+}
 function ringSVG(total){
   const r=54,c=2*Math.PI*r,off=c*(1-Math.min(100,total)/100);
   const col=total>=90?'#10b981':total>=80?'#2dd4bf':total>=70?'#60a5fa':total>=60?'#fbbf24':'#f87171';
@@ -1397,6 +1508,14 @@ function finishAssess(reason){
    +'<div class="dim-card" style="flex:1;min-width:100px"><div class="dim-label">🔬 实验技能</div><div class="dim-score">'+d.dimScores.experiment+'%</div><div class="dim-bar"><i style="width:'+d.dimScores.experiment+'%;background:#10b981"></i></div></div>'
    +'<div class="dim-card" style="flex:1;min-width:100px"><div class="dim-label">🧠 综合应用</div><div class="dim-score">'+d.dimScores.comprehensive+'%</div><div class="dim-bar"><i style="width:'+d.dimScores.comprehensive+'%;background:#a855f7"></i></div></div>'
    +'</div></div>'
+   // B.1: SVG Radar Chart for 3 dimensions
+   +'<div class="rp-sec"><h3>📐 三维度雷达图</h3>'
+   +radarChartSVG(d.dimScores.theory,d.dimScores.experiment,d.dimScores.comprehensive)
+   +'</div>'
+   // B.2: Mastery distribution histogram
+   +'<div class="rp-sec"><h3>📊 掌握度分布</h3>'
+   +masteryHistogram(d.items)
+   +'</div>'
    +'<div class="rp-sec"><h3>📊 各知识点掌握度（权重 × 掌握度 = 得分）</h3>';
   d.items.forEach(x=>{
     const m=x.m||0,pct=Math.round(m*100);
@@ -1430,7 +1549,9 @@ function reportPlain(d){
   lines.push('实验：三草酸合铁酸钾 K3[Fe(C2O4)3]·3H2O 制备实验');
   lines.push('测评时间：'+d.date.toLocaleString('zh-CN')+' · 对话轮次：'+d.rounds);
   lines.push('总分：'+d.total+' / 100 · 等级：'+gname);
-  lines.push(''.padEnd(46,'-'));
+  lines.push('');
+  lines.push('【三维度分析】理论基础：'+d.dimScores.theory+'% | 实验技能：'+d.dimScores.experiment+'% | 综合应用：'+d.dimScores.comprehensive+'%');
+  lines.push('');
   d.items.forEach(x=>{
     const m=x.m||0;
     lines.push('【'+x.name+'】权重 '+x.weight+' 分 · 掌握度 '+(x.m===null?'未测评':Math.round(m*100)+'%')+' · 得分 '+(Math.round(x.weight*m*10)/10));
@@ -1469,6 +1590,13 @@ function exportDoc(d){
    +'<h1>实验知识掌握度评估报告</h1>'
    +'<p><b>实验：</b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验<br><b>测评时间：</b>'+d.date.toLocaleString('zh-CN')+'　<b>对话轮次：</b>'+d.rounds+'</p>'
    +'<p style="font-size:15pt"><b>总分：'+d.total+' / 100　等级：'+gname+'</b></p>'
+   // B.3: 添加三维度分析表到 Word 导出
+   +'<h3>三维度分析</h3><table><tr><th>维度</th><th>得分</th><th>说明</th></tr>'
+   +'<tr><td>理论基础</td><td style="text-align:center">'+d.dimScores.theory+'%</td><td>配位化学理论、反应原理、晶体场理论、磁性研究等知识点的综合掌握水平</td></tr>'
+   +'<tr><td>实验技能</td><td style="text-align:center">'+d.dimScores.experiment+'%</td><td>试剂认知、操作流程、安全规范、废液处理等实践技能的掌握程度</td></tr>'
+   +'<tr><td>综合应用</td><td style="text-align:center">'+d.dimScores.comprehensive+'%</td><td>产率计算、误差分析、结构表征、热分析、光化学等跨领域综合能力</td></tr>'
+   +'</table>'
+   +'<p><b>雷达图描述：</b>理论维度 '+d.dimScores.theory+'%、实验维度 '+d.dimScores.experiment+'%、综合维度 '+d.dimScores.comprehensive+'%，三角面积反映综合实验素养。三个子维度均衡发展是理想目标，若某维度显著偏低，建议针对性补强。</p>'
    +'<h3>各知识点掌握度</h3><table><tr><th>知识点</th><th>权重</th><th>掌握度</th><th>得分</th><th>评语</th></tr>'+rows+'</table>'
    +(d.strengths.length?('<h3>优势项</h3><ul>'+d.strengths.map(x=>'<li>'+esc(x.name)+'（'+Math.round(x.m*100)+'%）</li>').join('')+'</ul>'):'')
    +(d.weakness.length?('<h3>薄弱项</h3><ul>'+d.weakness.map(x=>'<li>'+esc(x.name)+'（'+Math.round(x.m*100)+'%）</li>').join('')+'</ul>'):'')

@@ -151,6 +151,33 @@ button{font-family:inherit;cursor:pointer}
   background:rgba(26,34,53,.75);border:1px solid var(--border);border-radius:10px;
   padding:6px 12px;backdrop-filter:blur(6px);pointer-events:none;
 }
+/* 浮动图例面板 */
+.legend-panel{
+  position:absolute;right:14px;top:14px;z-index:20;
+  background:rgba(17,24,39,.94);border:1px solid var(--border2);border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,.45);backdrop-filter:blur(8px);
+  max-width:220px;font-size:12px;transition:opacity .2s;
+}
+.leg-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 13px;border-bottom:1px solid var(--border);
+}
+.leg-title{font-weight:700;font-size:13px;letter-spacing:.04em}
+.leg-toggle{
+  width:22px;height:22px;border-radius:6px;border:1px solid var(--border2);
+  background:transparent;color:var(--txt2);font-size:13px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .15s;
+}
+.leg-toggle:hover{background:var(--hover);color:var(--txt)}
+.leg-body{padding:9px 13px 11px;display:flex;flex-direction:column;gap:10px}
+.leg-body.collapsed{display:none}
+.leg-section{display:flex;flex-direction:column;gap:4px}
+.leg-sec-title{font-size:10.5px;font-weight:700;color:var(--txt3);letter-spacing:.06em;text-transform:uppercase}
+.legend-panel .leg-row{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--txt2)}
+.legend-panel .leg-row i{width:9px;height:9px;border-radius:50%;flex-shrink:0;display:inline-block}
+.legend-panel .leg-row svg{flex-shrink:0;opacity:.7}
+.legend-panel .leg-note{font-size:11px;color:var(--txt3);line-height:1.5}
+@media (max-width:640px){ .legend-panel{max-width:180px;font-size:11px;right:6px;top:6px} }
 #tooltip{
   position:absolute;z-index:30;pointer-events:none;display:none;
   background:rgba(17,24,39,.94);border:1px solid var(--border2);border-radius:10px;
@@ -371,6 +398,36 @@ button{font-family:inherit;cursor:pointer}
       <button id="zoomOut" title="缩小">－</button>
       <button id="zoomReset" title="复位视图（双击画布同效）">⟳</button>
     </div>
+    <!-- 浮动图例面板 -->
+    <div class="legend-panel" id="legendPanel">
+      <div class="leg-head">
+        <span class="leg-title">图例</span>
+        <button class="leg-toggle" id="legToggle" title="收起/展开">−</button>
+      </div>
+      <div class="leg-body" id="legBody">
+        <div class="leg-section">
+          <span class="leg-sec-title">颜色编码</span>
+          <div class="leg-row"><i style="background:#10b981"></i><span>中心实验</span></div>
+          <div class="leg-row"><i style="background:#2dd4bf"></i><span>配位化学</span></div>
+          <div class="leg-row"><i style="background:#f59e0b"></i><span>氧化还原</span></div>
+          <div class="leg-row"><i style="background:#3b82f6"></i><span>分析化学</span></div>
+          <div class="leg-row"><i style="background:#a855f7"></i><span>物理/结构化学</span></div>
+        </div>
+        <div class="leg-section">
+          <span class="leg-sec-title">节点大小</span>
+          <div class="leg-note">symbolSize 与知识重要度成正比</div>
+        </div>
+        <div class="leg-section">
+          <span class="leg-sec-title">边类型</span>
+          <div class="leg-row"><svg width="24" height="10"><line x1="0" y1="5" x2="20" y2="5" stroke="#94a3b8" stroke-width="2"/></svg><span>实线 = 父子关系</span></div>
+          <div class="leg-row"><svg width="24" height="16"><path d="M 0,3 Q 10,-4 20,8" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,4"/></svg><span>虚线 = 跨类关联</span></div>
+        </div>
+        <div class="leg-section">
+          <span class="leg-sec-title">交互操作</span>
+          <div class="leg-note">拖拽节点 · 滚轮缩放 · 拖空白平移 · 点击选中 · 搜索定位</div>
+        </div>
+      </div>
+    </div>
     <div class="stage-hint">🖱 拖拽节点 · 滚轮缩放 · 拖空白平移 · 双击复位 · 点击节点查看详情</div>
 
     <!-- ============ 节点详情面板 ============ -->
@@ -449,7 +506,7 @@ const CATS = {
 const CAT_FALLBACK = ['#60a5fa','#f87171','#fbbf24','#a78bfa','#34d399','#fb923c'];
 const CAT_FALLBACK_GLOW = ['rgba(96,165,250,0.3)','rgba(248,113,113,0.3)','rgba(251,191,36,0.3)','rgba(167,139,250,0.3)','rgba(52,211,153,0.3)','rgba(251,146,60,0.3)'];
 const LEVEL_NAMES = {0:'中心节点', 1:'方向节点', 2:'知识点', 3:'细分点'};
-const LAYER_R = {1:215, 2:470, 3:725};        // 分层环形布局半径
+let LAYER_R = {1:215, 2:470, 3:725};        // 分层环形布局半径（initGraph 中会按画布尺寸响应式缩放）
 const CAT_ORDER = ['coordination','redox','analytical','physical'];  // 扇区排布顺序
 
 // 知识树（由 kg 节点的 parent 字段构建，缺失时回退推导）
@@ -554,6 +611,9 @@ function initGraph(kg){
     s: nodeById.get(l.source), t: nodeById.get(l.target),
     w: (l.lineStyle && l.lineStyle.width) || 1.5,
     color: (l.lineStyle && l.lineStyle.color) || 'rgba(148,163,184,.4)',
+    type: (l.lineStyle && l.lineStyle.type) || l.type || 'solid',
+    lineStyle: l.lineStyle || null,
+    label: l.label || null,
   })).filter(l=>l.s && l.t);
   // 邻接表
   links.forEach(l=>{
@@ -563,6 +623,9 @@ function initGraph(kg){
   });
 
   buildTree();      // 基于 parent 字段构建知识树
+  resizeCanvas();  // 先测量画布，以便 LAYER_R 按尺寸响应式缩放
+  const scale = Math.min(W, H) / 1400;
+  LAYER_R = {1: 215*scale, 2: 470*scale, 3: 725*scale, 4: 920*scale};
   assignLayout();   // 分层环形 + 类目扇区布局（计算目标位置）
   // 初始位置 = 目标位置 + 微抖动（中心节点严格居中）→ 默认即呈现清晰层次
   nodes.forEach(n=>{
@@ -575,7 +638,6 @@ function initGraph(kg){
   buildToolbar();
   updateStats();
   applyFilters(false);
-  resizeCanvas();
   resetView(false);
   bindEvents();
   requestAnimationFrame(frame);
@@ -860,7 +922,7 @@ function animateView(tx, ty, tk, dur){
 function stepTween(){
   if(!viewTween) return;
   const t = Math.min(1, (performance.now()-viewTween.t0)/viewTween.dur);
-  const e = 1-Math.pow(1-t, 3);
+  const e = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
   view.x = viewTween.sx + (viewTween.tx-viewTween.sx)*e;
   view.y = viewTween.sy + (viewTween.ty-viewTween.sy)*e;
   view.k = viewTween.sk + (viewTween.tk-viewTween.sk)*e;
@@ -915,7 +977,22 @@ function draw(){
     ctx.globalAlpha = alpha;
     ctx.strokeStyle = l.color;
     ctx.lineWidth = w;
-    ctx.beginPath(); ctx.moveTo(l.s.x, l.s.y); ctx.lineTo(l.t.x, l.t.y); ctx.stroke();
+    const isDashed = l.type === 'dashed' || (l.lineStyle && l.lineStyle.type === 'dashed');
+    ctx.beginPath();
+    if(isDashed){
+      // 虚线边：轻微贝塞尔弯曲，区分实体父子边
+      const mx = (l.s.x + l.t.x) / 2, my = (l.s.y + l.t.y) / 2;
+      const dx = l.t.x - l.s.x, dy = l.t.y - l.s.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const ox = -dy / len * 25, oy = dx / len * 25;
+      ctx.moveTo(l.s.x, l.s.y);
+      ctx.quadraticCurveTo(mx + ox, my + oy, l.t.x, l.t.y);
+    } else {
+      ctx.moveTo(l.s.x, l.s.y); ctx.lineTo(l.t.x, l.t.y);
+    }
+    if(isDashed) ctx.setLineDash([4, 6]);
+    ctx.stroke();
+    ctx.setLineDash([]);
     if(alpha > 0.25){
       ctx.save();
       ctx.globalAlpha = alpha;
@@ -923,7 +1000,18 @@ function draw(){
       ctx.lineWidth = Math.max(1, w*0.45);
       ctx.setLineDash([3, 12]);
       ctx.lineDashOffset = -time * 22 + (l.s.id.length % 7) * 5;
-      ctx.beginPath(); ctx.moveTo(l.s.x, l.s.y); ctx.lineTo(l.t.x, l.t.y); ctx.stroke();
+      ctx.beginPath();
+      if(isDashed){
+        const mx = (l.s.x + l.t.x) / 2, my = (l.s.y + l.t.y) / 2;
+        const dx = l.t.x - l.s.x, dy = l.t.y - l.s.y;
+        const len = Math.hypot(dx, dy) || 1;
+        const ox = -dy / len * 25, oy = dx / len * 25;
+        ctx.moveTo(l.s.x, l.s.y);
+        ctx.quadraticCurveTo(mx + ox, my + oy, l.t.x, l.t.y);
+      } else {
+        ctx.moveTo(l.s.x, l.s.y); ctx.lineTo(l.t.x, l.t.y);
+      }
+      ctx.stroke();
       ctx.restore();
     }
   }
@@ -989,23 +1077,38 @@ function draw(){
       ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI*2); ctx.stroke();
     }
     if(isSel || isHov){
+      // 悬停节点辉光（径向渐变，视觉强化交互反馈）
+      if(isHov && n.level > 0){
+        const grd = ctx.createRadialGradient(n.x, n.y, n.r*0.5, n.x, n.y, n.r*2.5);
+        grd.addColorStop(0, meta.glow);
+        grd.addColorStop(1, 'transparent');
+        ctx.fillStyle = grd;
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r*2.5, 0, Math.PI*2); ctx.fill();
+      }
       ctx.globalAlpha = Math.max(alpha, 0.9);
       ctx.strokeStyle = isSel ? '#f1f5f9' : 'rgba(241,245,249,.55)';
       ctx.lineWidth = isSel ? 2.4 : 1.6;
       ctx.beginPath(); ctx.arc(n.x, n.y, n.r+4.5, 0, Math.PI*2); ctx.stroke();
     }
 
-    // ---- 标签（中心/一级常显，小节点缩放后显示；径向外侧放置避免遮挡） ----
+    // ---- 标签（中心/一级常显，2-3级渐变淡入避免视觉跳变） ----
     let show = false, fs = 12;   // fs = 期望的屏幕字号
+    let labelAlpha = 1;
     if(n.level === 0){ show = true; fs = 16; }
     else if(n.level === 1){ show = true; fs = 13.5; }
-    else if(n.level === 2){ show = view.k > 0.5; fs = 11.5; }
-    else { show = view.k > 0.9; fs = 10.5; }
-    if(isSel || isHov || isMatch || (focusSet && focusSet.has(n.id) && view.k > 0.32)) show = true;
+    else if(n.level === 2){
+      const thresh = Math.min(1, Math.max(0, (view.k - 0.25) / 0.55));
+      show = true; labelAlpha = thresh; fs = 11.5;
+    }
+    else {
+      const thresh = Math.min(1, Math.max(0, (view.k - 0.5) / 0.55));
+      show = true; labelAlpha = thresh; fs = 10.5;
+    }
+    if(isSel || isHov || isMatch || (focusSet && focusSet.has(n.id) && view.k > 0.32)){ show = true; labelAlpha = 1; }
     if(show){
       // 世界字号 = 屏幕字号/k，并限制极端缩放下的过大/过小
       const wf = Math.min(Math.max(fs/view.k, fs/1.25), fs/0.32);
-      ctx.globalAlpha = Math.max(alpha, 0.6);
+      ctx.globalAlpha = Math.max(alpha * labelAlpha, 0.02);
       ctx.font = (n.level<=1 ? '700 ' : '500 ') + wf + 'px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.lineWidth = wf*0.28; ctx.strokeStyle = 'rgba(10,14,26,.92)';
       let lx, ly;
@@ -1165,6 +1268,15 @@ function bindEvents(){
       const n = nodes.find(n=>n.visible && n.name.toLowerCase().includes(searchQ));
       if(n) selectNode(n.id);
     }
+  });
+
+  // 浮动图例面板 折叠/展开
+  const legToggle = $('#legToggle'), legBody = $('#legBody');
+  let legendOpen = true;
+  legToggle.addEventListener('click', ()=>{
+    legendOpen = !legendOpen;
+    legBody.classList.toggle('collapsed', !legendOpen);
+    legToggle.textContent = legendOpen ? '−' : '+';
   });
 
   window.addEventListener('resize', resizeCanvas);

@@ -1,7 +1,7 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
-[![Version](https://img.shields.io/badge/version-v30-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v32.5-blue)](https://github.com/LittleAlety/chemai-8.6-)
 [![FAQ](https://img.shields.io/badge/FAQ-700条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![KB](https://img.shields.io/badge/知识库-1335条-orange)](https://github.com/LittleAlety/chemai-8.6-)
 
@@ -14,9 +14,9 @@
 | 页面 | 文件 | 说明 |
 |------|------|------|
 | **首页入口** | `index.html` | React SPA 首页，身份选择（非化学专业 / 化学专业 / 教师），含 LLM 配置面板 |
-| **AI 助手** | `assistant.html` | DeepSeek RAG 智能体，三层检索（FAQ → KB → 语料库）+ 掌握度自适应测评 + 实验报告评估 |
+| **AI 助手** | `assistant.html` | DeepSeek RAG 智能体，三层检索（FAQ → KB → 语料库）+ 12 知识点掌握度自适应测评 + 3 维度分析报告（含 SVG 雷达图 + 掌握度分布直方图） |
 | **主面板** | `main.html` | 实验手册全文浏览器，12 章 47 节完整知识体系，支持 PDF 导出 |
-| **知识图谱** | `knowledge.html` | 55 节点 / 76 关联的配位化学知识网络，图谱-语料互通 |
+| **知识图谱** | `knowledge.html` | 77 节点 / 76 关联的配位化学知识网络，图谱-语料互通 |
 | **语料库** | `corpus.html` | 291 篇中英文文献知识清单，支持 PDF/PPTX/DOCX 上传解析与云端同步 |
 | **课前预习** | `prep.html` | 多轮对话预习 + 自适应习题检测 |
 
@@ -38,7 +38,7 @@
 ⑤ 网络搜索引擎回退
 ```
 
-- **前端**: 纯 HTML/CSS/JS，React SPA，暗色主题，KaTeX 公式渲染
+- **前端**: 纯 HTML/CSS/JS，React SPA，暗色主题，LaTeX 全页面渲染（Unicode 转换 + 内联数学）
 - **AI 引擎**: DeepSeek API（兼容 OpenAI），RAG 模式，可切换模型
 - **检索引擎**: BM25 + FAQ 倒排索引 + 语料库打分 + Bigram/Jaccard 语义去重
 - **部署**: GitHub Pages 静态托管，零后端依赖
@@ -91,12 +91,12 @@ chemai-8.6-/
 ├── data/
 │   ├── faq_unified.json         # FAQ 知识库（700 条，17 分类全覆盖）
 │   ├── kb.json                  # 知识库（1335 条）
-│   ├── manual.json              # 实验手册（12 章 47 节，含实验准备/步骤/习题）
+│   ├── manual.json              # 实验手册（12 章 47 节，核心实验操作详细，补充知识精简）
 │   ├── corpus.json              # 语料库（291 篇中英文文献，含 DOI/摘要/知识清单）
 │   ├── questions_master.json    # 【总集】全部试题（1113 题，17 分类）
 │   ├── categories.json          # 权威分类体系（17 分类 + 别名映射）
-│   ├── kg.json                  # 知识图谱节点数据（55 节点 / 76 关联）
-│   ├── assessment_kp.json       # 掌握度测评知识点映射
+│   ├── kg.json                  # 知识图谱节点数据（77 节点 / 76 关联）
+│   ├── assessment_kp.json       # 掌握度测评 12 知识点映射
 │   └── all_cycle_questions.json # 各周期题目统计
 │
 ├── reports_master.json          # 【总集】11 次训练/评分/评测完整报告
@@ -204,15 +204,18 @@ node faq_tools.js stats             # FAQ 统计
 | 3 | v3-4agent-200q | 4-agent single | 1 | deepseek-v4-pro | 634 → 634 | — | 90.9 |
 | 4 | v4-5agent-30c | **5-agent v4** | **30** | deepseek-v4-pro | 645 → 709 | 60.2 – 80.8 | **68.0** |
 
-| 指标 | v4 最终成果 |
+| 指标 | v32.5 最新状态 |
 |------|:--:|
+| 知识图谱节点 | **77** 节点 / 76 关联 |
+| 评估知识点 | **12** 个（含 4 个进阶：配位化学理论/磁性/结构表征/热分析） |
+| 测评维度 | **3 维度**分析（理论基础/实验技能/综合应用），含 SVG 雷达图 |
+| 公式渲染 | LaTeX 全页面 Unicode 渲染（$$...$$ 块 + $...$ 内联） |
+| 实验手册 | 12 章 47 节 · 核心实验操作详细 · 补充知识精简 |
+| 武汉大学 | 已从教学内容中移除，仅保留为文献来源 attribution |
 | 总耗时 | 1511 分钟（约 25 小时） |
 | FAQ 净增长 | +64 条 |
 | 出题总量 | 3059 题 |
 | 17 分类覆盖 | ✓ 全覆盖（零盲区） |
-| C1 起始均分 | 68.3 |
-| C30 终止均分 | 65.7 |
-| 最高单轮均分 | 80.8（C2） |
 
 > 详细数据见 `reports_master.json`（11 次完整训练记录）
 
@@ -252,7 +255,7 @@ push to master → checkout → 组装静态站点 → upload artifact → deplo
 
 ## 致谢
 
-- 武汉大学化学与分子科学学院基础化学实验教学团队
+- 武汉大学化学与分子科学学院（文献来源 attribution，教学部分已移除）
 - Alfred Werner（配位化学奠基人，1866–1919）
 - DeepSeek API
 - 语料库收录的所有文献作者与期刊

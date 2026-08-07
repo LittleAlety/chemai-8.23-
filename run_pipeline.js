@@ -748,6 +748,7 @@ async function agentScorer(_cycleNum, questions) {
 }
 
 // ===== HTML 同步 =====
+// DEPRECATED: kept for backward compat, no-op in v32
 function syncFAQtoHTML() {
   console.log('\n=== FAQ → HTML 同步 ===');
   let html = fs.readFileSync(path.join(BASE, 'assistant.html'), 'utf8');

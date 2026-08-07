@@ -1,23 +1,191 @@
 [
-{"q":"写出莫尔盐(NH4)2Fe(SO4)2·6H2O的CAS号。","category":"结构表征","difficulty":"基础","expected_faq_title":"莫尔盐CAS","corpus_ref":"manual-ch8-s1","answer_key_points":"CAS号7783-85-9；浅绿色结晶；低毒；水溶液需加H2SO4抑制Fe2+水解；避免长期暴露于空气"},
-{"q":"Fe(OH)3沉淀的颜色是什么？为什么会在此实验中生成？","category":"反应原理","difficulty":"基础","expected_faq_title":"Fe(OH)3的颜色","corpus_ref":"manual-ch3-s3","answer_key_points":"红褐色(棕红色)沉淀；近中性pH5-6时Fe3+水解生成；Ksp=2.79×10^-39极低；区别于Fe(OH)2白色沉淀"},
-{"q":"为什么说产物中结晶水不是配位水？举例说明两者的区别。","category":"配位化学理论","difficulty":"中等","expected_faq_title":"结晶水与配位水区别","corpus_ref":"kb-c3-16","answer_key_points":"结晶水在晶格间隙中通过氢键存在；配位水在配离子内界直接与中心离子配位；本产物3个H2O为结晶水(晶格水)；加热先失结晶水不破坏配离子；如[Cr(H2O)6]Cl3中6个水为配位水"},
-{"q":"70%乙醇vs无水乙醇洗涤晶体有何区别？推荐用哪个？","category":"实验操作","difficulty":"中等","expected_faq_title":"70%乙醇vs无水乙醇洗涤晶体对比","corpus_ref":"kb-c3-76","answer_key_points":"无水乙醇→溶解杂质能力弱→不损失产物→挥发快→干燥快但价格高；70%乙醇→含水→产物微量溶解损失→挥发慢但有杀菌作用；推荐95%或无水乙醇→在产物不溶方面优势明显"},
-{"q":"写出K3[Fe(CN)6]和K4[Fe(CN)6]的颜色及它们在本实验中的角色。","category":"结构表征","difficulty":"中等","expected_faq_title":"铁氰化钾的颜色","corpus_ref":"kb-c3-84","answer_key_points":"K3[Fe(CN)6]红色晶体(赤血盐)→检验Fe2+(滕氏蓝)；K4[Fe(CN)6]黄色晶体(黄血盐)→检验Fe3+(普鲁士蓝)；[Fe(CN)6]3-/4-是一对氧化还原共轭体"},
-{"q":"为什么在第三步加草酸溶解Fe(OH)3时要逐滴加入而不能一次性倒入？","category":"实验操作","difficulty":"基础","expected_faq_title":"草酸为何逐滴加入","corpus_ref":"manual-ch4-s2","answer_key_points":"逐滴加入可控制反应进程→恰好溶解Fe(OH)3即停防止过量；一次倒入→草酸过量→产物解离、pH过低→C2O4^2-质子化→产率降低→晶体纯度下降"},
-{"q":"在草酸根鉴定实验中加入CaCl2产生白色沉淀，该沉淀的化学式和Ksp是什么？","category":"分析测定","difficulty":"中等","expected_faq_title":"草酸根鉴定的注意事项","corpus_ref":"manual-ch5-s1","answer_key_points":"CaC2O4白色沉淀；Ksp=2.32×10^-9；沉淀来自配合物的微弱解离平衡→并非说明C2O4^2-直接在外界；加入Ca2+拉动[Fe(C2O4)3]3-⇌Fe3++3C2O4^2-平衡右移"},
-{"q":"简述配位化学从1893年到2025年的5个关键历史节点。","category":"配位化学理论","difficulty":"综合","expected_faq_title":"配位化学大事年表","corpus_ref":"manual-ch1-s1/s2","answer_key_points":"①1893年Werner配位理论(1913诺贝尔)；②1916年Lewis共价键理论；③1929年Bethe晶体场理论(1967诺贝尔)；④1940年Sidgwick EAN规则和Pauling价键理论；⑤现代超分子化学/MOF/光催化配位化学发展"},
-{"q":"称取5.0g莫尔盐(假设纯度100%)时，若天平精度为0.01g，应如何正确记录？","category":"分析测定","difficulty":"基础","expected_faq_title":"有效数字记录规则","corpus_ref":"kb-c3-113","answer_key_points":"记录为5.00g(三位有效数字)；最后一位0.01g为可疑数字；不可记为5g(一位)或5.000g(四位→超出天平精度)；有效数字反映测量精度→应与仪器读数范围一致"},
-{"q":"写出本实验中抽滤装置的组成及各部分作用。","category":"实验操作","difficulty":"基础","expected_faq_title":"抽滤装置的组成","corpus_ref":"manual-ch4-s1","answer_key_points":"布氏漏斗(盛放滤纸+滤饼)、抽滤瓶(接收滤液)、真空橡皮管(连接水泵)、安全瓶(防止倒吸)、水泵/真空泵(提供负压)→形成减压系统→快速分离晶体与母液"},
-{"q":"实验中如果不慎将草酸溶液溅到实验台上，应如何处理？","category":"安全与废物处理","difficulty":"基础","expected_faq_title":"草酸安全处置","corpus_ref":"manual-ch8-s1/s4","answer_key_points":"戴手套→用碳酸氢钠(小苏打)中和→纸巾擦拭→大量水冲洗表面；固体草酸→先扫起收集→再中和残留→水冲洗；注意通风→废纸巾按化学固废处理"},
-{"q":"为什么Fe3+的草酸配合物比Fe2+的稳定约12个数量级？","category":"配位化学理论","difficulty":"中等","expected_faq_title":"Fe2+配合物稳定常数","corpus_ref":"manual-ch2-s4","answer_key_points":"[Fe(C2O4)3]3-(Fe3+)Kf≈10^20；[Fe(C2O4)3]4-(Fe2+)Kf≈10^8；三价铁电荷高→与配体静电引力更强→M-L键更稳固→晶体场中三价铁分裂能更大→热力学更有利"},
-{"q":"为什么氧化完全后静置片刻会出现绿色溶液在上层、沉淀在下层的分层现象？","category":"反应原理","difficulty":"中等","expected_faq_title":"氧化为何生成氢氧化铁","corpus_ref":"manual-ch3-s3","answer_key_points":"上层绿色→[Fe(C2O4)3]3-配离子溶于水的翠绿色溶液；下层红褐色→Fe(OH)3沉淀因密度大而沉降；这是部分配位+部分水解两个并行反应的结果；配位速率与水解速率的竞争决定分层比例"},
-{"q":"固相合成法得到的晶体和溶液法得到的晶体在XRD图谱上有何异同？","category":"结构表征","difficulty":"较难","expected_faq_title":"K3[Fe(C2O4)3]·3H2O晶体结构参数","corpus_ref":"corpus#43","answer_key_points":"二者均为单斜晶系P21/c空间群→特征衍射峰位置相同；固相法结晶度可能略高→峰更尖锐；溶液法晶体更大→取向效应可能使某些峰强度不同；晶胞参数因制备方法不同有微小差异约0.01-0.02A"},
-{"q":"实验中各阶段的时间控制总结(从开始到结束共需多长时间)？","category":"实验操作","difficulty":"中等","expected_faq_title":"实验全程多长时间","corpus_ref":"manual-ch4-s1","answer_key_points":"溶解称量约10min；沉淀+微沸约10min；洗涤约5min；40°C氧化滴加约15min；煮沸+检验约5min；配位溶解约10min；浓缩+加乙醇约5min；静置结晶过夜约12h；抽滤干燥约30min；全程约3-4h实际操作+过夜等待"},
-{"q":"第三步为什么用0.5mol/L的草酸溶液而不用饱和草酸溶液？","category":"合成制备","difficulty":"中等","expected_faq_title":"配位用草酸浓度","corpus_ref":"manual-ch4-s1","answer_key_points":"0.5mol/L浓度适中→逐滴加入时有足够的时间观察和判断终点→避免过量；饱和草酸浓度太高→一滴就可能过量→难以控制→溶液瞬间变酸性→产物解离；适中浓度提供足够缓冲操作窗口"},
-{"q":"什么是恒重？在烘干产物时如何判断已达到恒重？","category":"分析测定","difficulty":"基础","expected_faq_title":"恒重判据","corpus_ref":"manual-ch4-s4","answer_key_points":"连续两次称量之差不大于0.002g(或0.2mg)；110°C烘干→干燥器冷却→称量→再次烘干30min→冷却称量→比较两次质量；达到恒重说明产物已完全干燥→水分和残留溶剂已除尽"},
-{"q":"写出Fe(OH)3的Ksp值并利用此值解释为什么氧化阶段在中性条件下会生成Fe(OH)3。","category":"反应原理","difficulty":"中等","expected_faq_title":"Fe(OH)3的Ksp","corpus_ref":"manual-ch3-s3","answer_key_points":"Fe(OH)3的Ksp=2.79×10^-39(或4×10^-38)；在pH约5-6的悬浮液中[OH-]约10^-8至10^-9mol/L→[Fe3+][OH-]3远大于Ksp→Fe(OH)3自发沉淀；说明Fe3+水解倾向极强"},
-{"q":"为什么氧化步骤中先加K2C2O4再滴加H2O2的顺序如此关键？","category":"合成制备","difficulty":"中等","expected_faq_title":"氧化步骤为何先加草酸钾","corpus_ref":"kb-c3-42","answer_key_points":"先加K2C2O4→C2O4^2-先到位捕获Fe3+→减少Fe(OH)3生成量→产率提高；若后加→Fe3+先大量水解为Fe(OH)3→后续需更多草酸溶解→产率降低约10-20%"},
-{"q":"实验中有哪些操作可以体现绿色化学理念？","category":"安全与废物处理","difficulty":"中等","expected_faq_title":"绿色化学体现","corpus_ref":"manual-ch8-s3,corpus#44","answer_key_points":"H2O2作氧化剂产物为H2O无污染(原子经济性)；废铁屑资源化利用替代纯试剂(变废为宝)；固相合成法无溶剂零VOC排放；溶剂替换法替代蒸发节能；废液分类处理避免环境排放；草酸过量可加热分解不积累"},
-{"q":"如果用K2Cr2O7代替H2O2作氧化剂会有什么问题？","category":"反应原理","difficulty":"较难","expected_faq_title":"H2O2 vs KMnO4氧化剂优缺点对比","corpus_ref":"kb-c3-40","answer_key_points":"K2Cr2O7还原产物为Cr3+→绿色→影响产物颜色判断；Cr3+与C2O4^2-也能配位→产物不纯；Cr(VI)剧毒→废液处理困难→不绿色；标准电位Eo(Cr2O7^2-/Cr3+)=+1.33V足够氧化Fe2+但副反应多→不适用教学"}
+  {
+    "q": "写出莫尔盐(NH4)2Fe(SO4)2·6H2O的CAS号。",
+    "category": "结构表征",
+    "difficulty": "medium",
+    "expected_faq_title": "莫尔盐CAS",
+    "corpus_ref": "manual-ch8-s1",
+    "answer_key_points": "CAS号7783-85-9；浅绿色结晶；低毒；水溶液需加H2SO4抑制Fe2+水解；避免长期暴露于空气",
+    "question": "写出莫尔盐(NH4)2Fe(SO4)2·6H2O的CAS号。"
+  },
+  {
+    "q": "Fe(OH)3沉淀的颜色是什么？为什么会在此实验中生成？",
+    "category": "反应原理",
+    "difficulty": "medium",
+    "expected_faq_title": "Fe(OH)3的颜色",
+    "corpus_ref": "manual-ch3-s3",
+    "answer_key_points": "红褐色(棕红色)沉淀；近中性pH5-6时Fe3+水解生成；Ksp=2.79×10^-39极低；区别于Fe(OH)2白色沉淀",
+    "question": "Fe(OH)3沉淀的颜色是什么？为什么会在此实验中生成？"
+  },
+  {
+    "q": "为什么说产物中结晶水不是配位水？举例说明两者的区别。",
+    "category": "配位化学理论",
+    "difficulty": "medium",
+    "expected_faq_title": "结晶水与配位水区别",
+    "corpus_ref": "kb-c3-16",
+    "answer_key_points": "结晶水在晶格间隙中通过氢键存在；配位水在配离子内界直接与中心离子配位；本产物3个H2O为结晶水(晶格水)；加热先失结晶水不破坏配离子；如[Cr(H2O)6]Cl3中6个水为配位水",
+    "question": "为什么说产物中结晶水不是配位水？举例说明两者的区别。"
+  },
+  {
+    "q": "70%乙醇vs无水乙醇洗涤晶体有何区别？推荐用哪个？",
+    "category": "实验操作",
+    "difficulty": "medium",
+    "expected_faq_title": "70%乙醇vs无水乙醇洗涤晶体对比",
+    "corpus_ref": "kb-c3-76",
+    "answer_key_points": "无水乙醇→溶解杂质能力弱→不损失产物→挥发快→干燥快但价格高；70%乙醇→含水→产物微量溶解损失→挥发慢但有杀菌作用；推荐95%或无水乙醇→在产物不溶方面优势明显",
+    "question": "70%乙醇vs无水乙醇洗涤晶体有何区别？推荐用哪个？"
+  },
+  {
+    "q": "写出K3[Fe(CN)6]和K4[Fe(CN)6]的颜色及它们在本实验中的角色。",
+    "category": "结构表征",
+    "difficulty": "medium",
+    "expected_faq_title": "铁氰化钾的颜色",
+    "corpus_ref": "kb-c3-84",
+    "answer_key_points": "K3[Fe(CN)6]红色晶体(赤血盐)→检验Fe2+(滕氏蓝)；K4[Fe(CN)6]黄色晶体(黄血盐)→检验Fe3+(普鲁士蓝)；[Fe(CN)6]3-/4-是一对氧化还原共轭体",
+    "question": "写出K3[Fe(CN)6]和K4[Fe(CN)6]的颜色及它们在本实验中的角色。"
+  },
+  {
+    "q": "为什么在第三步加草酸溶解Fe(OH)3时要逐滴加入而不能一次性倒入？",
+    "category": "实验操作",
+    "difficulty": "medium",
+    "expected_faq_title": "草酸为何逐滴加入",
+    "corpus_ref": "manual-ch4-s2",
+    "answer_key_points": "逐滴加入可控制反应进程→恰好溶解Fe(OH)3即停防止过量；一次倒入→草酸过量→产物解离、pH过低→C2O4^2-质子化→产率降低→晶体纯度下降",
+    "question": "为什么在第三步加草酸溶解Fe(OH)3时要逐滴加入而不能一次性倒入？"
+  },
+  {
+    "q": "在草酸根鉴定实验中加入CaCl2产生白色沉淀，该沉淀的化学式和Ksp是什么？",
+    "category": "分析测定",
+    "difficulty": "medium",
+    "expected_faq_title": "草酸根鉴定的注意事项",
+    "corpus_ref": "manual-ch5-s1",
+    "answer_key_points": "CaC2O4白色沉淀；Ksp=2.32×10^-9；沉淀来自配合物的微弱解离平衡→并非说明C2O4^2-直接在外界；加入Ca2+拉动[Fe(C2O4)3]3-⇌Fe3++3C2O4^2-平衡右移",
+    "question": "在草酸根鉴定实验中加入CaCl2产生白色沉淀，该沉淀的化学式和Ksp是什么？"
+  },
+  {
+    "q": "简述配位化学从1893年到2025年的5个关键历史节点。",
+    "category": "配位化学理论",
+    "difficulty": "medium",
+    "expected_faq_title": "配位化学大事年表",
+    "corpus_ref": "manual-ch1-s1/s2",
+    "answer_key_points": "①1893年Werner配位理论(1913诺贝尔)；②1916年Lewis共价键理论；③1929年Bethe晶体场理论(1967诺贝尔)；④1940年Sidgwick EAN规则和Pauling价键理论；⑤现代超分子化学/MOF/光催化配位化学发展",
+    "question": "简述配位化学从1893年到2025年的5个关键历史节点。"
+  },
+  {
+    "q": "称取5.0g莫尔盐(假设纯度100%)时，若天平精度为0.01g，应如何正确记录？",
+    "category": "分析测定",
+    "difficulty": "medium",
+    "expected_faq_title": "有效数字记录规则",
+    "corpus_ref": "kb-c3-113",
+    "answer_key_points": "记录为5.00g(三位有效数字)；最后一位0.01g为可疑数字；不可记为5g(一位)或5.000g(四位→超出天平精度)；有效数字反映测量精度→应与仪器读数范围一致",
+    "question": "称取5.0g莫尔盐(假设纯度100%)时，若天平精度为0.01g，应如何正确记录？"
+  },
+  {
+    "q": "写出本实验中抽滤装置的组成及各部分作用。",
+    "category": "实验操作",
+    "difficulty": "medium",
+    "expected_faq_title": "抽滤装置的组成",
+    "corpus_ref": "manual-ch4-s1",
+    "answer_key_points": "布氏漏斗(盛放滤纸+滤饼)、抽滤瓶(接收滤液)、真空橡皮管(连接水泵)、安全瓶(防止倒吸)、水泵/真空泵(提供负压)→形成减压系统→快速分离晶体与母液",
+    "question": "写出本实验中抽滤装置的组成及各部分作用。"
+  },
+  {
+    "q": "实验中如果不慎将草酸溶液溅到实验台上，应如何处理？",
+    "category": "安全与废物处理",
+    "difficulty": "medium",
+    "expected_faq_title": "草酸安全处置",
+    "corpus_ref": "manual-ch8-s1/s4",
+    "answer_key_points": "戴手套→用碳酸氢钠(小苏打)中和→纸巾擦拭→大量水冲洗表面；固体草酸→先扫起收集→再中和残留→水冲洗；注意通风→废纸巾按化学固废处理",
+    "question": "实验中如果不慎将草酸溶液溅到实验台上，应如何处理？"
+  },
+  {
+    "q": "为什么Fe3+的草酸配合物比Fe2+的稳定约12个数量级？",
+    "category": "配位化学理论",
+    "difficulty": "medium",
+    "expected_faq_title": "Fe2+配合物稳定常数",
+    "corpus_ref": "manual-ch2-s4",
+    "answer_key_points": "[Fe(C2O4)3]3-(Fe3+)Kf≈10^20；[Fe(C2O4)3]4-(Fe2+)Kf≈10^8；三价铁电荷高→与配体静电引力更强→M-L键更稳固→晶体场中三价铁分裂能更大→热力学更有利",
+    "question": "为什么Fe3+的草酸配合物比Fe2+的稳定约12个数量级？"
+  },
+  {
+    "q": "为什么氧化完全后静置片刻会出现绿色溶液在上层、沉淀在下层的分层现象？",
+    "category": "反应原理",
+    "difficulty": "medium",
+    "expected_faq_title": "氧化为何生成氢氧化铁",
+    "corpus_ref": "manual-ch3-s3",
+    "answer_key_points": "上层绿色→[Fe(C2O4)3]3-配离子溶于水的翠绿色溶液；下层红褐色→Fe(OH)3沉淀因密度大而沉降；这是部分配位+部分水解两个并行反应的结果；配位速率与水解速率的竞争决定分层比例",
+    "question": "为什么氧化完全后静置片刻会出现绿色溶液在上层、沉淀在下层的分层现象？"
+  },
+  {
+    "q": "固相合成法得到的晶体和溶液法得到的晶体在XRD图谱上有何异同？",
+    "category": "结构表征",
+    "difficulty": "hard",
+    "expected_faq_title": "K3[Fe(C2O4)3]·3H2O晶体结构参数",
+    "corpus_ref": "corpus#43",
+    "answer_key_points": "二者均为单斜晶系P21/c空间群→特征衍射峰位置相同；固相法结晶度可能略高→峰更尖锐；溶液法晶体更大→取向效应可能使某些峰强度不同；晶胞参数因制备方法不同有微小差异约0.01-0.02A",
+    "question": "固相合成法得到的晶体和溶液法得到的晶体在XRD图谱上有何异同？"
+  },
+  {
+    "q": "实验中各阶段的时间控制总结(从开始到结束共需多长时间)？",
+    "category": "实验操作",
+    "difficulty": "medium",
+    "expected_faq_title": "实验全程多长时间",
+    "corpus_ref": "manual-ch4-s1",
+    "answer_key_points": "溶解称量约10min；沉淀+微沸约10min；洗涤约5min；40°C氧化滴加约15min；煮沸+检验约5min；配位溶解约10min；浓缩+加乙醇约5min；静置结晶过夜约12h；抽滤干燥约30min；全程约3-4h实际操作+过夜等待",
+    "question": "实验中各阶段的时间控制总结(从开始到结束共需多长时间)？"
+  },
+  {
+    "q": "第三步为什么用0.5mol/L的草酸溶液而不用饱和草酸溶液？",
+    "category": "合成制备",
+    "difficulty": "medium",
+    "expected_faq_title": "配位用草酸浓度",
+    "corpus_ref": "manual-ch4-s1",
+    "answer_key_points": "0.5mol/L浓度适中→逐滴加入时有足够的时间观察和判断终点→避免过量；饱和草酸浓度太高→一滴就可能过量→难以控制→溶液瞬间变酸性→产物解离；适中浓度提供足够缓冲操作窗口",
+    "question": "第三步为什么用0.5mol/L的草酸溶液而不用饱和草酸溶液？"
+  },
+  {
+    "q": "什么是恒重？在烘干产物时如何判断已达到恒重？",
+    "category": "分析测定",
+    "difficulty": "medium",
+    "expected_faq_title": "恒重判据",
+    "corpus_ref": "manual-ch4-s4",
+    "answer_key_points": "连续两次称量之差不大于0.002g(或0.2mg)；110°C烘干→干燥器冷却→称量→再次烘干30min→冷却称量→比较两次质量；达到恒重说明产物已完全干燥→水分和残留溶剂已除尽",
+    "question": "什么是恒重？在烘干产物时如何判断已达到恒重？"
+  },
+  {
+    "q": "写出Fe(OH)3的Ksp值并利用此值解释为什么氧化阶段在中性条件下会生成Fe(OH)3。",
+    "category": "反应原理",
+    "difficulty": "medium",
+    "expected_faq_title": "Fe(OH)3的Ksp",
+    "corpus_ref": "manual-ch3-s3",
+    "answer_key_points": "Fe(OH)3的Ksp=2.79×10^-39(或4×10^-38)；在pH约5-6的悬浮液中[OH-]约10^-8至10^-9mol/L→[Fe3+][OH-]3远大于Ksp→Fe(OH)3自发沉淀；说明Fe3+水解倾向极强",
+    "question": "写出Fe(OH)3的Ksp值并利用此值解释为什么氧化阶段在中性条件下会生成Fe(OH)3。"
+  },
+  {
+    "q": "为什么氧化步骤中先加K2C2O4再滴加H2O2的顺序如此关键？",
+    "category": "合成制备",
+    "difficulty": "medium",
+    "expected_faq_title": "氧化步骤为何先加草酸钾",
+    "corpus_ref": "kb-c3-42",
+    "answer_key_points": "先加K2C2O4→C2O4^2-先到位捕获Fe3+→减少Fe(OH)3生成量→产率提高；若后加→Fe3+先大量水解为Fe(OH)3→后续需更多草酸溶解→产率降低约10-20%",
+    "question": "为什么氧化步骤中先加K2C2O4再滴加H2O2的顺序如此关键？"
+  },
+  {
+    "q": "实验中有哪些操作可以体现绿色化学理念？",
+    "category": "安全与废物处理",
+    "difficulty": "medium",
+    "expected_faq_title": "绿色化学体现",
+    "corpus_ref": "manual-ch8-s3,corpus#44",
+    "answer_key_points": "H2O2作氧化剂产物为H2O无污染(原子经济性)；废铁屑资源化利用替代纯试剂(变废为宝)；固相合成法无溶剂零VOC排放；溶剂替换法替代蒸发节能；废液分类处理避免环境排放；草酸过量可加热分解不积累",
+    "question": "实验中有哪些操作可以体现绿色化学理念？"
+  },
+  {
+    "q": "如果用K2Cr2O7代替H2O2作氧化剂会有什么问题？",
+    "category": "反应原理",
+    "difficulty": "hard",
+    "expected_faq_title": "H2O2 vs KMnO4氧化剂优缺点对比",
+    "corpus_ref": "kb-c3-40",
+    "answer_key_points": "K2Cr2O7还原产物为Cr3+→绿色→影响产物颜色判断；Cr3+与C2O4^2-也能配位→产物不纯；Cr(VI)剧毒→废液处理困难→不绿色；标准电位Eo(Cr2O7^2-/Cr3+)=+1.33V足够氧化Fe2+但副反应多→不适用教学",
+    "question": "如果用K2Cr2O7代替H2O2作氧化剂会有什么问题？"
+  }
 ]

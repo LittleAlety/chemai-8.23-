@@ -1,0 +1,237 @@
+{
+  "files": [
+    {
+      "file": "agent_b_400_questions.json",
+      "before": 400,
+      "after": 400,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 1
+    },
+    {
+      "file": "agent_b_questions_r1.json",
+      "before": 200,
+      "after": 200,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 1
+    },
+    {
+      "file": "agent_b_questions_r2.json",
+      "before": 200,
+      "after": 200,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 1
+    },
+    {
+      "file": "agent_b_questions_r3.json",
+      "before": 200,
+      "after": 200,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 1
+    },
+    {
+      "file": "extra_questions.json",
+      "before": 21,
+      "after": 21,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core.json",
+      "before": 100,
+      "after": 100,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r10.json",
+      "before": 119,
+      "after": 119,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r11.json",
+      "before": 119,
+      "after": 119,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r11_fixed.json",
+      "before": 119,
+      "after": 119,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r12.json",
+      "before": 149,
+      "after": 149,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r13.json",
+      "before": 149,
+      "after": 149,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r14.json",
+      "before": 119,
+      "after": 119,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r15.json",
+      "before": 129,
+      "after": 129,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r16.json",
+      "before": 129,
+      "after": 129,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r17.json",
+      "before": 134,
+      "after": 134,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r18.json",
+      "before": 134,
+      "after": 134,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r2.json",
+      "before": 100,
+      "after": 100,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r3.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r4.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r5.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r6.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r7.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r8.json",
+      "before": 99,
+      "after": 99,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_core_r9.json",
+      "before": 119,
+      "after": 119,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_round1.json",
+      "before": 200,
+      "after": 200,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_round2.json",
+      "before": 200,
+      "after": 200,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "test_questions_round3.json",
+      "before": 187,
+      "after": 187,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "data/questions_master.json",
+      "before": 1113,
+      "after": 1113,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    },
+    {
+      "file": "data/all_cycle_questions.json",
+      "before": 1,
+      "after": 1,
+      "emptyRemoved": 0,
+      "dupRemoved": 0,
+      "categoryFixed": 0
+    }
+  ],
+  "correctedAt": "2026-08-07T07:46:06.122Z"
+}

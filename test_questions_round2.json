@@ -7,2043 +7,2611 @@
       "id": "r2-001",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "配位化学萌芽期",
       "question": "配位化学的萌芽期大致是什么时间段？",
       "answer": "1798年至1893年，以大量配位化合物偶然发现为特征但缺乏系统理论。",
-      "explanation": "从塔萨厄尔1798年发现[Co(NH3)6]Cl3到维尔纳1893年提出配位理论，约95年。"
+      "explanation": "从塔萨厄尔1798年发现[Co(NH3)6]Cl3到维尔纳1893年提出配位理论，约95年。",
+      "referenceAnswer": "1798年至1893年，以大量配位化合物偶然发现为特征但缺乏系统理论。",
+      "category": "综合研究"
     },
     {
       "id": "r2-002",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "配位化学发展四阶段",
       "question": "配位化学发展分为哪四个阶段？",
       "answer": "萌芽期（1798-1893）、理论建立期（1893-1940）、理论深化期（1940-1980）和现代发展期（1980至今）。",
-      "explanation": "四阶段划分以关键理论和技术的突破为标志。"
+      "explanation": "四阶段划分以关键理论和技术的突破为标志。",
+      "referenceAnswer": "萌芽期（1798-1893）、理论建立期（1893-1940）、理论深化期（1940-1980）和现代发展期（1980至今）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-003",
       "chapter": "ch1",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "塔萨厄尔发现",
       "question": "塔萨厄尔（Tassaert）于____年首次发现了钴氨配合物[Co(NH3)6]Cl3。",
       "answer": "1798",
-      "explanation": "该发现标志配位化学萌芽期的开始。"
+      "explanation": "该发现标志配位化学萌芽期的开始。",
+      "referenceAnswer": "1798",
+      "category": "综合研究"
     },
     {
       "id": "r2-004",
       "chapter": "ch1",
       "type": "truefalse",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "维尔纳理论",
       "question": "维尔纳（Werner）于1893年提出了配位理论，彻底推翻了链式理论。",
       "answer": "正确",
       "explanation": "维尔纳配位理论是配位化学理论建立的里程碑。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-005",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "理论建立期",
       "question": "配位化学理论建立期（1893-1940）的主要特征是什么？",
       "answer": "以维尔纳配位理论为核心，建立了配合物的主价/副价概念和几何构型理论。",
-      "explanation": "这一时期明确了配位数与几何构型的关系。"
+      "explanation": "这一时期明确了配位数与几何构型的关系。",
+      "referenceAnswer": "以维尔纳配位理论为核心，建立了配合物的主价/副价概念和几何构型理论。",
+      "category": "综合研究"
     },
     {
       "id": "r2-006",
       "chapter": "ch1",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "诺贝尔奖",
       "question": "维尔纳因其在配位化学方面的贡献于____年获得诺贝尔化学奖。",
       "answer": "1913",
-      "explanation": "维尔纳是第一位因配位化学研究获得诺贝尔奖的化学家。"
+      "explanation": "维尔纳是第一位因配位化学研究获得诺贝尔奖的化学家。",
+      "referenceAnswer": "1913",
+      "category": "综合研究"
     },
     {
       "id": "r2-007",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "现代发展期",
       "question": "配位化学现代发展期（1980至今）有哪些主要研究方向？",
       "answer": "超分子化学、金属有机框架（MOFs）、生物无机化学和功能配合物材料。",
-      "explanation": "现代配位化学与材料科学、生命科学等多学科交叉融合。"
+      "explanation": "现代配位化学与材料科学、生命科学等多学科交叉融合。",
+      "referenceAnswer": "超分子化学、金属有机框架（MOFs）、生物无机化学和功能配合物材料。",
+      "category": "综合研究"
     },
     {
       "id": "r2-008",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "教学目标",
       "question": "本实验的知识目标是什么？",
       "answer": "掌握三草酸合铁(III)酸钾的合成原理、配位化学基本概念和配合物稳定性影响因素。",
-      "explanation": "知识目标是理解配合物的合成、结构和性质关系。"
+      "explanation": "知识目标是理解配合物的合成、结构和性质关系。",
+      "referenceAnswer": "掌握三草酸合铁(III)酸钾的合成原理、配位化学基本概念和配合物稳定性影响因素。",
+      "category": "综合研究"
     },
     {
       "id": "r2-009",
       "chapter": "ch1",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "技能目标",
       "question": "本实验的技能目标包括掌握____、____和____等基本操作。",
       "answer": "水浴加热、减压过滤、重结晶",
-      "explanation": "这些是合成无机配合物的核心实验技能。"
+      "explanation": "这些是合成无机配合物的核心实验技能。",
+      "referenceAnswer": "水浴加热、减压过滤、重结晶",
+      "category": "综合研究"
     },
     {
       "id": "r2-010",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "核心反应类型",
       "question": "本实验中涉及哪三种核心化学反应类型？",
       "answer": "沉淀反应（FeC2O4生成）、氧化还原反应（Fe2+氧化为Fe3+）和配位反应（C2O42-与Fe3+配位）。",
-      "explanation": "三步法合成策略分别对应这三种反应类型。"
+      "explanation": "三步法合成策略分别对应这三种反应类型。",
+      "referenceAnswer": "沉淀反应（FeC2O4生成）、氧化还原反应（Fe2+氧化为Fe3+）和配位反应（C2O42-与Fe3+配位）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-011",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "理论深化期",
       "question": "配位化学理论深化期（1940-1980）引入了哪些重要理论？",
       "answer": "晶体场理论（Bethe, 1929；van Vleck完善）、配位场理论和分子轨道理论。",
-      "explanation": "这些理论从量子力学层面解释了配合物的电子结构和光谱性质。"
+      "explanation": "这些理论从量子力学层面解释了配合物的电子结构和光谱性质。",
+      "referenceAnswer": "晶体场理论（Bethe, 1929；van Vleck完善）、配位场理论和分子轨道理论。",
+      "category": "综合研究"
     },
     {
       "id": "r2-012",
       "chapter": "ch1",
       "type": "truefalse",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "萌芽期特征",
       "question": "配位化学萌芽期已经建立了系统的配合物结构理论。",
       "answer": "错误",
       "explanation": "萌芽期的特征是大量配合物被偶然发现，但缺乏系统理论来统一解释。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-013",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "素养目标",
       "question": "本实验的素养（Quality）目标包括哪些方面？",
       "answer": "培养严谨的科学态度、绿色化学意识（废液分类处理）、团队协作精神和实验安全意识。",
-      "explanation": "素养目标是实验教学三位一体目标体系的重要组成部分。"
+      "explanation": "素养目标是实验教学三位一体目标体系的重要组成部分。",
+      "referenceAnswer": "培养严谨的科学态度、绿色化学意识（废液分类处理）、团队协作精神和实验安全意识。",
+      "category": "综合研究"
     },
     {
       "id": "r2-014",
       "chapter": "ch1",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "配位化学整体流程",
       "question": "在本实验中，Fe2+最终转化为什么产物？",
       "answer": "A",
       "explanation": "Fe2+经氧化变为Fe3+，再与C2O42-配位形成[Fe(C2O4)3]3-。",
-      "options": ["A. K3[Fe(C2O4)3]·3H2O", "B. Fe(C2O4)", "C. Fe(OH)3", "D. Fe2O3"]
+      "options": [
+        "A. K3[Fe(C2O4)3]·3H2O",
+        "B. Fe(C2O4)",
+        "C. Fe(OH)3",
+        "D. Fe2O3"
+      ],
+      "referenceAnswer": "A",
+      "category": "综合研究"
     },
     {
       "id": "r2-015",
       "chapter": "ch1",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "化学史角度",
       "question": "为什么维尔纳的配位理论被认为是化学史上的重大突破？请从实验与理论的关系角度简要回答。",
       "answer": "因为在维尔纳之前大量配合物已被发现但无法解释（如CoCl3·6NH3的两种氯化行为），维尔纳通过主价/副价、配位数等概念首次对实验事实给出了统一、简洁且有预测力的理论框架。",
-      "explanation": "理论的突破在于将分散的实验现象纳入统一的概念体系。"
+      "explanation": "理论的突破在于将分散的实验现象纳入统一的概念体系。",
+      "referenceAnswer": "因为在维尔纳之前大量配合物已被发现但无法解释（如CoCl3·6NH3的两种氯化行为），维尔纳通过主价/副价、配位数等概念首次对实验事实给出了统一、简洁且有预测力的理论框架。",
+      "category": "综合研究"
     },
     {
       "id": "r2-016",
       "chapter": "ch1",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "现代配位化学",
       "question": "某MOF材料由Zn4O节点和对苯二甲酸配体构成。若已知每个Zn4O节点可连接6个配体，每个配体连接2个节点，根据拓扑学规则，该MOF中节点与配体的摩尔比是多少？",
       "answer": "1:3（或Zn4O:配体=1:3，即每摩尔节点对应3摩尔配体）。",
-      "explanation": "根据连接数平衡：节点连接数(6)×节点数 = 配体连接数(2)×配体数，故配体数:节点数=6:2=3:1。"
+      "explanation": "根据连接数平衡：节点连接数(6)×节点数 = 配体连接数(2)×配体数，故配体数:节点数=6:2=3:1。",
+      "referenceAnswer": "1:3（或Zn4O:配体=1:3，即每摩尔节点对应3摩尔配体）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-017",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "物理性质-颜色",
       "question": "三草酸合铁(III)酸钾三水合物的晶体颜色为____色。",
       "answer": "翠绿（或祖母绿）",
-      "explanation": "翠绿色是[Fe(C2O4)3]3-配合物的特征颜色。"
+      "explanation": "翠绿色是[Fe(C2O4)3]3-配合物的特征颜色。",
+      "referenceAnswer": "翠绿（或祖母绿）",
+      "category": "综合研究"
     },
     {
       "id": "r2-018",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "摩尔质量",
       "question": "K3[Fe(C2O4)3]·3H2O的摩尔质量为____g/mol。",
       "answer": "491.25",
-      "explanation": "计算：K(39.10×3)+Fe(55.85)+C2O4(88.02×3)+H2O(18.02×3)=117.30+55.85+264.06+54.06=491.27≈491.25。"
+      "explanation": "计算：K(39.10×3)+Fe(55.85)+C2O4(88.02×3)+H2O(18.02×3)=117.30+55.85+264.06+54.06=491.27≈491.25。",
+      "referenceAnswer": "491.25",
+      "category": "综合研究"
     },
     {
       "id": "r2-019",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "密度",
       "question": "K3[Fe(C2O4)3]·3H2O晶体的密度约为____g/cm³。",
       "answer": "2.13",
-      "explanation": "该密度与典型离子型配合物晶体一致。"
+      "explanation": "该密度与典型离子型配合物晶体一致。",
+      "referenceAnswer": "2.13",
+      "category": "综合研究"
     },
     {
       "id": "r2-020",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "晶系",
       "question": "K3[Fe(C2O4)3]·3H2O属于什么晶系和空间群？",
       "answer": "单斜晶系，空间群P21/c。",
-      "explanation": "单斜晶系是草酸合铁酸盐配合物的常见晶体对称性。"
+      "explanation": "单斜晶系是草酸合铁酸盐配合物的常见晶体对称性。",
+      "referenceAnswer": "单斜晶系，空间群P21/c。",
+      "category": "综合研究"
     },
     {
       "id": "r2-021",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "溶解度",
       "question": "K3[Fe(C2O4)3]·3H2O在水中的溶解度随温度如何变化？",
       "answer": "溶解度随温度升高显著增大：0℃时约4.7g/100g水，100℃时约117.7g/100g水。",
-      "explanation": "高温溶解度大是该配合物适合结晶纯化的热力学基础。"
+      "explanation": "高温溶解度大是该配合物适合结晶纯化的热力学基础。",
+      "referenceAnswer": "溶解度随温度升高显著增大：0℃时约4.7g/100g水，100℃时约117.7g/100g水。",
+      "category": "综合研究"
     },
     {
       "id": "r2-022",
       "chapter": "ch2",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "热行为",
       "question": "K3[Fe(C2O4)3]·3H2O在110℃时发生了什么变化？",
       "answer": "B",
       "explanation": "三个结晶水在110℃左右可完全失去。",
-      "options": ["A. 熔化", "B. 失去结晶水", "C. 草酸根分解", "D. Fe(III)被还原"]
+      "options": [
+        "A. 熔化",
+        "B. 失去结晶水",
+        "C. 草酸根分解",
+        "D. Fe(III)被还原"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-023",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "热分解产物",
       "question": "K3[Fe(C2O4)3]·3H2O完全热分解后的最终固体残渣是____和____。",
       "answer": "Fe2O3和K2CO3",
-      "explanation": "草酸根分解为CO/CO2，Fe(III)转化为Fe2O3，K+转化为K2CO3。"
+      "explanation": "草酸根分解为CO/CO2，Fe(III)转化为Fe2O3，K+转化为K2CO3。",
+      "referenceAnswer": "Fe2O3和K2CO3",
+      "category": "综合研究"
     },
     {
       "id": "r2-024",
       "chapter": "ch2",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "熔点",
       "question": "K3[Fe(C2O4)3]·3H2O有明确熔点，约为230℃。",
       "answer": "错误",
       "explanation": "该配合物没有熔点，加热时先脱水再分解，不经过液态。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-025",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "磁矩",
       "question": "K3[Fe(C2O4)3]·3H2O中Fe3+的磁矩约为____B.M.，属于____自旋态。",
       "answer": "5.9，高",
-      "explanation": "d5高自旋：μ=√[n(n+2)]=√[5×7]=√35≈5.92 B.M.。"
+      "explanation": "d5高自旋：μ=√[n(n+2)]=√[5×7]=√35≈5.92 B.M.。",
+      "referenceAnswer": "5.9，高",
+      "category": "综合研究"
     },
     {
       "id": "r2-026",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "光化学性质",
       "question": "K3[Fe(C2O4)3]·3H2O具有光化学活性的本质是什么？",
       "answer": "发生配体到金属的电荷转移（LMCT），C2O42-的电子在光照下跃迁至Fe3+的d轨道，导致Fe(III)还原为Fe(II)并伴随草酸根氧化分解。",
-      "explanation": "LMCT是该配合物光敏性的根本原因。"
+      "explanation": "LMCT是该配合物光敏性的根本原因。",
+      "referenceAnswer": "发生配体到金属的电荷转移（LMCT），C2O42-的电子在光照下跃迁至Fe3+的d轨道，导致Fe(III)还原为Fe(II)并伴随草酸根氧化分解。",
+      "category": "综合研究"
     },
     {
       "id": "r2-027",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "酸碱性",
       "question": "K3[Fe(C2O4)3]溶液的pH值大概是多少？为什么呈现弱酸性？",
       "answer": "pH约4-5，呈弱酸性。因为[Fe(C2O4)3]3-在水溶液中稍有水解：C2O42-结合H+形成HC2O4-和H2C2O4，释放OH-被Fe3+消耗。",
-      "explanation": "溶液弱酸性来自草酸根的碱性水解与Fe3+水解的竞争。"
+      "explanation": "溶液弱酸性来自草酸根的碱性水解与Fe3+水解的竞争。",
+      "referenceAnswer": "pH约4-5，呈弱酸性。因为[Fe(C2O4)3]3-在水溶液中稍有水解：C2O42-结合H+形成HC2O4-和H2C2O4，释放OH-被Fe3+消耗。",
+      "category": "综合研究"
     },
     {
       "id": "r2-028",
       "chapter": "ch2",
       "type": "single",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "KSCN反应",
       "question": "向K3[Fe(C2O4)3]溶液中滴加KSCN溶液，观察到什么现象？",
       "answer": "C",
       "explanation": "Fe3+在稳定内界[Fe(C2O4)3]3-中，被C2O42-牢固配位，不足以游离出来与SCN-形成血红色配合物。",
-      "options": ["A. 溶液变为血红色", "B. 产生白色沉淀", "C. 溶液颜色无明显变化", "D. 溶液变为蓝色"]
+      "options": [
+        "A. 溶液变为血红色",
+        "B. 产生白色沉淀",
+        "C. 溶液颜色无明显变化",
+        "D. 溶液变为蓝色"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-029",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "配位结构",
       "question": "请描述[Fe(C2O4)3]3-中Fe3+的配位几何构型和杂化方式。",
       "answer": "八面体构型，三个C2O42-各提供两个配位O原子（双齿配位），形成d2sp3内轨型杂化。",
-      "explanation": "六个配位氧原子占据八面体的六个顶点。"
+      "explanation": "六个配位氧原子占据八面体的六个顶点。",
+      "referenceAnswer": "八面体构型，三个C2O42-各提供两个配位O原子（双齿配位），形成d2sp3内轨型杂化。",
+      "category": "综合研究"
     },
     {
       "id": "r2-030",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "电子构型",
       "question": "在八面体晶体场中，[Fe(C2O4)3]3-的d电子排布为____，属于____自旋态。",
       "answer": "t2g3eg2，高",
-      "explanation": "C2O42-是弱场配体，分裂能Δo小于电子成对能P。"
+      "explanation": "C2O42-是弱场配体，分裂能Δo小于电子成对能P。",
+      "referenceAnswer": "t2g3eg2，高",
+      "category": "综合研究"
     },
     {
       "id": "r2-031",
       "chapter": "ch2",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "稳定常数",
       "question": "已知[Fe(C2O4)3]3-的逐级稳定常数为K1=7.08×10^7，K2=6.31×10^5，K3=3.55×10^6。求总稳定常数β3。",
       "answer": "β3 = K1×K2×K3 = 7.08×10^7 × 6.31×10^5 × 3.55×10^6 ≈ 1.59×10^20",
-      "explanation": "总稳定常数为各级稳定常数的乘积。"
+      "explanation": "总稳定常数为各级稳定常数的乘积。",
+      "referenceAnswer": "β3 = K1×K2×K3 = 7.08×10^7 × 6.31×10^5 × 3.55×10^6 ≈ 1.59×10^20",
+      "category": "综合研究"
     },
     {
       "id": "r2-032",
       "chapter": "ch2",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "吉布斯自由能",
       "question": "已知[Fe(C2O4)3]3-的β3=1.6×10^20。计算298K时该配合物形成的标准吉布斯自由能变ΔG°。",
       "answer": "ΔG° = -RTlnβ3 = -8.314×298×ln(1.6×10^20) = -8.314×298×46.52 ≈ -115.2 kJ/mol",
-      "explanation": "负ΔG°表明配合物形成在热力学上是自发过程。"
+      "explanation": "负ΔG°表明配合物形成在热力学上是自发过程。",
+      "referenceAnswer": "ΔG° = -RTlnβ3 = -8.314×298×ln(1.6×10^20) = -8.314×298×46.52 ≈ -115.2 kJ/mol",
+      "category": "综合研究"
     },
     {
       "id": "r2-033",
       "chapter": "ch2",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "螯合效应",
       "question": "什么是螯合效应？为什么[Fe(C2O4)3]3-比[Fe(H2O)6]3+更稳定？",
       "answer": "螯合效应指多齿配体与同一金属离子形成环状结构后，配位稳定性显著提高。草酸根形成五元螯合环，且螯合伴随更大的熵增（释放更多单齿配体H2O）。",
-      "explanation": "熵增是螯合效应的主要热力学驱动力。"
+      "explanation": "熵增是螯合效应的主要热力学驱动力。",
+      "referenceAnswer": "螯合效应指多齿配体与同一金属离子形成环状结构后，配位稳定性显著提高。草酸根形成五元螯合环，且螯合伴随更大的熵增（释放更多单齿配体H2O）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-034",
       "chapter": "ch2",
       "type": "fill",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "螯合环",
       "question": "每个C2O42-配体与Fe3+形成的螯合环为____元环，共形成____个这样的螯合环。",
       "answer": "五，三",
-      "explanation": "草酸根以两个羧基O原子与Fe3+配位，形成五元环O-C-C-O-Fe。"
+      "explanation": "草酸根以两个羧基O原子与Fe3+配位，形成五元环O-C-C-O-Fe。",
+      "referenceAnswer": "五，三",
+      "category": "综合研究"
     },
     {
       "id": "r2-035",
       "chapter": "ch2",
       "type": "truefalse",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "溶解度-乙醇",
       "question": "K3[Fe(C2O4)3]·3H2O在乙醇中溶解度很大，因此可用乙醇重结晶。",
       "answer": "错误",
       "explanation": "该配合物在乙醇中几乎不溶，这正是利用乙醇降低溶剂介电常数来促进结晶的原因。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-036",
       "chapter": "ch2",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "磁矩计算",
       "question": "某八面体d5配合物为低自旋态。其理论磁矩μ的值是多少B.M.？（仅自旋磁矩公式）",
       "answer": "μ = √[1×3] ≈ 1.73 B.M.（n=1为未成对电子数，t2g5构型）。",
-      "explanation": "低自旋d5：t2g5eg0，仅一个未成对电子。"
+      "explanation": "低自旋d5：t2g5eg0，仅一个未成对电子。",
+      "referenceAnswer": "μ = √[1×3] ≈ 1.73 B.M.（n=1为未成对电子数，t2g5构型）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-037",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "为什么不直接合成",
       "question": "为什么不能直接用Fe3+盐和草酸盐反应来合成产品？",
       "answer": "因为Fe3+与草酸根之间存在氧化还原竞争反应：Fe3+可氧化C2O42-生成Fe2+和CO2，同时草酸根与Fe3+的配位反应也在进行，两种反应竞争导致副产物多、产率低。",
-      "explanation": "该氧化还原电池电动势Ecell高达1.261V，反应热力学有利。"
+      "explanation": "该氧化还原电池电动势Ecell高达1.261V，反应热力学有利。",
+      "referenceAnswer": "因为Fe3+与草酸根之间存在氧化还原竞争反应：Fe3+可氧化C2O42-生成Fe2+和CO2，同时草酸根与Fe3+的配位反应也在进行，两种反应竞争导致副产物多、产率低。",
+      "category": "综合研究"
     },
     {
       "id": "r2-038",
       "chapter": "ch3",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "四步策略",
       "question": "合成K3[Fe(C2O4)3]·3H2O采用四步策略，依次为____、____、____和____。",
       "answer": "沉淀、氧化、配位、结晶",
-      "explanation": "这四步分别解决了直接合成的各种热力学和动力学矛盾。"
+      "explanation": "这四步分别解决了直接合成的各种热力学和动力学矛盾。",
+      "referenceAnswer": "沉淀、氧化、配位、结晶",
+      "category": "综合研究"
     },
     {
       "id": "r2-039",
       "chapter": "ch3",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "第一步沉淀",
       "question": "第一步沉淀反应中生成的黄色沉淀是____。",
       "answer": "FeC2O4·2H2O",
-      "explanation": "将Fe2+沉淀为草酸亚铁是为了避免后续的氧化还原干扰。"
+      "explanation": "将Fe2+沉淀为草酸亚铁是为了避免后续的氧化还原干扰。",
+      "referenceAnswer": "FeC2O4·2H2O",
+      "category": "综合研究"
     },
     {
       "id": "r2-040",
       "chapter": "ch3",
       "type": "calculation",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "氧化还原电动势",
       "question": "已知E°(Fe3+/Fe2+)=+0.771V，E°(2CO2/H2C2O4)=−0.490V。计算酸性条件下Fe3+氧化H2C2O4的标准电动势E°cell。",
       "answer": "E°cell = E°(Fe3+/Fe2+) − E°(2CO2/H2C2O4) = 0.771 − (−0.490) = 1.261V",
-      "explanation": "正值的E°cell表明反应2Fe3+ + H2C2O4 → 2Fe2+ + 2CO2 + 2H+是热力学有利的自发反应。"
+      "explanation": "正值的E°cell表明反应2Fe3+ + H2C2O4 → 2Fe2+ + 2CO2 + 2H+是热力学有利的自发反应。",
+      "referenceAnswer": "E°cell = E°(Fe3+/Fe2+) − E°(2CO2/H2C2O4) = 0.771 − (−0.490) = 1.261V",
+      "category": "综合研究"
     },
     {
       "id": "r2-041",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "第二步氧化",
       "question": "第二步氧化反应中使用的是什么氧化剂？反应条件是什么？",
       "answer": "使用6% H2O2作氧化剂，在40℃水浴中逐滴加入，将FeC2O4·2H2O中的Fe2+氧化为Fe3+。",
-      "explanation": "H2O2的还原产物是H2O，绿色环保；40℃可加快反应但不过度分解H2O2。"
+      "explanation": "H2O2的还原产物是H2O，绿色环保；40℃可加快反应但不过度分解H2O2。",
+      "referenceAnswer": "使用6% H2O2作氧化剂，在40℃水浴中逐滴加入，将FeC2O4·2H2O中的Fe2+氧化为Fe3+。",
+      "category": "综合研究"
     },
     {
       "id": "r2-042",
       "chapter": "ch3",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "氧化产物",
       "question": "H2O2氧化FeC2O4·2H2O时，Fe2+被氧化为Fe3+，同时生成Fe(OH)3沉淀。",
       "answer": "正确",
       "explanation": "在酸性不强的条件下，Fe3+以Fe(OH)3形式沉淀，同时草酸根也被部分氧化。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-043",
       "chapter": "ch3",
       "type": "calculation",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "氧化反应平衡常数",
       "question": "计算FeC2O4被H2O2氧化的总反应平衡常数K：2FeC2O4+3H2O2+3H2C2O4→2Fe(OH)3+6CO2+2H2O。已知E°cell≈1.005V，n=6。",
       "answer": "lnK = nFE°cell/RT = 6×96500×1.005/(8.314×298) ≈ 235.7；K = e^235.7 ≈ 8.9×10^33。",
-      "explanation": "巨大的平衡常数表明该氧化反应几乎不可逆。"
+      "explanation": "巨大的平衡常数表明该氧化反应几乎不可逆。",
+      "referenceAnswer": "lnK = nFE°cell/RT = 6×96500×1.005/(8.314×298) ≈ 235.7；K = e^235.7 ≈ 8.9×10^33。",
+      "category": "综合研究"
     },
     {
       "id": "r2-044",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "第三步配位",
       "question": "第三步配位反应中，用什么试剂溶解Fe(OH)3沉淀？化学反应方程式是什么？",
       "answer": "用过量的H2C2O4溶解：2Fe(OH)3 + 3H2C2O4 + 3K2C2O4 → 2K3[Fe(C2O4)3] + 6H2O。草酸提供H+与OH-结合，C2O42-与Fe3+配位。",
-      "explanation": "草酸既提供酸性溶解Fe(OH)3，又提供配体与Fe3+配位。"
+      "explanation": "草酸既提供酸性溶解Fe(OH)3，又提供配体与Fe3+配位。",
+      "referenceAnswer": "用过量的H2C2O4溶解：2Fe(OH)3 + 3H2C2O4 + 3K2C2O4 → 2K3[Fe(C2O4)3] + 6H2O。草酸提供H+与OH-结合，C2O42-与Fe3+配位。",
+      "category": "综合研究"
     },
     {
       "id": "r2-045",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "第四步结晶",
       "question": "第四步结晶中为什么使用乙醇而不是蒸发浓缩来析出晶体？",
       "answer": "利用乙醇降低溶剂介电常数，根据Born方程降低离子型配合物的溶剂化稳定化能，使配合物溶解度降低而结晶析出（溶剂置换法）。",
-      "explanation": "水的介电常数(78.5)远大于乙醇(24.3)，加入乙醇后溶液介电常数下降，离子型配合物溶解度显著降低。"
+      "explanation": "水的介电常数(78.5)远大于乙醇(24.3)，加入乙醇后溶液介电常数下降，离子型配合物溶解度显著降低。",
+      "referenceAnswer": "利用乙醇降低溶剂介电常数，根据Born方程降低离子型配合物的溶剂化稳定化能，使配合物溶解度降低而结晶析出（溶剂置换法）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-046",
       "chapter": "ch3",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "Born方程",
       "question": "Born方程描述离子溶剂化自由能与溶剂____常数的关系，ΔGsolv ∝ ____。",
       "answer": "介电，−1/ε（或(1/ε−1)）",
-      "explanation": "Born方程为ΔGsolv=−(z2e2/8πε0r)(1−1/ε)，溶剂介电常数ε越小，溶剂化自由能越正（越不利），离子越难溶解。"
+      "explanation": "Born方程为ΔGsolv=−(z2e2/8πε0r)(1−1/ε)，溶剂介电常数ε越小，溶剂化自由能越正（越不利），离子越难溶解。",
+      "referenceAnswer": "介电，−1/ε（或(1/ε−1)）",
+      "category": "综合研究"
     },
     {
       "id": "r2-047",
       "chapter": "ch3",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "Ksp",
       "question": "FeC2O4·2H2O的溶度积常数Ksp约为____。",
       "answer": "3.2×10^-7",
-      "explanation": "较小的Ksp保证Fe2+在第一步中几乎完全沉淀。"
+      "explanation": "较小的Ksp保证Fe2+在第一步中几乎完全沉淀。",
+      "referenceAnswer": "3.2×10^-7",
+      "category": "综合研究"
     },
     {
       "id": "r2-048",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "过饱和度驱动力",
       "question": "在结晶步骤中，过饱和度如何成为晶体生长的驱动力？",
       "answer": "根据晶体生长理论，结晶速率正比于(c-c*)n，其中c为实际浓度、c*为饱和浓度。过饱和度(c-c*)/c*是推动溶质从溶液向晶体表面扩散并有序排列的热力学驱动力，决定了成核速率和晶体生长速率。",
-      "explanation": "适度过饱和度有利于获得高质量大晶体，过大会导致爆发成核获得细小晶体。"
+      "explanation": "适度过饱和度有利于获得高质量大晶体，过大会导致爆发成核获得细小晶体。",
+      "referenceAnswer": "根据晶体生长理论，结晶速率正比于(c-c*)n，其中c为实际浓度、c*为饱和浓度。过饱和度(c-c*)/c*是推动溶质从溶液向晶体表面扩散并有序排列的热力学驱动力，决定了成核速率和晶体生长速率。",
+      "category": "综合研究"
     },
     {
       "id": "r2-049",
       "chapter": "ch3",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "水-乙醇介电常数",
       "question": "等体积混合水和乙醇（ε=24.3）后，混合溶剂的介电常数大约是多少？（假设简单线性关系近似）",
       "answer": "ε混合 ≈ (78.5+24.3)/2 ≈ 51.4（实际约为50-55，线性关系仅为近似，真实值略低）。",
-      "explanation": "介电常数显著降低解释了产物在含水乙醇中溶解度的大幅下降。"
+      "explanation": "介电常数显著降低解释了产物在含水乙醇中溶解度的大幅下降。",
+      "referenceAnswer": "ε混合 ≈ (78.5+24.3)/2 ≈ 51.4（实际约为50-55，线性关系仅为近似，真实值略低）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-050",
       "chapter": "ch3",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "最佳策略分析",
       "question": "为什么先沉淀FeC2O4再氧化而不是先氧化Fe2+再沉淀？",
       "answer": "B",
       "explanation": "FeC2O4是固体，氧化反应在固-液界面上可控进行；若先氧化，Fe3+水溶液酸性强、易水解，不利于后续控制。",
-      "options": ["A. 为了减少H2O2用量", "B. 固体FeC2O4的氧化比溶液中Fe2+的氧化更可控", "C. 草酸根可催化氧化反应", "D. 两步操作更简便"]
+      "options": [
+        "A. 为了减少H2O2用量",
+        "B. 固体FeC2O4的氧化比溶液中Fe2+的氧化更可控",
+        "C. 草酸根可催化氧化反应",
+        "D. 两步操作更简便"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-051",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "氧化还原竞争定量分析",
       "question": "为什么Fe3+与C2O42-配位体系中配位反应最终占优势，尽管氧化还原反应在热力学上也有利？",
       "answer": "虽然E°cell=1.261V表明氧化还原热力学有利，但形成K3[Fe(C2O4)3]后，Fe(III)被C2O42-牢固螯合，大大降低了游离Fe3+浓度（[Fe3+]free≈1/Kf），使氧化还原反应的实际电动势减小。此外，配位反应在给定实验条件下（高浓度H2C2O4/K2C2O4）动力学上更有利。",
-      "explanation": "热力学与动力学的竞争结果取决于具体反应条件，先氧化后配位的策略避开了这个矛盾。"
+      "explanation": "热力学与动力学的竞争结果取决于具体反应条件，先氧化后配位的策略避开了这个矛盾。",
+      "referenceAnswer": "虽然E°cell=1.261V表明氧化还原热力学有利，但形成K3[Fe(C2O4)3]后，Fe(III)被C2O42-牢固螯合，大大降低了游离Fe3+浓度（[Fe3+]free≈1/Kf），使氧化还原反应的实际电动势减小。此外，配位反应在给定实验条件下（高浓度H2C2O4/K2C2O4）动力学上更有利。",
+      "category": "综合研究"
     },
     {
       "id": "r2-052",
       "chapter": "ch3",
       "type": "truefalse",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "反应设计",
       "question": "在三草酸合铁(III)酸钾的合成中，如果直接将FeCl3溶液与K2C2O4溶液混合，可以得到较高纯度的产品。",
       "answer": "错误",
       "explanation": "直接混合会同时发生氧化还原和配位反应，生成FeC2O4沉淀和CO2气体，产品纯度低、产率差。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-053",
       "chapter": "ch3",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "能斯特方程",
       "question": "在pH=2的溶液中，E°(Fe3+/Fe2+)=0.771V不变，E°(2CO2/H2C2O4)=−0.490V。用Nernst方程计算当[Fe2+]=0.01M、[Fe3+]=0.001M、[H2C2O4]=0.1M、pCO2=1atm时，反应的电动势Ecell。",
       "answer": "E = E°Fe + 0.05916lg([Fe3+]/[Fe2+]) − [E°C2O4 + 0.05916/2 lg(pCO2²/[H2C2O4][H+]²)] = [0.771 + 0.05916lg(0.001/0.01)] − [−0.490 + 0.02958lg(1²/(0.1×10⁻⁴))] = 0.7118 − [−0.490+0.1374] = 0.7118 − (−0.3526) ≈ 1.064V",
-      "explanation": "考虑非标准条件下的Nernst方程修正，电动势略降但仍为正值。"
+      "explanation": "考虑非标准条件下的Nernst方程修正，电动势略降但仍为正值。",
+      "referenceAnswer": "E = E°Fe + 0.05916lg([Fe3+]/[Fe2+]) − [E°C2O4 + 0.05916/2 lg(pCO2²/[H2C2O4][H+]²)] = [0.771 + 0.05916lg(0.001/0.01)] − [−0.490 + 0.02958lg(1²/(0.1×10⁻⁴))] = 0.7118 − [−0.490+0.1374] = 0.7118 − (−0.3526) ≈ 1.064V",
+      "category": "综合研究"
     },
     {
       "id": "r2-054",
       "chapter": "ch3",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "溶剂效应",
       "question": "从溶剂极性角度解释：为什么向水溶液中加入乙醇后K3[Fe(C2O4)3]的溶解度急剧下降？",
       "answer": "K3[Fe(C2O4)3]是离子型配合物，在水（高介电常数ε=78.5）中离子被有效溶剂化而溶解。加入乙醇降低混合溶剂的介电常数（ε混合≈50-55），离子溶剂化自由能增大（Born方程效应），使溶解过程更不利；同时乙醇分子的溶剂化能力远逊于水，K+和[Fe(C2O4)3]3-在富乙醇环境中难以被有效溶剂化，导致结晶析出。",
-      "explanation": "溶剂极性（介电常数）是控制离子型化合物溶解度的关键参数。"
+      "explanation": "溶剂极性（介电常数）是控制离子型化合物溶解度的关键参数。",
+      "referenceAnswer": "K3[Fe(C2O4)3]是离子型配合物，在水（高介电常数ε=78.5）中离子被有效溶剂化而溶解。加入乙醇降低混合溶剂的介电常数（ε混合≈50-55），离子溶剂化自由能增大（Born方程效应），使溶解过程更不利；同时乙醇分子的溶剂化能力远逊于水，K+和[Fe(C2O4)3]3-在富乙醇环境中难以被有效溶剂化，导致结晶析出。",
+      "category": "综合研究"
     },
     {
       "id": "r2-055",
       "chapter": "ch3",
       "type": "fill",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "合成策略总结",
       "question": "合成三草酸合铁(III)酸钾的核心策略可概括为：先____再____然后____最后____。",
       "answer": "沉淀固定Fe(II)，氧化为Fe(III)，配位溶解，置换结晶",
-      "explanation": "四步策略通过分步反应巧妙地规避了配位与氧化还原之间的竞争。"
+      "explanation": "四步策略通过分步反应巧妙地规避了配位与氧化还原之间的竞争。",
+      "referenceAnswer": "沉淀固定Fe(II)，氧化为Fe(III)，配位溶解，置换结晶",
+      "category": "综合研究"
     },
     {
       "id": "r2-056",
       "chapter": "ch4",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "试剂用量-莫尔盐",
       "question": "实验中称取莫尔盐（(NH4)2Fe(SO4)2·6H2O）的质量为____g。",
       "answer": "5.0",
-      "explanation": "5.0g莫尔盐约含0.0127mol Fe2+。"
+      "explanation": "5.0g莫尔盐约含0.0127mol Fe2+。",
+      "referenceAnswer": "5.0",
+      "category": "综合研究"
     },
     {
       "id": "r2-057",
       "chapter": "ch4",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "试剂用量-草酸",
       "question": "实验中第一步使用的H2C2O4·2H2O质量为____g，第三步追加____g。",
       "answer": "1.7，1.5",
-      "explanation": "草酸分两次使用：第一次用于沉淀FeC2O4，第二次用于溶解Fe(OH)3并配位。"
+      "explanation": "草酸分两次使用：第一次用于沉淀FeC2O4，第二次用于溶解Fe(OH)3并配位。",
+      "referenceAnswer": "1.7，1.5",
+      "category": "综合研究"
     },
     {
       "id": "r2-058",
       "chapter": "ch4",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "试剂用量-K2C2O4",
       "question": "第三步中加入的K2C2O4·H2O质量为____g。",
       "answer": "3.5",
-      "explanation": "K2C2O4提供K+和补充C2O42-配体。"
+      "explanation": "K2C2O4提供K+和补充C2O42-配体。",
+      "referenceAnswer": "3.5",
+      "category": "综合研究"
     },
     {
       "id": "r2-059",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "H2O2用量",
       "question": "实验中6% H2O2的加入量是多少？加入方式是怎样的？",
       "answer": "10mL，用滴管逐滴加入，控制滴加速率约1-2滴/秒。",
-      "explanation": "缓慢滴加可防止H2O2局部过量分解和反应过于剧烈。"
+      "explanation": "缓慢滴加可防止H2O2局部过量分解和反应过于剧烈。",
+      "referenceAnswer": "10mL，用滴管逐滴加入，控制滴加速率约1-2滴/秒。",
+      "category": "综合研究"
     },
     {
       "id": "r2-060",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "加热操作",
       "question": "第一步中将溶液加热至接近沸腾并维持4分钟的目的是什么？",
       "answer": "促进FeC2O4·2H2O沉淀完全，并使沉淀颗粒长大便于后续过滤和洗涤。",
-      "explanation": "加热有助于沉淀的陈化和晶体生长。"
+      "explanation": "加热有助于沉淀的陈化和晶体生长。",
+      "referenceAnswer": "促进FeC2O4·2H2O沉淀完全，并使沉淀颗粒长大便于后续过滤和洗涤。",
+      "category": "综合研究"
     },
     {
       "id": "r2-061",
       "chapter": "ch4",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "水浴温度",
       "question": "第二步H2O2氧化反应的水浴温度是多少？",
       "answer": "C",
       "explanation": "40℃可加快反应速率，但不会导致H2O2过快分解（H2O2在>50℃时分解明显加快）。",
-      "options": ["A. 室温（约25℃）", "B. 60℃", "C. 40℃", "D. 100℃"]
+      "options": [
+        "A. 室温（约25℃）",
+        "B. 60℃",
+        "C. 40℃",
+        "D. 100℃"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-062",
       "chapter": "ch4",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "乙醇用量",
       "question": "第四步结晶中乙醇的加入量是10mL。",
       "answer": "正确",
       "explanation": "10mL乙醇足以显著降低溶剂介电常数，促进产物结晶析出。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-063",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "倾析法",
       "question": "什么是倾析法？本实验中哪一步使用倾析法？",
       "answer": "倾析法是将沉淀静置沉降后，小心倾出上层清液而保留沉淀的分离方法。第二步氧化完成、过滤后，沉淀为Fe(OH)3等混合物，使用倾析法结合减压过滤进行洗涤分离。",
-      "explanation": "倾析法适用于沉淀量较大、颗粒较粗的情况。"
+      "explanation": "倾析法适用于沉淀量较大、颗粒较粗的情况。",
+      "referenceAnswer": "倾析法是将沉淀静置沉降后，小心倾出上层清液而保留沉淀的分离方法。第二步氧化完成、过滤后，沉淀为Fe(OH)3等混合物，使用倾析法结合减压过滤进行洗涤分离。",
+      "category": "综合研究"
     },
     {
       "id": "r2-064",
       "chapter": "ch4",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "终点判断",
       "question": "第三步反应完成的判断标准是：Fe(OH)3完全溶解，溶液变为____色。",
       "answer": "透明翠绿",
-      "explanation": "透明的翠绿色溶液表明Fe(OH)3已完全溶解并与C2O42-配位形成[Fe(C2O4)3]3-。"
+      "explanation": "透明的翠绿色溶液表明Fe(OH)3已完全溶解并与C2O42-配位形成[Fe(C2O4)3]3-。",
+      "referenceAnswer": "透明翠绿",
+      "category": "综合研究"
     },
     {
       "id": "r2-065",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "结晶条件",
       "question": "第四步结晶为什么要在暗处进行？",
       "answer": "因为[Fe(C2O4)3]3-具有光敏性，光照下会发生LMCT反应导致Fe(III)还原为Fe(II)和草酸根分解，使产品变质、颜色变深。",
-      "explanation": "避光操作是获得高质量翠绿色产品的关键步骤。"
+      "explanation": "避光操作是获得高质量翠绿色产品的关键步骤。",
+      "referenceAnswer": "因为[Fe(C2O4)3]3-具有光敏性，光照下会发生LMCT反应导致Fe(III)还原为Fe(II)和草酸根分解，使产品变质、颜色变深。",
+      "category": "综合研究"
     },
     {
       "id": "r2-066",
       "chapter": "ch4",
       "type": "calculation",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "理论产量",
       "question": "以5.0g莫尔盐（(NH4)2Fe(SO4)2·6H2O, M=392.15 g/mol）为原料，计算K3[Fe(C2O4)3]·3H2O（M=491.25 g/mol）的理论产量。",
       "answer": "n(Fe)=5.0/392.15≈0.01275 mol；理论产量=0.01275×491.25≈6.26g。",
-      "explanation": "以Fe物质的量为基准，假设全部转化。"
+      "explanation": "以Fe物质的量为基准，假设全部转化。",
+      "referenceAnswer": "n(Fe)=5.0/392.15≈0.01275 mol；理论产量=0.01275×491.25≈6.26g。",
+      "category": "综合研究"
     },
     {
       "id": "r2-067",
       "chapter": "ch4",
       "type": "calculation",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "产率计算",
       "question": "某学生称得产品干重为4.38g。理论产量为6.26g。计算产率。",
       "answer": "产率=(4.38/6.26)×100%≈70.0%。",
-      "explanation": "产率计算常用公式：产率=实际产量/理论产量×100%。"
+      "explanation": "产率计算常用公式：产率=实际产量/理论产量×100%。",
+      "referenceAnswer": "产率=(4.38/6.26)×100%≈70.0%。",
+      "category": "综合研究"
     },
     {
       "id": "r2-068",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "低产率原因",
       "question": "产率低于40%的常见原因有哪些？",
       "answer": "主要原因包括：H2O2氧化不彻底（Fe2+残留）、洗涤过程中产品溶解损失过多、结晶不完全（乙醇加量不足或温度不够低）、过滤操作中损失。",
-      "explanation": "识别这些原因有助于学生改进操作。"
+      "explanation": "识别这些原因有助于学生改进操作。",
+      "referenceAnswer": "主要原因包括：H2O2氧化不彻底（Fe2+残留）、洗涤过程中产品溶解损失过多、结晶不完全（乙醇加量不足或温度不够低）、过滤操作中损失。",
+      "category": "综合研究"
     },
     {
       "id": "r2-069",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "黄绿色产品",
       "question": "得到的产品颜色发黄绿色而不是翠绿色，最可能的原因是什么？",
       "answer": "可能是Fe2+未被完全氧化，部分FeC2O4（淡黄色）或Fe(II)化合物残留在产品中，导致颜色偏黄。",
-      "explanation": "翠绿是纯[Fe(C2O4)3]3-的颜色，黄色杂质改变产品整体色调。"
+      "explanation": "翠绿是纯[Fe(C2O4)3]3-的颜色，黄色杂质改变产品整体色调。",
+      "referenceAnswer": "可能是Fe2+未被完全氧化，部分FeC2O4（淡黄色）或Fe(II)化合物残留在产品中，导致颜色偏黄。",
+      "category": "综合研究"
     },
     {
       "id": "r2-070",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "棕色产品",
       "question": "产品呈棕色，可能的原因是什么？",
       "answer": "可能是有未溶解的Fe(OH)3（红棕色）包裹在产品中，或产品在光照下发生了光化学分解生成FeC2O4和Fe(OH)3等有色杂质。",
-      "explanation": "Fe(OH)3的红棕色是产品颜色异常的重要诊断线索。"
+      "explanation": "Fe(OH)3的红棕色是产品颜色异常的重要诊断线索。",
+      "referenceAnswer": "可能是有未溶解的Fe(OH)3（红棕色）包裹在产品中，或产品在光照下发生了光化学分解生成FeC2O4和Fe(OH)3等有色杂质。",
+      "category": "综合研究"
     },
     {
       "id": "r2-071",
       "chapter": "ch4",
       "type": "fill",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "晶体过细",
       "question": "结晶时若产品呈细粉状而不是颗粒状晶体，可能原因是____或____。",
       "answer": "乙醇加入速度过快，溶液初始浓度过高（蒸发过度）",
-      "explanation": "乙醇加入太快导致局部过饱和度极高，引发爆发成核。"
+      "explanation": "乙醇加入太快导致局部过饱和度极高，引发爆发成核。",
+      "referenceAnswer": "乙醇加入速度过快，溶液初始浓度过高（蒸发过度）",
+      "category": "综合研究"
     },
     {
       "id": "r2-072",
       "chapter": "ch4",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "操作优化",
       "question": "为提高产品结晶质量，加入乙醇的最佳方式是？",
       "answer": "B",
       "explanation": "缓慢加入并搅拌可避免局部过浓，促进均匀成核和有序生长。",
-      "options": ["A. 一次性快速倒入", "B. 沿杯壁缓慢加入并不断搅拌", "C. 加热沸腾后加入", "D. 冷至0℃后瞬间加入"]
+      "options": [
+        "A. 一次性快速倒入",
+        "B. 沿杯壁缓慢加入并不断搅拌",
+        "C. 加热沸腾后加入",
+        "D. 冷至0℃后瞬间加入"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-073",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "综合操作诊断",
       "question": "某学生在过滤洗涤产品时发现产品颜色从翠绿逐渐变为黄色。请分析可能的原因及预防措施。",
       "answer": "原因：产品在过滤过程中长时间暴露于光照下，发生光化学分解（LMCT反应）。预防措施：在暗处或弱光下进行过滤操作，缩短操作时间，使用不透明容器。",
-      "explanation": "[Fe(C2O4)3]3-的光敏性是操作中必须持续关注的因素。"
+      "explanation": "[Fe(C2O4)3]3-的光敏性是操作中必须持续关注的因素。",
+      "referenceAnswer": "原因：产品在过滤过程中长时间暴露于光照下，发生光化学分解（LMCT反应）。预防措施：在暗处或弱光下进行过滤操作，缩短操作时间，使用不透明容器。",
+      "category": "综合研究"
     },
     {
       "id": "r2-074",
       "chapter": "ch4",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "最优产量",
       "question": "若最高产率可达92%，理论产量6.26g，则最高实际产量为多少？若产品含水量因干燥不足比理论值高5%（即每g产品多0.05g水），称得质量仍为5.76g，实际纯产品质量是多少？",
       "answer": "最高实际产量=6.26×0.92=5.76g。若含水偏高5%，则5.76g中实际纯产品质量=5.76/1.05≈5.49g。",
-      "explanation": "含水量直接影响产率的真实计算，干燥必须充分。"
+      "explanation": "含水量直接影响产率的真实计算，干燥必须充分。",
+      "referenceAnswer": "最高实际产量=6.26×0.92=5.76g。若含水偏高5%，则5.76g中实际纯产品质量=5.76/1.05≈5.49g。",
+      "category": "综合研究"
     },
     {
       "id": "r2-075",
       "chapter": "ch5",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "内外界鉴定-K+",
       "question": "鉴定K+在外界使用的试剂是____，产生____色沉淀。",
       "answer": "NaHC4H4O6（酒石酸氢钠），白",
-      "explanation": "K+与HC4H4O6-生成白色的酒石酸氢钾沉淀KHC4H4O6。"
+      "explanation": "K+与HC4H4O6-生成白色的酒石酸氢钾沉淀KHC4H4O6。",
+      "referenceAnswer": "NaHC4H4O6（酒石酸氢钠），白",
+      "category": "综合研究"
     },
     {
       "id": "r2-076",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "内外界鉴定-Fe3+",
       "question": "如何证明Fe3+在内界（配离子内部）？",
       "answer": "向配合物溶液中滴加KSCN溶液，溶液不呈血红色，说明游离Fe3+浓度极低（<10^-5M），即Fe3+被C2O42-牢固配位在内界中。",
-      "explanation": "配合物[Fe(C2O4)3]3-的稳定性极高（Kf≈10^20），几乎不解离出游离Fe3+。"
+      "explanation": "配合物[Fe(C2O4)3]3-的稳定性极高（Kf≈10^20），几乎不解离出游离Fe3+。",
+      "referenceAnswer": "向配合物溶液中滴加KSCN溶液，溶液不呈血红色，说明游离Fe3+浓度极低（<10^-5M），即Fe3+被C2O42-牢固配位在内界中。",
+      "category": "综合研究"
     },
     {
       "id": "r2-077",
       "chapter": "ch5",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "C2O42-位置分析",
       "question": "分析C2O42-在配合物中位置的实验使用____试剂，反应生成____沉淀。",
       "answer": "CaCl2，CaC2O4",
-      "explanation": "Ca2+与C2O42-生成白色CaC2O4沉淀（Ksp=2.32×10^-9）。"
+      "explanation": "Ca2+与C2O42-生成白色CaC2O4沉淀（Ksp=2.32×10^-9）。",
+      "referenceAnswer": "CaCl2，CaC2O4",
+      "category": "综合研究"
     },
     {
       "id": "r2-078",
       "chapter": "ch5",
       "type": "truefalse",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "CaC2O4沉淀",
       "question": "向[Fe(C2O4)3]3-溶液中加入CaCl2溶液不会立即产生CaC2O4沉淀。",
       "answer": "正确",
       "explanation": "C2O42-被Fe3+配位固定在配离子内界，游离C2O42-浓度极低，不足以与Ca2+生成沉淀。但若同时加入酸破坏配离子，则可产生沉淀。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-079",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "配合物稳定性-酸度",
       "question": "为什么加酸可以使[Fe(C2O4)3]3-发生配体解离？",
       "answer": "H+与C2O42-结合生成HC2O4-和H2C2O4，降低了游离C2O42-浓度，使配位平衡向左移动：[Fe(C2O4)3]3- + 6H+ ⇌ Fe3+ + 3H2C2O4。",
-      "explanation": "酸效应是影响配合物稳定性的重要因素。"
+      "explanation": "酸效应是影响配合物稳定性的重要因素。",
+      "referenceAnswer": "H+与C2O42-结合生成HC2O4-和H2C2O4，降低了游离C2O42-浓度，使配位平衡向左移动：[Fe(C2O4)3]3- + 6H+ ⇌ Fe3+ + 3H2C2O4。",
+      "category": "综合研究"
     },
     {
       "id": "r2-080",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "配体竞争",
       "question": "有哪些因素可以破坏[Fe(C2O4)3]3-的稳定性？",
       "answer": "主要因素包括：酸性条件（H+结合C2O42-）、沉淀剂（如Ca2+生成CaC2O4）、更强配体的竞争（如CN-、F-）、稀释（降低配合物浓度使解离度增大）和温度升高。",
-      "explanation": "这五个因素从化学平衡的两个方向影响配合物稳定性。"
+      "explanation": "这五个因素从化学平衡的两个方向影响配合物稳定性。",
+      "referenceAnswer": "主要因素包括：酸性条件（H+结合C2O42-）、沉淀剂（如Ca2+生成CaC2O4）、更强配体的竞争（如CN-、F-）、稀释（降低配合物浓度使解离度增大）和温度升高。",
+      "category": "综合研究"
     },
     {
       "id": "r2-081",
       "chapter": "ch5",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "稳定性比较",
       "question": "下列配体与Fe3+形成的配合物稳定性由弱到强排列正确的是？",
       "answer": "B",
       "explanation": "lgKf: SCN-(~2) < F-(~16) < C2O42-(~20.2) < CN-(~31)。",
-      "options": ["A. CN- < C2O42- < F- < SCN-", "B. SCN- < F- < C2O42- < CN-", "C. F- < SCN- < C2O42- < CN-", "D. C2O42- < SCN- < F- < CN-"]
+      "options": [
+        "A. CN- < C2O42- < F- < SCN-",
+        "B. SCN- < F- < C2O42- < CN-",
+        "C. F- < SCN- < C2O42- < CN-",
+        "D. C2O42- < SCN- < F- < CN-"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-082",
       "chapter": "ch5",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "酸效应",
       "question": "草酸的pKa1=____，pKa2=____。",
       "answer": "1.25，4.27",
-      "explanation": "草酸是二元中强酸，两个质子依次解离。"
+      "explanation": "草酸是二元中强酸，两个质子依次解离。",
+      "referenceAnswer": "1.25，4.27",
+      "category": "综合研究"
     },
     {
       "id": "r2-083",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "分布系数",
       "question": "什么是分布系数α？在pH=3.0时，草酸盐主要以什么形态存在？",
       "answer": "分布系数α表示某形态的浓度占总浓度的分数。pH=3.0时，草酸盐的主要形态为HC2O4-（pKa1=1.25 < 3.0 < pKa2=4.27）。",
-      "explanation": "αC2O42- = Ka1Ka2/([H+]2+[H+]Ka1+Ka1Ka2)。"
+      "explanation": "αC2O42- = Ka1Ka2/([H+]2+[H+]Ka1+Ka1Ka2)。",
+      "referenceAnswer": "分布系数α表示某形态的浓度占总浓度的分数。pH=3.0时，草酸盐的主要形态为HC2O4-（pKa1=1.25 < 3.0 < pKa2=4.27）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-084",
       "chapter": "ch5",
       "type": "calculation",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "Ksp判断",
       "question": "已知[Ca2+]=0.010 mol/L，[C2O42-]=1.0×10^-4 mol/L，Ksp(CaC2O4)=2.32×10^-9。判断是否有CaC2O4沉淀生成。",
       "answer": "IP = [Ca2+][C2O42-] = 0.010×1.0×10^-4 = 1.0×10^-6 > Ksp = 2.32×10^-9，有沉淀生成。",
-      "explanation": "离子积IP>Ksp即有过饱和度，沉淀可生成。"
+      "explanation": "离子积IP>Ksp即有过饱和度，沉淀可生成。",
+      "referenceAnswer": "IP = [Ca2+][C2O42-] = 0.010×1.0×10^-4 = 1.0×10^-6 > Ksp = 2.32×10^-9，有沉淀生成。",
+      "category": "综合研究"
     },
     {
       "id": "r2-085",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "多因素影响",
       "question": "向[Fe(C2O4)3]3-溶液中同时加入HNO3和Ca(NO3)2，会产生什么现象？为什么？",
       "answer": "溶液中游离出的Fe3+使溶液呈淡黄色，同时生成白色CaC2O4沉淀。H+破坏配离子释放出C2O42-和Fe3+，Ca2+随即与C2O42-反应生成CaC2O4沉淀。",
-      "explanation": "酸效应和沉淀效应协同破坏配合物。"
+      "explanation": "酸效应和沉淀效应协同破坏配合物。",
+      "referenceAnswer": "溶液中游离出的Fe3+使溶液呈淡黄色，同时生成白色CaC2O4沉淀。H+破坏配离子释放出C2O42-和Fe3+，Ca2+随即与C2O42-反应生成CaC2O4沉淀。",
+      "category": "综合研究"
     },
     {
       "id": "r2-086",
       "chapter": "ch5",
       "type": "truefalse",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "稀释效应",
       "question": "稀释会使[Fe(C2O4)3]3-的解离度增大。",
       "answer": "正确",
       "explanation": "稀释使配位平衡[Fe(C2O4)3]3- ⇌ Fe3+ + 3C2O42-向粒子数增多的方向（解离方向）移动。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-087",
       "chapter": "ch5",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "分布系数计算",
       "question": "在pH=4.27（pKa2）时，草酸盐C2O42-的分布系数α0是多少？",
       "answer": "pH=pKa2时，α(C2O42-)=α(HC2O4-)=0.50，即50%。",
-      "explanation": "在pH等于pKa2时，HC2O4-和C2O42-的浓度相等，各占总量的50%。"
+      "explanation": "在pH等于pKa2时，HC2O4-和C2O42-的浓度相等，各占总量的50%。",
+      "referenceAnswer": "pH=pKa2时，α(C2O42-)=α(HC2O4-)=0.50，即50%。",
+      "category": "综合研究"
     },
     {
       "id": "r2-088",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "配体置换",
       "question": "若向[Fe(C2O4)3]3-溶液中加入足量NaF，会发生什么反应？请写出反应方程式。",
       "answer": "F-置换了C2O42-：[Fe(C2O4)3]3- + 6F- → [FeF6]3- + 3C2O42-。在一般条件下F-不能完全置换C2O42-（β3约10^20远大于FeF6的稳定性），但若加入酸同时加F-则可以。",
-      "explanation": "质量作用原理和酸效应共同驱动配体置换。"
+      "explanation": "质量作用原理和酸效应共同驱动配体置换。",
+      "referenceAnswer": "F-置换了C2O42-：[Fe(C2O4)3]3- + 6F- → [FeF6]3- + 3C2O42-。在一般条件下F-不能完全置换C2O42-（β3约10^20远大于FeF6的稳定性），但若加入酸同时加F-则可以。",
+      "category": "综合研究"
     },
     {
       "id": "r2-089",
       "chapter": "ch5",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "CN-配位",
       "question": "向[Fe(C2O4)3]3-溶液中加入足量KCN（碱性条件），Fe3+最终转化为？",
       "answer": "D",
       "explanation": "CN-的配位能力远强于C2O42-(lgKf约31 vs 20.2)，且CN-浓度高时可完全置换。",
-      "options": ["A. Fe(CN)2沉淀", "B. [Fe(C2O4)3]3-不变", "C. Fe(OH)3沉淀", "D. [Fe(CN)6]3-"]
+      "options": [
+        "A. Fe(CN)2沉淀",
+        "B. [Fe(C2O4)3]3-不变",
+        "C. Fe(OH)3沉淀",
+        "D. [Fe(CN)6]3-"
+      ],
+      "referenceAnswer": "D",
+      "category": "综合研究"
     },
     {
       "id": "r2-090",
       "chapter": "ch5",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "竞争平衡计算",
       "question": "已知[Fe(C2O4)3]3-的β3=1.6×10^20，[Fe(SCN)]2+的Kf=2.0×10^2。向0.001mol/L的K3[Fe(C2O4)3]溶液中加入SCN-使[SCN-]=0.1mol/L，计算游离Fe3+浓度和[Fe(SCN)]2+的浓度。",
       "answer": "设[Fe3+]free=x。由β3：x·[C2O42-]3/[配合物] = 1/β3≈6.25×10^-21。设[配合物]≈0.001，[C2O42-]≈3×0.001=0.003，则x≈(6.25×10^-21×0.001)/(0.003)^3≈2.3×10^-16M。[Fe(SCN)]2+=2×10^2×2.3×10^-16×0.1≈4.6×10^-15M，颜色变化不可察觉。",
-      "explanation": "极低的游离Fe3+浓度无法被SCN-检出，从而验证了KSCN检验的阴性结果。"
+      "explanation": "极低的游离Fe3+浓度无法被SCN-检出，从而验证了KSCN检验的阴性结果。",
+      "referenceAnswer": "设[Fe3+]free=x。由β3：x·[C2O42-]3/[配合物] = 1/β3≈6.25×10^-21。设[配合物]≈0.001，[C2O42-]≈3×0.001=0.003，则x≈(6.25×10^-21×0.001)/(0.003)^3≈2.3×10^-16M。[Fe(SCN)]2+=2×10^2×2.3×10^-16×0.1≈4.6×10^-15M，颜色变化不可察觉。",
+      "category": "综合研究"
     },
     {
       "id": "r2-091",
       "chapter": "ch5",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "内外界综合判断",
       "question": "设计一个简单的实验方案，证明K3[Fe(C2O4)3]中K+在外界而Fe3+在内界。",
       "answer": "（1）取少量产物溶于水，加入NaHC4H4O6溶液，生成白色沉淀证明K+在外界；（2）取少量产物溶于水，加入KSCN溶液，无血红色出现，证明Fe3+在内界；（3）再加入HCl酸化后再加KSCN，出现血红色，进一步证明Fe3+原本在内界被C2O42-保护。",
-      "explanation": "三个步骤从正反两方面验证了内外界的分配。"
+      "explanation": "三个步骤从正反两方面验证了内外界的分配。",
+      "referenceAnswer": "（1）取少量产物溶于水，加入NaHC4H4O6溶液，生成白色沉淀证明K+在外界；（2）取少量产物溶于水，加入KSCN溶液，无血红色出现，证明Fe3+在内界；（3）再加入HCl酸化后再加KSCN，出现血红色，进一步证明Fe3+原本在内界被C2O42-保护。",
+      "category": "综合研究"
     },
     {
       "id": "r2-092",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "LMCT",
       "question": "LMCT的全称是什么？是什么意思？",
       "answer": "配体到金属的电荷转移（Ligand to Metal Charge Transfer）。电子从配体的占据轨道在光激发下跃迁到金属的空d轨道或部分填充的d轨道。",
-      "explanation": "LMCT是[Fe(C2O4)3]3-光化学活性的根源。"
+      "explanation": "LMCT是[Fe(C2O4)3]3-光化学活性的根源。",
+      "referenceAnswer": "配体到金属的电荷转移（Ligand to Metal Charge Transfer）。电子从配体的占据轨道在光激发下跃迁到金属的空d轨道或部分填充的d轨道。",
+      "category": "综合研究"
     },
     {
       "id": "r2-093",
       "chapter": "ch6",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "光化学方程式",
       "question": "[Fe(C2O4)3]3-的光化学反应方程式为：2[Fe(C2O4)3]3- + hν → ____ + ____ + 2CO2。",
       "answer": "2FeC2O4，3C2O42-",
-      "explanation": "Fe(III)被光还原为Fe(II)，部分草酸根被氧化为CO2。"
+      "explanation": "Fe(III)被光还原为Fe(II)，部分草酸根被氧化为CO2。",
+      "referenceAnswer": "2FeC2O4，3C2O42-",
+      "category": "综合研究"
     },
     {
       "id": "r2-094",
       "chapter": "ch6",
       "type": "single",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "光敏性应用",
       "question": "[Fe(C2O4)3]3-的光敏性可用于以下哪种技术中？",
       "answer": "B",
       "explanation": "氰版照相法利用铁(III)草酸配合物光照还原生成Fe2+，再与[Fe(CN)6]3-反应得到普鲁士蓝图像。",
-      "options": ["A. 银盐摄影", "B. 氰版照相法（蓝图）", "C. 彩色胶片", "D. 数码成像"]
+      "options": [
+        "A. 银盐摄影",
+        "B. 氰版照相法（蓝图）",
+        "C. 彩色胶片",
+        "D. 数码成像"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-095",
       "chapter": "ch6",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "量子产率",
       "question": "[Fe(C2O4)3]3-在254nm紫外光照射下的量子产率Φ约为____。",
       "answer": "0.8-1.0",
-      "explanation": "高量子产率表明每个吸收的光子几乎都能引发化学反应，是有效的光化学反应。"
+      "explanation": "高量子产率表明每个吸收的光子几乎都能引发化学反应，是有效的光化学反应。",
+      "referenceAnswer": "0.8-1.0",
+      "category": "综合研究"
     },
     {
       "id": "r2-096",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "光化学四步",
       "question": "请简述[Fe(C2O4)3]3-光化学分解的四个步骤。",
       "answer": "(1) 光激发：C2O42-配体的电子吸收UV光跃迁至激发态；(2) 电荷转移：电子从配体转移至Fe(III)的d轨道，形成Fe(II)和C2O4·-自由基；(3) 自由基分解：C2O4·-分解释放CO2；(4) 产物形成：Fe(II)与剩余的C2O42-结合为FeC2O4。",
-      "explanation": "该四步机理清晰展示了LMCT引发光化学反应的全过程。"
+      "explanation": "该四步机理清晰展示了LMCT引发光化学反应的全过程。",
+      "referenceAnswer": "(1) 光激发：C2O42-配体的电子吸收UV光跃迁至激发态；(2) 电荷转移：电子从配体转移至Fe(III)的d轨道，形成Fe(II)和C2O4·-自由基；(3) 自由基分解：C2O4·-分解释放CO2；(4) 产物形成：Fe(II)与剩余的C2O42-结合为FeC2O4。",
+      "category": "综合研究"
     },
     {
       "id": "r2-097",
       "chapter": "ch6",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "氰版照相",
       "question": "氰版照相法（蓝图）是由Anna Atkins于1842年发明的。",
       "answer": "错误",
       "explanation": "氰版照相法是由John Herschel于1842年发明的；Anna Atkins在1843年将其应用于植物标本摄影，出版了世界上第一本摄影书。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-098",
       "chapter": "ch6",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "普鲁士蓝生成",
       "question": "光化学反应生成的Fe2+与K3[Fe(CN)6]反应生成普鲁士蓝的化学方程式为：3Fe2+ + 2[Fe(CN)6]3- → ____。",
       "answer": "Fe3[Fe(CN)6]2",
-      "explanation": "该反应在氰版照相法中被用于将光还原产生的Fe2+转化为蓝色沉淀图案。"
+      "explanation": "该反应在氰版照相法中被用于将光还原产生的Fe2+转化为蓝色沉淀图案。",
+      "referenceAnswer": "Fe3[Fe(CN)6]2",
+      "category": "综合研究"
     },
     {
       "id": "r2-099",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "LMCT vs d-d",
       "question": "LMCT跃迁和d-d跃迁在光谱强度和能量上有何区别？",
       "answer": "LMCT跃迁是允许跃迁（Laporte允许），摩尔吸光系数大（ε≈10^3-10^4），能量通常在UV区；d-d跃迁是Laporte禁阻跃迁，ε小（10^-1-10^2），在可见光范围内。",
-      "explanation": "这解释了[Fe(C2O4)3]3-在UV区有强吸收（LMCT），在可见光区颜色来自弱的d-d吸收。"
+      "explanation": "这解释了[Fe(C2O4)3]3-在UV区有强吸收（LMCT），在可见光区颜色来自弱的d-d吸收。",
+      "referenceAnswer": "LMCT跃迁是允许跃迁（Laporte允许），摩尔吸光系数大（ε≈10^3-10^4），能量通常在UV区；d-d跃迁是Laporte禁阻跃迁，ε小（10^-1-10^2），在可见光范围内。",
+      "category": "综合研究"
     },
     {
       "id": "r2-100",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "IVCT",
       "question": "普鲁士蓝的深蓝色来源于什么跃迁？简要解释IVCT。",
       "answer": "来源于间隔电荷转移（IVCT，Intervalence Charge Transfer）：电子在Fe(II)和Fe(III)之间通过氰根桥联转移，吸收可见光（约680nm橙色光），使得化合物呈现深蓝色。",
-      "explanation": "IVCT是混合价态化合物呈色的重要机制。"
+      "explanation": "IVCT是混合价态化合物呈色的重要机制。",
+      "referenceAnswer": "来源于间隔电荷转移（IVCT，Intervalence Charge Transfer）：电子在Fe(II)和Fe(III)之间通过氰根桥联转移，吸收可见光（约680nm橙色光），使得化合物呈现深蓝色。",
+      "category": "综合研究"
     },
     {
       "id": "r2-101",
       "chapter": "ch6",
       "type": "single",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "光催化应用",
       "question": "[Fe(C2O4)3]3-的光化学性质可用于哪种环境技术？",
       "answer": "C",
       "explanation": "Fe(III)-草酸配合物在UV光照下可产生强氧化性自由基（·OH等），用于光催化降解有机污染物。",
-      "options": ["A. 海水淡化", "B. 烟气脱硫", "C. 光-Fenton降解有机污染物", "D. 固氮反应"]
+      "options": [
+        "A. 海水淡化",
+        "B. 烟气脱硫",
+        "C. 光-Fenton降解有机污染物",
+        "D. 固氮反应"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-102",
       "chapter": "ch6",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "量子产率计算",
       "question": "用254nm紫外光（能量=4.88eV/光子）照射[Fe(C2O4)3]3-溶液。若每分钟吸收1.0×10^18个光子，产生5.0×10^17个Fe2+，求量子产率Φ。",
       "answer": "Φ = 产物分子数/吸收光子数 = 5.0×10^17/1.0×10^18 = 0.50（即50%）。",
-      "explanation": "量子产率表示每吸收一个光子产生的产物分子数。"
+      "explanation": "量子产率表示每吸收一个光子产生的产物分子数。",
+      "referenceAnswer": "Φ = 产物分子数/吸收光子数 = 5.0×10^17/1.0×10^18 = 0.50（即50%）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-103",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "光降解动力学",
       "question": "[Fe(C2O4)3]3-在紫外光照射下的光降解速率遵循什么动力学规律？受哪些因素影响？",
       "answer": "通常遵循准一级动力学（当光强恒定时）：ln(c0/c)=kobst。受光强、波长、温度、溶解氧浓度和溶液pH影响。",
-      "explanation": "光化学反应的速率常数与光强成正比。"
+      "explanation": "光化学反应的速率常数与光强成正比。",
+      "referenceAnswer": "通常遵循准一级动力学（当光强恒定时）：ln(c0/c)=kobst。受光强、波长、温度、溶解氧浓度和溶液pH影响。",
+      "category": "综合研究"
     },
     {
       "id": "r2-104",
       "chapter": "ch6",
       "type": "truefalse",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "可见光与UV",
       "question": "[Fe(C2O4)3]3-在可见光照射下也具有一定的光化学活性，但活性远低于紫外光照射。",
       "answer": "正确",
       "explanation": "LMCT的主要吸收带在UV区（~254nm），可见光虽然能量较低，但长时间照射仍可引发反应（累积效应）。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-105",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "光-Fenton机理",
       "question": "在光-Fenton反应中，[Fe(C2O4)3]3-的光解如何产生·OH自由基？请写出关键反应步骤。",
       "answer": "（1）[Fe(C2O4)3]3- + hν → Fe2+ + 2C2O42- + C2O4·-；（2）C2O4·- + O2 → 2CO2 + O2·-；（3）O2·- + H+ → HO2·；（4）Fe2+ + H2O2 → Fe3+ + OH- + ·OH（Fenton反应）。产生的·OH可高效氧化降解有机物。",
-      "explanation": "草酸铁配合物提供了一条高效的Fe(III)→Fe(II)光还原途径，是光-Fenton体系的关键。"
+      "explanation": "草酸铁配合物提供了一条高效的Fe(III)→Fe(II)光还原途径，是光-Fenton体系的关键。",
+      "referenceAnswer": "（1）[Fe(C2O4)3]3- + hν → Fe2+ + 2C2O42- + C2O4·-；（2）C2O4·- + O2 → 2CO2 + O2·-；（3）O2·- + H+ → HO2·；（4）Fe2+ + H2O2 → Fe3+ + OH- + ·OH（Fenton反应）。产生的·OH可高效氧化降解有机物。",
+      "category": "综合研究"
     },
     {
       "id": "r2-106",
       "chapter": "ch6",
       "type": "fill",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "赫歇尔与阿特金斯",
       "question": "氰版照相法由____在1842年发明，____在1843年用其出版了世界上第一本摄影书。",
       "answer": "约翰·赫歇尔（John Herschel），安娜·阿特金斯（Anna Atkins）",
-      "explanation": "氰版照相法是历史上最早的非银盐摄影工艺之一。"
+      "explanation": "氰版照相法是历史上最早的非银盐摄影工艺之一。",
+      "referenceAnswer": "约翰·赫歇尔（John Herschel），安娜·阿特金斯（Anna Atkins）",
+      "category": "综合研究"
     },
     {
       "id": "r2-107",
       "chapter": "ch6",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "应用前景",
       "question": "基于[Fe(C2O4)3]3-的光化学性质，展望其在绿色化学领域的潜在应用。",
       "answer": "可应用于太阳能驱动的环境光催化（利用太阳光中的UV部分降解水体有机污染物）、光化学合成（利用光化学途径合成特定化合物）、光致变色和光响应材料等领域。绿色化学价值在于利用可再生光能替代化学试剂。",
-      "explanation": "光化学反应属于绿色化学的重要分支——减少化学试剂用量和副产物。"
+      "explanation": "光化学反应属于绿色化学的重要分支——减少化学试剂用量和副产物。",
+      "referenceAnswer": "可应用于太阳能驱动的环境光催化（利用太阳光中的UV部分降解水体有机污染物）、光化学合成（利用光化学途径合成特定化合物）、光致变色和光响应材料等领域。绿色化学价值在于利用可再生光能替代化学试剂。",
+      "category": "综合研究"
     },
     {
       "id": "r2-108",
       "chapter": "ch7",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "CFT提出者",
       "question": "晶体场理论最初由____于1929年提出，后由____等人发展和完善。",
       "answer": "贝特（Bethe），范弗莱克（van Vleck）",
-      "explanation": "van Vleck因磁性和无序体系电子结构的理论工作获得了1977年诺贝尔物理学奖。"
+      "explanation": "van Vleck因磁性和无序体系电子结构的理论工作获得了1977年诺贝尔物理学奖。",
+      "referenceAnswer": "贝特（Bethe），范弗莱克（van Vleck）",
+      "category": "综合研究"
     },
     {
       "id": "r2-109",
       "chapter": "ch7",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "d轨道分裂",
       "question": "在八面体晶体场中，五个d轨道分裂为____能量的____轨道（三个）和____能量的____轨道（两个）。",
       "answer": "低，t2g（dxy, dxz, dyz），高，eg（dz2, dx2-y2）",
-      "explanation": "t2g轨道指向配体之间，能量低；eg轨道指向配体，受配体电子排斥强，能量高。"
+      "explanation": "t2g轨道指向配体之间，能量低；eg轨道指向配体，受配体电子排斥强，能量高。",
+      "referenceAnswer": "低，t2g（dxy, dxz, dyz），高，eg（dz2, dx2-y2）",
+      "category": "综合研究"
     },
     {
       "id": "r2-110",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "分裂能Δo",
       "question": "什么是八面体晶体场分裂能Δo？",
       "answer": "Δo是八面体场中eg轨道与t2g轨道之间的能量差，代表晶体场分裂的程度。t2g位于-0.4Δo，eg位于+0.6Δo。",
-      "explanation": "Δo的大小决定了配合物的自旋状态和光谱性质。"
+      "explanation": "Δo的大小决定了配合物的自旋状态和光谱性质。",
+      "referenceAnswer": "Δo是八面体场中eg轨道与t2g轨道之间的能量差，代表晶体场分裂的程度。t2g位于-0.4Δo，eg位于+0.6Δo。",
+      "category": "综合研究"
     },
     {
       "id": "r2-111",
       "chapter": "ch7",
       "type": "single",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "光谱化学序列",
       "question": "在光谱化学序列中，C2O42-属于哪类配体？",
       "answer": "B",
       "explanation": "光谱化学序列：I- < Br- < ... < C2O42- < H2O < NH3 < ... < CN- < CO。C2O42-是中等偏弱场配体。",
-      "options": ["A. 强场配体", "B. 弱场配体", "C. 最强场配体", "D. 无场效应"]
+      "options": [
+        "A. 强场配体",
+        "B. 弱场配体",
+        "C. 最强场配体",
+        "D. 无场效应"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-112",
       "chapter": "ch7",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "CFSE-d5",
       "question": "高自旋d5电子构型（t2g3eg2）的晶体场稳定化能CFSE = ____。",
       "answer": "0",
-      "explanation": "CFSE=(3×(-0.4)+2×0.6)Δo=(−1.2+1.2)Δo=0。半满d壳层在弱场中无净稳定化能。"
+      "explanation": "CFSE=(3×(-0.4)+2×0.6)Δo=(−1.2+1.2)Δo=0。半满d壳层在弱场中无净稳定化能。",
+      "referenceAnswer": "0",
+      "category": "综合研究"
     },
     {
       "id": "r2-113",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "高自旋vs低自旋",
       "question": "决定八面体配合物是高自旋还是低自旋的关键因素是什么？",
       "answer": "关键是比较分裂能Δo与电子成对能P的大小。当Δo < P时配合物为高自旋（电子优先占据不同轨道、平行自旋）；当Δo > P时为低自旋（电子优先成对在低能轨道）。",
-      "explanation": "[Fe(C2O4)3]3-中Δo较小（弱场配体），Δo < P，所以是高自旋。"
+      "explanation": "[Fe(C2O4)3]3-中Δo较小（弱场配体），Δo < P，所以是高自旋。",
+      "referenceAnswer": "关键是比较分裂能Δo与电子成对能P的大小。当Δo < P时配合物为高自旋（电子优先占据不同轨道、平行自旋）；当Δo > P时为低自旋（电子优先成对在低能轨道）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-114",
       "chapter": "ch7",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "配体场强",
       "question": "C2O42-的配位场强度比H2O弱。",
       "answer": "正确",
       "explanation": "光谱化学序列中C2O42-排在H2O之前，即C2O42-的场分裂能略小于H2O（或相当）。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-115",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "颜色解释",
       "question": "用晶体场理论解释[Fe(C2O4)3]3-为什么呈现翠绿色。",
       "answer": "配合物吸收可见光中600-700nm的橙色-红色光，用于激发d电子从t2g轨道跃迁到eg轨道（d-d跃迁）。未被吸收的红橙光的互补色——蓝绿色——被反射/透射，肉眼观察到翠绿色。",
-      "explanation": "吸收光的颜色与观察到的颜色是互补关系。"
+      "explanation": "吸收光的颜色与观察到的颜色是互补关系。",
+      "referenceAnswer": "配合物吸收可见光中600-700nm的橙色-红色光，用于激发d电子从t2g轨道跃迁到eg轨道（d-d跃迁）。未被吸收的红橙光的互补色——蓝绿色——被反射/透射，肉眼观察到翠绿色。",
+      "category": "综合研究"
     },
     {
       "id": "r2-116",
       "chapter": "ch7",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "d-d跃迁选择性",
       "question": "d-d跃迁在光谱学上是____禁阻的（对称性），但在振动耦合下可部分允许；在自旋选律上是____的（对高自旋d5体系来说）。",
       "answer": "Laporte（或宇称），允许",
-      "explanation": "高自旋d5中所有电子自旋平行（S=5/2），d-d跃迁不改变自旋多重度，自旋允许。但Laporte选律（g→g）禁阻，所以吸收强度弱。"
+      "explanation": "高自旋d5中所有电子自旋平行（S=5/2），d-d跃迁不改变自旋多重度，自旋允许。但Laporte选律（g→g）禁阻，所以吸收强度弱。",
+      "referenceAnswer": "Laporte（或宇称），允许",
+      "category": "综合研究"
     },
     {
       "id": "r2-117",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "磁矩公式",
       "question": "写出纯自旋磁矩的计算公式。一个d6高自旋八面体配合物的理论磁矩是多少？",
       "answer": "μ = √[n(n+2)] B.M.。d6高自旋（t2g4eg2）有4个未成对电子，μ = √[4×6] = √24 ≈ 4.90 B.M。",
-      "explanation": "未成对电子数n可从d电子数和高/低自旋状态判断。"
+      "explanation": "未成对电子数n可从d电子数和高/低自旋状态判断。",
+      "referenceAnswer": "μ = √[n(n+2)] B.M.。d6高自旋（t2g4eg2）有4个未成对电子，μ = √[4×6] = √24 ≈ 4.90 B.M。",
+      "category": "综合研究"
     },
     {
       "id": "r2-118",
       "chapter": "ch7",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "CFSE计算",
       "question": "计算八面体场中d6低自旋（t2g6eg0）构型的CFSE（以Δo为单位）。若Δo=250 kJ/mol，CFSE的绝对值是多少？",
       "answer": "CFSE = 6×(−0.4Δo) + 2P = −2.4Δo + 2P。若不计P，CFSE≈−2.4×250=−600 kJ/mol。",
-      "explanation": "低自旋d6的CFSE是所有构型中最大的之一（与d3相同），这是Co(III)配合物异常稳定的原因。"
+      "explanation": "低自旋d6的CFSE是所有构型中最大的之一（与d3相同），这是Co(III)配合物异常稳定的原因。",
+      "referenceAnswer": "CFSE = 6×(−0.4Δo) + 2P = −2.4Δo + 2P。若不计P，CFSE≈−2.4×250=−600 kJ/mol。",
+      "category": "综合研究"
     },
     {
       "id": "r2-119",
       "chapter": "ch7",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "CFT应用",
       "question": "以下配合物中，哪个的CFSE绝对值最大（不计成对能）？",
       "answer": "C",
       "explanation": "d3(t2g3)：-1.2Δo；d5高自旋：0；d8(t2g6eg2)：-1.2Δo。选项中d3和d8的|CFSE|均为1.2Δo，大d于5高自旋的0。",
-      "options": ["A. [Fe(C2O4)3]3- (d5高自旋)", "B. [Fe(H2O)6]3+ (d5高自旋)", "C. [Cr(C2O4)3]3- (d3)", "D. [Ni(H2O)6]2+ (d8)"]
+      "options": [
+        "A. [Fe(C2O4)3]3- (d5高自旋)",
+        "B. [Fe(H2O)6]3+ (d5高自旋)",
+        "C. [Cr(C2O4)3]3- (d3)",
+        "D. [Ni(H2O)6]2+ (d8)"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-120",
       "chapter": "ch7",
       "type": "truefalse",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "Jahn-Teller",
       "question": "高自旋d5配合物[Fe(C2O4)3]3-存在显著的Jahn-Teller效应导致八面体变形。",
       "answer": "错误",
       "explanation": "高自旋d5（t2g3eg2）的eg轨道电子对称占据（各一个电子），基态为6A1g，是非简并态，不产生Jahn-Teller畸变。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-121",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "Tanabe-Sugano",
       "question": "对于d5离子，基态自由离子谱项是什么？在弱八面体场中基态谱项分裂为什么？",
       "answer": "自由离子基态谱项为6S。在弱八面体场中，6S不分裂，成为唯一的六重态6A1g。所有d-d跃迁自旋禁阻（六重态→四重态），因此Mn2+和Fe3+的配合物颜色很浅。",
-      "explanation": "[Fe(C2O4)3]3-的颜色实际上主要来自LMCT而非d-d跃迁——这是d5配合物的特征。"
+      "explanation": "[Fe(C2O4)3]3-的颜色实际上主要来自LMCT而非d-d跃迁——这是d5配合物的特征。",
+      "referenceAnswer": "自由离子基态谱项为6S。在弱八面体场中，6S不分裂，成为唯一的六重态6A1g。所有d-d跃迁自旋禁阻（六重态→四重态），因此Mn2+和Fe3+的配合物颜色很浅。",
+      "category": "综合研究"
     },
     {
       "id": "r2-122",
       "chapter": "ch7",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "Δo估算",
       "question": "[Fe(C2O4)3]3-吸收峰在650nm（橙色光）。计算分裂能Δo（以kJ/mol为单位）。",
       "answer": "Δo = hc/λ = (6.626×10^-34×3.0×10^8)/(650×10^-9) = 3.058×10^-19 J = 3.058×10^-19×6.022×10^23/1000 ≈ 184 kJ/mol。",
-      "explanation": "从吸收波长可直接估算Δo，这是实验测定晶体场分裂能的方法之一。"
+      "explanation": "从吸收波长可直接估算Δo，这是实验测定晶体场分裂能的方法之一。",
+      "referenceAnswer": "Δo = hc/λ = (6.626×10^-34×3.0×10^8)/(650×10^-9) = 3.058×10^-19 J = 3.058×10^-19×6.022×10^23/1000 ≈ 184 kJ/mol。",
+      "category": "综合研究"
     },
     {
       "id": "r2-123",
       "chapter": "ch7",
       "type": "short",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "分子轨道理论视角",
       "question": "从分子轨道理论角度，t2g和eg轨道的本质是什么？",
       "answer": "在八面体配合物中，t2g是非键或弱π键轨道（金属dxy/dxz/dyz，与配体σ轨道对称性不匹配），eg是σ反键轨道dσ*（金属dz2/dx2-y2与配体σ轨道形成σ键后的反键组合）。因此，Δo本质上等于σ反键轨道与t2g非键轨道之间的能隙。",
-      "explanation": "分子轨道理论比纯晶体场理论更准确地描述了配位键的共价成分。"
+      "explanation": "分子轨道理论比纯晶体场理论更准确地描述了配位键的共价成分。",
+      "referenceAnswer": "在八面体配合物中，t2g是非键或弱π键轨道（金属dxy/dxz/dyz，与配体σ轨道对称性不匹配），eg是σ反键轨道dσ*（金属dz2/dx2-y2与配体σ轨道形成σ键后的反键组合）。因此，Δo本质上等于σ反键轨道与t2g非键轨道之间的能隙。",
+      "category": "综合研究"
     },
     {
       "id": "r2-124",
       "chapter": "ch8",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "MSDS-草酸",
       "question": "草酸（H2C2O4）的大鼠经口LD50约为____mg/kg。",
       "answer": "375",
-      "explanation": "LD50是半数致死剂量，375 mg/kg表明草酸属于中等毒性物质。"
+      "explanation": "LD50是半数致死剂量，375 mg/kg表明草酸属于中等毒性物质。",
+      "referenceAnswer": "375",
+      "category": "综合研究"
     },
     {
       "id": "r2-125",
       "chapter": "ch8",
       "type": "single",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "乙醇安全",
       "question": "乙醇的闪点约为多少？这意味着什么？",
       "answer": "C",
       "explanation": "乙醇闪点约13℃，属易燃液体，应在通风橱中操作并远离明火。",
-      "options": ["A. -10℃，需用液氮冷却", "B. 100℃，操作安全", "C. 13℃，属易燃液体需远离明火", "D. 50℃，需戴隔热手套"]
+      "options": [
+        "A. -10℃，需用液氮冷却",
+        "B. 100℃，操作安全",
+        "C. 13℃，属易燃液体需远离明火",
+        "D. 50℃，需戴隔热手套"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-126",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "PPE要求",
       "question": "本实验需要的个人防护装备（PPE）有哪些？",
       "answer": "护目镜（或防护面罩）、实验服、一次性手套（耐化学腐蚀）。必要时佩戴口罩。",
-      "explanation": "PPE是实验安全的第一道防线。"
+      "explanation": "PPE是实验安全的第一道防线。",
+      "referenceAnswer": "护目镜（或防护面罩）、实验服、一次性手套（耐化学腐蚀）。必要时佩戴口罩。",
+      "category": "综合研究"
     },
     {
       "id": "r2-127",
       "chapter": "ch8",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "加热安全",
       "question": "本实验加热操作必须使用____，严禁使用____加热。",
       "answer": "水浴，明火",
-      "explanation": "实验中使用乙醇等易燃溶剂，水浴加热避免火灾风险。"
+      "explanation": "实验中使用乙醇等易燃溶剂，水浴加热避免火灾风险。",
+      "referenceAnswer": "水浴，明火",
+      "category": "综合研究"
     },
     {
       "id": "r2-128",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "H2O2安全",
       "question": "使用30% H2O2（稀释为6%）时需要注意哪些安全事项？",
       "answer": "H2O2是强氧化剂，避免与皮肤接触（可灼伤），避免与易燃有机物混合，避免高温（加速分解放出O2增加压力），储存于棕色瓶避光。稀释时应在通风橱中进行。",
-      "explanation": "浓度越高的H2O2危险性越大，6%相对安全但仍需谨慎。"
+      "explanation": "浓度越高的H2O2危险性越大，6%相对安全但仍需谨慎。",
+      "referenceAnswer": "H2O2是强氧化剂，避免与皮肤接触（可灼伤），避免与易燃有机物混合，避免高温（加速分解放出O2增加压力），储存于棕色瓶避光。稀释时应在通风橱中进行。",
+      "category": "综合研究"
     },
     {
       "id": "r2-129",
       "chapter": "ch8",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "废液分类-酸性",
       "question": "含有草酸和硫酸的酸性废液应倒入贴有红色标签的废液桶中。",
       "answer": "正确",
       "explanation": "红色标签表示酸性废液，分类收集有利于后续处理。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-130",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "废液分类系统",
       "question": "实验室废液按颜色标签分为哪四类？",
       "answer": "酸性废液（红色标签）、含重金属废液（黄色标签）、有机废液（蓝色标签）和含氰废液（白色标签+骷髅标志）。",
-      "explanation": "正确分类是废液安全处理的首要步骤。"
+      "explanation": "正确分类是废液安全处理的首要步骤。",
+      "referenceAnswer": "酸性废液（红色标签）、含重金属废液（黄色标签）、有机废液（蓝色标签）和含氰废液（白色标签+骷髅标志）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-131",
       "chapter": "ch8",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "含氰废液处理",
       "question": "含氰废液的最佳处理方法是____法，操作条件是pH____。",
       "answer": "碱性氯化，>10",
-      "explanation": "ClO-在碱性条件(pH>10)下将CN-氧化为无毒的CNO-，避免生成剧毒的HCN气体。"
+      "explanation": "ClO-在碱性条件(pH>10)下将CN-氧化为无毒的CNO-，避免生成剧毒的HCN气体。",
+      "referenceAnswer": "碱性氯化，>10",
+      "category": "综合研究"
     },
     {
       "id": "r2-132",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "皮肤接触",
       "question": "实验中草酸溶液不慎溅到皮肤上，应当如何处理？",
       "answer": "立即用大量流动清水冲洗至少15分钟。如果皮肤有疼痛、红肿或灼伤，冲洗后就医。不要用碱液中和（产生中和热会加重伤害）。",
-      "explanation": "大量水冲洗是最有效的稀释和清除方法，时间是关键。"
+      "explanation": "大量水冲洗是最有效的稀释和清除方法，时间是关键。",
+      "referenceAnswer": "立即用大量流动清水冲洗至少15分钟。如果皮肤有疼痛、红肿或灼伤，冲洗后就医。不要用碱液中和（产生中和热会加重伤害）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-133",
       "chapter": "ch8",
       "type": "single",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "火灾应急",
       "question": "实验室中少量乙醇着火，最合适的灭火方式是？",
       "answer": "B",
       "explanation": "乙醇与水混溶，湿布覆盖隔绝空气是最简单有效的小火扑灭方法。不可用水冲（会扩散火源）。CO2灭火器也适用。",
-      "options": ["A. 用水冲洗", "B. 用湿布覆盖或用CO2灭火器", "C. 用嘴吹灭", "D. 任其燃尽"]
+      "options": [
+        "A. 用水冲洗",
+        "B. 用湿布覆盖或用CO2灭火器",
+        "C. 用嘴吹灭",
+        "D. 任其燃尽"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-134",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "中毒急救",
       "question": "若实验人员不慎误服少量草酸溶液，应如何急救？",
       "answer": "立即用大量清水或牛奶漱口并饮入（牛奶中的钙可与草酸结合减少吸收），不要催吐。立即拨打急救电话（120）并告知摄入物质为草酸。如可能，保留草酸容器供医生参考。",
-      "explanation": "草酸中毒不可催吐是因为草酸的腐蚀性会再次损伤食道。"
+      "explanation": "草酸中毒不可催吐是因为草酸的腐蚀性会再次损伤食道。",
+      "referenceAnswer": "立即用大量清水或牛奶漱口并饮入（牛奶中的钙可与草酸结合减少吸收），不要催吐。立即拨打急救电话（120）并告知摄入物质为草酸。如可能，保留草酸容器供医生参考。",
+      "category": "综合研究"
     },
     {
       "id": "r2-135",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "废物处理-重金属",
       "question": "本实验中含铁废液应如何处理？为什么不能直接排入下水道？",
       "answer": "倒入含重金属废液桶（黄色标签）。含重金属废液直接排放会污染水体，铁离子虽然毒性相对较低，但高浓度会影响水体生态和自净能力，且可能与其他阴离子形成络合物。需集中处理后达标排放。",
-      "explanation": "铁的毒性比其他重金属（如Cr、Cd、Hg、Pb）低，但仍属管控污染物。"
+      "explanation": "铁的毒性比其他重金属（如Cr、Cd、Hg、Pb）低，但仍属管控污染物。",
+      "referenceAnswer": "倒入含重金属废液桶（黄色标签）。含重金属废液直接排放会污染水体，铁离子虽然毒性相对较低，但高浓度会影响水体生态和自净能力，且可能与其他阴离子形成络合物。需集中处理后达标排放。",
+      "category": "综合研究"
     },
     {
       "id": "r2-136",
       "chapter": "ch8",
       "type": "truefalse",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "有机废液",
       "question": "含乙醇的废液可以直接倒入水池用水冲洗。",
       "answer": "错误",
       "explanation": "有机废液应倒入有机废液桶（蓝色标签），集中回收或焚烧处理，不应排入水体。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-137",
       "chapter": "ch8",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "H2O2储存",
       "question": "H2O2应储存于____瓶中，____保存，远离____物质。",
       "answer": "棕色（或深色），低温（或冷藏），易燃有机物/还原性",
-      "explanation": "H2O2遇光、热和还原性物质会加速分解，产生氧气可能引起容器胀裂。"
+      "explanation": "H2O2遇光、热和还原性物质会加速分解，产生氧气可能引起容器胀裂。",
+      "referenceAnswer": "棕色（或深色），低温（或冷藏），易燃有机物/还原性",
+      "category": "综合研究"
     },
     {
       "id": "r2-138",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "安全文化",
       "question": "实验前应进行风险分析，写出本实验三个主要风险点及其控制措施。",
       "answer": "(1) 草酸的毒性和腐蚀性——佩戴手套护目镜，在通风橱中操作；(2) 乙醇易燃——水浴加热，远离明火，备用CO2灭火器；(3) H2O2的氧化性——避免皮肤接触，控制温度不超过50℃，避免与有机物混合。",
-      "explanation": "风险分析是实验室安全管理的核心内容。"
+      "explanation": "风险分析是实验室安全管理的核心内容。",
+      "referenceAnswer": "(1) 草酸的毒性和腐蚀性——佩戴手套护目镜，在通风橱中操作；(2) 乙醇易燃——水浴加热，远离明火，备用CO2灭火器；(3) H2O2的氧化性——避免皮肤接触，控制温度不超过50℃，避免与有机物混合。",
+      "category": "综合研究"
     },
     {
       "id": "r2-139",
       "chapter": "ch8",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "安全操作规程",
       "question": "进入实验室后开展本实验前，应做好哪些安全准备工作？",
       "answer": "穿戴好PPE（护目镜、实验服、手套），检查水浴锅水位和温度设定，确认通风橱正常运行，熟悉灭火器和洗眼器位置，阅读试剂瓶标签确认化学品信息，检查废液桶标签是否正确。",
-      "explanation": "充分的准备工作是事故预防的前提。"
+      "explanation": "充分的准备工作是事故预防的前提。",
+      "referenceAnswer": "穿戴好PPE（护目镜、实验服、手套），检查水浴锅水位和温度设定，确认通风橱正常运行，熟悉灭火器和洗眼器位置，阅读试剂瓶标签确认化学品信息，检查废液桶标签是否正确。",
+      "category": "综合研究"
     },
     {
       "id": "r2-140",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "教学问题",
       "question": "学生在学习本实验时常见的概念误区有哪些？",
       "answer": "常见误区包括：混淆配位键与普通共价键的区别、不理解为什么Fe3+与C2O42-不能直接合成、对内外界概念理解不清、将螯合效应与一般配位稳定性混为一谈。",
-      "explanation": "这些概念误区的根源是对配位化学中热力学与动力学竞争关系理解不足。"
+      "explanation": "这些概念误区的根源是对配位化学中热力学与动力学竞争关系理解不足。",
+      "referenceAnswer": "常见误区包括：混淆配位键与普通共价键的区别、不理解为什么Fe3+与C2O42-不能直接合成、对内外界概念理解不清、将螯合效应与一般配位稳定性混为一谈。",
+      "category": "综合研究"
     },
     {
       "id": "r2-141",
       "chapter": "ch9",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "操作技能问题",
       "question": "学生在操作中常见的问题包括：过滤时____、滴加H2O2时____、结晶时____。",
       "answer": "滤纸破损或速度慢，滴速过快导致反应剧烈，未在暗处避光操作",
-      "explanation": "操作技能问题需要教师课堂巡视时及时发现和纠正。"
+      "explanation": "操作技能问题需要教师课堂巡视时及时发现和纠正。",
+      "referenceAnswer": "滤纸破损或速度慢，滴速过快导致反应剧烈，未在暗处避光操作",
+      "category": "综合研究"
     },
     {
       "id": "r2-142",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "安全意识问题",
       "question": "学生在安全操作方面有哪些常见疏忽？",
       "answer": "常见疏忽包括：不戴护目镜、接触药品后不洗手、在未检查通风的情况下开始实验、随意混合不同废液。",
-      "explanation": "安全意识的培养需反复强调和示范。"
+      "explanation": "安全意识的培养需反复强调和示范。",
+      "referenceAnswer": "常见疏忽包括：不戴护目镜、接触药品后不洗手、在未检查通风的情况下开始实验、随意混合不同废液。",
+      "category": "综合研究"
     },
     {
       "id": "r2-143",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "试剂优化",
       "question": "研究表明K2C2O4过量10%可将产率从72%提高到81%。请解释原因。",
       "answer": "K2C2O4过量使配位平衡向生成[Fe(C2O4)3]3-方向移动（Le Chatelier原理），同时K+浓度增加降低了产物在溶液中的溶解度（同离子效应），两种效应共同提高产率。",
-      "explanation": "合理的试剂过量是提高产率的经济有效手段。"
+      "explanation": "合理的试剂过量是提高产率的经济有效手段。",
+      "referenceAnswer": "K2C2O4过量使配位平衡向生成[Fe(C2O4)3]3-方向移动（Le Chatelier原理），同时K+浓度增加降低了产物在溶液中的溶解度（同离子效应），两种效应共同提高产率。",
+      "category": "综合研究"
     },
     {
       "id": "r2-144",
       "chapter": "ch9",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "产率优化",
       "question": "以下哪个措施对提高产率贡献最大？",
       "answer": "B",
       "explanation": "减少洗涤损失（+5-8%）> 确保完全氧化（+3-5%）≈ 优化结晶条件（+3-5%）。",
-      "options": ["A. 提高反应温度10℃", "B. 减少洗涤过程的溶解损失", "C. 使用更高浓度的乙醇", "D. 延长结晶时间至24小时"]
+      "options": [
+        "A. 提高反应温度10℃",
+        "B. 减少洗涤过程的溶解损失",
+        "C. 使用更高浓度的乙醇",
+        "D. 延长结晶时间至24小时"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-145",
       "chapter": "ch9",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "最高产率",
       "question": "通过综合优化，三草酸合铁(III)酸钾的合成产率最高可达92%。",
       "answer": "正确",
       "explanation": "通过减少洗涤损失、确保完全氧化和优化结晶条件等综合措施，最高产率可达约92%。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-146",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "虚拟仿真",
       "question": "虚拟仿真实验在本实验教学中的应用价值是什么？",
       "answer": "虚拟仿真可让学生在正式实验前熟悉操作流程和安全要点、反复练习关键步骤（如H2O2滴速控制）、理解反应机理（动画展示配位过程），减少实际操作中的失误和试剂浪费，同时降低安全隐患。",
-      "explanation": "虚拟仿真作为传统实验的补充手段，特别适合复杂的多步合成实验。"
+      "explanation": "虚拟仿真作为传统实验的补充手段，特别适合复杂的多步合成实验。",
+      "referenceAnswer": "虚拟仿真可让学生在正式实验前熟悉操作流程和安全要点、反复练习关键步骤（如H2O2滴速控制）、理解反应机理（动画展示配位过程），减少实际操作中的失误和试剂浪费，同时降低安全隐患。",
+      "category": "综合研究"
     },
     {
       "id": "r2-147",
       "chapter": "ch9",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "微波辅助",
       "question": "张等人（2021）报道了微波辅助氧化法，可将氧化时间缩短至____分钟。",
       "answer": "2",
-      "explanation": "微波加热通过偶极极化和离子传导实现快速均匀加热，大幅缩短反应时间。"
+      "explanation": "微波加热通过偶极极化和离子传导实现快速均匀加热，大幅缩短反应时间。",
+      "referenceAnswer": "2",
+      "category": "综合研究"
     },
     {
       "id": "r2-148",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "教学反思",
       "question": "为什么学生在学习本实验后仍可能不理解配位化学的核心概念？如何改进？",
       "answer": "原因可能是实验操作与理论讲解脱节。改进方法：在关键操作步骤（如KSCN阴性检验、加酸后血红色出现）时暂停操作进行现场讨论（即时教学），让学生亲眼观察配位平衡移动，将抽象概念与肉眼可见的现象联系。",
-      "explanation": "实验教学应与理论教学在时间和内容上紧密结合。"
+      "explanation": "实验教学应与理论教学在时间和内容上紧密结合。",
+      "referenceAnswer": "原因可能是实验操作与理论讲解脱节。改进方法：在关键操作步骤（如KSCN阴性检验、加酸后血红色出现）时暂停操作进行现场讨论（即时教学），让学生亲眼观察配位平衡移动，将抽象概念与肉眼可见的现象联系。",
+      "category": "综合研究"
     },
     {
       "id": "r2-149",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "产率优化详细方案",
       "question": "设计一个产率优化方案，分别从洗涤、氧化和结晶三个环节提出具体措施及预期提升。",
       "answer": "（1）洗涤：用少量冰水/乙醇混合液（1:1 v/v，预冷至0℃）代替纯水洗涤，预期减少溶解损失5-8%；（2）氧化：确保H2O2缓慢滴加且在40℃水浴中充分搅拌至无气泡产生后再保温5min，预期提升3-5%；（3）结晶：黑暗中缓慢加入乙醇并搅拌，完毕后冰浴冷却30min以上，预期提升3-5%。综合预期产率可达85-92%。",
-      "explanation": "每项措施对应一个产率损失环节，优化目标明确。"
+      "explanation": "每项措施对应一个产率损失环节，优化目标明确。",
+      "referenceAnswer": "（1）洗涤：用少量冰水/乙醇混合液（1:1 v/v，预冷至0℃）代替纯水洗涤，预期减少溶解损失5-8%；（2）氧化：确保H2O2缓慢滴加且在40℃水浴中充分搅拌至无气泡产生后再保温5min，预期提升3-5%；（3）结晶：黑暗中缓慢加入乙醇并搅拌，完毕后冰浴冷却30min以上，预期提升3-5%。综合预期产率可达85-92%。",
+      "category": "综合研究"
     },
     {
       "id": "r2-150",
       "chapter": "ch9",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "教学效果评价",
       "question": "衡量本实验教学效果最直接的指标是？",
       "answer": "A",
       "explanation": "产率综合反映了学生对合成原理理解、步骤操作和问题解决能力。但更全面的评价应结合产品质量（颜色、晶形）和实验报告。",
-      "options": ["A. 产品产率和质量", "B. 实验完成速度", "C. 预习报告的字数", "D. 使用的试剂总量"]
+      "options": [
+        "A. 产品产率和质量",
+        "B. 实验完成速度",
+        "C. 预习报告的字数",
+        "D. 使用的试剂总量"
+      ],
+      "referenceAnswer": "A",
+      "category": "综合研究"
     },
     {
       "id": "r2-151",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "绿色化学改进",
       "question": "从绿色化学角度，本实验可做哪些改进？",
       "answer": "（1）K2C2O4用量优化减少化学品消耗；（2）使用微波辅助缩短反应时间和能耗；（3）回收废液中的乙醇进行蒸馏再利用；（4）含铁废液中的铁可回收制备铁红颜料，减少重金属排放。",
-      "explanation": "绿色化学的12条原则指导实验的持续改进方向。"
+      "explanation": "绿色化学的12条原则指导实验的持续改进方向。",
+      "referenceAnswer": "（1）K2C2O4用量优化减少化学品消耗；（2）使用微波辅助缩短反应时间和能耗；（3）回收废液中的乙醇进行蒸馏再利用；（4）含铁废液中的铁可回收制备铁红颜料，减少重金属排放。",
+      "category": "综合研究"
     },
     {
       "id": "r2-152",
       "chapter": "ch9",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "实验考核",
       "question": "如何设计本实验的操作考核要点？",
       "answer": "考核要点应包括：正确称量（天平使用规范性）、沉淀操作（加热时间和搅拌）、H2O2滴速控制（均匀性）、终点判断（透明翠绿色识别）、结晶操作（黑暗中缓慢加乙醇）、产品处理（过滤、洗涤、干燥方式的正确性）、安全操作（PPE穿戴、废液分类）。",
-      "explanation": "操作考核应覆盖实验全过程的关键技能点。"
+      "explanation": "操作考核应覆盖实验全过程的关键技能点。",
+      "referenceAnswer": "考核要点应包括：正确称量（天平使用规范性）、沉淀操作（加热时间和搅拌）、H2O2滴速控制（均匀性）、终点判断（透明翠绿色识别）、结晶操作（黑暗中缓慢加乙醇）、产品处理（过滤、洗涤、干燥方式的正确性）、安全操作（PPE穿戴、废液分类）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-153",
       "chapter": "ch10",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "草酸铬配合物",
       "question": "K3[Cr(C2O4)3]的颜色为____色。",
       "answer": "深紫色",
-      "explanation": "Cr(III)为d3构型，d-d跃迁吸收特定波长，配合物呈深紫色。"
+      "explanation": "Cr(III)为d3构型，d-d跃迁吸收特定波长，配合物呈深紫色。",
+      "referenceAnswer": "深紫色",
+      "category": "综合研究"
     },
     {
       "id": "r2-154",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "其他草酸配合物",
       "question": "列举三种其他金属的草酸根配合物及其颜色。",
       "answer": "K3[Cr(C2O4)3]深紫色、Na3[Al(C2O4)3]无色（Al3+为d0，无d-d跃迁）、[Cu(C2O4)2]2-蓝色（d9构型）。",
-      "explanation": "不同金属离子的d电子数决定配合物的颜色。"
+      "explanation": "不同金属离子的d电子数决定配合物的颜色。",
+      "referenceAnswer": "K3[Cr(C2O4)3]深紫色、Na3[Al(C2O4)3]无色（Al3+为d0，无d-d跃迁）、[Cu(C2O4)2]2-蓝色（d9构型）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-155",
       "chapter": "ch10",
       "type": "truefalse",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "普鲁士蓝发现",
       "question": "普鲁士蓝是由德国颜料制造商Diesbach于1706年发现的。",
       "answer": "正确",
       "explanation": "Diesbach在柏林偶然合成了深蓝色颜料，后被称为普鲁士蓝或柏林蓝。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-156",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "特恩布尔蓝",
       "question": "特恩布尔蓝（Turnbull's blue）和普鲁士蓝是什么关系？",
       "answer": "两者实际上是同一化合物——Fe(III)4[Fe(II)(CN)6]3·xH2O。特恩布尔蓝由Fe2+与[Fe(CN)6]3-反应制备，普鲁士蓝由Fe3+与[Fe(CN)6]4-反应制备，最终产物中Fe(II)和Fe(III)的价态分配相同。",
-      "explanation": "穆斯堡尔谱学实验证实了两者是同一种物质。"
+      "explanation": "穆斯堡尔谱学实验证实了两者是同一种物质。",
+      "referenceAnswer": "两者实际上是同一化合物——Fe(III)4[Fe(II)(CN)6]3·xH2O。特恩布尔蓝由Fe2+与[Fe(CN)6]3-反应制备，普鲁士蓝由Fe3+与[Fe(CN)6]4-反应制备，最终产物中Fe(II)和Fe(III)的价态分配相同。",
+      "category": "综合研究"
     },
     {
       "id": "r2-157",
       "chapter": "ch10",
       "type": "fill",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "普鲁士蓝化学式",
       "question": "普鲁士蓝的不溶型理想化学式为____。",
       "answer": "Fe4[Fe(CN)6]3·xH2O",
-      "explanation": "不溶型不含K+，可溶型含K+为KFe[Fe(CN)6]·xH2O。"
+      "explanation": "不溶型不含K+，可溶型含K+为KFe[Fe(CN)6]·xH2O。",
+      "referenceAnswer": "Fe4[Fe(CN)6]3·xH2O",
+      "category": "综合研究"
     },
     {
       "id": "r2-158",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "柏林绿与白普鲁士蓝",
       "question": "柏林绿（Berlin Green）和白普鲁士蓝分别为什么价态的普鲁士蓝类似物？",
       "answer": "柏林绿是普鲁士蓝的部分氧化形式（Fe(III)比例增加），白普鲁士蓝（或称Everitt盐）是普鲁士蓝的完全还原形式，其中所有铁均为Fe(II)，化学式约为K2Fe[Fe(CN)6]·xH2O，为无色或淡蓝色。",
-      "explanation": "混合价态是普鲁士蓝类化合物的核心特征。"
+      "explanation": "混合价态是普鲁士蓝类化合物的核心特征。",
+      "referenceAnswer": "柏林绿是普鲁士蓝的部分氧化形式（Fe(III)比例增加），白普鲁士蓝（或称Everitt盐）是普鲁士蓝的完全还原形式，其中所有铁均为Fe(II)，化学式约为K2Fe[Fe(CN)6]·xH2O，为无色或淡蓝色。",
+      "category": "综合研究"
     },
     {
       "id": "r2-159",
       "chapter": "ch10",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "齐格勒-纳塔",
       "question": "齐格勒-纳塔（Ziegler-Natta）催化剂用于哪种重要工业过程？",
       "answer": "B",
       "explanation": "Ziegler-Natta催化剂是Ti-Al有机金属配合物体系，用于烯烃（乙烯、丙烯）的定向聚合。",
-      "options": ["A. 合成氨", "B. 烯烃聚合", "C. 石油裂化", "D. 水煤气转化"]
+      "options": [
+        "A. 合成氨",
+        "B. 烯烃聚合",
+        "C. 石油裂化",
+        "D. 水煤气转化"
+      ],
+      "referenceAnswer": "B",
+      "category": "综合研究"
     },
     {
       "id": "r2-160",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "顺铂",
       "question": "顺铂（Cisplatin）是什么？用于什么领域？",
       "answer": "顺铂是顺式-二氯二氨合铂(II)，化学式cis-[Pt(NH3)2Cl2]，是一种重要的金属配合物抗癌药物，通过与DNA交联抑制肿瘤细胞分裂。",
-      "explanation": "顺铂是配位化学在医药领域最成功的应用之一。"
+      "explanation": "顺铂是配位化学在医药领域最成功的应用之一。",
+      "referenceAnswer": "顺铂是顺式-二氯二氨合铂(II)，化学式cis-[Pt(NH3)2Cl2]，是一种重要的金属配合物抗癌药物，通过与DNA交联抑制肿瘤细胞分裂。",
+      "category": "综合研究"
     },
     {
       "id": "r2-161",
       "chapter": "ch10",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "Gd-DTPA",
       "question": "Gd-DTPA（马根维显）在医学上用作____造影剂，因为Gd3+有____个未成对电子。",
       "answer": "MRI（磁共振成像），7",
-      "explanation": "Gd3+（d7）有7个未成对电子，具有极强的顺磁性，可有效缩短水质子的T1弛豫时间。"
+      "explanation": "Gd3+（d7）有7个未成对电子，具有极强的顺磁性，可有效缩短水质子的T1弛豫时间。",
+      "referenceAnswer": "MRI（磁共振成像），7",
+      "category": "综合研究"
     },
     {
       "id": "r2-162",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "MOFs",
       "question": "什么是MOFs（金属有机框架材料）？它与本实验的配合物有何联系？",
       "answer": "MOFs是由金属离子或金属簇通过有机配体桥连形成的多孔晶体材料。本实验的原理——金属与多齿配体的配位化学——是MOFs化学的基础。MOFs的配体（如对苯二甲酸）和本实验中的草酸都属于多齿含氧配体。",
-      "explanation": "MOFs是配位化学在现代材料科学中的前沿应用。"
+      "explanation": "MOFs是配位化学在现代材料科学中的前沿应用。",
+      "referenceAnswer": "MOFs是由金属离子或金属簇通过有机配体桥连形成的多孔晶体材料。本实验的原理——金属与多齿配体的配位化学——是MOFs化学的基础。MOFs的配体（如对苯二甲酸）和本实验中的草酸都属于多齿含氧配体。",
+      "category": "综合研究"
     },
     {
       "id": "r2-163",
       "chapter": "ch10",
       "type": "single",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "氰化法冶金",
       "question": "金矿浸出的氰化法利用了金的什么化学性质？",
       "answer": "A",
       "explanation": "金在CN-存在下被O2氧化形成稳定配合物[Au(CN)2]-而溶解。",
-      "options": ["A. Au与CN-形成稳定配合物[Au(CN)2]-", "B. Au被CN-还原为可溶物", "C. Au在CN-中溶解度增大", "D. CN-降低了金的熔点"]
+      "options": [
+        "A. Au与CN-形成稳定配合物[Au(CN)2]-",
+        "B. Au被CN-还原为可溶物",
+        "C. Au在CN-中溶解度增大",
+        "D. CN-降低了金的熔点"
+      ],
+      "referenceAnswer": "A",
+      "category": "综合研究"
     },
     {
       "id": "r2-164",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "瓦克尔过程",
       "question": "瓦克尔（Wacker）过程是什么？其中钯配合物起什么作用？",
       "answer": "瓦克尔过程是在PdCl2/CuCl2催化下将乙烯氧化为乙醛的工业过程：C2H4 + 1/2O2 → CH3CHO。Pd(II)被乙烯还原为Pd(0)，CuCl2将Pd(0)重新氧化为Pd(II)，O2再将Cu(I)氧化为Cu(II)，实现催化循环。",
-      "explanation": "瓦克尔过程是有机金属催化在工业中的经典应用。"
+      "explanation": "瓦克尔过程是有机金属催化在工业中的经典应用。",
+      "referenceAnswer": "瓦克尔过程是在PdCl2/CuCl2催化下将乙烯氧化为乙醛的工业过程：C2H4 + 1/2O2 → CH3CHO。Pd(II)被乙烯还原为Pd(0)，CuCl2将Pd(0)重新氧化为Pd(II)，O2再将Cu(I)氧化为Cu(II)，实现催化循环。",
+      "category": "综合研究"
     },
     {
       "id": "r2-165",
       "chapter": "ch10",
       "type": "fill",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "酞菁蓝",
       "question": "酞菁蓝（Phthalocyanine Blue）是一种____金属配合物颜料，中心金属离子是____。",
       "answer": "大环，Cu2+",
-      "explanation": "酞菁铜是稳定性极高的有机颜料，广泛用于印刷油墨和涂料。"
+      "explanation": "酞菁铜是稳定性极高的有机颜料，广泛用于印刷油墨和涂料。",
+      "referenceAnswer": "大环，Cu2+",
+      "category": "综合研究"
     },
     {
       "id": "r2-166",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "工业应用对比",
       "question": "对比三草酸合铁(III)酸钾与工业配合物催化剂的异同点。",
       "answer": "相同点：都基于金属-配体的配位键，都涉及配合物的稳定性问题。不同点：三草酸合铁(III)酸钾是稳定配合物（配位数饱和），而工业催化剂（如Ziegler-Natta）需要有配位不饱和位点以便底物配位和活化；工业催化剂还需考虑选择性、TOF/TON等催化性能指标。",
-      "explanation": "配合物的稳定性与反应活性之间存在权衡关系。"
+      "explanation": "配合物的稳定性与反应活性之间存在权衡关系。",
+      "referenceAnswer": "相同点：都基于金属-配体的配位键，都涉及配合物的稳定性问题。不同点：三草酸合铁(III)酸钾是稳定配合物（配位数饱和），而工业催化剂（如Ziegler-Natta）需要有配位不饱和位点以便底物配位和活化；工业催化剂还需考虑选择性、TOF/TON等催化性能指标。",
+      "category": "综合研究"
     },
     {
       "id": "r2-167",
       "chapter": "ch10",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "氰化法计算",
       "question": "氰化法浸金的反应：4Au + 8CN- + O2 + 2H2O → 4[Au(CN)2]- + 4OH-。处理1.0g金（M=197.0 g/mol）理论上需要多少克NaCN（M=49.0 g/mol）？",
       "answer": "n(Au)=1.0/197.0=0.005076 mol。根据反应式，n(CN-):n(Au)=8:4=2:1，n(CN-)=0.01015 mol。m(NaCN)=0.01015×49.0≈0.50g。",
-      "explanation": "氰化钠用量虽少但毒性极大，工业操作需严格安全控制。"
+      "explanation": "氰化钠用量虽少但毒性极大，工业操作需严格安全控制。",
+      "referenceAnswer": "n(Au)=1.0/197.0=0.005076 mol。根据反应式，n(CN-):n(Au)=8:4=2:1，n(CN-)=0.01015 mol。m(NaCN)=0.01015×49.0≈0.50g。",
+      "category": "综合研究"
     },
     {
       "id": "r2-168",
       "chapter": "ch10",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "配位催化原理",
       "question": "为什么过渡金属配合物常常是优良的催化剂？从配位化学角度简要说明。",
       "answer": "过渡金属有空的d轨道和可变的氧化态：可变的氧化态使金属能参与氧化还原催化循环（如Pd(0/II)）；空d轨道可接纳底物的孤对电子行配位活化（降低反应活化能）；配体可调控金属中心的电子密度和空间位阻（实现选择性催化）；配位不饱和位点为底物提供了反应场所。",
-      "explanation": "配位催化是均相催化的核心——金属中心的电子和几何性质通过配体精确调控。"
+      "explanation": "配位催化是均相催化的核心——金属中心的电子和几何性质通过配体精确调控。",
+      "referenceAnswer": "过渡金属有空的d轨道和可变的氧化态：可变的氧化态使金属能参与氧化还原催化循环（如Pd(0/II)）；空d轨道可接纳底物的孤对电子行配位活化（降低反应活化能）；配体可调控金属中心的电子密度和空间位阻（实现选择性催化）；配位不饱和位点为底物提供了反应场所。",
+      "category": "综合研究"
     },
     {
       "id": "r2-169",
       "chapter": "ch11",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "报告结构",
       "question": "实验报告正文一般依次包含____、____、____、____、____、____、____七个部分。",
       "answer": "引言（或目的）、原理、仪器与试剂、实验步骤、数据记录、结果与讨论、结论",
-      "explanation": "标准化格式有助于信息的系统呈现和交流。"
+      "explanation": "标准化格式有助于信息的系统呈现和交流。",
+      "referenceAnswer": "引言（或目的）、原理、仪器与试剂、实验步骤、数据记录、结果与讨论、结论",
+      "category": "综合研究"
     },
     {
       "id": "r2-170",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "摘要要求",
       "question": "实验报告中的摘要（Abstract）有什么要求？",
       "answer": "摘要应包含实验目的、方法、主要结果和结论，字数约100-200字，具有独立性和自明性，使读者不需阅读全文即可了解实验要点。",
-      "explanation": "摘要是全文内容的浓缩，应在报告完成后最后撰写。"
+      "explanation": "摘要是全文内容的浓缩，应在报告完成后最后撰写。",
+      "referenceAnswer": "摘要应包含实验目的、方法、主要结果和结论，字数约100-200字，具有独立性和自明性，使读者不需阅读全文即可了解实验要点。",
+      "category": "综合研究"
     },
     {
       "id": "r2-171",
       "chapter": "ch11",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "有效数字",
       "question": "0.00450有____位有效数字。",
       "answer": "3",
-      "explanation": "前导零不计数（0.004），末尾的零在非零数字之后计为有效数字（450→三位）。"
+      "explanation": "前导零不计数（0.004），末尾的零在非零数字之后计为有效数字（450→三位）。",
+      "referenceAnswer": "3",
+      "category": "综合研究"
     },
     {
       "id": "r2-172",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "误差类型",
       "question": "绝对误差和相对误差的定义是什么？哪种更能反映测量质量？",
       "answer": "绝对误差 = |测量值 − 真值|；相对误差 = |测量值 − 真值| / 真值 × 100%。相对误差更能反映测量质量，因为它考虑了被测量本身的大小。",
-      "explanation": "同样0.1g的绝对误差，对于1g（10%）和100g（0.1%）的测量意义完全不同。"
+      "explanation": "同样0.1g的绝对误差，对于1g（10%）和100g（0.1%）的测量意义完全不同。",
+      "referenceAnswer": "绝对误差 = |测量值 − 真值|；相对误差 = |测量值 − 真值| / 真值 × 100%。相对误差更能反映测量质量，因为它考虑了被测量本身的大小。",
+      "category": "综合研究"
     },
     {
       "id": "r2-173",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "标准偏差",
       "question": "标准偏差s的公式是什么？它表示什么含义？",
       "answer": "s = √[Σ(xi − x̄)²/(n−1)]。标准偏差表示测量数据的离散程度，s越小说明测量精密度越高，数据越集中。",
-      "explanation": "使用n-1（自由度）是因为样本均值x̄是由数据自身计算出来的。"
+      "explanation": "使用n-1（自由度）是因为样本均值x̄是由数据自身计算出来的。",
+      "referenceAnswer": "s = √[Σ(xi − x̄)²/(n−1)]。标准偏差表示测量数据的离散程度，s越小说明测量精密度越高，数据越集中。",
+      "category": "综合研究"
     },
     {
       "id": "r2-174",
       "chapter": "ch11",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "RSD",
       "question": "RSD（相对标准偏差）的计算方法是？",
       "answer": "C",
       "explanation": "RSD = s/x̄ × 100%，无量纲百分数，方便不同量级数据的精密性比较。",
-      "options": ["A. s × x̄ × 100%", "B. x̄/s × 100%", "C. s/x̄ × 100%", "D. (s+x̄)/2 × 100%"]
+      "options": [
+        "A. s × x̄ × 100%",
+        "B. x̄/s × 100%",
+        "C. s/x̄ × 100%",
+        "D. (s+x̄)/2 × 100%"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-175",
       "chapter": "ch11",
       "type": "truefalse",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "三线表",
       "question": "实验报告中的数据表应使用三线表格式，即表头线、栏目线和表底线三条横线。",
       "answer": "正确",
       "explanation": "三线表是科技论文和实验报告的标准表格格式，简洁清晰。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-176",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "Q检验",
       "question": "什么是Q检验？在什么情况下使用？",
       "answer": "Q检验是一种统计方法，用于判断小样本（通常n=3-10）中可疑值（异常值）是否可以舍弃。计算Q = |x可疑 − x最近| / (x最大 − x最小)，与临界Q值比较。若Q计算 > Q表，则可疑值可舍弃。",
-      "explanation": "实验数据不能随意剔除，必须基于统计检验给出依据。"
+      "explanation": "实验数据不能随意剔除，必须基于统计检验给出依据。",
+      "referenceAnswer": "Q检验是一种统计方法，用于判断小样本（通常n=3-10）中可疑值（异常值）是否可以舍弃。计算Q = |x可疑 − x最近| / (x最大 − x最小)，与临界Q值比较。若Q计算 > Q表，则可疑值可舍弃。",
+      "category": "综合研究"
     },
     {
       "id": "r2-177",
       "chapter": "ch11",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "线性回归",
       "question": "在绘制标准曲线时，线性回归的要求是相关系数R²一般应大于____。",
       "answer": "0.99",
-      "explanation": "R²越接近1，表示实验数据与线性模型的拟合程度越好。"
+      "explanation": "R²越接近1，表示实验数据与线性模型的拟合程度越好。",
+      "referenceAnswer": "0.99",
+      "category": "综合研究"
     },
     {
       "id": "r2-178",
       "chapter": "ch11",
       "type": "calculation",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "标准差计算",
       "question": "三次产品称重为4.30g、4.38g、4.34g。计算平均质量和标准偏差s。",
       "answer": "x̄=(4.30+4.38+4.34)/3=4.34g。s=√[((4.30-4.34)²+(4.38-4.34)²+(4.34-4.34)²)/(3-1)]=√[(0.0016+0.0016+0)/2]=√(0.0016)≈0.04g。RSD=0.04/4.34×100%≈0.92%。",
-      "explanation": "数据变异很小，说明测量精密度良好。"
+      "explanation": "数据变异很小，说明测量精密度良好。",
+      "referenceAnswer": "x̄=(4.30+4.38+4.34)/3=4.34g。s=√[((4.30-4.34)²+(4.38-4.34)²+(4.34-4.34)²)/(3-1)]=√[(0.0016+0.0016+0)/2]=√(0.0016)≈0.04g。RSD=0.04/4.34×100%≈0.92%。",
+      "category": "综合研究"
     },
     {
       "id": "r2-179",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "引用格式",
       "question": "按照GB/T 7714-2015标准，期刊论文[J]、专著[M]和学位论文[D]的引用格式有什么区别？",
       "answer": "[J]期刊论文：作者.题名[J].刊名,年份,卷号(期号):起止页码；[M]专著：作者.书名[M].版次.出版地:出版社,年份:页码；[D]学位论文：作者.题名[D].保存地:保存单位,年份。三者在文献标识码、出版信息和结构上不同。",
-      "explanation": "正确的引用格式是学术诚信的基本要求。"
+      "explanation": "正确的引用格式是学术诚信的基本要求。",
+      "referenceAnswer": "[J]期刊论文：作者.题名[J].刊名,年份,卷号(期号):起止页码；[M]专著：作者.书名[M].版次.出版地:出版社,年份:页码；[D]学位论文：作者.题名[D].保存地:保存单位,年份。三者在文献标识码、出版信息和结构上不同。",
+      "category": "综合研究"
     },
     {
       "id": "r2-180",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "SI单位",
       "question": "在实验报告中应使用SI单位制。请写出质量、长度、时间、温度、物质的量和体积的SI单位。",
       "answer": "质量：kg（千克）；长度：m（米）；时间：s（秒）；温度：K（开尔文）；物质的量：mol（摩尔）；体积：m³（立方米，或常用导出单位L/dm³）。",
-      "explanation": "统一使用SI单位便于国际科学交流和比较。"
+      "explanation": "统一使用SI单位便于国际科学交流和比较。",
+      "referenceAnswer": "质量：kg（千克）；长度：m（米）；时间：s（秒）；温度：K（开尔文）；物质的量：mol（摩尔）；体积：m³（立方米，或常用导出单位L/dm³）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-181",
       "chapter": "ch11",
       "type": "single",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "有效数字运算",
       "question": "在计算产率时，质量数据为4.38g（3位有效数字），理论产量为6.26g（3位有效数字）。产率应保留几位有效数字？",
       "answer": "C",
       "explanation": "乘除法运算结果的有效数字位数取决于参与运算数据中最少有效数字的位数。4.38和6.26均为3位。",
-      "options": ["A. 2位", "B. 4位", "C. 3位", "D. 1位"]
+      "options": [
+        "A. 2位",
+        "B. 4位",
+        "C. 3位",
+        "D. 1位"
+      ],
+      "referenceAnswer": "C",
+      "category": "综合研究"
     },
     {
       "id": "r2-182",
       "chapter": "ch11",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "结果与讨论",
       "question": "实验报告的结果与讨论部分应包含哪些核心内容？",
       "answer": "应包括：产率计算与评价、产品颜色和晶形的观察描述、关键实验现象的观察记录与分析、实验误差来源分析及改进建议、对产率偏高或偏低的原因分析。",
-      "explanation": "结果与讨论是报告的核心，体现学生的分析能力和科学思维。"
+      "explanation": "结果与讨论是报告的核心，体现学生的分析能力和科学思维。",
+      "referenceAnswer": "应包括：产率计算与评价、产品颜色和晶形的观察描述、关键实验现象的观察记录与分析、实验误差来源分析及改进建议、对产率偏高或偏低的原因分析。",
+      "category": "综合研究"
     },
     {
       "id": "r2-183",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "产率异常",
       "question": "产率超过100%的异常结果可能是什么原因？",
       "answer": "最可能的原因是产品干燥不充分（含有残留水分或乙醇），或产品中含有未洗净的杂质（如K2C2O4、H2C2O4等）。称量误差也可能导致。",
-      "explanation": "产率>100%是明显的错误信号，提醒检查产品纯度和操作过程。"
+      "explanation": "产率>100%是明显的错误信号，提醒检查产品纯度和操作过程。",
+      "referenceAnswer": "最可能的原因是产品干燥不充分（含有残留水分或乙醇），或产品中含有未洗净的杂质（如K2C2O4、H2C2O4等）。称量误差也可能导致。",
+      "category": "综合研究"
     },
     {
       "id": "r2-184",
       "chapter": "ch12",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "颜色诊断-黄绿",
       "question": "产品颜色为黄绿色而非翠绿色，最可能原因是____。",
       "answer": "Fe2+未被H2O2完全氧化",
-      "explanation": "残留的FeC2O4（淡黄色）混入翠绿色配合物使颜色偏黄。"
+      "explanation": "残留的FeC2O4（淡黄色）混入翠绿色配合物使颜色偏黄。",
+      "referenceAnswer": "Fe2+未被H2O2完全氧化",
+      "category": "综合研究"
     },
     {
       "id": "r2-185",
       "chapter": "ch12",
       "type": "fill",
-      "difficulty": 1,
+      "difficulty": "easy",
       "topic": "颜色诊断-棕黄",
       "question": "产品呈棕黄色，可能的原因是____。",
       "answer": "含有未溶解的Fe(OH)3杂质",
-      "explanation": "红棕色的Fe(OH)3混入绿色产品中产生棕黄色调。"
+      "explanation": "红棕色的Fe(OH)3混入绿色产品中产生棕黄色调。",
+      "referenceAnswer": "含有未溶解的Fe(OH)3杂质",
+      "category": "综合研究"
     },
     {
       "id": "r2-186",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "颜色流程图",
       "question": "简述产品颜色诊断的基本流程。",
       "answer": "观察产品颜色→黄绿色：Fe2+不完全氧化/FeC2O4残留；棕黄色：Fe(OH)3未完全溶解；浅黄色/白色：草酸过量析出；暗绿色：光化学分解产物。根据颜色推断原因后采取相应纠正措施。",
-      "explanation": "颜色是最直观的质量指标，可以快速定位问题。"
+      "explanation": "颜色是最直观的质量指标，可以快速定位问题。",
+      "referenceAnswer": "观察产品颜色→黄绿色：Fe2+不完全氧化/FeC2O4残留；棕黄色：Fe(OH)3未完全溶解；浅黄色/白色：草酸过量析出；暗绿色：光化学分解产物。根据颜色推断原因后采取相应纠正措施。",
+      "category": "综合研究"
     },
     {
       "id": "r2-187",
       "chapter": "ch12",
       "type": "single",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "水浴故障",
       "question": "水浴锅内水量不足导致水位过低，最直接的影响是？",
       "answer": "D",
       "explanation": "水位过低导致温度控制不准确和加热不均匀，间接影响其他环节。",
-      "options": ["A. 烧杯会破裂", "B. 水会沸腾溢出", "C. 用电量增加", "D. 温度控制不准确"]
+      "options": [
+        "A. 烧杯会破裂",
+        "B. 水会沸腾溢出",
+        "C. 用电量增加",
+        "D. 温度控制不准确"
+      ],
+      "referenceAnswer": "D",
+      "category": "综合研究"
     },
     {
       "id": "r2-188",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "天平故障",
       "question": "电子天平显示读数不稳定，可能是什么问题？如何处理？",
       "answer": "可能原因：(1) 工作台不稳定或有振动——将天平移至稳固台面；(2) 有气流影响——关闭门窗和风扇，使用防风罩；(3) 天平未水平——调整水平脚使气泡居中；(4) 样品带静电——使用去静电装置或等待释放。",
-      "explanation": "天平读数稳定性直接影响称量准确度。"
+      "explanation": "天平读数稳定性直接影响称量准确度。",
+      "referenceAnswer": "可能原因：(1) 工作台不稳定或有振动——将天平移至稳固台面；(2) 有气流影响——关闭门窗和风扇，使用防风罩；(3) 天平未水平——调整水平脚使气泡居中；(4) 样品带静电——使用去静电装置或等待释放。",
+      "category": "综合研究"
     },
     {
       "id": "r2-189",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 2,
+      "difficulty": "medium",
       "topic": "抽滤故障",
       "question": "减压过滤时滤速很慢，可能原因及解决办法？",
       "answer": "可能原因：沉淀太细堵塞滤纸孔、滤纸与布氏漏斗贴合不紧密、真空度不足、滤纸孔径选择不当。解决办法：使用助滤剂（如硅藻土）、检查密封垫圈和真空泵、选合适孔径的慢/中速定量滤纸。",
-      "explanation": "[Fe(C2O4)3]3-结晶为细小晶体时应特别注意过滤速度。"
+      "explanation": "[Fe(C2O4)3]3-结晶为细小晶体时应特别注意过滤速度。",
+      "referenceAnswer": "可能原因：沉淀太细堵塞滤纸孔、滤纸与布氏漏斗贴合不紧密、真空度不足、滤纸孔径选择不当。解决办法：使用助滤剂（如硅藻土）、检查密封垫圈和真空泵、选合适孔径的慢/中速定量滤纸。",
+      "category": "综合研究"
     },
     {
       "id": "r2-190",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "莫尔盐变质",
       "question": "莫尔盐如果颜色由浅蓝绿色变为黄色，说明什么？还能使用吗？",
       "answer": "说明Fe2+已被空气氧化为Fe3+（Fe3+呈黄色）。已变质的莫尔盐不能使用，因为Fe2+含量已降低无法准确计量，且Fe3+的存在会干扰后续沉淀和氧化步骤。",
-      "explanation": "莫尔盐应在干燥阴凉处密封保存，称量时快速操作。"
+      "explanation": "莫尔盐应在干燥阴凉处密封保存，称量时快速操作。",
+      "referenceAnswer": "说明Fe2+已被空气氧化为Fe3+（Fe3+呈黄色）。已变质的莫尔盐不能使用，因为Fe2+含量已降低无法准确计量，且Fe3+的存在会干扰后续沉淀和氧化步骤。",
+      "category": "综合研究"
     },
     {
       "id": "r2-191",
       "chapter": "ch12",
       "type": "truefalse",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "H2O2变质判断",
       "question": "如果向酸性KMnO4溶液中滴加H2O2，紫色迅速褪去且产生大量气泡，说明H2O2仍然有效。",
       "answer": "正确",
       "explanation": "2KMnO4+5H2O2+3H2SO4→K2SO4+2MnSO4+5O2+8H2O。褪色且产生O2气泡是H2O2有效性的快速检验方法。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-192",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "K2C2O4吸潮",
       "question": "K2C2O4·H2O如果已经吸潮（表面湿润），对实验有什么影响？如何补救？",
       "answer": "吸潮导致实际称取的K2C2O4有效质量偏低（水占部分质量），配位剂不足会使产品产率降低。补救方法：在烘箱中于105℃干燥至恒重后再称量，或在计算投料量时乘以校正系数（估计含水量）。",
-      "explanation": "水合物试剂的保存状态对定量实验影响显著。"
+      "explanation": "水合物试剂的保存状态对定量实验影响显著。",
+      "referenceAnswer": "吸潮导致实际称取的K2C2O4有效质量偏低（水占部分质量），配位剂不足会使产品产率降低。补救方法：在烘箱中于105℃干燥至恒重后再称量，或在计算投料量时乘以校正系数（估计含水量）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-193",
       "chapter": "ch12",
       "type": "fill",
-      "difficulty": 3,
+      "difficulty": "hard",
       "topic": "草酸变质",
       "question": "若草酸（H2C2O4·2H2O）存放过久颜色发黄或有异味，说明____，应____。",
       "answer": "已部分变质/分解（或含有杂质），更换新试剂",
-      "explanation": "草酸在光照和高温下可缓慢分解为CO/CO2和甲酸。"
+      "explanation": "草酸在光照和高温下可缓慢分解为CO/CO2和甲酸。",
+      "referenceAnswer": "已部分变质/分解（或含有杂质），更换新试剂",
+      "category": "综合研究"
     },
     {
       "id": "r2-194",
       "chapter": "ch12",
       "type": "calculation",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "产率异常分析",
       "question": "理论产量6.26g。三次实验产率分别为45%、68%和89%。分析产率差异的可能原因。",
       "answer": "45%：氧化不完全或洗涤损失严重；68%：正常偏低水平，可能某个环节有小失误；89%：操作良好接近最优产率。产率差异大说明操作稳定性不足，需标准化操作步骤。RSD=(max-min)/x̄≈(89-45)/67.3≈65%，建议增加练习或改进操作规范化。",
-      "explanation": "产率波动大反映操作技能的不一致性。"
+      "explanation": "产率波动大反映操作技能的不一致性。",
+      "referenceAnswer": "45%：氧化不完全或洗涤损失严重；68%：正常偏低水平，可能某个环节有小失误；89%：操作良好接近最优产率。产率差异大说明操作稳定性不足，需标准化操作步骤。RSD=(max-min)/x̄≈(89-45)/67.3≈65%，建议增加练习或改进操作规范化。",
+      "category": "综合研究"
     },
     {
       "id": "r2-195",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "综合故障排查",
       "question": "学生反映产品既呈黄绿色又产量很低（<30%）。请综合分析可能的原因链。",
       "answer": "根本原因很可能是H2O2氧化完全不充分：可能H2O2已分解失效、水浴温度不足（<30℃）导致反应过慢、或滴加速度过快导致H2O2局部分解而未有效氧化Fe2+。结果Fe2+大量残留→黄绿色；Fe2+未能转化为Fe3+→后续配位步骤原料不足→产率极低。建议先检查H2O2有效性，严格控制40℃和滴加速度。",
-      "explanation": "产率与颜色异常往往有共同的原因，系统分析可准确诊断。"
+      "explanation": "产率与颜色异常往往有共同的原因，系统分析可准确诊断。",
+      "referenceAnswer": "根本原因很可能是H2O2氧化完全不充分：可能H2O2已分解失效、水浴温度不足（<30℃）导致反应过慢、或滴加速度过快导致H2O2局部分解而未有效氧化Fe2+。结果Fe2+大量残留→黄绿色；Fe2+未能转化为Fe3+→后续配位步骤原料不足→产率极低。建议先检查H2O2有效性，严格控制40℃和滴加速度。",
+      "category": "综合研究"
     },
     {
       "id": "r2-196",
       "chapter": "ch4",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "产品干燥",
       "question": "产品结晶后应如何干燥？为什么不能在高温烘箱中干燥？",
       "answer": "应在室温或低温（<40℃）避光干燥，可置于干燥器中或通风处自然晾干。不能在高温烘箱中干燥，因为：110℃以上会失去结晶水；高温和有光条件会引发光化学分解（产品变暗）。",
-      "explanation": "该配合物含有结晶水且对光和热敏感。"
+      "explanation": "该配合物含有结晶水且对光和热敏感。",
+      "referenceAnswer": "应在室温或低温（<40℃）避光干燥，可置于干燥器中或通风处自然晾干。不能在高温烘箱中干燥，因为：110℃以上会失去结晶水；高温和有光条件会引发光化学分解（产品变暗）。",
+      "category": "综合研究"
     },
     {
       "id": "r2-197",
       "chapter": "ch2",
       "type": "truefalse",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "螯合环稳定性",
       "question": "草酸根与Fe3+形成的五元螯合环比六元螯合环更稳定。",
       "answer": "正确",
       "explanation": "对于饱和配体（无不饱和键），五元螯合环的张力最小、热力学最稳定。六元环虽有较优的键角但熵效应略差。实际中五元螯合角是最常见的稳定螯合环尺寸。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "正确",
+      "category": "综合研究"
     },
     {
       "id": "r2-198",
       "chapter": "ch3",
       "type": "truefalse",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "Ecell判断",
       "question": "Fe3+氧化H2C2O4反应的E°cell=1.261V，说明即便在很低的Fe3+浓度下该氧化还原反应也是热力学有利的。",
       "answer": "错误",
       "explanation": "虽然E°cell为正，但根据Nernst方程，当[Fe3+]极低（如形成配合物后）时，Ecell可能变为负值。例如在[Fe(C2O4)3]3-体系中[Fe3+]free≈10^-17M，氧化还原实际电动势可能大幅降低甚至逆转。",
-      "options": ["正确", "错误"]
+      "options": [
+        "正确",
+        "错误"
+      ],
+      "referenceAnswer": "错误",
+      "category": "综合研究"
     },
     {
       "id": "r2-199",
       "chapter": "ch5",
       "type": "calculation",
-      "difficulty": 5,
+      "difficulty": "medium",
       "topic": "酸效应系数",
       "question": "在pH=3.0时，草酸根C2O42-的酸效应系数αL是多少？已知H2C2O4的pKa1=1.25，pKa2=4.27。",
       "answer": "αL = 1 + [H+]/Ka2 + [H+]²/(Ka1Ka2) = 1 + 10^-3/10^-4.27 + 10^-6/(10^-1.25×10^-4.27) = 1 + 10^1.27 + 10^-0.48 = 1 + 18.62 + 0.33 ≈ 19.95。即有效[L]为总浓度的1/20。",
-      "explanation": "酸效应系数反映了pH对配体有效浓度的影响。"
+      "explanation": "酸效应系数反映了pH对配体有效浓度的影响。",
+      "referenceAnswer": "αL = 1 + [H+]/Ka2 + [H+]²/(Ka1Ka2) = 1 + 10^-3/10^-4.27 + 10^-6/(10^-1.25×10^-4.27) = 1 + 10^1.27 + 10^-0.48 = 1 + 18.62 + 0.33 ≈ 19.95。即有效[L]为总浓度的1/20。",
+      "category": "综合研究"
     },
     {
       "id": "r2-200",
       "chapter": "ch12",
       "type": "short",
-      "difficulty": 4,
+      "difficulty": "medium",
       "topic": "实验总结",
       "question": "结合本实验，谈谈你对从实验事实到理论认识再到实验优化这一科学研究循环的理解。",
       "answer": "实验原始观察（配合物颜色、KSCN阴性反应）→理论解释（配位理论、CFT、稳定常数）→指导实验优化（避光操作、K2C2O4过量、暗处结晶），优化后的实验结果反过来验证和丰富理论——这是科学方法论的体现。具体到本实验，理解了LMCT机理后采取避光操作提高了产品质量；理解了配位平衡移动后优化试剂配比提高了产率。",
-      "explanation": "这是将单次实验上升到方法论高度的教学提炼。"
+      "explanation": "这是将单次实验上升到方法论高度的教学提炼。",
+      "referenceAnswer": "实验原始观察（配合物颜色、KSCN阴性反应）→理论解释（配位理论、CFT、稳定常数）→指导实验优化（避光操作、K2C2O4过量、暗处结晶），优化后的实验结果反过来验证和丰富理论——这是科学方法论的体现。具体到本实验，理解了LMCT机理后采取避光操作提高了产品质量；理解了配位平衡移动后优化试剂配比提高了产率。",
+      "category": "综合研究"
     }
   ]
 }

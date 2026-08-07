@@ -13,11 +13,12 @@
     {
       "q": "三草酸合铁(III)酸钾的化学式是什么？",
       "category": "合成制备",
-      "difficulty": "基础",
+      "difficulty": "medium",
       "expected_faq_title": "产物名称与化学式",
       "answer_key_points": "K3[Fe(C2O4)3]x3H2O；内界[Fe(C2O4)3]3-，外界3K+，3结晶水；中心Fe3+，配体C2O42-，配位数6",
       "corpus_ref": "corpus id=15,16,40 / manual ch2-s1",
-      "_cycle": 10
+      "_cycle": 10,
+      "question": "三草酸合铁(III)酸钾的化学式是什么？"
     }
   ]
 }

@@ -78,7 +78,9 @@ FAQ.forEach(item => {
     }
   }
 
-  if (!item.corpus_refs && !item.manual_refs && !/manual(?:\.json)?|语料#|文献#|corpus/i.test(text)) {
+  const hasCorpus = Array.isArray(item.corpus_refs) && item.corpus_refs.length;
+  const hasManual = Array.isArray(item.manual_refs) && item.manual_refs.length;
+  if (!hasCorpus && !hasManual && !/manual(?:\.json)?|语料#|文献#|corpus/i.test(text)) {
     report.noSourceRefs.push(title);
   }
 

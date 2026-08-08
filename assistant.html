@@ -511,7 +511,7 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const enc=encodeURIComponent;
 
 const stripHTML=s=>String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");const delay=ms=>new Promise(r=>setTimeout(r,ms));
-const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
+const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁰':'0'};
 const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g,c=>SUBMAP[c]||c).replace(/\s+/g,'');
 
 // 分类归一化 (同步自 data/categories.json — 唯一权威来源)
@@ -1124,12 +1124,20 @@ const FAQ_CACHE_KEY='chemai_faq_cache';
 function buildFAQIndex(src){
   for(const k of Object.keys(FAQ_IDX.keys)) delete FAQ_IDX.keys[k];
   for(const k of Object.keys(FAQ_IDX.ents)) delete FAQ_IDX.ents[k];
+  const addTerm=(idx,t,i)=>{
+    if(t&&t.length>=2){
+      (idx[t]=idx[t]||[]).push(i);
+      // 同时索引bigram+trigram子串（解决长词匹配不到短查询的问题）
+      for(let j=0;j<=t.length-2;j++){const bg=t.slice(j,j+2);(idx[bg]=idx[bg]||[]);if(idx[bg][idx[bg].length-1]!==i)idx[bg].push(i)}
+      for(let j=0;j<=t.length-3;j++){const tg=t.slice(j,j+3);(idx[tg]=idx[tg]||[]);if(idx[tg][idx[tg].length-1]!==i)idx[tg].push(i)}
+    }
+  };
   for(let i=0;i<src.length;i++){
     const f=src[i];
-    for(const k of f.keys||[]){const nk=norm(k);if(nk.length>=2){(FAQ_IDX.keys[nk]=FAQ_IDX.keys[nk]||[]).push(i)}}
-    for(const e of f.ents||[]){const ne=norm(e);if(ne.length>=2){(FAQ_IDX.ents[ne]=FAQ_IDX.ents[ne]||[]).push(i)}}
+    for(const k of f.keys||[]){addTerm(FAQ_IDX.keys,norm(k),i)}
+    for(const e of f.ents||[]){addTerm(FAQ_IDX.ents,norm(e),i)}
     const titleWords=(f.title||'').replace(/[()（）\[\]【】]/g,' ').split(/\s+/).filter(w=>w.length>=2);
-    for(const tw of titleWords){const ntw=norm(tw);if(ntw.length>=2){(FAQ_IDX.keys[ntw]=FAQ_IDX.keys[ntw]||[]).push(i)}}
+    for(const tw of titleWords){addTerm(FAQ_IDX.keys,norm(tw),i)}
   }
 }
 /* 渐进式加载：sessionStorage → fetch → 兜底 */
@@ -1182,7 +1190,7 @@ function matchFAQ(q){
     const title=norm(f.title||''), qn=norm(f.q||f.title||'');
     const titleHit=!!(title&&(nq.includes(title)||title.includes(nq)));
     const qHit=!!(qn&&(nq.includes(qn)||qn.includes(nq)));
-    const trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||titleHit||qHit;
+    const trig=(kh>=1)||(eh>=1)||titleHit||qHit;
     if(!trig)continue;
     const diffBoost=(/区别|比较|对比|vs/.test(nq)&&/vs|比较|区别|对比/.test(f.title||''))?8:0;
     const intentBoost=(/为何|为什么|目的|作用/.test(nq)&&/为何|为什么|目的|作用/.test(f.title||''))?6:0;

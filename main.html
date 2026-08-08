@@ -272,6 +272,7 @@ code{font-family:"JetBrains Mono",Consolas,monospace;background:rgba(96,165,250,
 .error-box p{color:var(--t2);font-size:13.5px;line-height:1.8;margin-bottom:10px}
 /* 页脚 */
 footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8}
+	.hamburger{display:none;background:var(--card);border:1px solid var(--bd2);color:var(--t1);border-radius:9px;padding:8px 12px;font-size:20px;cursor:pointer;min-width:44px;min-height:44px;align-items:center;justify-content:center;flex-shrink:0}
 /* ===== 响应式 ===== */
 @media (max-width:1080px){
   .manual-wrap{grid-template-columns:minmax(0,1fr)}
@@ -280,22 +281,61 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
   .qgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
+  .hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--bd2);flex-direction:column;align-items:stretch;padding:4px 10px 10px;gap:2px;z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:11px 14px;font-size:14px;border-radius:10px}
+  .nav-user{gap:8px}
   .qgrid{grid-template-columns:minmax(0,1fr)}
-  .banner{padding:26px 22px}.banner h1{font-size:22px}
-  .chapter{padding:24px 20px}
-  .ch-head h2{font-size:19px}
-  .nav-inner{padding:0 14px}
-  .page{padding:20px 14px 48px}
+  .banner{padding:22px 16px}.banner h1{font-size:19px}
+  .banner::after{font-size:60px;right:8px}
+  .banner p{font-size:13.5px}
+  .banner-stats{gap:12px}
+  .bstat{font-size:12px}
+  .bstat b{font-size:14px}
+  .chapter{padding:20px 14px}
+  .ch-head h2{font-size:17px}
+  .ch-num{font-size:11px;padding:4px 10px}
+  .ch-summary{font-size:12.5px}
+  .sec-head h3{font-size:15px}
+  .sec-body{font-size:13.5px}
+  .sec-body table{font-size:12px}
+  .nav-inner{padding:0 10px}
+  .page{padding:16px 10px 48px}
+  .sec-title{margin:26px 0 12px}.sec-title h2{font-size:17px}
   .logo-sub{display:none}
+  .logo-name{font-size:15px}
+  .logo-icon{width:32px;height:32px;font-size:17px}
   .role-badge .rname{display:none}
-  .switch-btn{padding:6px 10px}
-  .notice{margin:14px 14px 0}
+  .role-badge{padding:5px 10px;font-size:11px}
+  .switch-btn{padding:5px 10px;font-size:11px;min-height:44px}
+  .notice{margin:10px 10px 0;padding:10px 14px;font-size:12.5px}
   .page,.manual-wrap,.chapter,.sec,.sec-body,.sec-meta,.sec-meta .src{min-width:0}
   .chapter,.sec-body,.sec-body p,.sec-body li,.ch-summary{overflow-wrap:anywhere;word-break:break-word}
   .fx{white-space:normal;overflow-wrap:anywhere}
   .fx-block{white-space:normal;overflow-wrap:anywhere}
   .sec-meta .src{overflow-wrap:anywhere}
-  footer{padding:0 14px}
+  footer{padding:0 10px}
+  .qcard{padding:16px}.qcard-title{font-size:15px}
+  .qcard-icon{width:40px;height:40px;font-size:20px}
+  /* touch target minimums on mobile */
+  .toc a{min-height:44px;display:flex;align-items:center}
+  .qcard-go{min-height:44px;display:inline-flex;align-items:center}
+  button{min-height:44px}
+  .toc-mobile select{min-height:44px}
+}
+@media (max-width:360px){
+  .banner{padding:16px 12px}.banner h1{font-size:17px}
+  .banner p{font-size:12.5px}
+  .chapter{padding:14px 10px}
+  .ch-head h2{font-size:15px}
+  .sec-head h3{font-size:14px}
+  .sec-body{font-size:12.5px}
+  .page{padding:12px 8px 40px}
+  .qcard{padding:14px 12px}.qcard-title{font-size:14px}
+  .banner-stats{gap:8px;font-size:11px}
+  .sec-title h2{font-size:15px}
+  .notice{margin:8px 8px 0;padding:8px 10px;font-size:12px}
 }
 </style>
 </head>

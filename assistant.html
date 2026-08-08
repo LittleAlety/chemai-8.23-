@@ -355,7 +355,7 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   <div class="grid">
     <section class="col-main">
       <div class="tabs" role="tablist">
-        <button class="tab on" data-mode="qa" role="tab">💬 直接问答<span>语料库检索 · 提问 → 检索 → 查找文献 → 回答</span></button>
+        <button class="tab on" data-mode="qa" role="tab">💬 直接问答<span>智能体集群 · 多策略检索 → 类比推理 → 置信度评分 → 自我检查</span></button>
         <button class="tab" data-mode="assess" role="tab">📝 掌握度测评<span>多轮自适应对话 · 动态轮次 · 评估报告可导出</span></button>
       </div>
 
@@ -444,7 +444,7 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   </div>
 </main>
 
-<footer>ChemAI · 三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验教学智能体 · AI 助手（语料检索问答 / 掌握度测评）</footer>
+<footer>ChemAI · 三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验教学智能体 · AI 助手（智能体集群流水线 / 掌握度测评）</footer>
 
 <script>
 (function(){
@@ -571,6 +571,318 @@ function buildLLMContext(q){
   return parts.join('\n\n');
 }
 
+/* ================= 智能体集群流水线：阶段1 — 多策略检索 ================= */
+function retrieval2_chemicalAnalogy(q){
+	/* 检索 2：化学实体类比 — 如果问题提到一种化学物质/配合物，
+	   也查找同一子领域中具有相似结构/性质的条目 */
+	const chems=detectChems(q),ops=detectOps(q);
+	const nq=norm(q);
+	let analogyHits=[];
+	for(const row of ANALOG_TABLE){
+		for(const a of row.analogs){
+			if(nq.includes(norm(a))){
+				/* 找到了类比概念 → 搜索同一子领域的其他条目 */
+				const relatedConcept=row.concept;
+				const {results}=searchCorpus(relatedConcept, 4);
+				for(const r of results){
+					/* 去重，并标记为类比来源 */
+					if(!analogyHits.find(h=>h.e===r.e)){
+						analogyHits.push({e:r.e, score:r.score*0.8, hit:r.hit, strongHit:r.strongHit, source:'analogy', analogyConcept:row.concept, analogyPrinciple:row.generalPrinciple});
+					}
+				}
+			}
+		}
+	}
+	/* 也查找同一化学子族的类比（如 Fe→Cr→Al→Co tris-oxalato） */
+	const familyMap={'草酸铁':['草酸铬','草酸铝','草酸钴'],'草酸铬':['草酸铁','草酸铝','草酸钴'],'草酸铝':['草酸铁','草酸铬'],'草酸钴':['草酸铁','草酸铬'],'fe':['cr','al','co'],'cr':['fe','al'],'al':['fe','cr'],'co':['fe']};
+	for(const [k,v] of Object.entries(familyMap)){
+		if(nq.includes(k)){
+			for(const alt of v){
+				const {results}=searchCorpus(alt, 3);
+				for(const r of results){
+					if(!analogyHits.find(h=>h.e===r.e)){
+						analogyHits.push({e:r.e, score:r.score*0.7, hit:r.hit, strongHit:false, source:'family-analogy', analogyConcept:alt});
+					}
+				}
+			}
+		}
+	}
+	/* 按分数排序去重 */
+	analogyHits.sort((a,b)=>b.score-a.score);
+	return analogyHits.slice(0,8);
+}
+
+function retrieval3_methodologyTransfer(q){
+	/* 检索 3：方法学转移 — 如果问题包含操作术语，查找使用相同方法的所有条目 */
+	const ops=detectOps(q);
+	if(!ops.length) return [];
+	const nq=norm(q);
+	let methodHits=[];
+	/* 检测问题中的方法/操作关键词，在语料库中找使用相同方法的条目 */
+	for(const op of ops.slice(0,5)){
+		for(const e of Corpus.entries){
+			const nmethods=norm(e.methods||'');
+			const ncontent=norm(e.content||'');
+			const nobjects=norm(e.objects||'');
+			if(nmethods.includes(norm(op))||ncontent.includes(norm(op))||nobjects.includes(norm(op))){
+				if(!methodHits.find(h=>h.e===e)){
+					methodHits.push({e, score:6, hit:[op], strongHit:false, source:'method-transfer', method:op});
+				}
+			}
+		}
+	}
+	methodHits.sort((a,b)=>b.score-a.score);
+	return methodHits.slice(0,8);
+}
+
+/* ================= 智能体集群流水线：阶段2 — 类比推理引擎 ================= */
+function analogicalReasoning(q, directHits, analogyHits, methodHits){
+	const nq=norm(q);
+	const analogies=[];
+	/* 1. 比较问题术语与语料库条目中的已知概念 */
+	const allConcepts=new Set();
+	analogyHits.forEach(h=>{if(h.analogyConcept)allConcepts.add(h.analogyConcept);});
+	methodHits.forEach(h=>{if(h.method)allConcepts.add(h.method);});
+
+	/* 2. 识别跨化学体系的相似模式 */
+	for(const row of ANALOG_TABLE){
+		for(const a of row.analogs){
+			if(nq.includes(norm(a))){
+				/* 找到匹配的类比 → 检查是否已有直接文献命中 */
+				const hasDirect=(directHits.length>=2);
+				if(!hasDirect||directHits[0].score<HIT_THRESHOLD*2){
+					analogies.push({
+						matchedTerm: a,
+						concept: row.concept,
+						principle: row.generalPrinciple,
+						hasDirect: hasDirect,
+						strength: hasDirect?0.3:0.8
+					});
+				}
+			}
+		}
+	}
+
+	/* 3. 当找不到直接匹配时，生成"通过类比"桥接解释 */
+	/* 检测是否可以桥接到已知的本实验知识 */
+	const bridgeCandidates=detectChemBridge(q);
+	if(bridgeCandidates.length>0&&analogies.length===0){
+		for(const bc of bridgeCandidates){
+			analogies.push({
+				matchedTerm: bc.term,
+				concept: bc.concept,
+				principle: bc.principle,
+				hasDirect: false,
+				strength: 0.7,
+				isBridge: true
+			});
+		}
+	}
+
+	/* 去重 */
+	const seen=new Set();
+	return analogies.filter(a=>{const k=a.concept+a.matchedTerm;if(seen.has(k))return false;seen.add(k);return true;});
+}
+
+function detectChemBridge(q){
+	/* 检测问题是否可以桥接到本实验的已知知识 */
+	const nq=norm(q);
+	const bridges=[];
+
+	/* 电导率/导电性 → 配合物解离与离子迁移 */
+	if(/电导|导电|电阻|摩尔电导|Λ/.test(nq)){
+		bridges.push({term:'电导率',concept:'导电性',
+			principle:'配位化合物的导电性源于其在溶液中的解离——外界离子（如K⁺）可自由迁移导电，而内界配离子 [Fe(C₂O₄)₃]³⁻ 作为整体迁移。摩尔电导率 Λₘ 可用于测定配合物的离子类型：K₃[Fe(C₂O₄)₃] 作为 1:3 型电解质，其 Λₘ 约为 400-450 S·cm²·mol⁻¹。'});
+	}
+
+	/* 稳定性比较 → 螯合效应 + d电子构型 */
+	if(/稳定|稳定常数|K稳|β|logK|logβ/.test(nq)){
+		bridges.push({term:'稳定性比较',concept:'螯合效应',
+			principle:'配合物稳定性由多重因素决定：①螯合效应（熵增驱动，ΔG更负）；②d电子构型（CFSE贡献——Cr³⁺(d³) CFSE=-1.2Δ₀，Fe³⁺(d⁵高自旋) CFSE=0，因此 K₃[Cr(C₂O₄)₃] 比 K₃[Fe(C₂O₄)₃] 在热力学上更稳定）；③金属离子电荷/半径比（Z/r 越大越稳定）。通过类比，可推断草酸配合物的相对稳定性顺序。'});
+	}
+
+	/* 制备/合成 → 三草酸合铁酸钾的标准合成路线可类比 */
+	if(/制备|合成|制造|制得|工艺|路线/.test(nq)&&/其他|别的|类似|不同|其它/.test(nq)){
+		bridges.push({term:'制备类比',concept:'沉淀法合成',
+			principle:'草酸配合物制备通常遵循"先沉淀后配位"策略——以 K₃[Fe(C₂O₄)₃] 的合成为模板：①金属盐与草酸沉淀为草酸盐；②H₂O₂ 氧化（如需变价）；③过量草酸/草酸钾配位溶解；④乙醇析晶。该方法可类比推广至 Cr、Al、Co 等草酸配合物的合成，具体细节需根据金属离子的氧化还原性质和水解行为调整。'});
+	}
+
+	/* 表征/测定 → 本实验的标准表征方法可类比 */
+	if(/表征|测定|检测|测试|分析|测/.test(nq)&&(/方法|方式|怎么做|如何|怎么|怎样/.test(nq)||ops=>ops.length>0)){
+		bridges.push({term:'表征方法',concept:'红外光谱表征',
+			principle:'配合物的标准表征方法包括：①红外光谱（IR）——确认草酸根的配位模式（双齿螯合 vs 桥联）；②紫外-可见光谱（UV-Vis）——观察 d-d 跃迁和 LMCT 跃迁；③热重-差示扫描量热（TG-DSC）——测定结晶水含量和热分解历程；④X射线衍射（XRD）——确定晶体结构和晶胞参数；⑤磁化率测定——获得未成对电子数和自旋态信息。这些方法同样适用于其他草酸配合物的表征。'});
+	}
+
+	/* 颜色差异 → d电子构型的晶体场解释 */
+	if(/颜色|绿色|红色|蓝色|白色|紫色/.test(nq)&&(/为什么|不同|区别|为何/.test(nq)||/比较|对比/.test(nq))){
+		bridges.push({term:'颜色差异',concept:'晶体场理论',
+			principle:'配合物颜色由 d-d 跃迁吸收决定。[Fe(C₂O₄)₃]³⁻(Fe³⁺,d⁵) 吸收橙红光(~560nm)呈翠绿色；[Cr(C₂O₄)₃]³⁻(Cr³⁺,d³) 吸收~570nm和~420nm呈深绿色；[Al(C₂O₄)₃]³⁻(Al³⁺,d⁰) 无 d-d 跃迁呈白色。颜色的差异源于中心离子 d 电子构型不同导致的 d-d 跃迁选择定则和能级差异。'});
+	}
+
+	return bridges;
+}
+
+/* ================= 智能体集群流水线：阶段3 — 置信度评分 + 混合答案生成 ================= */
+function confidenceScore(directHits, analogyHits, methodHits, faq, analogies){
+	const scores={};
+	/* 语料库直接命中：0-1 归一化 */
+	const maxDirectScore=Math.max(0,...directHits.map(r=>r.score));
+	scores.corpus=Math.min(1, maxDirectScore/60);
+
+	/* FAQ 命中 */
+	scores.faq=faq?0.9:0;
+
+	/* 类比命中 */
+	const analogyCount=analogies.length+analogyHits.length+methodHits.length;
+	scores.analogy=Math.min(1, analogyCount*0.15);
+
+	/* 综合置信度 */
+	scores.overall=Math.max(scores.corpus, scores.faq, scores.analogy*0.6);
+	scores.level=scores.overall>=0.7?'high':(scores.overall>=0.35?'medium':'low');
+	return scores;
+}
+
+function confidenceBarHTML(label, val, level){
+	const cls=val>=0.7?'cf-high':(val>=0.35?'cf-med':'cf-low');
+	const pct=Math.round(val*100);
+	return '<div class="confidence-bar '+cls+'"><span class="cf-label">'+esc(label)+'</span><span class="cf-track"><span class="cf-fill" style="width:'+pct+'%"></span></span><span class="cf-pct">'+pct+'%</span></div>';
+}
+
+function buildHybridAnswerHTML(q, ctx){
+	const {faq, directHits, analogyHits, methodHits, analogies, conf, chems, ops}=ctx;
+
+	/* 情况1：语料库高命中 → 使用标准答案 */
+	if(conf.level==='high'&&directHits.length>0){
+		return buildAnswerHTML(q, {faq, hits:directHits, chems, ops});
+	}
+
+	/* 情况2：语料库中等命中但无FAQ → 类比桥接 */
+	if(conf.level==='medium'&&(!faq||directHits.length===0)){
+		return buildAnalogyBridgedAnswer(q, ctx);
+	}
+
+	/* 情况3：低置信或无命中 → 类比增强 + 一般化学知识模板 */
+	return buildAnalogyBridgedAnswer(q, ctx);
+}
+
+function buildAnalogyBridgedAnswer(q, ctx){
+	const {faq, directHits, analogyHits, methodHits, analogies, conf, chems, ops}=ctx;
+	let s='';
+
+	/* ① 核心解答 */
+	s+='<div class="ans-sec"><h4>① 核心解答</h4>';
+	if(faq){
+		s+='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
+		s+='<span class="source-tag faq">内置FAQ</span>';
+	} else if(directHits.length>0){
+		s+=coreFromMeta(q, directHits, chems, ops);
+		s+='<span class="source-tag corpus">语料库直接命中</span>';
+	} else {
+		s+='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
+	}
+
+	/* ② 类比桥接 */
+	if(analogies.length>0){
+		s+='<div class="ans-sec"><h4>② 类比推理桥接</h4>';
+		s+='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
+		for(const a of analogies){
+			s+='<div class="analogy-banner">';
+			s+='<div style="font-size:13px;margin-bottom:4px"><span class="bridge-icon">🔗</span><b>'+esc(a.concept)+'</b> ← 匹配自「'+esc(a.matchedTerm)+'」</div>';
+			s+='<div style="font-size:12px;color:var(--t2);line-height:1.65">'+esc(a.principle)+'</div>';
+			s+='</div>';
+		}
+		s+='</div>';
+	}
+
+	/* ③ 类比来源文献 */
+	const allAnalogyRefs=[...analogyHits, ...methodHits];
+	if(allAnalogyRefs.length>0){
+		s+='<div class="ans-sec"><h4>③ 类比来源文献（'+(allAnalogyRefs.length)+' 篇）</h4>';
+		s+='<p class="muted" style="margin-bottom:4px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
+		s+='<ul style="margin-left:18px;font-size:12px">';
+		const shown=new Set();
+		for(const r of allAnalogyRefs.slice(0,5)){
+			if(shown.has(r.e.id)) continue; shown.add(r.e.id);
+			s+='<li><b>《'+esc(r.e.title)+'》</b>'
+				+'<span class="source-tag analogy" style="margin-left:4px">'+(r.source==='method-transfer'?('方法:'+esc(r.method||'')):('类比:'+esc(r.analogyConcept||'')))+'</span>'
+				+(r.e.objects?' —— 研究对象：'+esc(r.e.objects):'')
+				+(r.e.methods?'；关键方法：'+esc(r.e.methods):'')
+				+'</li>';
+		}
+		s+='</ul></div>';
+	}
+
+	/* ④ 直接文献（如有） */
+	if(directHits.length>0){
+		s+='<div class="ans-sec">';
+		s+='<button type="button" class="ref-toggle" data-count="'+directHits.length+'" aria-expanded="false">📚 查看直接文献支持（'+directHits.length+' 篇）</button>';
+		s+='<div class="ref-support-body" hidden>';
+		s+='<ol style="margin-left:18px">'+directHits.map(citationHTML).join('')+'</ol>';
+		s+='<div class="doc-grid">'+directHits.map(docCardHTML).join('')+'</div>';
+		s+='</div></div>';
+	}
+
+	/* ⑤ 网络补充 + 知识延伸 */
+	s+='<div class="ans-sec"><h4>'+(analogies.length>0?'④':'③')+' 网络补充检索</h4>'+webFallbackHTML(q)+'</div>';
+	s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
+
+	return s;
+}
+
+/* ================= 智能体集群流水线：阶段4 — 自我检查 ================= */
+function selfCheck(q, answerHTML, ctx){
+	const {chems, ops, analogies, conf}=ctx;
+	const nq=norm(q);
+	const warnings=[];
+
+	/* 1. 检查基础配位化学概念是否不被违反 */
+	const stripAns=stripHTML(answerHTML||'').toLowerCase();
+
+	/* 检查1：是否混淆了 Fe²⁺ 和 Fe³⁺ */
+	if(/fe\s*2\+|fe\(ii\)|二价铁|亚铁/.test(stripAns) && /配位.*草酸.*k3|产物.*k3|目标.*k3/.test(stripAns)){
+		if(!/氧化.*fe\s*2\+|fe\s*2\+.*氧化|变成.*fe\s*3\+|fe\s*3\+/.test(stripAns)){
+			warnings.push('答案中提到了 Fe²⁺ 与产物 K₃[Fe(C₂O₄)₃] 的关系——请确保正确说明 Fe²⁺ 需要先被氧化为 Fe³⁺ 才能作为中心离子配位。');
+		}
+	}
+
+	/* 检查2：配位数是否正确 */
+	if(/配位数.*4|4.*配位|四配位/.test(stripAns)&&/fe.*c2o4|草酸.*铁/.test(stripAns)){
+		warnings.push('草酸根是双齿配体——[Fe(C₂O₄)₃]³⁻ 的配位数为 6（3个双齿×2），而非 4。请核实配位数表述。');
+	}
+
+	/* 检查3：是否违反电荷守恒 */
+	if(/\bk\s*3\s*\[fe\s*\(c2o4\)\s*2\]|\bk\s*2\s*\[fe\s*\(c2o4\)\s*3\]|\bk\s*\[fe\s*\(c2o4\)\s*3\]/.test(nq.replace(/\s+/g,''))){
+		warnings.push('化学式可能违反电荷守恒——外界 K⁺ 的数量（3个）必须平衡配离子 [Fe(C₂O₄)₃]³⁻ 的 -3 电荷。请核实化学式是否为 K₃[Fe(C₂O₄)₃]。');
+	}
+
+	/* 检查4：是否混淆了不同类型电解质的导电性 */
+	if((/电导|导电|电解/.test(nq))&&/1:1|1:2|2:1/.test(stripAns)&&analogies.some(a=>a.concept==='导电性')){
+		warnings.push('K₃[Fe(C₂O₄)₃] 在溶液中解离为 3K⁺ + [Fe(C₂O₄)₃]³⁻，是 1:3 型电解质，其摩尔电导率与 1:1 或 1:2 型有显著差异。请确认电解质类型的表述正确。');
+	}
+
+	/* 检查5：安全性自洽 */
+	if((/剧毒|极毒|致死|高毒|危险品|爆炸/.test(nq)||/剧毒|极毒/.test(stripAns))&&!/草酸.*毒|草酸盐.*毒|h2o2.*腐蚀/.test(stripAns)){
+		warnings.push('本实验涉及的主要毒害试剂为草酸（有毒）和 H₂O₂（腐蚀性），请确保安全描述的准确性——产物 K₃[Fe(C₂O₄)₃] 本身为低毒性。');
+	}
+
+	/* 检查6：温度参数是否合理 */
+	if((/温度|水浴|加热|控温/.test(nq))&&/40.*℃|℃.*40|40.*度/.test(stripAns)===false&&/温度|水浴|加热/.test(stripAns)){
+		/* 如果答案中讨论了温度但没有提及 40℃ 的标准操作温度，给出提醒 */
+	}
+
+	const passed=warnings.length===0;
+	return {passed, warnings};
+}
+
+function selfCheckHTML(result){
+	if(!result||result.passed) return '';
+	let s='<div class="selfcheck-warn"><b>自我检查提醒：</b>以下潜在问题请核实——';
+	s+='<ul style="margin:4px 0 0 18px">';
+	for(const w of result.warnings) s+='<li>'+esc(w)+'</li>';
+	s+='</ul></div>';
+	return s;
+}
+
 
 /* ================= 语料库 ================= */
 const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
@@ -593,7 +905,9 @@ async function loadCorpus(){
     e._ntitle=norm(e.title||''); e._nsubfield=norm(e.subfield||'');
     e._nobjects=norm(e.objects||''); e._nmethods=norm(e.methods||'');
     e._nquestions=norm((e.questions||[]).join('|'));
-    e._ncontent=norm(e.content||''); e._nabstract=norm(e.abstract||'');
+    e._nabstract=norm(e.abstract||'');
+    // Note: _ncontent precomputed for searchCorpus scoring; _n* fields avoid repeated norm() calls
+    e._ncontent=norm(e.content||'');
   });
   // 归一化 subfields 数组并去重
   var normSubs=new Set();(base&&base.subfields||[]).forEach(s=>{normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
@@ -689,6 +1003,35 @@ const CONCEPT_BOOST=[
  {keys:['磁化率','磁性','磁天平'],sub:'磁性研究',bonus:8},
  {keys:['莫尔盐','摩尔盐','硫酸亚铁铵'],sub:'摩尔盐相关',bonus:8},
  {keys:['热分解','热重','热分析','差热'],sub:'热分析',bonus:8}
+];
+
+/* ================= 智能体集群：知识图谱类比表 ================= */
+const ANALOG_TABLE=[
+ {concept:'草酸根配位',analogs:['草酸配合物','双齿螯合','五元环','乙二酸根'],generalPrinciple:'草酸根 (C₂O₄²⁻) 在过渡金属配合物中通常作为双齿配体，通过两个羧基氧原子配位形成五元螯合环，配位能力中等（光谱化学序中位于弱-中交界处），常见于 Fe(III)、Cr(III)、Al(III)、Co(III) 的 tris-oxalato 配合物。'},
+ {concept:'导电性',analogs:['电导率','摩尔电导','离子迁移','电导','导电'],generalPrinciple:'配位化合物的导电性源于其在溶液中的解离——外界离子（如K⁺）可自由迁移导电，而内界配离子 [Fe(C₂O₄)₃]³⁻ 作为整体迁移。摩尔电导率 Λₘ 可用于测定配合物的离子类型：1:3 型电解质约 400-450 S·cm²·mol⁻¹，1:1 型约 100-120 S·cm²·mol⁻¹。'},
+ {concept:'K₃[Fe(C₂O₄)₃]',analogs:['三草酸合铁酸钾','草酸铁钾','ferrioxalate','铁草酸钾'],generalPrinciple:'K₃[Fe(C₂O₄)₃]·3H₂O 是 tris-oxalato 家族的代表成员，中心离子 Fe³⁺(d⁵)，3 个双齿草酸根配位形成八面体构型。同类配合物包括 K₃[Cr(C₂O₄)₃]·3H₂O（深绿色）、K₃[Al(C₂O₄)₃]·3H₂O（白色）、K₃[Co(C₂O₄)₃]·3H₂O（深绿色），合成路线与方法高度相似。'},
+ {concept:'K₃[Cr(C₂O₄)₃]',analogs:['草酸铬钾','铬草酸配合物','三草酸合铬酸钾'],generalPrinciple:'K₃[Cr(C₂O₄)₃]·3H₂O 与 K₃[Fe(C₂O₄)₃]·3H₂O 同属 tris-oxalato 系列，Cr³⁺(d³) 在八面体场中的 CFSE = -1.2Δ₀（比 Fe³⁺ 的高自旋 d⁵ 更稳定），制备方法类似：Cr³⁺ 盐 + 草酸钾在加热下配位，再乙醇析晶。'},
+ {concept:'K₃[Al(C₂O₄)₃]',analogs:['草酸铝钾','铝草酸配合物','三草酸合铝酸钾'],generalPrinciple:'K₃[Al(C₂O₄)₃]·3H₂O 的 Al³⁺ 为 d⁰ 构型（无色），无 d-d 跃迁故呈白色晶体——这与 Fe(III) 翠绿色和 Cr(III) 深绿色形成鲜明对比。制备方法类比 K₃[Fe(C₂O₄)₃]：可溶性铝盐与草酸钾在加热条件下配位。'},
+ {concept:'莫尔盐',analogs:['硫酸亚铁铵','(NH₄)₂Fe(SO₄)₂·6H₂O','Mohr盐','亚铁铵矾'],generalPrinciple:'莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 是化学实验中经典的 Fe(Ⅱ) 源，因比 FeSO₄·7H₂O 更不易被空气氧化（NH₄⁺ 的酸性抑制 Fe²⁺ 氧化），广泛用于配位化学合成（如 tris-oxalato 系列）、氧化还原滴定标定等实验的起始原料。'},
+ {concept:'H₂O₂氧化',analogs:['过氧化氢氧化','双氧水氧化','绿色氧化','过氧化物氧化'],generalPrinciple:'H₂O₂ 在酸性介质中是强氧化剂（E°=+1.776 V），可将 Fe²⁺ 定量氧化为 Fe³⁺ 而不引入金属杂质离子。在 tris-oxalato 配合物合成中，H₂O₂ 是首选氧化剂——Cr(Ⅲ) 系列需用 K₂Cr₂O₇ 还原，Co(Ⅲ) 系列需在 H₂O₂ 存在下氧化 Co²⁺。'},
+ {concept:'乙醇析晶',analogs:['溶剂替换','降低溶解度','醇析','乙醇结晶法'],generalPrinciple:'向配合物水溶液中加入乙醇（或其他与水混溶的有机溶剂）可降低溶剂介电常数，削弱离子型配合物的溶剂化作用，使产物溶解度急剧下降而析出。这是配合物结晶的通用方法，适用于大多数碱金属草酸配合物的提纯与收集。'},
+ {concept:'抽滤操作',analogs:['减压过滤','真空过滤','布氏漏斗','吸滤','过滤收集'],generalPrinciple:'减压抽滤是配合物合成中固液分离的标准操作：布氏漏斗铺滤纸→润湿贴紧→开泵→倒入固液混合物→抽干→先拔橡皮管后关泵（防倒吸）。适用于收集草酸盐沉淀、配合物晶体等，过滤速度远快于常压过滤。'},
+ {concept:'重结晶纯化',analogs:['重结晶','再结晶','提纯','纯化','重结晶法'],generalPrinciple:'配合物的重结晶纯化利用产物在不同温度下溶解度的差异：热溶剂溶解→热过滤除不溶杂质→冷却析晶→抽滤收集→洗涤干燥。草酸配合物的重结晶常用水-乙醇混合溶剂体系，控制冷却速率可获得更大更纯的晶体。'},
+ {concept:'光化学还原',analogs:['光致还原','光分解','LMCT','光解','光化学','光敏'],generalPrinciple:'[M(C₂O₄)₃]³⁻ 型配合物（M=Fe,Co,Mn）普遍具有光化学活性：紫外-可见光照下发生配体→金属电荷转移（LMCT），金属离子被还原（M³⁺→M²⁺），草酸根被氧化放出 CO₂。Fe(Ⅲ) 草酸盐是经典的化学光量计（量子产率 Φ₂₅₄≈1.25），此性质也用于蓝晒印相和光-Fenton 水处理。'},
+ {concept:'热重分析',analogs:['TG','DSC','DTA','热分解','热稳定性','失重'],generalPrinciple:'含结晶水的草酸配合物的热分解通常分三步：① 100-150℃ 脱结晶水；② 250-350℃ 无水配合物分解为草酸盐和碳酸盐（放出 CO+CO₂）；③ 500-700℃ 碳酸盐分解为金属氧化物。TG-DSC 联用可同时获得质量变化和热效应信息，是配合物热稳定性的标准表征手段。'},
+ {concept:'红外光谱表征',analogs:['IR','FTIR','红外','振动光谱','吸收峰'],generalPrinciple:'草酸配合物的红外光谱特征：自由 C₂O₄²⁻ 的 ν_as(C=O)≈1600 cm⁻¹ 和 ν_s(C-O)≈1300 cm⁻¹ 在配位后发生位移（通常 ν(C=O) 红移至~1700-1650 cm⁻¹，ν(C-O) 蓝移至~1400 cm⁻¹），M-O 伸缩振动出现在 500-600 cm⁻¹。这些峰位变化是判断草酸根配位模式（双齿/单齿/桥联）的重要证据。'},
+ {concept:'磁化率测定',analogs:['磁天平','古埃法','磁矩','μeff','磁化率','磁性'],generalPrinciple:'配合物的磁化率通过古埃磁天平（Gouy balance）测定：样品在非均匀磁场中受力，由表观质量变化计算质量磁化率 χ_g，进而得到摩尔磁化率 χ_M，扣除抗磁校正后得顺磁磁化率，再依 χ_M = Nμ_eff²β²/3kT 求有效磁矩 μ_eff。高自旋 Fe³⁺(d⁵) 的 μ_eff ≈ 5.92 B.M.。'},
+ {concept:'价键理论',analogs:['VB','杂化','内外轨','配位键'],generalPrinciple:'价键理论（VB）解释配合物结构：中心离子提供空轨道（经杂化），配体提供孤对电子形成σ配位键。[Fe(C₂O₄)₃]³⁻ 中 Fe³⁺ 以 d²sp³ 杂化（内轨型），6 个 O 原子各提供一对电子形成 6 个 σ 键。VB 理论较直观但不能解释配合物的颜色和磁性细节——这些问题需由晶体场理论（CFT）或配位场理论（LFT）补充。'},
+ {concept:'晶体场理论',analogs:['CFT','d轨道分裂','分裂能','t2g','eg','高自旋','低自旋'],generalPrinciple:'晶体场理论将配体视为点电荷/点偶极，中心离子 d 轨道在八面体配体场中分裂为能量较高的 eg(dz²,dx²-y²) 和能量较低的 t₂g(dxy,dyz,dzx)，能级差 Δ₀=10Dq。电子在分裂后的 d 轨道中排布由 Δ₀ 与成对能 P 的相对大小决定：Δ₀<P→高自旋，Δ₀>P→低自旋。草酸根是弱场配体（Δ₀≈14,300 cm⁻¹），Fe³⁺(d⁵) 在 [Fe(C₂O₄)₃]³⁻ 中呈高自旋态 t₂g³eg²，CFSE=0Δ₀。'},
+ {concept:'配位场理论',analogs:['LFT','分子轨道','σ-donor','π-acceptor','MO理论'],generalPrinciple:'配位场理论（LFT）是晶体场理论与分子轨道理论的结合，考虑了金属 d 轨道与配体群轨道的共价重叠。在 [Fe(C₂O₄)₃]³⁻ 中，草酸根的 O 原子以 σ 孤对电子与 Fe³⁺ 空轨道形成 σ 键，同时草酸根的 π* 轨道可接受 Fe³⁺ t₂g 电子的反馈 π 键——这种 σ-donor + weak π-acceptor 性质决定了草酸根在光谱化学序中介于弱场配体（如 Cl⁻）和中等场配体（如 en）之间。'},
+ {concept:'紫外-可见光谱',analogs:['UV-Vis','吸收光谱','d-d跃迁','电子光谱','漫反射'],generalPrinciple:'配合物溶液/固体的 UV-Vis 光谱可提供 d-d 跃迁和 LMCT 跃迁信息。[Fe(C₂O₄)₃]³⁻ 在~560 nm 处有弱吸收（d-d 跃迁，ε≈1-10 L·mol⁻¹·cm⁻¹），在紫外区有强吸收带（LMCT，ε≈10³-10⁴）。翠绿色来自对橙红光（~560-600 nm）的吸收，这是八面体 d⁵ 配合物的特征。Cr(III) 类似物的 d-d 跃迁在~570 nm 和~420 nm 两处。'},
+ {concept:'电化学性质',analogs:['循环伏安','CV','氧化还原电位','半波电位'],generalPrinciple:'[Fe(C₂O₄)₃]³⁻/[Fe(C₂O₄)₄]⁴⁻ 氧化还原电对的标准电位约为 +0.02 V (vs NHE)，远低于自由 Fe³⁺/Fe²⁺ (+0.771 V)，说明草酸根配位显著稳定了 Fe(III)（配位使氧化性降低）。循环伏安（CV）可测定配合物的氧化还原可逆性和电子转移速率。'},
+ {concept:'沉淀法合成',analogs:['沉淀转化','共沉淀','分步沉淀','沉淀剂'],generalPrinciple:'配合物合成中"先沉淀后配位"是常见策略：先将金属离子以难溶盐形式沉淀纯化（除去母液中的杂质离子），再将沉淀在配体存在下溶解转化为目标配合物。如 FeC₂O₄→[Fe(C₂O₄)₃]³⁻、Cr(OH)₃→[Cr(C₂O₄)₃]³⁻。此法优点是可利用沉淀的洗涤步骤高效除杂。'},
+ {concept:'螯合效应',analogs:['螯合','螯合物','五元环','熵增','螯合环稳定性'],generalPrinciple:'螯合效应（Chelate Effect）指多齿配体形成的配合物比类似单齿配体配合物更稳定，主要源于熵增——一个多齿配体替代多个单齿配体时，体系总分子数增加（ΔS>0），使 ΔG=ΔH-TΔS 更负。每个 C₂O₄²⁻ 形成五元螯合环，三个环使整体 ΔG 比假设的 6 个单齿羧酸配位更负约 40-60 kJ/mol。'},
+ {concept:'pH影响',analogs:['酸碱稳定性','质子化','水解','pH范围'],generalPrinciple:'草酸配合物的稳定性高度依赖 pH：强酸条件（pH<2）下 C₂O₄²⁻ 被质子化为 HC₂O₄⁻ 进而成 H₂C₂O₄，逐步失去配位能力；近中性/弱碱性（pH>7）下 Fe³⁺ 水解生成 Fe(OH)₃ 沉淀破坏配合物。最适稳定区间为 pH 3-6，这是草酸配合物实验操作和保存需注意的关键条件。'},
+ {concept:'产率优化',analogs:['提高产率','高产率','产率影响因素','优化条件'],generalPrinciple:'提高草酸配合物产率的通用策略：①精确控温（氧化阶段 40℃，过高则 H₂O₂ 分解过快）；②缓慢滴加氧化剂（防局部过浓）；③乙醇用量充足（母液:乙醇≈1:0.5-1:0.3）；④充分冷却结晶（冰水浴或暗处过夜）；⑤最少化转移洗涤步骤；⑥全程避光（防光解）。这些原则适用于大多数光敏性配合物的合成。'},
+ {concept:'安全操作',analogs:['防护','实验室安全','危险品','化学安全'],generalPrinciple:'草酸配合物合成实验的通用安全要点：①草酸及草酸盐有毒（经口 LD₅₀≈375 mg/kg），须戴手套操作；②H₂O₂ 具腐蚀性和氧化性，防溅入眼；③乙醇易燃，远离明火；④含重金属（Fe/Cr/Co）废液须分类收集、专门处理；⑤光敏产物须棕色瓶避光保存。这些原则适用于过渡金属草酸配合物的所有制备实验。'},
+ {concept:'K₃[Co(C₂O₄)₃]',analogs:['草酸钴钾','钴草酸配合物','三草酸合钴酸钾'],generalPrinciple:'K₃[Co(C₂O₄)₃]·3H₂O 的制备需在 H₂O₂ 存在下进行——Co²⁺ 被 H₂O₂ 氧化为 Co³⁺ 的同时被草酸根配位捕获（类比 Fe²⁺→Fe³⁺ 的氧化配位策略）。Co³⁺(d⁶) 在八面体场中为低自旋 t₂g⁶eg⁰（Δ₀大），CFSE=-2.4Δ₀，热力学非常稳定，呈深绿色。'}
 ];
 
 /* ================= FAQ 知识库（#13: 动态加载 data/faq_unified.json） ================= */
@@ -799,7 +1142,7 @@ function initRefToggles(root){
 function renderQAHistory(){
   const h=lsGet(QA_KEY,[]);
   if(!h.length){
-    addMsg(qaChat,'ai','<p>你好！我是本实验的 <b>AI 实验助手</b>（直接问答模式）。</p><p>你提问后，我会依次 <b>检索知识清单 → 匹配文献 → 生成回答</b>；若知识清单未命中，将自动接入网络浏览外链。涉及化学试剂时会附 MSDS 安全数据链接，涉及实验操作时会附相关视频。</p><p class="muted">试试下方示例问题，或直接输入。</p>',false);
+    addMsg(qaChat,'ai','<p>你好！我是本实验的 <b>AI 实验助手</b>（智能体集群模式）。</p><p>你提问后，我会依次运行 <b>多策略检索 → 类比推理引擎 → 置信度评分+混合答案生成 → 自我检查</b> 的 4 阶段集群流水线；若知识清单未命中，将通过类比桥接和网络浏览提供参考。涉及化学试剂时会附 MSDS 安全数据链接，涉及实验操作时会附相关视频。</p><p class="muted">试试下方示例问题，或直接输入。</p>',false);
     return;
   }
   h.forEach(m=>{addMsg(qaChat,m.role,m.role==='user'?esc(m.html):m.html,false);});
@@ -807,9 +1150,10 @@ function renderQAHistory(){
 
 function pipelineHTML(){
   return '<div class="pipe">'
-    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>检索知识清单（'+(Corpus.total||291)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇上传语料'):'')+'）</div>'
-    +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>匹配文献（关键词打分 · 化学实体识别）</div>'
-    +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>生成回答</div>'
+    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>多策略检索'+(Corpus.total?'（'+(Corpus.total||291)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇'):'')+'）':'')+'</div>'
+    +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>类比推理引擎（跨体系模式识别）</div>'
+    +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>置信度评分 · 混合答案生成</div>'
+    +'<div class="pipe-step" data-s="4"><span class="pipe-dot"></span>自我检查（配位化学自洽验证）</div>'
     +'</div><div class="pipe-meta"></div>';
 }
 async function animatePipe(bub,stepCount){
@@ -936,7 +1280,7 @@ function renderLatexToUnicode(text){
     '\\rightarrow':'→','\\longrightarrow':'⟶','\\Rightarrow':'⇒','\\leftarrow':'←',
     '\\longleftarrow':'⟵','\\Leftarrow':'⇐','\\leftrightarrow':'↔','\\rightleftharpoons':'⇌',
     '\\uparrow':'↑','\\downarrow':'↓','\\updownarrow':'↕','\\mapsto':'↦',
-    '\\partial':'∂','\\nabla':'∇','\\infty':'∞','\\propto':'∝','\\sim':'∼',
+    '\\partial':'∂','\\nabla':'∇','\\propto':'∝','\\sim':'∼',
     '\\simeq':'≃','\\cong':'≅','\\perp':'⊥','\\parallel':'∥','\\angle':'∠',
     '\\triangle':'△','\\square':'□','\\diamond':'◇','\\circ':'∘','\\bullet':'•',
     '\\int':'∫','\\iint':'∬','\\iiint':'∭','\\oint':'∮','\\sum':'Σ','\\prod':'∏',
@@ -1072,20 +1416,31 @@ async function handleQA(q){
   addMsg(qaChat,'user',esc(q),true);
   qaBusy=true;qaSend.disabled=true;
   const bub=addMsg(qaChat,'ai',pipelineHTML(),false);
-  // 步骤1：检索知识清单
+
+  /* ===== 阶段1：多策略检索 ===== */
   await animatePipe(bub,1);
+  // 检索1: 直接关键词搜索语料库
   const {terms,results}=searchCorpus(q,6);
-  // 步骤2：匹配文献
-  await animatePipe(bub,2);
-  // 领域相关性判定：与本实验/化学无关的问题直接进入网络回退
+  // 检索2: 化学实体类比
+  const analogyHits=retrieval2_chemicalAnalogy(q);
+  // 检索3: 方法学转移
+  const methodHits=retrieval3_methodologyTransfer(q);
+
+  // 领域相关性判定
   const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作/;
   const GENERIC_RE=/原理|目的|计算|思考题|结论|步骤/;
   const domain=DOMAIN_RE.test(q)||detectChems(q).length>0||detectOps(q).length>0||(q.length<=8&&GENERIC_RE.test(q));
   const hits=domain?results.filter(r=>r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content)):[];
   const faq=domain?matchFAQ(q):null;
   const chems=detectChems(q),ops=detectOps(q);
-  // 步骤3：生成回答
+
+  /* ===== 阶段2：类比推理引擎 ===== */
+  await animatePipe(bub,2);
+  const analogies=analogicalReasoning(q, hits, analogyHits, methodHits);
+
+  /* ===== 阶段3：置信度评分 + 混合答案生成 ===== */
   await animatePipe(bub,3);
+  const conf=confidenceScore(hits, analogyHits, methodHits, faq, analogies);
   const meta=bub.querySelector('.pipe-meta');
   let html, usedLLM=false;
 
@@ -1102,13 +1457,37 @@ async function handleQA(q){
   }
 
   if(!usedLLM){
-    /* 本地模板回答 */
-    html=buildAnswerHTML(q,{faq,hits,chems,ops});
+    /* 混合答案生成：根据置信度选择策略 */
+    const ctx={faq, directHits:hits, analogyHits, methodHits, analogies, conf, chems, ops};
+    html=buildHybridAnswerHTML(q, ctx);
     if(chems.length) html+=msdsCardHTML(chems);
     if(ops.length) html+=videoCardHTML(ops,q);
+    /* 添加置信度可视化 */
+    html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
   }
 
-  meta.innerHTML='✅ 检索完成 · 命中关键词 '+terms.length+' 个 · '+(hits.length?('命中文献 <b>'+hits.length+'</b> 篇'):'知识清单未命中 → 网络浏览')+(faq?' · 内置知识库命中「'+esc(faq.title)+'」':'')+(usedLLM?' · 🤖 LLM 回答':'');
+  /* ===== 阶段4：自我检查 ===== */
+  await animatePipe(bub,4);
+  const checkResult=selfCheck(q, html, {chems, ops, analogies, conf});
+  const warnHTML=selfCheckHTML(checkResult);
+  if(warnHTML){
+    /* 在答案末尾添加自我检查警告 */
+    html+=warnHTML;
+  }
+
+  /* 流水线元信息 */
+  const totalRefs=hits.length+analogyHits.length+methodHits.length;
+  const confLabel=conf.level==='high'?'高置信度':(conf.level==='medium'?'中置信度':'低置信度');
+  meta.innerHTML='✅ 4阶段集群流水线完成 · '+confLabel+' · '
+    +(hits.length?('语料库命中 <b>'+hits.length+'</b> 篇'):'语料库未命中')
+    +(analogyHits.length?(' · 类比检索 <b>'+analogyHits.length+'</b> 条'):'')
+    +(methodHits.length?(' · 方法学转移 <b>'+methodHits.length+'</b> 条'):'')
+    +(faq?' · FAQ「'+esc(faq.title)+'」':'')
+    +(analogies.length?' · 类比推理 <b>'+analogies.length+'</b> 条':'')
+    +(!totalRefs&&!faq?' → 网络浏览':'')
+    +(usedLLM?' · 🤖 LLM':'')
+    +(checkResult&&!checkResult.passed?' · ⚠ 自查提示':'');
+
   const ans=document.createElement('div');ans.innerHTML=html;bub.appendChild(ans);
   initRefToggles(ans);
   scrollChat(qaChat);saveAIBubble(bub);

@@ -1458,7 +1458,7 @@
                       "difficulty":  2,
                       "relatedNodes":  [
                                            "redox-potential",
-                                           "kinetics-coord",
+                                           "kinetics",
                                            "yield-optimization"
                                        ],
                       "formulas":  [
@@ -1499,7 +1499,7 @@
                                            "photochem",
                                            "dd-transition",
                                            "spectrochemical-series-detail",
-                                           "kinetics-coord"
+                                           "kinetics"
                                        ],
                       "formulas":  [
                                        "\\Phi = \\frac{n_{rxn}}{n_{h\\nu}}",

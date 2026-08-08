@@ -92,7 +92,7 @@ function buildContext(q) {
 function callLLM(question, context) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
-      model: 'deepseek-chat',
+      model: 'deepseek-flash',
       messages: [
         {role:'system', content:'你是ChemAI实验助手。严格基于参考内容回答。标注来源。如无参考内容说知识清单未命中。'},
         {role:'system', content: context},

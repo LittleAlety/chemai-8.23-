@@ -11,7 +11,7 @@ const FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
 const QUESTIONS = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r2.json');
 const API_KEY = process.env.DEEPSEEK_KEY;
-const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-flash';
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 const norm = s => String(s || '')

@@ -9,7 +9,7 @@ const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.s
 
 let FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
-const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-flash';
 const BATCH = 10;
 const TARGET = 200;
 const ROUNDS = Number(process.env.ROUNDS || 3);

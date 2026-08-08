@@ -26,7 +26,7 @@ if (!API_KEY) {
   process.exit(1);
 }
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
-const MODEL = 'deepseek-chat';
+const MODEL = 'deepseek-flash';
 const RATE_LIMIT_MS = 500;
 
 // ===================== FILE LOADING =====================

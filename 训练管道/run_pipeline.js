@@ -32,19 +32,19 @@ const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 // ===== 配置 =====
 const CONFIGS = {
   quick: {
-    model: 'deepseek-chat', modelFlash: 'deepseek-chat',
+    model: 'deepseek-flash', modelFlash: 'deepseek-flash',
     cycles: 10, questionsPerCycle: 50, rateMs: 300,
     excludedCats: ['蓝晒工艺', '摩尔盐相关', '草酸配合物'],
-    description: '快速模式 — deepseek-chat, 50题/轮, 14分类'
+    description: '快速模式 — deepseek-flash, 50题/轮, 14分类'
   },
   full: {
-    model: 'deepseek-v4-pro', modelFlash: 'deepseek-v4-pro',
+    model: 'deepseek-flash', modelFlash: 'deepseek-flash',
     cycles: 30, questionsPerCycle: 102, rateMs: 200,
     excludedCats: [],
-    description: '完整模式 — deepseek-v4-pro全代理, 102题/轮, 17分类全覆盖, 30轮'
+    description: '完整模式 — deepseek-flash全代理, 102题/轮, 17分类全覆盖, 30轮'
   },
   single: {
-    model: 'deepseek-v4-pro', modelFlash: 'deepseek-v4-flash',
+    model: 'deepseek-flash', modelFlash: 'deepseek-flash',
     cycles: 1, questionsPerCycle: 200, rateMs: 150,
     excludedCats: [],
     description: '单轮模式 — 200题, 17分类加权分配'

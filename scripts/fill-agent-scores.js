@@ -8,7 +8,7 @@ const readJSON = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8
 const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.stringify(data, null, 2), 'utf8');
 
 const FAQ = readJSON('data/faq_unified.json');
-const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-flash';
 const API_KEY = process.env.DEEPSEEK_KEY;
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 

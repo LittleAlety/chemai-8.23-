@@ -10,7 +10,7 @@ const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.s
 const FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
 const API_KEY = process.env.DEEPSEEK_KEY;
-const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-flash';
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 const BATCH = 10;
 const TARGET = 400;

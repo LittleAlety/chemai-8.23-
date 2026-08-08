@@ -1190,7 +1190,7 @@ function matchFAQ(q){
     const title=norm(f.title||''), qn=norm(f.q||f.title||'');
     const titleHit=!!(title&&(nq.includes(title)||title.includes(nq)));
     const qHit=!!(qn&&(nq.includes(qn)||qn.includes(nq)));
-    const trig=(kh>=1)||(eh>=1)||titleHit||qHit;
+    const trig=(kh>=1)||(eh>=1)||titleHit||qHit; // relaxed threshold: single key/entity match triggers candidate
     if(!trig)continue;
     const diffBoost=(/区别|比较|对比|vs/.test(nq)&&/vs|比较|区别|对比/.test(f.title||''))?8:0;
     const intentBoost=(/为何|为什么|目的|作用/.test(nq)&&/为何|为什么|目的|作用/.test(f.title||''))?6:0;

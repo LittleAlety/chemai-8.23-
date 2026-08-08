@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -44,7 +44,7 @@ a:hover{color:var(--em)}
 .nav a:hover{color:var(--t1);background:var(--hover)}
 .nav a.on{color:var(--em)}
 .nav a.on::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;border-radius:2px;background:var(--em)}
-.nav-toggle{display:none;margin-left:auto;background:var(--card);border:1px solid var(--bd2);color:var(--t1);border-radius:9px;padding:7px 12px;font-size:16px;cursor:pointer}
+.nav-toggle{display:none;margin-left:auto;background:var(--card);border:1px solid var(--bd2);color:var(--t1);border-radius:9px;padding:8px 12px;font-size:20px;cursor:pointer;min-width:44px;min-height:44px}
 @media (max-width:960px){
   .nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--bd2);flex-direction:column;align-items:stretch;padding:10px 16px;gap:2px}
   .nav.open{display:flex}
@@ -59,6 +59,13 @@ a:hover{color:var(--em)}
 .page-head .sub{color:var(--t2);font-size:13.5px;margin-top:4px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}
 @media (max-width:1080px){.grid{grid-template-columns:1fr}}
+@media (max-width:900px){
+  .tabs{flex-direction:row;gap:6px}
+  .tab{padding:9px 10px;font-size:13.5px}
+  .tab span{font-size:10.5px}
+  .col-side{gap:12px}
+  .side-card{padding:12px}
+}
 
 /* ===== Tab ===== */
 .tabs{display:flex;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:8px;margin-bottom:16px;box-shadow:var(--shadow)}
@@ -267,13 +274,62 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
 .db-svg{width:100%;height:auto}
 .db-label{font-size:11px}
 @media (max-width:640px){
+  .topbar-inner{padding:0 10px;gap:12px;flex-wrap:wrap}
+  .brand-tx i{display:none}
+  .brand-ic{width:32px;height:32px;font-size:17px}
+  .brand-tx b{font-size:15px}
+  .nav-toggle{min-width:44px;min-height:44px}
+  .nav a{padding:11px 14px;font-size:14px;min-height:44px;display:flex;align-items:center}
+  .wrap{padding:16px 10px 48px}
+  .page-head h1{font-size:20px}
+  .page-head .sub{font-size:12px}
+  .grid{grid-template-columns:1fr}
+  .col-side{position:static;flex-direction:column}
+  .side-card{padding:14px}
+  .tabs{flex-direction:column;gap:6px}
+  .tab{padding:10px 12px;min-height:44px}
+  .tab span{font-size:11px}
   .bubble{max-width:94%}
-  .page-head h1{font-size:21px}
-  .chat{max-height:none;min-height:320px}
-  .composer{padding:10px 12px 13px}
+  .chat{max-height:none;min-height:280px;padding:14px 12px 8px}
+  .composer{padding:10px 10px 12px;gap:8px}
+  .composer textarea{padding:10px 12px;font-size:13px}
+  .btn{padding:10px 14px;font-size:13px;min-height:44px}
+  .btn.sm{padding:8px 12px;min-height:36px}
+  .chips{padding:0 10px 8px;gap:6px}
+  .chip{font-size:11px;padding:6px 10px}
+  .quick{padding:0 10px 8px;gap:6px}
+  .msg .avatar{width:30px;height:30px;font-size:14px}
+  .rp-top{flex-direction:column;align-items:flex-start}
+  .ring{width:100px;height:100px}
+  .ring .ring-txt b{font-size:24px}
+  .report{padding:14px 12px}
+  .report h2{font-size:17px}
+  .kp-row .kp-head{font-size:12px}
   .timing-summary{flex-direction:column}
-  .timing-card{min-width:auto}
+  .timing-card{min-width:auto;padding:10px 12px}
+  .timing-info b{font-size:17px}
+  .doc-grid{grid-template-columns:1fr}
+  .doc-card{padding:10px 12px}
+  .panel-bar{padding:10px 12px;flex-wrap:wrap;gap:8px}
+  #llmConfig input,#llmConfig select{font-size:11px}
+  footer{padding:14px 10px;font-size:11px}
 }
+
+@media (max-width:360px){
+  .topbar-inner{gap:6px}
+  .brand-tx b{font-size:13px}
+  .wrap{padding:12px 6px 40px}
+  .page-head h1{font-size:18px}
+  .bubble{padding:10px 12px;font-size:13px}
+  .composer textarea{padding:8px 10px;font-size:12px}
+  .btn{padding:8px 12px;font-size:12px}
+  .tab{padding:8px 10px;font-size:13px}
+  .side-card{padding:10px}
+  .msg .avatar{width:26px;height:26px;font-size:12px}
+  .chat{min-height:240px;padding:10px 8px 6px}
+  .katex{font-size:1em}
+}
+
 
 /* Print stylesheet */
 @media print{

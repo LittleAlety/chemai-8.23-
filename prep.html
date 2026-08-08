@@ -162,7 +162,18 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
   .flow{padding:14px 16px}
   footer{padding:0 10px}
 }
-</style>
+@media (max-width:360px){
+  .banner{padding:16px 12px}.banner h1{font-size:18px}
+  .banner p{font-size:12.5px}
+  .card{padding:14px 10px}.card-title{font-size:14px}
+  .card-icon{width:36px;height:36px;font-size:18px}
+  .subcard{padding:12px 10px}
+  .btn{padding:9px 14px;font-size:12px}
+  .page{padding:12px 8px 40px}
+  .flow{padding:10px 12px}.flow-steps{font-size:11px}
+  .banner-stats{gap:8px}
+  footer{font-size:11px}
+}</style>
 </head>
 <body>
 <nav class="navbar">
@@ -178,6 +189,14 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <a href="assistant.html">AI助手</a>
       <a href="knowledge.html">知识图谱</a>
       <a href="prep.html" class="active">课前预习</a>
+      <a href="index.html#/videos">视频资源</a>
+      <a href="index.html#/report">实验报告检测评估</a>
+      <a href="index.html#/explore">科普探索</a>
+      <a href="corpus.html">语料库</a>
+    </div>
+    <button class="nav-toggle-mb" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
+  </div>
+prep.html" class="active">课前预习</a>
       <a href="index.html#/videos">视频资源</a>
       <a href="index.html#/report">实验报告检测评估</a>
       <a href="index.html#/explore">科普探索</a>
@@ -290,5 +309,6 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
     课前预习页 · 建议完成全部模块后再进入实验室
   </footer>
 </div>
+<script>document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});</script>
 </body>
 </html>

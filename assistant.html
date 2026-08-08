@@ -430,7 +430,8 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
 const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const enc=encodeURIComponent;
-const delay=ms=>new Promise(r=>setTimeout(r,ms));
+
+const stripHTML=s=>String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
 const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g,c=>SUBMAP[c]||c).replace(/\s+/g,'');
 
@@ -1434,6 +1435,92 @@ function gradeOf(total){
   if(total>=70)return['中等','g-mid'];if(total>=60)return['及格','g-pass'];
   return['不及格','g-fail'];
 }
+/* 综合评语生成：根据各维度得分和整体掌握情况输出详细叙述 */
+function overallSummary(d,gname){
+  const items=d.items, assessed=items.filter(x=>x.m!==null), unassessed=items.filter(x=>x.m===null);
+  const total=d.total, dims=d.dimScores;
+  // 统计各掌握度区间
+  const excellent=assessed.filter(x=>x.m>=0.85);
+  const good=assessed.filter(x=>x.m>=0.6&&x.m<0.85);
+  const fair=assessed.filter(x=>x.m>=0.4&&x.m<0.6);
+  const weak=assessed.filter(x=>x.m<0.4);
+  // 找出最强和最弱知识点
+  const sorted=[...assessed].sort((a,b)=>(b.m||0)-(a.m||0));
+  const top3=sorted.slice(0,3), bottom3=sorted.slice(-3).reverse();
+  // 维度描述
+  const dimDesc=[];
+  if(dims.theory>=85) dimDesc.push('<b>理论基础</b>扎实（'+dims.theory+'%），对配位化学理论、反应原理与晶体场理论有较深理解');
+  else if(dims.theory>=65) dimDesc.push('<b>理论基础</b>良好（'+dims.theory+'%），基本掌握核心概念，建议巩固晶体场理论与磁性研究');
+  else if(dims.theory>=40) dimDesc.push('<b>理论基础</b>需要加强（'+dims.theory+'%），建议系统复习配位化学基本概念、反应方程式与晶体场分裂原理');
+  else dimDesc.push('<b>理论基础</b>薄弱（'+dims.theory+'%），亟需从配合物基本概念开始系统学习，打好配位化学的理论根基');
+
+  if(dims.experiment>=85) dimDesc.push('<b>实验技能</b>出色（'+dims.experiment+'%），对试剂作用、操作流程与安全规范掌握到位');
+  else if(dims.experiment>=65) dimDesc.push('<b>实验技能</b>良好（'+dims.experiment+'%），熟悉主要操作流程，可进一步关注温度控制与废液处理细节');
+  else if(dims.experiment>=40) dimDesc.push('<b>实验技能</b>有待提升（'+dims.experiment+'%），建议复习四步操作流程、关键参数与安全注意事项');
+  else dimDesc.push('<b>实验技能</b>不足（'+dims.experiment+'%），需从头梳理实验步骤、试剂作用与仪器使用方法');
+
+  if(dims.comprehensive>=85) dimDesc.push('<b>综合应用</b>能力突出（'+dims.comprehensive+'%），产率计算、误差分析与结构表征等跨领域问题处理娴熟');
+  else if(dims.comprehensive>=65) dimDesc.push('<b>综合应用</b>良好（'+dims.comprehensive+'%），能处理常规的产率计算与误差分析，建议拓展热分析与光化学应用');
+  else if(dims.comprehensive>=40) dimDesc.push('<b>综合应用</b>需加强（'+dims.comprehensive+'%），建议重点练习产率计算推导、误差来源分析与课后思考题');
+  else dimDesc.push('<b>综合应用</b>薄弱（'+dims.comprehensive+'%），建议从产率公式推导、误差分析与蓝晒拓展三个方向同时入手');
+
+  // 生成综合叙述
+  let html='<p style="font-size:14px;line-height:1.95;color:#cbd5e1">';
+  if(total>=90){
+    html+='🎉 <b>恭喜！你的实验知识掌握度被评为「'+gname+'」等级（'+total+'分）</b>，展现了出色的化学实验素养。';
+    if(excellent.length>=8) html+='在12个知识点中，你有<b>'+excellent.length+'个掌握扎实</b>，覆盖了从反应原理到综合应用的多个维度，知识结构均衡、理解深入。';
+    else html+='在12个知识点中，你有<b>'+excellent.length+'个达到优秀水平</b>，整体知识结构较为均衡。';
+    if(bottom3.length>0&&bottom3[0].m<0.75) html+='相对薄弱的是「'+bottom3[0].name+'」（'+Math.round(bottom3[0].m*100)+'%），建议查阅相关文献和视频巩固。';
+    html+='这份报告全面反映了你对三草酸合铁酸钾制备实验的深入理解，继续保持这份科学探究的热情！💪';
+  }else if(total>=80){
+    html+='✅ <b>你的实验知识掌握度被评为「'+gname+'」等级（'+total+'分）</b>，已具备独立完成实验的知识基础。';
+    if(excellent.length+good.length>=8) html+='有<b>'+(excellent.length+good.length)+'个知识点</b>掌握良好以上，其中「'+top3[0].name+'」表现突出。';
+    if(weak.length>0) html+='需要特别关注<b>'+weak.length+'个薄弱知识点</b>：'+weak.map(x=>'「'+x.name+'」('+Math.round(x.m*100)+'%)').join('、')+'，建议在实验前针对性复习。';
+    html+='总体来看，你对实验的核心内容和关键操作已有较好的把握，在薄弱环节稍加巩固即可达到优秀水平。';
+  }else if(total>=70){
+    html+='⚠️ <b>你的实验知识掌握度被评为「'+gname+'」等级（'+total+'分）</b>，基本达到实验要求，但仍有明显的提升空间。';
+    html+='<b>优势方面</b>：'+top3.map(x=>'「'+x.name+'」('+Math.round(x.m*100)+'%)').join('、')+'掌握相对较好。';
+    if(weak.length>0) html+='<b>薄弱方面</b>：'+weak.map(x=>'「'+x.name+'」('+Math.round(x.m*100)+'%)').join('、')+'需要重点加强。';
+    html+='建议你利用课前预习模块和知识图谱，对薄弱知识点进行系统复习，并在实验操作中有意识地关注这些环节。完成复习后可重新测评检验提升效果。';
+  }else if(total>=60){
+    html+='❗ <b>你的实验知识掌握度被评为「'+gname+'」等级（'+total+'分）</b>，距离合格实验操作还有差距，需要较多补充学习。';
+    if(weak.length>0) html+='有<b>'+weak.length+'个知识点掌握不足</b>（低于40%）：'+weak.map(x=>'「'+x.name+'」').join('、')+'，这些是影响实验操作的关键短板。';
+    html+='建议先集中精力将薄弱知识点提升到60%以上，可使用课前预习的对话模式逐一攻克，再配合视频资源直观理解操作流程。测评可以反复进行，每次都会追踪你的进步轨迹。';
+  }else{
+    html+='❌ <b>你的实验知识掌握度被评为「'+gname+'」等级（'+total+'分）</b>，目前的知识储备尚不足以支撑独立完成本实验。';
+    html+='建议从最基础的「实验目的与产物认知」开始，逐步学习反应原理、试剂作用与操作流程。';
+    html+='请使用<b>课前预习模块</b>从基础知识点开始逐一学习，配合<b>AI助手</b>随时提问，利用<b>知识图谱</b>理解知识点间的关联。不必气馁——有效的学习是从认识不足开始的！💪';
+  }
+  html+='</p>';
+
+  // 三维度总结
+  html+='<div style="margin-top:14px;padding:12px 16px;background:rgba(10,14,26,.4);border-radius:12px;border:1px solid var(--bd)">';
+  html+='<div style="font-size:13px;font-weight:700;color:var(--t2);margin-bottom:8px">🔍 三维度综合诊断</div>';
+  html+='<ul style="margin:0 0 0 16px;font-size:13px;color:#94a3b8;line-height:2">';
+  dimDesc.forEach(s=>{ html+='<li>'+s+'</li>'; });
+  html+='</ul></div>';
+
+  // 具体行动建议
+  html+='<div style="margin-top:10px;padding:12px 16px;background:rgba(16,185,129,.06);border-radius:12px;border:1px solid rgba(16,185,129,.2)">';
+  html+='<div style="font-size:13px;font-weight:700;color:var(--emerald);margin-bottom:8px">🎯 下一步学习建议</div>';
+  html+='<ol style="margin:0 0 0 16px;font-size:13px;color:#94a3b8;line-height:2">';
+  if(weak.length>0){
+    html+='<li>优先攻克<b>'+weak.length+'个薄弱知识点</b>：到<a href="knowledge.html" style="color:var(--teal)">知识图谱</a>点击对应节点查看详解，或到<a href="prep.html" style="color:var(--teal)">课前预习</a>进行专项对话练习。</li>';
+    weak.slice(0,3).forEach(w=>{
+      const kw=w.kp||w; html+='<li>「'+kw.name+'」：观看视频 '+((kw.videos||[]).map(vi=>'<a href="'+VIDEO_BV[vi].u+'" target="_blank" style="color:var(--teal)">《'+esc(VIDEO_BV[vi].t)+'》</a>').join('、')||'参考手册对应章节')+'</li>';
+    });
+  }
+  if(fair.length>0&&fair.length<=3){
+    html+='<li>巩固<b>'+fair.length+'个待提高知识点</b>：'+fair.map(x=>'「'+x.name+'」').join('、')+'，它们在掌握度上处于临界线，稍加复习即可明显提升总分。</li>';
+  }
+  if(excellent.length>=4){
+    html+='<li>你已有<b>'+excellent.length+'个知识点达到优秀</b>，建议挑战进阶内容：到<a href="knowledge.html" style="color:var(--teal)">知识图谱</a>探索配位化学理论、磁性研究和热分析等高级节点。</li>';
+  }
+  html+='<li>完成针对性复习后，可<b>重新测评</b>追踪进步轨迹——系统会对比历史成绩，量化你的学习增量。</li>';
+  html+='</ol></div>';
+
+  return html;
+}
 function buildReportData(){
   let total=0,totalWeight=0;
   KP.forEach((kp,i)=>{
@@ -1598,6 +1685,10 @@ function finishAssess(reason){
    +' · 优势项 '+d.strengths.length+' · 薄弱项 '+d.weakness.length
    +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ '+d.unassessed.length+' 个知识点未测评，按 0 计入总分</span>'):'')
    +'</div></div></div>'
+   // 总体评价（综合评语）
+   +'<div class="rp-sec"><h3>📝 总体评价</h3><div class="overall-summary">'
+   +overallSummary(d,gname)
+   +'</div></div>'
    // 维度分析
    +'<div class="rp-sec"><h3>📐 三维度分析</h3>'
    +'<div style="display:flex;gap:12px;flex-wrap:wrap">'
@@ -1659,6 +1750,9 @@ function reportPlain(d){
   lines.push('测评时间：'+d.date.toLocaleString('zh-CN')+' · 对话轮次：'+d.rounds);
   lines.push('总分：'+d.total+' / 100 · 等级：'+gname);
   lines.push('');
+  lines.push('【总体评价】');
+  lines.push(stripHTML(overallSummary(d,gname)));
+  lines.push('');
   lines.push('【三维度分析】理论基础：'+d.dimScores.theory+'% | 实验技能：'+d.dimScores.experiment+'% | 综合应用：'+d.dimScores.comprehensive+'%');
   lines.push('');
   d.items.forEach(x=>{
@@ -1695,10 +1789,22 @@ function exportDoc(d){
     ? '<h3>针对性学习建议</h3><ol>'+d.weakness.map(w=>'<li><b>'+esc(w.name)+'</b>：复习知识图谱「'+esc(w.kp.knode)+'」节点；检索语料库「'+esc(w.kp.subfield)+'」子领域文献'+(w.kp.videos&&w.kp.videos.length?'；观看视频 '+w.kp.videos.map(vi=>esc(VIDEO_BV[vi].t)+'（'+VIDEO_BV[vi].u+'）').join('、'):'')+'</li>').join('')+'</ol>'
     : '<p>各知识点掌握良好，可拓展蓝晒、光化学等进阶内容。</p>';
   const doc='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>实验知识掌握度评估报告</title>'
-   +'<style>body{font-family:"Microsoft YaHei",SimSun,sans-serif;font-size:12pt;line-height:1.7}h1{font-size:18pt;color:#0f766e}h3{color:#0f766e}table{border-collapse:collapse;width:100%}td,th{border:1px solid #999;padding:6px 8px;font-size:10.5pt}th{background:#e6f4f1}</style></head><body>'
+   +'<style>body{font-family:"Microsoft YaHei",SimSun,sans-serif;font-size:12pt;line-height:1.7}h1{font-size:18pt;color:#0f766e}h3{color:#0f766e}table{border-collapse:collapse;width:100%}td,th{border:1px solid #999;padding:6px 8px;font-size:10.5pt}th{background:#e6f4f1}.overall-summary p{font-size:14px;line-height:1.95;color:#cbd5e1}
+.overall-summary ul,.overall-summary ol{margin:0 0 0 16px;line-height:2}
+.overall-summary li{font-size:13px;color:#94a3b8;margin:3px 0}
+.overall-summary a{color:var(--teal);text-decoration:underline}
+.overall-summary a:hover{color:var(--emerald)}
+@media (max-width:640px){
+  .overall-summary{font-size:12.5px}
+}
+</style></head><body>'
    +'<h1>实验知识掌握度评估报告</h1>'
    +'<p><b>实验：</b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验<br><b>测评时间：</b>'+d.date.toLocaleString('zh-CN')+'　<b>对话轮次：</b>'+d.rounds+'</p>'
    +'<p style="font-size:15pt"><b>总分：'+d.total+' / 100　等级：'+gname+'</b></p>'
+   // 总体评价（纯文本版，Word 兼容）
+   +'<div style="padding:10px 14px;border:1px solid #ccc;background:#f9fafb;margin-bottom:12px;font-size:10.5pt;line-height:1.8">'
+   +overallSummary(d,gname).replace(/<h3[^>]*>/g,'<p style="font-weight:bold;font-size:11pt;margin:8px 0 4px">').replace(/<\/h3>/g,'</p>').replace(/<br\s*\/?>/g,'<br/>').replace(/<a /g,'<a style="color:#0f766e" ')
+   +'</div>'
    // B.3: 添加三维度分析表到 Word 导出
    +'<h3>三维度分析</h3><table><tr><th>维度</th><th>得分</th><th>说明</th></tr>'
    +'<tr><td>理论基础</td><td style="text-align:center">'+d.dimScores.theory+'%</td><td>配位化学理论、反应原理、晶体场理论、磁性研究等知识点的综合掌握水平</td></tr>'

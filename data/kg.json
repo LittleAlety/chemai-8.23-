@@ -1,2244 +1,2582 @@
 ﻿{
- "nodes": [
-  {
-   "id": "center-exp",
-   "name": "三草酸合铁酸钾制备实验",
-   "category": "center",
-   "level": 0,
-   "description": "以三草酸合铁酸钾（K₃[Fe(C₂O₄)₃]·3H₂O）的制备为核心实验，综合运用配位化学、氧化还原、分析化学和物理化学四大知识方向，是大学化学综合实验的典型代表。",
-   "symbolSize": 80,
-   "connectionToExperiment": "本实验是核心综合实验，通过硫酸亚铁铵与草酸反应制备三草酸合铁酸钾晶体，涉及配位、氧化还原、滴定分析和结构表征等多方面知识。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "redox",
-    "analytical",
-    "physical"
-   ]
-  },
-  {
-   "id": "coord",
-   "name": "配位化学",
-   "category": "coordination",
-   "level": 1,
-   "description": "研究中心离子与配体通过配位键形成配合物的化学分支，涉及配合物的结构、命名、异构、稳定性和反应性等核心内容。",
-   "symbolSize": 55,
-   "parent": "center-exp",
-   "connectionToExperiment": "三草酸合铁酸钾是典型的三齿配位化合物，Fe³⁺作为中心离子与三个草酸根配体形成八面体配位结构，是理解配位化学的绝佳实例。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "redox",
-    "analytical",
-    "physical",
-    "complex-concept",
-    "chelate"
-   ]
-  },
-  {
-   "id": "redox",
-   "name": "氧化还原化学",
-   "category": "redox",
-   "level": 1,
-   "description": "研究电子转移反应及其规律的化学分支，涉及氧化数、电极电势、氧化还原滴定、催化与诱导等核心概念。",
-   "symbolSize": 55,
-   "parent": "center-exp",
-   "connectionToExperiment": "制备过程中Fe²⁺被H₂O₂氧化为Fe³⁺，涉及氧化还原反应的选择性氧化、催化剂使用和电势控制等关键知识。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "analytical",
-    "physical",
-    "redox-potential",
-    "fenton"
-   ]
-  },
-  {
-   "id": "analytical",
-   "name": "分析化学",
-   "category": "analytical",
-   "level": 1,
-   "description": "研究物质组成、结构和性质的测定方法与理论的化学分支，涵盖重量分析、滴定分析、光谱分析等定量定性方法。",
-   "symbolSize": 55,
-   "parent": "center-exp",
-   "connectionToExperiment": "实验产物需通过高锰酸钾滴定法测定铁含量和草酸根含量，产物纯度分析是实验成功的关键评判标准。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "redox",
-    "physical",
-    "titration",
-    "spectrophotometry"
-   ]
-  },
-  {
-   "id": "physical",
-   "name": "物理/结构化学",
-   "category": "physical",
-   "level": 1,
-   "description": "从物理原理和微观结构角度研究化学现象的分支，涉及晶体场理论、分子构型、电子跃迁和热力学动力学等内容。",
-   "symbolSize": 55,
-   "parent": "center-exp",
-   "connectionToExperiment": "产物呈现翠绿色与其八面体配位结构和d-d电子跃迁密切相关，晶体场理论可解释其颜色、磁性和光谱特征。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "coord",
-    "redox",
-    "analytical",
-    "crystal-field",
-    "octahedral"
-   ]
-  },
-  {
-   "id": "complex-concept",
-   "name": "配合物基本概念",
-   "category": "coordination",
-   "level": 2,
-   "description": "中心离子（或原子）与一定数目的配体通过配位键结合形成的复杂离子或中性分子，是配位化学的基础研究对象。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "formulas": [
-    "K_3[Fe(C_2O_4)_3] \\cdot 3H_2O",
-    "[Fe(C_2O_4)_3]^{3-}"
-   ],
-   "connectionToExperiment": "三草酸合铁酸钾中的[Fe(C₂O₄)₃]³⁻配阴离子是典型配合物，Fe³⁺为配位中心，C₂O₄²⁻为双齿配体，配位数为6。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "coord",
-    "chelate",
-    "stability-const",
-    "naming",
-    "inner-outer-sphere"
-   ]
-  },
-  {
-   "id": "chelate",
-   "name": "螯合物",
-   "category": "coordination",
-   "level": 2,
-   "description": "由多齿配体与中心离子形成的具有环状结构的配合物，螯环的存在使配合物具有更高的稳定性，称为螯合效应。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "formulas": [
-    "Fe^{3+} + 3C_2O_4^{2-} \\rightarrow [Fe(C_2O_4)_3]^{3-}"
-   ],
-   "connectionToExperiment": "草酸根C₂O₄²⁻是双齿配体，与Fe³⁺形成三个五元螯环，使三草酸合铁酸钾具有极高的稳定性，是理解螯合效应的典型实例。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "complex-concept",
-    "chelate-effect",
-    "edta"
-   ]
-  },
-  {
-   "id": "stability-const",
-   "name": "稳定常数",
-   "category": "coordination",
-   "level": 2,
-   "description": "衡量配合物在溶液中稳定程度的定量指标，记作K稳或β，值越大表示配合物越稳定，不易解离。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "formulas": [
-    "K_{稳} = \\frac{[ML_n]}{[M][L]^n}",
-    "\\beta_n = K_1 \\cdot K_2 \\cdots K_n"
-   ],
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻具有很大的稳定常数，使得产物在溶液中非常稳定，这也是三草酸合铁酸钾能够成功制备的重要原因。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "complex-concept",
-    "coord-titration"
-   ]
-  },
-  {
-   "id": "coord-titration",
-   "name": "配位滴定法",
-   "category": "coordination",
-   "level": 2,
-   "description": "以配位反应为基础的定量分析方法，常用EDTA作为滴定剂，通过金属离子指示剂判断终点，可测定多种金属离子含量。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "formulas": [
-    "M^{n+} + Y^{4-} \\rightarrow MY^{n-4}",
-    "K_{MY} = \\frac{[MY]}{[M][Y]}"
-   ],
-   "connectionToExperiment": "可用EDTA配位滴定法测定产物中铁的含量，通过PAN或二甲酚橙指示剂确定滴定终点，与氧化还原滴定法进行对比验证。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "coord",
-    "edta",
-    "standard-solution"
-   ]
-  },
-  {
-   "id": "isomerism",
-   "name": "配合物异构现象",
-   "category": "coordination",
-   "level": 2,
-   "description": "配合物因组成相同但原子空间排列方式不同而形成不同性质化合物的现象，分为结构异构和立体异构两大类。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "connectionToExperiment": "三草酸合铁酸钾为八面体构型，草酸根作为双齿配体占据了全部配位点，不存在几何异构体，但可作为理解配合物异构的教学对照。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "coord",
-    "octahedral",
-    "cis-trans-isomerism"
-   ]
-  },
-  {
-   "id": "naming",
-   "name": "配合物命名法",
-   "category": "coordination",
-   "level": 2,
-   "description": "按照IUPAC命名规则，配体数-配体名-合-中心离子（氧化态）的顺序命名配合物，需遵循特定的语法和符号规范。",
-   "symbolSize": 40,
-   "parent": "coord",
-   "connectionToExperiment": "K₃[Fe(C₂O₄)₃]·3H₂O的系统命名为：三水合三草酸合铁(III)酸钾，是练习配位化合物系统命名的标准范例。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "coord",
-    "complex-concept"
-   ]
-  },
-  {
-   "id": "redox-potential",
-   "name": "氧化还原电势",
-   "category": "redox",
-   "level": 2,
-   "description": "衡量氧化还原电对得失电子能力的物理量，标准电极电势E°越大，氧化态物质的氧化能力越强。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "formulas": [
-    "E = E^\\circ - \\frac{RT}{nF} \\ln Q",
-    "E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}"
-   ],
-   "connectionToExperiment": "Fe³⁺/Fe²⁺电对的标准电极电势为+0.77V，H₂O₂/H₂O电对为+1.78V，说明H₂O₂能将Fe²⁺氧化为Fe³⁺，是选择氧化剂的依据。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "redox",
-    "nernst-equation",
-    "fenton"
-   ]
-  },
-  {
-   "id": "fenton",
-   "name": "芬顿反应",
-   "category": "redox",
-   "level": 2,
-   "description": "Fe²⁺催化H₂O₂分解产生强氧化性羟基自由基(·OH)的反应体系，广泛应用于废水处理有机污染物降解。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "formulas": [
-    "Fe^{2+} + H_2O_2 \\rightarrow Fe^{3+} + OH^- + \\cdot OH"
-   ],
-   "connectionToExperiment": "制备过程中H₂O₂氧化Fe²⁺的反应具有芬顿反应的特征，需控制H₂O₂滴加速度以避免副反应和剧烈放热。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "redox",
-    "redox-potential",
-    "hydroxyl-radical",
-    "catalyst"
-   ]
-  },
-  {
-   "id": "redox-titration",
-   "name": "氧化还原滴定",
-   "category": "redox",
-   "level": 2,
-   "description": "以氧化还原反应为基础的定量分析方法，常用KMnO₄、K₂Cr₂O₇、Ce(SO₄)₂等作为氧化剂进行滴定。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "formulas": [
-    "MnO_4^- + 8H^+ + 5e^- \\rightarrow Mn^{2+} + 4H_2O",
-    "2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O"
-   ],
-   "connectionToExperiment": "用KMnO₄标准溶液滴定产物溶液，可分别测定Fe²⁺/Fe³⁺含量和C₂O₄²⁻含量，是产物组成分析的关键步骤。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "redox",
-    "standard-solution",
-    "induction"
-   ]
-  },
-  {
-   "id": "catalyst",
-   "name": "催化作用",
-   "category": "redox",
-   "level": 2,
-   "description": "催化剂通过改变反应路径降低反应活化能，从而加快反应速率但不被消耗，包括均相催化和多相催化。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "connectionToExperiment": "Fe²⁺氧化为Fe³⁺的反应中，适当升温可作为能量催化手段；后续光化学反应中[Fe(C₂O₄)₃]³⁻本身可作为光催化剂。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "redox",
-    "fenton",
-    "kinetics"
-   ]
-  },
-  {
-   "id": "disproportionation",
-   "name": "歧化反应",
-   "category": "redox",
-   "level": 2,
-   "description": "同一元素的原子（或离子）一部分被氧化、另一部分被还原的反应，要求该元素具有中间氧化态。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "formulas": [
-    "2Cu^+ \\rightarrow Cu^{2+} + Cu",
-    "3MnO_4^{2-} + 4H^+ \\rightarrow 2MnO_4^- + MnO_2 + 2H_2O"
-   ],
-   "connectionToExperiment": "H₂O₂在反应中既可能被氧化（作还原剂）也可能被还原（作氧化剂），了解歧化反应有助于理解氧化剂选择的原理。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "redox",
-    "redox-potential"
-   ]
-  },
-  {
-   "id": "induction",
-   "name": "诱导反应",
-   "category": "redox",
-   "level": 2,
-   "description": "一个氧化还原反应的发生促进另一个氧化还原反应进行的现象，前者称为诱导反应，后者称为受诱反应。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "connectionToExperiment": "KMnO₄滴定C₂O₄²⁻时，Fe²⁺的存在会诱导KMnO₄对Cl⁻的氧化（如果体系中有Cl⁻），需注意实验条件的控制。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "redox",
-    "redox-titration"
-   ]
-  },
-  {
-   "id": "gravimetry",
-   "name": "重量分析法",
-   "category": "analytical",
-   "level": 2,
-   "description": "通过称量物质质量来确定被测组分含量的经典定量分析方法，具有准确度高但操作繁琐的特点。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "可通过称量产物的质量和组成，计算理论产量和实际产率，验证产物组成是否符合化学计量比。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "error-analysis"
-   ]
-  },
-  {
-   "id": "titration",
-   "name": "滴定分析法",
-   "category": "analytical",
-   "level": 2,
-   "description": "将已知准确浓度的标准溶液滴加到待测溶液中，根据消耗的体积计算被测组分含量的定量分析方法。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "formulas": [
-    "C_{待测} = \\frac{C_{标准} \\cdot V_{标准}}{V_{待测}}"
-   ],
-   "connectionToExperiment": "实验中用KMnO₄标准溶液滴定产物，测定草酸根含量和铁含量，是验证产物纯度的核心定量方法。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "standard-solution",
-    "redox-titration"
-   ]
-  },
-  {
-   "id": "spectrophotometry",
-   "name": "分光光度法",
-   "category": "analytical",
-   "level": 2,
-   "description": "基于物质对光的选择性吸收进行定量或定性分析的仪器分析方法，遵循朗伯-比尔定律。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "formulas": [
-    "A = \\varepsilon b c",
-    "A = -\\lg T = \\lg \\frac{I_0}{I}"
-   ],
-   "connectionToExperiment": "产物溶液的翠绿色可通过可见光分光光度计测定吸收光谱，最大吸收波长可印证d-d跃迁的能量特征。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "analytical",
-    "absorption-spectrum",
-    "lambert-beer",
-    "dd-transition"
-   ]
-  },
-  {
-   "id": "standard-solution",
-   "name": "标准溶液配制",
-   "category": "analytical",
-   "level": 2,
-   "description": "已知准确浓度的溶液，可通过直接法（基准物质）或间接法（标定）配制，是定量分析的计量基准。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "KMnO₄溶液需用Na₂C₂O₄基准物质进行标定，确定其准确浓度后才能用于产物组成的定量滴定分析。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "titration",
-    "error-analysis"
-   ]
-  },
-  {
-   "id": "error-analysis",
-   "name": "误差分析",
-   "category": "analytical",
-   "level": 2,
-   "description": "系统评估实验测量值与真实值之间偏差的方法，包括系统误差、随机误差和过失误差的识别与处理。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "formulas": [
-    "\\bar{x} = \\frac{1}{n}\\sum_{i=1}^{n} x_i",
-    "s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}",
-    "RSD = \\frac{s}{\\bar{x}} \\times 100\\%"
-   ],
-   "connectionToExperiment": "通过多次平行滴定计算结果的平均值、标准偏差和相对标准偏差（RSD），评估产物分析结果的精密度和准确度。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "analytical",
-    "gravimetry",
-    "titration"
-   ]
-  },
-  {
-   "id": "precipitation",
-   "name": "沉淀分离法",
-   "category": "analytical",
-   "level": 2,
-   "description": "利用沉淀反应将目标物质从混合物中分离纯化的方法，需控制沉淀条件以获得纯净、易过滤的沉淀。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "制备过程中FeC₂O₄·2H₂O沉淀的生成和过滤是纯化步骤的关键，沉淀的洗涤和干燥直接影响产物纯度。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "gravimetry"
-   ]
-  },
-  {
-   "id": "crystal-field",
-   "name": "晶体场理论",
-   "category": "physical",
-   "level": 2,
-   "description": "解释配合物颜色、磁性和光谱等性质的核心理论，认为配体静电场使中心离子d轨道发生能级分裂。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "\\Delta_o = E_{e_g} - E_{t_{2g}}"
-   ],
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻为八面体构型，晶体场分裂能Δ₀决定d-d跃迁能量，从而解释了产物为何呈现翠绿色而非其他颜色。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "physical",
-    "dd-transition",
-    "hybrid-orbital",
-    "delta-splitting"
-   ]
-  },
-  {
-   "id": "octahedral",
-   "name": "八面体构型",
-   "category": "physical",
-   "level": 2,
-   "description": "六配位配合物最常见的空间构型，六个配体位于正八面体的六个顶点，中心离子位于八面体中心。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻中Fe³⁺与6个氧原子配位形成理想八面体构型，是理解其几何结构和空间排布的基础。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "physical",
-    "crystal-field",
-    "geometry-octahedral"
-   ]
-  },
-  {
-   "id": "dd-transition",
-   "name": "d-d跃迁",
-   "category": "physical",
-   "level": 2,
-   "description": "过渡金属配合物中d电子在不同d轨道之间的电子跃迁，是配合物呈现颜色的主要原因，属于宇称禁阻但可微弱发生。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "E = h\\nu = \\frac{hc}{\\lambda} = \\Delta_o"
-   ],
-   "connectionToExperiment": "产物[Fe(C₂O₄)₃]³⁻吸收橙红色光（约560nm附近），发生d-d跃迁，透射和散射其互补色——翠绿色光。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "physical",
-    "crystal-field",
-    "color-complement",
-    "absorption-spectrum"
-   ]
-  },
-  {
-   "id": "thermodynamics",
-   "name": "热力学分析",
-   "category": "physical",
-   "level": 2,
-   "description": "从能量变化和反应方向角度分析化学过程，涉及焓变、熵变、吉布斯自由能和化学平衡等核心概念。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "\\Delta G = \\Delta H - T\\Delta S",
-    "K = e^{-\\Delta G^\\circ / RT}"
-   ],
-   "connectionToExperiment": "从热力学角度可分析各步反应的自发性，配合物形成反应通常是放热且熵减的过程，低温有利于产物稳定。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "physical",
-    "stability-const",
-    "kinetics"
-   ]
-  },
-  {
-   "id": "kinetics",
-   "name": "反应动力学",
-   "category": "physical",
-   "level": 2,
-   "description": "研究化学反应速率和反应机理的化学分支，涉及速率方程、活化能、催化剂和反应级数等核心概念。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "k = A e^{-E_a / RT}",
-    "\\ln\\frac{k_2}{k_1} = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
-   ],
-   "connectionToExperiment": "H₂O₂氧化Fe²⁺的速率受温度和浓度影响，控制H₂O₂滴加速度是为了控制氧化反应的速率，避免局部过浓导致副反应。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "physical",
-    "catalyst",
-    "fenton",
-    "thermodynamics"
-   ]
-  },
-  {
-   "id": "color-complement",
-   "name": "颜色互补原理",
-   "category": "physical",
-   "level": 2,
-   "description": "物质选择性吸收特定波长的可见光，呈现被吸收光的互补色。互补色位于色轮相对位置的两种颜色。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "connectionToExperiment": "产物[Fe(C₂O₄)₃]³⁻主要吸收橙红色光（波长约560nm），因此肉眼观察到的是其互补色——翠绿色。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "physical",
-    "dd-transition",
-    "absorption-spectrum"
-   ]
-  },
-  {
-   "id": "hybrid-orbital",
-   "name": "杂化轨道(sp³d²)",
-   "category": "physical",
-   "level": 3,
-   "description": "八面体配合物中中心离子的一个s轨道、三个p轨道和两个d轨道杂化形成六个等价的sp³d²杂化轨道，用于接受配体孤电子对。",
-   "symbolSize": 25,
-   "parent": "crystal-field",
-   "formulas": [
-    "sp^3d^2: \\psi = \\frac{1}{\\sqrt{6}}(s + p_x + p_y + p_z + d_{z^2} + d_{x^2-y^2})"
-   ],
-   "connectionToExperiment": "Fe³⁺（3d⁵）采用sp³d²外轨杂化与6个氧原子配位，形成正八面体构型的[Fe(C₂O₄)₃]³⁻配阴离子。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "crystal-field",
-    "octahedral"
-   ]
-  },
-  {
-   "id": "geometry-octahedral",
-   "name": "八面体几何",
-   "category": "physical",
-   "level": 3,
-   "description": "正八面体具有Oₕ点群对称性，键角为90°和180°，六个配位原子位于坐标轴上，中心离子位于原点。",
-   "symbolSize": 25,
-   "parent": "octahedral",
-   "connectionToExperiment": "三草酸合铁酸钾中三个双齿草酸根配体占据了八面体的六个配位点，形成了高度对称的配位环境。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "octahedral",
-    "crystal-field",
-    "cis-trans-isomerism"
-   ]
-  },
-  {
-   "id": "delta-splitting",
-   "name": "Δ分裂能",
-   "category": "physical",
-   "level": 3,
-   "description": "八面体场中d轨道分裂为能量较低的t₂g轨道（dxy、dyz、dzx）和能量较高的eg轨道（dz²、dx²-y²），两者能量差记为Δ₀。",
-   "symbolSize": 25,
-   "parent": "crystal-field",
-   "formulas": [
-    "\\Delta_o = 10Dq",
-    "E(t_{2g}) = -0.4\\Delta_o",
-    "E(e_g) = +0.6\\Delta_o"
-   ],
-   "connectionToExperiment": "草酸根是中等强度配体，[Fe(C₂O₄)₃]³⁻的分裂能Δ₀对应可见光区约560nm处吸收，决定了产物呈翠绿色。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "crystal-field",
-    "dd-transition"
-   ]
-  },
-  {
-   "id": "absorption-spectrum",
-   "name": "吸收光谱",
-   "category": "analytical",
-   "level": 3,
-   "description": "物质对不同波长光的吸收程度与波长之间的关系曲线，由吸收峰的位置、强度和形状反映物质的电子结构和能级特征。",
-   "symbolSize": 25,
-   "parent": "spectrophotometry",
-   "connectionToExperiment": "用紫外-可见分光光度计测定产物溶液的吸收光谱，可在可见区观察到d-d跃迁产生的特征吸收峰。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "spectrophotometry",
-    "dd-transition",
-    "lambert-beer"
-   ]
-  },
-  {
-   "id": "lambert-beer",
-   "name": "朗伯-比尔定律",
-   "category": "analytical",
-   "level": 3,
-   "description": "当一束平行单色光通过均匀溶液时，吸光度与溶液浓度和光程长度成正比，是分光光度法定量分析的理论基础。",
-   "symbolSize": 25,
-   "parent": "spectrophotometry",
-   "formulas": [
-    "A = \\varepsilon \\cdot b \\cdot c",
-    "A = \\lg\\frac{I_0}{I}"
-   ],
-   "connectionToExperiment": "通过测定产物溶液在最大吸收波长处的吸光度，利用朗伯-比尔定律可计算配合物的摩尔吸光系数和溶液浓度。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "spectrophotometry",
-    "standard-solution"
-   ]
-  },
-  {
-   "id": "chelate-effect",
-   "name": "螯合效应",
-   "category": "coordination",
-   "level": 3,
-   "description": "螯合物比组成相似的非螯合配合物更稳定的现象，主要原因是螯合反应熵增显著，以及环状结构的封闭效应。",
-   "symbolSize": 25,
-   "parent": "chelate",
-   "connectionToExperiment": "三个草酸根与Fe³⁺形成三个稳定的五元螯环，螯合效应使[Fe(C₂O₄)₃]³⁻具有极高的热力学稳定性。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "chelate",
-    "stability-const",
-    "thermodynamics"
-   ]
-  },
-  {
-   "id": "edta",
-   "name": "EDTA配位剂",
-   "category": "coordination",
-   "level": 3,
-   "description": "乙二胺四乙酸(EDTA)是最常用的六齿配位剂，可与绝大多数金属离子形成1:1的稳定螯合物，是配位滴定的标准试剂。",
-   "symbolSize": 25,
-   "parent": "chelate",
-   "formulas": [
-    "H_4Y \\rightleftharpoons H^+ + H_3Y^- \\rightleftharpoons \\cdots \\rightleftharpoons Y^{4-} + 4H^+"
-   ],
-   "connectionToExperiment": "EDTA可作为替代配位滴定试剂测定产物中铁含量，与KMnO₄氧化还原滴定法进行对比分析，验证结果的准确性。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "chelate",
-    "coord-titration",
-    "standard-solution"
-   ]
-  },
-  {
-   "id": "inner-outer-sphere",
-   "name": "内外界结构",
-   "category": "coordination",
-   "level": 3,
-   "description": "配合物分为内界（配位单元，方括号内）和外界（抗衡离子，方括号外），内界通过配位键结合，外界通过离子键结合。",
-   "symbolSize": 25,
-   "parent": "complex-concept",
-   "connectionToExperiment": "K₃[Fe(C₂O₄)₃]·3H₂O中[Fe(C₂O₄)₃]³⁻为内界配位单元，K⁺为外界抗衡离子，结晶水位于晶格间隙中。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "complex-concept",
-    "naming"
-   ]
-  },
-  {
-   "id": "ligand-field",
-   "name": "配体场理论",
-   "category": "coordination",
-   "level": 3,
-   "description": "晶体场理论的改进版本，既考虑配体的静电作用，也考虑中心离子与配体轨道的重叠和成键效应，更准确地解释配合物性质。",
-   "symbolSize": 25,
-   "parent": "complex-concept",
-   "connectionToExperiment": "配体场理论可更精确地解释[Fe(C₂O₄)₃]³⁻的电子光谱和磁性，考虑草酸根的π电子给予效应对d轨道分裂的影响。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "complex-concept",
-    "crystal-field"
-   ]
-  },
-  {
-   "id": "cis-trans-isomerism",
-   "name": "顺反异构",
-   "category": "coordination",
-   "level": 3,
-   "description": "MA₄B₂型八面体配合物中，两个相同配体处于相邻位置（90°）为顺式异构体，处于相对位置（180°）为反式异构体。",
-   "symbolSize": 25,
-   "parent": "isomerism",
-   "connectionToExperiment": "虽然[Fe(C₂O₄)₃]³⁻因三个双齿配体完全相同而不存在顺反异构，但可作为理解MA₄B₂型配合物顺反异构的教学对比案例。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "isomerism",
-    "octahedral",
-    "geometry-octahedral"
-   ]
-  },
-  {
-   "id": "nernst-equation",
-   "name": "能斯特方程",
-   "category": "redox",
-   "level": 3,
-   "description": "描述电极电势与氧化态、还原态浓度（或分压）和温度之间关系的方程，是电化学计算的核心工具。",
-   "symbolSize": 25,
-   "parent": "redox-potential",
-   "formulas": [
-    "E = E^\\circ + \\frac{0.0592}{n} \\lg \\frac{[氧化态]}{[还原态]} \\quad (25^\\circ C)"
-   ],
-   "connectionToExperiment": "用能斯特方程可计算不同Fe³⁺/Fe²⁺浓度比下的实际电极电势，帮助理解氧化还原滴定过程中的电势变化和终点判断。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "redox-potential",
-    "redox-titration"
-   ]
-  },
-  {
-   "id": "hydroxyl-radical",
-   "name": "羟基自由基",
-   "category": "redox",
-   "level": 3,
-   "description": "·OH是自然界中氧化能力极强的活性氧物种，电极电势高达+2.80V，可非选择性氧化绝大多数有机污染物。",
-   "symbolSize": 25,
-   "parent": "fenton",
-   "formulas": [
-    "\\cdot OH + e^- + H^+ \\rightarrow H_2O",
-    "E^\\circ = +2.80\\text{V}"
-   ],
-   "connectionToExperiment": "芬顿反应中Fe²⁺催化H₂O₂分解产生·OH，强氧化性自由基将Fe²⁺氧化为Fe³⁺，是制备反应的关键氧化步骤。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "fenton",
-    "catalyst"
-   ]
-  },
-  {
-   "id": "lab-safety",
-   "name": "实验安全",
-   "category": "analytical",
-   "level": 2,
-   "description": "化学实验安全包括个人防护、试剂安全操作、设备安全使用和应急处理等内容，是开展一切实验工作的前提条件。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "本实验涉及草酸、H₂O₂等危险化学品，需正确佩戴防护装备，掌握MSDS信息和应急处理方法，废液需分类收集处理。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "waste-treatment",
-    "reagent-quality",
-    "error-analysis"
-   ]
-  },
-  {
-   "id": "report-writing",
-   "name": "实验报告撰写",
-   "category": "analytical",
-   "level": 2,
-   "description": "实验报告是科学研究的书面成果，包含目的、原理、步骤、数据记录、结果讨论和参考文献等部分，是培养科学写作能力的重要途径。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "formulas": [
-    "\\text{产率} = \\frac{m_{实际}}{m_{理论}} \\times 100\\%"
-   ],
-   "connectionToExperiment": "本实验报告需记录试剂用量、操作步骤、产率计算和误差分析，培养规范的科学写作能力。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "error-analysis",
-    "standard-solution"
-   ]
-  },
-  {
-   "id": "waste-treatment",
-   "name": "废液处理",
-   "category": "analytical",
-   "level": 2,
-   "description": "化学实验废液必须分类收集、专业处理，含重金属废液需化学沉淀法处理，含氰废液需碱性氯化法处理，遵循绿色化学原则。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "formulas": [
-    "Fe^{3+} + 3OH^- \\rightarrow Fe(OH)_3 \\downarrow",
-    "CN^- + ClO^- \\xrightarrow{pH>10} CNO^- + Cl^-"
-   ],
-   "connectionToExperiment": "实验母液含Fe³⁺和过量草酸钾，属于含重金属废液，需加入NaOH沉淀Fe³⁺后统一收集处理。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "lab-safety",
-    "precipitation"
-   ]
-  },
-  {
-   "id": "reagent-quality",
-   "name": "试剂品质控制",
-   "category": "analytical",
-   "level": 2,
-   "description": "试剂质量直接影响实验结果。摩尔盐应呈浅绿色（发黄说明Fe²⁺已氧化），H₂O₂应无大量气泡（分解失效标志），草酸应无色结晶。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "摩尔盐若呈黄色说明Fe²⁺已氧化为Fe³⁺，直接影响第一步沉淀的产率；H₂O₂分解会导致氧化不完全。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "lab-safety",
-    "yield-optimization"
-   ]
-  },
-  {
-   "id": "lmct",
-   "name": "LMCT电荷转移",
-   "category": "physical",
-   "level": 2,
-   "description": "配体到金属的电荷转移（Ligand-to-Metal Charge Transfer）是光化学反应的核心机理，涉及配体电子向中心金属离子的转移过程。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "Fe^{3+} + C_2O_4^{2-} \\xrightarrow{h\\nu} Fe^{2+} + C_2O_4^{\\bullet-}"
-   ],
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻光分解的第一步就是LMCT：草酸根将电子转移给Fe³⁺，自身被氧化为自由基，这是产物光敏性的根本原因。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "physical",
-    "photochem",
-    "dd-transition"
-   ]
-  },
-  {
-   "id": "spectral-series",
-   "name": "光谱化学序列",
-   "category": "physical",
-   "level": 2,
-   "description": "将常见配体按分裂能力从弱到强排列的序列，用于预测配合物的高/低自旋状态和颜色，是配位化学的核心理论工具。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "I^- < Br^- < Cl^- < F^- < OH^- < C_2O_4^{2-} < H_2O < NH_3 < en < CN^- < CO"
-   ],
-   "connectionToExperiment": "C₂O₄²⁻位于光谱化学序列中等偏弱位置，说明是弱场配体，因此[Fe(C₂O₄)₃]³⁻为高自旋配合物。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "physical",
-    "crystal-field",
-    "dd-transition"
-   ]
-  },
-  {
-   "id": "photochem",
-   "name": "光化学反应",
-   "category": "physical",
-   "level": 2,
-   "description": "在光激发下发生的化学反应，涉及光子吸收、电子跃迁、能量传递和产物形成等过程。三草酸合铁酸钾是经典的光敏配合物。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": [
-    "2[Fe(C_2O_4)_3]^{3-} \\xrightarrow{h\\nu} 2FeC_2O_4 + 3C_2O_4^{2-} + 2CO_2\\uparrow",
-    "\\Phi = \\frac{\\text{反应分子数}}{\\text{吸收光子数}}"
-   ],
-   "connectionToExperiment": "产物[Fe(C₂O₄)₃]³⁻在光照下发生光化学还原反应，Fe³⁺→Fe²⁺，草酸根被氧化为CO₂，这是蓝晒法的基础原理。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "physical",
-    "lmct",
-    "dd-transition",
-    "color-complement"
-   ]
-  },
-  {
-   "id": "yield-optimization",
-   "name": "产率优化策略",
-   "category": "analytical",
-   "level": 2,
-   "description": "通过控制反应条件提高产物产率的方法，包括试剂用量优化、温度控制、结晶条件改善和操作细节优化等。",
-   "symbolSize": 40,
-   "parent": "analytical",
-   "connectionToExperiment": "本实验通过草酸钾过量10%、控制H₂O₂滴加速度、优化结晶温度等措施，可将产率从平均72%提高到81%。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "analytical",
-    "error-analysis",
-    "reagent-quality"
-   ]
-  },
-  {
-   "id": "stability-const-calc",
-   "name": "条件稳定常数",
-   "category": "coordination",
-   "level": 3,
-   "description": "考虑配体副反应（如酸效应）后的实际稳定常数，K_f'=K_f/α_L，是实际应用中的重要参数。",
-   "symbolSize": 25,
-   "parent": "stability-const",
-   "formulas": [
-    "K_f' = \\frac{K_f}{\\alpha_L}",
-    "\\alpha_{L(H)} = 1 + \\sum_{i=1}^{n} \\beta_i [H^+]^i"
-   ],
-   "connectionToExperiment": "在酸性条件下，H⁺与C₂O₄²⁻结合使游离配体浓度降低，条件稳定常数减小，配离子稳定性下降。",
-   "difficulty": 3,
-   "relatedNodes": [
-    "stability-const",
-    "crystal-field"
-   ]
-  },
-  {
-   "id": "effective-digit",
-   "name": "有效数字规则",
-   "category": "analytical",
-   "level": 3,
-   "description": "测量中实际能够读出的数字位数，包括最后一位估计值。加减法以小数点后位数最少为准，乘除法以有效数字位数最少为准。",
-   "symbolSize": 25,
-   "parent": "report-writing",
-   "connectionToExperiment": "产率计算中，天平称量0.01g精度，摩尔质量取小数点后两位，最终结果保留3位有效数字。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "report-writing",
-    "error-analysis"
-   ]
-  },
-  {
-   "id": "q-test",
-   "name": "Q检验法",
-   "category": "analytical",
-   "level": 3,
-   "description": "用于判断可疑数据是否应舍弃的统计方法：Q=|x可疑-x邻近|/(x最大-x最小)，与临界值Q表比较决定取舍。",
-   "symbolSize": 25,
-   "parent": "error-analysis",
-   "formulas": [
-    "Q = \\frac{|x_{可疑} - x_{邻近}|}{x_{最大} - x_{最小}}"
-   ],
-   "connectionToExperiment": "三次平行产率数据72%、73%、68%中，68%需经Q检验判断是否保留（Q₀.₉₀,₃=0.94）。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "error-analysis",
-    "report-writing"
-   ]
-  },
-  {
-   "id": "cyanotype",
-   "name": "蓝晒法原理",
-   "category": "physical",
-   "level": 3,
-   "description": "利用[Fe(C₂O₄)₃]³⁻光分解产生Fe²⁺，再与[Fe(CN)₆]³⁻反应生成普鲁士蓝（Fe₃[Fe(CN)₆]₂）的古老摄影技术。",
-   "symbolSize": 25,
-   "parent": "photochem",
-   "formulas": [
-    "3Fe^{2+} + 2[Fe(CN)_6]^{3-} \\rightarrow Fe_3[Fe(CN)_6]_2"
-   ],
-   "connectionToExperiment": "蓝晒法由Herschel于1842年发明，利用产物光分解产生的Fe²⁺与铁氰化钾反应生成深蓝色普鲁士蓝影像。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "photochem",
-    "lmct"
-   ]
-  },
-  {
-   "id": "troubleshooting",
-   "name": "实验故障排查",
-   "category": "analytical",
-   "level": 3,
-   "description": "系统诊断实验异常现象（产率异常、颜色异常、晶体质量差）的原因并采取相应对策的方法论。",
-   "symbolSize": 25,
-   "parent": "reagent-quality",
-   "connectionToExperiment": "产率<45%说明操作重大失误；黄绿色说明Fe²⁺氧化不完全；棕黄色说明Fe(OH)₃未完全溶解；>95%说明产物含杂质。",
-   "difficulty": 2,
-   "relatedNodes": [
-    "reagent-quality",
-    "yield-optimization",
-    "lab-safety"
-   ]
-  },
-  {
-   "id": "safety-direction",
-   "name": "实验安全与环保",
-   "category": "analytical",
-   "level": 1,
-   "description": "涵盖实验安全防护、试剂安全管理、废液分类处理和绿色化学理念等知识方向，是化学实验教育的重要组成部分。",
-   "symbolSize": 50,
-   "parent": "center-exp",
-   "connectionToExperiment": "三草酸合铁酸钾制备实验涉及草酸（中等毒性）、H₂O₂（氧化性）和K₃[Fe(CN)₆]（潜在氰化物风险），需要严格的安全规范和废液处理。",
-   "difficulty": 1,
-   "relatedNodes": [
-    "analytical",
-    "lab-safety",
-    "waste-treatment"
-   ]
-  },
-  {
-   "id": "werner-bio",
-   "name": "维尔纳生平",
-   "category": "coordination",
-   "level": 3,
-   "description": "阿尔弗雷德·维尔纳（Alfred Werner, 1866-1919），瑞士化学家，26岁发表配位理论，提出主价/副价和配位数概念，1913年获诺贝尔化学奖，是配位化学的唯一诺贝尔奖得主。",
-   "symbolSize": 22,
-   "parent": "complex-concept",
-   "formulas": ["M(NH_3)_6^{n+} \\text{ 型配合物的八面体构型}"],
-   "connectionToExperiment": "维尔纳的八面体配位假说精确预言了[Fe(C₂O₄)₃]³⁻的空间构型，后被X射线单晶衍射确证（空间群P2₁/c）。",
-   "difficulty": 1,
-   "relatedNodes": ["complex-concept", "octahedral", "tassaert-discovery"]
-  },
-  {
-   "id": "tassaert-discovery",
-   "name": "塔萨厄尔发现",
-   "category": "coordination",
-   "level": 3,
-   "description": "1798年法国化学家塔萨厄尔（B.M.Tassaert）偶然发现[Co(NH₃)₆]Cl₃——历史上第一个配位化合物，打破了\"两个独立稳定化合物不能再结合\"的传统观念。",
-   "symbolSize": 22,
-   "parent": "complex-concept",
-   "formulas": ["[Co(NH_3)_6]Cl_3 \\xrightarrow{1798} \\text{首次合成}"],
-   "connectionToExperiment": "塔萨厄尔发现的六氨合钴为配位化学奠定了基础，三草酸合铁酸钾正是继其后的经典配位化合物合成代表。",
-   "difficulty": 1,
-   "relatedNodes": ["complex-concept", "werner-bio", "naming"]
-  },
-  {
-   "id": "nobel-prize",
-   "name": "配位化学诺贝尔奖",
-   "category": "coordination",
-   "level": 3,
-   "description": "维尔纳1913年获诺贝尔化学奖（配位理论），后续获诺奖的配位化学相关贡献包括：1964年Hodgkin（VB₁₂结构/X射线晶体学）、1973年Wilkinson/Fischer（二茂铁夹心结构）、1987年Pedersen/Cram/Lehn（超分子配位化学）等。",
-   "symbolSize": 22,
-   "parent": "werner-bio",
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻的八面体螯合结构是配位化学教科书中的典范，实验中被学生合成了上百年。",
-   "difficulty": 1,
-   "relatedNodes": ["werner-bio", "octahedral", "chelate"]
-  },
-  {
-   "id": "magnetic-susceptibility",
-   "name": "磁化率测定",
-   "category": "physical",
-   "level": 2,
-   "description": "通过测量物质在磁场中的响应获取未成对电子数的方法，磁性数据直接验证配位化合物中金属离子的电子构型和自旋态。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": ["\\chi_M = \\chi_{para} + \\chi_{dia}", "\\chi_{para}T = \\frac{Ng^2\\mu_B^2}{3k}S(S+1)"],
-   "connectionToExperiment": "三草酸合铁(III)酸钾的磁化率测定证实Fe³⁺为高自旋d⁵构型，μeff≈5.92 B.M.（5个未成对电子），有力支持了晶体场理论对配位场强度的判断。",
-   "difficulty": 3,
-   "relatedNodes": ["physical", "high-spin-d5", "crystal-field", "gouy-balance"]
-  },
-  {
-   "id": "gouy-balance",
-   "name": "古埃磁天平",
-   "category": "physical",
-   "level": 3,
-   "description": "Gouy磁天平是最常用的固体磁化率测量仪器，样品管在非均匀磁场中受力ΔW=Fz，通过比较法标定后求得摩尔磁化率χM。",
-   "symbolSize": 22,
-   "parent": "magnetic-susceptibility",
-   "formulas": ["F_z = \\frac{1}{2}\\chi_g A (H^2 - H_0^2)", "\\chi_M = \\chi_g \\cdot M"],
-   "connectionToExperiment": "实验中用古埃磁天平测量产物粉末，结合修正的居里定律，计算Fe³⁺的未成对电子数n=5。",
-   "difficulty": 3,
-   "relatedNodes": ["magnetic-susceptibility", "high-spin-d5", "spin-only"]
-  },
-  {
-   "id": "high-spin-d5",
-   "name": "高自旋d⁵磁矩",
-   "category": "physical",
-   "level": 3,
-   "description": "Fe³⁺（3d⁵）在八面体弱场（如C₂O₄²⁻）中为高自旋态，t₂g³eg²排布，5个未成对电子，仅自旋磁矩μs.o.=√(5×7)=√35≈5.92 B.M.，与实验值吻合。",
-   "symbolSize": 25,
-   "parent": "magnetic-susceptibility",
-   "formulas": ["\\mu_{s.o.} = \\sqrt{n(n+2)} = \\sqrt{35} \\approx 5.92\\,\\text{B.M.}"],
-   "connectionToExperiment": "产物的有效磁矩≈5.92 B.M.恰好对应高自旋d⁵，说明草酸根是弱场配体，不能迫使d电子成对——这是判断配体场强的最直接实验证据。",
-   "difficulty": 2,
-   "relatedNodes": ["magnetic-susceptibility", "spin-only", "crystal-field", "spectral-series"]
-  },
-  {
-   "id": "spin-only",
-   "name": "仅自旋磁矩公式",
-   "category": "physical",
-   "level": 3,
-   "description": "对第一过渡系金属（3dⁿ），轨道角动量大部分被配体场猝灭（quenching），实测磁矩接近仅自旋公式 μ=√[n(n+2)] B.M.，来自量子力学S²算符的本征值。",
-   "symbolSize": 22,
-   "parent": "high-spin-d5",
-   "formulas": ["\\mu_{s.o.} = 2\\sqrt{S(S+1)}\\mu_B = \\sqrt{n(n+2)}\\,\\text{B.M.}"],
-   "connectionToExperiment": "使用仅自旋公式时注意：对d⁶-d⁹八面体配合物，由于自旋-轨道耦合，实测值通常略高于仅自旋预测值，但对高自旋d⁵预测准确。",
-   "difficulty": 2,
-   "relatedNodes": ["high-spin-d5", "magnetic-susceptibility", "crystal-field"]
-  },
-  {
-   "id": "effective-moment",
-   "name": "有效磁矩计算",
-   "category": "physical",
-   "level": 3,
-   "description": "从实验磁化率χM（经抗磁校正后）出发计算有效磁矩：μeff=2.828√(χM·T) B.M.（室温，T=298K）。再反推未成对电子数n。",
-   "symbolSize": 22,
-   "parent": "magnetic-susceptibility",
-   "formulas": ["\\mu_{eff} = 2.828\\sqrt{\\chi_M T} \\,\\text{B.M.} \\quad (T=298\\,\\text{K})", "n \\approx \\frac{\\sqrt{1+4\\mu_{eff}^2}-1}{2}"],
-   "connectionToExperiment": "实验数据处理流程：天平读数→磁化率→经Pascal常数抗磁校正→χM→μeff→n→与理论值对比，完成磁性分析。",
-   "difficulty": 2,
-   "relatedNodes": ["magnetic-susceptibility", "high-spin-d5", "spin-only"]
-  },
-  {
-   "id": "green-chemistry",
-   "name": "绿色化学理念",
-   "category": "analytical",
-   "level": 2,
-   "description": "绿色化学12条原则（Anastas & Warner, 1998）：原子经济性、使用可再生原料、减少衍生物、催化优于计量反应、设计可降解产物、实时污染防控等。",
-   "symbolSize": 40,
-   "parent": "safety-direction",
-   "formulas": ["\\text{原子经济性} = \\frac{M_{目标产物}}{\\sum M_{所有反应物}} \\times 100\\%"],
-   "connectionToExperiment": "本实验水为溶剂、H₂O₂还原产物为水（无污染副产物）、乙醇可回收、含铁废液分类处理——是践行绿色化学教学理念的经典案例。",
-   "difficulty": 1,
-   "relatedNodes": ["safety-direction", "waste-treatment", "lab-safety"]
-  },
-  {
-   "id": "waste-classification",
-   "name": "废液分类标准",
-   "category": "analytical",
-   "level": 3,
-   "description": "化学实验室废液按GB 18597-2023分类：无机废液（含重金属、含氰、含氟、酸碱）、有机废液（含卤、不含卤）、固体废弃物等，必须分类收集、标识清晰。",
-   "symbolSize": 22,
-   "parent": "waste-treatment",
-   "connectionToExperiment": "实验母液含Fe³⁺和过量草酸盐，属含重金属无机废液→专用回收桶→碱中和沉淀→按无机废液处置；含乙醇洗液→有机废液桶。严禁混合排放。",
-   "difficulty": 1,
-   "relatedNodes": ["waste-treatment", "lab-safety", "green-chemistry"]
-  },
-  {
-   "id": "first-aid",
-   "name": "急救措施",
-   "category": "analytical",
-   "level": 3,
-   "description": "化学实验常见急救：酸/碱灼伤→大量清水冲洗15min以上；草酸/草酸盐误食→催吐后送医；H₂O₂溅眼→撑开眼睑清水冲洗≥15min；烫伤→冷流水冲洗后覆盖无菌纱布。",
-   "symbolSize": 22,
-   "parent": "lab-safety",
-   "connectionToExperiment": "本实验涉及草酸（有毒）和H₂O₂（腐蚀/强氧化），操作时必须戴护目镜和手套，实验台配备洗眼器和急救箱。",
-   "difficulty": 1,
-   "relatedNodes": ["lab-safety", "waste-treatment", "green-chemistry"]
-  },
-  {
-   "id": "lab-report-scoring",
-   "name": "报告评分标准",
-   "category": "analytical",
-   "level": 2,
-   "description": "基础化学实验报告评分细则：实验目的(5%)+原理(10%)+操作步骤(10%)+数据记录与处理(35%)+结果讨论与误差分析(30%)+思考题(10%)。规范性与书写整洁度±5%。",
-   "symbolSize": 40,
-   "parent": "report-writing",
-   "connectionToExperiment": "本实验报告重点考察产率计算（15%）、误差分析（15%）、三步反应方程式（10%）、光化学性质解释（5%）——合计占总分45%。",
-   "difficulty": 1,
-   "relatedNodes": ["report-writing", "error-analysis", "effective-digit"]
-  },
-  {
-   "id": "teaching-history",
-   "name": "武大教学沿革",
-   "category": "analytical",
-   "level": 3,
-   "description": "自1960年代起，三草酸合铁酸钾制备实验被纳入许多高校基础化学实验课程体系，历经六十余年教学实践，成为化学专业必修实验。2023年修订版讲义更加强调绿色化学和安全规范。",
-   "symbolSize": 22,
-   "parent": "report-writing",
-   "connectionToExperiment": "六十余年的教学积累沉淀了丰富的经验参数（最佳氧化温度40℃、乙醇用量1:1、避光保存要求等），这些参数在知识图谱和FAQ中均有详细记录。",
-   "difficulty": 1,
-   "relatedNodes": ["report-writing", "yield-optimization", "troubleshooting"]
-  },
-  {
-   "id": "curriculum-design",
-   "name": "课程设计理念",
-   "category": "analytical",
-   "level": 3,
-   "description": "本实验课程基于OBE（成果导向教育）理念设计：通过一个综合性实验串联沉淀、氧化还原和配位三大核心化学过程，搭配产物产率计算、误差分析、光化学性质验证等环节，实现知识-能力-素养三位一体的教学目标。",
-   "symbolSize": 22,
-   "parent": "lab-report-scoring",
-   "connectionToExperiment": "实验教学不再只是\"照着步骤做\"，而是通过知识图谱、AI助手和掌握度测评，帮助学生理解每一步操作的化学原理——这正是本ChemAI平台的教育价值所在。",
-   "difficulty": 1,
-   "relatedNodes": ["lab-report-scoring", "teaching-history", "troubleshooting"]
-  },
-  {
-   "id": "spectrochemical-series-detail",
-   "name": "光谱化学序详解",
-   "category": "physical",
-   "level": 3,
-   "description": "配体按分裂能力从小到大：I⁻<Br⁻<S²⁻<SCN⁻<Cl⁻<NO₃⁻<F⁻<OH⁻<C₂O₄²⁻≈H₂O<NCS⁻<CH₃CN<NH₃<en<bipy<phen<NO₂⁻<CN⁻<CO。C₂O₄²⁻位于中等偏弱区域（Δ₀≈14,000-18,000 cm⁻¹），在[Ni(H₂O)₆]²⁺与[Ni(en)₃]²⁺的正中间区域。",
-   "symbolSize": 25,
-   "parent": "spectral-series",
-   "formulas": ["\\text{I}^- < \\text{Br}^- < \\text{Cl}^- < \\text{F}^- < \\text{C}_2\\text{O}_4^{2-} < \\text{H}_2\\text{O} < \\text{NH}_3 < \\text{en} < \\text{CN}^-"],
-   "connectionToExperiment": "C₂O₄²⁻在光谱化学序中的位置决定了[Fe(C₂O₄)₃]³⁻为高自旋配合物，Δ₀≈14,300 cm⁻¹对应吸收波长约700nm（红光区），透射翠绿光的补色——565nm（绿-青色）。",
-   "difficulty": 2,
-   "relatedNodes": ["spectral-series", "crystal-field", "high-spin-d5", "dd-transition"]
-  },
-  {
-   "id": "jahn-teller-detail",
-   "name": "姜-泰勒效应详解",
-   "category": "coordination",
-   "level": 3,
-   "description": "姜-泰勒定理（Jahn-Teller Theorem）：非线性分子在简并电子基态下不稳定，会自动发生几何畸变以消除简并并降低能量。八面体场中最显著的是d⁹（Cu²⁺）和d⁴高自旋（Mn³⁺），造成轴向拉长或压缩。",
-   "symbolSize": 25,
-   "parent": "crystal-field",
-   "formulas": ["E_{JT} = -\\frac{1}{2}\\delta \\cdot \\Delta n_{e_g}", "\\text{畸变模式：} z\\text{-out (拉长) > } z\\text{-in (压缩)}"],
-   "connectionToExperiment": "[Fe(C₂O₄)₃]³⁻（Fe³⁺, d⁵高自旋, t₂g³eg²）eg轨道均匀占据——无姜-泰勒效应，保持理想八面体构型，这是其晶体稳定生长、易于获得单晶的重要原因。",
-   "difficulty": 3,
-   "relatedNodes": ["crystal-field", "octahedral", "delta-splitting", "dd-transition"]
-  },
-  {
-   "id": "xrd-characterization",
-   "name": "X射线衍射表征",
-   "category": "physical",
-   "level": 2,
-   "description": "X射线单晶/粉末衍射（XRD）是确定配合物晶体结构的决定性方法。布拉格方程 nλ=2d·sinθ 将衍射角与晶面间距关联，通过衍射图谱指数化确定晶胞参数和空间群。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": ["n\\lambda = 2d\\sin\\theta", "d_{hkl} = \\frac{1}{\\sqrt{h^2/a^2 + k^2/b^2 + l^2/c^2}} \\quad (\\text{正交晶系})"],
-   "connectionToExperiment": "三草酸合铁(III)酸钾单晶XRD结果为单斜晶系、空间群P2₁/c、a=7.72Å, b=19.73Å, c=10.26Å, β=94.8°——这是维尔纳八面体理论的直接实验证认。",
-   "difficulty": 2,
-   "relatedNodes": ["physical", "octahedral", "crystal-field", "spectrophotometry"]
-  },
-  {
-   "id": "ir-spectroscopy",
-   "name": "红外光谱表征",
-   "category": "physical",
-   "level": 2,
-   "description": "红外光谱（IR）通过检测化学键振动频率获取配位信息。C₂O₄²⁻的νas(COO⁻)和νs(COO⁻)的频率差Δν可区分单齿、双齿和桥式配位模式——双齿Δν<单齿Δν。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": ["\\Delta\\nu = \\nu_{as}(\\text{COO}^-) - \\nu_s(\\text{COO}^-)", "\\Delta\\nu_{\\text{bidentate}} < \\Delta\\nu_{\\text{monodentate}}"],
-   "connectionToExperiment": "产物IR谱中νas(COO⁻)≈1710 cm⁻¹, νs(COO⁻)≈1390cm⁻¹,Δν≈320cm⁻¹＜自由草酸根的Δν≈365cm⁻¹，证实了C₂O₄²⁻的双齿配位模式。",
-   "difficulty": 2,
-   "relatedNodes": ["physical", "xrd-characterization", "spectrophotometry", "chelate"]
-  },
-  {
-   "id": "tg-dsc-analysis",
-   "name": "TG-DSC热分析",
-   "category": "physical",
-   "level": 2,
-   "description": "热重-差示扫描量热联用（TG-DSC）同步测量质量变化和热流变化，定量解析分解步骤。K₃[Fe(C₂O₄)₃]·3H₂O的TG曲线显示三步失重：失结晶水（70-130℃）→草酸根分解（280-400℃）→碳酸盐形成（400-600℃）。",
-   "symbolSize": 40,
-   "parent": "physical",
-   "formulas": ["\\Delta m_1 = \\frac{3 \\times 18.02}{491.25} \\times 100\\% \\approx 11.0\\% \\quad (\\text{结晶水})", "\\Delta m_2 \\approx 43\\% \\quad (\\text{草酸根分解})"],
-   "connectionToExperiment": "TG-DSC数据是判断产物纯度的重要指标——若第一步失重偏离11.0%说明结晶水含量异常；加热实验中产物的分解温度和失重比例可以反推配合物的热稳定性。",
-   "difficulty": 3,
-   "relatedNodes": ["physical", "crystal-field", "xrd-characterization"]
-  },
-  {
-   "id": "born-equation",
-   "name": "Born溶剂化模型",
-   "category": "physical",
-   "level": 3,
-   "description": "Born模型定量描述离子在溶剂中的溶剂化自由能：ΔGsolv=-(NAz²e²/8πε₀r)(1-1/ε)。乙醇的介电常数(ε≈24.3)远小于水(ε≈78.5)，因此加入乙醇后离子溶剂化能减小、沉淀/结晶驱动力增大。",
-   "symbolSize": 22,
-   "parent": "thermodynamics",
-   "formulas": ["\\Delta G_{solv} = -\\frac{N_A z^2 e^2}{8\\pi\\varepsilon_0 r}\\left(1 - \\frac{1}{\\varepsilon}\\right)", "\\varepsilon_{\\text{EtOH}} \\approx 24.3 \\ll \\varepsilon_{\\text{H}_2\\text{O}} \\approx 78.5"],
-   "connectionToExperiment": "向产物水溶液中加入乙醇降低溶剂介电常数→ΔGsolv增加（溶剂化能力下降）→配合物溶解度降低→翠绿色晶体析出。这是溶剂替换结晶法的热力学本质。",
-   "difficulty": 3,
-   "relatedNodes": ["thermodynamics", "kinetics", "chelate"]
-  },
-  {
-   "id": "mohr-salt-chemistry",
-   "name": "莫尔盐化学",
-   "category": "redox",
-   "level": 2,
-   "description": "莫尔盐（Mohr's Salt）即六水合硫酸亚铁铵(NH₄)₂Fe(SO₄)₂·6H₂O，M=392.14 g/mol，浅绿色单斜晶体。比纯FeSO₄更抗空气氧化——因为NH₄⁺降低了晶格中Fe²⁺的活动性，且微酸性。是分析化学中标定KMnO₄和K₂Cr₂O₇的基准物质。",
-   "symbolSize": 40,
-   "parent": "redox",
-   "formulas": ["(\\text{NH}_4)_2\\text{Fe}(\\text{SO}_4)_2 \\cdot 6\\text{H}_2\\text{O}", "\\text{Fe}^{2+} + \\text{MnO}_4^- + 8\\text{H}^+ \\rightarrow \\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}"],
-   "connectionToExperiment": "本实验中莫尔盐作为Fe(Ⅱ)铁源（组成确定、不易被空气氧化），产率计算以其为限量基准——1mol莫尔盐理论生成1mol K₃[Fe(C₂O₄)₃]·3H₂O。",
-   "difficulty": 2,
-   "relatedNodes": ["redox", "redox-titration", "standard-solution"]
-  },
-  {
-   "id": "oxalate-comparison",
-   "name": "草酸配合物对比",
-   "category": "coordination",
-   "level": 2,
-   "description": "草酸根与不同金属离子形成多样的配合物：K₃[Fe(C₂O₄)₃]（翠绿色，八面体）、K₂[Cu(C₂O₄)₂]（蓝色，平面四方）、K₃[Cr(C₂O₄)₃]（深紫色，八面体d³）、K₃[Co(C₂O₄)₃]（绿色，八面体d⁶低自旋）。配位模式均为双齿螯合，但颜色和磁性因金属不同而异。",
-   "symbolSize": 40,
-   "parent": "chelate",
-   "formulas": ["\\text{K}_3[\\text{Fe}(\\text{C}_2\\text{O}_4)_3] - \\text{翠绿色，d}^5 \\text{高自旋}", "\\text{K}_3[\\text{Cr}(\\text{C}_2\\text{O}_4)_3] - \\text{深紫色，d}^3 \\text{八面体}"],
-   "connectionToExperiment": "对比不同金属草酸配合物的颜色和磁性是理解晶体场理论的最佳实验序列——同样的配体、同样的配位数，只因中心离子的d电子数不同而呈现截然不同的物理化学性质。",
-   "difficulty": 2,
-   "relatedNodes": ["chelate", "crystal-field", "high-spin-d5", "spectrochemical-series-detail"]
-  },
-  {
-   "id": "werner-theory-original",
-   "name": "维尔纳配位理论原文",
-   "category": "coordination",
-   "level": 2,
-   "description": "1893年维尔纳在Z. Anorg. Chem.发表的配位理论原文详解：主价(Hauptvalenz)对应氧化数，副价(Nebenvalenz)对应配位数。提出\"配位数\"概念解释为何CoCl₃能结合6个NH₃形成[Co(NH₃)₆]Cl₃。1907年拆分[Co(en)₃]³⁺对映体实验验证八面体构型，为1913年诺贝尔奖奠定基础。",
-   "symbolSize": 35,
-   "parent": "coord",
-   "connectionToExperiment": "维尔纳配位理论是理解三草酸合铁(III)酸钾结构的基础：Fe³⁺主价+3与C₂O₄²⁻副价配位，配位数6形成八面体[Fe(C₂O₄)₃]³⁻配离子。",
-   "difficulty": 2,
-   "relatedNodes": ["complex-concept", "chelate", "isomerism", "naming"],
-   "formulas": ["[Co(NH_3)_6]Cl_3", "[Co(en)_3]^{3+}"]
-  },
-  {
-   "id": "molecular-orbital-coord",
-   "name": "分子轨道理论在配位化学中的应用",
-   "category": "physical",
-   "level": 3,
-   "description": "MO理论解释配位键本质：σ-给体配体（如NH₃、H₂O）的孤对电子填入金属d轨道空穴；π-受体配体（如CO、CN⁻）通过反馈π键增强配位键。草酸根C₂O₄²⁻既是σ-给体又是弱π-给体，MO处理解释了光谱化学序列的电子结构基础。",
-   "symbolSize": 28,
-   "parent": "crystal-field",
-   "connectionToExperiment": "MO理论补充晶体场理论解释[Fe(C₂O₄)₃]³⁻中草酸根的σ-给电子和弱π-给电子效应，影响分裂能Δo大小和光化学LMCT过程。",
-   "difficulty": 3,
-   "relatedNodes": ["crystal-field", "dd-transition", "photochem", "spectrochem-series"],
-   "formulas": ["\\sigma-donor: L \\rightarrow M(d)", "\\pi-acceptor: M(d_\\pi) \\rightarrow L(\\pi^*)"]
-  },
-  {
-   "id": "temperature-control",
-   "name": "温度控制原理",
-   "category": "analytical",
-   "level": 3,
-   "description": "本实验温度控制的物理化学原理。Arrhenius方程 k=A·e^(-Ea/RT)：H₂O₂氧化Fe²⁺的Ea≈50 kJ/mol，40°C时速率约为25°C时的3倍。温度上限由H₂O₂分解（>60°C剧烈分解）和Fe³⁺水解（>50°C促进Fe(OH)₃胶体形成）决定。微沸（~100°C）用于配位步骤以加速草酸溶解Fe(OH)₃，但需避免过度沸腾导致草酸分解。",
-   "symbolSize": 28,
-   "parent": "yield-optimization",
-   "connectionToExperiment": "本实验中40°C水浴氧化是最优操作温度：既能加速氧化反应又避免H₂O₂过快分解和Fe³⁺水解。微沸状态溶解Fe(OH)₃是第三步配位反应的关键温度条件。",
-   "difficulty": 2,
-   "relatedNodes": ["redox-potential", "kinetics-coord", "yield-optimization"],
-   "formulas": ["k = A e^{-E_a/RT}", "\\frac{k_{313}}{k_{298}} = \\exp\\left[\\frac{E_a}{R}\\left(\\frac{1}{298}-\\frac{1}{313}\\right)\\right]"]
-  },
-  {
-   "id": "ethanol-crystallization",
-   "name": "乙醇促结晶机理",
-   "category": "analytical",
-   "level": 3,
-   "description": "溶剂替换法结晶的热力学与动力学。Born溶剂化模型：离子溶剂化能ΔG_solv ∝ -1/ε_r，加入乙醇（ε_r=24.5，水ε_r=78.5）降低溶剂介电常数，溶质溶剂化能减小，化学势升高，溶液过饱和度增大。K₃[Fe(C₂O₄)₃]·3H₂O在乙醇-水混合溶剂中溶解度急剧下降——乙醇浓度40%(v/v)时溶解度仅为纯水中的~5%。",
-   "symbolSize": 28,
-   "parent": "yield-optimization",
-   "connectionToExperiment": "本实验第四步加入95%乙醇约10 mL（终体积~40%），使产物因溶解度急剧下降而结晶析出。这是溶剂替换法（非蒸发法）的经典教学案例。",
-   "difficulty": 2,
-   "relatedNodes": ["yield-optimization", "solubility-product", "error-analysis"],
-   "formulas": ["\\Delta G_{solv} = -\\frac{z^2e^2}{8\\pi\\varepsilon_0 r}\\left(1-\\frac{1}{\\varepsilon_r}\\right)", "\\varepsilon_r(H_2O)=78.5,\\ \\varepsilon_r(EtOH)=24.5"]
-  },
-  {
-   "id": "photochemical-kinetics",
-   "name": "光化学动力学",
-   "category": "physical",
-   "level": 3,
-   "description": "光化学反应的动力学特征。量子产率Φ = 反应分子数/吸收光子数。对于[Fe(C₂O₄)₃]³⁻光分解：Φ(254 nm)≈1.2（链式反应使Φ>1），Φ(400 nm)≈0.9。化学光量计：草酸铁钾光量计（ferrioxalate actinometer）利用该反应精确测量光子通量——标准光量计在254-500 nm范围Φ已精确标定。光化学第一定律(Grotthuss-Draper)：只有被吸收的光才能引起光化学反应。第二定律(Stark-Einstein)：一个分子吸收一个光子后被活化。",
-   "symbolSize": 28,
-   "parent": "photochem",
-   "connectionToExperiment": "三草酸合铁(III)酸钾的光化学性质是蓝晒法的基础，其光分解量子产率接近1，是化学光量计的标准反应体系。",
-   "difficulty": 3,
-   "relatedNodes": ["photochem", "dd-transition", "spectrochem-series", "kinetics-coord"],
-   "formulas": ["\\Phi = \\frac{n_{rxn}}{n_{h\\nu}}", "\\Phi(254\\ nm) \\approx 1.2", "\\Phi(400\\ nm) \\approx 0.9"]
-  }
- ],
- "links": [
-  {
-   "source": "center-exp",
-   "target": "coord",
-   "lineStyle": {
-    "width": 3,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "center-exp",
-   "target": "redox",
-   "lineStyle": {
-    "width": 3,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "center-exp",
-   "target": "analytical",
-   "lineStyle": {
-    "width": 3,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "center-exp",
-   "target": "physical",
-   "lineStyle": {
-    "width": 3,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "complex-concept",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "chelate",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "stability-const",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "coord-titration",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "isomerism",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "coord",
-   "target": "naming",
-   "lineStyle": {
-    "width": 2,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "redox-potential",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "fenton",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "redox-titration",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "catalyst",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "disproportionation",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "redox",
-   "target": "induction",
-   "lineStyle": {
-    "width": 2,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "gravimetry",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "titration",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "spectrophotometry",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "standard-solution",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "error-analysis",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "precipitation",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "crystal-field",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "octahedral",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "dd-transition",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "thermodynamics",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "kinetics",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "color-complement",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "crystal-field",
-   "target": "hybrid-orbital",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "crystal-field",
-   "target": "delta-splitting",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "octahedral",
-   "target": "geometry-octahedral",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "spectrophotometry",
-   "target": "absorption-spectrum",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "spectrophotometry",
-   "target": "lambert-beer",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "chelate",
-   "target": "chelate-effect",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "chelate",
-   "target": "edta",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "complex-concept",
-   "target": "inner-outer-sphere",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "complex-concept",
-   "target": "ligand-field",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "isomerism",
-   "target": "cis-trans-isomerism",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "redox-potential",
-   "target": "nernst-equation",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "fenton",
-   "target": "hydroxyl-radical",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "chelate",
-   "target": "crystal-field",
-   "label": "结构稳定性",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "stability-const",
-   "target": "thermodynamics",
-   "label": "热力学",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "dd-transition",
-   "target": "color-complement",
-   "label": "颜色解释",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "redox-titration",
-   "target": "titration",
-   "label": "滴定方法",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "standard-solution",
-   "target": "error-analysis",
-   "label": "准确度",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "fenton",
-   "target": "kinetics",
-   "label": "反应速率",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "catalyst",
-   "target": "fenton",
-   "label": "催化机理",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "spectrophotometry",
-   "target": "dd-transition",
-   "label": "光谱验证",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "absorption-spectrum",
-   "target": "delta-splitting",
-   "label": "能级跃迁",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "chelate-effect",
-   "target": "stability-const",
-   "label": "稳定性",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "edta",
-   "target": "coord-titration",
-   "label": "滴定应用",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "hydroxyl-radical",
-   "target": "redox-potential",
-   "label": "电势比较",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "safety-direction",
-   "target": "lab-safety",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "safety-direction",
-   "target": "waste-treatment",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "safety-direction",
-   "target": "reagent-quality",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "safety-direction",
-   "target": "report-writing",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "analytical",
-   "target": "yield-optimization",
-   "lineStyle": {
-    "width": 2,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "lmct",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "spectral-series",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "physical",
-   "target": "photochem",
-   "lineStyle": {
-    "width": 2,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "lab-safety",
-   "target": "troubleshooting",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "report-writing",
-   "target": "effective-digit",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "stability-const",
-   "target": "stability-const-calc",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#2dd4bf"
-   }
-  },
-  {
-   "source": "error-analysis",
-   "target": "q-test",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "photochem",
-   "target": "cyanotype",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "reagent-quality",
-   "target": "troubleshooting",
-   "lineStyle": {
-    "width": 1.5,
-    "type": "dashed",
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "lmct",
-   "target": "dd-transition",
-   "label": "电子跃迁",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "photochem",
-   "target": "color-complement",
-   "label": "颜色变化",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "spectral-series",
-   "target": "crystal-field",
-   "label": "场强预测",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "lab-safety",
-   "target": "fenton",
-   "label": "试剂安全",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#f59e0b"
-   }
-  },
-  {
-   "source": "yield-optimization",
-   "target": "gravimetry",
-   "label": "产量分析",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "report-writing",
-   "target": "titration",
-   "label": "数据记录",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "stability-const-calc",
-   "target": "thermodynamics",
-   "label": "热力学",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "cyanotype",
-   "target": "color-complement",
-   "label": "蓝色来源",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#a855f7"
-   }
-  },
-  {
-   "source": "troubleshooting",
-   "target": "yield-optimization",
-   "label": "产率诊断",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "waste-treatment",
-   "target": "precipitation",
-   "label": "沉淀法",
-   "lineStyle": {
-    "width": 1,
-    "type": "dashed",
-    "opacity": 0.4,
-    "color": "#3b82f6"
-   }
-  },
-  {
-   "source": "safety-direction",
-   "target": "green-chemistry",
-   "lineStyle": { "width": 2, "color": "#3b82f6" }
-  },
-  {
-   "source": "coordination",
-   "target": "werner-bio",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
-  },
-  {
-   "source": "werner-bio",
-   "target": "tassaert-discovery",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
-  },
-  {
-   "source": "werner-bio",
-   "target": "nobel-prize",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#2dd4bf" }
-  },
-  {
-   "source": "physical",
-   "target": "magnetic-susceptibility",
-   "lineStyle": { "width": 2, "color": "#a855f7" }
-  },
-  {
-   "source": "magnetic-susceptibility",
-   "target": "gouy-balance",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "magnetic-susceptibility",
-   "target": "high-spin-d5",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "high-spin-d5",
-   "target": "spin-only",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "magnetic-susceptibility",
-   "target": "effective-moment",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "lab-safety",
-   "target": "first-aid",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
-  },
-  {
-   "source": "waste-treatment",
-   "target": "waste-classification",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
-  },
-  {
-   "source": "report-writing",
-   "target": "lab-report-scoring",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
-  },
-  {
-   "source": "lab-report-scoring",
-   "target": "curriculum-design",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
-  },
-  {
-   "source": "report-writing",
-   "target": "teaching-history",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#3b82f6" }
-  },
-  {
-   "source": "spectral-series",
-   "target": "spectrochemical-series-detail",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "crystal-field",
-   "target": "jahn-teller-detail",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "physical",
-   "target": "xrd-characterization",
-   "lineStyle": { "width": 2, "color": "#a855f7" }
-  },
-  {
-   "source": "physical",
-   "target": "ir-spectroscopy",
-   "lineStyle": { "width": 2, "color": "#a855f7" }
-  },
-  {
-   "source": "physical",
-   "target": "tg-dsc-analysis",
-   "lineStyle": { "width": 2, "color": "#a855f7" }
-  },
-  {
-   "source": "thermodynamics",
-   "target": "born-equation",
-   "lineStyle": { "width": 1.5, "type": "dashed", "color": "#a855f7" }
-  },
-  {
-   "source": "redox",
-   "target": "mohr-salt-chemistry",
-   "lineStyle": { "width": 2, "color": "#f59e0b" }
-  },
-  {
-   "source": "chelate",
-   "target": "oxalate-comparison",
-   "lineStyle": { "width": 2, "color": "#2dd4bf" }
-  },
-  {
-   "source": "magnetic-susceptibility",
-   "target": "crystal-field",
-   "label": "磁性-结构验证",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
-  },
-  {
-   "source": "xrd-characterization",
-   "target": "octahedral",
-   "label": "构型确证",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
-  },
-  {
-   "source": "ir-spectroscopy",
-   "target": "chelate",
-   "label": "配位模式",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
-  },
-  {
-   "source": "tg-dsc-analysis",
-   "target": "thermodynamics",
-   "label": "热力学",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#a855f7" }
-  },
-  {
-   "source": "born-equation",
-   "target": "chelate",
-   "label": "溶解-结晶驱动力",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#2dd4bf" }
-  },
-  {
-   "source": "mohr-salt-chemistry",
-   "target": "redox-titration",
-   "label": "基准物质",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#f59e0b" }
-  },
-  {
-   "source": "oxalate-comparison",
-   "target": "crystal-field",
-   "label": "晶体场对比",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#2dd4bf" }
-  },
-  {
-   "source": "green-chemistry",
-   "target": "yield-optimization",
-   "label": "绿色合成",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
-  },
-  {
-   "source": "teaching-history",
-   "target": "curriculum-design",
-   "label": "教学传承",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
-  },
-  {
-   "source": "first-aid",
-   "target": "green-chemistry",
-   "label": "安全-绿色一体",
-   "lineStyle": { "width": 1, "type": "dashed", "opacity": 0.4, "color": "#3b82f6" }
-  },
-  {
-   "source": "coord",
-   "target": "werner-theory-original",
-   "type": "solid",
-   "lineStyle": { "width": 2, "color": "#2dd4bf" }
-  },
-  {
-   "source": "crystal-field",
-   "target": "molecular-orbital-coord",
-   "type": "dashed",
-   "lineStyle": { "width": 1.5, "color": "#a855f7" }
-  },
-  {
-   "source": "yield-optimization",
-   "target": "temperature-control",
-   "type": "dashed",
-   "lineStyle": { "width": 1.5, "color": "#3b82f6" }
-  },
-  {
-   "source": "yield-optimization",
-   "target": "ethanol-crystallization",
-   "type": "dashed",
-   "lineStyle": { "width": 1.5, "color": "#3b82f6" }
-  },
-  {
-   "source": "photochem",
-   "target": "photochemical-kinetics",
-   "type": "dashed",
-   "lineStyle": { "width": 1.5, "color": "#a855f7" }
-  },
-  {
-   "source": "temperature-control",
-   "target": "ethanol-crystallization",
-   "type": "dashed",
-   "lineStyle": { "width": 1, "color": "#3b82f6", "opacity": 0.4 },
-   "label": "结晶条件优化"
-  },
-  {
-   "source": "werner-theory-original",
-   "target": "crystal-field",
-   "type": "dashed",
-   "lineStyle": { "width": 1, "color": "#2dd4bf", "opacity": 0.4 },
-   "label": "理论演进"
-  }
- ]
+    "nodes":  [
+                  {
+                      "id":  "center-exp",
+                      "name":  "三草酸合铁酸钾制备实验",
+                      "category":  "center",
+                      "level":  0,
+                      "description":  "以三草酸合铁酸钾（K₃[Fe(C₂O₄)₃]·3H₂O）的制备为核心实验，综合运用配位化学、氧化还原、分析化学和物理化学四大知识方向，是大学化学综合实验的典型代表。",
+                      "symbolSize":  80,
+                      "connectionToExperiment":  "本实验是核心综合实验，通过硫酸亚铁铵与草酸反应制备三草酸合铁酸钾晶体，涉及配位、氧化还原、滴定分析和结构表征等多方面知识。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "redox",
+                                           "analytical",
+                                           "physical"
+                                       ]
+                  },
+                  {
+                      "id":  "coord",
+                      "name":  "配位化学",
+                      "category":  "coordination",
+                      "level":  1,
+                      "description":  "研究中心离子与配体通过配位键形成配合物的化学分支，涉及配合物的结构、命名、异构、稳定性和反应性等核心内容。",
+                      "symbolSize":  55,
+                      "parent":  "center-exp",
+                      "connectionToExperiment":  "三草酸合铁酸钾是典型的三齿配位化合物，Fe³⁺作为中心离子与三个草酸根配体形成八面体配位结构，是理解配位化学的绝佳实例。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "analytical",
+                                           "physical",
+                                           "complex-concept",
+                                           "chelate"
+                                       ]
+                  },
+                  {
+                      "id":  "redox",
+                      "name":  "氧化还原化学",
+                      "category":  "redox",
+                      "level":  1,
+                      "description":  "研究电子转移反应及其规律的化学分支，涉及氧化数、电极电势、氧化还原滴定、催化与诱导等核心概念。",
+                      "symbolSize":  55,
+                      "parent":  "center-exp",
+                      "connectionToExperiment":  "制备过程中Fe²⁺被H₂O₂氧化为Fe³⁺，涉及氧化还原反应的选择性氧化、催化剂使用和电势控制等关键知识。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "analytical",
+                                           "physical",
+                                           "redox-potential",
+                                           "fenton"
+                                       ]
+                  },
+                  {
+                      "id":  "analytical",
+                      "name":  "分析化学",
+                      "category":  "analytical",
+                      "level":  1,
+                      "description":  "研究物质组成、结构和性质的测定方法与理论的化学分支，涵盖重量分析、滴定分析、光谱分析等定量定性方法。",
+                      "symbolSize":  55,
+                      "parent":  "center-exp",
+                      "connectionToExperiment":  "实验产物需通过高锰酸钾滴定法测定铁含量和草酸根含量，产物纯度分析是实验成功的关键评判标准。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "redox",
+                                           "physical",
+                                           "titration",
+                                           "spectrophotometry"
+                                       ]
+                  },
+                  {
+                      "id":  "physical",
+                      "name":  "物理/结构化学",
+                      "category":  "physical",
+                      "level":  1,
+                      "description":  "从物理原理和微观结构角度研究化学现象的分支，涉及晶体场理论、分子构型、电子跃迁和热力学动力学等内容。",
+                      "symbolSize":  55,
+                      "parent":  "center-exp",
+                      "connectionToExperiment":  "产物呈现翠绿色与其八面体配位结构和d-d电子跃迁密切相关，晶体场理论可解释其颜色、磁性和光谱特征。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "redox",
+                                           "analytical",
+                                           "crystal-field",
+                                           "octahedral"
+                                       ]
+                  },
+                  {
+                      "id":  "complex-concept",
+                      "name":  "配合物基本概念",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "中心离子（或原子）与一定数目的配体通过配位键结合形成的复杂离子或中性分子，是配位化学的基础研究对象。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "formulas":  [
+                                       "K_3[Fe(C_2O_4)_3] \\cdot 3H_2O",
+                                       "[Fe(C_2O_4)_3]^{3-}"
+                                   ],
+                      "connectionToExperiment":  "三草酸合铁酸钾中的[Fe(C₂O₄)₃]³⁻配阴离子是典型配合物，Fe³⁺为配位中心，C₂O₄²⁻为双齿配体，配位数为6。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "chelate",
+                                           "stability-const",
+                                           "naming",
+                                           "inner-outer-sphere"
+                                       ]
+                  },
+                  {
+                      "id":  "chelate",
+                      "name":  "螯合物",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "由多齿配体与中心离子形成的具有环状结构的配合物，螯环的存在使配合物具有更高的稳定性，称为螯合效应。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "formulas":  [
+                                       "Fe^{3+} + 3C_2O_4^{2-} \\rightarrow [Fe(C_2O_4)_3]^{3-}"
+                                   ],
+                      "connectionToExperiment":  "草酸根C₂O₄²⁻是双齿配体，与Fe³⁺形成三个五元螯环，使三草酸合铁酸钾具有极高的稳定性，是理解螯合效应的典型实例。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "complex-concept",
+                                           "chelate-effect",
+                                           "edta"
+                                       ]
+                  },
+                  {
+                      "id":  "stability-const",
+                      "name":  "稳定常数",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "衡量配合物在溶液中稳定程度的定量指标，记作K稳或β，值越大表示配合物越稳定，不易解离。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "formulas":  [
+                                       "K_{稳} = \\frac{[ML_n]}{[M][L]^n}",
+                                       "\\beta_n = K_1 \\cdot K_2 \\cdots K_n"
+                                   ],
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻具有很大的稳定常数，使得产物在溶液中非常稳定，这也是三草酸合铁酸钾能够成功制备的重要原因。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "complex-concept",
+                                           "coord-titration"
+                                       ]
+                  },
+                  {
+                      "id":  "coord-titration",
+                      "name":  "配位滴定法",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "以配位反应为基础的定量分析方法，常用EDTA作为滴定剂，通过金属离子指示剂判断终点，可测定多种金属离子含量。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "formulas":  [
+                                       "M^{n+} + Y^{4-} \\rightarrow MY^{n-4}",
+                                       "K_{MY} = \\frac{[MY]}{[M][Y]}"
+                                   ],
+                      "connectionToExperiment":  "可用EDTA配位滴定法测定产物中铁的含量，通过PAN或二甲酚橙指示剂确定滴定终点，与氧化还原滴定法进行对比验证。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "edta",
+                                           "standard-solution"
+                                       ]
+                  },
+                  {
+                      "id":  "isomerism",
+                      "name":  "配合物异构现象",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "配合物因组成相同但原子空间排列方式不同而形成不同性质化合物的现象，分为结构异构和立体异构两大类。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "connectionToExperiment":  "三草酸合铁酸钾为八面体构型，草酸根作为双齿配体占据了全部配位点，不存在几何异构体，但可作为理解配合物异构的教学对照。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "octahedral",
+                                           "cis-trans-isomerism"
+                                       ]
+                  },
+                  {
+                      "id":  "naming",
+                      "name":  "配合物命名法",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "按照IUPAC命名规则，配体数-配体名-合-中心离子（氧化态）的顺序命名配合物，需遵循特定的语法和符号规范。",
+                      "symbolSize":  40,
+                      "parent":  "coord",
+                      "connectionToExperiment":  "K₃[Fe(C₂O₄)₃]·3H₂O的系统命名为：三水合三草酸合铁(III)酸钾，是练习配位化合物系统命名的标准范例。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "coord",
+                                           "complex-concept"
+                                       ]
+                  },
+                  {
+                      "id":  "redox-potential",
+                      "name":  "氧化还原电势",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "衡量氧化还原电对得失电子能力的物理量，标准电极电势E°越大，氧化态物质的氧化能力越强。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "formulas":  [
+                                       "E = E^\\circ - \\frac{RT}{nF} \\ln Q",
+                                       "E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}"
+                                   ],
+                      "connectionToExperiment":  "Fe³⁺/Fe²⁺电对的标准电极电势为+0.77V，H₂O₂/H₂O电对为+1.78V，说明H₂O₂能将Fe²⁺氧化为Fe³⁺，是选择氧化剂的依据。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "nernst-equation",
+                                           "fenton"
+                                       ]
+                  },
+                  {
+                      "id":  "fenton",
+                      "name":  "芬顿反应",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "Fe²⁺催化H₂O₂分解产生强氧化性羟基自由基(·OH)的反应体系，广泛应用于废水处理有机污染物降解。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "formulas":  [
+                                       "Fe^{2+} + H_2O_2 \\rightarrow Fe^{3+} + OH^- + \\cdot OH"
+                                   ],
+                      "connectionToExperiment":  "制备过程中H₂O₂氧化Fe²⁺的反应具有芬顿反应的特征，需控制H₂O₂滴加速度以避免副反应和剧烈放热。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "redox-potential",
+                                           "hydroxyl-radical",
+                                           "catalyst"
+                                       ]
+                  },
+                  {
+                      "id":  "redox-titration",
+                      "name":  "氧化还原滴定",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "以氧化还原反应为基础的定量分析方法，常用KMnO₄、K₂Cr₂O₇、Ce(SO₄)₂等作为氧化剂进行滴定。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "formulas":  [
+                                       "MnO_4^- + 8H^+ + 5e^- \\rightarrow Mn^{2+} + 4H_2O",
+                                       "2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O"
+                                   ],
+                      "connectionToExperiment":  "用KMnO₄标准溶液滴定产物溶液，可分别测定Fe²⁺/Fe³⁺含量和C₂O₄²⁻含量，是产物组成分析的关键步骤。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "standard-solution",
+                                           "induction"
+                                       ]
+                  },
+                  {
+                      "id":  "catalyst",
+                      "name":  "催化作用",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "催化剂通过改变反应路径降低反应活化能，从而加快反应速率但不被消耗，包括均相催化和多相催化。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "connectionToExperiment":  "Fe²⁺氧化为Fe³⁺的反应中，适当升温可作为能量催化手段；后续光化学反应中[Fe(C₂O₄)₃]³⁻本身可作为光催化剂。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "fenton",
+                                           "kinetics"
+                                       ]
+                  },
+                  {
+                      "id":  "disproportionation",
+                      "name":  "歧化反应",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "同一元素的原子（或离子）一部分被氧化、另一部分被还原的反应，要求该元素具有中间氧化态。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "formulas":  [
+                                       "2Cu^+ \\rightarrow Cu^{2+} + Cu",
+                                       "3MnO_4^{2-} + 4H^+ \\rightarrow 2MnO_4^- + MnO_2 + 2H_2O"
+                                   ],
+                      "connectionToExperiment":  "H₂O₂在反应中既可能被氧化（作还原剂）也可能被还原（作氧化剂），了解歧化反应有助于理解氧化剂选择的原理。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "redox-potential"
+                                       ]
+                  },
+                  {
+                      "id":  "induction",
+                      "name":  "诱导反应",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "一个氧化还原反应的发生促进另一个氧化还原反应进行的现象，前者称为诱导反应，后者称为受诱反应。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "connectionToExperiment":  "KMnO₄滴定C₂O₄²⁻时，Fe²⁺的存在会诱导KMnO₄对Cl⁻的氧化（如果体系中有Cl⁻），需注意实验条件的控制。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "redox-titration"
+                                       ]
+                  },
+                  {
+                      "id":  "gravimetry",
+                      "name":  "重量分析法",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "通过称量物质质量来确定被测组分含量的经典定量分析方法，具有准确度高但操作繁琐的特点。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "可通过称量产物的质量和组成，计算理论产量和实际产率，验证产物组成是否符合化学计量比。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "error-analysis"
+                                       ]
+                  },
+                  {
+                      "id":  "titration",
+                      "name":  "滴定分析法",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "将已知准确浓度的标准溶液滴加到待测溶液中，根据消耗的体积计算被测组分含量的定量分析方法。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "formulas":  [
+                                       "C_{待测} = \\frac{C_{标准} \\cdot V_{标准}}{V_{待测}}"
+                                   ],
+                      "connectionToExperiment":  "实验中用KMnO₄标准溶液滴定产物，测定草酸根含量和铁含量，是验证产物纯度的核心定量方法。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "standard-solution",
+                                           "redox-titration"
+                                       ]
+                  },
+                  {
+                      "id":  "spectrophotometry",
+                      "name":  "分光光度法",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "基于物质对光的选择性吸收进行定量或定性分析的仪器分析方法，遵循朗伯-比尔定律。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "formulas":  [
+                                       "A = \\varepsilon b c",
+                                       "A = -\\lg T = \\lg \\frac{I_0}{I}"
+                                   ],
+                      "connectionToExperiment":  "产物溶液的翠绿色可通过可见光分光光度计测定吸收光谱，最大吸收波长可印证d-d跃迁的能量特征。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "absorption-spectrum",
+                                           "lambert-beer",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "standard-solution",
+                      "name":  "标准溶液配制",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "已知准确浓度的溶液，可通过直接法（基准物质）或间接法（标定）配制，是定量分析的计量基准。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "KMnO₄溶液需用Na₂C₂O₄基准物质进行标定，确定其准确浓度后才能用于产物组成的定量滴定分析。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "titration",
+                                           "error-analysis"
+                                       ]
+                  },
+                  {
+                      "id":  "error-analysis",
+                      "name":  "误差分析",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "系统评估实验测量值与真实值之间偏差的方法，包括系统误差、随机误差和过失误差的识别与处理。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "formulas":  [
+                                       "\\bar{x} = \\frac{1}{n}\\sum_{i=1}^{n} x_i",
+                                       "s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}",
+                                       "RSD = \\frac{s}{\\bar{x}} \\times 100\\%"
+                                   ],
+                      "connectionToExperiment":  "通过多次平行滴定计算结果的平均值、标准偏差和相对标准偏差（RSD），评估产物分析结果的精密度和准确度。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "gravimetry",
+                                           "titration"
+                                       ]
+                  },
+                  {
+                      "id":  "precipitation",
+                      "name":  "沉淀分离法",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "利用沉淀反应将目标物质从混合物中分离纯化的方法，需控制沉淀条件以获得纯净、易过滤的沉淀。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "制备过程中FeC₂O₄·2H₂O沉淀的生成和过滤是纯化步骤的关键，沉淀的洗涤和干燥直接影响产物纯度。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "gravimetry"
+                                       ]
+                  },
+                  {
+                      "id":  "crystal-field",
+                      "name":  "晶体场理论",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "解释配合物颜色、磁性和光谱等性质的核心理论，认为配体静电场使中心离子d轨道发生能级分裂。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "\\Delta_o = E_{e_g} - E_{t_{2g}}"
+                                   ],
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻为八面体构型，晶体场分裂能Δ₀决定d-d跃迁能量，从而解释了产物为何呈现翠绿色而非其他颜色。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "dd-transition",
+                                           "hybrid-orbital",
+                                           "delta-splitting"
+                                       ]
+                  },
+                  {
+                      "id":  "octahedral",
+                      "name":  "八面体构型",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "六配位配合物最常见的空间构型，六个配体位于正八面体的六个顶点，中心离子位于八面体中心。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻中Fe³⁺与6个氧原子配位形成理想八面体构型，是理解其几何结构和空间排布的基础。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "crystal-field",
+                                           "geometry-octahedral"
+                                       ]
+                  },
+                  {
+                      "id":  "dd-transition",
+                      "name":  "d-d跃迁",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "过渡金属配合物中d电子在不同d轨道之间的电子跃迁，是配合物呈现颜色的主要原因，属于宇称禁阻但可微弱发生。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "E = h\\nu = \\frac{hc}{\\lambda} = \\Delta_o"
+                                   ],
+                      "connectionToExperiment":  "产物[Fe(C₂O₄)₃]³⁻吸收红光（约700nm附近），发生d-d跃迁，透射和散射其互补色——翠绿色光。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "crystal-field",
+                                           "color-complement",
+                                           "absorption-spectrum"
+                                       ]
+                  },
+                  {
+                      "id":  "thermodynamics",
+                      "name":  "热力学分析",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "从能量变化和反应方向角度分析化学过程，涉及焓变、熵变、吉布斯自由能和化学平衡等核心概念。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "\\Delta G = \\Delta H - T\\Delta S",
+                                       "K = e^{-\\Delta G^\\circ / RT}"
+                                   ],
+                      "connectionToExperiment":  "从热力学角度可分析各步反应的自发性，配合物形成反应通常是放热且熵减的过程，低温有利于产物稳定。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "stability-const",
+                                           "kinetics"
+                                       ]
+                  },
+                  {
+                      "id":  "kinetics",
+                      "name":  "反应动力学",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "研究化学反应速率和反应机理的化学分支，涉及速率方程、活化能、催化剂和反应级数等核心概念。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "k = A e^{-E_a / RT}",
+                                       "\\ln\\frac{k_2}{k_1} = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)"
+                                   ],
+                      "connectionToExperiment":  "H₂O₂氧化Fe²⁺的速率受温度和浓度影响，控制H₂O₂滴加速度是为了控制氧化反应的速率，避免局部过浓导致副反应。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "catalyst",
+                                           "fenton",
+                                           "thermodynamics"
+                                       ]
+                  },
+                  {
+                      "id":  "color-complement",
+                      "name":  "颜色互补原理",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "物质选择性吸收特定波长的可见光，呈现被吸收光的互补色。互补色位于色轮相对位置的两种颜色。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "connectionToExperiment":  "产物[Fe(C₂O₄)₃]³⁻主要吸收红光（波长约700nm），因此肉眼观察到的是其互补色——翠绿色。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "dd-transition",
+                                           "absorption-spectrum"
+                                       ]
+                  },
+                  {
+                      "id":  "hybrid-orbital",
+                      "name":  "杂化轨道(sp³d²)",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "八面体配合物中中心离子的一个s轨道、三个p轨道和两个d轨道杂化形成六个等价的sp³d²杂化轨道，用于接受配体孤电子对。",
+                      "symbolSize":  25,
+                      "parent":  "crystal-field",
+                      "formulas":  [
+                                       "sp^3d^2: \\psi = \\frac{1}{\\sqrt{6}}(s + p_x + p_y + p_z + d_{z^2} + d_{x^2-y^2})"
+                                   ],
+                      "connectionToExperiment":  "Fe³⁺（3d⁵）采用sp³d²外轨杂化与6个氧原子配位，形成正八面体构型的[Fe(C₂O₄)₃]³⁻配阴离子。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "crystal-field",
+                                           "octahedral"
+                                       ]
+                  },
+                  {
+                      "id":  "geometry-octahedral",
+                      "name":  "八面体几何",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "正八面体具有Oₕ点群对称性，键角为90°和180°，六个配位原子位于坐标轴上，中心离子位于原点。",
+                      "symbolSize":  25,
+                      "parent":  "octahedral",
+                      "connectionToExperiment":  "三草酸合铁酸钾中三个双齿草酸根配体占据了八面体的六个配位点，形成了高度对称的配位环境。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "octahedral",
+                                           "crystal-field",
+                                           "cis-trans-isomerism"
+                                       ]
+                  },
+                  {
+                      "id":  "delta-splitting",
+                      "name":  "Δ分裂能",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "八面体场中d轨道分裂为能量较低的t₂g轨道（dxy、dyz、dzx）和能量较高的eg轨道（dz²、dx²-y²），两者能量差记为Δ₀。",
+                      "symbolSize":  25,
+                      "parent":  "crystal-field",
+                      "formulas":  [
+                                       "\\Delta_o = 10Dq",
+                                       "E(t_{2g}) = -0.4\\Delta_o",
+                                       "E(e_g) = +0.6\\Delta_o"
+                                   ],
+                      "connectionToExperiment":  "草酸根是中等强度配体，[Fe(C₂O₄)₃]³⁻的分裂能Δ₀对应可见光区约700nm处吸收（红光区），决定了产物呈翠绿色。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "crystal-field",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "absorption-spectrum",
+                      "name":  "吸收光谱",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "物质对不同波长光的吸收程度与波长之间的关系曲线，由吸收峰的位置、强度和形状反映物质的电子结构和能级特征。",
+                      "symbolSize":  25,
+                      "parent":  "spectrophotometry",
+                      "connectionToExperiment":  "用紫外-可见分光光度计测定产物溶液的吸收光谱，可在可见区观察到d-d跃迁产生的特征吸收峰。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "spectrophotometry",
+                                           "dd-transition",
+                                           "lambert-beer"
+                                       ]
+                  },
+                  {
+                      "id":  "lambert-beer",
+                      "name":  "朗伯-比尔定律",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "当一束平行单色光通过均匀溶液时，吸光度与溶液浓度和光程长度成正比，是分光光度法定量分析的理论基础。",
+                      "symbolSize":  25,
+                      "parent":  "spectrophotometry",
+                      "formulas":  [
+                                       "A = \\varepsilon \\cdot b \\cdot c",
+                                       "A = \\lg\\frac{I_0}{I}"
+                                   ],
+                      "connectionToExperiment":  "通过测定产物溶液在最大吸收波长处的吸光度，利用朗伯-比尔定律可计算配合物的摩尔吸光系数和溶液浓度。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "spectrophotometry",
+                                           "standard-solution"
+                                       ]
+                  },
+                  {
+                      "id":  "chelate-effect",
+                      "name":  "螯合效应",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "螯合物比组成相似的非螯合配合物更稳定的现象，主要原因是螯合反应熵增显著，以及环状结构的封闭效应。",
+                      "symbolSize":  25,
+                      "parent":  "chelate",
+                      "connectionToExperiment":  "三个草酸根与Fe³⁺形成三个稳定的五元螯环，螯合效应使[Fe(C₂O₄)₃]³⁻具有极高的热力学稳定性。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "chelate",
+                                           "stability-const",
+                                           "thermodynamics"
+                                       ]
+                  },
+                  {
+                      "id":  "edta",
+                      "name":  "EDTA配位剂",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "乙二胺四乙酸(EDTA)是最常用的六齿配位剂，可与绝大多数金属离子形成1:1的稳定螯合物，是配位滴定的标准试剂。",
+                      "symbolSize":  25,
+                      "parent":  "chelate",
+                      "formulas":  [
+                                       "H_4Y \\rightleftharpoons H^+ + H_3Y^- \\rightleftharpoons \\cdots \\rightleftharpoons Y^{4-} + 4H^+"
+                                   ],
+                      "connectionToExperiment":  "EDTA可作为替代配位滴定试剂测定产物中铁含量，与KMnO₄氧化还原滴定法进行对比分析，验证结果的准确性。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "chelate",
+                                           "coord-titration",
+                                           "standard-solution"
+                                       ]
+                  },
+                  {
+                      "id":  "inner-outer-sphere",
+                      "name":  "内外界结构",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "配合物分为内界（配位单元，方括号内）和外界（抗衡离子，方括号外），内界通过配位键结合，外界通过离子键结合。",
+                      "symbolSize":  25,
+                      "parent":  "complex-concept",
+                      "connectionToExperiment":  "K₃[Fe(C₂O₄)₃]·3H₂O中[Fe(C₂O₄)₃]³⁻为内界配位单元，K⁺为外界抗衡离子，结晶水位于晶格间隙中。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "complex-concept",
+                                           "naming"
+                                       ]
+                  },
+                  {
+                      "id":  "ligand-field",
+                      "name":  "配体场理论",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "晶体场理论的改进版本，既考虑配体的静电作用，也考虑中心离子与配体轨道的重叠和成键效应，更准确地解释配合物性质。",
+                      "symbolSize":  25,
+                      "parent":  "complex-concept",
+                      "connectionToExperiment":  "配体场理论可更精确地解释[Fe(C₂O₄)₃]³⁻的电子光谱和磁性，考虑草酸根的π电子给予效应对d轨道分裂的影响。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "complex-concept",
+                                           "crystal-field"
+                                       ]
+                  },
+                  {
+                      "id":  "cis-trans-isomerism",
+                      "name":  "顺反异构",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "MA₄B₂型八面体配合物中，两个相同配体处于相邻位置（90°）为顺式异构体，处于相对位置（180°）为反式异构体。",
+                      "symbolSize":  25,
+                      "parent":  "isomerism",
+                      "connectionToExperiment":  "虽然[Fe(C₂O₄)₃]³⁻因三个双齿配体完全相同而不存在顺反异构，但可作为理解MA₄B₂型配合物顺反异构的教学对比案例。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "isomerism",
+                                           "octahedral",
+                                           "geometry-octahedral"
+                                       ]
+                  },
+                  {
+                      "id":  "nernst-equation",
+                      "name":  "能斯特方程",
+                      "category":  "redox",
+                      "level":  3,
+                      "description":  "描述电极电势与氧化态、还原态浓度（或分压）和温度之间关系的方程，是电化学计算的核心工具。",
+                      "symbolSize":  25,
+                      "parent":  "redox-potential",
+                      "formulas":  [
+                                       "E = E^\\circ + \\frac{0.0592}{n} \\lg \\frac{[氧化态]}{[还原态]} \\quad (25^\\circ C)"
+                                   ],
+                      "connectionToExperiment":  "用能斯特方程可计算不同Fe³⁺/Fe²⁺浓度比下的实际电极电势，帮助理解氧化还原滴定过程中的电势变化和终点判断。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox-potential",
+                                           "redox-titration"
+                                       ]
+                  },
+                  {
+                      "id":  "hydroxyl-radical",
+                      "name":  "羟基自由基",
+                      "category":  "redox",
+                      "level":  3,
+                      "description":  "·OH是自然界中氧化能力极强的活性氧物种，电极电势高达+2.80V，可非选择性氧化绝大多数有机污染物。",
+                      "symbolSize":  25,
+                      "parent":  "fenton",
+                      "formulas":  [
+                                       "\\cdot OH + e^- + H^+ \\rightarrow H_2O",
+                                       "E^\\circ = +2.80\\text{V}"
+                                   ],
+                      "connectionToExperiment":  "芬顿反应中Fe²⁺催化H₂O₂分解产生·OH，强氧化性自由基将Fe²⁺氧化为Fe³⁺，是制备反应的关键氧化步骤。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "fenton",
+                                           "catalyst"
+                                       ]
+                  },
+                  {
+                      "id":  "lab-safety",
+                      "name":  "实验安全",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "化学实验安全包括个人防护、试剂安全操作、设备安全使用和应急处理等内容，是开展一切实验工作的前提条件。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "本实验涉及草酸、H₂O₂等危险化学品，需正确佩戴防护装备，掌握MSDS信息和应急处理方法，废液需分类收集处理。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "waste-treatment",
+                                           "reagent-quality",
+                                           "error-analysis"
+                                       ]
+                  },
+                  {
+                      "id":  "report-writing",
+                      "name":  "实验报告撰写",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "实验报告是科学研究的书面成果，包含目的、原理、步骤、数据记录、结果讨论和参考文献等部分，是培养科学写作能力的重要途径。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "formulas":  [
+                                       "\\text{产率} = \\frac{m_{实际}}{m_{理论}} \\times 100\\%"
+                                   ],
+                      "connectionToExperiment":  "本实验报告需记录试剂用量、操作步骤、产率计算和误差分析，培养规范的科学写作能力。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "error-analysis",
+                                           "standard-solution"
+                                       ]
+                  },
+                  {
+                      "id":  "waste-treatment",
+                      "name":  "废液处理",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "化学实验废液必须分类收集、专业处理，含重金属废液需化学沉淀法处理，含氰废液需碱性氯化法处理，遵循绿色化学原则。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "formulas":  [
+                                       "Fe^{3+} + 3OH^- \\rightarrow Fe(OH)_3 \\downarrow",
+                                       "CN^- + ClO^- \\xrightarrow{pH\u003e10} CNO^- + Cl^-"
+                                   ],
+                      "connectionToExperiment":  "实验母液含Fe³⁺和过量草酸钾，属于含重金属废液，需加入NaOH沉淀Fe³⁺后统一收集处理。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "lab-safety",
+                                           "precipitation"
+                                       ]
+                  },
+                  {
+                      "id":  "reagent-quality",
+                      "name":  "试剂品质控制",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "试剂质量直接影响实验结果。摩尔盐应呈浅绿色（发黄说明Fe²⁺已氧化），H₂O₂应无大量气泡（分解失效标志），草酸应无色结晶。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "摩尔盐若呈黄色说明Fe²⁺已氧化为Fe³⁺，直接影响第一步沉淀的产率；H₂O₂分解会导致氧化不完全。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "lab-safety",
+                                           "yield-optimization"
+                                       ]
+                  },
+                  {
+                      "id":  "lmct",
+                      "name":  "LMCT电荷转移",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "配体到金属的电荷转移（Ligand-to-Metal Charge Transfer）是光化学反应的核心机理，涉及配体电子向中心金属离子的转移过程。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "Fe^{3+} + C_2O_4^{2-} \\xrightarrow{h\\nu} Fe^{2+} + C_2O_4^{\\bullet-}"
+                                   ],
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻光分解的第一步就是LMCT：草酸根将电子转移给Fe³⁺，自身被氧化为自由基，这是产物光敏性的根本原因。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "photochem",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "spectral-series",
+                      "name":  "光谱化学序列",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "将常见配体按分裂能力从弱到强排列的序列，用于预测配合物的高/低自旋状态和颜色，是配位化学的核心理论工具。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "I^- \u003c Br^- \u003c Cl^- \u003c F^- \u003c OH^- \u003c C_2O_4^{2-} \u003c H_2O \u003c NH_3 \u003c en \u003c CN^- \u003c CO"
+                                   ],
+                      "connectionToExperiment":  "C₂O₄²⁻位于光谱化学序列中等偏弱位置，说明是弱场配体，因此[Fe(C₂O₄)₃]³⁻为高自旋配合物。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "crystal-field",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "photochem",
+                      "name":  "光化学反应",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "在光激发下发生的化学反应，涉及光子吸收、电子跃迁、能量传递和产物形成等过程。三草酸合铁酸钾是经典的光敏配合物。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "2[Fe(C_2O_4)_3]^{3-} \\xrightarrow{h\\nu} 2FeC_2O_4 + 3C_2O_4^{2-} + 2CO_2\\uparrow",
+                                       "\\Phi = \\frac{\\text{反应分子数}}{\\text{吸收光子数}}"
+                                   ],
+                      "connectionToExperiment":  "产物[Fe(C₂O₄)₃]³⁻在光照下发生光化学还原反应，Fe³⁺→Fe²⁺，草酸根被氧化为CO₂，这是蓝晒法的基础原理。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "lmct",
+                                           "dd-transition",
+                                           "color-complement"
+                                       ]
+                  },
+                  {
+                      "id":  "yield-optimization",
+                      "name":  "产率优化策略",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "通过控制反应条件提高产物产率的方法，包括试剂用量优化、温度控制、结晶条件改善和操作细节优化等。",
+                      "symbolSize":  40,
+                      "parent":  "analytical",
+                      "connectionToExperiment":  "本实验通过草酸钾过量10%、控制H₂O₂滴加速度、优化结晶温度等措施，可将产率从平均72%提高到81%。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "error-analysis",
+                                           "reagent-quality"
+                                       ]
+                  },
+                  {
+                      "id":  "stability-const-calc",
+                      "name":  "条件稳定常数",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "考虑配体副反应（如酸效应）后的实际稳定常数，K_f\u0027=K_f/α_L，是实际应用中的重要参数。",
+                      "symbolSize":  25,
+                      "parent":  "stability-const",
+                      "formulas":  [
+                                       "K_f\u0027 = \\frac{K_f}{\\alpha_L}",
+                                       "\\alpha_{L(H)} = 1 + \\sum_{i=1}^{n} \\beta_i [H^+]^i"
+                                   ],
+                      "connectionToExperiment":  "在酸性条件下，H⁺与C₂O₄²⁻结合使游离配体浓度降低，条件稳定常数减小，配离子稳定性下降。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "stability-const",
+                                           "crystal-field"
+                                       ]
+                  },
+                  {
+                      "id":  "effective-digit",
+                      "name":  "有效数字规则",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "测量中实际能够读出的数字位数，包括最后一位估计值。加减法以小数点后位数最少为准，乘除法以有效数字位数最少为准。",
+                      "symbolSize":  25,
+                      "parent":  "report-writing",
+                      "connectionToExperiment":  "产率计算中，天平称量0.01g精度，摩尔质量取小数点后两位，最终结果保留3位有效数字。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "report-writing",
+                                           "error-analysis"
+                                       ]
+                  },
+                  {
+                      "id":  "q-test",
+                      "name":  "Q检验法",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "用于判断可疑数据是否应舍弃的统计方法：Q=|x可疑-x邻近|/(x最大-x最小)，与临界值Q表比较决定取舍。",
+                      "symbolSize":  25,
+                      "parent":  "error-analysis",
+                      "formulas":  [
+                                       "Q = \\frac{|x_{可疑} - x_{邻近}|}{x_{最大} - x_{最小}}"
+                                   ],
+                      "connectionToExperiment":  "三次平行产率数据72%、73%、68%中，68%需经Q检验判断是否保留（Q₀.₉₀,₃=0.94）。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "error-analysis",
+                                           "report-writing"
+                                       ]
+                  },
+                  {
+                      "id":  "cyanotype",
+                      "name":  "蓝晒法原理",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "利用[Fe(C₂O₄)₃]³⁻光分解产生Fe²⁺，再与[Fe(CN)₆]³⁻反应生成普鲁士蓝（Fe₃[Fe(CN)₆]₂）的古老摄影技术。",
+                      "symbolSize":  25,
+                      "parent":  "photochem",
+                      "formulas":  [
+                                       "3Fe^{2+} + 2[Fe(CN)_6]^{3-} \\rightarrow Fe_3[Fe(CN)_6]_2"
+                                   ],
+                      "connectionToExperiment":  "蓝晒法由Herschel于1842年发明，利用产物光分解产生的Fe²⁺与铁氰化钾反应生成深蓝色普鲁士蓝影像。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "photochem",
+                                           "lmct"
+                                       ]
+                  },
+                  {
+                      "id":  "troubleshooting",
+                      "name":  "实验故障排查",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "系统诊断实验异常现象（产率异常、颜色异常、晶体质量差）的原因并采取相应对策的方法论。",
+                      "symbolSize":  25,
+                      "parent":  "reagent-quality",
+                      "connectionToExperiment":  "产率\u003c45%说明操作重大失误；黄绿色说明Fe²⁺氧化不完全；棕黄色说明Fe(OH)₃未完全溶解；\u003e95%说明产物含杂质。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "reagent-quality",
+                                           "yield-optimization",
+                                           "lab-safety"
+                                       ]
+                  },
+                  {
+                      "id":  "safety-direction",
+                      "name":  "实验安全与环保",
+                      "category":  "analytical",
+                      "level":  1,
+                      "description":  "涵盖实验安全防护、试剂安全管理、废液分类处理和绿色化学理念等知识方向，是化学实验教育的重要组成部分。",
+                      "symbolSize":  50,
+                      "parent":  "center-exp",
+                      "connectionToExperiment":  "三草酸合铁酸钾制备实验涉及草酸（中等毒性）、H₂O₂（氧化性）和K₃[Fe(CN)₆]（潜在氰化物风险），需要严格的安全规范和废液处理。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "analytical",
+                                           "lab-safety",
+                                           "waste-treatment"
+                                       ]
+                  },
+                  {
+                      "id":  "werner-bio",
+                      "name":  "维尔纳生平",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "阿尔弗雷德·维尔纳（Alfred Werner, 1866-1919），瑞士化学家，26岁发表配位理论，提出主价/副价和配位数概念，1913年获诺贝尔化学奖，是配位化学的唯一诺贝尔奖得主。",
+                      "symbolSize":  22,
+                      "parent":  "complex-concept",
+                      "formulas":  [
+                                       "M(NH_3)_6^{n+} \\text{ 型配合物的八面体构型}"
+                                   ],
+                      "connectionToExperiment":  "维尔纳的八面体配位假说精确预言了[Fe(C₂O₄)₃]³⁻的空间构型，后被X射线单晶衍射确证（空间群P2₁/c）。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "complex-concept",
+                                           "octahedral",
+                                           "tassaert-discovery"
+                                       ]
+                  },
+                  {
+                      "id":  "tassaert-discovery",
+                      "name":  "塔萨厄尔发现",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "1798年法国化学家塔萨厄尔（B.M.Tassaert）偶然发现[Co(NH₃)₆]Cl₃——历史上第一个配位化合物，打破了\"两个独立稳定化合物不能再结合\"的传统观念。",
+                      "symbolSize":  22,
+                      "parent":  "complex-concept",
+                      "formulas":  [
+                                       "[Co(NH_3)_6]Cl_3 \\xrightarrow{1798} \\text{首次合成}"
+                                   ],
+                      "connectionToExperiment":  "塔萨厄尔发现的六氨合钴为配位化学奠定了基础，三草酸合铁酸钾正是继其后的经典配位化合物合成代表。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "complex-concept",
+                                           "werner-bio",
+                                           "naming"
+                                       ]
+                  },
+                  {
+                      "id":  "nobel-prize",
+                      "name":  "配位化学诺贝尔奖",
+                      "category":  "coordination",
+                      "level":  3,
+                      "description":  "维尔纳1913年获诺贝尔化学奖（配位理论），后续获诺奖的配位化学相关贡献包括：1964年Hodgkin（VB₁₂结构/X射线晶体学）、1973年Wilkinson/Fischer（二茂铁夹心结构）、1987年Pedersen/Cram/Lehn（超分子配位化学）等。",
+                      "symbolSize":  22,
+                      "parent":  "werner-bio",
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻的八面体螯合结构是配位化学教科书中的典范，实验中被学生合成了上百年。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "werner-bio",
+                                           "octahedral",
+                                           "chelate"
+                                       ]
+                  },
+                  {
+                      "id":  "magnetic-susceptibility",
+                      "name":  "磁化率测定",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "通过测量物质在磁场中的响应获取未成对电子数的方法，磁性数据直接验证配位化合物中金属离子的电子构型和自旋态。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "\\chi_M = \\chi_{para} + \\chi_{dia}",
+                                       "\\chi_{para}T = \\frac{Ng^2\\mu_B^2}{3k}S(S+1)"
+                                   ],
+                      "connectionToExperiment":  "三草酸合铁(III)酸钾的磁化率测定证实Fe³⁺为高自旋d⁵构型，μeff≈5.92 B.M.（5个未成对电子），有力支持了晶体场理论对配位场强度的判断。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "high-spin-d5",
+                                           "crystal-field",
+                                           "gouy-balance"
+                                       ]
+                  },
+                  {
+                      "id":  "gouy-balance",
+                      "name":  "古埃磁天平",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "Gouy磁天平是最常用的固体磁化率测量仪器，样品管在非均匀磁场中受力ΔW=Fz，通过比较法标定后求得摩尔磁化率χM。",
+                      "symbolSize":  22,
+                      "parent":  "magnetic-susceptibility",
+                      "formulas":  [
+                                       "F_z = \\frac{1}{2}\\chi_g A (H^2 - H_0^2)",
+                                       "\\chi_M = \\chi_g \\cdot M"
+                                   ],
+                      "connectionToExperiment":  "实验中用古埃磁天平测量产物粉末，结合修正的居里定律，计算Fe³⁺的未成对电子数n=5。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "magnetic-susceptibility",
+                                           "high-spin-d5",
+                                           "spin-only"
+                                       ]
+                  },
+                  {
+                      "id":  "high-spin-d5",
+                      "name":  "高自旋d⁵磁矩",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "Fe³⁺（3d⁵）在八面体弱场（如C₂O₄²⁻）中为高自旋态，t₂g³eg²排布，5个未成对电子，仅自旋磁矩μs.o.=√(5×7)=√35≈5.92 B.M.，与实验值吻合。",
+                      "symbolSize":  25,
+                      "parent":  "magnetic-susceptibility",
+                      "formulas":  [
+                                       "\\mu_{s.o.} = \\sqrt{n(n+2)} = \\sqrt{35} \\approx 5.92\\,\\text{B.M.}"
+                                   ],
+                      "connectionToExperiment":  "产物的有效磁矩≈5.92 B.M.恰好对应高自旋d⁵，说明草酸根是弱场配体，不能迫使d电子成对——这是判断配体场强的最直接实验证据。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "magnetic-susceptibility",
+                                           "spin-only",
+                                           "crystal-field",
+                                           "spectral-series"
+                                       ]
+                  },
+                  {
+                      "id":  "spin-only",
+                      "name":  "仅自旋磁矩公式",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "对第一过渡系金属（3dⁿ），轨道角动量大部分被配体场猝灭（quenching），实测磁矩接近仅自旋公式 μ=√[n(n+2)] B.M.，来自量子力学S²算符的本征值。",
+                      "symbolSize":  22,
+                      "parent":  "high-spin-d5",
+                      "formulas":  [
+                                       "\\mu_{s.o.} = 2\\sqrt{S(S+1)}\\mu_B = \\sqrt{n(n+2)}\\,\\text{B.M.}"
+                                   ],
+                      "connectionToExperiment":  "使用仅自旋公式时注意：对d⁶-d⁹八面体配合物，由于自旋-轨道耦合，实测值通常略高于仅自旋预测值，但对高自旋d⁵预测准确。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "high-spin-d5",
+                                           "magnetic-susceptibility",
+                                           "crystal-field"
+                                       ]
+                  },
+                  {
+                      "id":  "effective-moment",
+                      "name":  "有效磁矩计算",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "从实验磁化率χM（经抗磁校正后）出发计算有效磁矩：μeff=2.828√(χM·T) B.M.（室温，T=298K）。再反推未成对电子数n。",
+                      "symbolSize":  22,
+                      "parent":  "magnetic-susceptibility",
+                      "formulas":  [
+                                       "\\mu_{eff} = 2.828\\sqrt{\\chi_M T} \\,\\text{B.M.} \\quad (T=298\\,\\text{K})",
+                                       "n \\approx \\sqrt{1 + \\mu_{eff}^2} - 1"
+                                   ],
+                      "connectionToExperiment":  "实验数据处理流程：天平读数→磁化率→经Pascal常数抗磁校正→χM→μeff→n→与理论值对比，完成磁性分析。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "magnetic-susceptibility",
+                                           "high-spin-d5",
+                                           "spin-only"
+                                       ]
+                  },
+                  {
+                      "id":  "green-chemistry",
+                      "name":  "绿色化学理念",
+                      "category":  "analytical",
+                      "level":  2,
+                      "description":  "绿色化学12条原则（Anastas \u0026 Warner, 1998）：原子经济性、使用可再生原料、减少衍生物、催化优于计量反应、设计可降解产物、实时污染防控等。",
+                      "symbolSize":  40,
+                      "parent":  "safety-direction",
+                      "formulas":  [
+                                       "\\text{原子经济性} = \\frac{M_{目标产物}}{\\sum M_{所有反应物}} \\times 100\\%"
+                                   ],
+                      "connectionToExperiment":  "本实验水为溶剂、H₂O₂还原产物为水（无污染副产物）、乙醇可回收、含铁废液分类处理——是践行绿色化学教学理念的经典案例。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "safety-direction",
+                                           "waste-treatment",
+                                           "lab-safety"
+                                       ]
+                  },
+                  {
+                      "id":  "waste-classification",
+                      "name":  "废液分类标准",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "化学实验室废液按GB 18597-2023分类：无机废液（含重金属、含氰、含氟、酸碱）、有机废液（含卤、不含卤）、固体废弃物等，必须分类收集、标识清晰。",
+                      "symbolSize":  22,
+                      "parent":  "waste-treatment",
+                      "connectionToExperiment":  "实验母液含Fe³⁺和过量草酸盐，属含重金属无机废液→专用回收桶→碱中和沉淀→按无机废液处置；含乙醇洗液→有机废液桶。严禁混合排放。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "waste-treatment",
+                                           "lab-safety",
+                                           "green-chemistry"
+                                       ]
+                  },
+                  {
+                      "id":  "first-aid",
+                      "name":  "急救措施",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "化学实验常见急救：酸/碱灼伤→大量清水冲洗15min以上；草酸/草酸盐误食→催吐后送医；H₂O₂溅眼→撑开眼睑清水冲洗≥15min；烫伤→冷流水冲洗后覆盖无菌纱布。",
+                      "symbolSize":  22,
+                      "parent":  "lab-safety",
+                      "connectionToExperiment":  "本实验涉及草酸（有毒）和H₂O₂（腐蚀/强氧化），操作时必须戴护目镜和手套，实验台配备洗眼器和急救箱。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "lab-safety",
+                                           "waste-treatment",
+                                           "green-chemistry"
+                                       ]
+                  },
+                  {
+                      "id":  "lab-report-scoring",
+                      "name":  "报告评分标准",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "基础化学实验报告评分细则：实验目的(5%)+原理(10%)+操作步骤(10%)+数据记录与处理(35%)+结果讨论与误差分析(30%)+思考题(10%)。规范性与书写整洁度±5%。",
+                      "symbolSize":  40,
+                      "parent":  "report-writing",
+                      "connectionToExperiment":  "本实验报告重点考察产率计算（15%）、误差分析（15%）、三步反应方程式（10%）、光化学性质解释（5%）——合计占总分45%。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "report-writing",
+                                           "error-analysis",
+                                           "effective-digit"
+                                       ]
+                  },
+                  {
+                      "id":  "teaching-history",
+                      "name":  "武大教学沿革",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "自1960年代起，三草酸合铁酸钾制备实验被纳入许多高校基础化学实验课程体系，历经六十余年教学实践，成为化学专业必修实验。2023年修订版讲义更加强调绿色化学和安全规范。",
+                      "symbolSize":  22,
+                      "parent":  "report-writing",
+                      "connectionToExperiment":  "六十余年的教学积累沉淀了丰富的经验参数（最佳氧化温度40℃、乙醇用量1:1、避光保存要求等），这些参数在知识图谱和FAQ中均有详细记录。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "report-writing",
+                                           "yield-optimization",
+                                           "troubleshooting"
+                                       ]
+                  },
+                  {
+                      "id":  "curriculum-design",
+                      "name":  "课程设计理念",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "本实验课程基于OBE（成果导向教育）理念设计：通过一个综合性实验串联沉淀、氧化还原和配位三大核心化学过程，搭配产物产率计算、误差分析、光化学性质验证等环节，实现知识-能力-素养三位一体的教学目标。",
+                      "symbolSize":  22,
+                      "parent":  "lab-report-scoring",
+                      "connectionToExperiment":  "实验教学不再只是\"照着步骤做\"，而是通过知识图谱、AI助手和掌握度测评，帮助学生理解每一步操作的化学原理——这正是本ChemAI平台的教育价值所在。",
+                      "difficulty":  1,
+                      "relatedNodes":  [
+                                           "lab-report-scoring",
+                                           "teaching-history",
+                                           "troubleshooting"
+                                       ]
+                  },
+                  {
+                      "id":  "spectrochemical-series-detail",
+                      "name":  "光谱化学序详解",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "配体按分裂能力从小到大：I⁻\u003cBr⁻\u003cS²⁻\u003cSCN⁻\u003cCl⁻\u003cNO₃⁻\u003cF⁻\u003cOH⁻\u003cC₂O₄²⁻≈H₂O\u003cNCS⁻\u003cCH₃CN\u003cNH₃\u003cen\u003cbipy\u003cphen\u003cNO₂⁻\u003cCN⁻\u003cCO。C₂O₄²⁻位于中等偏弱区域（Δ₀≈14,000-18,000 cm⁻¹），在[Ni(H₂O)₆]²⁺与[Ni(en)₃]²⁺的正中间区域。",
+                      "symbolSize":  25,
+                      "parent":  "spectral-series",
+                      "formulas":  [
+                                       "\\text{I}^- \u003c \\text{Br}^- \u003c \\text{Cl}^- \u003c \\text{F}^- \u003c \\text{C}_2\\text{O}_4^{2-} \u003c \\text{H}_2\\text{O} \u003c \\text{NH}_3 \u003c \\text{en} \u003c \\text{CN}^-"
+                                   ],
+                      "connectionToExperiment":  "C₂O₄²⁻在光谱化学序中的位置决定了[Fe(C₂O₄)₃]³⁻为高自旋配合物，Δ₀≈14,300 cm⁻¹对应吸收波长约700nm（红光区），透射翠绿光的补色——565nm（绿-青色）。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "spectral-series",
+                                           "crystal-field",
+                                           "high-spin-d5",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "jahn-teller-detail",
+                      "name":  "姜-泰勒效应详解",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "姜-泰勒定理（Jahn-Teller Theorem）：非线性分子在简并电子基态下不稳定，会自动发生几何畸变以消除简并并降低能量。八面体场中最显著的是d⁹（Cu²⁺）和d⁴高自旋（Mn³⁺），造成轴向拉长或压缩。",
+                      "symbolSize":  25,
+                      "parent":  "crystal-field",
+                      "formulas":  [
+                                       "E_{JT} = -\\frac{1}{2}\\delta \\cdot \\Delta n_{e_g}",
+                                       "\\text{畸变模式：} z\\text{-out (拉长) \u003e } z\\text{-in (压缩)}"
+                                   ],
+                      "connectionToExperiment":  "[Fe(C₂O₄)₃]³⁻（Fe³⁺, d⁵高自旋, t₂g³eg²）eg轨道均匀占据——无姜-泰勒效应，保持理想八面体构型，这是其晶体稳定生长、易于获得单晶的重要原因。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "crystal-field",
+                                           "octahedral",
+                                           "delta-splitting",
+                                           "dd-transition"
+                                       ]
+                  },
+                  {
+                      "id":  "xrd-characterization",
+                      "name":  "X射线衍射表征",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "X射线单晶/粉末衍射（XRD）是确定配合物晶体结构的决定性方法。布拉格方程 nλ=2d·sinθ 将衍射角与晶面间距关联，通过衍射图谱指数化确定晶胞参数和空间群。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "n\\lambda = 2d\\sin\\theta",
+                                       "d_{hkl} = \\frac{1}{\\sqrt{h^2/a^2 + k^2/b^2 + l^2/c^2}} \\quad (\\text{正交晶系})"
+                                   ],
+                      "connectionToExperiment":  "三草酸合铁(III)酸钾单晶XRD结果为单斜晶系、空间群P2₁/c、a=7.72Å, b=19.73Å, c=10.26Å, β=94.8°——这是维尔纳八面体理论的直接实验证认。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "octahedral",
+                                           "crystal-field",
+                                           "spectrophotometry"
+                                       ]
+                  },
+                  {
+                      "id":  "ir-spectroscopy",
+                      "name":  "红外光谱表征",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "红外光谱（IR）通过检测化学键振动频率获取配位信息。C₂O₄²⁻的νas(COO⁻)和νs(COO⁻)的频率差Δν可区分单齿、双齿和桥式配位模式——双齿Δν\u003c单齿Δν。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "\\Delta\\nu = \\nu_{as}(\\text{COO}^-) - \\nu_s(\\text{COO}^-)",
+                                       "\\Delta\\nu_{\\text{bidentate}} \u003c \\Delta\\nu_{\\text{monodentate}}"
+                                   ],
+                      "connectionToExperiment":  "产物IR谱中νas(COO⁻)≈1710 cm⁻¹, νs(COO⁻)≈1390cm⁻¹,Δν≈320cm⁻¹＜自由草酸根的Δν≈365cm⁻¹，证实了C₂O₄²⁻的双齿配位模式。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "xrd-characterization",
+                                           "spectrophotometry",
+                                           "chelate"
+                                       ]
+                  },
+                  {
+                      "id":  "tg-dsc-analysis",
+                      "name":  "TG-DSC热分析",
+                      "category":  "physical",
+                      "level":  2,
+                      "description":  "热重-差示扫描量热联用（TG-DSC）同步测量质量变化和热流变化，定量解析分解步骤。K₃[Fe(C₂O₄)₃]·3H₂O的TG曲线显示三步失重：失结晶水（70-130℃）→草酸根分解（280-400℃）→碳酸盐形成（400-600℃）。",
+                      "symbolSize":  40,
+                      "parent":  "physical",
+                      "formulas":  [
+                                       "\\Delta m_1 = \\frac{3 \\times 18.02}{491.25} \\times 100\\% \\approx 11.0\\% \\quad (\\text{结晶水})",
+                                       "\\Delta m_2 \\approx 43\\% \\quad (\\text{草酸根分解})"
+                                   ],
+                      "connectionToExperiment":  "TG-DSC数据是判断产物纯度的重要指标——若第一步失重偏离11.0%说明结晶水含量异常；加热实验中产物的分解温度和失重比例可以反推配合物的热稳定性。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "physical",
+                                           "crystal-field",
+                                           "xrd-characterization"
+                                       ]
+                  },
+                  {
+                      "id":  "born-equation",
+                      "name":  "Born溶剂化模型",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "Born模型定量描述离子在溶剂中的溶剂化自由能：ΔGsolv=-(NAz²e²/8πε₀r)(1-1/ε)。乙醇的介电常数(ε≈24.3)远小于水(ε≈78.5)，因此加入乙醇后离子溶剂化能减小、沉淀/结晶驱动力增大。",
+                      "symbolSize":  22,
+                      "parent":  "thermodynamics",
+                      "formulas":  [
+                                       "\\Delta G_{solv} = -\\frac{N_A z^2 e^2}{8\\pi\\varepsilon_0 r}\\left(1 - \\frac{1}{\\varepsilon}\\right)",
+                                       "\\varepsilon_{\\text{EtOH}} \\approx 24.3 \\ll \\varepsilon_{\\text{H}_2\\text{O}} \\approx 78.5"
+                                   ],
+                      "connectionToExperiment":  "向产物水溶液中加入乙醇降低溶剂介电常数→ΔGsolv增加（溶剂化能力下降）→配合物溶解度降低→翠绿色晶体析出。这是溶剂替换结晶法的热力学本质。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "thermodynamics",
+                                           "kinetics",
+                                           "chelate"
+                                       ]
+                  },
+                  {
+                      "id":  "mohr-salt-chemistry",
+                      "name":  "莫尔盐化学",
+                      "category":  "redox",
+                      "level":  2,
+                      "description":  "莫尔盐（Mohr\u0027s Salt）即六水合硫酸亚铁铵(NH₄)₂Fe(SO₄)₂·6H₂O，M=392.14 g/mol，浅绿色单斜晶体。比纯FeSO₄更抗空气氧化——因为NH₄⁺降低了晶格中Fe²⁺的活动性，且微酸性。是分析化学中标定KMnO₄和K₂Cr₂O₇的基准物质。",
+                      "symbolSize":  40,
+                      "parent":  "redox",
+                      "formulas":  [
+                                       "(\\text{NH}_4)_2\\text{Fe}(\\text{SO}_4)_2 \\cdot 6\\text{H}_2\\text{O}",
+                                       "\\text{Fe}^{2+} + \\text{MnO}_4^- + 8\\text{H}^+ \\rightarrow \\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}"
+                                   ],
+                      "connectionToExperiment":  "本实验中莫尔盐作为Fe(Ⅱ)铁源（组成确定、不易被空气氧化），产率计算以其为限量基准——1mol莫尔盐理论生成1mol K₃[Fe(C₂O₄)₃]·3H₂O。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox",
+                                           "redox-titration",
+                                           "standard-solution"
+                                       ]
+                  },
+                  {
+                      "id":  "oxalate-comparison",
+                      "name":  "草酸配合物对比",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "草酸根与不同金属离子形成多样的配合物：K₃[Fe(C₂O₄)₃]（翠绿色，八面体）、K₂[Cu(C₂O₄)₂]（蓝色，平面四方）、K₃[Cr(C₂O₄)₃]（深紫色，八面体d³）、K₃[Co(C₂O₄)₃]（绿色，八面体d⁶低自旋）。配位模式均为双齿螯合，但颜色和磁性因金属不同而异。",
+                      "symbolSize":  40,
+                      "parent":  "chelate",
+                      "formulas":  [
+                                       "\\text{K}_3[\\text{Fe}(\\text{C}_2\\text{O}_4)_3] - \\text{翠绿色，d}^5 \\text{高自旋}",
+                                       "\\text{K}_3[\\text{Cr}(\\text{C}_2\\text{O}_4)_3] - \\text{深紫色，d}^3 \\text{八面体}"
+                                   ],
+                      "connectionToExperiment":  "对比不同金属草酸配合物的颜色和磁性是理解晶体场理论的最佳实验序列——同样的配体、同样的配位数，只因中心离子的d电子数不同而呈现截然不同的物理化学性质。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "chelate",
+                                           "crystal-field",
+                                           "high-spin-d5",
+                                           "spectrochemical-series-detail"
+                                       ]
+                  },
+                  {
+                      "id":  "werner-theory-original",
+                      "name":  "维尔纳配位理论原文",
+                      "category":  "coordination",
+                      "level":  2,
+                      "description":  "1893年维尔纳在Z. Anorg. Chem.发表的配位理论原文详解：主价(Hauptvalenz)对应氧化数，副价(Nebenvalenz)对应配位数。提出\"配位数\"概念解释为何CoCl₃能结合6个NH₃形成[Co(NH₃)₆]Cl₃。1907年拆分[Co(en)₃]³⁺对映体实验验证八面体构型，为1913年诺贝尔奖奠定基础。",
+                      "symbolSize":  35,
+                      "parent":  "coord",
+                      "connectionToExperiment":  "维尔纳配位理论是理解三草酸合铁(III)酸钾结构的基础：Fe³⁺主价+3与C₂O₄²⁻副价配位，配位数6形成八面体[Fe(C₂O₄)₃]³⁻配离子。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "complex-concept",
+                                           "chelate",
+                                           "isomerism",
+                                           "naming"
+                                       ],
+                      "formulas":  [
+                                       "[Co(NH_3)_6]Cl_3",
+                                       "[Co(en)_3]^{3+}"
+                                   ]
+                  },
+                  {
+                      "id":  "molecular-orbital-coord",
+                      "name":  "分子轨道理论在配位化学中的应用",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "MO理论解释配位键本质：σ-给体配体（如NH₃、H₂O）的孤对电子填入金属d轨道空穴；π-受体配体（如CO、CN⁻）通过反馈π键增强配位键。草酸根C₂O₄²⁻既是σ-给体又是弱π-给体，MO处理解释了光谱化学序列的电子结构基础。",
+                      "symbolSize":  28,
+                      "parent":  "crystal-field",
+                      "connectionToExperiment":  "MO理论补充晶体场理论解释[Fe(C₂O₄)₃]³⁻中草酸根的σ-给电子和弱π-给电子效应，影响分裂能Δo大小和光化学LMCT过程。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "crystal-field",
+                                           "dd-transition",
+                                           "photochem",
+                                           "spectrochem-series"
+                                       ],
+                      "formulas":  [
+                                       "\\sigma-donor: L \\rightarrow M(d)",
+                                       "\\pi-acceptor: M(d_\\pi) \\rightarrow L(\\pi^*)"
+                                   ]
+                  },
+                  {
+                      "id":  "temperature-control",
+                      "name":  "温度控制原理",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "本实验温度控制的物理化学原理。Arrhenius方程 k=A·e^(-Ea/RT)：H₂O₂氧化Fe²⁺的Ea≈50 kJ/mol，40°C时速率约为25°C时的3倍。温度上限由H₂O₂分解（\u003e60°C剧烈分解）和Fe³⁺水解（\u003e50°C促进Fe(OH)₃胶体形成）决定。微沸（~100°C）用于配位步骤以加速草酸溶解Fe(OH)₃，但需避免过度沸腾导致草酸分解。",
+                      "symbolSize":  28,
+                      "parent":  "yield-optimization",
+                      "connectionToExperiment":  "本实验中40°C水浴氧化是最优操作温度：既能加速氧化反应又避免H₂O₂过快分解和Fe³⁺水解。微沸状态溶解Fe(OH)₃是第三步配位反应的关键温度条件。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "redox-potential",
+                                           "kinetics-coord",
+                                           "yield-optimization"
+                                       ],
+                      "formulas":  [
+                                       "k = A e^{-E_a/RT}",
+                                       "\\frac{k_{313}}{k_{298}} = \\exp\\left[\\frac{E_a}{R}\\left(\\frac{1}{298}-\\frac{1}{313}\\right)\\right]"
+                                   ]
+                  },
+                  {
+                      "id":  "ethanol-crystallization",
+                      "name":  "乙醇促结晶机理",
+                      "category":  "analytical",
+                      "level":  3,
+                      "description":  "溶剂替换法结晶的热力学与动力学。Born溶剂化模型：离子溶剂化能ΔG_solv ∝ -1/ε_r，加入乙醇（ε_r=24.5，水ε_r=78.5）降低溶剂介电常数，溶质溶剂化能减小，化学势升高，溶液过饱和度增大。K₃[Fe(C₂O₄)₃]·3H₂O在乙醇-水混合溶剂中溶解度急剧下降——乙醇浓度40%(v/v)时溶解度仅为纯水中的~5%。",
+                      "symbolSize":  28,
+                      "parent":  "yield-optimization",
+                      "connectionToExperiment":  "本实验第四步加入95%乙醇约10 mL（终体积~40%），使产物因溶解度急剧下降而结晶析出。这是溶剂替换法（非蒸发法）的经典教学案例。",
+                      "difficulty":  2,
+                      "relatedNodes":  [
+                                           "yield-optimization",
+                                           "solubility-product",
+                                           "error-analysis"
+                                       ],
+                      "formulas":  [
+                                       "\\Delta G_{solv} = -\\frac{z^2e^2}{8\\pi\\varepsilon_0 r}\\left(1-\\frac{1}{\\varepsilon_r}\\right)",
+                                       "\\varepsilon_r(H_2O)=78.5,\\ \\varepsilon_r(EtOH)=24.5"
+                                   ]
+                  },
+                  {
+                      "id":  "photochemical-kinetics",
+                      "name":  "光化学动力学",
+                      "category":  "physical",
+                      "level":  3,
+                      "description":  "光化学反应的动力学特征。量子产率Φ = 反应分子数/吸收光子数。对于[Fe(C₂O₄)₃]³⁻光分解：Φ(254 nm)≈1.2（链式反应使Φ\u003e1），Φ(400 nm)≈0.9。化学光量计：草酸铁钾光量计（ferrioxalate actinometer）利用该反应精确测量光子通量——标准光量计在254-500 nm范围Φ已精确标定。光化学第一定律(Grotthuss-Draper)：只有被吸收的光才能引起光化学反应。第二定律(Stark-Einstein)：一个分子吸收一个光子后被活化。",
+                      "symbolSize":  28,
+                      "parent":  "photochem",
+                      "connectionToExperiment":  "三草酸合铁(III)酸钾的光化学性质是蓝晒法的基础，其光分解量子产率接近1，是化学光量计的标准反应体系。",
+                      "difficulty":  3,
+                      "relatedNodes":  [
+                                           "photochem",
+                                           "dd-transition",
+                                           "spectrochem-series",
+                                           "kinetics-coord"
+                                       ],
+                      "formulas":  [
+                                       "\\Phi = \\frac{n_{rxn}}{n_{h\\nu}}",
+                                       "\\Phi(254\\ nm) \\approx 1.2",
+                                       "\\Phi(400\\ nm) \\approx 0.9"
+                                   ]
+                  }
+              ],
+    "links":  [
+                  {
+                      "source":  "center-exp",
+                      "target":  "coord",
+                      "lineStyle":  {
+                                        "width":  3,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "center-exp",
+                      "target":  "redox",
+                      "lineStyle":  {
+                                        "width":  3,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "center-exp",
+                      "target":  "analytical",
+                      "lineStyle":  {
+                                        "width":  3,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "center-exp",
+                      "target":  "physical",
+                      "lineStyle":  {
+                                        "width":  3,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "complex-concept",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "chelate",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "stability-const",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "coord-titration",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "isomerism",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "naming",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "redox-potential",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "fenton",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "redox-titration",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "catalyst",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "disproportionation",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "induction",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "gravimetry",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "titration",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "spectrophotometry",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "standard-solution",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "error-analysis",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "precipitation",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "crystal-field",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "octahedral",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "dd-transition",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "thermodynamics",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "kinetics",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "color-complement",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "crystal-field",
+                      "target":  "hybrid-orbital",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "crystal-field",
+                      "target":  "delta-splitting",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "octahedral",
+                      "target":  "geometry-octahedral",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "spectrophotometry",
+                      "target":  "absorption-spectrum",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "spectrophotometry",
+                      "target":  "lambert-beer",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "chelate",
+                      "target":  "chelate-effect",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "chelate",
+                      "target":  "edta",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "complex-concept",
+                      "target":  "inner-outer-sphere",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "complex-concept",
+                      "target":  "ligand-field",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "isomerism",
+                      "target":  "cis-trans-isomerism",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "redox-potential",
+                      "target":  "nernst-equation",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "fenton",
+                      "target":  "hydroxyl-radical",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "chelate",
+                      "target":  "crystal-field",
+                      "label":  "结构稳定性",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "stability-const",
+                      "target":  "thermodynamics",
+                      "label":  "热力学",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "dd-transition",
+                      "target":  "color-complement",
+                      "label":  "颜色解释",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "redox-titration",
+                      "target":  "titration",
+                      "label":  "滴定方法",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "standard-solution",
+                      "target":  "error-analysis",
+                      "label":  "准确度",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "fenton",
+                      "target":  "kinetics",
+                      "label":  "反应速率",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "catalyst",
+                      "target":  "fenton",
+                      "label":  "催化机理",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "spectrophotometry",
+                      "target":  "dd-transition",
+                      "label":  "光谱验证",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "absorption-spectrum",
+                      "target":  "delta-splitting",
+                      "label":  "能级跃迁",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "chelate-effect",
+                      "target":  "stability-const",
+                      "label":  "稳定性",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "edta",
+                      "target":  "coord-titration",
+                      "label":  "滴定应用",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "hydroxyl-radical",
+                      "target":  "redox-potential",
+                      "label":  "电势比较",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "safety-direction",
+                      "target":  "lab-safety",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "safety-direction",
+                      "target":  "waste-treatment",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "safety-direction",
+                      "target":  "reagent-quality",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "safety-direction",
+                      "target":  "report-writing",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "analytical",
+                      "target":  "yield-optimization",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "lmct",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "spectral-series",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "photochem",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "lab-safety",
+                      "target":  "troubleshooting",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "report-writing",
+                      "target":  "effective-digit",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "stability-const",
+                      "target":  "stability-const-calc",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "error-analysis",
+                      "target":  "q-test",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "photochem",
+                      "target":  "cyanotype",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "reagent-quality",
+                      "target":  "troubleshooting",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "lmct",
+                      "target":  "dd-transition",
+                      "label":  "电子跃迁",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "photochem",
+                      "target":  "color-complement",
+                      "label":  "颜色变化",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "spectral-series",
+                      "target":  "crystal-field",
+                      "label":  "场强预测",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "lab-safety",
+                      "target":  "fenton",
+                      "label":  "试剂安全",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "yield-optimization",
+                      "target":  "gravimetry",
+                      "label":  "产量分析",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "report-writing",
+                      "target":  "titration",
+                      "label":  "数据记录",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "stability-const-calc",
+                      "target":  "thermodynamics",
+                      "label":  "热力学",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "cyanotype",
+                      "target":  "color-complement",
+                      "label":  "蓝色来源",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "troubleshooting",
+                      "target":  "yield-optimization",
+                      "label":  "产率诊断",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "waste-treatment",
+                      "target":  "precipitation",
+                      "label":  "沉淀法",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "safety-direction",
+                      "target":  "green-chemistry",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "werner-bio",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "werner-bio",
+                      "target":  "tassaert-discovery",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "werner-bio",
+                      "target":  "nobel-prize",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "magnetic-susceptibility",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "magnetic-susceptibility",
+                      "target":  "gouy-balance",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "magnetic-susceptibility",
+                      "target":  "high-spin-d5",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "high-spin-d5",
+                      "target":  "spin-only",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "magnetic-susceptibility",
+                      "target":  "effective-moment",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "lab-safety",
+                      "target":  "first-aid",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "waste-treatment",
+                      "target":  "waste-classification",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "report-writing",
+                      "target":  "lab-report-scoring",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "lab-report-scoring",
+                      "target":  "curriculum-design",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "report-writing",
+                      "target":  "teaching-history",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "spectral-series",
+                      "target":  "spectrochemical-series-detail",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "crystal-field",
+                      "target":  "jahn-teller-detail",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "xrd-characterization",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "ir-spectroscopy",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "physical",
+                      "target":  "tg-dsc-analysis",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "thermodynamics",
+                      "target":  "born-equation",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "type":  "dashed",
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "redox",
+                      "target":  "mohr-salt-chemistry",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "chelate",
+                      "target":  "oxalate-comparison",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "magnetic-susceptibility",
+                      "target":  "crystal-field",
+                      "label":  "磁性-结构验证",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "xrd-characterization",
+                      "target":  "octahedral",
+                      "label":  "构型确证",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "ir-spectroscopy",
+                      "target":  "chelate",
+                      "label":  "配位模式",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "tg-dsc-analysis",
+                      "target":  "thermodynamics",
+                      "label":  "热力学",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "born-equation",
+                      "target":  "chelate",
+                      "label":  "溶解-结晶驱动力",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "mohr-salt-chemistry",
+                      "target":  "redox-titration",
+                      "label":  "基准物质",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#f59e0b"
+                                    }
+                  },
+                  {
+                      "source":  "oxalate-comparison",
+                      "target":  "crystal-field",
+                      "label":  "晶体场对比",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "green-chemistry",
+                      "target":  "yield-optimization",
+                      "label":  "绿色合成",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "teaching-history",
+                      "target":  "curriculum-design",
+                      "label":  "教学传承",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "first-aid",
+                      "target":  "green-chemistry",
+                      "label":  "安全-绿色一体",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "type":  "dashed",
+                                        "opacity":  0.4,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "coord",
+                      "target":  "werner-theory-original",
+                      "type":  "solid",
+                      "lineStyle":  {
+                                        "width":  2,
+                                        "color":  "#2dd4bf"
+                                    }
+                  },
+                  {
+                      "source":  "crystal-field",
+                      "target":  "molecular-orbital-coord",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "yield-optimization",
+                      "target":  "temperature-control",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "yield-optimization",
+                      "target":  "ethanol-crystallization",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "color":  "#3b82f6"
+                                    }
+                  },
+                  {
+                      "source":  "photochem",
+                      "target":  "photochemical-kinetics",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1.5,
+                                        "color":  "#a855f7"
+                                    }
+                  },
+                  {
+                      "source":  "temperature-control",
+                      "target":  "ethanol-crystallization",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "color":  "#3b82f6",
+                                        "opacity":  0.4
+                                    },
+                      "label":  "结晶条件优化"
+                  },
+                  {
+                      "source":  "werner-theory-original",
+                      "target":  "crystal-field",
+                      "type":  "dashed",
+                      "lineStyle":  {
+                                        "width":  1,
+                                        "color":  "#2dd4bf",
+                                        "opacity":  0.4
+                                    },
+                      "label":  "理论演进"
+                  },
+                  {
+                      "target":  "safety-direction",
+                      "source":  "center-exp",
+                      "lineStyle":  {
+                                        "color":  "#3b82f6",
+                                        "width":  3
+                                    }
+                  }
+              ]
 }

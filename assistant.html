@@ -516,6 +516,14 @@ const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈�
 
 // 分类归一化 (同步自 data/categories.json — 唯一权威来源)
 const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理'};
+
+/* ================= AES-256-GCM 加密（API Key 安全存储） ================= */
+const _CRYPTO_SALT_LEN=16,_CRYPTO_IV_LEN=12,_CRYPTO_ITER=200000,_CRYPTO_APP_KEY='chemai-k3fe-v2';
+function _ab2b64(b){return btoa(String.fromCharCode(...new Uint8Array(b)))}
+function _b642ab(s){return Uint8Array.from(atob(s),c=>c.charCodeAt(0)).buffer}
+async function _deriveKey(salt){const mk=await crypto.subtle.importKey('raw',new TextEncoder().encode(_CRYPTO_APP_KEY),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:_CRYPTO_ITER,hash:'SHA-256'},mk,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function _encrypt(plaintext){const s=crypto.getRandomValues(new Uint8Array(_CRYPTO_SALT_LEN));const i=crypto.getRandomValues(new Uint8Array(_CRYPTO_IV_LEN));const k=await _deriveKey(s);const c=await crypto.subtle.encrypt({name:'AES-GCM',iv:i},k,new TextEncoder().encode(plaintext));return JSON.stringify({s:_ab2b64(s),i:_ab2b64(i),c:_ab2b64(c)})}
+async function _decrypt(packed){try{const{s,i,c}=typeof packed==='string'?JSON.parse(packed):packed;if(!s||!i||!c)return null;const k=await _deriveKey(_b642ab(s));const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:_b642ab(i)},k,_b642ab(c));return new TextDecoder().decode(pt)}catch(e){return null}}
 const CANONICAL_CATS=new Set(['合成制备','反应原理','实验操作','分析测定','光化学应用','结构表征','磁性研究','热分析','安全与废物处理','配位化学理论','实验教学','综合研究','化学史','高等理论','蓝晒工艺','摩尔盐相关','草酸配合物']);
 function normCat(v){if(!v||typeof v!=='string')return'综合研究';var t=v.trim();if(!t)return'综合研究';if(CANONICAL_CATS.has(t))return t;if(CATEGORY_ALIAS_MAP[t])return CATEGORY_ALIAS_MAP[t];return t;}
 
@@ -559,26 +567,44 @@ function exportChatHistory(){
 }
 
 /* ================= DeepSeek LLM 配置 ================= */
+const LS_LLM_KEY='chemai_llm_key_enc', LS_LLM_KEY_LEGACY='chemai_llm_key';
 const LLM={
   enabled: lsGet('chemai_llm_enabled', true),
-  apiKey: lsGet('chemai_llm_key', ''),
+  apiKey: '', // 运行时解密，不存明文
   endpoint: 'https://api.deepseek.com/v1/chat/completions',
   model: lsGet('chemai_llm_model', 'deepseek-chat')
 };
-function llmSave(){ lsSet('chemai_llm_enabled',LLM.enabled); lsSet('chemai_llm_key',LLM.apiKey); lsSet('chemai_llm_model',LLM.model); }
+async function llmLoadKey(){
+  // 迁移旧明文Key
+  const leg=localStorage.getItem(LS_LLM_KEY_LEGACY);
+  if(leg&&leg.trim()){try{const e=await _encrypt(leg.trim());localStorage.setItem(LS_LLM_KEY,e)}catch(ex){}localStorage.removeItem(LS_LLM_KEY_LEGACY)}
+  // 解密
+  const enc=localStorage.getItem(LS_LLM_KEY);
+  if(enc){const pt=await _decrypt(enc);if(pt)LLM.apiKey=pt}
+}
+async function llmSave(){
+  lsSet('chemai_llm_enabled',LLM.enabled); lsSet('chemai_llm_model',LLM.model);
+  // 加密存储Key
+  if(LLM.apiKey&&LLM.apiKey.trim()){try{const e=await _encrypt(LLM.apiKey.trim());localStorage.setItem(LS_LLM_KEY,e)}catch(ex){}}
+  else{localStorage.removeItem(LS_LLM_KEY)}
+}
 function llmInitUI(){
   const ki=$('#llmKeyInput'), ms=$('#llmModelSelect'), tg=$('#llmToggle'), sb=$('#llmSaveBtn'), st=$('#llmStatus');
   if(!ki)return;
   ki.value=LLM.apiKey||''; ms.value=LLM.model||'deepseek-chat'; tg.checked=LLM.enabled;
-  function up(){ if(!LLM.enabled)st.textContent='⏸ 已禁用'; else if(!LLM.apiKey)st.textContent='⚠ 未配置Key'; else st.textContent='✅ LLM就绪'; }
+  function up(){ if(!LLM.enabled)st.textContent='⏸ 已禁用'; else if(!LLM.apiKey)st.textContent='⚠ 未配置Key'; else st.textContent='✅ LLM就绪 (Key已加密)'; }
   up();
-  sb.addEventListener('click',()=>{ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; llmSave(); up(); });
-  tg.addEventListener('change',()=>{ LLM.enabled=tg.checked; llmSave(); up(); });
+  sb.addEventListener('click',async ()=>{ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; await llmSave(); up(); });
+  tg.addEventListener('change',async ()=>{ LLM.enabled=tg.checked; await llmSave(); up(); });
 }
 async function callLLM(question, context, streamCallback){
   const messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
-  if(context && context.trim()) messages.push({role:'system', content: '【参考知识库内容】\n'+context.slice(0,4000)});
-  messages.push({role:'user', content: question});
+  // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
+  let userMsg=question;
+  if(context && context.trim()){
+    userMsg='<corpus-context>\n'+context.slice(0,4000)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
+  }
+  messages.push({role:'user', content: userMsg});
   const useStream = !!streamCallback;
   const body = {model:LLM.model, messages, max_tokens:800, temperature:0.3};
   if (useStream) body.stream = true;
@@ -1542,13 +1568,20 @@ async function handleQA(q){
   const meta=bub.querySelector('.pipe-meta');
   let html, usedLLM=false;
 
-  /* v5: 尝试 LLM AI 回答 */
+  /* v5: 尝试 LLM AI 回答（流式输出） */
   if(LLM.enabled && LLM.apiKey){
     try{
       const ctx=buildLLMContext(q);
-      const llmAnswer=await callLLM(q, ctx);
+      // 流式渲染：创建占位容器，LLM逐token更新
+      const streamContainer=document.createElement('div');streamContainer.className='ans-sec';streamContainer.innerHTML='<div class="rich-answer"><p>🤖 AI 思考中…</p></div>';
+      bub.appendChild(streamContainer);
+      const llmAnswer=await callLLM(q, ctx, (delta, full)=>{
+        streamContainer.innerHTML='<div class="rich-answer">'+renderRichAnswer(full)+'</div>';
+        scrollChat(qaChat);
+      });
       if(llmAnswer){
-        html='<div class="ans-sec"><div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div></div>';
+        streamContainer.innerHTML='<div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div>';
+        html=''; // 标记已使用LLM，跳过本地答案
         usedLLM=true;
       }
     }catch(e){ console.warn('LLM failed, using local:', e.message); }
@@ -1586,8 +1619,10 @@ async function handleQA(q){
     +(usedLLM?' · 🤖 LLM':'')
     +(checkResult&&!checkResult.passed?' · ⚠ 自查提示':'');
 
-  const ans=document.createElement('div');ans.innerHTML=html;bub.appendChild(ans);
-  initRefToggles(ans);
+  if(!usedLLM){
+    const ans=document.createElement('div');ans.innerHTML=html;bub.appendChild(ans);
+    initRefToggles(ans);
+  }
   scrollChat(qaChat);saveAIBubble(bub);
   qaBusy=false;qaSend.disabled=false;
 }
@@ -2361,6 +2396,7 @@ $('#navToggle').addEventListener('click',()=>$('#topNav').classList.toggle('open
 window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(k=>k.explain)};
 
 (async function init(){
+  await llmLoadKey();  // 解密API Key
   llmInitUI();
   renderQAHistory();
   loadFAQ();  // #13: 异步加载完整FAQ（不阻塞UI）

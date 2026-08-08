@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
@@ -53,6 +53,7 @@ a{text-decoration:none;color:inherit}
   white-space:nowrap;transition:all .2s;border:1px solid transparent;
 }
 .nav-links a:hover{color:var(--t1);background:var(--card-hover)}
+.nav-toggle-mb{display:none;background:var(--card);border:1px solid var(--bd2);color:var(--t1);border-radius:9px;padding:8px 12px;font-size:20px;cursor:pointer;min-width:44px;min-height:44px;align-items:center;justify-content:center;flex-shrink:0}
 .nav-links a.active{
   color:var(--emerald);background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);font-weight:600;
 }
@@ -136,10 +137,30 @@ a{text-decoration:none;color:inherit}
 footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8}
 @media (max-width:900px){.grid{grid-template-columns:1fr}}
 @media (max-width:640px){
-  .banner{padding:26px 22px}.banner h1{font-size:23px}
+  .nav-toggle-mb{display:flex}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--bd2);flex-direction:column;align-items:stretch;padding:4px 10px 10px;gap:2px;z-index:99}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:11px 14px;font-size:14px;border-radius:10px}
+  .banner{padding:22px 16px}.banner h1{font-size:20px}
+  .banner p{font-size:13.5px}
+  .banner::after{font-size:60px;right:8px}
+  .banner-stats{gap:12px}
+  .bstat{font-size:12px}
+  .bstat b{font-size:14px}
   .subgrid{grid-template-columns:1fr}
-  .nav-inner{padding:0 14px}.page{padding:24px 14px 48px}
+  .card{padding:18px 14px}
+  .card-title{font-size:16px}
+  .card-desc{font-size:12.5px}
+  .card-icon{width:42px;height:42px;font-size:22px}
+  .subcard{padding:14px 12px}
+  .subcard-title{font-size:14px}
+  .btn{padding:11px 18px;font-size:13.5px;min-height:44px}
+  .feat li{font-size:12.5px}
+  .nav-inner{padding:0 10px}.page{padding:18px 10px 48px}
   .logo-sub{display:none}
+  .logo-name{font-size:15px}
+  .flow{padding:14px 16px}
+  footer{padding:0 10px}
 }
 </style>
 </head>

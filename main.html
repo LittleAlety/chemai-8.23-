@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
@@ -363,7 +363,8 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <span class="role-badge" id="roleBadge"><span class="rdot"></span><span class="rname" id="roleName">未选择身份</span></span>
       <button class="switch-btn" id="switchBtn" type="button">切换身份</button>
     </div>
-  </div>
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
+	  </div>
 </nav>
 
 <div class="notice" id="noRoleNotice" hidden>
@@ -498,7 +499,8 @@ var role=getRole();
     $("#noRoleNotice").hidden=false;
   }
 })();
-$("#switchBtn").addEventListener("click",function(){location.href="index.html";});
+$("#switchBtn").addEventListener("click",function(){location.href="index.html";})
+	$("#hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});;
 
 /* ================= 内容渲染 ================= */
 function esc(s){

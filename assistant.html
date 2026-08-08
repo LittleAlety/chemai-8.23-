@@ -1036,13 +1036,11 @@ const ANALOG_TABLE=[
 
 /* ================= FAQ 知识库（#13: 动态加载 data/faq_unified.json） ================= */
 let FAQ=[];
-let faqReady=false;
 async function loadFAQ(){
   try{
     const resp=await fetch('data/faq_unified.json',{cache:'default'});
     if(resp.ok){
       FAQ=await resp.json();
-      faqReady=true;
       console.log('FAQ加载完成: '+FAQ.length+'条');
     }
   }catch(e){ console.warn('FAQ加载失败，已降级为语料库/网络检索模式',e); }
@@ -1597,7 +1595,6 @@ const KP=[
   groups:[['tg','dsc','热重','热分析'],['结晶水','脱水','110℃','第一步'],['分解','草酸根','第二步','280','400'],['碳酸盐','第三步','400','600'],['失重比','百分','理论值','11%','43%'],['热稳定','温度','失重']],
   explain:'<b>直接讲解：</b>TG-DSC 三步分解：①<b>失结晶水（70-130℃）</b>：K₃[Fe(C₂O₄)₃]·3H₂O→K₃[Fe(C₂O₄)₃]+3H₂O↑，DSC 吸热峰 ~110℃。理论失重=54.06/491.25×100%=11.0%。②<b>草酸根分解（280-400℃）</b>：K₃[Fe(C₂O₄)₃]→3/2K₂CO₃+½Fe₂O₃+3/2CO↑+3/2CO₂↑，DSC 强放热峰 ~350℃。失重约 43%（C₂O₄²⁻→CO+CO₂）。③<b>碳酸盐进一步分解（400-600℃）</b>：残余碳酸盐→氧化物+CO₂↑。总失重约 59%。TG-DSC 是判断产物纯度的关键——若第一步失重偏离 11.0%，说明结晶水含量异常；若多出不明失重台阶，说明有杂质共沉淀。'}
 ];
-const PROGRESS_PREFIX='已测 ';
 const MAX_ROUND=20,MIN_ROUND=10;  // 12知识点需要更多轮次
 const TOTAL_WEIGHT=155;  // 总权重（归一化：实际总分 = sum/155*100）
 const A={

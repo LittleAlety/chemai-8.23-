@@ -196,8 +196,7 @@ push to master → checkout → 组装静态站点 → upload artifact → deplo
 
 ## 致谢
 
-- Alfred Werner（配位化学奠基人，1866–1919）
-- DeepSeek API
+- 武汉大学化学与分子科学学院
 - 语料库收录的所有文献作者与期刊
 
 ---

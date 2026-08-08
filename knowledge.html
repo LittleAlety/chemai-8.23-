@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>知识图谱 · ChemAI 三草酸合铁酸钾制备实验</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.css" integrity="sha384-PpRp7RmyfrBVk5FUnap/1X1X1Gx6NJN4MLPMsXjMAxxXHxtEOP5lA0khD3Tp0N1m" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.css" integrity="sha384-PpRp7RmyfrBVk5FUnap/1X1X1Gx6NJN4MLPMsXjMAxxXHxtEOP5lA0khD3Tp0N1m" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.js" integrity="sha384-MOHUH1hVz1cOPigfacQq/x/ELwbtVZDlWT0AaDcxFrL2Pyp9d9Qk/P5EiI0t/NZp" crossorigin="anonymous"></script>
 <style>
 :root{
   --bg:#0a0e1a; --bg2:#111827; --card:#1a2235; --hover:#243049;
@@ -136,6 +136,12 @@ button{font-family:inherit;cursor:pointer}
 #cv{position:absolute;inset:0;display:block;cursor:grab;touch-action:none}
 #cv.grabbing{cursor:grabbing}
 #cv.on-node{cursor:pointer}
+#miniMap{
+  position:absolute;left:14px;bottom:70px;z-index:20;
+  width:150px;height:100px;border-radius:10px;
+  background:rgba(10,14,26,.82);border:1px solid var(--border2);
+  backdrop-filter:blur(4px);pointer-events:none;
+}
 
 .zoom-ctrl{
   position:absolute;left:14px;bottom:14px;z-index:20;display:flex;flex-direction:column;gap:6px;
@@ -391,7 +397,7 @@ button{font-family:inherit;cursor:pointer}
 
   <!-- ============ 图谱舞台 ============ -->
   <div class="stage" id="stage">
-    <canvas id="cv"></canvas>
+    <canvas id="cv"></canvas><canvas id="miniMap"></canvas>
     <div id="tooltip"></div>
     <div class="zoom-ctrl">
       <button id="zoomIn" title="放大">＋</button>
@@ -880,6 +886,7 @@ function frame(){
   }
   stepTween();
   draw();
+  drawMiniMap();
   requestAnimationFrame(frame);
 }
 
@@ -1016,6 +1023,37 @@ function draw(){
     }
   }
 
+  // ---- Edge Labels ----
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.font = '9px "PingFang SC","Microsoft YaHei",sans-serif';
+  for(const l of links){
+    if(!l.label || !l.s.visible || !l.t.visible) continue;
+    let ea = 0.42;
+    if(focusSet){
+      ea = (chainMode
+        ? (l.isTree && focusSet.has(l.s.id) && focusSet.has(l.t.id))
+        : (focusSet.has(l.s.id) && focusSet.has(l.t.id))) ? 0.95 : 0.18;
+    } else if(q) ea *= 0.3;
+    if(ea < 0.16) continue;
+    const mx = (l.s.x + l.t.x) / 2, my = (l.s.y + l.t.y) / 2;
+    const dx = l.t.x - l.s.x, dy = l.t.y - l.s.y;
+    const len = Math.hypot(dx, dy) || 1;
+    const ox = -dy / len * 11, oy = dx / len * 11;
+    const tx = mx + ox, ty = my + oy;
+    const tw = ctx.measureText(l.label).width;
+    const pw = tw + 8, ph = 14;
+    ctx.globalAlpha = ea;
+    ctx.fillStyle = 'rgba(10,14,26,.78)';
+    ctx.beginPath();
+    ctx.roundRect(tx - pw/2, ty - ph/2, pw, ph, 4);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(148,163,184,.28)';
+    ctx.lineWidth = 0.7;
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(255,255,255,.78)';
+    ctx.fillText(l.label, tx, ty);
+  }
+
   // ---- 节点 ----
   ctx.textAlign = 'center'; ctx.textBaseline = 'top';
   for(const n of nodes){
@@ -1091,6 +1129,20 @@ function draw(){
       ctx.beginPath(); ctx.arc(n.x, n.y, n.r+4.5, 0, Math.PI*2); ctx.stroke();
     }
 
+    // ---- Flash pulse on selected node ----
+    const now = performance.now();
+    if(isSel || (n.flashUntil && n.flashUntil > now)){
+      if(!n.flashUntil || n.flashUntil <= now) n.flashUntil = 0;
+      const ft = n.flashUntil ? (n.flashUntil - now) / 1500 : 0;
+      for(let i=0;i<3;i++){
+        const fp = (ft + i*0.35) % 1;
+        ctx.globalAlpha = fp * 0.7 * alpha;
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.6 * fp + 0.4;
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 6 + (1-fp)*28, 0, Math.PI*2); ctx.stroke();
+      }
+    }
+
     // ---- 标签（中心/一级常显，2-3级渐变淡入避免视觉跳变） ----
     let show = false, fs = 12;   // fs = 期望的屏幕字号
     let labelAlpha = 1;
@@ -1145,6 +1197,61 @@ function draw(){
   }
   ctx.restore();
   ctx.globalAlpha = 1;
+}
+
+/* ==================== 小地图 ==================== */
+function drawMiniMap(){
+  const mc = $('#miniMap');
+  if(!mc) return;
+  const mw = 150, mh = 100;
+  const mdp = Math.min(window.devicePixelRatio || 1, 2);
+  mc.width = Math.round(mw * mdp); mc.height = Math.round(mh * mdp);
+  const mctx = mc.getContext('2d');
+  mctx.setTransform(mdp, 0, 0, mdp, 0, 0);
+  mctx.clearRect(0, 0, mw, mh);
+  // Background
+  mctx.fillStyle = 'rgba(10,14,26,.88)';
+  mctx.fillRect(0, 0, mw, mh);
+  // Compute graph bounds
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for(const n of nodes){
+    if(!n.visible) continue;
+    x0 = Math.min(x0, n.x - n.r); x1 = Math.max(x1, n.x + n.r);
+    y0 = Math.min(y0, n.y - n.r); y1 = Math.max(y1, n.y + n.r);
+  }
+  if(!isFinite(x0)) return;
+  const gw = Math.max(x1 - x0, 200), gh = Math.max(y1 - y0, 200);
+  const pad = 10;
+  const sx = (mw - pad*2) / gw, sy = (mh - pad*2) / gh;
+  const sc = Math.min(sx, sy);
+  const ox = pad + (mw - pad*2 - gw*sc)/2, oy = pad + (mh - pad*2 - gh*sc)/2;
+  function mx(wx){ return ox + (wx - x0)*sc; }
+  function my(wy){ return oy + (wy - y0)*sc; }
+  // Draw nodes as small dots
+  for(const n of nodes){
+    if(!n.visible) continue;
+    const meta = catOf(n.category);
+    mctx.fillStyle = meta.color;
+    mctx.globalAlpha = 0.7;
+    mctx.beginPath();
+    mctx.arc(mx(n.x), my(n.y), Math.max(1.5, n.r*sc*0.6), 0, Math.PI*2);
+    mctx.fill();
+  }
+  mctx.globalAlpha = 1;
+  // Viewport rectangle
+  const vpl = (0 - W/2)/view.k + view.x;
+  const vpt = (0 - H/2)/view.k + view.y;
+  const vpr = (W - W/2)/view.k + view.x;
+  const vpb = (H - H/2)/view.k + view.y;
+  mctx.strokeStyle = 'rgba(16,185,129,.85)';
+  mctx.lineWidth = 1.4;
+  mctx.setLineDash([3, 2]);
+  mctx.strokeRect(mx(vpl), my(vpt), mx(vpr)-mx(vpl), my(vpb)-my(vpt));
+  mctx.setLineDash([]);
+  // Border
+  mctx.strokeStyle = 'rgba(148,163,184,.2)';
+  mctx.lineWidth = 0.8;
+  mctx.strokeRect(0.5, 0.5, mw-1, mh-1);
 }
 
 /* ==================== 交互 ==================== */
@@ -1335,6 +1442,7 @@ function selectNode(id){
   const n = nodeById.get(id);
   if(!n) return;
   selectedId = id;
+  n.flashUntil = performance.now() + 1500;
   openPanel(n);
   // 视野覆盖整条祖先链（含子孙方向），并避开右侧详情面板
   const cs = chainSet(id);
@@ -1373,14 +1481,19 @@ function openPanel(n){
   if(n.formulas && n.formulas.length > 0){
     fmBox.style.display = 'block';
     fmBox.innerHTML = n.formulas.map(function(f){
-      // 将 LaTeX 转为 HTML 显示
-      return '<div class="fm-line">' + esc(f)
-        .replace(/\\([a-zA-Z]+)/g, '<i class="fm-cmd">\\$1</i>')
-        .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
-        .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
-        .replace(/_(?=[a-zA-Z0-9])/g, '')
-        .replace(/\^(?=[a-zA-Z0-9])/g, '')
-      + '</div>';
+      // KaTeX 渲染 > HTML 回退
+      return '<div class="fm-line">' + (typeof katex !== 'undefined'
+        ? (function(){
+            try { return katex.renderToString(f, {throwOnError:false, displayMode:false}); }
+            catch(e){ return esc(f); }
+          })()
+        : esc(f)
+          .replace(/\\([a-zA-Z]+)/g, '<i class="fm-cmd">\\$1</i>')
+          .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
+          .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+          .replace(/_(?=[a-zA-Z0-9])/g, '')
+          .replace(/\^(?=[a-zA-Z0-9])/g, '')
+      ) + '</div>';
     }).join('');
   }else fmBox.style.display = 'none';
 

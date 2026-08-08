@@ -1439,7 +1439,7 @@
                                            "crystal-field",
                                            "dd-transition",
                                            "photochem",
-                                           "spectrochem-series"
+                                           "spectrochemical-series-detail"
                                        ],
                       "formulas":  [
                                        "\\sigma-donor: L \\rightarrow M(d)",
@@ -1478,7 +1478,6 @@
                       "difficulty":  2,
                       "relatedNodes":  [
                                            "yield-optimization",
-                                           "solubility-product",
                                            "error-analysis"
                                        ],
                       "formulas":  [
@@ -1499,7 +1498,7 @@
                       "relatedNodes":  [
                                            "photochem",
                                            "dd-transition",
-                                           "spectrochem-series",
+                                           "spectrochemical-series-detail",
                                            "kinetics-coord"
                                        ],
                       "formulas":  [

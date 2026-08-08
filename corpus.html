@@ -441,6 +441,17 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
         </label>
         <button class="btn btn-primary" id="syncBtn">⇪ 上传到云端</button>
       </div>
+      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--bd2)">
+        <div style="font-size:12.5px;font-weight:700;color:var(--t2);margin-bottom:8px">🐙 GitHub 直接提交（推荐：无需自建服务器）</div>
+        <div class="cloud-row">
+          <div class="ep"><input class="ep-input" id="ghToken" type="password" placeholder="GitHub Personal Access Token（需要 repo 权限）" spellcheck="false" style="max-width:320px"/></div>
+          <button class="btn btn-blue" id="ghUploadBtn">📤 提交到 GitHub 仓库</button>
+        </div>
+        <div style="font-size:10.5px;color:var(--t3);margin-top:6px">
+          💡 通过 GitHub API 直接将语料文件提交到仓库的 <code>data/corpus.json</code>。Token 仅在本地浏览器保存。<br/>
+          获取 Token：GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens → 勾选 <b>Contents</b> 读写权限，选择本仓库（LittleAlety/chemai-8.6-）。
+        </div>
+      </div>
       <div class="sync-list" id="syncList"></div>
       <div class="cloud-note">
         💡 同步方式：以 <code>POST</code> 请求发送 <code>{"entries":[...]}</code>（Content-Type: application/json）到上述地址；手动同步推送全部已上传语料，自动同步推送当批新增语料。<br/>
@@ -871,7 +882,10 @@ async function runIteration(newEntries){
 /* ================= 自学习：关键词倒排索引 ================= */
 const LS_INDEX='chemai_corpus_index', LS_LOG='chemai_learning_log';
 const LS_CLOUD='chemai_cloud_endpoint', LS_AUTOSYNC='chemai_cloud_autosync';
+const LS_GH_TOKEN='chemai_gh_token', LS_GH_REPO='chemai_gh_repo';
 const DEFAULT_ENDPOINT='http://your-server:8765/api/corpus';
+const DEFAULT_GH_REPO='LittleAlety/chemai-8.6-';
+const GH_CORPUS_PATH='data/corpus.json';
 const STOP_ZH=new Set(('的,了,和,与,在,是,为,及,其,等,对,中,由,向,从,或,并,将,被,该,此,之,也,都,而,上,下,不,有,无,于,以,后,前,'+
   '通过,进行,研究,实验,基于,一种,方法,以及,采用,有关,对于,分析,结果,表明,具有,其中,之间,可以,主要,本文,反应,溶液,加入,得到,因此,同时').split(','));
 const STOP_EN=new Set(['the','and','for','with','from','that','this','are','was','were','has','have','had','not','but','all','can','its','our','their','using','use','used','via','between','into','than','then','when','which','while','also','such','these','those','there','after','before','over','per','new','one','two','experiment','experiments','study','studies','analysis','method','methods','results','pdf']);
@@ -1051,6 +1065,67 @@ function initCloudPanel(){
   as.checked=getAutoSync();
   as.addEventListener('change',()=>{setAutoSync(as.checked);toast(as.checked?'已开启「上传后自动同步」':'已关闭自动同步')});
   document.getElementById('syncBtn').addEventListener('click',()=>syncToCloud(uploadedEntries,'manual'));
+
+  // GitHub 直接提交
+  const ghTok=document.getElementById('ghToken');
+  ghTok.value=localStorage.getItem(LS_GH_TOKEN)||'';
+  ghTok.addEventListener('change',()=>{localStorage.setItem(LS_GH_TOKEN,ghTok.value.trim())});
+  document.getElementById('ghUploadBtn').addEventListener('click',()=>pushToGitHub(uploadedEntries));
+}
+
+/* ================= GitHub API 直接提交 ================= */
+async function pushToGitHub(uploaded){
+  const token=(document.getElementById('ghToken').value||'').trim();
+  if(!token){addSyncStatus('err','请先填写 GitHub Personal Access Token');return}
+  if(!uploaded||!uploaded.length){addSyncStatus('err','没有可提交的上传语料');return}
+
+  const allEntries=mergedEntries();
+  const payload={
+    name:'三草酸合铁酸钾语料库知识清单（含上传语料）',
+    version:'v3',
+    total:allEntries.length,
+    subfields: [...new Set(allEntries.map(e=>e.subfield||'其他'))],
+    entries:allEntries
+  };
+  const content=btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))));
+  const path=GH_CORPUS_PATH;
+  const repo=DEFAULT_GH_REPO;
+
+  const pending=addSyncStatus('pending','正在通过 GitHub API 提交 '+uploaded.length+' 条上传语料到 '+repo+' …');
+
+  try{
+    // Step 1: 获取当前文件的 SHA（需要用于更新）
+    let sha=null;
+    try{
+      const getResp=await fetch('https://api.github.com/repos/'+repo+'/contents/'+path,{
+        headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}
+      });
+      if(getResp.ok){const info=await getResp.json();sha=info.sha}
+    }catch(e){/* 文件可能不存在，sha 保持为 null（创建模式）*/}
+
+    // Step 2: PUT 文件
+    const body={message:'corpus: sync '+uploaded.length+' uploaded entries via web UI',content:content};
+    if(sha) body.sha=sha;
+
+    const putResp=await fetch('https://api.github.com/repos/'+repo+'/contents/'+path,{
+      method:'PUT',
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
+    if(!putResp.ok){
+      const errData=await putResp.json().catch(()=>({}));
+      throw new Error('GitHub API 返回 '+putResp.status+(errData.message?': '+errData.message:''));
+    }
+    const result=await putResp.json();
+    pending.className='sync-item ok';
+    pending.querySelector('.sy-icon').textContent='✅';
+    pending.querySelector('.sy-msg').textContent='提交成功！'+uploaded.length+' 条上传语料已写入 '+repo+'/'+path+' (commit '+result.commit.sha.slice(0,7)+')。GitHub Pages 将自动部署。';
+    toast('✅ GitHub 提交成功，Pages 将自动部署');
+  }catch(e){
+    pending.className='sync-item err';
+    pending.querySelector('.sy-icon').textContent='❌';
+    pending.querySelector('.sy-msg').textContent='GitHub 提交失败：'+(e.message||'网络错误')+'。请确认 Token 有 repo 权限且仓库名正确。';
+  }
 }
 
 /* ================= 事件绑定 ================= */

@@ -888,6 +888,8 @@ function renderLatexToUnicode(text){
 
 function renderLatexBody(body, G){
   let s=body;
+  // Pre-collapse double backslashes (fix residual escaped LaTeX from data)
+  s=s.replace(/\\\\/g,'\\');
   // 下标: a_{xyz} → a<sub>xyz</sub>, a_1 → a<sub>1</sub>
   s=s.replace(/_\{([^{}]+)\}/g,'<sub class="ans-sub">$1</sub>');
   s=s.replace(/_([a-zA-Z0-9])/g,'<sub class="ans-sub">$1</sub>');
@@ -896,6 +898,13 @@ function renderLatexBody(body, G){
   s=s.replace(/\^([a-zA-Z0-9+\-])/g,'<sup class="ans-sup">$1</sup>');
   // \\frac{n}{d} → (n)/(d) 简洁表示
   s=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'($1)/($2)');
+  // \\sqrt[n]{x} → √(x)
+  s=s.replace(/\\sqrt(?:\[([^\]]*)\])?\{([^{}]*)\}/g,'√($2)');
+  // \\xrightarrow[opt]{above} → →(above)
+  s=s.replace(/\\xrightarrow(?:\[[^\]]*\])?\{([^{}]*)\}/g,'→($1)');
+  // \\bar{x} → x̄, \\hat{x} → x̂
+  s=s.replace(/\\bar\{([^{}]*)\}/g,'$1̄');
+  s=s.replace(/\\hat\{([^{}]*)\}/g,'$1̂');
   // 多字母命令
   for(const cmd in G){
     s=s.split(cmd).join(G[cmd]);
@@ -903,9 +912,10 @@ function renderLatexBody(body, G){
   // 残留反斜线
   s=s.replace(/\\([a-zA-Z]+)/g,'$1');
   s=s.replace(/\\/g,'');
+  // 清除残留的 {} 括号（来自 \\text、\\mathrm 等命令）
+  s=s.replace(/[{}]/g,'');
   return s;
 }
-
 /* 显示 FAQ 答案时自动跑 LaTeX 翻译 */
 
 /* 实体补充句（无 FAQ 命中时用于丰富"核心解答"，均为本实验准确事实） */

@@ -476,6 +476,7 @@ function renderFormula(tex){
   t=t.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,"($1)/($2)");
   t=t.replace(/\\sqrt\[?([^\]{}]*)\]?\{([^{}]*)\}/g,"√($2)");
   t=t.replace(/\\bar\{([^{}]*)\}/g,"$1̄");
+  t=t.replace(/\\hat\{([^{}]*)\}/g,"$1̂");
   var G={cdot:"·",times:"×",div:"÷",approx:"≈",sim:"∼",neq:"≠",gg:"≫",ll:"≪",geq:"≥",leq:"≤",pm:"±",mp:"∓",
     rightarrow:"→",to:"→",longrightarrow:"→",implies:"⇒",Rightleftharpoons:"⇌",rightleftharpoons:"⇌",leftrightarrow:"↔",leftarrow:"←",
     longleftarrow:"⟵",xrightarrow:"→",xleftarrow:"←",xrightleftharpoons:"⇌",
@@ -485,13 +486,14 @@ function renderFormula(tex){
     varepsilon:"ε",epsilon:"ε",infty:"∞",partial:"∂",nabla:"∇",circ:"°",degree:"°",bullet:"•",ast:"∗",star:"★",
     lg:"lg",ln:"ln",log:"log",sin:"sin",cos:"cos",tan:"tan",exp:"exp",max:"max",min:"min",lim:"lim",
     rightleftharpoons:"⇌","rightleftarrows":"⇄","leftrightharpoons":"⇋",
-    mathrm:"",text:"",mbox:"",quad:" ",qquad:"  ",hspace:" ",":":" ",";":" ",",":" ","!":"",left:"",right:"",Big:"",big:"",displaystyle:""};
+    equiv:"≡",Phi:"Φ",Longrightarrow:"⟹",
+    mathrm:"",text:"",mbox:"",quad:" ",qquad:"  ",hspace:"",":":" ",";":"",",":"","!":"",left:"",right:"",Big:"",big:"",displaystyle:""};
   t=t.replace(/\\([a-zA-Z]+)/g,function(m,n){return Object.prototype.hasOwnProperty.call(G,n)?G[n]:n;});
   t=t.replace(/\\(.)/g,"$1");                  // \% \' 等
   t=t.replace(/\\/g,"");
   /* 修复丢失反斜杠的裸命令词（数据转义残留） */
-  var BARE={qquad:"  ",quad:" ",lambda:"λ",left:"",pm:"±",gg:"≫"};
-  t=t.replace(/\b(qquad|quad|lambda|left|pm|gg)\b/g,function(m,w){return BARE[w];});
+  var BARE={qquad:"  ",quad:" ",lambda:"λ",left:"",pm:"±",gg:"≫",equiv:"≡",Phi:"Φ",nu:"ν"};
+  t=t.replace(/\b(qquad|quad|lambda|left|pm|gg|equiv|Phi|nu)\b/g,function(m,w){return BARE[w];});
   t=t.replace(/[ \t]{2,}/g," ").trim();
   t=esc(t);
   t=t.replace(/_\{([^{}]*)\}/g,"<sub>$1</sub>");
@@ -500,8 +502,7 @@ function renderFormula(tex){
   t=t.replace(/\^([A-Za-z0-9+\-]+)/g,"<sup>$1</sup>");
   t=t.replace(/[{}]/g,"");
   return t;
-}
-/* 行内渲染：转义 → **加粗** → $公式$ */
+}/* 行内渲染：转义 → **加粗** → $公式$ */
 function inline(s){
   var blocks=[];
   s=String(s).replace(/\$\$([\s\S]+?)\$\$/g,function(m,f){blocks.push(f);return "\u0001"+(blocks.length-1)+"\u0002";});

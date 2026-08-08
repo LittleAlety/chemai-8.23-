@@ -1,10 +1,10 @@
 ﻿# Merge all question files into single output
-$outputPath = "C:\Users\Little Alety\Desktop\Claude Code\v6\test_questions_round1.json"
+$outputPath = "..\试题迭代记录\round1\test_questions_round1.json"
 
 $files = @(
-    "C:\Users\Little Alety\Desktop\Claude Code\v6\questions_ch1_4.json",
-    "C:\Users\Little Alety\Desktop\Claude Code\v6\questions_ch5_8.json",
-    "C:\Users\Little Alety\Desktop\Claude Code\v6\questions_ch9_12.json"
+    "..\试题迭代记录\round1\questions_ch1_4.json",
+    "..\试题迭代记录\round1\questions_ch5_8.json",
+    "..\试题迭代记录\round1\questions_ch9_12.json"
 )
 
 $allQuestions = @()

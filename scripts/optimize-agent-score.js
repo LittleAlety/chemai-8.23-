@@ -9,7 +9,7 @@ const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.s
 
 const FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
-const QUESTIONS = readJSON('agent_b_questions_r2.json');
+const QUESTIONS = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r2.json');
 const API_KEY = process.env.DEEPSEEK_KEY;
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
@@ -172,9 +172,9 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
 (async () => {
   if (!API_KEY) throw new Error('DEEPSEEK_KEY missing');
   const answers1 = await generateAnswers(QUESTIONS);
-  writeJSON('agent_opt_answers_pass1.json', QUESTIONS.map((q, i) => ({ question: q.question, answer: answers1[i] || '' })));
+  writeJSON('Agent工作区/Agent-优化/agent_opt_answers_pass1.json', QUESTIONS.map((q, i) => ({ question: q.question, answer: answers1[i] || '' })));
   const scores1 = await scoreAnswers(QUESTIONS, answers1);
-  writeJSON('agent_opt_scores_pass1.json', scores1.filter(Boolean));
+  writeJSON('Agent工作区/Agent-优化/agent_opt_scores_pass1.json', scores1.filter(Boolean));
   const pass1 = scores1.filter(Boolean);
   const allAvg1 = avg(pass1.map(x => Number(x.score)));
   console.log('Pass1 avg score:', allAvg1);
@@ -183,15 +183,15 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
     const low = pass1.filter(x => Number(x.score) < 90);
     console.log('Low questions:', low.length, '-> running feedback pass');
     const answers2 = await generateAnswers(QUESTIONS, low);
-    writeJSON('agent_opt_answers_pass2.json', QUESTIONS.map((q, i) => ({ question: q.question, answer: answers2[i] || '' })));
+    writeJSON('Agent工作区/Agent-优化/agent_opt_answers_pass2.json', QUESTIONS.map((q, i) => ({ question: q.question, answer: answers2[i] || '' })));
     const scores2 = await scoreAnswers(QUESTIONS, answers2);
-    writeJSON('agent_opt_scores_pass2.json', scores2.filter(Boolean));
+    writeJSON('Agent工作区/Agent-优化/agent_opt_scores_pass2.json', scores2.filter(Boolean));
     const pass2 = scores2.filter(Boolean);
     const allAvg2 = avg(pass2.map(x => Number(x.score)));
     console.log('Pass2 avg score:', allAvg2);
-    writeJSON('agent_opt_report.json', { pass1: { avg: allAvg1, count: pass1.length }, pass2: { avg: allAvg2, count: pass2.length }, generatedAt: new Date().toISOString() });
+    writeJSON('Agent工作区/Agent-报告/agent_opt_report.json', { pass1: { avg: allAvg1, count: pass1.length }, pass2: { avg: allAvg2, count: pass2.length }, generatedAt: new Date().toISOString() });
   } else {
-    writeJSON('agent_opt_report.json', { pass1: { avg: allAvg1, count: pass1.length }, generatedAt: new Date().toISOString() });
+    writeJSON('Agent工作区/Agent-报告/agent_opt_report.json', { pass1: { avg: allAvg1, count: pass1.length }, generatedAt: new Date().toISOString() });
   }
 })().catch(e => {
   console.error(e);

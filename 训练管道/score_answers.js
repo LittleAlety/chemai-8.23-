@@ -30,18 +30,18 @@ const MODEL = 'deepseek-chat';
 const RATE_LIMIT_MS = 500;
 
 // ===================== FILE LOADING =====================
-const { readJSON } = require('./scripts/rag-utils');
+const { readJSON } = require('../scripts/rag-utils');
 
 // Resolve input file: try r5 → r4 → r3 → r2 → core → round1
-let questionFile = path.join(__dirname, 'test_questions_core_r14.json');
+let questionFile = path.join(__dirname, '..', '试题迭代记录/round3/test_questions_core_r14.json');
 if (!fs.existsSync(questionFile)) {
-  questionFile = path.join(__dirname, 'test_questions_core_r10.json');
+  questionFile = path.join(__dirname, '..', '试题迭代记录/round3/test_questions_core_r10.json');
 }
 
 const QUESTION_DATA = readJSON(questionFile);
 const QUESTIONS = Array.isArray(QUESTION_DATA) ? QUESTION_DATA : (QUESTION_DATA.questions || []);
-const KB = readJSON(path.join(__dirname, 'data', 'kb.json'));
-const FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
+const KB = readJSON(path.join(__dirname, '..', 'data', 'kb.json'));
+const FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
 
 console.log('='.repeat(70));
 console.log('LLM-as-Judge Scoring System');
@@ -344,7 +344,7 @@ async function scoreAnswer(question, aiAnswer) {
 }
 
 // ---- Chapter names for display (从统一分类总集读取) ----
-const CATEGORIES_JSON = readJSON(path.join(__dirname, 'data', 'categories.json'));
+const CATEGORIES_JSON = readJSON(path.join(__dirname, '..', 'data', 'categories.json'));
 const CHAPTER_NAMES = CATEGORIES_JSON.chapters || {};
 
 // ===================== MAIN EXECUTION =====================
@@ -592,7 +592,7 @@ async function main() {
   }
 
   // 写入总集 reports_master.json
-  const masterPath = path.join(__dirname, 'reports_master.json');
+  const masterPath = path.join(__dirname, '..', 'Agent工作区/Agent-报告/reports_master.json');
   let master = { version: 'unified', runs: [] };
   if (fs.existsSync(masterPath)) {
     try { master = JSON.parse(fs.readFileSync(masterPath, 'utf8')); } catch (e) { }

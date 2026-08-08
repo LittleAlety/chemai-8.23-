@@ -72,8 +72,8 @@ function localAnswer(question) {
 }
 
 async function fillRound(round) {
-  const questions = readJSON('agent_b_questions_r' + round + '.json');
-  const existing = readJSON('agent_c_scores_r' + round + '.json');
+  const questions = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r' + round + '.json');
+  const existing = readJSON('Agent工作区/Agent-C-答案评分/agent_c_scores_r' + round + '.json');
   const available = existing.filter(Boolean).slice();
   const results = new Array(questions.length);
   const missingIndices = [];
@@ -153,7 +153,7 @@ async function fillRound(round) {
     throw new Error('Round ' + round + ' still missing scores: ' + missing);
   }
   const full = results;
-  writeJSON('agent_c_scores_r' + round + '.json', full);
+  writeJSON('Agent工作区/Agent-C-答案评分/agent_c_scores_r' + round + '.json', full);
   return full;
 }
 
@@ -162,8 +162,8 @@ async function fillRound(round) {
   const reports = [];
   for (let round = 1; round <= 3; round++) {
     const scores = await fillRound(round);
-    const questions = readJSON('agent_b_questions_r' + round + '.json');
-    const validation = readJSON('agent_d_validation_r' + round + '.json');
+    const questions = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r' + round + '.json');
+    const validation = readJSON('Agent工作区/Agent-D-验证/agent_d_validation_r' + round + '.json');
     const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length * 10) / 10 : 0;
     const report = {
       round,
@@ -178,10 +178,10 @@ async function fillRound(round) {
       generatedAt: new Date().toISOString()
     };
     reports.push(report);
-    writeJSON('agent_loop_round' + round + '_report.json', report);
+    writeJSON('Agent工作区/Agent-报告/agent_loop_round' + round + '_report.json', report);
     console.log('Round', round, report);
   }
-  writeJSON('agent_loop_report.json', { rounds: reports, generatedAt: new Date().toISOString() });
+  writeJSON('Agent工作区/Agent-报告/agent_loop_report.json', { rounds: reports, generatedAt: new Date().toISOString() });
 })().catch(e => {
   console.error(e);
   process.exit(1);

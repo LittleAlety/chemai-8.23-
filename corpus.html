@@ -447,8 +447,9 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
           <div class="ep"><input class="ep-input" id="ghToken" type="password" placeholder="GitHub Personal Access Token（需要 repo 权限）" spellcheck="false" style="max-width:320px"/></div>
           <button class="btn btn-blue" id="ghUploadBtn">📤 提交到 GitHub 仓库</button>
         </div>
+        <div style="font-size:11px;margin-top:5px" id="ghTokenStatus">🟡 未配置 Token</div>
         <div style="font-size:10.5px;color:var(--t3);margin-top:6px">
-          💡 通过 GitHub API 直接将语料文件提交到仓库的 <code>data/corpus.json</code>。Token 仅在本地浏览器保存。<br/>
+          💡 通过 GitHub API 直接将语料文件及 FAQ 按文件夹结构提交到仓库。Token 使用 AES-256-GCM 加密存储在浏览器本地。<br/>
           获取 Token：GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens → 勾选 <b>Contents</b> 读写权限，选择本仓库（LittleAlety/chemai-8.6-）。
         </div>
       </div>
@@ -882,10 +883,22 @@ async function runIteration(newEntries){
 /* ================= 自学习：关键词倒排索引 ================= */
 const LS_INDEX='chemai_corpus_index', LS_LOG='chemai_learning_log';
 const LS_CLOUD='chemai_cloud_endpoint', LS_AUTOSYNC='chemai_cloud_autosync';
-const LS_GH_TOKEN='chemai_gh_token', LS_GH_REPO='chemai_gh_repo';
+const LS_GH_TOKEN='chemai_gh_token_enc', LS_GH_REPO='chemai_gh_repo';
+const LS_GH_TOKEN_LEGACY='chemai_gh_token'; // 旧key：明文存储，迁移后清除
 const DEFAULT_ENDPOINT='http://your-server:8765/api/corpus';
 const DEFAULT_GH_REPO='LittleAlety/chemai-8.6-';
 const GH_CORPUS_PATH='data/corpus.json';
+const GH_DATA_DIR='三草酸合铁酸钾资料/';
+// 子领域 → GitHub 仓库文件夹映射
+const SUBFIELD_FOLDER_MAP={
+  '光化学应用':'Fe/','蓝晒工艺':'蓝晒/','分析测定':'Fe/表征/','合成制备':'Fe/',
+  '实验教学':'Fe/','摩尔盐相关':'摩尔盐/','热分析':'Fe/表征/','磁性研究':'Fe/表征/',
+  '结构表征':'Fe/表征/','综合研究':'Fe/','草酸配合物':'其他草酸配合物/',
+  '配位化学理论':'Fe/','实验操作':'Fe/','反应原理':'Fe/','安全与废物处理':'Fe/',
+  '化学史':'Fe/','高等理论':'Fe/'
+};
+// FAQ数据缓存
+let faqData=null;
 const STOP_ZH=new Set(('的,了,和,与,在,是,为,及,其,等,对,中,由,向,从,或,并,将,被,该,此,之,也,都,而,上,下,不,有,无,于,以,后,前,'+
   '通过,进行,研究,实验,基于,一种,方法,以及,采用,有关,对于,分析,结果,表明,具有,其中,之间,可以,主要,本文,反应,溶液,加入,得到,因此,同时').split(','));
 const STOP_EN=new Set(['the','and','for','with','from','that','this','are','was','were','has','have','had','not','but','all','can','its','our','their','using','use','used','via','between','into','than','then','when','which','while','also','such','these','those','there','after','before','over','per','new','one','two','experiment','experiments','study','studies','analysis','method','methods','results','pdf']);
@@ -907,7 +920,27 @@ function extractTerms(text){
   }
   return freq;
 }
-function loadIndexStore(){try{const v=JSON.parse(localStorage.getItem(LS_INDEX));return v&&v.index?v:null}catch(e){return null}}
+/* ================= Token 加密（AES-256-GCM + PBKDF2） ================= */
+const CRYPTO_SALT_LEN=16, CRYPTO_IV_LEN=12, CRYPTO_ITER=200000;
+const CRYPTO_APP_KEY='chemai-k3fe-crypto-v1'; // 应用级密钥（非机密，仅增加推导复杂性）
+function ab2b64(buf){return btoa(String.fromCharCode(...new Uint8Array(buf)))}
+function b642ab(str){return Uint8Array.from(atob(str),c=>c.charCodeAt(0)).buffer}
+async function deriveKey(salt){const mk=await crypto.subtle.importKey('raw',new TextEncoder().encode(CRYPTO_APP_KEY),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:CRYPTO_ITER,hash:'SHA-256'},mk,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function encryptToken(plaintext){
+  const salt=crypto.getRandomValues(new Uint8Array(CRYPTO_SALT_LEN));
+  const iv=crypto.getRandomValues(new Uint8Array(CRYPTO_IV_LEN));
+  const key=await deriveKey(salt);
+  const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv:iv},key,new TextEncoder().encode(plaintext));
+  return JSON.stringify({s:ab2b64(salt),i:ab2b64(iv),c:ab2b64(ct)});
+}
+async function decryptToken(packed){
+  try{const{j:s,i,c}=typeof packed==='string'?JSON.parse(packed):packed;if(!s||!i||!c)return null;
+    const key=await deriveKey(b642ab(s));
+    const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b642ab(i)},key,b642ab(c));
+    return new TextDecoder().decode(pt);
+  }catch(e){return null}
+}
+/* ================= 索引 ================= */
 function saveIndexStore(){try{localStorage.setItem(LS_INDEX,JSON.stringify(corpusIndex))}catch(e){console.warn('索引保存失败',e)}}
 function buildIndex(entries){
   const index=Object.create(null);
@@ -1066,65 +1099,175 @@ function initCloudPanel(){
   as.addEventListener('change',()=>{setAutoSync(as.checked);toast(as.checked?'已开启「上传后自动同步」':'已关闭自动同步')});
   document.getElementById('syncBtn').addEventListener('click',()=>syncToCloud(uploadedEntries,'manual'));
 
-  // GitHub 直接提交
+  // GitHub 直接提交（加密存储）
   const ghTok=document.getElementById('ghToken');
-  ghTok.value=localStorage.getItem(LS_GH_TOKEN)||'';
-  ghTok.addEventListener('change',()=>{localStorage.setItem(LS_GH_TOKEN,ghTok.value.trim())});
+  initEncryptedToken(ghTok);
   document.getElementById('ghUploadBtn').addEventListener('click',()=>pushToGitHub(uploadedEntries));
 }
 
+/* ================= Token 加密初始化与迁移 ================= */
+async function initEncryptedToken(inputEl){
+  // 迁移旧明文Token → 加密存储
+  const legacy=localStorage.getItem(LS_GH_TOKEN_LEGACY);
+  if(legacy&&legacy.trim()){
+    try{const enc=await encryptToken(legacy.trim());localStorage.setItem(LS_GH_TOKEN,enc)}catch(e){}
+    localStorage.removeItem(LS_GH_TOKEN_LEGACY);
+  }
+  // 解密并预填
+  const enc=localStorage.getItem(LS_GH_TOKEN);
+  if(enc){
+    const pt=await decryptToken(enc);
+    if(pt){inputEl.value=pt;updateTokenIndicator('ok')}
+    else{updateTokenIndicator('bad')}
+  }else{updateTokenIndicator('none')}
+  // 输入变更 → 加密存储
+  inputEl.addEventListener('change',async ()=>{
+    const v=inputEl.value.trim();
+    if(v){try{const enc=await encryptToken(v);localStorage.setItem(LS_GH_TOKEN,enc);updateTokenIndicator('ok')}catch(e){updateTokenIndicator('none')}}
+    else{localStorage.removeItem(LS_GH_TOKEN);updateTokenIndicator('none')}
+  });
+}
+async function getDecryptedToken(){
+  const enc=localStorage.getItem(LS_GH_TOKEN);
+  if(!enc)return null;
+  return await decryptToken(enc);
+}
+function updateTokenIndicator(state){
+  const ind=document.getElementById('ghTokenStatus');
+  if(!ind)return;
+  if(state==='ok'){ind.innerHTML='🟢 Token 已加密存储';ind.style.color='var(--emerald)'}
+  else if(state==='bad'){ind.innerHTML='🔴 Token 解密失败，请重新输入';ind.style.color='var(--red)'}
+  else{ind.innerHTML='🟡 未配置 Token';ind.style.color='var(--yellow)'}
+}
+
 /* ================= GitHub API 直接提交 ================= */
+/* 根据文献内容确定目标文件夹 */
+function resolveFolder(entry){
+  const sf=entry.subfield||'其他';
+  // 蓝晒关键词优先
+  const probe=(entry.title+' '+(entry.content||'')).toLowerCase();
+  if(/蓝晒|cyanotype/.test(probe))return GH_DATA_DIR+'蓝晒/';
+  const mapped=SUBFIELD_FOLDER_MAP[sf];
+  if(mapped)return GH_DATA_DIR+mapped;
+  // 新子领域 → 自动创建
+  return GH_DATA_DIR+sf+'/';
+}
+/* 加载FAQ数据 */
+async function loadFAQ(){
+  if(faqData)return faqData;
+  try{const r=await fetch('data/faq_unified.json',{cache:'default'});if(!r.ok)throw 0;faqData=await r.json()}catch(e){faqData=[]}
+  return faqData;
+}
+/* 获取匹配的FAQ */
+async function getRelatedFAQ(subfields){
+  const faq=await loadFAQ();
+  if(!faq.length)return[];
+  const sfSet=new Set(subfields);
+  return faq.filter(f=>sfSet.has(f.subfield));
+}
+
 async function pushToGitHub(uploaded){
-  const token=(document.getElementById('ghToken').value||'').trim();
+  const token=await getDecryptedToken();
   if(!token){addSyncStatus('err','请先填写 GitHub Personal Access Token');return}
   if(!uploaded||!uploaded.length){addSyncStatus('err','没有可提交的上传语料');return}
 
-  const allEntries=mergedEntries();
-  const payload={
-    name:'三草酸合铁酸钾语料库知识清单（含上传语料）',
-    version:'v3',
-    total:allEntries.length,
-    subfields: [...new Set(allEntries.map(e=>e.subfield||'其他'))],
-    entries:allEntries
-  };
-  const content=btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))));
-  const path=GH_CORPUS_PATH;
   const repo=DEFAULT_GH_REPO;
+  const allEntries=mergedEntries();
+  const uploadedSubfields=[...new Set(uploaded.map(e=>e.subfield||'其他'))];
+  const relatedFAQ=await getRelatedFAQ(uploadedSubfields);
 
-  const pending=addSyncStatus('pending','正在通过 GitHub API 提交 '+uploaded.length+' 条上传语料到 '+repo+' …');
+  // 按文件夹分组
+  const folderGroups={};
+  uploaded.forEach(e=>{const f=resolveFolder(e);(folderGroups[f]||(folderGroups[f]=[])).push(e)});
+  const folderList=Object.keys(folderGroups).sort();
+
+  // 构建预览
+  const previewParts=[];
+  previewParts.push('📦 corpus.json ('+allEntries.length+' 条合并)');
+  folderList.forEach(f=>previewParts.push('📁 '+f+' ('+folderGroups[f].length+' 条)'));
+  if(relatedFAQ.length)previewParts.push('❓ FAQ 关联 '+relatedFAQ.length+' 条（'+uploadedSubfields.join('、')+'）');
+  const preview=previewParts.join('\n');
+  addSyncStatus('pending','📋 准备提交：\n'+preview);
+
+  let totalFiles=1+uploaded.length+(relatedFAQ.length?1:0), done=0, commitShas=[];
+  const report=()=>'（'+done+'/'+totalFiles+' 完成）';
 
   try{
-    // Step 1: 获取当前文件的 SHA（需要用于更新）
+    // ====== 1. 写入 data/corpus.json（完整合并） ======
+    const corpusPayload={
+      name:'三草酸合铁酸钾语料库知识清单（含上传语料）',
+      version:'v3',total:allEntries.length,
+      subfields:[...new Set(allEntries.map(e=>e.subfield||'其他'))],
+      entries:allEntries
+    };
+    const corpusContent=btoa(unescape(encodeURIComponent(JSON.stringify(corpusPayload,null,2))));
     let sha=null;
     try{
-      const getResp=await fetch('https://api.github.com/repos/'+repo+'/contents/'+path,{
-        headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}
-      });
-      if(getResp.ok){const info=await getResp.json();sha=info.sha}
-    }catch(e){/* 文件可能不存在，sha 保持为 null（创建模式）*/}
+      const gr=await fetch('https://api.github.com/repos/'+repo+'/contents/'+GH_CORPUS_PATH,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}});
+      if(gr.ok){const info=await gr.json();sha=info.sha}
+    }catch(e){}
+    const body={message:'corpus: sync '+uploaded.length+' uploaded entries',content:corpusContent};
+    if(sha)body.sha=sha;
+    const pr=await fetch('https://api.github.com/repos/'+repo+'/contents/'+GH_CORPUS_PATH,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!pr.ok){const e=await pr.json().catch(()=>({}));throw new Error('corpus.json: HTTP '+pr.status+(e.message?': '+e.message:''))}
+    done++;commitShas.push((await pr.json()).commit.sha.slice(0,7));
 
-    // Step 2: PUT 文件
-    const body={message:'corpus: sync '+uploaded.length+' uploaded entries via web UI',content:content};
-    if(sha) body.sha=sha;
-
-    const putResp=await fetch('https://api.github.com/repos/'+repo+'/contents/'+path,{
-      method:'PUT',
-      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
-      body:JSON.stringify(body)
-    });
-    if(!putResp.ok){
-      const errData=await putResp.json().catch(()=>({}));
-      throw new Error('GitHub API 返回 '+putResp.status+(errData.message?': '+errData.message:''));
+    // ====== 2. 按文件夹写入语料条目 ======
+    for(const [folder,entries] of Object.entries(folderGroups)){
+      for(const entry of entries){
+        const fileName=String(entry.id)+'_'+entry.title.replace(/[\\/:*?"<>|]/g,'_').slice(0,80)+'.json';
+        const entryPath=folder+fileName;
+        const entryContent=btoa(unescape(encodeURIComponent(JSON.stringify(entry,null,2))));
+        let entrySha=null;
+        try{
+          const er=await fetch('https://api.github.com/repos/'+repo+'/contents/'+entryPath,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}});
+          if(er.ok){const info=await er.json();entrySha=info.sha}
+        }catch(e){}
+        const eBody={message:'corpus: add entry '+entry.id+' - '+entry.title.slice(0,60),content:entryContent};
+        if(entrySha)eBody.sha=entrySha;
+        const epr=await fetch('https://api.github.com/repos/'+repo+'/contents/'+entryPath,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify(eBody)});
+        if(!epr.ok){const e=await epr.json().catch(()=>({}));throw new Error(entryPath+': HTTP '+epr.status+(e.message?': '+e.message:''))}
+        done++;commitShas.push((await epr.json()).commit.sha.slice(0,7));
+      }
     }
-    const result=await putResp.json();
-    pending.className='sync-item ok';
-    pending.querySelector('.sy-icon').textContent='✅';
-    pending.querySelector('.sy-msg').textContent='提交成功！'+uploaded.length+' 条上传语料已写入 '+repo+'/'+path+' (commit '+result.commit.sha.slice(0,7)+')。GitHub Pages 将自动部署。';
-    toast('✅ GitHub 提交成功，Pages 将自动部署');
+
+    // ====== 3. 上传相关 FAQ ======
+    if(relatedFAQ.length){
+      const faqPath='data/faq_unified.json';
+      // 读取远程已有FAQ（如有），合并去重
+      let remoteFAQ=[],faqSha=null;
+      try{
+        const fr=await fetch('https://api.github.com/repos/'+repo+'/contents/'+faqPath,{headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}});
+        if(fr.ok){const info=await fr.json();faqSha=info.sha;const dc=JSON.parse(decodeURIComponent(escape(atob(info.content))));remoteFAQ=Array.isArray(dc)?dc:[]}
+      }catch(e){}
+      // 合并：以 q+subfield 为key去重
+      const seen=new Set(remoteFAQ.map(f=>f.q+'|||'+f.subfield));
+      const merged=[...remoteFAQ];
+      let addedFAQ=0;
+      for(const f of relatedFAQ){
+        if(!seen.has(f.q+'|||'+f.subfield)){merged.push(f);seen.add(f.q+'|||'+f.subfield);addedFAQ++}
+      }
+      if(addedFAQ>0){
+        const faqContent=btoa(unescape(encodeURIComponent(JSON.stringify(merged,null,2))));
+        const fBody={message:'faq: sync '+addedFAQ+' entries from corpus upload ('+uploadedSubfields.join(', ')+')',content:faqContent};
+        if(faqSha)fBody.sha=faqSha;
+        const fpr=await fetch('https://api.github.com/repos/'+repo+'/contents/'+faqPath,{method:'PUT',headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify(fBody)});
+        if(!fpr.ok){const e=await fpr.json().catch(()=>({}));addSyncStatus('err','FAQ 同步失败: HTTP '+fpr.status+(e.message?': '+e.message:''))}
+        else{done++;commitShas.push((await fpr.json()).commit.sha.slice(0,7))}
+      }
+      done++; // FAQ文件算一个
+    }
+
+    // 成功汇总
+    const msg='✅ 提交成功！'+
+      'corpus.json ('+allEntries.length+' 条) '+
+      '+ '+folderList.length+' 个文件夹 '+
+      '+ FAQ '+relatedFAQ.length+' 条关联 '+
+      '| commits: '+commitShas.join(', ');
+    addSyncStatus('ok',msg);
+    toast('✅ GitHub 提交成功');
   }catch(e){
-    pending.className='sync-item err';
-    pending.querySelector('.sy-icon').textContent='❌';
-    pending.querySelector('.sy-msg').textContent='GitHub 提交失败：'+(e.message||'网络错误')+'。请确认 Token 有 repo 权限且仓库名正确。';
+    addSyncStatus('err','GitHub 提交失败：'+(e.message||'网络错误')+'。请确认 Token 有 Contents 读写权限且仓库名正确。'+report());
   }
 }
 

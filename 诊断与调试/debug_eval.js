@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const { readJSON } = require('./scripts/rag-utils');
+const { readJSON } = require('../scripts/rag-utils');
 
 // Inline just what we need (debug-specific overloads)
 const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
 const norm = s => String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');
 
-const AUTO_FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
-const QUESTIONS = readJSON(path.join(__dirname, 'test_questions_round2.json'));
+const AUTO_FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
+const QUESTIONS = readJSON(path.join(__dirname, '..', '试题迭代记录/round2/test_questions_round2.json'));
 
 // FAQ matching
 function matchFAQv3(q) {

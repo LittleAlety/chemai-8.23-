@@ -6,12 +6,12 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { readJSON } = require('./scripts/rag-utils');
+const { readJSON } = require('../scripts/rag-utils');
 
-const KB = readJSON(path.join(__dirname, 'data', 'kb.json'));
-const MANUAL = readJSON(path.join(__dirname, 'data', 'manual.json'));
-const R1 = readJSON(path.join(__dirname, 'test_questions_round1.json'));
-const R2 = readJSON(path.join(__dirname, 'test_questions_round2.json'));
+const KB = readJSON(path.join(__dirname, '..', 'data', 'kb.json'));
+const MANUAL = readJSON(path.join(__dirname, '..', 'data', 'manual.json'));
+const R1 = readJSON(path.join(__dirname, '..', '试题迭代记录/round1/test_questions_round1.json'));
+const R2 = readJSON(path.join(__dirname, '..', '试题迭代记录/round2/test_questions_round2.json'));
 
 // Collect used topics to avoid duplication
 const usedTopics = new Set();
@@ -319,7 +319,7 @@ const output = {
 };
 
 fs.writeFileSync(
-  path.join(__dirname, 'test_questions_round3.json'),
+  path.join(__dirname, '..', '试题迭代记录/round3/test_questions_round3.json'),
   JSON.stringify(output, null, 2),
   'utf8'
 );

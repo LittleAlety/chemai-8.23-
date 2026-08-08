@@ -9,7 +9,7 @@ const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.s
 
 const FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
-const QUESTIONS = readJSON('agent_b_questions_r2.json');
+const QUESTIONS = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r2.json');
 const API_KEY = process.env.DEEPSEEK_KEY;
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
@@ -97,7 +97,7 @@ async function fillMissingAnswers(answers) {
     }
     console.log('filled answer', i + 1, '/', answers.length);
   }
-  writeJSON('agent_opt_answers_final.json', answers);
+  writeJSON('Agent工作区/Agent-优化/agent_opt_answers_final.json', answers);
   return answers;
 }
 
@@ -177,7 +177,7 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
 
 (async () => {
   if (!API_KEY) throw new Error('DEEPSEEK_KEY missing');
-  let answers = readJSON('agent_opt_answers_pass1.json');
+  let answers = readJSON('Agent工作区/Agent-优化/agent_opt_answers_pass1.json');
   if (!Array.isArray(answers) || answers.length !== QUESTIONS.length) {
     answers = QUESTIONS.map(q => ({ question: q.question, answer: '' }));
   }
@@ -194,8 +194,8 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
     avgSafety: avg(validScores.map(s => Number(s.safety))),
     generatedAt: new Date().toISOString()
   };
-  writeJSON('agent_opt_scores_final.json', validScores);
-  writeJSON('agent_opt_report_final.json', report);
+  writeJSON('Agent工作区/Agent-优化/agent_opt_scores_final.json', validScores);
+  writeJSON('Agent工作区/Agent-报告/agent_opt_report_final.json', report);
   console.log(JSON.stringify(report, null, 2));
 })().catch(e => {
   console.error(e);

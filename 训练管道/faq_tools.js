@@ -14,10 +14,10 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { normalize } = require('./scripts/category-utils');
-const { readJSON } = require('./scripts/rag-utils');
+const { normalize } = require('../scripts/category-utils');
+const { readJSON } = require('../scripts/rag-utils');
 
-const BASE = __dirname;
+const BASE = path.join(__dirname, '..');
 const FAQ_PATH = path.join(BASE, 'data', 'faq_unified.json');
 const HTML_PATH = path.join(BASE, 'assistant.html');
 

@@ -19,6 +19,24 @@ const CORRUPT_CATEGORY = {
 const files = fs.readdirSync(root)
   .filter(f => rootFileRe.test(f))
   .map(f => f);
+const subdirs = [
+  'Agent工作区/Agent-B-问题生成',
+  'Agent工作区/Agent-D-验证',
+  'Agent工作区/Agent-C-答案评分',
+  'Agent工作区/Agent-报告',
+  'Agent工作区/Agent-优化',
+  '试题迭代记录/round1',
+  '试题迭代记录/round2',
+  '试题迭代记录/round3'
+];
+subdirs.forEach(sd => {
+  const sdPath = path.join(root, sd);
+  if (fs.existsSync(sdPath)) {
+    fs.readdirSync(sdPath)
+      .filter(f => rootFileRe.test(f))
+      .forEach(f => files.push(path.join(sd, f)));
+  }
+});
 ['questions_master.json', 'all_cycle_questions.json'].forEach(f => {
   if (fs.existsSync(path.join(root, 'data', f))) files.push('data/' + f);
 });
@@ -89,4 +107,4 @@ files.forEach(rel => {
   console.log(rel, JSON.stringify({ before, after: fixed.length, emptyRemoved, dupRemoved, categoryFixed }));
 });
 
-writeJSON('question_bank_correction_report.json', { files: report, correctedAt: new Date().toISOString() });
+writeJSON('Agent工作区/Agent-报告/question_bank_correction_report.json', { files: report, correctedAt: new Date().toISOString() });

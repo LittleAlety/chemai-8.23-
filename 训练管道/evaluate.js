@@ -6,12 +6,12 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { readJSON, norm, bm25MatchKB, createKBIndex } = require('./scripts/rag-utils');
+const { readJSON, norm, bm25MatchKB, createKBIndex } = require('../scripts/rag-utils');
 
-const KB_DATA = readJSON(path.join(__dirname, 'data', 'kb.json'));
-const AUTO_FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
+const KB_DATA = readJSON(path.join(__dirname, '..', 'data', 'kb.json'));
+const AUTO_FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
 const round = process.argv[2] || '2';
-const QUESTIONS = readJSON(path.join(__dirname, 'test_questions_round' + round + '.json'));
+const QUESTIONS = readJSON(path.join(__dirname, '..', '试题迭代记录/round' + round, 'test_questions_round' + round + '.json'));
 
 // Ambiguous keys that match too broadly (extended set for evaluation)
 const AMBIGUOUS_KEYS = new Set(['℃','°c','40','40℃','100','100℃','0','0℃','20','20℃',
@@ -469,7 +469,7 @@ for (const [type, data] of Object.entries(results.byType).sort((a, b) => b[1].to
 }
 
 // 写入总集 reports_master.json
-const masterPath = path.join(__dirname, 'reports_master.json');
+const masterPath = path.join(__dirname, '..', 'Agent工作区/Agent-报告/reports_master.json');
 let master = { version: 'unified', runs: [] };
 if (fs.existsSync(masterPath)) {
   try { master = JSON.parse(fs.readFileSync(masterPath, 'utf8')); } catch (e) { }

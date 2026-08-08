@@ -4,9 +4,9 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { readJSON } = require('./scripts/rag-utils');
+const { readJSON } = require('../scripts/rag-utils');
 
-const FAQ = readJSON(path.join(__dirname, 'data', 'faq_unified.json'));
+const FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
 
 // Question patterns to add for different FAQ topics
 const QUESTION_PATTERNS = {
@@ -110,7 +110,7 @@ for (const entry of FAQ) {
 
 // Write enriched FAQ
 fs.writeFileSync(
-  path.join(__dirname, 'data', 'faq_unified.json'),
+  path.join(__dirname, '..', 'data', 'faq_unified.json'),
   JSON.stringify(FAQ, null, 2),
   'utf8'
 );

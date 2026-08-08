@@ -111,7 +111,7 @@ function agentA(round) {
 
 async function agentB(round) {
   console.log('Agent乙: 生成 200 道题');
-  const existing = 'agent_b_questions_r' + round + '.json';
+  const existing = 'Agent工作区/Agent-B-问题生成/agent_b_questions_r' + round + '.json';
   if (fs.existsSync(path.join(root, existing))) {
     const loaded = readJSON(existing);
     console.log('Agent乙: 复用已有题目', loaded.length);
@@ -141,13 +141,13 @@ async function agentB(round) {
     all.push(...items.map((q, j) => ({ ...q, batch: i + 1, seq: i * BATCH + j + 1 })));
     console.log('  已生成', all.length);
   }
-  writeJSON('agent_b_questions_r' + round + '.json', all);
+  writeJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r' + round + '.json', all);
   return all;
 }
 
 async function agentD(questions, round) {
   console.log('Agent丁: 逐题校验');
-  const existing = 'agent_d_validation_r' + round + '.json';
+  const existing = 'Agent工作区/Agent-D-验证/agent_d_validation_r' + round + '.json';
   if (fs.existsSync(path.join(root, existing))) {
     const loaded = readJSON(existing);
     console.log('Agent丁: 复用已有校验', loaded.length);
@@ -172,13 +172,13 @@ async function agentD(questions, round) {
     (items || []).forEach((v, j) => results.push({ question: batch[j]?.question, ...v }));
     console.log('  已校验', results.length);
   }
-  writeJSON('agent_d_validation_r' + round + '.json', results);
+  writeJSON('Agent工作区/Agent-D-验证/agent_d_validation_r' + round + '.json', results);
   return results;
 }
 
 async function agentC(questions, round) {
   console.log('Agent丙: LLM 评分');
-  const existing = 'agent_c_scores_r' + round + '.json';
+  const existing = 'Agent工作区/Agent-C-答案评分/agent_c_scores_r' + round + '.json';
   if (fs.existsSync(path.join(root, existing))) {
     const loaded = readJSON(existing);
     console.log('Agent丙: 复用已有评分', loaded.length);
@@ -209,7 +209,7 @@ async function agentC(questions, round) {
     (items || []).forEach(v => scores.push(v));
     console.log('  已评分', scores.length);
   }
-  writeJSON('agent_c_scores_r' + round + '.json', scores);
+  writeJSON('Agent工作区/Agent-C-答案评分/agent_c_scores_r' + round + '.json', scores);
   return scores;
 }
 
@@ -235,17 +235,17 @@ async function agentC(questions, round) {
       generatedAt: new Date().toISOString()
     };
     reports.push(report);
-    writeJSON('agent_loop_round' + round + '_report.json', report);
+    writeJSON('Agent工作区/Agent-报告/agent_loop_round' + round + '_report.json', report);
     console.log('Round ' + round + ' 报告:');
     console.log(JSON.stringify(report, null, 2));
   }
   const allReports = [];
   for (let r = 1; r <= Math.max(ROUNDS, START_ROUND); r++) {
-    const fp = path.join(root, 'agent_loop_round' + r + '_report.json');
-    if (fs.existsSync(fp)) allReports.push(readJSON('agent_loop_round' + r + '_report.json'));
+    const fp = path.join(root, 'Agent工作区/Agent-报告/agent_loop_round' + r + '_report.json');
+    if (fs.existsSync(fp)) allReports.push(readJSON('Agent工作区/Agent-报告/agent_loop_round' + r + '_report.json'));
   }
   const finalReport = { rounds: allReports, generatedAt: new Date().toISOString() };
-  writeJSON('agent_loop_report.json', finalReport);
+  writeJSON('Agent工作区/Agent-报告/agent_loop_report.json', finalReport);
   console.log('\nAgent Loop 最终报告:');
   console.log(JSON.stringify(finalReport, null, 2));
 })().catch(e => {

@@ -2,9 +2,9 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { readJSON } = require('./scripts/rag-utils');
-const KB = readJSON('data/kb.json');
-const FAQ = readJSON('data/faq_unified.json');
+const { readJSON } = require('../scripts/rag-utils');
+const KB = readJSON(path.join(__dirname, '..', 'data', 'kb.json'));
+const FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
 const SUBMAP = {'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
 const norm = s => String(s||'').toLowerCase().replace(/[₀-₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');
 
@@ -32,7 +32,7 @@ function bm25MatchKB(q) {
 }
 
 // Test fills
-const QS = readJSON('test_questions_round3.json');
+const QS = readJSON(path.join(__dirname, '..', '试题迭代记录/round3/test_questions_round3.json'));
 const fills = QS.questions.filter(q=>q.type==='fill').slice(0,5);
 for (const q of fills) {
   const cleanQ = q.question.replace(/______/g, '');

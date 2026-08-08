@@ -10,7 +10,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const FAQ_PATH = path.join(__dirname, 'data', 'faq_unified.json');
+const FAQ_PATH = path.join(__dirname, '..', 'data', 'faq_unified.json');
 const faq = JSON.parse(fs.readFileSync(FAQ_PATH, 'utf8'));
 
 console.log('原始FAQ条目数:', faq.length);

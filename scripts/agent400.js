@@ -79,7 +79,7 @@ function bestFAQContext(question) {
 }
 
 async function generateQuestions() {
-  const file = 'agent_b_400_questions.json';
+  const file = 'Agent工作区/Agent-B-问题生成/agent_b_400_questions.json';
   if (fs.existsSync(path.join(root, file))) {
     const q = readJSON(file);
     console.log('questions resume', q.length);
@@ -128,7 +128,7 @@ async function generateQuestions() {
 }
 
 async function validateQuestions(questions) {
-  const file = 'agent_d_400_validation.json';
+  const file = 'Agent工作区/Agent-D-验证/agent_d_400_validation.json';
   if (fs.existsSync(path.join(root, file))) {
     const v = readJSON(file);
     console.log('validation resume', v.length);
@@ -160,7 +160,7 @@ async function validateQuestions(questions) {
 }
 
 async function generateAnswers(questions) {
-  const file = 'agent_c_400_answers.json';
+  const file = 'Agent工作区/Agent-C-答案评分/agent_c_400_answers.json';
   if (fs.existsSync(path.join(root, file))) {
     const a = readJSON(file);
     console.log('answers resume', a.length);
@@ -218,7 +218,7 @@ async function generateAnswers(questions) {
 }
 
 async function scoreAnswers(questions, answers) {
-  const file = 'agent_c_400_scores.json';
+  const file = 'Agent工作区/Agent-C-答案评分/agent_c_400_scores.json';
   if (fs.existsSync(path.join(root, file))) {
     const s = readJSON(file);
     console.log('scores resume', s.length);
@@ -297,7 +297,7 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + Number(b), 0
     avgSafety: avg(scores.map(s => Number(s.safety))),
     generatedAt: new Date().toISOString()
   };
-  writeJSON('agent_400_report.json', report);
+  writeJSON('Agent工作区/Agent-报告/agent_400_report.json', report);
   console.log(JSON.stringify(report, null, 2));
 })().catch(e => {
   console.error(e);

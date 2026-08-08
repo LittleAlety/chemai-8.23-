@@ -3,8 +3,8 @@
 import json
 import re
 
-FAQ_PATH = r'C:\Users\Little Alety\Desktop\Claude Code\v6\data\faq_unified.json'
-OUT_PATH = r'C:\Users\Little Alety\Desktop\Claude Code\v6\data\faq_unified_fixed.json'
+FAQ_PATH = r'..\data\faq_unified.json'
+OUT_PATH = r'..\data\faq_unified_fixed.json'
 
 with open(FAQ_PATH, 'r', encoding='utf-8-sig') as f:
     content = f.read()

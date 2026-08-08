@@ -9,7 +9,7 @@ const writeJSON = (file, data) => fs.writeFileSync(path.join(root, file), JSON.s
 
 const FAQ = readJSON('data/faq_unified.json');
 const MANUAL = readJSON('data/manual.json');
-const QUESTIONS = readJSON('agent_b_questions_r2.json');
+const QUESTIONS = readJSON('Agent工作区/Agent-B-问题生成/agent_b_questions_r2.json');
 const API_KEY = process.env.DEEPSEEK_KEY;
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
@@ -104,7 +104,7 @@ async function improveAnswers(answers, scores) {
     }
     if ((i + 1) % 10 === 0) console.log('improved', improved);
   }
-  writeJSON('agent_opt_answers_improved.json', answers);
+  writeJSON('Agent工作区/Agent-优化/agent_opt_answers_improved.json', answers);
   return answers;
 }
 
@@ -167,8 +167,8 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
 
 (async () => {
   if (!API_KEY) throw new Error('DEEPSEEK_KEY missing');
-  const answers = readJSON('agent_opt_answers_final.json');
-  const scores = readJSON('agent_opt_scores_final.json');
+  const answers = readJSON('Agent工作区/Agent-优化/agent_opt_answers_final.json');
+  const scores = readJSON('Agent工作区/Agent-优化/agent_opt_scores_final.json');
   await improveAnswers(answers, scores);
   const improvedScores = await scoreAll(QUESTIONS, answers);
   const report = {
@@ -181,8 +181,8 @@ const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.
     avgSafety: avg(improvedScores.filter(Boolean).map(s => Number(s.safety))),
     generatedAt: new Date().toISOString()
   };
-  writeJSON('agent_opt_scores_improved.json', improvedScores.filter(Boolean));
-  writeJSON('agent_opt_report_improved.json', report);
+  writeJSON('Agent工作区/Agent-优化/agent_opt_scores_improved.json', improvedScores.filter(Boolean));
+  writeJSON('Agent工作区/Agent-报告/agent_opt_report_improved.json', report);
   console.log(JSON.stringify(report, null, 2));
 })().catch(e => {
   console.error(e);

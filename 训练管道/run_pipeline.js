@@ -21,7 +21,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const BASE = __dirname;
+const BASE = path.join(__dirname, '..');
 const API_KEY = process.env.DEEPSEEK_KEY || '';
 if (!API_KEY) {
   console.error('缺少 DEEPSEEK_KEY 环境变量，请先设置后运行');
@@ -779,7 +779,7 @@ function syncFAQtoHTML() {
 
 // ===== 总集报告更新 (#25: 仅保存摘要，完整数据写独立文件) =====
 function updateMasterReport(runData) {
-  const MASTER_PATH = path.join(BASE, 'reports_master.json');
+  const MASTER_PATH = path.join(BASE, 'Agent工作区/Agent-报告/reports_master.json');
   let master;
   if (fs.existsSync(MASTER_PATH)) {
     try { master = readJSON(MASTER_PATH); } catch (e) { master = { version: 'unified', runs: [] }; }

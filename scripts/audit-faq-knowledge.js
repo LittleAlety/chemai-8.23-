@@ -126,6 +126,6 @@ console.log('前 40 条:', report.missingDetail.slice(0, 40).join(' | '));
 console.log('\n短答案数量:', report.shortAnswers.length);
 console.log(report.shortAnswers.slice(0, 40).map(x => x.title + '(' + x.len + ')').join(' | '));
 
-const outPath = path.join(root, 'knowledge_audit_report.json');
+const outPath = path.join(root, 'Agent工作区/Agent-报告/knowledge_audit_report.json');
 fs.writeFileSync(outPath, JSON.stringify({ summary, report }, null, 2), 'utf8');
 console.log('\n已写入:', outPath);

@@ -1724,19 +1724,19 @@ function qaSubmit(){
   qaInput.value='';qaInput.style.height='auto';
   handleQA(q).catch(err=>{
     qaBusy=false;qaSend.disabled=false;
-    addMsg(qaChat,'ai','<p style="color:#f87171">处理出错：'+esc(err&&err.message||err)+'</p>',true);
+    addMsg(qaChat,'ai','<p style=”color:#f87171”>处理出错：'+esc(err&&err.message||err)+'</p>',true);
   });
 }
 qaSend.addEventListener('click',qaSubmit);
-qaInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
-qaInput.addEventListener('input',()=>{qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
-$('#qaClear').addEventListener('click',()=>{
+qaInput.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
+(function(){qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
+$('#qaClear').addEventListener('click',function(){
   lsDel(QA_KEY);qaChat.innerHTML='';renderQAHistory();
 });
 $('#qaExport').addEventListener('click', exportChatHistory);
-/* “知识延伸”中的相关 FAQ chips：点击直接提问 */
-qaChat.addEventListener('click',e=>{
-  const c=e.target.closest('.faq-chip');
+/* “knowledge extension” FAQ chip click -> direct ask */
+qaChat.addEventListener('click',function(e){
+  var c=e.target.closest('.faq-chip');
   if(c&&!qaBusy){qaInput.value=c.dataset.q||'';qaSubmit();}
 });
 const CHIPS=['本实验的原理是什么？三步反应方程式','为什么要用 H₂O₂ 作氧化剂？','产率如何计算？以哪种试剂为基准？','抽滤操作要注意什么？','三草酸合铁酸钾为什么要避光保存？','蓝晒的原理是什么？'];

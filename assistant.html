@@ -1474,34 +1474,35 @@ function buildAnswerHTML(q,ctx){
 async function handleQA(q){
   addMsg(qaChat,'user',esc(q),true);
   qaBusy=true;qaSend.disabled=true;
-  const bub=addMsg(qaChat,'ai',pipelineHTML(),false);
+  var bub=addMsg(qaChat,'ai',pipelineHTML(),false);
   // 步骤1：检索知识清单
   await animatePipe(bub,1);
-  const {terms,results}=searchCorpus(q,6);
+  var searchResult=searchCorpus(q,6);
+  var terms=searchResult.terms, results=searchResult.results;
   // 步骤2：匹配文献
   await animatePipe(bub,2);
   // 领域相关性判定：与本实验/化学无关的问题直接进入网络回退
-  const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作/;
-  const GENERIC_RE=/原理|目的|计算|思考题|结论|步骤/;
-  const domain=DOMAIN_RE.test(q)||detectChems(q).length>0||detectOps(q).length>0||(q.length<=8&&GENERIC_RE.test(q));
-  const hits=domain?results.filter(r=>r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content)):[];
-  const faq=domain?matchFAQ(q):null;
-  const chems=detectChems(q),ops=detectOps(q);
+  var DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作/;
+  var GENERIC_RE=/原理|目的|计算|思考题|结论|步骤/;
+  var domain=DOMAIN_RE.test(q)||detectChems(q).length>0||detectOps(q).length>0||(q.length<=8&&GENERIC_RE.test(q));
+  var hits=domain?results.filter(function(r){return r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content);}):[];
+  var faq=domain?matchFAQ(q):null;
+  var chems=detectChems(q),ops=detectOps(q);
   // 步骤3：生成回答
   await animatePipe(bub,3);
-  const meta=bub.querySelector('.pipe-meta');
-  let html, usedLLM=false;
+  var meta=bub.querySelector('.pipe-meta');
+  var html='', usedLLM=false;
 
   /* v5: 尝试 LLM AI 回答 */
   if(LLM.enabled && LLM.apiKey){
     try{
-      const ctx=buildLLMContext(q);
-      const llmAnswer=await callLLM(q, ctx);
+      var ctx=buildLLMContext(q);
+      var llmAnswer=await callLLM(q, ctx);
       if(llmAnswer){
         html='<div class="ans-sec"><p>'+esc(llmAnswer).replace(/\n/g,'<br>')+'</p></div>';
         usedLLM=true;
       }
-    }catch(e){ console.warn('LLM failed, using local:', e.message); }
+    }, function(e){ console.warn('LLM failed, using local:', e.message); }
   }
 
   if(!usedLLM){

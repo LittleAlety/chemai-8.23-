@@ -996,46 +996,47 @@ function selfCheckHTML(result){
 /* ================= 语料库 ================= */
 const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
 async function loadCorpus(){
-  let base=null;
-  // 最多3次重试，每次间隔1.5s
-  for(let attempt=1;attempt<=3;attempt++){
+  // 先立即更新状态栏为 "加载中"
+  var st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
+  if(st){ st.className='corpus-status'; }
+
+  var base=null;
+  // 最多2次重试，每次间隔1.0s
+  for(var attempt=1;attempt<=2;attempt++){
     try{
-      const res=await fetch('data/corpus.json',{cache:'default'});
+      var res=await fetch('data/corpus.json',{cache:'default'});
       if(!res.ok) throw new Error('HTTP '+res.status);
       base=await res.json();
       Corpus.loaded=true;
       break;
     }catch(e){
       Corpus.loaded=false;
-      if(attempt<3) await new Promise(r=>setTimeout(r,1500));
+      if(attempt<2) await new Promise(function(r){setTimeout(r,1000);});
     }
   }
-  const up=lsGet('chemai_corpus_uploaded',[]);
-  const list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
+  var up=lsGet('chemai_corpus_uploaded',[]);
+  var list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
   Corpus.subfields=(base&&base.subfields)||[];
-  if(Array.isArray(up)) up.forEach(u=>{ if(u&&u.title) list.push(u); });
+  if(Array.isArray(up)) up.forEach(function(u){ if(u&&u.title) list.push(u); });
   Corpus.entries=list;
-  // #14: 预计算归一化字段（避免每次搜索重复norm()）
-  list.forEach(e=>{
+  // 仅预计算轻量归一化字段
+  list.forEach(function(e){
     if(e.subfield) e.subfield=normCat(e.subfield);
     e._ntitle=norm(e.title||''); e._nsubfield=norm(e.subfield||'');
     e._nobjects=norm(e.objects||''); e._nmethods=norm(e.methods||'');
     e._nquestions=norm((e.questions||[]).join('|'));
     e._nabstract=norm(e.abstract||'');
-    // Note: _ncontent precomputed for searchCorpus scoring; _n* fields avoid repeated norm() calls
-    e._ncontent=norm(e.content||'');
   });
-  // 归一化 subfields 数组并去重
-  var normSubs=new Set();(base&&base.subfields||[]).forEach(s=>{normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
-  Corpus.total=list.length;  // #26: 使用实际entries.length而非手写total元数据
-  Corpus.uploaded=Array.isArray(up)?up.filter(u=>u&&u.title).length:0;
-  const st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
+  var normSubs=new Set();(base&&base.subfields||[]).forEach(function(s){normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
+  Corpus.total=list.length;
+  Corpus.uploaded=Array.isArray(up)?up.filter(function(u){return u&&u.title;}).length:0;
+  if(!st) st=$('#corpusStatus'); if(!tx) tx=$('#corpusStatusTxt');
   if(Corpus.loaded){
-    st.className='corpus-status ok';
-    tx.textContent='知识清单已就绪 · 内置 '+Corpus.total+' 篇文献'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+' · 半开放检索模式';
+    if(st) st.className='corpus-status ok';
+    if(tx) tx.textContent='知识清单已就绪 · 内置 '+Corpus.total+' 篇文献'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+' · 半开放检索模式';
   }else{
-    st.className='corpus-status bad';
-    tx.textContent='语料库加载失败（file:// 直开时浏览器会拦截 fetch，请用 http 服务访问）；已降级为内置知识库'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+'。';
+    if(st) st.className='corpus-status bad';
+    if(tx) tx.textContent='语料库加载失败（file:// 直开时浏览器会拦截 fetch，请用 http 服务访问）；已降级为内置知识库'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+'。';
   }
 }
 
@@ -1186,16 +1187,18 @@ function detectOps(q){const nq=norm(q);return OP_TERMS.filter(o=>nq.includes(nor
 function searchCorpus(q,topN){
   const {all,strong}=extractTerms(q);
   if(!all.length||!Corpus.entries.length) return {terms:all,results:[]};
-  const nq=norm(q);
-  const boosts=CONCEPT_BOOST.filter(b=>b.keys.some(k=>nq.includes(norm(k))));
-  const out=[];
-  for(const e of Corpus.entries){
-    // #14: 使用预计算的归一化字段
-    const f=e._ntitle?e:{title:norm(e.title),subfield:norm(e.subfield),objects:norm(e.objects),methods:norm(e.methods),
+  var nq=norm(q);
+  var boosts=CONCEPT_BOOST.filter(function(b){return b.keys.some(function(k){return nq.includes(norm(k));});});
+  var out=[];
+  for(var ei=0;ei<Corpus.entries.length;ei++){
+    var e=Corpus.entries[ei];
+    // 使用预计算的归一化字段
+    var f=e._ntitle?e:{title:norm(e.title),subfield:norm(e.subfield),objects:norm(e.objects),methods:norm(e.methods),
       questions:norm((e.questions||[]).join('|')),content:norm(e.content||''),abstract:norm(e.abstract||'')};
-    let s=0,sh=false;const hit=new Set();
-    for(const t of all){
-      let w=0;
+    var s=0,sh=false;var hit=new Set();
+    for(var ti=0;ti<all.length;ti++){
+      var t=all[ti];
+      var w=0;
       if((f._nquestions||f.questions).includes(t))w=Math.max(w,10);
       if((f._ntitle||f.title).includes(t))w=Math.max(w,6);
       if((f._ncontent||f.content||'').includes(t))w=Math.max(w,6);
@@ -1204,10 +1207,10 @@ function searchCorpus(q,topN){
       if((f._nsubfield||f.subfield).includes(t))w=Math.max(w,3);
       if(w>0){s+=w;hit.add(t);if(strong.has(t))sh=true;}
     }
-    for(const b of boosts){ if((f._nsubfield||f.subfield)===norm(b.sub)){ s+=b.bonus; sh=true; hit.add('领域:'+b.sub);} }
-    if(s>0) out.push({e,score:s,hit:Array.from(hit),strongHit:sh});
+    for(var bi=0;bi<boosts.length;bi++){var b=boosts[bi]; if((f._nsubfield||f.subfield)===norm(b.sub)){ s+=b.bonus; sh=true; hit.add('领域:'+b.sub);} }
+    if(s>0) out.push({e:e,score:s,hit:Array.from(hit),strongHit:sh});
   }
-  out.sort((a,b)=>b.score-a.score);
+  out.sort(function(a,b){return b.score-a.score;});
   return {terms:all,results:out.slice(0,topN||6)};
 }
 const HIT_THRESHOLD=6;
@@ -2574,9 +2577,14 @@ window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,fa
   initFileUploadUI();
   llmInitUI();
   renderQAHistory();
-  await loadCorpus();  // 语料库加载→更新状态栏
-  // FAQ 异步加载，不阻塞渲染
-  loadFAQ().catch(function(e){});
+  // 立即更新状态栏为加载中
+  (function(){
+    var st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
+    if(st) st.className='corpus-status';
+    if(tx) tx.textContent='正在加载知识清单…';
+  })();
+  loadCorpus();  // 不await，让它在后台加载（状态栏会通过回调更新）
+  loadFAQ().catch(function(e){});  // 异步加载
   var mode='qa';
   try { mode = (new URLSearchParams(location.search)).get('mode') === 'assess' ? 'assess' : 'qa'; } catch(e) {}
   switchTab(mode, false);

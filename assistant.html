@@ -1793,16 +1793,16 @@ function switchTab(mode,push){
     try{history.replaceState(null,'','assistant.html?mode='+(qa?'qa':'assess'));}catch(e){}
   }
 }
-$$('.tab').forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.mode)));
-$('#navToggle').addEventListener('click',()=>$('#topNav').classList.toggle('open'));
+$$('.tab').forEach(t=>t.addEventListener('click',function(){switchTab(t.dataset.mode);}));
+$('#navToggle').addEventListener('click',function(){$('#topNav').classList.toggle('open');});
 /* 调试/外部联动句柄 */
-window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(k=>k.explain)};
+window.ChemAIQA={searchCorpus:searchCorpus,extractTerms:extractTerms,matchFAQ:matchFAQ,relatedFAQs:relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(function(k){return k.explain;})};
 
-(async function init(){
+(function init(){
   llmInitUI();
   renderQAHistory();
-  await loadCorpus();
-  let mode='qa';
+  loadCorpus();
+  var mode='qa';
   try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
   switchTab(mode,false);
 })();

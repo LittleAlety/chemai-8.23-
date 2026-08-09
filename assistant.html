@@ -59,6 +59,13 @@ a:hover{color:var(--em)}
 .page-head{margin-bottom:20px;animation:fadeUp .5s ease both}
 .page-head h1{font-size:26px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
 .page-head .sub{color:var(--t2);font-size:13.5px;margin-top:4px}
+.stat-cards{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:120px;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;transition:.2s;box-shadow:var(--shadow)}
+.stat-card:hover{border-color:rgba(16,185,129,.3);transform:translateY(-1px)}
+.stat-icon{font-size:28px;flex-shrink:0}
+.stat-info{display:flex;flex-direction:column}
+.stat-num{font-size:22px;font-weight:700;color:var(--t1);line-height:1.2}
+.stat-label{font-size:11px;color:var(--t3)}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start}
 @media (max-width:1080px){.grid{grid-template-columns:1fr}}
 
@@ -281,6 +288,13 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   <div class="page-head">
     <h1>⚗️ AI 实验助手</h1>
     <p class="sub">三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验 · 智能体集群问答 + 多轮自适应测评</p>
+  </div>
+
+  <div class="stat-cards">
+    <div class="stat-card"><span class="stat-icon">📚</span><div class="stat-info"><span class="stat-num" id="statCorpus">—</span><span class="stat-label">知识清单文献</span></div></div>
+    <div class="stat-card"><span class="stat-icon">🧠</span><div class="stat-info"><span class="stat-num" id="statFAQ">—</span><span class="stat-label">内置问答条目</span></div></div>
+    <div class="stat-card"><span class="stat-icon">🔗</span><div class="stat-info"><span class="stat-num">24</span><span class="stat-label">知识图谱类比规则</span></div></div>
+    <div class="stat-card"><span class="stat-icon">🎯</span><div class="stat-info"><span class="stat-num">10</span><span class="stat-label">掌握度测评知识点</span></div></div>
   </div>
 
   <div class="grid">
@@ -565,9 +579,12 @@ async function loadCorpus(){
   if(Corpus.loaded){
     st.className='corpus-status ok';
     tx.textContent='知识清单已就绪 · 内置 '+Corpus.total+' 篇文献'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+' · 半开放检索模式';
+    // 更新顶部统计卡片
+    var sc=$('#statCorpus'); if(sc) sc.textContent=Corpus.total;
   }else{
     st.className='corpus-status bad';
     tx.textContent='语料库加载失败（file:// 直开时浏览器会拦截 fetch，请用 http 服务访问）；已降级为内置知识库'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+'。';
+    var sc2=$('#statCorpus'); if(sc2) sc2.textContent='离线';
   }
 }
 
@@ -2565,6 +2582,10 @@ window.ChemAIQA={searchCorpus:searchCorpus,extractTerms:extractTerms,matchFAQ:ma
 llmInitUI();
 loadCorpus();
 renderQAHistory();
+// 更新顶部统计卡片的 FAQ 数量
+(function(){
+  var sf=$('#statFAQ'); if(sf) sf.textContent=FAQ.length;
+})();
 var mode='qa';
 try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
 switchTab(mode,false);

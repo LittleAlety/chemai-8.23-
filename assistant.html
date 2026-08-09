@@ -4,12 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<link rel="preconnect" href="https://api.deepseek.com">
-<link rel="preload" href="data/faq_unified.json" as="fetch" crossorigin="anonymous">
-<link rel="preload" href="data/corpus.json" as="fetch" crossorigin="anonymous">
-<script src="assets/vendor/jszip.min.js"><\/script>
-<script src="assets/vendor/pdf.min.js"><\/script>
-<script>if(window.pdfjsLib)window.pdfjsLib.GlobalWorkerOptions.workerSrc='assets/vendor/pdf.worker.min.js';<\/script>
 <title>AI 助手 · ChemAI 三草酸合铁酸钾制备实验</title>
 <style>
 :root{
@@ -264,10 +258,7 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
       <section id="panel-qa" class="panel">
         <div class="panel-bar">
           <div class="corpus-status" id="corpusStatus"><span class="dot"></span><span id="corpusStatusTxt">正在加载知识清单…</span></div>
-          <button class="btn ghost sm" id="qaUploadBtn" title="上传 Word/PDF/PPTX 文献，浏览器本地解析后入库搜索">📎 上传文献</button>
-          <input type="file" id="qaFileInput" accept=".pdf,.pptx,.docx" multiple style="display:none"/>
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
-          <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
@@ -369,8 +360,6 @@ function lsGet(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v)
 function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true;}catch(e){return false;}}
 function lsDel(k){try{localStorage.removeItem(k);}catch(e){}}
 
-function stripHTML(s){return String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");}
-
 /* ================= DeepSeek LLM 配置 ================= */
 const LLM={
   enabled: lsGet('chemai_llm_enabled', true),
@@ -401,10 +390,9 @@ function buildLLMContext(q){
   const parts=[];
   const faq=matchFAQ(q);
   if(faq){ parts.push('【FAQ: '+faq.title+'】\n'+stripHTML(faq.answer)+(faq.detail?'\n'+stripHTML(faq.detail):'')); }
-  var searchResult=searchCorpus(q, 3);
-  if(searchResult && searchResult.results && searchResult.results.length){
-    for(var ri=0;ri<Math.min(searchResult.results.length,2);ri++){
-      var r=searchResult.results[ri];
+  const {results}=searchCorpus(q, 3);
+  if(results && results.length){
+    for(const r of results.slice(0,2)){
       parts.push('【文献: '+r.e.title+'】\n'+(r.e.abstract||r.e.objects||''));
     }
   }
@@ -415,23 +403,25 @@ function buildLLMContext(q){
 /* ================= 语料库 ================= */
 const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
 async function loadCorpus(){
-  var base=null;
+  let base=null;
   try{
-    var res=await fetch('data/corpus.json',{cache:'default'});
+    const res=await fetch('data/corpus.json',{cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     base=await res.json();
     Corpus.loaded=true;
   }catch(e){ Corpus.loaded=false; }
-  var up=lsGet('chemai_corpus_uploaded',[]);
-  var list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
+  const up=lsGet('chemai_corpus_uploaded',[]);
+  const list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
   Corpus.subfields=(base&&base.subfields)||[];
-  if(Array.isArray(up)) up.forEach(function(u){ if(u&&u.title) list.push(u); });
+  if(Array.isArray(up)) up.forEach(u=>{ if(u&&u.title) list.push(u); });
   Corpus.entries=list;
-  list.forEach(function(e){if(e.subfield)e.subfield=normCat(e.subfield);});
-  var normSubs=new Set();(base&&base.subfields||[]).forEach(function(s){normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
+  // 归一化所有 entry 的 subfield 到 canonical 名称
+  list.forEach(e=>{if(e.subfield)e.subfield=normCat(e.subfield);});
+  // 归一化 subfields 数组并去重
+  var normSubs=new Set();(base&&base.subfields||[]).forEach(s=>{normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
   Corpus.total=base&&base.total?base.total:(base?list.length:0);
-  Corpus.uploaded=Array.isArray(up)?up.filter(function(u){return u&&u.title;}).length:0;
-  var st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
+  Corpus.uploaded=Array.isArray(up)?up.filter(u=>u&&u.title).length:0;
+  const st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
   if(Corpus.loaded){
     st.className='corpus-status ok';
     tx.textContent='知识清单已就绪 · 内置 '+Corpus.total+' 篇文献'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+' · 半开放检索模式';
@@ -439,107 +429,6 @@ async function loadCorpus(){
     st.className='corpus-status bad';
     tx.textContent='语料库加载失败（file:// 直开时浏览器会拦截 fetch，请用 http 服务访问）；已降级为内置知识库'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+'。';
   }
-}
-
-/* ================= 文件解析（Word/PDF/PPTX → 入库检索） ================= */
-function xmlToText(xml){
-  return xml
-    .replace(/<w:tab\b[^>]*\/?>/g,'\t').replace(/<w:br\b[^>]*\/?>/g,'\n')
-    .replace(/<\/w:p>/g,'\n').replace(/<\/a:p>/g,'\n')
-    .replace(/<[^>]+>/g,'')
-    .replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,"'").replace(/&amp;/g,'&')
-    .replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
-}
-async function parseDocx(buf){
-  if(!window.JSZip) throw new Error('JSZip 未加载');
-  var zip=await JSZip.loadAsync(buf);
-  var f=zip.file('word/document.xml');
-  if(!f) throw new Error('无效的 DOCX：缺少 word/document.xml');
-  return xmlToText(await f.async('string'));
-}
-async function parsePptx(buf){
-  if(!window.JSZip) throw new Error('JSZip 未加载');
-  var zip=await JSZip.loadAsync(buf);
-  var names=Object.keys(zip.files).filter(function(n){return (/^ppt\/slides\/slide\d+\.xml$/).test(n);})
-    .sort(function(a,b){return parseInt(a.match(/\d+/)[0])-parseInt(b.match(/\d+/)[0]);});
-  if(!names.length) throw new Error('无效的 PPTX：未找到幻灯片内容');
-  var parts=[];
-  for(var i=0;i<names.length;i++){parts.push(xmlToText(await zip.file(names[i]).async('string')));}
-  return parts.join('\n\n');
-}
-async function parsePdf(buf){
-  if(!window.pdfjsLib) throw new Error('pdf.js 未加载');
-  var pdf=await pdfjsLib.getDocument({data:buf}).promise;
-  var parts=[];
-  for(var p=1;p<=pdf.numPages;p++){
-    var page=await pdf.getPage(p);
-    var tc=await page.getTextContent();
-    parts.push(tc.items.map(function(i2){return i2.str;}).join(' '));
-  }
-  return parts.join('\n');
-}
-function inferSubfieldUpload(text){
-  var t=text.toLowerCase();
-  if(/蓝晒|cyanotype/.test(t)) return '蓝晒工艺';
-  if(/光化学|光致|感光|photochem/.test(t)) return '光化学应用';
-  if(/合成|制备|synthes|prepar/.test(t)) return '合成制备';
-  if(/磁化率|磁性|magnet/.test(t)) return '磁性研究';
-  if(/滴定|分析测定|titrat/.test(t)) return '分析测定';
-  if(/教学|课程|pedagog|teaching/.test(t)) return '实验教学';
-  return '综合研究';
-}
-function nextUploadId(){
-  var uploads=lsGet('chemai_corpus_uploaded',[]);
-  return uploads.reduce(function(m,e){return Math.max(m,e.id||1000);},999)+1;
-}
-async function handleFileUpload(fileList){
-  var files=[].slice.call(fileList).filter(function(f){return /\.(pdf|docx|pptx)$/i.test(f.name);});
-  if(!files.length){ alert('仅支持 .pdf / .pptx / .docx 文件'); return; }
-  var newly=[];
-  for(var i=0;i<files.length;i++){
-    var f=files[i];
-    var statusEl=$('#corpusStatusTxt');
-    if(statusEl) statusEl.textContent='正在解析: '+f.name+'…';
-    try{
-      var buf=await f.arrayBuffer();
-      var text='';
-      if(/\.docx$/i.test(f.name)) text=await parseDocx(buf);
-      else if(/\.pptx$/i.test(f.name)) text=await parsePptx(buf);
-      else text=await parsePdf(buf);
-      if(!text||!text.trim()) throw new Error('未能提取到文本内容');
-      var title=f.name.replace(/\.[^.]+$/,'');
-      var probe=(title+' '+text).slice(0,20000);
-      var entry={
-        id:nextUploadId(), title:title,
-        lang:/[一-龥]/.test(text.slice(0,600))?'中文':'英文',
-        subfield:inferSubfieldUpload(probe),
-        doctype:'实验研究', objects:'三草酸合铁酸钾',
-        methods:'文献解析', depth:'实验研究级别', difficulty:'进阶级',
-        path:f.name, questions:[title+'的主要研究内容是什么？'],
-        content:text.slice(0,3000),
-        uploaded:true, fileSize:f.size, charCount:text.length,
-        time:new Date().toISOString()
-      };
-      newly.push(entry);
-    }catch(err){
-      alert('解析失败: '+f.name+' - '+(err&&err.message||err));
-    }
-  }
-  if(newly.length){
-    var up=lsGet('chemai_corpus_uploaded',[]);
-    newly.forEach(function(e){ up.push(e); });
-    lsSet('chemai_corpus_uploaded',up);
-    await loadCorpus();
-    if(qaChat&&!qaChat.querySelector('.msg')){
-      renderQAHistory();
-    }
-  }
-}
-function initFileUploadUI(){
-  var btn=$('#qaUploadBtn'), inp=$('#qaFileInput');
-  if(!btn||!inp) return;
-  btn.addEventListener('click',function(){ inp.click(); });
-  inp.addEventListener('change',function(){ if(inp.files.length){ handleFileUpload(inp.files).catch(function(e){ alert('上传出错: '+(e&&e.message||e)); }); inp.value=''; } });
 }
 
 /* ================= 检索：词典 / 实体识别 ================= */
@@ -1232,7 +1121,7 @@ const FAQ=[
  {keys:["趁热过滤","草酸亚铁","氧化","热水洗涤","纯度"],ents:["草酸亚铁","摩尔盐"],title:'趁热过滤的必要性',q:'从摩尔盐制备草酸亚铁时，为什么强调趁热过滤？',knode:'',subfield:'摩尔盐相关',answer:'草酸亚铁(FeC₂O₄·2H₂O)在制备时通常将摩尔盐与草酸溶液加热至沸，生成黄色沉淀。趁热过滤是为了减少沉淀粒子表面吸附杂质，并且高温时溶液黏度低，过滤快，沉淀不易胶溶。同时，趁热操作能缩短亚铁盐与空气接触时间，避免Fe²⁺氧化为Fe³⁺生成黄褐色杂质。过滤后用热水洗涤沉淀，可洗去残留的草酸、硫酸根和铵离子，提高中间体纯度。',detail:'沉淀形成后若冷却，部分草酸亚铁可能水解或氧化，表面吸附增加，导致最终三草酸合铁(III)酸钾产率下降、颜色偏差。实验室通常使用布氏漏斗抽滤，快速、分离完全。'},
  {keys:["发现历史","配位化学","光化学","蓝晒史","维尔纳理论"],ents:["三草酸合铁(III)酸钾","蓝晒法"],title:'发现与发展简史',q:'三草酸合铁(III)酸钾的发现和历史背景是什么？',knode:'',subfield:'化学史',answer:'三草酸合铁(III)酸钾的合成历史可追溯到19世纪无机配位化学发展时期。最早关于草酸铁配合物的记载在1830年代，当时化学家尝试将草酸与铁盐作用得到各种结晶。明确结构的K₃[Fe(C₂O₄)₃]·3H₂O由19世纪末的配位化学先驱研究，用于验证维尔纳配位理论。20世纪初，其感光性被注意到并应用到铁盐印相法中，作为一种灵敏的光量计广泛用于���外线测量，在化学史上既是教学经典又是光化学早期模型。',detail:'约翰·赫歇尔在19世纪40年代实验蓝晒法时可能已使用过草酸铁。1900年代，化学家Luther和Michl等系统研究其光解动力学，开创了化学光量学。'},
  {keys:["蓝晒","草酸铁","感光剂","蓝图","工程复制"],ents:["三草酸合铁(III)酸钾","蓝图"],title:'感光剂演变的历史地位',q:'蓝晒工艺中为什么早期会采用三草酸合铁（III）酸盐？',knode:'',subfield:'化学史',answer:'早期蓝晒工艺主要使用柠檬酸铁铵，但后来发现草酸铁(III)配合物（如三草酸合铁(III)酸钾）感光更快，且涂布后暗反应较少，所得蓝色成像密度更高、层次更丰富。19世纪末至20世纪初，随着配位化学的发展，人们深入认识其光化学反应原理，草酸铁配合物逐渐在工程蓝图复制中替代部分传统感光剂，成为铁盐印相体系的重要组成，并为现代光化学研究提供了简单的教学模型。',detail:'赫歇尔1842年发明的蓝晒法推动了廉价图纸复制，草酸铁感光剂在其后数十年被改良应用，直至氨气熏显法被淘汰。'},
-];
+];
 /* FAQ 匹配/* FAQ 匹配：多关键词命中率 + 化学实体加权；单关键词命中但实体不匹配时不触发 */
 function matchFAQ(q){
   const nq=norm(q);let best=null,bestScore=0;
@@ -1335,15 +1224,15 @@ function docCardHTML(r){
     +'</div>';
 }
 function citationHTML(r){
-  var e=r.e;var s='<li><b>[#'+esc(e.id)+']</b> '+esc(e.title)+' <span class="muted">（'+esc(e.subfield||'')+(e.methods?(' · '+esc(e.methods)):'')+'）</span>';
+  const e=r.e;let s='<li><b>[#'+esc(e.id)+']</b> '+esc(e.title)+' <span class="muted">（'+esc(e.subfield||'')+(e.methods?(' · '+esc(e.methods)):'')+'）</span>';
   if(e.questions&&e.questions.length) s+='<br><span class="muted">可回答：'+esc(e.questions.slice(0,3).join('；'))+'</span>';
   if(e.content){
-    var cn=norm(e.content);var pos=-1,term='';
-    for(var ti=0;ti<(r.hit||[]).length;ti++){var t=r.hit[ti];var p=cn.indexOf(t);if(p>=0&&(pos<0||p<pos)){pos=p;term=t;}}
-    var raw=e.content;var snip=raw.slice(0,300);
+    const cn=norm(e.content);let pos=-1,term='';
+    for(const t of (r.hit||[])){const p=cn.indexOf(t);if(p>=0&&(pos<0||p<pos)){pos=p;term=t;}}
+    const raw=e.content;let snip=raw.slice(0,300);
     if(pos>=0){
-      var ratio=raw.length/Math.max(1,cn.length);
-      var st=Math.max(0,Math.floor(pos*ratio)-50),ed=Math.min(raw.length,st+300);
+      const ratio=raw.length/Math.max(1,cn.length);
+      const st=Math.max(0,Math.floor(pos*ratio)-50),ed=Math.min(raw.length,st+300);
       snip=(st>0?'…':'')+raw.slice(st,ed)+(ed<raw.length?'…':'');
     }
     s+='<br><span style="color:#fbbf24;font-size:12px">📎 文献原文摘录（≤300字）：“'+esc(snip)+'”</span>';
@@ -1351,13 +1240,12 @@ function citationHTML(r){
   return s+'</li>';
 }
 function webFallbackHTML(q){
-  var links=[
-    ['百度','https://www.baidu.com/s?wd='+enc(q)],
+  const links=[
     ['Bing','https://www.bing.com/search?q='+enc(q)],
     ['Google','https://www.google.com/search?q='+enc(q)],
     ['中国知网 CNKI','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(q)],
-    ['B站搜索','https://search.bilibili.com/all?keyword='+enc(q)]
-  ].map(function(l){return '<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' <small>↗</small></a>';}).join('');
+    ['ScienceDirect','https://www.sciencedirect.com/search?qs='+enc(q)]
+  ].map(l=>'<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' <small>↗</small></a>').join('');
   return '<div class="link-card warn"><h4>📡 知识清单未命中 · 已接入网络浏览</h4>'
     +'<div class="muted" style="margin-bottom:7px">本地 '+(Corpus.total||276)+' 篇文献知识清单中未找到与该问题足够相关的条目，已为你生成即点即用的网络检索链接（问题已自动填入）：</div>'+links+'</div>';
 }
@@ -1892,9 +1780,8 @@ window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,fa
 (async function init(){
   llmInitUI();
   renderQAHistory();
-  initFileUploadUI();
   await loadCorpus();
-  var mode='qa';
+  let mode='qa';
   try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
   switchTab(mode,false);
 })();

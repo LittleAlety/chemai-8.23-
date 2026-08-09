@@ -369,6 +369,8 @@ function lsGet(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v)
 function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true;}catch(e){return false;}}
 function lsDel(k){try{localStorage.removeItem(k);}catch(e){}}
 
+function stripHTML(s){return String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");}
+
 /* ================= DeepSeek LLM 配置 ================= */
 const LLM={
   enabled: lsGet('chemai_llm_enabled', true),

@@ -1506,6 +1506,186 @@
                                        "\\Phi(254\\ nm) \\approx 1.2",
                                        "\\Phi(400\\ nm) \\approx 0.9"
                                    ]
+                  },
+                  {
+                      "id":  "precipitation-mechanism",
+                      "name":  "沉淀形成机理",
+                      "tags":  [
+                                   "晶核生成",
+                                   "Ostwald熟化",
+                                   "粒径控制"
+                               ],
+                      "cat":  "合成制备",
+                      "level":  3,
+                      "desc":  "FeC2O4·2H2O黄色沉淀的形成分为晶核生成和Ostwald熟化两阶段，微沸4分钟使粒径从0.1-1μm增长至5-20μm，有利倾滗分离。"
+                  },
+                  {
+                      "id":  "h2o2-decomposition",
+                      "name":  "H2O2分解抑制",
+                      "tags":  [
+                                   "催化分解",
+                                   "Fe3+催化",
+                                   "温度控制"
+                               ],
+                      "cat":  "反应原理",
+                      "level":  3,
+                      "desc":  "H2O2在60C以上及Fe3+催化下加速分解，40C水浴+缓慢滴加+搅拌可抑制分解，保证氧化效率。"
+                  },
+                  {
+                      "id":  "oxalate-protonation",
+                      "name":  "草酸根质子化",
+                      "tags":  [
+                                   "pH分布系数",
+                                   "pKa1=1.25",
+                                   "pKa2=4.27"
+                               ],
+                      "cat":  "配位化学理论",
+                      "level":  3,
+                      "desc":  "草酸是二元中强酸：pH\u003c2时以H2C2O4为主（无配位能力），pH3-6时HC2O4-和C2O4 2-共存，pH\u003e6时C2O4 2-占优——配位阶段维持pH4-5可兼顾溶解与配位。"
+                  },
+                  {
+                      "id":  "ethanol-nucleation",
+                      "name":  "乙醇成核机理",
+                      "tags":  [
+                                   "过饱和度",
+                                   "成核速率",
+                                   "晶体生长"
+                               ],
+                      "cat":  "实验操作",
+                      "level":  3,
+                      "desc":  "乙醇降低溶剂介电常数，产物溶解度骤降形成高过饱和度，驱动爆发成核→悬棉线提供非均匀成核位点→暗处静置使晶体缓慢生长。"
+                  },
+                  {
+                      "id":  "ferrioxalate-ph",
+                      "name":  "草酸铁pH稳定性",
+                      "tags":  [
+                                   "pH3-6最佳",
+                                   "酸效应",
+                                   "碱水解"
+                               ],
+                      "cat":  "配位化学理论",
+                      "level":  3,
+                      "desc":  "[Fe(C2O4)3]3-在pH3-6最稳定：pH\u003c2时C2O4 2-质子化解离；pH\u003e7时Fe3+水解为Fe(OH)3沉淀。该pH窗口是合成、结晶、保存全程需维护的关键条件。"
+                  },
+                  {
+                      "id":  "cfse-calculation",
+                      "name":  "CFSE计算方法",
+                      "tags":  [
+                                   "t2g3eg2",
+                                   "-0.4Δ0",
+                                   "配对能P"
+                               ],
+                      "cat":  "配位化学理论",
+                      "level":  4,
+                      "desc":  "CFSE=Σ(电子数×轨道能量)。八面体场t2g=-0.4Δ0 eg=+0.6Δ0，高自旋d5 CFSE=0Δ0。只有当Δ0\u003eP时低自旋才有利——草酸根Δ0≈14,300cm-1\u003cP→高自旋。"
+                  },
+                  {
+                      "id":  "tanabe-sugano",
+                      "name":  "Tanabe-Sugano图",
+                      "tags":  [
+                                   "谱项",
+                                   "自由离子",
+                                   "d5体系"
+                               ],
+                      "cat":  "结构表征",
+                      "level":  4,
+                      "desc":  "Tanabe-Sugano图以E/B对Δ0/B作图，关联自由离子谱项到晶体场谱项。d5高自旋基态6A1g——由此可解析560nm处d-d跃迁的归属。"
+                  },
+                  {
+                      "id":  "pascal-constants",
+                      "name":  "Pascal抗磁校正",
+                      "tags":  [
+                                   "抗磁校正",
+                                   "原子增量",
+                                   "结构增量"
+                               ],
+                      "cat":  "磁性研究",
+                      "level":  4,
+                      "desc":  "实验磁化率需扣除抗磁贡献（Pascal常数法）：各原子/离子和结构单元有固定增量值。Fe3+ 约-13×10-6 c.g.s.，扣除后方可用于有效磁矩计算。"
+                  },
+                  {
+                      "id":  "magnetic-coupling",
+                      "name":  "磁耦合机制",
+                      "tags":  [
+                                   "铁磁",
+                                   "反铁磁",
+                                   "超交换"
+                               ],
+                      "cat":  "磁性研究",
+                      "level":  4,
+                      "desc":  "多核草酸配合物中，桥连C2O4 2-的O-C-C-O路径传导磁耦合——反铁磁(J\u003c0)或铁磁(J\u003e0)取决于M-O-M角度和d电子构型，是分子基磁体设计的核心原理。"
+                  },
+                  {
+                      "id":  "lmct-quantum-yield",
+                      "name":  "LMCT量子产率",
+                      "tags":  [
+                                   "Φ=0.8-1.2",
+                                   "化学光量计",
+                                   "254nm"
+                               ],
+                      "cat":  "光化学应用",
+                      "level":  4,
+                      "desc":  "Hatchard-Parker光量计：K3[Fe(C2O4)3]在254nm下Φ(Fe2+)≈1.25。副反应CO2-+Fe3+→Fe2++CO2使净量子产率\u003e1，精确且易于使用。"
+                  },
+                  {
+                      "id":  "filter-paper-selection",
+                      "name":  "滤纸选择与穿滤",
+                      "tags":  [
+                                   "定量滤纸",
+                                   "慢速/中速/快速",
+                                   "玻砂漏斗"
+                               ],
+                      "cat":  "实验操作",
+                      "level":  3,
+                      "desc":  "细晶产物用慢速定量滤纸或G3/G4玻砂漏斗防穿滤；大颗粒沉淀用中速滤纸加快过滤。滤纸直径略小于布氏漏斗内径，先用溶剂润湿贴紧。"
+                  },
+                  {
+                      "id":  "ki-starch-test",
+                      "name":  "KI-淀粉检验H2O2",
+                      "tags":  [
+                                   "氧化性检验",
+                                   "I-→I2",
+                                   "蓝色络合物"
+                               ],
+                      "cat":  "分析测定",
+                      "level":  3,
+                      "desc":  "用KI-淀粉试纸检验H2O2是否除尽：H2O2+2I-+2H+→I2+2H2O，I2与淀粉形成蓝色包合物。试纸不变蓝证明H2O2已除尽，可安全进入配位步骤。"
+                  },
+                  {
+                      "id":  "ferricyanide-test",
+                      "name":  "铁氰化钾检验Fe2+",
+                      "tags":  [
+                                   "滕氏蓝",
+                                   "Turnbull\u0027s blue",
+                                   "氧化终点"
+                               ],
+                      "cat":  "分析测定",
+                      "level":  3,
+                      "desc":  "K3[Fe(CN)6]+Fe2+→Fe3[Fe(CN)6]2↓（滕氏蓝）。取一滴反应液于点滴板+K3[Fe(CN)6]，无蓝色沉淀=Fe2+氧化完全；出现蓝色=需补加H2O2继续氧化。"
+                  },
+                  {
+                      "id":  "crystal-color-diagnosis",
+                      "name":  "晶体颜色诊断",
+                      "tags":  [
+                                   "翠绿→黄绿",
+                                   "翠绿→灰绿",
+                                   "翠绿→浅绿"
+                               ],
+                      "cat":  "光化学应用",
+                      "level":  3,
+                      "desc":  "晶体颜色变化诊断：变黄绿→光解(避光补救)；变灰绿→含光解产物+杂质(重结晶)；变浅绿→浓度低或草酸过量(浓缩重结晶)；表面发白→K2SO4共结晶(少量冷水快洗)。"
+                  },
+                  {
+                      "id":  "yield-calculation-example",
+                      "name":  "产率计算实例",
+                      "tags":  [
+                                   "5.0g莫尔盐",
+                                   "6.26g理论",
+                                   "50-75%正常"
+                               ],
+                      "cat":  "合成制备",
+                      "level":  3,
+                      "desc":  "实例：5.0g莫尔盐(M=392.14)→n=0.01275mol→理论产量=0.01275×491.25=6.26g。正常产率50-75%；若得3.5g→产率55.9%；\u003e95%异常→未恒重或含杂质。"
                   }
               ],
     "links":  [
@@ -2576,6 +2756,106 @@
                                         "color":  "#3b82f6",
                                         "width":  3
                                     }
+                  },
+                  {
+                      "label":  "沉淀理论",
+                      "target":  "precipitation",
+                      "source":  "precipitation-mechanism"
+                  },
+                  {
+                      "label":  "分解电位",
+                      "target":  "redox-potential",
+                      "source":  "h2o2-decomposition"
+                  },
+                  {
+                      "label":  "配体活性",
+                      "target":  "chelate",
+                      "source":  "oxalate-protonation"
+                  },
+                  {
+                      "label":  "溶剂化",
+                      "target":  "born-equation",
+                      "source":  "ethanol-nucleation"
+                  },
+                  {
+                      "label":  "pH依赖性",
+                      "target":  "stability-const",
+                      "source":  "ferrioxalate-ph"
+                  },
+                  {
+                      "label":  "量化计算",
+                      "target":  "crystal-field",
+                      "source":  "cfse-calculation"
+                  },
+                  {
+                      "label":  "谱项归属",
+                      "target":  "dd-transition",
+                      "source":  "tanabe-sugano"
+                  },
+                  {
+                      "label":  "抗磁校正",
+                      "target":  "magnetic-susceptibility",
+                      "source":  "pascal-constants"
+                  },
+                  {
+                      "label":  "桥连耦合",
+                      "target":  "chelate",
+                      "source":  "magnetic-coupling"
+                  },
+                  {
+                      "label":  "量子效率",
+                      "target":  "lmct",
+                      "source":  "lmct-quantum-yield"
+                  },
+                  {
+                      "label":  "过滤技术",
+                      "target":  "precipitation",
+                      "source":  "filter-paper-selection"
+                  },
+                  {
+                      "label":  "氧化性检验",
+                      "target":  "redox-titration",
+                      "source":  "ki-starch-test"
+                  },
+                  {
+                      "label":  "终点控制",
+                      "target":  "lab-safety",
+                      "source":  "ferricyanide-test"
+                  },
+                  {
+                      "label":  "色泽诊断",
+                      "target":  "troubleshooting",
+                      "source":  "crystal-color-diagnosis"
+                  },
+                  {
+                      "label":  "产率标杆",
+                      "target":  "yield-optimization",
+                      "source":  "yield-calculation-example"
+                  },
+                  {
+                      "label":  "粒径-过滤",
+                      "target":  "filter-paper-selection",
+                      "source":  "precipitation-mechanism"
+                  },
+                  {
+                      "label":  "温控耦合",
+                      "target":  "temperature-control",
+                      "source":  "h2o2-decomposition"
+                  },
+                  {
+                      "label":  "高自旋验证",
+                      "target":  "high-spin-d5",
+                      "source":  "cfse-calculation"
+                  },
+                  {
+                      "label":  "显色原理",
+                      "target":  "cyanotype",
+                      "source":  "ferricyanide-test"
+                  },
+                  {
+                      "label":  "分解验证",
+                      "target":  "h2o2-decomposition",
+                      "source":  "ki-starch-test"
                   }
               ]
 }

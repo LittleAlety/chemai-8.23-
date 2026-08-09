@@ -1522,7 +1522,7 @@ function qaSubmit(){
   const q=(qaInput.value||'').trim();
   if(!q||qaBusy) return;
   qaInput.value='';qaInput.style.height='auto';
-  handleQA(q).catch(err=>{
+  handleQA(q).catch(function(err){
     qaBusy=false;qaSend.disabled=false;
     addMsg(qaChat,'ai','<p style="color:#f87171">处理出错：'+esc(err&&err.message||err)+'</p>',true);
   });

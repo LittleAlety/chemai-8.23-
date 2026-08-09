@@ -1350,12 +1350,13 @@ function citationHTML(r){
   return s+'</li>';
 }
 function webFallbackHTML(q){
-  const links=[
+  var links=[
+    ['百度','https://www.baidu.com/s?wd='+enc(q)],
     ['Bing','https://www.bing.com/search?q='+enc(q)],
     ['Google','https://www.google.com/search?q='+enc(q)],
     ['中国知网 CNKI','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(q)],
-    ['ScienceDirect','https://www.sciencedirect.com/search?qs='+enc(q)]
-  ].map(l=>'<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' <small>↗</small></a>').join('');
+    ['B站搜索','https://search.bilibili.com/all?keyword='+enc(q)]
+  ].map(function(l){return '<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' <small>↗</small></a>';}).join('');
   return '<div class="link-card warn"><h4>📡 知识清单未命中 · 已接入网络浏览</h4>'
     +'<div class="muted" style="margin-bottom:7px">本地 '+(Corpus.total||276)+' 篇文献知识清单中未找到与该问题足够相关的条目，已为你生成即点即用的网络检索链接（问题已自动填入）：</div>'+links+'</div>';
 }

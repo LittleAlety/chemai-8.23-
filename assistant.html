@@ -1254,7 +1254,7 @@ function saveAIBubble(bub){
 function renderQAHistory(){
   const h=lsGet(QA_KEY,[]);
   if(!h.length){
-    addMsg(qaChat,'ai','<p>你好！我是本实验的 <b>AI 实验助手</b>（直接问答模式）。</p><p>你提问后，我会依次 <b>检索知识清单 → 匹配文献 → 生成回答</b>；若知识清单未命中，将自动接入网络浏览外链。涉及化学试剂时会附 MSDS 安全数据链接，涉及实验操作时会附相关视频。</p><p class="muted">试试下方示例问题，或直接输入。</p>',false);
+    addMsg(qaChat,'ai','<p>你好！我是本实验的 <b>AI 实验助手</b>（智能体集群模式）。</p><p>你提问后，我会依次运行 <b>多策略检索 → 类比推理引擎 → 置信度评分+混合答案生成 → 自我检查</b> 的 4 阶段集群流水线；若知识清单未命中，将通过类比桥接和网络浏览提供参考。涉及化学试剂时会附 MSDS 安全数据链接，涉及实验操作时会附相关视频。</p><p class="muted">试试下方示例问题，或直接输入。</p>',false);
     return;
   }
   h.forEach(m=>{addMsg(qaChat,m.role,m.role==='user'?esc(m.html):m.html,false);});
@@ -1262,9 +1262,10 @@ function renderQAHistory(){
 
 function pipelineHTML(){
   return '<div class="pipe">'
-    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>检索知识清单（'+(Corpus.total||276)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇上传语料'):'')+'）</div>'
-    +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>匹配文献（关键词打分 · 化学实体识别）</div>'
-    +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>生成回答</div>'
+    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>多策略检索'+(Corpus.total?'（'+(Corpus.total||276)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇'):'')+'）':'')+'</div>'
+    +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>类比推理引擎（跨体系模式识别）</div>'
+    +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>置信度评分 · 混合答案生成</div>'
+    +'<div class="pipe-step" data-s="4"><span class="pipe-dot"></span>自我检查（配位化学自洽验证）</div>'
     +'</div><div class="pipe-meta"></div>';
 }
 async function animatePipe(bub,stepCount){

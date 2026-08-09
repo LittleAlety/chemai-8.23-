@@ -2487,15 +2487,11 @@ $('#navToggle').addEventListener('click',()=>$('#topNav').classList.toggle('open
 window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(k=>k.explain)};
 
 (async function init(){
-  // 立即渲染欢迎语 + 加载资源，不等待任何异步操作
+  llmInitUI();
   renderQAHistory();
-  loadFAQ();  // 异步加载完整FAQ
-  loadCorpus();  // 异步加载语料库
-  llmInitUI();  // LLM UI（不需要等待Key解密）
-
-  // Key 解密放在最后，不阻塞页面渲染
-  llmLoadKey().catch(function(e){});
-
+  await loadCorpus();  // 语料库加载→更新状态栏
+  // FAQ 异步加载，不阻塞渲染
+  loadFAQ().catch(function(e){});
   var mode='qa';
   try { mode = (new URLSearchParams(location.search)).get('mode') === 'assess' ? 'assess' : 'qa'; } catch(e) {}
   switchTab(mode, false);

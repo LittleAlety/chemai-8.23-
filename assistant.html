@@ -1297,6 +1297,222 @@ function matchFAQ(q){
   }
   return best;
 }
+
+/* ================= 智能体集群流水线：检索 2 — 化学实体类比 ================= */
+function retrieval2_chemicalAnalogy(q){
+  var nq=norm(q);
+  var analogyHits=[];
+  for(var ri=0;ri<ANALOG_TABLE.length;ri++){
+    var row=ANALOG_TABLE[ri];
+    for(var ai=0;ai<row.analogs.length;ai++){
+      var a=row.analogs[ai];
+      if(nq.indexOf(norm(a))>=0){
+        var sr=searchCorpus(row.concept, 4);
+        for(var si=0;si<sr.results.length;si++){
+          var r=sr.results[si];
+          var already=false;
+          for(var hi=0;hi<analogyHits.length;hi++){if(analogyHits[hi].e===r.e){already=true;break;}}
+          if(!already){
+            analogyHits.push({e:r.e, score:r.score*0.8, hit:r.hit, strongHit:r.strongHit, source:'analogy', analogyConcept:row.concept, analogyPrinciple:row.generalPrinciple});
+          }
+        }
+      }
+    }
+  }
+  var familyMap={'草酸铁':['草酸铬','草酸铝','草酸钴'],'草酸铬':['草酸铁','草酸铝','草酸钴'],'草酸铝':['草酸铁','草酸铬'],'草酸钴':['草酸铁','草酸铬'],'fe':['cr','al','co'],'cr':['fe','al'],'al':['fe','cr'],'co':['fe']};
+  var famKeys=Object.keys(familyMap);
+  for(var fk=0;fk<famKeys.length;fk++){
+    var k=famKeys[fk];
+    if(nq.indexOf(k)>=0){
+      var alts=familyMap[k];
+      for(var alti=0;alti<alts.length;alti++){
+        var alt=alts[alti];
+        var sr2=searchCorpus(alt, 3);
+        for(var si2=0;si2<sr2.results.length;si2++){
+          var r2=sr2.results[si2];
+          var already2=false;
+          for(var hi2=0;hi2<analogyHits.length;hi2++){if(analogyHits[hi2].e===r2.e){already2=true;break;}}
+          if(!already2){
+            analogyHits.push({e:r2.e, score:r2.score*0.7, hit:r2.hit, strongHit:false, source:'family-analogy', analogyConcept:alt});
+          }
+        }
+      }
+    }
+  }
+  analogyHits.sort(function(a,b){return b.score-a.score;});
+  return analogyHits.slice(0,8);
+}
+
+/* ================= 智能体集群流水线：检索 3 — 方法学转移 ================= */
+function retrieval3_methodologyTransfer(q){
+  var ops=detectOps(q);
+  if(!ops.length) return [];
+  var methodHits=[];
+  for(var oi=0;oi<Math.min(ops.length,5);oi++){
+    var op=ops[oi];
+    var nop=norm(op);
+    for(var ei=0;ei<Corpus.entries.length;ei++){
+      var e=Corpus.entries[ei];
+      var nmethods=norm(e.methods||'');
+      var ncontent=norm(e.content||'');
+      var nobjects=norm(e.objects||'');
+      if(nmethods.indexOf(nop)>=0||ncontent.indexOf(nop)>=0||nobjects.indexOf(nop)>=0){
+        var already=false;
+        for(var hi=0;hi<methodHits.length;hi++){if(methodHits[hi].e===e){already=true;break;}}
+        if(!already){
+          methodHits.push({e:e, score:6, hit:[op], strongHit:false, source:'method-transfer', method:op});
+        }
+      }
+    }
+  }
+  methodHits.sort(function(a,b){return b.score-a.score;});
+  return methodHits.slice(0,8);
+}
+
+/* ================= 智能体集群流水线：类比推理引擎 ================= */
+function analogicalReasoning(q, directHits, analogyHits, methodHits){
+  var nq=norm(q);
+  var analogies=[];
+  for(var ri=0;ri<ANALOG_TABLE.length;ri++){
+    var row=ANALOG_TABLE[ri];
+    for(var ai=0;ai<row.analogs.length;ai++){
+      var a=row.analogs[ai];
+      if(nq.indexOf(norm(a))>=0){
+        var hasDirect=(directHits.length>=2);
+        if(!hasDirect||directHits[0].score<HIT_THRESHOLD*2){
+          analogies.push({
+            matchedTerm: a,
+            concept: row.concept,
+            principle: row.generalPrinciple,
+            hasDirect: hasDirect,
+            strength: hasDirect?0.3:0.8
+          });
+        }
+      }
+    }
+  }
+  var seen={};
+  var result=[];
+  for(var i=0;i<analogies.length;i++){
+    var a=analogies[i];
+    var k=a.concept+a.matchedTerm;
+    if(!seen[k]){seen[k]=true;result.push(a);}
+  }
+  return result;
+}
+
+/* ================= 智能体集群流水线：置信度评分 ================= */
+function confidenceScore(directHits, analogyHits, methodHits, faq, analogies){
+  var scores={};
+  var maxDirectScore=0;
+  for(var i=0;i<directHits.length;i++){maxDirectScore=Math.max(maxDirectScore,directHits[i].score);}
+  scores.corpus=Math.min(1, maxDirectScore/60);
+  scores.faq=faq?0.9:0;
+  var analogyCount=analogies.length+analogyHits.length+methodHits.length;
+  scores.analogy=Math.min(1, analogyCount*0.15);
+  scores.overall=Math.max(scores.corpus, scores.faq, scores.analogy*0.6);
+  scores.level=scores.overall>=0.7?'high':(scores.overall>=0.35?'medium':'low');
+  return scores;
+}
+
+function confidenceBarHTML(label, val, level){
+  var cls=val>=0.7?'cf-high':(val>=0.35?'cf-med':'cf-low');
+  var pct=Math.round(val*100);
+  return '<div class="confidence-bar '+cls+'"><span class="cf-label">'+esc(label)+'</span><span class="cf-track"><span class="cf-fill" style="width:'+pct+'%"></span></span><span class="cf-pct">'+pct+'%</span></div>';
+}
+
+function buildHybridAnswerHTML(q, ctx){
+  var faq=ctx.faq, directHits=ctx.directHits, conf=ctx.conf, chems=ctx.chems, ops=ctx.ops;
+  if(conf.level==='high'&&directHits.length>0){
+    return buildAnswerHTML(q, {faq:faq, hits:directHits, chems:chems, ops:ops});
+  }
+  return buildAnalogyBridgedAnswer(q, ctx);
+}
+
+function buildAnalogyBridgedAnswer(q, ctx){
+  var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
+  var methodHits=ctx.methodHits, analogies=ctx.analogies, conf=ctx.conf;
+  var s='';
+  s+='<div class="ans-sec"><h4>① 核心解答</h4>';
+  if(faq){
+    s+='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
+    s+='<span class="source-tag faq">内置FAQ</span>';
+  } else if(directHits.length>0){
+    s+=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
+    s+='<span class="source-tag corpus">语料库直接命中</span>';
+  } else {
+    s+='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
+  }
+  if(analogies.length>0){
+    s+='<div class="ans-sec"><h4>② 类比推理桥接</h4>';
+    s+='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
+    for(var ai=0;ai<analogies.length;ai++){
+      var a=analogies[ai];
+      s+='<div class="analogy-banner">';
+      s+='<div style="font-size:13px;margin-bottom:4px"><span class="bridge-icon">🔗</span><b>'+esc(a.concept)+'</b> ← 匹配自「'+esc(a.matchedTerm)+'」</div>';
+      s+='<div style="font-size:12px;color:var(--t2);line-height:1.65">'+esc(a.principle)+'</div>';
+      s+='</div>';
+    }
+    s+='</div>';
+  }
+  var allAnalogyRefs=analogyHits.concat(methodHits);
+  if(allAnalogyRefs.length>0){
+    s+='<div class="ans-sec"><h4>③ 类比来源文献（'+allAnalogyRefs.length+' 篇）</h4>';
+    s+='<p class="muted" style="margin-bottom:4px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
+    s+='<ul style="margin-left:18px;font-size:12px">';
+    var shown={};
+    for(var ri=0;ri<Math.min(allAnalogyRefs.length,5);ri++){
+      var r=allAnalogyRefs[ri];
+      if(shown[r.e.id]) continue; shown[r.e.id]=true;
+      s+='<li><b>《'+esc(r.e.title)+'》</b>'
+        +'<span class="source-tag analogy" style="margin-left:4px">'+(r.source==='method-transfer'?('方法:'+esc(r.method||'')):('类比:'+esc(r.analogyConcept||'')))+'</span>'
+        +(r.e.objects?' —— 研究对象：'+esc(r.e.objects):'')
+        +(r.e.methods?'；关键方法：'+esc(r.e.methods):'')
+        +'</li>';
+    }
+    s+='</ul></div>';
+  }
+  if(directHits.length>0){
+    s+='<div class="ans-sec">';
+    s+='<button type="button" class="ref-toggle" data-count="'+directHits.length+'" aria-expanded="false">📚 查看文献支持（'+directHits.length+' 篇）</button>';
+    s+='<div class="ref-support-body" hidden>';
+  }
+  s+='<div class="ans-sec"><h4>'+(analogies.length>0?'④':'②')+' 网络补充检索</h4>'+webFallbackHTML(q)+'</div>';
+  s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
+  return s;
+}
+
+/* ================= 智能体集群流水线：自我检查 ================= */
+function selfCheck(q, answerHTML, ctx){
+  var chems=ctx.chems, ops=ctx.ops, analogies=ctx.analogies, conf=ctx.conf;
+  var nq=norm(q);
+  var warnings=[];
+  var stripAns=stripHTML(answerHTML||'').toLowerCase();
+  if(/fe\s*2\+|fe\(ii\)|二价铁|亚铁/.test(stripAns) && /配位.*草酸.*k3|产物.*k3|目标.*k3/.test(stripAns)){
+    if(!/氧化.*fe\s*2\+|fe\s*2\+.*氧化|变成.*fe\s*3\+|fe\s*3\+/.test(stripAns)){
+      warnings.push('答案中提到了 Fe²⁺ 与产物 K₃[Fe(C₂O₄)₃] 的关系——请确保正确说明 Fe²⁺ 需要先被氧化为 Fe³⁺ 才能作为中心离子配位。');
+    }
+  }
+  if(/配位数.*4|4.*配位|四配位/.test(stripAns)&&/fe.*c2o4|草酸.*铁/.test(stripAns)){
+    warnings.push('草酸根是双齿配体——[Fe(C₂O₄)₃]³⁻ 的配位数为 6（3个双齿×2），而非 4。请核实配位数表述。');
+  }
+  if(/剧毒|极毒|致死|高毒|危险品|爆炸/.test(nq)||/剧毒|极毒/.test(stripAns)){
+    if(!/草酸.*毒|草酸盐.*毒|h2o2.*腐蚀/.test(stripAns)){
+      warnings.push('本实验涉及的主要毒害试剂为草酸（有毒）和 H₂O₂（腐蚀性），请确保安全描述的准确性——产物 K₃[Fe(C₂O₄)₃] 本身为低毒性。');
+    }
+  }
+  var passed=warnings.length===0;
+  return {passed:passed, warnings:warnings};
+}
+
+function selfCheckHTML(result){
+  if(!result||result.passed) return '';
+  var s='<div class="selfcheck-warn"><b>自我检查提醒：</b>以下潜在问题请核实——';
+  s+='<ul style="margin:4px 0 0 18px">';
+  for(var i=0;i<result.warnings.length;i++) s+='<li>'+esc(result.warnings[i])+'</li>';
+  s+='</ul></div>';
+  return s;
+}
 /* 相关 FAQ 推荐（用于"知识延伸"追问 chips） */
 function relatedFAQs(q,exclude,n){
   try {

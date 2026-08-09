@@ -414,25 +414,23 @@ function buildLLMContext(q){
 /* ================= 语料库 ================= */
 const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
 async function loadCorpus(){
-  let base=null;
+  var base=null;
   try{
-    const res=await fetch('data/corpus.json',{cache:'no-store'});
+    var res=await fetch('data/corpus.json',{cache:'default'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     base=await res.json();
     Corpus.loaded=true;
   }catch(e){ Corpus.loaded=false; }
-  const up=lsGet('chemai_corpus_uploaded',[]);
-  const list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
+  var up=lsGet('chemai_corpus_uploaded',[]);
+  var list=(base&&Array.isArray(base.entries))?base.entries.slice():[];
   Corpus.subfields=(base&&base.subfields)||[];
-  if(Array.isArray(up)) up.forEach(u=>{ if(u&&u.title) list.push(u); });
+  if(Array.isArray(up)) up.forEach(function(u){ if(u&&u.title) list.push(u); });
   Corpus.entries=list;
-  // 归一化所有 entry 的 subfield 到 canonical 名称
-  list.forEach(e=>{if(e.subfield)e.subfield=normCat(e.subfield);});
-  // 归一化 subfields 数组并去重
-  var normSubs=new Set();(base&&base.subfields||[]).forEach(s=>{normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
+  list.forEach(function(e){if(e.subfield)e.subfield=normCat(e.subfield);});
+  var normSubs=new Set();(base&&base.subfields||[]).forEach(function(s){normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
   Corpus.total=base&&base.total?base.total:(base?list.length:0);
-  Corpus.uploaded=Array.isArray(up)?up.filter(u=>u&&u.title).length:0;
-  const st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
+  Corpus.uploaded=Array.isArray(up)?up.filter(function(u){return u&&u.title;}).length:0;
+  var st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
   if(Corpus.loaded){
     st.className='corpus-status ok';
     tx.textContent='知识清单已就绪 · 内置 '+Corpus.total+' 篇文献'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+' · 半开放检索模式';

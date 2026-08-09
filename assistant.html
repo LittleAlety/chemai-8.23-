@@ -1538,10 +1538,10 @@ qaChat.addEventListener('click',function(e){
   var c=e.target.closest('.faq-chip');
   if(c&&!qaBusy){qaInput.value=c.dataset.q||'';qaSubmit();}
 });
-const CHIPS=['本实验的原理是什么？三步反应方程式','为什么要用 H₂O₂ 作氧化剂？','产率如何计算？以哪种试剂为基准？','抽滤操作要注意什么？','三草酸合铁酸钾为什么要避光保存？','蓝晒的原理是什么？'];
-CHIPS.forEach(c=>{
-  const b=document.createElement('button');b.className='chip';b.textContent=c;
-  b.addEventListener('click',()=>{if(qaBusy)return;qaInput.value=c;qaSubmit();});
+var CHIPS=['本实验的原理是什么？三步反应方程式','为什么要用 H₂O₂ 作氧化剂？','产率如何计算？以哪种试剂为基准？','抽滤操作要注意什么？','三草酸合铁酸钾为什么要避光保存？','蓝晒的原理是什么？'];
+CHIPS.forEach(function(c){
+  var b=document.createElement('button');b.className='chip';b.textContent=c;
+  b.addEventListener('click',function(){if(qaBusy)return;qaInput.value=c;qaSubmit();});
   $('#qaChips').appendChild(b);
 });
 

@@ -99,6 +99,17 @@ a:hover{color:var(--em)}
 .ans-sec+.ans-sec{border-top:1px dashed var(--bd);padding-top:8px}
 .faq-chip{font-family:inherit}
 
+/* 富文本答案渲染 */
+.rich-answer p{margin:9px 0}
+.rich-answer ul,.rich-answer ol{margin:8px 0 8px 20px}
+.ans-line{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.85}
+.ans-head{display:block;font-weight:700;margin:10px 0 4px;color:var(--teal);overflow-wrap:anywhere;line-height:1.7}
+.ans-eq{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.9;font-family:ui-monospace,Consolas,monospace}
+.ans-eq-block{display:block;margin:6px 0;padding:8px 14px;font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.92em;line-height:2.1;background:rgba(0,0,0,.22);border-radius:10px;border-left:2px solid var(--em);overflow-x:auto;white-space:pre}
+.ans-inline-math{font-family:"Cambria Math","Latin Modern Math",ui-monospace,serif;font-style:italic;color:var(--teal)}
+.ans-sub{font-size:.82em;vertical-align:sub;line-height:0}
+.ans-sup{font-size:.82em;vertical-align:super;line-height:0}
+
 /* 检索流水线 */
 .pipe{display:flex;flex-direction:column;gap:0;margin:2px 0 4px}
 .pipe-step{display:flex;align-items:center;gap:10px;padding:5px 0;color:var(--t3);font-size:13px;transition:.25s}
@@ -1691,27 +1702,121 @@ function extendHTML(q,faq,hits){
   }
   return s+'</div>';
 }
+
+/* ================= 富文本答案渲染（LaTeX → Unicode + 上下标 + 结构化排版） ================= */
+function renderLatexBody(body, G){
+  var s=body;
+  s=s.replace(/\\\\/g,'\\');
+  s=s.replace(/_\{([^{}]+)\}/g,'<sub class="ans-sub">$1</sub>');
+  s=s.replace(/_([a-zA-Z0-9])/g,'<sub class="ans-sub">$1</sub>');
+  s=s.replace(/\^\{([^{}]+)\}/g,'<sup class="ans-sup">$1</sup>');
+  s=s.replace(/\^([a-zA-Z0-9\+\-])/g,'<sup class="ans-sup">$1</sup>');
+  s=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'($1)/($2)');
+  s=s.replace(/\\sqrt(?:\[([^\]]*)\])?\{([^{}]*)\}/g,'√($2)');
+  s=s.replace(/\\xrightarrow(?:\[[^\]]*\])?\{([^{}]*)\}/g,'→($1)');
+  s=s.replace(/\\bar\{([^{}]*)\}/g,'$1̄');
+  s=s.replace(/\\hat\{([^{}]*)\}/g,'$1̂');
+  var keys=Object.keys(G);
+  for(var i=0;i<keys.length;i++){s=s.split(keys[i]).join(G[keys[i]]);}
+  s=s.replace(/\\([a-zA-Z]+)/g,'$1');
+  s=s.replace(/\\/g,'');
+  s=s.replace(/[{}]/g,'');
+  return s;
+}
+
+function renderLatexToUnicode(text){
+  var G={
+    '\\alpha':'α','\\beta':'β','\\gamma':'γ','\\delta':'δ','\\epsilon':'ε','\\varepsilon':'ε',
+    '\\zeta':'ζ','\\eta':'η','\\theta':'θ','\\vartheta':'ϑ','\\iota':'ι','\\kappa':'κ',
+    '\\lambda':'λ','\\mu':'μ','\\nu':'ν','\\xi':'ξ','\\pi':'π','\\rho':'ρ','\\sigma':'σ',
+    '\\tau':'τ','\\upsilon':'υ','\\phi':'φ','\\chi':'χ','\\psi':'ψ','\\omega':'ω',
+    '\\Gamma':'Γ','\\Delta':'Δ','\\Theta':'Θ','\\Lambda':'Λ','\\Xi':'Ξ','\\Pi':'Π',
+    '\\Sigma':'Σ','\\Phi':'Φ','\\Psi':'Ψ','\\Omega':'Ω',
+    '\\infty':'∞','\\approx':'≈','\\equiv':'≡','\\neq':'≠','\\leq':'≤','\\geq':'≥',
+    '\\ll':'≪','\\gg':'≫','\\pm':'±','\\mp':'∓','\\times':'×','\\cdot':'·',
+    '\\rightarrow':'→','\\longrightarrow':'⟶','\\Rightarrow':'⇒','\\leftarrow':'←',
+    '\\longleftarrow':'⟵','\\Leftarrow':'⇐','\\leftrightarrow':'↔','\\rightleftharpoons':'⇌',
+    '\\uparrow':'↑','\\downarrow':'↓','\\updownarrow':'↕','\\mapsto':'↦',
+    '\\partial':'∂','\\nabla':'∇','\\propto':'∝','\\sim':'∼',
+    '\\simeq':'≃','\\cong':'≅','\\perp':'⊥','\\parallel':'∥','\\angle':'∠',
+    '\\triangle':'△','\\square':'□','\\diamond':'◇','\\circ':'∘','\\bullet':'•',
+    '\\int':'∫','\\iint':'∬','\\iiint':'∭','\\oint':'∮','\\sum':'Σ','\\prod':'∏',
+    '\\sqrt':'√','\\hbar':'ℏ','\\ell':'ℓ','\\Re':'ℜ','\\Im':'ℑ','\\wp':'℘',
+    '\\forall':'∀','\\exists':'∃','\\neg':'¬','\\wedge':'∧','\\vee':'∨',
+    '\\cup':'∪','\\cap':'∩','\\subset':'⊂','\\supset':'⊃','\\subseteq':'⊆',
+    '\\in':'∈','\\notin':'∉','\\emptyset':'∅','\\varnothing':'∅',
+    '\\xrightarrow':'→','\\xleftarrow':'←','\\xrightleftharpoons':'⇌',
+    '\\ce':'(ce)','\\text':'','\\mathrm':'','\\pu':'','\\rm':'',
+    '\\,':'','\\;':'','\\ ':' ','\\!':''
+  };
+  var t=text;
+  t=t.replace(/\$\$([\s\S]*?)\$\$/g,function(m,body){
+    return '<span class="ans-eq-block">' + renderLatexBody(body, G) + '</span>';
+  });
+  t=t.replace(/\$([^$\n]{1,300}?)\$/g,function(m,body){
+    return '<span class="ans-inline-math">' + renderLatexBody(body, G) + '</span>';
+  });
+  t=renderLatexBody(t, G);
+  return t;
+}
+
+function renderRichAnswer(text){
+  var raw=String(text==null?'':text).replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim();
+  if(!raw) return '';
+  var rendered=renderLatexToUnicode(raw);
+  var blocks=rendered.split(/\n{2,}/).map(function(b){return b.replace(/\n+/g,'\n').trim();}).filter(Boolean);
+  if(!blocks.length) return '';
+  return blocks.map(function(block){
+    var lines=block.split('\n').map(function(l){return l.trim();}).filter(Boolean);
+    if(!lines.length) return '';
+    var isUl=lines.every(function(l){return /^[-*•]\s+/.test(l);});
+    var isOl=lines.every(function(l){return /^\d{1,2}[.、)）]\s+/.test(l);});
+    if(isUl||isOl){
+      var tag=isUl?'ul':'ol';
+      return '<'+tag+'>'+lines.map(function(line){
+        var clean=line.replace(/^[-*•]\s+/,'').replace(/^\d{1,2}[.、)）]\s+/,'');
+        return '<li>'+inlineRich(clean)+'</li>';
+      }).join('')+'</'+tag+'>';
+    }
+    var html=lines.map(function(line){
+      var heading=/^(?:【|#{1,4}\s)/.test(line)||/^\*\*[^*]+\*\*$/.test(line);
+      var eq=/(?:→|←|⇌|⟶|⟵|↓|↑)/.test(line);
+      var clean=line.replace(/^#{1,4}\s+/,'');
+      var h=inlineRich(clean);
+      return '<div class="'+(heading?'ans-head':(eq?'ans-eq':'ans-line'))+'">'+h+'</div>';
+    }).join('');
+    return '<p>'+html+'</p>';
+  }).join('');
+}
+
+function inlineRich(line){
+  var h=esc(line);
+  h=h.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
+  return h;
+}
+
 function buildAnswerHTML(q,ctx){
-  const{faq,hits,chems,ops}=ctx;
-  let s='';
+  var faq=ctx.faq, hits=ctx.hits, chems=ctx.chems, ops=ctx.ops;
+  var s='';
   if(!hits.length){
     if(faq){
-      s+='<div class="ans-sec"><h4>① 核心解答</h4><p>'+faq.answer+'</p></div>';
-      if(faq.detail) s+='<div class="ans-sec"><h4>② 原理与细节</h4>'+faq.detail+'</div>';
+      s+='<div class="ans-sec"><h4>① 核心解答</h4><div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div></div>';
+      if(faq.detail) s+='<div class="ans-sec"><h4>② 原理与细节</h4><div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div></div>';
       s+='<div class="ans-sec"><h4>③ 网络补充检索</h4><p class="muted">内置知识库已作答；本地知识清单未检索到对应文献，如需更多文献证据可点击：</p>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,faq,hits);
     }else{
-      s+='<div class="ans-sec"><h4>① 核心解答</h4><p>该问题超出了本实验知识清单（'+(Corpus.total||276)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div>';
+      s+='<div class="ans-sec"><h4>① 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||276)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
       s+='<div class="ans-sec"><h4>② 网络检索（已接入网络浏览）</h4>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,null,hits);
     }
     return s;
   }
   s+='<div class="ans-sec"><h4>① 核心解答</h4>';
-  s+=faq?('<p>'+faq.answer+'</p>'):coreFromMeta(q,hits,chems,ops);
+  s+=faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
   s+='</div>';
   s+='<div class="ans-sec"><h4>② 原理与细节</h4>';
-  if(faq&&faq.detail) s+=faq.detail;
+  if(faq&&faq.detail) s+='<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>';
   s+='<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><ul style="margin-left:18px">'
    +hits.slice(0,3).map(r=>'<li><b>《'+esc(r.e.title)+'》</b>——研究对象：'+esc(r.e.objects||'—')+'；关键方法：'+esc(r.e.methods||'—')+((r.e.questions&&r.e.questions[0])?('；聚焦问题："'+esc(r.e.questions[0])+'"'):'')+(r.e.abstract?('<br><span style="color:#94a3b8">摘要要点："'+esc(String(r.e.abstract).slice(0,150))+(String(r.e.abstract).length>150?'…':'')+'"</span>'):'')+'</li>').join('')
    +'</ul></div>';
@@ -1977,7 +2082,7 @@ async function handleQA(q){
       var llmCtx=buildLLMContext(q);
       var llmAnswer=await callLLM(q, llmCtx);
       if(llmAnswer){
-        html='<div class="ans-sec"><p>'+esc(llmAnswer).replace(/\n/g,'<br>')+'</p></div>';
+        html='<div class="ans-sec"><div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div></div>';
         usedLLM=true;
       }
     }catch(e){ /* LLM unavailable, fall back to local reasoning */ }

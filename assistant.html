@@ -414,8 +414,8 @@ async function callLLM(question, context){
   return data.choices[0].message.content;
 }
 function buildLLMContext(q){
-  const parts=[];
-  const faq=matchFAQ(q);
+  var parts=[];
+  var faq=matchFAQ(q);
   if(faq){ parts.push('【FAQ: '+faq.title+'】\n'+stripHTML(faq.answer)+(faq.detail?'\n'+stripHTML(faq.detail):'')); }
   var searchResult2=searchCorpus(q, 3);
   if(searchResult2 && searchResult2.results && searchResult2.results.length){

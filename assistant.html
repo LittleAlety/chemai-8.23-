@@ -401,9 +401,10 @@ function buildLLMContext(q){
   const parts=[];
   const faq=matchFAQ(q);
   if(faq){ parts.push('【FAQ: '+faq.title+'】\n'+stripHTML(faq.answer)+(faq.detail?'\n'+stripHTML(faq.detail):'')); }
-  const {results}=searchCorpus(q, 3);
-  if(results && results.length){
-    for(const r of results.slice(0,2)){
+  var searchResult=searchCorpus(q, 3);
+  if(searchResult && searchResult.results && searchResult.results.length){
+    for(var ri=0;ri<Math.min(searchResult.results.length,2);ri++){
+      var r=searchResult.results[ri];
       parts.push('【文献: '+r.e.title+'】\n'+(r.e.abstract||r.e.objects||''));
     }
   }
@@ -1334,15 +1335,15 @@ function docCardHTML(r){
     +'</div>';
 }
 function citationHTML(r){
-  const e=r.e;let s='<li><b>[#'+esc(e.id)+']</b> '+esc(e.title)+' <span class="muted">（'+esc(e.subfield||'')+(e.methods?(' · '+esc(e.methods)):'')+'）</span>';
+  var e=r.e;var s='<li><b>[#'+esc(e.id)+']</b> '+esc(e.title)+' <span class="muted">（'+esc(e.subfield||'')+(e.methods?(' · '+esc(e.methods)):'')+'）</span>';
   if(e.questions&&e.questions.length) s+='<br><span class="muted">可回答：'+esc(e.questions.slice(0,3).join('；'))+'</span>';
   if(e.content){
-    const cn=norm(e.content);let pos=-1,term='';
-    for(const t of (r.hit||[])){const p=cn.indexOf(t);if(p>=0&&(pos<0||p<pos)){pos=p;term=t;}}
-    const raw=e.content;let snip=raw.slice(0,300);
+    var cn=norm(e.content);var pos=-1,term='';
+    for(var ti=0;ti<(r.hit||[]).length;ti++){var t=r.hit[ti];var p=cn.indexOf(t);if(p>=0&&(pos<0||p<pos)){pos=p;term=t;}}
+    var raw=e.content;var snip=raw.slice(0,300);
     if(pos>=0){
-      const ratio=raw.length/Math.max(1,cn.length);
-      const st=Math.max(0,Math.floor(pos*ratio)-50),ed=Math.min(raw.length,st+300);
+      var ratio=raw.length/Math.max(1,cn.length);
+      var st=Math.max(0,Math.floor(pos*ratio)-50),ed=Math.min(raw.length,st+300);
       snip=(st>0?'…':'')+raw.slice(st,ed)+(ed<raw.length?'…':'');
     }
     s+='<br><span style="color:#fbbf24;font-size:12px">📎 文献原文摘录（≤300字）：“'+esc(snip)+'”</span>';

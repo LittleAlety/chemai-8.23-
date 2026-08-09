@@ -675,7 +675,7 @@ async function callLLM(question, context, streamCallback){
   }
   throw new Error('LLM call failed after 3 attempts');
 }
-function stripHTML(s){return String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");}
+/* stripHTML already declared as const at line 516 — this duplicate definition was causing a JS error */
 function buildLLMContext(q){
   const parts=[];
   // 追加最近3轮对话历史（纯文本，每轮截取500字符）

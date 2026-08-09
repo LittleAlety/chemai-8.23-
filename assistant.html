@@ -1796,17 +1796,15 @@ function switchTab(mode,push){
 }
 $$('.tab').forEach(t=>t.addEventListener('click',function(){switchTab(t.dataset.mode);}));
 $('#navToggle').addEventListener('click',function(){$('#topNav').classList.toggle('open');});
-/* 调试/外部联动句柄 */
+
 window.ChemAIQA={searchCorpus:searchCorpus,extractTerms:extractTerms,matchFAQ:matchFAQ,relatedFAQs:relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(function(k){return k.explain;})};
 
-(function init(){
-  llmInitUI();
-  loadCorpus();  // 先加载语料，textContent 异步更新
-  renderQAHistory();  // 欢迎语立即显示
-  var mode='qa';
-  try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
-  switchTab(mode,false);
-})();
+llmInitUI();
+loadCorpus();
+renderQAHistory();
+var mode='qa';
+try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
+switchTab(mode,false);
 })();
 </script>
 </body>

@@ -424,14 +424,80 @@ function exportChatHistory(){
   setTimeout(function(){ URL.revokeObjectURL(a.href); }, 800);
 }
 
-async function callLLM(question, context){
-  const messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
-  if(context && context.trim()) messages.push({role:'system', content: '【参考知识库内容】\n'+context.slice(0,4000)});
-  messages.push({role:'user', content: question});
-  const resp=await fetch(LLM.endpoint, {method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+LLM.apiKey}, body:JSON.stringify({model:LLM.model, messages, max_tokens:800, temperature:0.3})});
-  if(!resp.ok){ const e=await resp.text(); throw new Error('API '+resp.status+': '+e.slice(0,200)); }
-  const data=await resp.json();
-  return data.choices[0].message.content;
+async function callLLM(question, context, streamCallback){
+  var messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
+  // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
+  var userMsg=question;
+  if(context && context.trim()){
+    userMsg='<corpus-context>\n'+context.slice(0,4000)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
+  }
+  messages.push({role:'user', content: userMsg});
+
+  var useStream = !!streamCallback;
+  // 指数退避重试 (最多3次)
+  for (var attempt = 1; attempt <= 3; attempt++) {
+    try {
+      var ctrl = new AbortController();
+      var tm = setTimeout(function(){ ctrl.abort(); }, 30000); // 30s timeout
+      var body = {model: LLM.model, messages: messages, max_tokens: 800, temperature: 0.3};
+      if (useStream) body.stream = true;
+
+      var resp = await fetch(LLM.endpoint, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + LLM.apiKey},
+        body: JSON.stringify(body),
+        signal: ctrl.signal
+      });
+      clearTimeout(tm);
+
+      if (!resp.ok) {
+        var errTxt = '';
+        try { errTxt = await resp.text(); } catch(_) {}
+        var errMsg = 'API ' + resp.status + ': ' + (errTxt || '').slice(0, 200);
+        // 4xx 客户端错误不重试 (非429)
+        if (resp.status >= 400 && resp.status < 500 && resp.status !== 429) throw new Error(errMsg);
+        throw new Error(errMsg); // 5xx / 429 → 重试
+      }
+
+      // #18: 真流式输出 (SSE)
+      if (useStream && streamCallback){
+        var reader = resp.body.getReader();
+        var decoder = new TextDecoder();
+        var buffer = '', fullText = '';
+        while (true) {
+          var _done, _value;
+          try { var _r = await reader.read(); _done = _r.done; _value = _r.value; } catch(e) { break; }
+          if (_done) break;
+          buffer += decoder.decode(_value, {stream: true});
+          var lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (line.indexOf('data: ') !== 0) continue;
+            var sseData = line.slice(6).trim();
+            if (sseData === '[DONE]') continue;
+            try {
+              var json = JSON.parse(sseData);
+              var delta = json.choices && json.choices[0] && json.choices[0].delta && json.choices[0].delta.content;
+              if (delta) { fullText += delta; streamCallback(delta, fullText); }
+            } catch(e2) { /* skip malformed chunks */ }
+          }
+        }
+        return fullText;
+      }
+
+      // 非流式模式
+      var jdata = await resp.json();
+      return jdata.choices[0].message.content;
+    } catch(e) {
+      // 最后一次失败则抛出
+      if (attempt >= 3) throw e;
+      // 指数退避: 1s → 2s → 4s ± 20% 随机抖动
+      var delayMs = Math.pow(2, attempt - 1) * 1000 * (0.8 + Math.random() * 0.4);
+      await new Promise(function(r){ setTimeout(r, delayMs); });
+    }
+  }
+  throw new Error('LLM call failed after 3 attempts');
 }
 function buildLLMContext(q){
   var parts=[];

@@ -2487,20 +2487,18 @@ $('#navToggle').addEventListener('click',()=>$('#topNav').classList.toggle('open
 window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(k=>k.explain)};
 
 (async function init(){
-  try {
-    await llmLoadKey();  // 解密API Key
-    llmInitUI();
-    renderQAHistory();
-    loadFAQ();  // #13: 异步加载完整FAQ（不阻塞UI）
-    loadCorpus();  // 语料库异步加载，不再阻塞首屏
-    var mode='qa';
-    try { mode = (new URLSearchParams(location.search)).get('mode') === 'assess' ? 'assess' : 'qa'; } catch(e) {}
-    switchTab(mode, false);
-  } catch(initErr) {
-    // 兜底：如果初始化过程中JS出错，确保页面不被破坏
-    try { document.getElementById('corpusStatusTxt').textContent = '初始化出错，请刷新页面'; } catch(_) {}
-    console.error('ChemAI init error:', initErr);
-  }
+  // 立即渲染欢迎语 + 加载资源，不等待任何异步操作
+  renderQAHistory();
+  loadFAQ();  // 异步加载完整FAQ
+  loadCorpus();  // 异步加载语料库
+  llmInitUI();  // LLM UI（不需要等待Key解密）
+
+  // Key 解密放在最后，不阻塞页面渲染
+  llmLoadKey().catch(function(e){});
+
+  var mode='qa';
+  try { mode = (new URLSearchParams(location.search)).get('mode') === 'assess' ? 'assess' : 'qa'; } catch(e) {}
+  switchTab(mode, false);
 })();
 })();
 </script>

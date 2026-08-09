@@ -525,14 +525,6 @@ const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈�
 // 分类归一化 (同步自 data/categories.json — 唯一权威来源)
 const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理'};
 
-/* ================= AES-256-GCM 加密（API Key 安全存储） ================= */
-const _CRYPTO_SALT_LEN=16,_CRYPTO_IV_LEN=12,_CRYPTO_ITER=200000,_CRYPTO_APP_KEY='chemai-k3fe-v2';
-function _ab2b64(b){return btoa(String.fromCharCode(...new Uint8Array(b)))}
-function _b642ab(s){return Uint8Array.from(atob(s),c=>c.charCodeAt(0)).buffer}
-async function _deriveKey(salt){const mk=await crypto.subtle.importKey('raw',new TextEncoder().encode(_CRYPTO_APP_KEY),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:_CRYPTO_ITER,hash:'SHA-256'},mk,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
-async function _encrypt(plaintext){const s=crypto.getRandomValues(new Uint8Array(_CRYPTO_SALT_LEN));const i=crypto.getRandomValues(new Uint8Array(_CRYPTO_IV_LEN));const k=await _deriveKey(s);const c=await crypto.subtle.encrypt({name:'AES-GCM',iv:i},k,new TextEncoder().encode(plaintext));return JSON.stringify({s:_ab2b64(s),i:_ab2b64(i),c:_ab2b64(c)})}
-async function _decrypt(packed){try{const{s,i,c}=typeof packed==='string'?JSON.parse(packed):packed;if(!s||!i||!c)return null;const k=await _deriveKey(_b642ab(s));const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:_b642ab(i)},k,_b642ab(c));return new TextDecoder().decode(pt)}catch(e){return null}}
-const CANONICAL_CATS=new Set(['合成制备','反应原理','实验操作','分析测定','光化学应用','结构表征','磁性研究','热分析','安全与废物处理','配位化学理论','实验教学','综合研究','化学史','高等理论','蓝晒工艺','摩尔盐相关','草酸配合物']);
 function normCat(v){if(!v||typeof v!=='string')return'综合研究';var t=v.trim();if(!t)return'综合研究';if(CANONICAL_CATS.has(t))return t;if(CATEGORY_ALIAS_MAP[t])return CATEGORY_ALIAS_MAP[t];return t;}
 
 function lsGet(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}

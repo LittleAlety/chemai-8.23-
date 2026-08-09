@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://api.deepseek.com">
 <link rel="preload" href="data/faq_unified.json" as="fetch" crossorigin="anonymous">
 <link rel="preload" href="data/corpus.json" as="fetch" crossorigin="anonymous">
+<script src="assets/vendor/jszip.min.js"><\/script>
+<script src="assets/vendor/pdf.min.js"><\/script>
 <title>AI 助手 · ChemAI 三草酸合铁酸钾制备实验</title>
 <style>
 /* #20: 亮色模式支持 */
@@ -422,6 +424,8 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
       <section id="panel-qa" class="panel">
         <div class="panel-bar">
           <div class="corpus-status" id="corpusStatus"><span class="dot"></span><span id="corpusStatusTxt">正在加载知识清单…</span></div>
+          <button class="btn ghost sm" id="qaUploadBtn" title="上传 Word/PDF/PPTX 文献，解析后自动加入知识清单">📎 上传文献</button>
+          <input type="file" id="qaFileInput" accept=".pdf,.pptx,.docx" multiple style="display:none"/>
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
           <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
@@ -635,33 +639,41 @@ async function callLLM(question, context, streamCallback){
         throw new Error(msg); // 5xx / 429 → 重试
       }
 
-  // #18: 真流式输出 (SSE)
-  if (useStream && streamCallback){
-    const reader = resp.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '', fullText = '';
-    while (true) {
-      const {done, value} = await reader.read();
-      if (done) break;
-      buffer += decoder.decode(value, {stream: true});
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
-      for (const line of lines) {
-        if (!line.startsWith('data: ')) continue;
-        const data = line.slice(6).trim();
-        if (data === '[DONE]') continue;
-        try {
-          const json = JSON.parse(data);
-          const delta = json.choices?.[0]?.delta?.content;
-          if (delta) { fullText += delta; streamCallback(delta, fullText); }
-        } catch (e) { /* skip malformed chunks */ }
+      // #18: 真流式输出 (SSE)
+      if (useStream && streamCallback){
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '', fullText = '';
+        while (true) {
+          const {done, value} = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, {stream: true});
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            const data = line.slice(6).trim();
+            if (data === '[DONE]') continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) { fullText += delta; streamCallback(delta, fullText); }
+            } catch (e2) { /* skip malformed chunks */ }
+          }
+        }
+        return fullText;
       }
-    }
-    lastError = new Error(msg);
-    if (attempt < 3) {
-      // 指数退避: 1s → 2s → 4s ± 20% 随机抖动
-      const delay = Math.pow(2, attempt - 1) * 1000 * (0.8 + Math.random() * 0.4);
-      await new Promise(r => setTimeout(r, delay));
+
+      // 非流式模式：直接解析JSON返回
+      const data = await resp.json();
+      return data.choices[0].message.content;
+    } catch (e) {
+      lastError = e;
+      if (attempt < 3) {
+        // 指数退避: 1s → 2s → 4s ± 20% 随机抖动
+        const delayMs = Math.pow(2, attempt - 1) * 1000 * (0.8 + Math.random() * 0.4);
+        await new Promise(r => setTimeout(r, delayMs));
+      }
     }
   }
   throw lastError || new Error('LLM call failed after 3 attempts');
@@ -1045,6 +1057,107 @@ async function loadCorpus(){
     st.className='corpus-status bad';
     tx.textContent='语料库加载失败（file:// 直开时浏览器会拦截 fetch，请用 http 服务访问）；已降级为内置知识库'+(Corpus.uploaded?(' + 上传语料 '+Corpus.uploaded+' 篇'):'')+'。';
   }
+}
+
+/* ================= 文件解析（Word/PDF/PPTX → 文本 → 入库搜索） ================= */
+function xmlToText(xml){
+  return xml
+    .replace(/<w:tab\b[^>]*\/?>/g,'\t').replace(/<w:br\b[^>]*\/?>/g,'\n')
+    .replace(/<\/w:p>/g,'\n').replace(/<\/a:p>/g,'\n')
+    .replace(/<[^>]+>/g,'')
+    .replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,"'").replace(/&amp;/g,'&')
+    .replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+async function parseDocx(buf){
+  if(!window.JSZip) throw new Error('JSZip 未加载');
+  var zip=await JSZip.loadAsync(buf);
+  var f=zip.file('word/document.xml');
+  if(!f) throw new Error('无效的 DOCX：缺少 word/document.xml');
+  return xmlToText(await f.async('string'));
+}
+async function parsePptx(buf){
+  if(!window.JSZip) throw new Error('JSZip 未加载');
+  var zip=await JSZip.loadAsync(buf);
+  var names=Object.keys(zip.files).filter(function(n){return (/^ppt\/slides\/slide\d+\.xml$/).test(n);})
+    .sort(function(a,b){return parseInt(a.match(/\d+/)[0])-parseInt(b.match(/\d+/)[0]);});
+  if(!names.length) throw new Error('无效的 PPTX：未找到幻灯片内容');
+  var parts=[];
+  for(var i=0;i<names.length;i++){parts.push(xmlToText(await zip.file(names[i]).async('string')));}
+  return parts.join('\n\n');
+}
+async function parsePdf(buf){
+  if(!window.pdfjsLib) throw new Error('pdf.js 未加载');
+  var pdf=await pdfjsLib.getDocument({data:buf}).promise;
+  var parts=[];
+  for(var p=1;p<=pdf.numPages;p++){
+    var page=await pdf.getPage(p);
+    var tc=await page.getTextContent();
+    parts.push(tc.items.map(function(i2){return i2.str;}).join(' '));
+  }
+  return parts.join('\n');
+}
+function inferSubfieldUpload(text){
+  var t=text.toLowerCase();
+  if(/蓝晒|cyanotype/.test(t)) return '蓝晒工艺';
+  if(/光化学|光致|感光|photochem/.test(t)) return '光化学应用';
+  if(/合成|制备|synthes|prepar/.test(t)) return '合成制备';
+  if(/磁化率|磁性|magnet/.test(t)) return '磁性研究';
+  if(/滴定|分析测定|titrat/.test(t)) return '分析测定';
+  if(/教学|课程|pedagog|teaching/.test(t)) return '实验教学';
+  return '综合研究';
+}
+function nextUploadId(){
+  var uploads=lsGet('chemai_corpus_uploaded',[]);
+  return uploads.reduce(function(m,e){return Math.max(m,e.id||1000);},999)+1;
+}
+async function handleFileUpload(fileList){
+  var files=[].slice.call(fileList).filter(function(f){return /\.(pdf|docx|pptx)$/i.test(f.name);});
+  if(!files.length){ alert('仅支持 .pdf / .pptx / .docx 文件'); return; }
+  var newly=[];
+  for(var i=0;i<files.length;i++){
+    var f=files[i];
+    var statusEl=$('#corpusStatusTxt');
+    if(statusEl) statusEl.textContent='正在解析: '+f.name+'…';
+    try{
+      var buf=await f.arrayBuffer();
+      var text='';
+      if(/\.docx$/i.test(f.name)) text=await parseDocx(buf);
+      else if(/\.pptx$/i.test(f.name)) text=await parsePptx(buf);
+      else text=await parsePdf(buf);
+      if(!text||!text.trim()) throw new Error('未能提取到文本内容');
+      var title=f.name.replace(/\.[^.]+$/,'');
+      var probe=(title+' '+text).slice(0,20000);
+      var entry={
+        id:nextUploadId(), title:title,
+        lang:/[一-龥]/.test(text.slice(0,600))?'中文':'英文',
+        subfield:inferSubfieldUpload(probe),
+        doctype:'实验研究', objects:'三草酸合铁酸钾',
+        methods:'文献解析', depth:'实验研究级别', difficulty:'进阶级',
+        path:f.name, questions:[title+'的主要研究内容是什么？'],
+        content:text.slice(0,3000),
+        uploaded:true, fileSize:f.size, charCount:text.length,
+        time:new Date().toISOString()
+      };
+      newly.push(entry);
+    }catch(err){
+      alert('解析失败: '+f.name+' - '+(err&&err.message||err));
+    }
+  }
+  if(newly.length){
+    var up=lsGet('chemai_corpus_uploaded',[]);
+    newly.forEach(function(e){ up.push(e); });
+    lsSet('chemai_corpus_uploaded',up);
+    await loadCorpus();
+    if(qaChat&&!qaChat.querySelector('.msg')){
+      renderQAHistory();
+    }
+  }
+}
+function initFileUploadUI(){
+  var btn=$('#qaUploadBtn'), inp=$('#qaFileInput');
+  if(!btn||!inp) return;
+  btn.addEventListener('click',function(){ inp.click(); });
+  inp.addEventListener('change',function(){ if(inp.files.length){ handleFileUpload(inp.files).catch(function(e){ alert('上传处理出错: '+(e&&e.message||e)); }); inp.value=''; } });
 }
 
 /* ================= 检索：词典 / 实体识别 ================= */
@@ -2480,6 +2593,7 @@ window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,fa
 (async function init(){
   await llmLoadKey();  // 解密API Key
   llmInitUI();
+  initFileUploadUI();  // 文件上传（Word/PDF/PPTX → 知识清单）
   renderQAHistory();
   loadFAQ();  // #13: 异步加载完整FAQ（不阻塞UI）
   loadCorpus();  // 语料库异步加载，不再阻塞首屏

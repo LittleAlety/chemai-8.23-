@@ -1528,13 +1528,12 @@ function qaSubmit(){
   });
 }
 qaSend.addEventListener('click',qaSubmit);
-qaInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
-qaInput.addEventListener('input',()=>{qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
+qaInput.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
+qaInput.addEventListener('input',function(){qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
 $('#qaClear').addEventListener('click',function(){
   lsDel(QA_KEY);qaChat.innerHTML='';renderQAHistory();
 });
 $('#qaExport').addEventListener('click', exportChatHistory);
-/* “知识延伸”中的相关 FAQ chips：点击直接提问 */
 qaChat.addEventListener('click',function(e){
   var c=e.target.closest('.faq-chip');
   if(c&&!qaBusy){qaInput.value=c.dataset.q||'';qaSubmit();}

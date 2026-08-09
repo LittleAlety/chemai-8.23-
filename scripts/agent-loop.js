@@ -15,7 +15,9 @@ const TARGET = 200;
 const ROUNDS = Number(process.env.ROUNDS || 3);
 const START_ROUND = Number(process.env.START_ROUND || 1);
 
-const env = fs.readFileSync('C:/Users/Little Alety/.codex/skills/claude-vision/.env', 'utf8');
+const homeDir = process.env.HOME || process.env.USERPROFILE || '';
+const envPath = path.join(homeDir, '.codex/skills/claude-vision/.env');
+const env = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf8') : '';
 const getEnv = key => {
   const m = env.match(new RegExp('^' + key + '=(.*)$', 'm'));
   return m ? m[1].trim() : '';

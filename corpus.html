@@ -941,7 +941,7 @@ async function decryptToken(packed){
   }catch(e){return null}
 }
 /* ================= 索引 ================= */
-function saveIndexStore(){try{localStorage.setItem(LS_INDEX,JSON.stringify(corpusIndex))}catch(e){console.warn('索引保存失败',e)}}
+function saveIndexStore(){try{localStorage.setItem(LS_INDEX,JSON.stringify(corpusIndex))}catch(e){/* quota exceeded */}}
 function buildIndex(entries){
   const index=Object.create(null);
   entries.forEach(e=>{

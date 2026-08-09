@@ -575,55 +575,41 @@ function exportChatHistory(){
 }
 
 /* ================= DeepSeek LLM 配置 ================= */
-const LS_LLM_KEY='chemai_llm_key_enc', LS_LLM_KEY_LEGACY='chemai_llm_key';
 const LLM={
   enabled: lsGet('chemai_llm_enabled', true),
-  apiKey: '', // 运行时解密，不存明文
+  apiKey: lsGet('chemai_llm_key', ''),
   endpoint: 'https://api.deepseek.com/v1/chat/completions',
   model: lsGet('chemai_llm_model', 'deepseek-chat')
 };
-async function llmLoadKey(){
-  // 迁移旧明文Key
-  const leg=localStorage.getItem(LS_LLM_KEY_LEGACY);
-  if(leg&&leg.trim()){try{const e=await _encrypt(leg.trim());localStorage.setItem(LS_LLM_KEY,e)}catch(ex){}localStorage.removeItem(LS_LLM_KEY_LEGACY)}
-  // 解密
-  const enc=localStorage.getItem(LS_LLM_KEY);
-  if(enc){const pt=await _decrypt(enc);if(pt)LLM.apiKey=pt}
-}
-async function llmSave(){
-  lsSet('chemai_llm_enabled',LLM.enabled); lsSet('chemai_llm_model',LLM.model);
-  // 加密存储Key
-  if(LLM.apiKey&&LLM.apiKey.trim()){try{const e=await _encrypt(LLM.apiKey.trim());localStorage.setItem(LS_LLM_KEY,e)}catch(ex){}}
-  else{localStorage.removeItem(LS_LLM_KEY)}
-}
+function llmSave(){ lsSet('chemai_llm_enabled',LLM.enabled); lsSet('chemai_llm_key',LLM.apiKey); lsSet('chemai_llm_model',LLM.model); }
 function llmInitUI(){
   const ki=$('#llmKeyInput'), ms=$('#llmModelSelect'), tg=$('#llmToggle'), sb=$('#llmSaveBtn'), st=$('#llmStatus');
   if(!ki)return;
   ki.value=LLM.apiKey||''; ms.value=LLM.model||'deepseek-chat'; tg.checked=LLM.enabled;
-  function up(){ if(!LLM.enabled)st.textContent='⏸ 已禁用'; else if(!LLM.apiKey)st.textContent='⚠ 未配置Key'; else st.textContent='✅ LLM就绪 (Key已加密)'; }
+  function up(){ if(!LLM.enabled)st.textContent='⏸ 已禁用'; else if(!LLM.apiKey)st.textContent='⚠ 未配置Key'; else st.textContent='✅ LLM就绪'; }
   up();
-  sb.addEventListener('click',async ()=>{ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; await llmSave(); up(); });
-  tg.addEventListener('change',async ()=>{ LLM.enabled=tg.checked; await llmSave(); up(); });
+  sb.addEventListener('click',function(){ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; llmSave(); up(); });
+  tg.addEventListener('change',function(){ LLM.enabled=tg.checked; llmSave(); up(); });
 }
 async function callLLM(question, context, streamCallback){
-  const messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
+  var messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
   // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
-  let userMsg=question;
+  var userMsg=question;
   if(context && context.trim()){
     userMsg='<corpus-context>\n'+context.slice(0,4000)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
   }
   messages.push({role:'user', content: userMsg});
 
-  const useStream = !!streamCallback;
+  var useStream = !!streamCallback;
   // 指数退避重试 (最多3次)
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (var attempt = 1; attempt <= 3; attempt++) {
     try {
-      const ctrl = new AbortController();
-      const tm = setTimeout(function(){ ctrl.abort(); }, 30000); // 30s timeout
-      const body = {model: LLM.model, messages, max_tokens: 800, temperature: 0.3};
+      var ctrl = new AbortController();
+      var tm = setTimeout(function(){ ctrl.abort(); }, 30000); // 30s timeout
+      var body = {model: LLM.model, messages: messages, max_tokens: 800, temperature: 0.3};
       if (useStream) body.stream = true;
 
-      const resp = await fetch(LLM.endpoint, {
+      var resp = await fetch(LLM.endpoint, {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + LLM.apiKey},
         body: JSON.stringify(body),
@@ -668,8 +654,8 @@ async function callLLM(question, context, streamCallback){
       }
 
       // 非流式模式
-      var data = await resp.json();
-      return data.choices[0].message.content;
+      var jdata = await resp.json();
+      return jdata.choices[0].message.content;
     } catch(e) {
       // 最后一次失败则抛出
       if (attempt >= 3) throw e;

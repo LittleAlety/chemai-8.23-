@@ -110,6 +110,28 @@ a:hover{color:var(--em)}
 .pipe-meta{font-size:12px;color:var(--t3);margin:6px 0 2px;padding-left:32px}
 .pipe-meta b{color:var(--em)}
 
+/* ===== 智能体集群 置信度 + 自查 ===== */
+.confidence-bar{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:11px}
+.confidence-bar .cf-label{min-width:90px;color:var(--t2);white-space:nowrap}
+.confidence-bar .cf-track{flex:1;height:5px;border-radius:5px;background:var(--hover);overflow:hidden}
+.confidence-bar .cf-fill{display:block;height:100%;border-radius:5px;transition:width .6s ease}
+.cf-high .cf-fill{background:linear-gradient(90deg,var(--em),var(--teal))}
+.cf-med .cf-fill{background:linear-gradient(90deg,var(--yellow),var(--em))}
+.cf-low .cf-fill{background:linear-gradient(90deg,var(--red),var(--yellow))}
+.confidence-bar .cf-pct{width:32px;text-align:right;color:var(--t2);font-family:ui-monospace,monospace}
+.selfcheck-warn{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);border-radius:10px;padding:8px 12px;margin-top:8px;font-size:12px;color:var(--t2)}
+.selfcheck-warn::before{content:"⚠ ";font-size:13px}
+.selfcheck-ok{font-size:11px;color:var(--teal);display:flex;align-items:center;gap:4px}
+.selfcheck-ok::before{content:"✓";font-weight:700;font-size:13px}
+.analogy-banner{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.25);border-radius:10px;padding:8px 12px;margin:6px 0;font-size:12px}
+.analogy-banner .bridge-icon{display:inline-block;margin-right:4px;font-size:14px}
+.source-tag{display:inline-block;font-size:10px;padding:1px 7px;border-radius:10px;font-weight:600}
+.source-tag.faq{background:rgba(16,185,129,.15);color:var(--em);border:1px solid rgba(16,185,129,.3)}
+.source-tag.corpus{background:rgba(96,165,250,.15);color:var(--blue);border:1px solid rgba(96,165,250,.3)}
+.source-tag.analogy{background:rgba(167,139,250,.15);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
+.ref-toggle{background:var(--card);border:1px solid var(--bd2);border-radius:8px;color:var(--t2);font-size:12px;padding:4px 10px;cursor:pointer;font-family:inherit;transition:.18s}
+.ref-toggle:hover{color:var(--em);border-color:rgba(16,185,129,.45)}
+
 /* 文献卡片 */
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:10px}
 .doc-card{background:var(--card);border:1px solid var(--bd2);border-radius:12px;padding:11px 13px;transition:.2s;display:block}

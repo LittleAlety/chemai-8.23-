@@ -1265,26 +1265,29 @@ function matchFAQ(q){
 }
 /* 相关 FAQ 推荐（用于"知识延伸"追问 chips） */
 function relatedFAQs(q,exclude,n){
-  const nq=norm(q);const scored=[];
-  for(const f of FAQ){
-    if(f===exclude)continue;
-    let s=0;
-    for(const en of (f.ents||[])){if(nq.includes(norm(en)))s+=3;}
-    if(exclude){for(const en of (f.ents||[])){if((exclude.ents||[]).includes(en))s+=2;}}
-    for(const k of f.keys){if(nq.includes(norm(k)))s+=1;}
-    if(s>0)scored.push({f,s});
-  }
-  scored.sort((a,b)=>b.s-a.s);
-  const out=scored.slice(0,n||3).map(x=>x.f);
-  if(out.length<(n||3)){
-    const FALLBACK=['完整操作流程（六步主线）','实验原理：三步反应方程式与机理','实验现象与终点判断','温度控制要点'];
-    for(const t of FALLBACK){
-      if(out.length>=(n||3))break;
-      const f=FAQ.find(x=>x.title===t);
-      if(f&&f!==exclude&&!out.includes(f))out.push(f);
+  try {
+    var nq=norm(q), scored=[];
+    for(var i=0;i<FAQ.length;i++){
+      var f=FAQ[i];
+      if(f===exclude) continue;
+      var s=0;
+      for(var j=0;j<(f.ents||[]).length;j++){if(nq.indexOf(norm(f.ents[j]))>=0) s+=3;}
+      if(exclude){for(var j2=0;j2<(f.ents||[]).length;j2++){if((exclude.ents||[]).indexOf(f.ents[j2])>=0) s+=2;}}
+      for(var k=0;k<f.keys.length;k++){if(nq.indexOf(norm(f.keys[k]))>=0) s+=1;}
+      if(s>0) scored.push({f:f,s:s});
     }
-  }
-  return out;
+    scored.sort(function(a,b){return b.s-a.s;});
+    var out=scored.slice(0,n||3).map(function(x){return x.f;});
+    if(out.length<(n||3)){
+      var FALLBACK=['完整操作流程（六步主线）','实验原理：三步反应方程式与机理','实验现象与终点判断','温度控制要点'];
+      for(var t=0;t<FALLBACK.length;t++){
+        if(out.length>=(n||3)) break;
+        var found=FAQ.filter(function(x){return x.title===FALLBACK[t];})[0];
+        if(found&&found!==exclude&&out.indexOf(found)<0) out.push(found);
+      }
+    }
+    return out;
+  } catch(e) { return []; }
 }
 
 /* ================= 问答 Tab ================= */

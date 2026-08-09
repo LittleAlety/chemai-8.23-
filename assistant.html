@@ -259,6 +259,7 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
         <div class="panel-bar">
           <div class="corpus-status" id="corpusStatus"><span class="dot"></span><span id="corpusStatusTxt">正在加载知识清单…</span></div>
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
+          <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
@@ -374,9 +375,28 @@ function llmInitUI(){
   ki.value=LLM.apiKey||''; ms.value=LLM.model||'deepseek-chat'; tg.checked=LLM.enabled;
   function up(){ if(!LLM.enabled)st.textContent='⏸ 已禁用'; else if(!LLM.apiKey)st.textContent='⚠ 未配置Key'; else st.textContent='✅ LLM就绪'; }
   up();
-  sb.addEventListener('click',()=>{ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; llmSave(); up(); });
-  tg.addEventListener('change',()=>{ LLM.enabled=tg.checked; llmSave(); up(); });
+  sb.addEventListener('click',function(){ LLM.apiKey=ki.value.trim(); LLM.model=ms.value; LLM.enabled=tg.checked; llmSave(); up(); });
+  tg.addEventListener('change',function(){ LLM.enabled=tg.checked; llmSave(); up(); });
 }
+
+/* #22: 对话导出 */
+function exportChatHistory(){
+  var h = lsGet(QA_KEY, []);
+  if (!h.length) { alert('暂无对话历史可导出'); return; }
+  var md = '# ChemAI 对话历史\n\n导出时间: ' + new Date().toLocaleString() + '\n\n---\n\n';
+  h.forEach(function(msg){
+    var role = msg.role === 'user' ? '👤 用户' : '🤖 ChemAI';
+    var text = msg.html.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+    md += '### ' + role + '\n\n' + text + '\n\n---\n\n';
+  });
+  var blob = new Blob([md], {type: 'text/markdown'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'chemai_chat_' + new Date().toISOString().slice(0, 10) + '.md';
+  a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 800);
+}
+
 async function callLLM(question, context){
   const messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
   if(context && context.trim()) messages.push({role:'system', content: '【参考知识库内容】\n'+context.slice(0,4000)});
@@ -1121,7 +1141,7 @@ const FAQ=[
  {keys:["趁热过滤","草酸亚铁","氧化","热水洗涤","纯度"],ents:["草酸亚铁","摩尔盐"],title:'趁热过滤的必要性',q:'从摩尔盐制备草酸亚铁时，为什么强调趁热过滤？',knode:'',subfield:'摩尔盐相关',answer:'草酸亚铁(FeC₂O₄·2H₂O)在制备时通常将摩尔盐与草酸溶液加热至沸，生成黄色沉淀。趁热过滤是为了减少沉淀粒子表面吸附杂质，并且高温时溶液黏度低，过滤快，沉淀不易胶溶。同时，趁热操作能缩短亚铁盐与空气接触时间，避免Fe²⁺氧化为Fe³⁺生成黄褐色杂质。过滤后用热水洗涤沉淀，可洗去残留的草酸、硫酸根和铵离子，提高中间体纯度。',detail:'沉淀形成后若冷却，部分草酸亚铁可能水解或氧化，表面吸附增加，导致最终三草酸合铁(III)酸钾产率下降、颜色偏差。实验室通常使用布氏漏斗抽滤，快速、分离完全。'},
  {keys:["发现历史","配位化学","光化学","蓝晒史","维尔纳理论"],ents:["三草酸合铁(III)酸钾","蓝晒法"],title:'发现与发展简史',q:'三草酸合铁(III)酸钾的发现和历史背景是什么？',knode:'',subfield:'化学史',answer:'三草酸合铁(III)酸钾的合成历史可追溯到19世纪无机配位化学发展时期。最早关于草酸铁配合物的记载在1830年代，当时化学家尝试将草酸与铁盐作用得到各种结晶。明确结构的K₃[Fe(C₂O₄)₃]·3H₂O由19世纪末的配位化学先驱研究，用于验证维尔纳配位理论。20世纪初，其感光性被注意到并应用到铁盐印相法中，作为一种灵敏的光量计广泛用于���外线测量，在化学史上既是教学经典又是光化学早期模型。',detail:'约翰·赫歇尔在19世纪40年代实验蓝晒法时可能已使用过草酸铁。1900年代，化学家Luther和Michl等系统研究其光解动力学，开创了化学光量学。'},
  {keys:["蓝晒","草酸铁","感光剂","蓝图","工程复制"],ents:["三草酸合铁(III)酸钾","蓝图"],title:'感光剂演变的历史地位',q:'蓝晒工艺中为什么早期会采用三草酸合铁（III）酸盐？',knode:'',subfield:'化学史',answer:'早期蓝晒工艺主要使用柠檬酸铁铵，但后来发现草酸铁(III)配合物（如三草酸合铁(III)酸钾）感光更快，且涂布后暗反应较少，所得蓝色成像密度更高、层次更丰富。19世纪末至20世纪初，随着配位化学的发展，人们深入认识其光化学反应原理，草酸铁配合物逐渐在工程蓝图复制中替代部分传统感光剂，成为铁盐印相体系的重要组成，并为现代光化学研究提供了简单的教学模型。',detail:'赫歇尔1842年发明的蓝晒法推动了廉价图纸复制，草酸铁感光剂在其后数十年被改良应用，直至氨气熏显法被淘汰。'},
-];
+];
 /* FAQ 匹配/* FAQ 匹配：多关键词命中率 + 化学实体加权；单关键词命中但实体不匹配时不触发 */
 function matchFAQ(q){
   const nq=norm(q);let best=null,bestScore=0;
@@ -1397,12 +1417,13 @@ function qaSubmit(){
 qaSend.addEventListener('click',qaSubmit);
 qaInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
 qaInput.addEventListener('input',()=>{qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
-$('#qaClear').addEventListener('click',()=>{
+$('#qaClear').addEventListener('click',function(){
   lsDel(QA_KEY);qaChat.innerHTML='';renderQAHistory();
 });
+$('#qaExport').addEventListener('click', exportChatHistory);
 /* “知识延伸”中的相关 FAQ chips：点击直接提问 */
-qaChat.addEventListener('click',e=>{
-  const c=e.target.closest('.faq-chip');
+qaChat.addEventListener('click',function(e){
+  var c=e.target.closest('.faq-chip');
   if(c&&!qaBusy){qaInput.value=c.dataset.q||'';qaSubmit();}
 });
 const CHIPS=['本实验的原理是什么？三步反应方程式','为什么要用 H₂O₂ 作氧化剂？','产率如何计算？以哪种试剂为基准？','抽滤操作要注意什么？','三草酸合铁酸钾为什么要避光保存？','蓝晒的原理是什么？'];

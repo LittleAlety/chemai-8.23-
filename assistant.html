@@ -1253,14 +1253,15 @@ const FAQ=[
 ];
 /* FAQ 匹配/* FAQ 匹配：多关键词命中率 + 化学实体加权；单关键词命中但实体不匹配时不触发 */
 function matchFAQ(q){
-  const nq=norm(q);let best=null,bestScore=0;
-  for(const f of FAQ){
-    let kh=0,longKey=0;
-    for(const k of f.keys){if(nq.includes(norm(k))){kh++;if(norm(k).length>=3)longKey++;}}
-    let eh=0;for(const en of (f.ents||[])){if(nq.includes(norm(en)))eh++;}
-    const trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2);
-    if(!trig)continue;
-    const score=kh*2+eh*3+longKey*0.5;
+  var nq=norm(q);var best=null,bestScore=0;
+  for(var i=0;i<FAQ.length;i++){
+    var f=FAQ[i];
+    var kh=0,longKey=0;
+    for(var j=0;j<f.keys.length;j++){var k=f.keys[j];if(nq.indexOf(norm(k))>=0){kh++;if(norm(k).length>=3)longKey++;}}
+    var eh=0;for(var ej=0;ej<(f.ents||[]).length;ej++){var en=f.ents[ej];if(nq.indexOf(norm(en))>=0)eh++;}
+    var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2);
+    if(!trig) continue;
+    var score=kh*2+eh*3+longKey*0.5;
     if(score>=bestScore){bestScore=score;best=f;}
   }
   return best;

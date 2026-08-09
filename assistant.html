@@ -605,7 +605,8 @@ async function callLLM(question, context, streamCallback){
     userMsg='<corpus-context>\n'+context.slice(0,4000)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
   }
   messages.push({role:'user', content: userMsg});
-  const useStream = !!streamCallback;
+  // LLM调用添加30秒超时
+  const ctrl=new AbortController();const tm=setTimeout(()=>ctrl.abort(),30000);
   const body = {model:LLM.model, messages, max_tokens:800, temperature:0.3};
   if (useStream) body.stream = true;
 
@@ -1190,7 +1191,7 @@ function matchFAQ(q){
     const title=norm(f.title||''), qn=norm(f.q||f.title||'');
     const titleHit=!!(title&&(nq.includes(title)||title.includes(nq)));
     const qHit=!!(qn&&(nq.includes(qn)||qn.includes(nq)));
-    const trig=(kh>=1)||(eh>=1)||titleHit||qHit; // relaxed threshold: single key/entity match triggers candidate
+const trig=(kh>=1)||(eh>=1)||titleHit||qHit; // v34: relaxed — single key/entity match passes candidate (prev: kh>=2)
     if(!trig)continue;
     const diffBoost=(/区别|比较|对比|vs/.test(nq)&&/vs|比较|区别|对比/.test(f.title||''))?8:0;
     const intentBoost=(/为何|为什么|目的|作用/.test(nq)&&/为何|为什么|目的|作用/.test(f.title||''))?6:0;

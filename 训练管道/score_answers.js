@@ -26,6 +26,8 @@ if (!API_KEY) {
   process.exit(1);
 }
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const ROUND = process.argv[2] ? parseInt(process.argv[2]) : 1;
+console.log('Score Answers — Round ' + ROUND);
 const MODEL = 'deepseek-flash';
 const RATE_LIMIT_MS = 500;
 

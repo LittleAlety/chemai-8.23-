@@ -2577,14 +2577,14 @@ window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,fa
   initFileUploadUI();
   llmInitUI();
   renderQAHistory();
-  // 立即更新状态栏为加载中
+  // 立即更新状态栏为加载中; 语料库和FAQ后台异步加载
   (function(){
     var st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
     if(st) st.className='corpus-status';
     if(tx) tx.textContent='正在加载知识清单…';
   })();
-  loadCorpus();  // 不await，让它在后台加载（状态栏会通过回调更新）
-  loadFAQ().catch(function(e){});  // 异步加载
+  loadCorpus().catch(function(e){});
+  loadFAQ().catch(function(e){});
   var mode='qa';
   try { mode = (new URLSearchParams(location.search)).get('mode') === 'assess' ? 'assess' : 'qa'; } catch(e) {}
   switchTab(mode, false);

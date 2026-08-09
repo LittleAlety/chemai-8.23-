@@ -2593,9 +2593,9 @@ $('#navToggle').addEventListener('click',()=>$('#topNav').classList.toggle('open
 window.ChemAIQA={searchCorpus,extractTerms,matchFAQ,relatedFAQs,corpus:Corpus,faqCount:FAQ.length,kpExplains:KP.map(k=>k.explain)};
 
 (async function init(){
+  initFileUploadUI();
   llmInitUI();
   renderQAHistory();
-  initFileUploadUI();
   await loadCorpus();  // 语料库加载→更新状态栏
   // FAQ 异步加载，不阻塞渲染
   loadFAQ().catch(function(e){});

@@ -1146,17 +1146,17 @@ async function loadFAQ(){
   // 第1层：sessionStorage 缓存（同浏览器会话复用）
   try{
     const cached=sessionStorage.getItem(FAQ_CACHE_KEY);
-    if(cached){FAQ=JSON.parse(cached);buildFAQIndex(FAQ);console.log('FAQ从sessionStorage恢复:'+FAQ.length+'条');window.ChemAIQA.faqCount=FAQ.length;return;}
+    if(cached){FAQ=JSON.parse(cached);buildFAQIndex(FAQ);window.ChemAIQA.faqCount=FAQ.length;return;}
   }catch(e){/* 不可用则忽略 */}
   // 第2层：fetch faq_unified.json（浏览器HTTP缓存自动生效）
   try{
     const resp=await fetch('data/faq_unified.json',{cache:'force-cache'});
     if(resp.ok){
-      FAQ=await resp.json();buildFAQIndex(FAQ);console.log('FAQ加载完成:'+FAQ.length+'条');
+      FAQ=await resp.json();buildFAQIndex(FAQ);
       try{sessionStorage.setItem(FAQ_CACHE_KEY,JSON.stringify(FAQ));}catch(e){/* 超过配额则忽略 */}
       window.ChemAIQA.faqCount=FAQ.length;return;
     }
-  }catch(e){console.warn('FAQ加载失败，已降级为语料库/网络检索模式',e);}
+  }catch(e){/* FAQ fetch failed, fallback to built-in */}
   // 第3层：兜底
   buildFAQIndex(FAQ_FALLBACK);
 }
@@ -1593,7 +1593,7 @@ async function handleQA(q){
         html=''; // 标记已使用LLM，跳过本地答案
         usedLLM=true;
       }
-    }catch(e){ console.warn('LLM failed, using local:', e.message); }
+    }catch(e){ /* LLM unavailable, fall back to local reasoning */ }
   }
 
   if(!usedLLM){

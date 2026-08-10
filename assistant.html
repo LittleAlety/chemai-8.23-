@@ -262,6 +262,39 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   .chat{max-height:none;min-height:320px}
   .composer{padding:10px 12px 13px}
 }
+
+/* ===== 回答排版优化 ===== */
+.ans-sec h4{display:flex;align-items:center;gap:8px}
+.ans-sec h4::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--grad);flex-shrink:0}
+.ans-eq{white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.22);border-left:2px solid var(--em);border-radius:8px;padding:6px 12px;margin:4px 0}
+.rich-answer p{margin:10px 0}
+.rich-answer ul,.rich-answer ol{margin:10px 0 10px 22px}
+.rich-answer li{margin:6px 0}
+/* 著录信息卡片 */
+.bib-list{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.bib-item{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:11px 14px}
+.bib-item .bib-t{font-size:13.5px;font-weight:600;color:var(--t1);line-height:1.55}
+.bib-item .bib-m{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font-size:12px;color:var(--t2);line-height:1.6}
+.bib-item .bib-m b{color:var(--teal);font-weight:500;margin-right:3px}
+.bib-item details{margin-top:8px}
+.bib-item details>summary{cursor:pointer;font-size:12px;color:var(--teal);list-style:none;user-select:none;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border:1px solid var(--bd2);border-radius:8px;transition:.2s}
+.bib-item details>summary:hover{background:var(--hover)}
+.bib-item details>summary::before{content:"\25B8";font-size:10px}
+.bib-item details[open]>summary::before{content:"\25BE"}
+.bib-item details>summary::-webkit-details-marker{display:none}
+.bib-abs-txt{margin-top:8px;padding:9px 12px;font-size:12.5px;line-height:1.75;color:var(--t2);background:rgba(0,0,0,.18);border-left:2px solid var(--purple);border-radius:0 8px 8px 0}
+/* 可折叠文献区 */
+details.ref-fold{margin-top:4px}
+details.ref-fold>summary{cursor:pointer;list-style:none;user-select:none;display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg2);border:1px solid var(--bd2);border-radius:12px;font-size:14px;font-weight:600;color:var(--teal);transition:.2s}
+details.ref-fold>summary:hover{border-color:rgba(45,212,191,.4);background:var(--hover)}
+details.ref-fold>summary::-webkit-details-marker{display:none}
+.rf-arrow{margin-left:auto;font-size:11px;color:var(--t3);transition:transform .2s}
+details.ref-fold[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
+.ref-fold-body{border:1px solid var(--bd2);border-top:none;border-radius:0 0 12px 12px;background:var(--bg2);padding:12px 14px 14px}
+.cite-list{margin:0 0 0 18px;font-size:13px}
+.cite-list>li{margin:10px 0;line-height:1.7}
+.ref-fold-body .doc-grid{margin-top:12px}
 </style>
 </head>
 <body>
@@ -1521,9 +1554,9 @@ function buildAnalogyBridgedAnswer(q, ctx){
   }
   var allAnalogyRefs=analogyHits.concat(methodHits);
   if(allAnalogyRefs.length>0){
-    s+='<div class="ans-sec"><h4>③ 类比来源文献（'+allAnalogyRefs.length+' 篇）</h4>';
-    s+='<p class="muted" style="margin-bottom:4px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
-    s+='<ul style="margin-left:18px;font-size:12px">';
+    s+='<div class="ans-sec"><details class="ref-fold"'+(allAnalogyRefs.length<=2?' open':'')+'><summary>🔗 ③ 类比来源文献（'+allAnalogyRefs.length+' 篇）<span class="rf-arrow">▸</span></summary>';
+    s+='<div class="ref-fold-body"><p class="muted" style="margin-bottom:6px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
+    s+='<ul class="cite-list" style="font-size:12px">';
     var shown={};
     for(var ri=0;ri<Math.min(allAnalogyRefs.length,5);ri++){
       var r=allAnalogyRefs[ri];
@@ -1534,12 +1567,11 @@ function buildAnalogyBridgedAnswer(q, ctx){
         +(r.e.methods?'；关键方法：'+esc(r.e.methods):'')
         +'</li>';
     }
-    s+='</ul></div>';
+    s+='</ul></div></details></div>';
   }
   if(directHits.length>0){
-    s+='<div class="ans-sec">';
-    s+='<button type="button" class="ref-toggle" data-count="'+directHits.length+'" aria-expanded="false">📚 查看文献支持（'+directHits.length+' 篇）</button>';
-    s+='<div class="ref-support-body" hidden>';
+    s+='<div class="ans-sec"><details class="ref-fold"><summary>📚 文献支持（'+directHits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
+     +'<div class="ref-fold-body"><ol class="cite-list">'+directHits.map(citationHTML).join('')+'</ol></div></details></div>';
   }
   s+='<div class="ans-sec"><h4>'+(analogies.length>0?'④':'②')+' 网络补充检索</h4>'+webFallbackHTML(q)+'</div>';
   s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
@@ -1683,6 +1715,21 @@ function citationHTML(r){
     s+='<br><span style="color:#fbbf24;font-size:12px">📎 文献原文摘录（≤300字）：“'+esc(snip)+'”</span>';
   }
   return s+'</li>';
+}
+/* 著录信息卡片（② 原理与细节 用，摘要可折叠） */
+function bibItemHTML(r){
+  var e=r.e;
+  var s='<div class="bib-item"><div class="bib-t">📖 《'+esc(e.title)+'》</div><div class="bib-m">';
+  if(e.subfield) s+='<span><b>子领域</b>'+esc(e.subfield)+'</span>';
+  if(e.objects) s+='<span><b>研究对象</b>'+esc(e.objects)+'</span>';
+  if(e.methods) s+='<span><b>关键方法</b>'+esc(e.methods)+'</span>';
+  if(e.questions&&e.questions[0]) s+='<span><b>聚焦问题</b>'+esc(e.questions[0])+'</span>';
+  s+='</div>';
+  if(e.abstract){
+    var abs=String(e.abstract);
+    s+='<details><summary>摘要要点</summary><div class="bib-abs-txt">'+esc(abs.slice(0,220))+(abs.length>220?'…':'')+'</div></details>';
+  }
+  return s+'</div>';
 }
 function webFallbackHTML(q){
   var links=[
@@ -1831,7 +1878,22 @@ function renderRichAnswer(text){
         return '<li>'+inlineRich(clean)+'</li>';
       }).join('')+'</'+tag+'>';
     }
-    var html=lines.map(function(line){
+    var expanded=[];
+    lines.forEach(function(line){
+      // 多步反应式（含箭头且含≥2个①②…编号）：按编号拆成独立方程式行
+      if(/[→←⇌⟶⟵]/.test(line)){
+        var circled=line.match(/[①②③④⑤⑥⑦⑧⑨⑩]/g);
+        if(circled&&circled.length>=2){
+          line.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).forEach(function(p){
+            p=p.replace(/[；;]\s*$/,'').trim();
+            if(p) expanded.push(p);
+          });
+          return;
+        }
+      }
+      expanded.push(line);
+    });
+    var html=expanded.map(function(line){
       var heading=/^(?:【|#{1,4}\s)/.test(line)||/^\*\*[^*]+\*\*$/.test(line);
       var eq=/(?:→|←|⇌|⟶|⟵|↓|↑)/.test(line);
       var clean=line.replace(/^#{1,4}\s+/,'');
@@ -1870,11 +1932,13 @@ function buildAnswerHTML(q,ctx){
   s+='</div>';
   s+='<div class="ans-sec"><h4>② 原理与细节</h4>';
   if(faq&&faq.detail) s+='<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>';
-  s+='<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><ul style="margin-left:18px">'
-   +hits.slice(0,3).map(r=>'<li><b>《'+esc(r.e.title)+'》</b>——研究对象：'+esc(r.e.objects||'—')+'；关键方法：'+esc(r.e.methods||'—')+((r.e.questions&&r.e.questions[0])?('；聚焦问题："'+esc(r.e.questions[0])+'"'):'')+(r.e.abstract?('<br><span style="color:#94a3b8">摘要要点："'+esc(String(r.e.abstract).slice(0,150))+(String(r.e.abstract).length>150?'…':'')+'"</span>'):'')+'</li>').join('')
-   +'</ul></div>';
-  s+='<div class="ans-sec"><h4>③ 依据文献（知识清单命中 '+hits.length+' 篇）</h4><ol style="margin-left:18px">'+hits.map(citationHTML).join('')+'</ol></div>';
-  s+='<div class="doc-grid">'+hits.map(docCardHTML).join('')+'</div>';
+  s+='<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><div class="bib-list">'
+   +hits.slice(0,3).map(bibItemHTML).join('')
+   +'</div></div>';
+  var foldOpen=hits.length<=2?' open':'';
+  s+='<div class="ans-sec"><details class="ref-fold"'+foldOpen+'><summary>📚 ③ 依据文献（知识清单命中 '+hits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
+   +'<div class="ref-fold-body"><ol class="cite-list">'+hits.map(citationHTML).join('')+'</ol>'
+   +'<div class="doc-grid">'+hits.map(docCardHTML).join('')+'</div></div></details></div>';
   s+=extendHTML(q,faq,hits);
   return s;
 }

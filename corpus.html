@@ -56,7 +56,9 @@ button{font-family:inherit}
 /* 卡片通用 */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:24px}
 /* 条形图 */
-.bar-row{display:grid;grid-template-columns:110px 1fr 52px;align-items:center;gap:12px;padding:5px 0;font-size:13px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 52px;align-items:center;gap:12px;padding:5px 0;font-size:13px;border-radius:8px;transition:background .2s}
+.bar-clickable{cursor:pointer}
+.bar-clickable:hover{background:rgba(45,212,191,.08)}
 .bar-name{color:var(--t2);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar-track{height:20px;background:rgba(10,14,26,.55);border-radius:6px;overflow:hidden}
 .bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--blue));width:0;transition:width .8s cubic-bezier(.2,.8,.3,1);min-width:2px}
@@ -327,13 +329,16 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       </div>
     </div>
     <div class="card">
-      <div style="font-size:15px;font-weight:700;margin-bottom:14px">子领域分布</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div style="font-size:15px;font-weight:700">子领域分布</div>
+        <button class="btn" id="viewAllBtn" style="font-size:12px;padding:7px 14px">📋 查看全部知识清单</button>
+      </div>
       <div id="barChart"></div>
     </div>
   </section>
 
   <!-- B. 知识清单浏览 -->
-  <section class="section">
+  <section class="section" id="section-browse">
     <div class="section-title"><div class="st-icon">📋</div>知识清单浏览<span class="st-sub">搜索、筛选、展开问题、导出</span></div>
     <div class="card">
       <div class="toolbar">
@@ -544,11 +549,21 @@ function refreshBarChart(){
   const rows=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
   const max=rows.length?rows[0][1]:1;
   document.getElementById('barChart').innerHTML=rows.map(([k,v])=>
-    '<div class="bar-row"><div class="bar-name" title="'+esc(k)+'">'+esc(k)+'</div>'+
-    '<div class="bar-track"><div class="bar-fill" data-w="'+(v/max*100).toFixed(1)+'"></div></div>'+
-    '<div class="bar-count">'+v+'</div></div>').join('')||'<div class="empty-tip">暂无数据</div>';
+    '<div class="bar-row bar-clickable" data-subfield="'+esc(k)+'" title="点击筛选该子领域">'
+    +'<div class="bar-name" title="'+esc(k)+'">'+esc(k)+'</div>'
+    +'<div class="bar-track"><div class="bar-fill" data-w="'+(v/max*100).toFixed(1)+'"></div></div>'
+    +'<div class="bar-count">'+v+'</div></div>').join('')||'<div class="empty-tip">暂无数据</div>';
   requestAnimationFrame(()=>setTimeout(()=>{
     document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%');
+    // 条形图点击跳转到知识清单并筛选对应子领域
+    document.querySelectorAll('.bar-clickable').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const sf=el.dataset.subfield;
+        $('#subfieldSel').value=sf;state.subfield=sf;state.page=1;
+        refreshList();
+        $('#section-browse').scrollIntoView({behavior:'smooth'});
+      });
+    });
   },30));
 }
 
@@ -1279,6 +1294,12 @@ function bindEvents(){
   ['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('drag')}));
   ['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('drag')}));
   dz.addEventListener('drop',e=>{if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files)});
+
+  $('#viewAllBtn').addEventListener('click',()=>{
+    $('#searchInput').value='';state.search='';state.subfield='';state.lang='';state.page=1;
+    $('#subfieldSel').value='';$('#langSel').value='';refreshList();
+    $('#section-browse').scrollIntoView({behavior:'smooth'});
+  });
 
   let searchTm;
   document.getElementById('searchInput').addEventListener('input',e=>{

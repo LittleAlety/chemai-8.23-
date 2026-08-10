@@ -956,6 +956,7 @@ async function decryptToken(packed){
   }catch(e){return null}
 }
 /* ================= 索引 ================= */
+function loadIndexStore(){try{const v=JSON.parse(localStorage.getItem(LS_INDEX));return v&&typeof v==='object'&&v.index?v:null}catch(e){return null}}
 function saveIndexStore(){try{localStorage.setItem(LS_INDEX,JSON.stringify(corpusIndex))}catch(e){/* quota exceeded */}}
 function buildIndex(entries){
   const index=Object.create(null);

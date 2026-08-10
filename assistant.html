@@ -1701,14 +1701,6 @@ function selfCheck(q, answerHTML, ctx){
   if(/ph\s*(≈|约|about|~)\s*7[\s\.\d]*.*fe\s*\(?\s*oh\s*\)?\s*2\s*沉淀|fe\s*\(?\s*oh\s*\)?\s*2\s*沉淀.*ph\s*(≈|约|about|~)\s*7/i.test(stripAns)){
     warnings.push('Fe(OH)₂ 开始沉淀的 pH 约为 6.3（非 7.5）——请以实际 Ksp 值（≈8×10⁻¹⁶）和溶度积计算为准：pH≈14+0.5×log(Ksp/0.01)≈6.3。');
   }
-  // #13: 虚构KCl杂质（v36新增）
-  if(/kcl|氯化钾|氯离子.*杂质|杂质.*氯/.test(stripAns)&&/三草酸合铁|k3\[fe|抽滤|洗涤|杂质/.test(stripAns)){
-    warnings.push('本实验铁源为莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O，体系中的可溶性杂质为 K₂SO₄、(NH₄)₂SO₄、过量 K₂C₂O₄，不存在氯离子。请修正杂质成分。');
-  }
-  // #14: d⁵自旋态混淆（v36新增）
-  if(/d⁵.*低自旋|低自旋.*d⁵|d5.*低自旋|低自旋.*d5/i.test(stripAns)&&/c2o4|草酸/.test(stripAns)){
-    warnings.push('C₂O₄²⁻ 是弱场配体，[Fe(C₂O₄)₃]³⁻ 为 d⁵ 高自旋（t₂g³ eg², CFSE=0），而非低自旋。低自旋 d⁵ 仅见于强场配体（如 CN⁻）配合物——请核实自旋态表述。');
-  }
   var passed=warnings.length===0;
   return {passed:passed, warnings:warnings};
 }

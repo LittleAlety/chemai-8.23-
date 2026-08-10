@@ -111,11 +111,30 @@ a:hover{color:var(--em)}
 .rich-answer ul,.rich-answer ol{margin:8px 0 8px 20px}
 .ans-line{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.85}
 .ans-head{display:block;font-weight:700;margin:10px 0 4px;color:var(--teal);overflow-wrap:anywhere;line-height:1.7}
-.ans-eq{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.9;font-family:ui-monospace,Consolas,monospace}
-.ans-eq-block{display:block;margin:6px 0;padding:8px 14px;font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.92em;line-height:2.1;background:rgba(0,0,0,.22);border-radius:10px;border-left:2px solid var(--em);overflow-x:auto;white-space:pre}
-.ans-inline-math{font-family:"Cambria Math","Latin Modern Math",ui-monospace,serif;font-style:italic;color:var(--teal)}
+.ans-eq{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.9;font-family:ui-monospace,Consolas,monospace;padding-left:10px;border-left:2px solid var(--bd2)}
+.ans-eq-block{display:block;margin:6px 0;padding:8px 14px;font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.92em;line-height:2.1;background:rgba(0,0,0,.22);border-radius:10px;border-left:3px solid var(--em);overflow-x:auto;white-space:pre}
+.ans-eq-block.ppt{border-left-color:var(--yellow)}
+.ans-eq-block.oxi{border-left-color:var(--blue)}
+.ans-eq-block.crd{border-left-color:var(--em)}
+.ans-inline-math{font-family:"Cambria Math","Latin Modern Math",ui-monospace,serif;font-style:normal;color:var(--teal)}
 .ans-sub{font-size:.82em;vertical-align:sub;line-height:0}
 .ans-sup{font-size:.82em;vertical-align:super;line-height:0}
+/* 答案头卡 */
+.ans-header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 14px;margin-bottom:10px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:10px;font-size:12.5px}
+.ans-header .ah-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-weight:600;white-space:nowrap;font-size:11.5px}
+.ans-header .ah-badge.src-faq{background:rgba(16,185,129,.18);color:var(--em);border:1px solid rgba(16,185,129,.35)}
+.ans-header .ah-badge.src-corpus{background:rgba(96,165,250,.15);color:var(--blue);border:1px solid rgba(96,165,250,.3)}
+.ans-header .ah-badge.src-analogy{background:rgba(167,139,250,.15);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
+.ans-header .ah-badge.src-llm{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
+.ans-header .ah-badge.src-web{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.25)}
+.ans-header .ah-badge.conf-high{background:rgba(16,185,129,.18);color:var(--em)}
+.ans-header .ah-badge.conf-med{background:rgba(251,191,36,.15);color:var(--yellow)}
+.ans-header .ah-badge.conf-low{background:rgba(248,113,113,.12);color:var(--red)}
+.ans-header .ah-sep{width:1px;height:16px;background:var(--bd2)}
+.ans-header .ah-meta{color:var(--t3);margin-left:auto}
+/* 网页搜索紧凑栏 */
+.web-row{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.web-row .lk{font-size:11.5px;padding:4px 10px;border-radius:16px}
 
 /* 检索流水线 */
 .pipe{display:flex;flex-direction:column;gap:0;margin:2px 0 4px}
@@ -506,7 +525,16 @@ function exportChatHistory(){
 }
 
 async function callLLM(question, context, streamCallback){
-  var messages=[{role:'system', content:'你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。请严格基于提供的参考知识库内容回答。如果参考内容不足，请说明。用中文回答，专业简洁。'}];
+  var systemPrompt='你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。\n\n'+
+    '你的知识边界覆盖以下领域（超出范围请明确说明"不确定"）：\n'+
+    '① 实验目的与产物认知 ② 反应原理（沉淀/氧化/配位三步） ③ 试剂与仪器 ④ 操作流程与关键参数 ⑤ 产率计算 ⑥ 误差分析 ⑦ 安全与废液处理 ⑧ 光化学应用与蓝晒 ⑨ 配位化学理论（晶体场/CFSE/磁性） ⑩ 热分析\n\n'+
+    '回答规则：\n'+
+    '- 严格基于提供的参考知识库内容回答，不得编造\n'+
+    '- 如果参考内容不足，请明确说"根据现有知识库，无法确定该问题的答案"，然后给出最相关的已知信息\n'+
+    '- 化学式请使用 Unicode 上下标格式（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻）\n'+
+    '- 用中文回答，专业简洁，分点列出时使用 · 或数字编号\n'+
+    '- 每个答案控制在 300 字以内，保留关键数字和化学式';
+  var messages=[{role:'system', content: systemPrompt}];
   // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
   var userMsg=question;
   if(context && context.trim()){
@@ -520,7 +548,7 @@ async function callLLM(question, context, streamCallback){
     try {
       var ctrl = new AbortController();
       var tm = setTimeout(function(){ ctrl.abort(); }, 30000); // 30s timeout
-      var body = {model: LLM.model, messages: messages, max_tokens: 800, temperature: 0.3};
+      var body = {model: LLM.model, messages: messages, max_tokens: 1000, temperature: 0.2};
       if (useStream) body.stream = true;
 
       var resp = await fetch(LLM.endpoint, {
@@ -591,7 +619,25 @@ function buildLLMContext(q){
       parts.push('【文献: '+rr.e.title+'】\n'+(rr.e.abstract||rr.e.objects||''));
     }
   }
-  return parts.join('\n\n');
+  // 补充化学实体提示
+  var chems2=detectChems(q);
+  if(chems2.length){
+    var tipParts=[];
+    for(var ci=0;ci<Math.min(chems2.length,3);ci++){
+      var c2=chems2[ci];
+      if(ENT_TIPS[c2.name]) tipParts.push(c2.name+': '+ENT_TIPS[c2.name]);
+    }
+    if(tipParts.length) parts.push('【实体知识】\n'+tipParts.join('\n'));
+  }
+  var raw=parts.join('\n\n');
+  // 截断在最后一个完整句号或换行处（不超过4500字符）
+  if(raw.length>4500){
+    var cutoff=raw.lastIndexOf('。',4500);
+    if(cutoff<3000) cutoff=raw.lastIndexOf('\n',4500);
+    if(cutoff<3000) cutoff=4500;
+    raw=raw.slice(0,cutoff+1);
+  }
+  return raw;
 }
 
 
@@ -1382,15 +1428,31 @@ function fixTypos(q){
 /* FAQ 匹配：多关键词命中率 + 化学实体加权 */
 function matchFAQ(q){
   var nq=norm(fixTypos(q));var best=null,bestScore=0;
+  // IDF 惩罚表：高频通用词降权
+  var IDF_PENALTY={'实验':0.4,'制备':0.5,'化学':0.5,'操作':0.6,'步骤':0.6,'原理':0.5,'方法':0.6,'分析':0.6,'测定':0.6,'研究':0.7,'反应':0.5,'产物':0.6,'合成':0.5,'配合物':0.6};
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
-    var kh=0,longKey=0;
-    for(var j=0;j<f.keys.length;j++){var k=f.keys[j];if(nq.indexOf(norm(k))>=0){kh++;if(norm(k).length>=3)longKey++;}}
-    var eh=0;for(var ej=0;ej<(f.ents||[]).length;ej++){var en=f.ents[ej];if(nq.indexOf(norm(en))>=0)eh++;}
+    var kh=0,longKey=0,keyScore=0;
+    for(var j=0;j<f.keys.length;j++){
+      var k=f.keys[j];var nk=norm(k);
+      if(nq.indexOf(nk)>=0){
+        kh++;
+        if(nk.length>=3) longKey++;
+        var idf=IDF_PENALTY[k]||1.0;
+        keyScore+=2*idf;
+      }
+    }
+    var eh=0,entScore=0;
+    for(var ej=0;ej<(f.ents||[]).length;ej++){
+      var en=f.ents[ej];
+      if(nq.indexOf(norm(en))>=0){eh++;entScore+=3;}
+    }
     var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2);
     if(!trig) continue;
-    var score=kh*2+eh*3+longKey*0.5;
-    if(score>=bestScore){bestScore=score;best=f;}
+    // 答案长度加权：长答案更可能是核心问题（上限+2）
+    var lenBonus=Math.min(2,((f.answer||'').length+(f.detail||'').length)/800);
+    var score=keyScore+entScore+longKey*0.5+lenBonus;
+    if(score>bestScore){bestScore=score;best=f;}
   }
   return best;
 }
@@ -1529,19 +1591,19 @@ function buildHybridAnswerHTML(q, ctx){
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
   var methodHits=ctx.methodHits, analogies=ctx.analogies, conf=ctx.conf;
-  var s='';
-  s+='<div class="ans-sec"><h4>① 核心解答</h4>';
+  var totalRefs=directHits.length+analogyHits.length+methodHits.length;
+  var srcType=faq?'faq':(directHits.length>0?'corpus':'analogy');
+  var s=answerHeaderHTML(conf, srcType, totalRefs, false);
+  s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
   if(faq){
     s+='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
-    s+='<span class="source-tag faq">内置FAQ</span>';
   } else if(directHits.length>0){
     s+=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
-    s+='<span class="source-tag corpus">语料库直接命中</span>';
   } else {
     s+='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
   }
   if(analogies.length>0){
-    s+='<div class="ans-sec"><h4>② 类比推理桥接</h4>';
+    s+='<div class="ans-sec"><h4>🔗 类比推理桥接</h4>';
     s+='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
     for(var ai=0;ai<analogies.length;ai++){
       var a=analogies[ai];
@@ -1554,7 +1616,7 @@ function buildAnalogyBridgedAnswer(q, ctx){
   }
   var allAnalogyRefs=analogyHits.concat(methodHits);
   if(allAnalogyRefs.length>0){
-    s+='<div class="ans-sec"><details class="ref-fold"'+(allAnalogyRefs.length<=2?' open':'')+'><summary>🔗 ③ 类比来源文献（'+allAnalogyRefs.length+' 篇）<span class="rf-arrow">▸</span></summary>';
+    s+='<div class="ans-sec"><details class="ref-fold"'+(allAnalogyRefs.length<=2?' open':'')+'><summary>📖 类比来源文献（'+allAnalogyRefs.length+' 篇）<span class="rf-arrow">▸</span></summary>';
     s+='<div class="ref-fold-body"><p class="muted" style="margin-bottom:6px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
     s+='<ul class="cite-list" style="font-size:12px">';
     var shown={};
@@ -1573,7 +1635,7 @@ function buildAnalogyBridgedAnswer(q, ctx){
     s+='<div class="ans-sec"><details class="ref-fold"><summary>📚 文献支持（'+directHits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
      +'<div class="ref-fold-body"><ol class="cite-list">'+directHits.map(citationHTML).join('')+'</ol></div></details></div>';
   }
-  s+='<div class="ans-sec"><h4>'+(analogies.length>0?'④':'②')+' 网络补充检索</h4>'+webFallbackHTML(q)+'</div>';
+  s+='<div class="ans-sec"><h4>🌐 网络补充</h4>'+webFallbackHTML(q)+'</div>';
   s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
   return s;
 }
@@ -1596,6 +1658,30 @@ function selfCheck(q, answerHTML, ctx){
     if(!/草酸.*毒|草酸盐.*毒|h2o2.*腐蚀/.test(stripAns)){
       warnings.push('本实验涉及的主要毒害试剂为草酸（有毒）和 H₂O₂（腐蚀性），请确保安全描述的准确性——产物 K₃[Fe(C₂O₄)₃] 本身为低毒性。');
     }
+  }
+  // #4: 温度混淆检查（烘干50℃ vs 失结晶水110℃）
+  if(/11[0-5]℃.*烘干|烘干.*11[0-5]℃|烘干.*110|在110.*烘/.test(stripAns)&&!/失水.*11[0-5]|113.*失|失结晶水|烘干.*50|50.*烘干/.test(stripAns)){
+    warnings.push('产物烘干温度为 50℃（而非 110℃）——110℃ 是失结晶水温度（~113℃），使用 110℃ 烘干会导致产物脱水变质。');
+  }
+  // #5: 产率基准混淆
+  if(/以草酸.*基准.*产率|产率.*基准.*草酸|以.*h2c2o4.*基准|基准.*h2c2o4/i.test(stripAns)){
+    warnings.push('产率计算应以莫尔盐为基准（Fe 元素守恒），而非草酸。1 mol 莫尔盐 → 1 mol 产物。');
+  }
+  // #6: H₂O₂浓度错误
+  if(/30%.*h2o2|30%.*双氧水|30%.*过氧化氢/.test(stripAns)&&!/稀释|6%|浓度.*6/.test(stripAns)){
+    warnings.push('本实验使用 6% H₂O₂（非 30%）。30% 过于剧烈会导致副反应和暴沸，若提及 30% 需说明稀释后使用。');
+  }
+  // #7: 温度参数错误
+  if(/60[℃度].*氧化|氧化.*60[℃度]|80[℃度].*氧化|氧化.*80[℃度]|100[℃度].*氧化|氧化.*100[℃度]/.test(stripAns)){
+    warnings.push('氧化阶段温度为 40℃ 而非更高——温度过高会加速 H₂O₂ 分解（2H₂O₂→2H₂O+O₂↑），降低氧化效率。');
+  }
+  // #8: 废液直排检查
+  if(/直接.*下水道|下水道.*排放|直接倒入.*水池|水池.*倒入/.test(stripAns)){
+    warnings.push('含铁和草酸盐的废液属重金属废液，严禁直排下水道——应倒入专用回收桶，加碱中和沉淀后按无机废液处置。');
+  }
+  // #9: 方程式箭头方向
+  if(/fe3\+.*→.*fe2\+|fe\(iii\).*→.*fe\(ii\)/.test(stripAns)&&!/hν|光照|光电/.test(stripAns)){
+    warnings.push('常规条件下 Fe³⁺→Fe²⁺ 的还原需要光照（光化学 LMCT）或强还原剂——请确认方程式条件是否标注正确。');
   }
   var passed=warnings.length===0;
   return {passed:passed, warnings:warnings};
@@ -1686,33 +1772,29 @@ async function animatePipe(bub,stepCount){
 }
 function docCardHTML(r){
   const e=r.e;
-  const qs=(e.questions||[]).slice(0,2).map(x=>'<div class="dc-q">❓ '+esc(x)+'</div>').join('');
-  const up=(e.id>=1000||e.content)?'<span class="dc-up">上传语料</span>':'';
   const w=Math.min(100,Math.round(r.score/60*100));
+  const up=(e.id>=1000||e.content)?'<span class="dc-up">上传语料</span>':'';
   return '<div class="doc-card">'
     +'<div class="dc-top"><span class="dc-id">#'+esc(e.id)+'</span><span class="dc-sub">'+esc(e.subfield||'未分类')+'</span>'+up+'</div>'
     +'<div class="dc-title">'+esc(e.title)+'</div>'
-    +(e.journal?'<div class="dc-row"><b>期刊：</b>'+esc(e.journal)+(e.doi?' · <a href="https://doi.org/'+esc(e.doi)+'" target="_blank" rel="noopener" style="color:#60a5fa">DOI: '+esc(e.doi)+' ↗</a>':'')+'</div>':'')
-    +(e.methods?'<div class="dc-row"><b>关键方法：</b>'+esc(e.methods)+'</div>':'')
-    +(e.objects?'<div class="dc-row"><b>研究对象：</b>'+esc(e.objects)+'</div>':'')
-    +qs
-    +(e.path?'<div class="dc-path">📄 '+esc(e.path)+'</div>':'')
+    +(e.journal?'<div class="dc-row"><b>期刊：</b>'+esc(e.journal)+(e.doi?' · <a href="https://doi.org/'+esc(e.doi)+'" target="_blank" rel="noopener" style="color:#60a5fa">DOI</a>':'')+'</div>':'')
+    +(e.methods?'<div class="dc-row"><b>方法：</b>'+esc(e.methods)+'</div>':'')
     +'<div class="score-bar" title="相关度评分 '+r.score+'"><i style="width:'+w+'%"></i></div>'
     +'</div>';
 }
 function citationHTML(r){
   const e=r.e;let s='<li><b>[#'+esc(e.id)+']</b> '+esc(e.title)+' <span class="muted">（'+esc(e.subfield||'')+(e.methods?(' · '+esc(e.methods)):'')+'）</span>';
-  if(e.questions&&e.questions.length) s+='<br><span class="muted">可回答：'+esc(e.questions.slice(0,3).join('；'))+'</span>';
+  if(e.questions&&e.questions.length) s+='<br><span class="muted">可回答：'+esc(e.questions.slice(0,2).join('；'))+'</span>';
   if(e.content){
-    const cn=norm(e.content);let pos=-1,term='';
-    for(const t of (r.hit||[])){const p=cn.indexOf(t);if(p>=0&&(pos<0||p<pos)){pos=p;term=t;}}
-    const raw=e.content;let snip=raw.slice(0,300);
+    var cn=norm(e.content);var pos=-1,term='';
+    for(var ti=0;ti<(r.hit||[]).length;ti++){var t2=r.hit[ti];var p=cn.indexOf(t2);if(p>=0&&(pos<0||p<pos)){pos=p;term=t2;}}
+    var raw=e.content;var snip=raw.slice(0,150);
     if(pos>=0){
-      const ratio=raw.length/Math.max(1,cn.length);
-      const st=Math.max(0,Math.floor(pos*ratio)-50),ed=Math.min(raw.length,st+300);
+      var ratio=raw.length/Math.max(1,cn.length);
+      var st=Math.max(0,Math.floor(pos*ratio)-30),ed=Math.min(raw.length,st+150);
       snip=(st>0?'…':'')+raw.slice(st,ed)+(ed<raw.length?'…':'');
     }
-    s+='<br><span style="color:#fbbf24;font-size:12px">📎 文献原文摘录（≤300字）：“'+esc(snip)+'”</span>';
+    s+='<br><span style="color:#fbbf24;font-size:11px">📎 摘录（~150字）：“'+esc(snip)+'”</span>';
   }
   return s+'</li>';
 }
@@ -1736,11 +1818,10 @@ function webFallbackHTML(q){
     ['百度','https://www.baidu.com/s?wd='+enc(q)],
     ['Bing','https://www.bing.com/search?q='+enc(q)],
     ['Google','https://www.google.com/search?q='+enc(q)],
-    ['中国知网 CNKI','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(q)],
-    ['B站搜索','https://search.bilibili.com/all?keyword='+enc(q)]
-  ].map(function(l){return '<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' <small>↗</small></a>';}).join('');
-  return '<div class="link-card warn"><h4>📡 知识清单未命中 · 已接入网络浏览</h4>'
-    +'<div class="muted" style="margin-bottom:7px">本地 '+(Corpus.total||276)+' 篇文献知识清单中未找到与该问题足够相关的条目，已为你生成即点即用的网络检索链接（问题已自动填入）：</div>'+links+'</div>';
+    ['知网','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(q)],
+    ['B站','https://search.bilibili.com/all?keyword='+enc(q)]
+  ].map(function(l){return '<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' ↗</a>';}).join('');
+  return '<div class="web-row">'+links+'</div>';
 }
 function msdsCardHTML(chems){
   const rows=chems.slice(0,4).map(c=>
@@ -1758,7 +1839,15 @@ function videoCardHTML(ops,q){
   else if(ops.includes('重结晶')||ops.includes('结晶')) kw='重结晶';
   else if(ops.includes('滴定')) kw='滴定操作';
   else if(ops.includes('过滤')) kw='减压过滤';
-  const vids=VIDEO_BV.map(v=>'<a class="lk" href="'+v.u+'" target="_blank" rel="noopener">🎬 '+esc(v.t)+' <small>↗</small></a>').join('');
+  // 按操作关键词过滤视频：视频标题包含操作词或默认全部保留
+  var filtered=VIDEO_BV.filter(function(v){
+    if(!ops.length) return true; // 无操作检测则全部显示
+    var vt=norm(v.t);
+    for(var oi=0;oi<ops.length;oi++){if(vt.indexOf(norm(ops[oi]))>=0) return true;}
+    return false;
+  });
+  if(!filtered.length) filtered=VIDEO_BV.slice(0,4); // 兜底：无匹配时显示前4个
+  var vids=filtered.map(function(v){return '<a class="lk" href="'+v.u+'" target="_blank" rel="noopener">🎬 '+esc(v.t)+' <small>↗</small></a>';}).join('');
   return '<div class="link-card video"><h4>🎥 相关视频（检测到实验操作关键词：'+esc(ops.slice(0,4).join('、'))+'）</h4>'
     +vids
     +'<a class="lk" href="https://search.bilibili.com/all?keyword='+enc(kw)+'" target="_blank" rel="noopener">🔍 B站搜索「'+esc(kw)+'」↗</a>'
@@ -1773,9 +1862,32 @@ const ENT_TIPS={
  '硫酸亚铁铵(莫尔盐)':'莫尔盐是稳定的 Fe(Ⅱ) 源兼产率计算基准：1 mol 莫尔盐理论生成 1 mol K₃[Fe(C₂O₄)₃]·3H₂O。',
  '乙醇':'乙醇用于降低产物溶解度促进结晶，并以"少量多次"方式洗涤晶体除杂。',
  '高锰酸钾':'KMnO₄ 滴定法可测定产品中 C₂O₄²⁻ 含量（75~85℃ 酸性介质），是组成分析的经典方法。',
- '铁氰化钾':'铁氰化钾与光还原生成的 Fe²⁺ 反应生成普鲁士蓝，是蓝晒显影的关键试剂。',
+ '铁氰化钾':'铁氰化钾与光还原生成的 Fe²⁺ 反应生成普鲁士蓝（滕氏蓝），是蓝晒显影的关键试剂。',
  '硫酸亚铁':'FeSO₄ 溶液易被空气氧化变黄，实验中通常改用更稳定的莫尔盐作 Fe(Ⅱ) 源。',
- '硫酸':'少量稀硫酸用于抑制 Fe²⁺ 水解，保持溶液澄清。'
+ '硫酸':'少量稀硫酸用于抑制 Fe²⁺ 水解，保持溶液澄清。',
+ // 以下为扩展条目（覆盖10个KP相关实体）
+ '莫尔盐':'莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 是测不准亚铁盐的替代品——比绿矾稳定得多，称量时不易吸潮也不易氧化，是产率计算的理想基准。',
+ '草酸亚铁':'FeC₂O₄·2H₂O 黄色沉淀是本实验的关键中间体——它把 Fe²⁺ 从大量硫酸根和铵离子中分离出来，纯化后再氧化配位。',
+ '草酸钾':'K₂C₂O₄ 提供配位所需的草酸根，同时引入外界 K⁺。氧化阶段需与草酸亚铁一起悬浮在溶液中。',
+ '布氏漏斗':'抽滤装置核心：布氏漏斗+吸滤瓶+真空泵（或水流泵）。滤纸需润湿贴紧，抽滤完毕必须先拔管后关泵，防止倒吸。',
+ '水浴加热':'本实验要求 40℃ 恒温水浴——温度过高 H₂O₂ 分解过快、氧化效率下降；温度过低反应太慢。用温度计实时监控。',
+ '产率计算':'产率 = 实际产量 ÷ 理论产量 × 100%。理论产量按限量试剂莫尔盐计算（1:1 摩尔比），正常范围 55%~80%。',
+ '避光保存':'产物 [Fe(C₂O₄)₃]³⁻ 见光发生分子内氧化还原（LMCT），Fe³⁺→Fe²⁺、C₂O₄²⁻→CO₂，晶体由翠绿变黄，须用棕色瓶暗处保存。',
+ '蓝晒工艺':'两步法：①感光 2[Fe(C₂O₄)₃]³⁻+hν→2Fe²⁺+5C₂O₄²⁻+2CO₂↑；②显影 3Fe²⁺+2[Fe(CN)₆]³⁻→Fe₃[Fe(CN)₆]₂↓（滕氏蓝）。',
+ '滕氏蓝':'滕氏蓝 Fe₃[Fe(CN)₆]₂ 与普鲁士蓝 Fe₄[Fe(CN)₆]₃ 结构相似、颜色相近，都是铁氰化物蓝色颜料，蓝晒影像的呈色物质。',
+ '晶体场理论':'Fe³⁺(d⁵) 在八面体场中 d 轨道分裂为 t₂g 和 eg，Δ₀ 约 14,300 cm⁻¹。草酸根是弱场配体，电子排布为高自旋 t₂g³ eg²，CFSE=0。',
+ '高自旋':'d⁵ 高自旋态 CFSE=0Δ₀，磁矩 μ≈5.92 B.M.（5 个未成对电子），是判断配合物电子结构的"指纹性"数据。',
+ '磁矩':'K₃[Fe(C₂O₄)₃]·3H₂O 室温磁矩约 5.9 B.M.（Gouy 磁天平法测定），与纯自旋值 √35≈5.92 吻合，证实高自旋 d⁵ 构型。',
+ '磁化率':'本配合物的摩尔磁化率 χₘ 约 14,700×10⁻⁶ cm³/mol（室温），通过 Gouy 法测定，反推有效磁矩后可确认 Fe³⁺ 的高自旋态。',
+ '差热分析':'TG-DSC 三步失重：~110℃ 失结晶水(3H₂O≈11.0%)→~280℃ 草酸根分解(失 CO+CO₂≈43%)→~600℃ 生成 K₂CO₃+Fe₂O₃。',
+ '废液处理':'含铁与草酸盐的废液属重金属废液，须倒入专用回收桶。可加碱中和沉淀铁后按无机废液处置，严禁直排下水道。',
+ '暗处结晶':'加乙醇后须在暗处（或棕色瓶包裹铝箔）静置冷却结晶——光照会引发光还原导致产物不纯、颜色发暗。',
+ '抽滤':'抽滤操作要点：布氏漏斗滤纸润湿→开泵→倾倒→少量冷水/乙醇洗涤→先拔管后关泵。产物需避光晾干至恒重（两次称量差<0.002g）。',
+ '40℃控温':'40℃ 是氧化阶段的关键参数：低于 35℃ 反应过慢，高于 45℃ H₂O₂ 剧烈分解产生气泡，可能将沉淀冲出烧杯。',
+ '草酸铁钾':'K₃[Fe(C₂O₄)₃]·3H₂O 是经典的配位化合物教学案例——合成路线清晰（沉淀→氧化→配位→结晶），兼具光化学和磁性研究价值。',
+ '硫酸亚铁铵':'即莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O，摩尔质量 392.14 g/mol，浅蓝绿色单斜晶体。比 FeSO₄·7H₂O 更稳定，是定量分析的基准试剂。',
+ '减压过滤':'即抽滤，利用真空负压加速过滤。适用于晶体收集；注意滤纸需贴紧、洗涤液少量多次、停泵前先解除真空。',
+ '重结晶':'本实验通常不需重结晶——一次结晶（加乙醇+暗处冷却）即可得纯品。若晶体颜色不均或产率异常，可用少量热水溶解后重新加乙醇结晶。'
 };
 const OP_TIP='操作关键点回顾：40℃ 水浴控温、试剂逐滴加入并搅拌、热水洗涤沉淀、加乙醇后暗处冷却结晶、抽滤"先拔管后关泵"、产物避光干燥。';
 function coreFromMeta(q,hits,chems,ops){
@@ -1795,7 +1907,7 @@ function extendHTML(q,faq,hits){
   const knode=(faq&&faq.knode)||'与本问题相关的知识点';
   const subfield=(hits[0]&&hits[0].e.subfield)||(faq&&faq.subfield)||'合成制备';
   const rel=relatedFAQs(q,faq,3);
-  let s='<div class="ans-sec"><h4>④ 知识延伸</h4><p style="font-size:13px">🔗 <a href="knowledge.html" target="_blank">知识图谱「'+esc(knode)+'」节点</a>　·　📚 <a href="corpus.html" target="_blank">语料库「'+esc(subfield)+'」子领域</a></p>';
+  let s='<div class="ans-sec"><h4>💡 知识延伸</h4><p style="font-size:13px">🔗 <a href="knowledge.html" target="_blank">知识图谱「'+esc(knode)+'」节点</a>　·　📚 <a href="corpus.html" target="_blank">语料库「'+esc(subfield)+'」子领域</a></p>';
   if(rel.length){
     s+='<div style="margin-top:7px"><span class="muted" style="font-size:12px">你可能还想问：</span><div style="margin-top:5px;display:flex;flex-wrap:wrap;gap:6px">'
      +rel.map(f=>'<button class="chip faq-chip" data-q="'+esc(f.q)+'">'+esc(f.title)+'</button>').join('')+'</div></div>';
@@ -1846,9 +1958,14 @@ function renderLatexToUnicode(text){
     '\\cup':'∪','\\cap':'∩','\\subset':'⊂','\\supset':'⊃','\\subseteq':'⊆',
     '\\in':'∈','\\notin':'∉','\\emptyset':'∅','\\varnothing':'∅',
     '\\xrightarrow':'→','\\xleftarrow':'←','\\xrightleftharpoons':'⇌',
-    '\\ce':'(ce)','\\text':'','\\mathrm':'','\\pu':'','\\rm':'',
     '\\,':'','\\;':'','\\ ':' ','\\!':''
   };
+  // 预处理 \ce \text \mathrm \pu \rm 宏：提取内部内容
+  text=text.replace(/\\ce\{([^{}]*)\}/g,'$1');
+  text=text.replace(/\\text\{([^{}]*)\}/g,'$1');
+  text=text.replace(/\\mathrm\{([^{}]*)\}/g,'$1');
+  text=text.replace(/\\pu\{([^{}]*)\}/g,'$1');
+  text=text.replace(/\\rm\{([^{}]*)\}/g,'$1');
   var t=text;
   t=t.replace(/\$\$([\s\S]*?)\$\$/g,function(m,body){
     return '<span class="ans-eq-block">' + renderLatexBody(body, G) + '</span>';
@@ -1911,162 +2028,54 @@ function inlineRich(line){
   return h;
 }
 
+function answerHeaderHTML(conf, source, refCount, usedLLM){
+  var levelLabel=conf.level==='high'?'高置信度':(conf.level==='medium'?'中置信度':'低置信度');
+  var levelCls='conf-'+(conf.level==='high'?'high':(conf.level==='medium'?'med':'low'));
+  var srcIcon,srcLabel,srcCls;
+  if(usedLLM){srcIcon='🤖';srcLabel='LLM生成';srcCls='src-llm';}
+  else if(source==='faq'){srcIcon='📋';srcLabel='内置FAQ';srcCls='src-faq';}
+  else if(source==='corpus'){srcIcon='📚';srcLabel='语料库直接命中';srcCls='src-corpus';}
+  else if(source==='analogy'){srcIcon='🔗';srcLabel='类比推理';srcCls='src-analogy';}
+  else {srcIcon='🌐';srcLabel='网络浏览';srcCls='src-web';}
+  var h='<div class="ans-header">';
+  h+='<span class="ah-badge '+levelCls+'">📊 '+levelLabel+'</span>';
+  h+='<span class="ah-badge '+srcCls+'">'+srcIcon+' '+srcLabel+'</span>';
+  if(refCount>0) h+='<span class="ah-sep"></span><span style="color:var(--t2);font-size:12px">📖 '+refCount+' 篇文献</span>';
+  h+='</div>';
+  return h;
+}
+
 function buildAnswerHTML(q,ctx){
   var faq=ctx.faq, hits=ctx.hits, chems=ctx.chems, ops=ctx.ops;
   var s='';
   if(!hits.length){
     if(faq){
-      s+='<div class="ans-sec"><h4>① 核心解答</h4><div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div></div>';
-      if(faq.detail) s+='<div class="ans-sec"><h4>② 原理与细节</h4><div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div></div>';
-      s+='<div class="ans-sec"><h4>③ 网络补充检索</h4><p class="muted">内置知识库已作答；本地知识清单未检索到对应文献，如需更多文献证据可点击：</p>'+webFallbackHTML(q)+'</div>';
+      s+=answerHeaderHTML({level:'high'},'faq',0,false);
+      s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div></div>';
+      if(faq.detail) s+='<div class="ans-sec"><h4>📖 原理与细节</h4><div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div></div>';
+      s+='<div class="ans-sec"><h4>🌐 网络补充</h4><p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,faq,hits);
     }else{
-      s+='<div class="ans-sec"><h4>① 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||276)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
-      s+='<div class="ans-sec"><h4>② 网络检索（已接入网络浏览）</h4>'+webFallbackHTML(q)+'</div>';
+      s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||276)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
+      s+='<div class="ans-sec"><h4>🌐 网络检索</h4>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,null,hits);
     }
     return s;
   }
-  s+='<div class="ans-sec"><h4>① 核心解答</h4>';
+  s+=answerHeaderHTML({level:faq?'high':(hits[0].score>=50?'medium':'low')},faq?'faq':'corpus',hits.length,false);
+  s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
   s+=faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
   s+='</div>';
-  s+='<div class="ans-sec"><h4>② 原理与细节</h4>';
+  s+='<div class="ans-sec"><h4>📖 原理与细节</h4>';
   if(faq&&faq.detail) s+='<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>';
   s+='<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><div class="bib-list">'
    +hits.slice(0,3).map(bibItemHTML).join('')
    +'</div></div>';
-  var foldOpen=hits.length<=2?' open':'';
-  s+='<div class="ans-sec"><details class="ref-fold"'+foldOpen+'><summary>📚 ③ 依据文献（知识清单命中 '+hits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
+  s+='<div class="ans-sec"><details class="ref-fold"><summary>📚 依据文献（知识清单命中 '+hits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
    +'<div class="ref-fold-body"><ol class="cite-list">'+hits.map(citationHTML).join('')+'</ol>'
    +'<div class="doc-grid">'+hits.map(docCardHTML).join('')+'</div></div></details></div>';
   s+=extendHTML(q,faq,hits);
   return s;
-}
-
-/* ================= 智能体集群流水线：检索 2 — 化学实体类比 ================= */
-function retrieval2_chemicalAnalogy(q){
-  var nq=norm(q);
-  var analogyHits=[];
-  for(var ri=0;ri<ANALOG_TABLE.length;ri++){
-    var row=ANALOG_TABLE[ri];
-    for(var ai=0;ai<row.analogs.length;ai++){
-      var a=row.analogs[ai];
-      if(nq.indexOf(norm(a))>=0){
-        var sr=searchCorpus(row.concept, 4);
-        for(var si=0;si<sr.results.length;si++){
-          var r=sr.results[si];
-          var already=false;
-          for(var hi=0;hi<analogyHits.length;hi++){if(analogyHits[hi].e===r.e){already=true;break;}}
-          if(!already){
-            analogyHits.push({e:r.e, score:r.score*0.8, hit:r.hit, strongHit:r.strongHit, source:'analogy', analogyConcept:row.concept, analogyPrinciple:row.generalPrinciple});
-          }
-        }
-      }
-    }
-  }
-  var familyMap={'草酸铁':['草酸铬','草酸铝','草酸钴'],'草酸铬':['草酸铁','草酸铝','草酸钴'],'草酸铝':['草酸铁','草酸铬'],'草酸钴':['草酸铁','草酸铬'],'fe':['cr','al','co'],'cr':['fe','al'],'al':['fe','cr'],'co':['fe']};
-  var famKeys=Object.keys(familyMap);
-  for(var fk=0;fk<famKeys.length;fk++){
-    var k=famKeys[fk];
-    if(nq.indexOf(k)>=0){
-      var alts=familyMap[k];
-      for(var alti=0;alti<alts.length;alti++){
-        var alt=alts[alti];
-        var sr2=searchCorpus(alt, 3);
-        for(var si2=0;si2<sr2.results.length;si2++){
-          var r2=sr2.results[si2];
-          var already2=false;
-          for(var hi2=0;hi2<analogyHits.length;hi2++){if(analogyHits[hi2].e===r2.e){already2=true;break;}}
-          if(!already2){
-            analogyHits.push({e:r2.e, score:r2.score*0.7, hit:r2.hit, strongHit:false, source:'family-analogy', analogyConcept:alt});
-          }
-        }
-      }
-    }
-  }
-  analogyHits.sort(function(a,b){return b.score-a.score;});
-  return analogyHits.slice(0,8);
-}
-
-/* ================= 智能体集群流水线：检索 3 — 方法学转移 ================= */
-function retrieval3_methodologyTransfer(q){
-  var ops=detectOps(q);
-  if(!ops.length) return [];
-  var methodHits=[];
-  for(var oi=0;oi<Math.min(ops.length,5);oi++){
-    var op=ops[oi];
-    var nop=norm(op);
-    for(var ei=0;ei<Corpus.entries.length;ei++){
-      var e=Corpus.entries[ei];
-      var nmethods=norm(e.methods||'');
-      var ncontent=norm(e.content||'');
-      var nobjects=norm(e.objects||'');
-      if(nmethods.indexOf(nop)>=0||ncontent.indexOf(nop)>=0||nobjects.indexOf(nop)>=0){
-        var already=false;
-        for(var hi=0;hi<methodHits.length;hi++){if(methodHits[hi].e===e){already=true;break;}}
-        if(!already){
-          methodHits.push({e:e, score:6, hit:[op], strongHit:false, source:'method-transfer', method:op});
-        }
-      }
-    }
-  }
-  methodHits.sort(function(a,b){return b.score-a.score;});
-  return methodHits.slice(0,8);
-}
-
-/* ================= 智能体集群流水线：类比推理引擎 ================= */
-function analogicalReasoning(q, directHits, analogyHits, methodHits){
-  var nq=norm(q);
-  var analogies=[];
-  var allConcepts={};
-  for(var i=0;i<analogyHits.length;i++){
-    if(analogyHits[i].analogyConcept) allConcepts[analogyHits[i].analogyConcept]=1;
-  }
-  for(var ri=0;ri<ANALOG_TABLE.length;ri++){
-    var row=ANALOG_TABLE[ri];
-    for(var ai=0;ai<row.analogs.length;ai++){
-      var a=row.analogs[ai];
-      if(nq.indexOf(norm(a))>=0){
-        var hasDirect=(directHits.length>=2);
-        if(!hasDirect||directHits[0].score<HIT_THRESHOLD*2){
-          analogies.push({
-            matchedTerm: a,
-            concept: row.concept,
-            principle: row.generalPrinciple,
-            hasDirect: hasDirect,
-            strength: hasDirect?0.3:0.8
-          });
-        }
-      }
-    }
-  }
-  var seen={};
-  return analogies.filter(function(a){
-    var k=a.concept+a.matchedTerm;
-    if(seen[k]) return false;
-    seen[k]=true;
-    return true;
-  });
-}
-
-/* ================= 智能体集群流水线：置信度评分 ================= */
-function confidenceScore(directHits, analogyHits, methodHits, faq, analogies){
-  var scores={};
-  var maxDirectScore=0;
-  for(var i=0;i<directHits.length;i++){maxDirectScore=Math.max(maxDirectScore,directHits[i].score);}
-  scores.corpus=Math.min(1, maxDirectScore/60);
-  scores.faq=faq?0.9:0;
-  var analogyCount=analogies.length+analogyHits.length+methodHits.length;
-  scores.analogy=Math.min(1, analogyCount*0.15);
-  scores.overall=Math.max(scores.corpus, scores.faq, scores.analogy*0.6);
-  scores.level=scores.overall>=0.7?'high':(scores.overall>=0.35?'medium':'low');
-  return scores;
-}
-
-function confidenceBarHTML(label, val, level){
-  var cls=val>=0.7?'cf-high':(val>=0.35?'cf-med':'cf-low');
-  var pct=Math.round(val*100);
-  return '<div class="confidence-bar '+cls+'"><span class="cf-label">'+esc(label)+'</span><span class="cf-track"><span class="cf-fill" style="width:'+pct+'%"></span></span><span class="cf-pct">'+pct+'%</span></div>';
 }
 
 
@@ -2307,6 +2316,7 @@ function nextQuestion(){
 function askCurrent(){
   if(A.round>=MAX_ROUND){finishAssess('已达到最大轮次 '+MAX_ROUND+'，测评自动结束。');return;}
   A.round++;
+  var i=A.inRetest?A.retestQueue[0]:A.idx;
   var kp=KP[i];
   A.stage=A.inRetest?'retest':'main';
   var mainQ=kp.main;

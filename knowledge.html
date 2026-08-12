@@ -1487,6 +1487,8 @@ function relatedDocs(n){
   const scored = [];
   for(const e of corpus){
     const r = scoreEntry(e, kws, nameN);
+    // 节点 subfield 与语料条目 subfield 匹配时强加分
+    if(n.subfield && e.subfield && norm(e.subfield) === norm(n.subfield)) r.s += 30;
     if(r.hits >= 2 && r.s >= 15) scored.push({e, s: r.s});
   }
   scored.sort((a,b)=>b.s - a.s);
@@ -1592,15 +1594,18 @@ function openPanel(n){
   // 关联语料文献 Top5
   const docsBox = $('#pDocs');
   const {list, failed} = relatedDocs(n);
+  // 语料库深度链接（优先节点 subfield，回退关键词搜索）
+  let corpusHref = 'corpus.html';
+  if(n.subfield){ corpusHref = 'corpus.html?subfield=' + encodeURIComponent(n.subfield); }
   if(failed){
     docsBox.innerHTML = '<div class="doc-empty">⚠️ 语料库加载失败<br>仅图谱功能可用，请检查 data/corpus.json</div>';
   }else if(!list.length){
-    docsBox.innerHTML = '<div class="doc-empty">📭 暂无直接关联文献<br><span style="font-size:11px">可尝试点击「问 AI 助手」深入了解</span></div>';
+    docsBox.innerHTML = '<div class="doc-empty">📭 暂无直接关联文献<br><a href="'+corpusHref+'" target="_blank" style="color:var(--accent)">↗ 在语料库检索「'+esc(n.subfield||n.name)+'」</a></div>';
   }else{
     docsBox.innerHTML = list.map(e=>{
       const qs = (e.questions||[]).slice(0,2);
       return `<div class="doc-card">
-        <div class="doc-top"><span class="doc-idx">#${esc(e.id)}</span><span class="doc-title">${esc(e.title)}</span></div>
+        <div class="doc-top"><span class="doc-idx">#${esc(e.id)}</span><a class="doc-title" href="corpus.html?id=${encodeURIComponent(e.id)}" target="_blank">${esc(e.title)} ↗</a></div>
         <div class="doc-meta">
           <span class="doc-chip">${esc(e.subfield||'未分类')}</span>
           ${e.lang ? `<span class="doc-chip">${esc(e.lang)}</span>` : ''}
@@ -1609,7 +1614,8 @@ function openPanel(n){
         ${qs.length ? `<ul class="doc-q">${qs.map(q=>`<li>${esc(q)}</li>`).join('')}</ul>` : ''}
         <div class="doc-path">📄 ${esc(e.path||'（无路径信息）')}</div>
       </div>`;
-    }).join('');
+    }).join('')
+    + '<a class="doc-more" href="'+corpusHref+'" target="_blank" style="display:block;margin-top:8px;font-size:12px;color:var(--accent)">📚 查看「'+esc(n.subfield||n.name)+'」全部文献 ↗</a>';
   }
 
   // 问 AI 助手（携带 节点名+核心问题）

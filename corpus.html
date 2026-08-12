@@ -491,7 +491,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
 /* ================= 数据与存储 ================= */
 const LS_UPLOAD='chemai_corpus_uploaded', LS_GEN='chemai_generation';
 let baseEntries=[], uploadedEntries=[], kgNodes=null;
-const state={search:'',subfield:'',lang:'',page:1,perPage:30};
+const state={search:'',subfield:'',lang:'',page:1,perPage:30,idFocus:null};
 
 function loadUploaded(){try{const v=JSON.parse(localStorage.getItem(LS_UPLOAD));return Array.isArray(v)?v:[]}catch(e){return[]}}
 function saveUploaded(){try{localStorage.setItem(LS_UPLOAD,JSON.stringify(uploadedEntries))}catch(e){toast('本地存储写入失败，上传条目可能无法保存','error')}}
@@ -511,13 +511,27 @@ function fmtTime(iso){try{const d=new Date(iso);const p=n=>String(n).padStart(2,
 const $=s=>document.querySelector(s);
 
 /* ================= 初始化 ================= */
+function applyUrlParams(){
+  // 支持深度链接：corpus.html?subfield=XX&search=XX&id=XX
+  try{
+    const p=new URLSearchParams(location.search);
+    if(p.has('subfield')){ const v=p.get('subfield').trim(); if(v){ state.subfield=v; const sel=document.getElementById('subfieldSel'); if(sel){ const opts=[...sel.options].map(o=>o.value); if(opts.includes(v)) sel.value=v; else{ const o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); sel.value=v; } } } }
+    if(p.has('search')){ const v=p.get('search').trim(); if(v){ state.search=v; const si=document.getElementById('searchInput'); if(si) si.value=v; } }
+    if(p.has('id')){ const idv=p.get('id').trim(); if(idv){ state.idFocus=idv; } }
+  }catch(e){}
+}
 async function init(){
   uploadedEntries=loadUploaded();
   await loadCorpus();
   ensureIndex();
+  applyUrlParams();
   bindEvents();
   initCloudPanel();
   refreshAll();
+  // 深度链接聚焦：跳转到指定条目并高亮
+  if(state.idFocus){
+    focusEntry(state.idFocus);
+  }
 }
 async function loadCorpus(){
   try{
@@ -620,7 +634,7 @@ function refreshList(){
       ?'<div class="q-list">'+qs.map(q=>'<div class="q-item">· '+esc(q)+'</div>').join('')+
        (qs.length>1?'<span class="q-toggle" data-act="q">展开全部 ('+qs.length+')</span>':'')+'</div>'
       :'<span style="color:var(--t3)">—</span>';
-    return '<tr>'+
+    return '<tr data-eid="'+esc(e.id)+'">'+
       '<td>'+esc(e.id)+'</td>'+
       '<td><div class="t-title">'+esc(e.title)+'</div>'+(e.uploaded?'<span class="badge badge-up" style="margin-top:5px">上传</span>':'')+biblioHtml(e)+'</td>'+
       '<td><span class="badge badge-lang">'+esc(e.lang||'未知')+'</span></td>'+
@@ -650,6 +664,32 @@ function renderPager(pages){
   box.innerHTML='<button data-p="prev" '+(cur<=1?'disabled':'')+'>‹</button>'+
     nums.map(n=>n==='…'?'<button disabled>…</button>':'<button data-p="'+n+'" class="'+(n===cur?'cur':'')+'">'+n+'</button>').join('')+
     '<button data-p="next" '+(cur>=pages?'disabled':'')+'>›</button>';
+}
+/* 深度链接聚焦：高亮并滚动到指定 id 条目 */
+function focusEntry(id){
+  // 清除所有筛选，确保目标条目可见
+  state.search=''; state.subfield=''; state.lang='';
+  const si=document.getElementById('searchInput'); if(si) si.value='';
+  const sf=document.getElementById('subfieldSel'); if(sf) sf.value='';
+  const lg=document.getElementById('langSel'); if(lg) lg.value='';
+  // 找到目标条目所在页码
+  const all=mergedEntries();
+  const idx=all.findIndex(e=>String(e.id)===String(id));
+  if(idx<0){ state.idFocus=null; return; }
+  const per=state.perPage;
+  state.page=Math.floor(idx/per)+1;
+  refreshList();
+  // 滚动并高亮
+  setTimeout(()=>{
+    const tr=document.querySelector('tr[data-eid="'+id+'"]');
+    if(tr){
+      tr.scrollIntoView({behavior:'smooth',block:'center'});
+      tr.style.backgroundColor='rgba(16,185,129,.12)';
+      tr.style.transition='background 1.5s';
+      setTimeout(()=>{ tr.style.backgroundColor=''; },2500);
+    }
+  },150);
+  state.idFocus=null;
 }
 
 /* ================= 渲染：上传记录 ================= */

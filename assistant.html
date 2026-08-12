@@ -2297,6 +2297,8 @@ function docCardHTML(r){
     +'<div class="dc-title">'+esc(e.title)+'</div>'
     +(e.journal?'<div class="dc-row"><b>期刊：</b>'+esc(e.journal)+(e.doi?' · <a href="https://doi.org/'+esc(e.doi)+'" target="_blank" rel="noopener" style="color:#60a5fa">DOI</a>':'')+'</div>':'')
     +(e.methods?'<div class="dc-row"><b>方法：</b>'+esc(e.methods)+'</div>':'')
+    +(e.abstract?'<div class="dc-row" style="color:var(--t3);font-size:11px">'+esc(String(e.abstract).slice(0,80))+'…</div>':'')
+    +'<a class="dc-open" href="corpus.html?id='+enc(String(e.id))+(e.subfield?'&subfield='+enc(e.subfield):'')+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;font-size:11px;color:var(--teal)">📖 在语料库中查看原文条目 ↗</a>'
     +'<div class="score-bar" title="相关度评分 '+r.score+'"><i style="width:'+w+'%"></i></div>'
     +'</div>';
 }
@@ -2314,6 +2316,7 @@ function citationHTML(r){
     }
     s+='<br><span style="color:#fbbf24;font-size:11px">📎 摘录（~150字）：“'+esc(snip)+'”</span>';
   }
+  s+=' <a href="corpus.html?id='+enc(String(e.id))+'" target="_blank" rel="noopener" style="color:var(--teal);font-size:11px">↗</a>';
   return s+'</li>';
 }
 /* 著录信息卡片（② 原理与细节 用，摘要可折叠） */
@@ -2425,7 +2428,9 @@ function extendHTML(q,faq,hits){
   const knode=(faq&&faq.knode)||'与本问题相关的知识点';
   const subfield=(hits[0]&&hits[0].e.subfield)||(faq&&faq.subfield)||'合成制备';
   const rel=relatedFAQs(q,faq,3);
-  let s='<div class="ans-sec"><h4>💡 知识延伸</h4><p style="font-size:13px">🔗 <a href="knowledge.html" target="_blank">知识图谱「'+esc(knode)+'」节点</a>　·　📚 <a href="corpus.html" target="_blank">语料库「'+esc(subfield)+'」子领域</a></p>';
+  // 深度链接：语料库子领域筛选
+  const corpusLink='corpus.html'+(subfield?'?subfield='+enc(subfield):'');
+  let s='<div class="ans-sec"><h4>💡 知识延伸</h4><p style="font-size:13px">🔗 <a href="knowledge.html" target="_blank">知识图谱「'+esc(knode)+'」节点</a>　·　📚 <a href="'+corpusLink+'" target="_blank">语料库「'+esc(subfield)+'」子领域</a>';
   if(rel.length){
     s+='<div style="margin-top:7px"><span class="muted" style="font-size:12px">你可能还想问：</span><div style="margin-top:5px;display:flex;flex-wrap:wrap;gap:6px">'
      +rel.map(f=>'<button class="chip faq-chip" data-q="'+esc(f.q)+'">'+esc(f.title)+'</button>').join('')+'</div></div>';

@@ -1,0 +1,419 @@
+REL: 蓝晒\蓝晒\ref\jce2004p1193w.pdf
+================================================================================
+1
+Supplementary Material - Lab Documentation 
+ 
+Directions for students 
+Prepare K3[Fe(C2O4)3] following the classic method of Yost and Simons (7). 
+ 
+Prepare an approximately 0.1 M solution (5 g in 100 mL of distilled water) of K3[Fe(C2O4)3]·3H2O. 
+(The crystals can take up to 30 minutes to dissolve, even with stirring. If the crystals of K3[Fe(C2O4)3]·3H2O are 
+finely ground in a mortar, this will result in a much shorter dissolution time.) This will be the starting solution 
+(1). We strongly recommend that this solution be stored in the dark if it is not used immediately. 
+ 
+Place 1 mL of the green solution 1 in a test tube and add 3 drops1 of 6 M HCl 6; the solution turns 
+yellow-orange (2). To 2 add 3 drops of 0.5 M KSCN; the solution turns red2 (3). To 3 add 10 drops of 3 M KF; 
+the solution becomes almost colorless (4). To 4 add 15 drops of 2 M K2C2O4, the green solution 1 is obtained 
+again: 
+ 
+ 
+1 When performing this experiment in our lab, we have found that drop counting is the best way to keep track of 
+the amount of reagent added. In Supplementary Scheme 1 we give the amounts of reagent added as equivalents, 
+which gives a much better idea of how easily an equilibrium is established or displaced. 
+2 Examples are given in references 8, 9 and 10 of quantitative determination (mainly through UV-VIS 
+spectroscopy) of colored complexes such as [Fe(SCN)3], Fe3[Fe(CN)6]2 and others. The instructor may find 
+them useful to put the experiment on a more quantitative footing. 
+
+ 
+2
+Scheme 1 
+[Fe(C2O4)3]2- (1)
+H+
+[Fe(H2O)6]3+ (2)
+H2C2O4
++
+[Fe(H2O)6]3+ (2)
+SCN-
+[Fe(SCN)3] (3)
+[Fe(SCN)3] (3)
+F-
+[FeF4]- (4)
+[FeF4]- (4)
+C2O4
+2-
+[Fe(C2O4)3]3- (1)
+ 
+ 
+ 
+Alternative routes between solutions 1 and 4 are: 
+a) Add 10 drops of 3 M KF to 1 mL of solution 1. This generates the almost colorless solution 4, which 
+can be reversed back to solution 1 by the addition of 15 drops of 2 M K2C2O4. 
+b) Add 5 drops of 0.5 M KSCN to 1 mL of solution 1, the green solution turns yellow-green (5). To 5 
+add 10 drops of 3 M KF to obtain the colorless solution 4, which, as has been stated previously, can be 
+converted back to solution 1 by the addition of 15 drops of 2 M K2C2O4: 
+ 
+ 
+ 
+ 
+
+ 
+3
+Scheme 2 
+[Fe(C2O4)3]2- (1)
+F-
+SCN-
+[Fe(SCN)3] (5)
+(small amount)
+[Fe(SCN)3] (5)
+(small amount)
+F-
+[FeF4]- (4)
+C2O4
+2-
+[Fe(C2O4)3]2- (1)
+[FeF4]- (4)
+ 
+ 
+ 
+Add 1 mL of 0.1 M NaOH to 1 mL of solution 1. A brown precipitate (A) and a colorless solution (6) 
+are obtained that can be separated by centrifugation or filtration. Shaking the brown solid A with 1 mL of 1 M 
+H2C2O4 gives the green solution 1 again. Treatment of the colorless solution 6 with 1 mL of 0.2 M BaCl2 gives a 
+white precipitate (B). After centrifugation or filtration, the white solid B is treated with 10 drops of 1 M 
+Fe2(SO4)3. Centrifugation gives the green solution 1 again and a white precipitate (C): 
+ 
+Scheme 3 
+[Fe(C2O4)3]2- (1)
+OH-
+Fe(OH)3 (A)
+C2O4
+2- (6)
++
+Fe(OH)3 (A)
+H2C2O4
+[Fe(C2O4)3]3- (1)
+C2O4
+2- (6)
+Ba2+
+BaC2O4 (B)
+BaC2O4 (B)
+Fe2(SO4)3
+[Fe(C2O4)3]3- (1) + BaSO4 (C)
+ 
+ 
+ 
+Add 5 mL of 0.2 M BaCl2 to 1 mL of solution 1. A pale-green precipitate (D) appears that can be 
+separated by centrifugation or filtration. Treatment of the pale-green solid D with 3 mL of distilled water and 
+
+ 
+4
+heating until complete dissolution of the solid gives a solution (7). Addition of 3 drops of 0.5 M K2SO4 to 7 
+gives the white precipitate C and the green solution 1: 
+ 
+Scheme 4 
+[Fe(C2O4)3]2- (1)
+Ba2+
+Ba3[Fe(C2O4)3]2 (D)
+Ba3[Fe(C2O4)3]2 (D)
+H2O, ∆
+{Ba2+ + [Fe(C2O4)3]3-} (7)
+SO4
+2-
+[Fe(C2O4)3]3- (1) + BaSO4 (C)
+{Ba2+ + [Fe(C2O4)3]3-} (7)
+ 
+ 
+ 
+Take 1 mL of freshly prepared solution 1 and test it for Fe2+ with 1 drop of 0.1 M K3[Fe(CN)6]. Place 
+20 mL of solution 1 in a 50-mL beaker and expose it to the light from a flashlight (or a 60 W bulb at 15 cm from 
+the surface of the solution) and repeat the Fe2+ test every 90 seconds for 5 minutes with aliquots of 1 mL (keep 
+the tests for the first 5 minutes in the test tube rack in order to observe the progress of the reaction). After 10 
+minutes of exposure to light repeat the Fe2+ test and compare it with the previous ones. Put the remaining 
+solution under a mild vacuum (a suction flask with a stopper and a filtration pump will be sufficient) and 
+observe the evolution of CO2 bubbles from it: 
+ 
+Scheme 5 
+[Fe(C2O4)3]2- (1)
+[Fe(CN)6]3-
+no reaction
+hν
+[Fe(H2O)6]2+ + CO2↑
+[Fe(C2O4)3]2- (1)
+[Fe(CN)6]3-
+Fe3[Fe(CN)6]2
+ 
+ 
+
+ 
+5
+ 
+During all these experiments it is convenient to keep a test tube with 1 mL of solution 1, to be used as a 
+color reference. If necessary, different amounts of water can be added to this solution to dilute it. Keeping a 
+color reference handy helps the students appreciate the color changes that take place during the reactions. 
+ 
+Supplementary hazards 
+ 
+In the event students lack adequate knowledge of laboratory safety procedures and good laboratory 
+practices (our first-year Inorganic Chemistry Laboratory students have all taken a previous mandatory course on 
+General Chemistry Laboratory, where they learn all the necessary operational skills and safety procedures) or 
+the number of students per instructor is too high (we average 10 students per instructor), the most potentially 
+dangerous reagents can be avoided or substituted: 
+ 
+a) BaCl2 can be substituted by CaCl2. In this case, precipitates B, C and D will be CaC2O4, CaSO4 and 
+Ca3[Fe(C2O4)3]2, respectively. The concentration of reagents must be increased to take into account the higher 
+solubility of Ca(II) salts in comparison with Ba(II) ones. Because of this increase in solubility for Ca(II) salts, 
+optimum results are obtained when using Ba(II) salts, which should be preferred to Ca(II) ones whenever 
+possible.3 
+ 
+b) KF can be avoided but not substituted. As there is not a safer substitute reagent for fluoride with 
+similar properties in aqueous solution, the only way is to suppress the reactions using KF. In this case Schemes 1 
+and 2 will be simplified accordingly. 
+ 
+We leave to the instructor the final decision and choice of when to use these modifications, either 
+individually or together. 
+ 
+ 
+3 The use of Ba(II) salts provides us with a very good example of the importance of equilibrium and solubility. 
+In each course we always emphasize to our students that Ba(II) salts as a general rule are toxic, but that highly 
+insoluble BaSO4 is harmless, which has allowed its use as a gastric contrast agent in X-ray examinations. 
+
+ 
+6
+Supplementary assignment for students 
+After the experimental work is finished, instead of the set of questions, the students can be given a 
+scheme to complete. This scheme (see Supplementary Scheme 3) summarizes all the experimental work 
+(description of all the operations performed, reagents added and products formed). The students must identify 
+solutions 2 through 7 and precipitates A through D. 
+
+ 
+7
+ Supplementary Scheme 1 
+ 
+ 
+[Fe(C2O4)3]3- (1)
+1 equivalent
+H+
+3 eq.
+[Fe(H2O)6]3+ (2) + C2O4
+2-
+SCN-
+0.3 eq.
+[Fe(SCN)3] (3)
+F-
+6 eq.
+OH-
+1 eq.
+Fe(OH)3 (A) + C2O4
+2- (6)
+BaC2O4 (B)
+Fe2(SO4)3
+0.5 eq.
+Ba3[Fe(C2O4)3]2 (D)
+H2O, ∆
+{Ba2+ + [Fe(C2O4)3]3-} (7)
+Test the existence of Fe2+ in
+this solution with [Fe(CN)6]3-
+every 90 seconds, for 5 min.
+(sun or
+intense light)
+hν
+After 10 minutes test for Fe2+, put the
+ remaining solution under vacuum
+ and observe the CO2 evolution
+SCN-
+0.5 eq.
+[Fe(SCN)3] (5)
+(small amount)
+[FeF4]- (4)
+C2O4
+2-
+6 eq.
+SO4
+2-
+0.3 eq.
+Ba2+
+2 eq.
+H2C2O4
+10 eq.
+Ba2+
+10 eq.
+BaSO4 (C)
+F-
+6 eq.
+F-
+6 eq.
+
+ 
+8
+[Fe(C2O4)3]2-
+H+
+[Fe(H2O)6]3+
+H2C2O4
+KSCN
+[Fe(SCN)3]
+KF
+[FeF4]-
+K2C2O4
+[Fe(C2O4)3]2-
+[Fe(SCN)3] (small amount)
+[FeF4]-
+KSCN
+KF
+KF
+Ba3[Fe(C2O4)3]
+Ba2+ + [Fe(C2O4)3]3-
+[Fe(C2O4)3]3-
+NaOH
+Fe(OH)3 + C2O4
+2-
+BaCl2
+BaC2O4
+H2C2O4
+Fe2(SO4)3
+BaSO4
+BaCl2
+H2O
+K2SO4
++
+ K+ + [Fe(C2O4)3]3-
+[Fe(CN)6]3+
+no reaction
+hν
+ K+ + [Fe(H2O)6]2+ + CO2↑
+Fe3[Fe(CN)6]2 (Turnbull's blue/Prussian blue)
+hν
+(under vacuum)
+accelerates redox process
+Supplementary Scheme 2
+[Fe(CN)6]3+
+∆
+ 
+
+ 
+9
+Supplementary Scheme 3 
+ 
+K3[Fe(C2O4)3] · 3H 2O
+emerald green solution (0.05 M)
+1 ml
+1
+4
+K2C2O4 (0.5 M)
+HCl (0.1 M)
+(3 drops)
+yellow-orange
+ solution
+2
+KSCN (0.5 M)
+(3 drops)
+blood red
+ solution
+3
+KF (0.5 M)
+(3 drops)
+NaOH (0.1 M)
+(10 drops)
+colorless solution
+and brown precipitate
+centrifugation or
+filtration
+brown solid
+colorless
+solution
+6
+7
+H2C2O4 (0.5 M)
+BaCl2 (0.5 M)
+white
+precipitate
+BaCl2(0.5 M)
+colorless solution and
+pale-green precipitate
+centrifugation or
+filtration
+pale green
+ solid
+H2O with stirring
+green solution
+K2SO4 (0.1 M)
+white
+precipitate
+(sun or
+intense light)
+Test the existence of Fe 2+ in
+this solution with K3[Fe(CN)6]
+each 90 seconds, for 5 min.
+hν
+After 30 minutes put the mixture under
+ vacuum and observe the CO2 evolution
+KSCN (0.5 M)
+(3 drops)
+green-yellow
+ solution
+5
+KF (0.5 M)
+(3 drops)
+KF (0.5 M)
+(3 drops)
+A
+colorless
+solution
+Fe2(SO4)3(0.5 M)
+B
+C
+D
+(6 drops)
+(10 drops)
+(3 drops)
+(5 drops)
+(2 ml)
+(5 drops)
+
+ 
+10
+Supplementary Table 1 
+Reagent (concentration) 
+Laboratory material 
+KSCN (0.5 M) 
+Light (flashlight or 60-W bulb) 
+KF (3 M) 
+Test tube rack 
+K2C2O4 (2 M) 
+Benchtop centrifuge and tubes (or funnel 
+and filtration paper) 
+NaOH (0.1 M) 
+Vacuum (water aspirator pump) 
+HCl (6 M) 
+Graduated test tube (1-mL marks) 
+H2C2O4 (1 M) 
+Pasteur pipettes 
+Fe2(SO4)3 (1 M) 
+50-mL Beaker 
+BaCl2 (0.2 M) 
+100-mL Kitasato flask 
+K2SO4 (0.1 M) 
+Test tube heating device 
+Distilled water 
+ 
+ 
+
+ 
+11
+CAS Registry numbers 
+KSCN 
+[333-20-0] 
+KF 
+[7789-23-3] 
+K2C2O4·H2O 
+[6487-48-5] 
+NaOH 
+[1310-73-2] 
+HCl 
+[7647-01-0] 
+H2C2O4·2H2O 
+[6153-56-6] 
+Fe2(SO4)3·xH2O 
+[15244-10-7] 
+BaCl2·2H2O 
+[10326-27-9] 
+K2SO4 
+[7778-80-5]

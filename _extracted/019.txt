@@ -1,0 +1,2689 @@
+REL: Fe\英文\labreport4.pdf
+================================================================================
+Experiments 4A-C: 
+Synthesis and Component Analysis of an Iron (III) Oxalate Complex 
+My Name 
+TA, Section B## 
+Work Performed on 10/23, 10/30, & 11/4, 200# 
+Report due Tuesday, November ##, 200# 
+ 
+1. Abstract 
+ 
+ 
+This experiment initially involved the synthesis of an iron (III) oxalate complex with the general 
+formula Kw[Fex(C2O4)y]·zH2O. The variables x, y, and z were determined through the duration of the 
+entire experiment. From 1.2000g of Fe(NH4)2(SO4)2 were synthesized 1.1###g of K3[FeIII(C2O4)3]·3H2O, 
+owing for a percentage yield of 74.###%. A percentage yield of 11#.##% was also calculated, had the 
+final product been K[FeIII(C2O4)2]·2H2O. This value was rejected because experimental errors are never 
+to exceed theoretical values, which are taken on assumption that the experiment is carried out in entirely 
+ideal environmental settings, which are impossible to attain entirely. In 4B, redox titrations were used to 
+calculate the relative composition of oxalate within the iron (III) oxalate salt. The millimoles of oxalate 
+were found to be.64#, .63#, .62#, and .62#, for trials A-D, respectively. The weight percentages for each 
+trial (A-D) were 54.0#%, 53.4#%, 54.1#%, and 53.##%, with an average of 53.## ± .5###%. It was also 
+found that the four trials yielded calculations of 61#, 60#, 61#, and 61# mmol of C2O4
+2- per 100g of 
+complex analyzed. The averaged value, with the inclusion of two standard deviations, reported to be 61# 
+± 7.## mmol of C2O4
+2- per 100g of complex analyzed. In 4C, Spectrophotometry was used to determine 
+the iron content in the same iron (III) oxalate complex. The average weight percentages of Fe3+ for 
+samples 3-5 of the unknowns were found to be 12.##%, 12.7#%, and 14.##%, with an average weight 
+percentage of 13.09 ± 2.58%. The number of millimoles present in 100g of complex were found to be, 
+for unknown samples 3-5: 215.### mmol Fe3+, 227.### mmol Fe3+, and 259.### mmol Fe3+, with an 
+average of 23#.### ±4#.## mmol Fe3+ in every 100g of complex. This data was used, along with the data 
+from 4A and 4C, to conclude that the empirical formula of the complex was K3[Fe(C2O4)3]·2H2O, and the 
+experiment had a percent yield of 74.##%. 
+ 
+2. Introduction 
+ 
+ 
+The goal of the three experiments is to successfully synthesize an iron (III) oxalate compound and 
+then further analyze it for oxalate (4B) and iron (4C) composition. 
+ 
+ 
+A coordination compound is comprised of at least one complex ion, and a complex ion itself 
+consists of two parts: a [transition] metal ion (which has a positive charge, making it an electron-deficient 
+Lewis acid) and one or more ligands (molecules or anions usually of negative charge, rendering them 
+electron-rich Lewis bases, through some neutral molecules such as H2O and NH3 work as well). In the 
+union of the electron-deficient metal ion and the electron-rich ligand, the two species are said to 
+“coordinate” to each other. The coordination number of the metal specifies the number of electron pairs 
+which are donated to the metal center. Coordination numbers may vary, with 2, 4, and 6 being the most 
+common. 
+ 
+ 
+Ligands themselves may vary in the number of available binding sites. Monodentate ligands are 
+those which donate a single pair of electrons to the metal center. Hence, six monodentate ligands – such 
+as H2O- bound to a center metal ion would result in a coordination number of six. “Chelate” and 
+“multidentate” are the terms applied to ligands capable of binding at more than one site. Bidentate ligands 
+(such as the oxalate ion C2O4
+2- used in this experiment) bond at two sites on the center metal ion, and 
+tridentate ligands (such as EDTA or ethylenediaminetetraacetato-) bind at three sites. The entire complex 
+may have an overall charge that is positive, negative, or even neutral. 
+ 
+ 
+Reduction-oxidation reactions (or redox, for short) are ones in which there is a change in the 
+oxidation numbers of two or more reactant-product pairs. The oxidized component is said to lose 
+electrons (i.e., Fe2+ is oxidized to Fe3+), becoming more positively charged, while the reduced component 
+
+ 
+is said to gain electrons (i.e., Sn4+ gains two electrons to be reduced to Sn2+), becoming less positively 
+charged. The redox components occur in pairs, with one species (the reductant) giving up its electron(s) 
+to be taken up by the other species (the oxidant). 
+ 
+ 
+4A involves the synthesis of an iron (III) oxalate complex. The iron is first presented in its Fe2+ 
+form, so it must first be oxidized to Fe3+ before the oxalate ion will bind readily to it. Hydrogen peroxide 
+is the oxidant of choice: 2Fe2+ (aq) + H2O2 (l) + 2H+ (aq) Æ 2Fe3+ (aq) + 2H2O (l), in acidic solution. (1) 
+The oxalate ion is then free to coordinate to the Fe3+ ion, forming a complex of Fe(C2O4). The oxalate ion 
+is the conjugate base of the weak oxalic acid, H2C2O4. In lab, careful attention is paid to the maintenance 
+of the H2C2O4-C2O4
+2- equilibrium, as only the oxalate ion is capable of coordinating. This is done through 
+the addition of H2C2O4 and the soluble K2C2O4 – only the oxalate anion is of concern: 
+ 
+(2) 
+ 
+ 
+The complex may then be synthesized – the general reaction equation is: 
+aFe(NH4)2(SO4)2·6H2O + bK+ + cC2O4
+2- + dH2C2O4 Æ eK3[Fe3+(C2O4)3]·3H2O 
+ 
+ 
+ 
+ 
+ 
+ (3) 
+The complex is then precipitated out and rendered into a crystalline form with ice (decreased temperature 
+results in decreased solubility) and ethanol (a polar solvent; the nonpolar target product will have limited 
+solubility in ethanol because of the violation of the like-dissolves-like rule). 
+ 
+ 
+The most likely synthesis products are K[Fe3+(C2O4)2]·2H2O and K3[Fe3+(C2O4)3]·3H2O. The 
+complex with a percent yield (see Expt. 4A calculations for pertinent equation) of >100% will be rejected, 
+for experimental values will never 100% of the calculated theoretical percentage yield. 
+ 
+ 
+Experiment 4B invoked the use of redox titrating to determine the oxalate content (C2O4
+2-) of the 
+salt. An aqueous solution of the iron oxalate salt is prepared for titration, and the oxalate content is found 
+through analysis by measuring the volume of titrant (.0100M KMnO4) needed to react completely with 
+the known volume of analyte, or the species to be titrated. Here, it is the aqueous solution of the iron 
+oxalate salt. The stoichiometric (or equivalence) point is the point at which equivalent stoichiometric 
+amounts of the two species have reacted. A secondary indicator is often used to provide a visual clues; 
+the indicator will change color at its endpoint. The defining characteristic of a good indicator is one that 
+has its endpoint as close to the reaction’s stoichiometric point as possible. In Experiment 4B, a secondary 
+indicator is not needed, for the intensely-colored permanganate solution serves as its own indicator 
+through a redox reaction. The product Mn2+ has a faint pink color, which serves as the visual indicator 
+that the stoichiometric point has been reached. 
+ 
+ 
+The permanganate ion is a strong oxidizing agent capable of oxidizing oxalic acid to carbon 
+dioxide and water used to determine the concentration of oxalate ions within the synthesis product. In the 
+redox reaction, oxalic acid is oxidized and permanganate is reduced: 
+2MnO4
+- (aq) + 5C2O4
+2= (aq) + 16H+ ↔ 2Mn2+ (aq) + 10CO2 (g) + 8H2O (l) 
+ 
+ 
+ 
+ 
+ 
+ (4) 
+The reaction is best when performed in a strongly acidic environment, which allows the oxalate ions to be 
+present in their fully-protonated form as oxalic acid, H2C2O4. 
+ 
+ 
+Experiment 4C utilized Spectrophotometry to determine the iron content in the iron (III) oxalate 
+complex. The results were combined with findings from 4A and 4B to determine the empirical formula 
+and percentage yield of the compound synthesized in 4A. 
+ 
+ 
+Spectrophotometry is a routine laboratory test that has the added advantage of being able to 
+analyze multiple samples in a short amount of time. The sample to be tested absorbs a certain amount of 
+electromagnetic radiation from a source, and the amount absorbed is related to the concentration of a 
+species in solution—or more specifically, the concentration (c) and the path length (b). the ratio of 
+intensity of light entering the cell (I0) and leaving the cell (I) are related by Beer’s Law. The 
+transmittance (T) represents the fraction of the original radiant energy that passes through, or is 
+transmitted, to the other wise of the cell. These terms are related by the equation: 
+
+ 
+kbc
+I
+I
+T
+=
+
+
+
+
+
+
+=
+
+
+
+
+
+
+.
+ln
+1
+ln
+ 
+or 
+ 
+bc
+I
+I
+T
+ε
+=
+
+
+
+
+
+
+=
+
+
+
+
+
+
+.
+log
+1
+log
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(5) 
+The term I0/I is renamed absorbance where A=εbc with A=log(1/T). The conversion between absorbance 
+and percent transmittance is given by 
+
+
+
+
+
+
+=
+T
+A
+%
+100
+log
+. The most efficient way of determining 
+concentration is to prepare a set of standard solutions of known concentration, record the absorbance 
+readings at a fixed wavelength, and plot the absorbance vs. concentration data. The slope of the line is εb. 
+Samples of unknown concentration are run through the same test, under identical conditions, so that 
+absorbance, and eventually concentration, may be determined. The wavelength of 520 nm selected for 
+experiment 4C was because this is the maximum absorbance for the iron (III) ion. Transmittance 
+readings should be limited to within the range of 12.5% to 80% to minimize errors. 
+ 
+ 
+The iron complex solution prepared in this experiment is light green, with a complementing color 
+of red-orange (wavelength roughly 600nm). The color intensity is relatively week, so the hue is 
+intensified by the addition of the bipyridyl ligand, which absorbs ultraviolet radiation and appears 
+colorless. When the ligand coordinates with iron using the lone pair electrons from the nitrogens, the 
+absorption of light shifts into the visible spectrum and the complex appears more intensely colored (to the 
+human eye). In this experiment, the iron (III) is released by the addition of Ca2+, which helps to 
+precipitate out the C2O4
+2-, leaving behind the iron (III). The solution is centrifuged to remove this 
+precipitate, leaving the iron ion behind to complex with the bipyridyl. Ascorbic acid is used as a reducing 
+agent because it does not absorb in the visible spectrum of light. 
+ 
+ 
+ 
+ 
+ 
+The reaction below occurs in the pH 2-8 range, so buffer is added to maintain the pH near 4.7. 
+ 
+ 
+ 
+ 
+ 
+3. Experimental 
+3A. General Information and Materials 
+ 
+ 
+All pre-synthesized chemicals were obtained from the York 3150 chemistry stockroom. The iron 
+oxalate coordination complex was prepared in accordance with the instructions provided in the lab 
+manual.1 All reactions were carried out in the York #### laboratory classroom under normal atmospheric 
+conditions. The chemicals, listed in order of use, were: Fe(NH4)2(SO4)2·6H2O, H2O, 6M H2SO4, 1M 
+H2C2O4, 2M K2C2O4, 6% H2O2, 95% C2H5OH, 0.01M KMnO4, 1M NaOH, C6H8O6, 0.0020 bipyridyl 
+solution, pH 4.7 buffer, 9M H2SO4, 0.5M CaCl2. The major laboratory apparatus used, apart from the 
+standard laboratory balances, ovens, and glassware, was the Spectronic 20 spectrophotometer. 
+ 
+ 
+ 
+3B. Synthesis of the Iron-Oxalate Coordination Complex 
+1.2000g of the hydrated salt Fe(NH4)2(SO4)2·6H2O (3.0600 x 10-3 mol) were obtained and 
+combined with 3 mL of deionized water and 2 drops of 6M H2SO4 in a 50 mL beaker. The solution was 
+swirled to dissolve the salt, and heated in a water bath to complete the dissolution. Using a 15 mL 
+graduated cylinder, 6 mL of 1M H2C2O4 were measured into the beaker, forming a yellow precipitate. 
+The solution pH was confirmed to be strongly acidic, and 6M H2SO4 was added if necessary. A water 
+bath was set up and the solution was swirled for several minutes to digest the precipitate, then the beaker 
+was removed from the heat and allowed to cool to room temperature. The resulting supernatant was then 
+removed using a dropper. The remaining precipitate was washed three times with 3 mL volumes of hot 
+
+ 
+deionized water, with the waste put into the proper receptacle. 3 mL of 2M K2C2O4 were added and the 
+mixture was heated to 40°C. 10 mL of 6% H2O2 were then slowly added dropwise, with constant stirring 
+and monitoring of the 40°C solution environment. If there is not a brown solid of Fe2(C2O4)3 at this point, 
+more peroxide was added. The mixture was then heated to boiling, removed from heat, and had added to 
+it 2 mL of 1M H2C2O4. The solution was then stirred, and 15 drops more of 1M H2C2O4 were added. 
+There should have been a yellow-green solution of dissolved Kw[Fex(C2O4)y]·zH2O. If not, 12 drops each 
+of 2M K2C2O4 and 1M H2C2O4 were added. If still not yellow-green, several drops of 6% H2O2 were 
+added, the solution was heated gently, and further assistance was sought. The product was then 
+crystallized by introducing 6 mL of 95% C2H5OH (EtOH). If crystals formed in massive amounts, they 
+were redissolved upon warming of the solution. If few crystals formed, 25 drops more of EtOH were 
+added to increase crystallization. The beaker was then stored in foil and stored securely to allow for the 
+completion of crystallization. At least 36 hours of waiting were required in between procedures. The 
+mass of a clean and dried crucible was determined. Using a filtering station setup with a vacuum trap, the 
+crystals were filtered, air-dried for a few minutes, and then washed twice with small volumes of 95% 
+EtOH. The vacuum was continued until the alcohol odor was gone. The crystals were then allowed to 
+air-dry for at least 30 minutes. The mass of the filled crucible was taken, and the mass of the crystals 
+calculated. A minimum of 0.5 g of the neon-green, sand-like crystals were necessary for continuation of 
+the experiment. 
+ 
+3C. Analysis of the Oxalate Ligand Content through Redox Titration 
+ 
+ 
+Using weighing paper, four 0.1000 g samples of the synthesized green crystals were obtained and 
+distribute among four 125 mL Erlenmeyer flasks. 30 mL of deionized water and 5 mL of 6M H2SO4 were 
+added to each flask, which was then swirled to dissolve the solid. Using a clean dry 100 mL beaker, 90 
+mL of the standardized KMnO4 solution was obtained and the exact concentration noted. A buret was 
+obtained and labeled, and thoroughly cleansed it and checked it for any defects. It was then rinsed twice 
+with 5 mL volumes of deionized water and 2 mL volumes of the permanganate solution, then filled to 
+approximately the 0.00 mL mark. Reading the top of the meniscus, the initial volume was recorded. One 
+of the Erlenmeyer flasks (with the prepared solution) was heated to 60°C and the titration with KMnO4 
+began. One “quick-and-dirty” titration was performed to save time and to approximate the volume of 
+potassium permanganate needed to react completely with the iron oxalate solution. The titration endpoint 
+was reached when the solution turned and stayed pink for at least 30 seconds. The end volume of KMnO4 
+was recorded, and the approximate volume of KMnO4 used to complete the titration was calculated. The 
+titration steps were then repeated for each of the remaining three flasks. The leftover waste solutions 
+were then neutralized and disposed of down the drain. Any permanganate remaining in the buret was 
+neutralized and combined it with the oxalate waste in the waste bottle in the fume hood. 
+ 
+3D. Quantitative Analysis of the Iron (III) Ion through Solution Spectrophotometry 
+ 
+ 
+0.1200g of [Fe(NH4)2(SO4)2·6H2O] was dissolved in the corresponding volume of deionized 
+water in a 100 mL volumetric flask, giving a solution of approximately 0.003M in iron (II). In a 50 mL 
+volumetric flask, 50 mg of C6H8O6 and 15 mL of deionized water were combined, and the solution was 
+swirled to dissolve the solid. Using a 2 mL pipet, 2 mL of the standard iron solution was transferred from 
+the 100 mL flask into the 50 mL flask, along with 15 mL of the 0.0020M bipyridyl solution. The solution 
+was then thoroughly mixed by inverting the sealed flask several times. Finally, the dilution was 
+completed by filling the 50 mL volumetric flask to its calibration line with pH 4.7 buffer. This solution 
+(A) was the “known” which would be used to determine the iron concentration of the complex. The 
+solution was then transferred to a clean and dry 125 mL Erlenmeyer flask and sealed. 
+ 
+ 
+0.1050g of the synthesized green crystals were measured and combined with 20 mL of deionized 
+water and 5 mL of 9M H2SO4 in a 50 mL disposable centrifuge tube, swirling to allow the crystals to 
+dissolve. 15 mL of 0.5M CaCl2 were then added and the solution was allowed stand for at least 5 minutes 
+for complete precipitation. The tube was then centrifuged for 2 minutes in a balanced centrifuge. Using a 
+dropper, all the supernatant liquid was transferred to a 100 mL volumetric flask. The solution was then 
+
+ 
+diluted to the calibration line with deionized water and mixing thoroughly. The centrifuge tube was then 
+recapped and disposed of. 80 mg of solid ascorbic acid, 2 mL of the solution from the 100 mL flask (of 
+supernatant & water), 20 mL of the 0.0020M bipyridyl solution, and 20 mL of the pH 4.7 buffer were 
+then added to a 50 mL volumetric flask. The final solution pH was checked to be approximately 5.0, and 
+more buffer was added if necessary. The solution was then diluted to the calibration line with deionized 
+water and thoroughly mixed. This solution (B) was the “unknown” which would be used to determine the 
+iron concentration of the complex. This solution was then transferred to a clean and dry 125 mL 
+Erlenmeyer flask and sealed. 
+ 
+ 
+Using the template shown below, two sets of dilution samples were prepared – one with the 
+known solution (A) and one with the unknown (B), resulting in a total of ten samples. Ten small clean 
+and dry test tubes were marked with the appropriate labels. 
+ 
+Dilution Sample 
+Volume of Fe2+ Solution 
+Volume of H2O 
+Total Volume 
+A1 & B1 
+0.75 mL 
+6.75 mL 
+7.50 mL 
+A2 & B2 
+1.50 mL 
+6.00 mL 
+7.50 mL 
+A3 & B3 
+2.25 mL 
+5.25 mL 
+7.50 mL 
+A4 & B4 
+3.75 mL 
+3.75 mL 
+7.50 mL 
+A5 & B5 
+5.25 mL 
+2.25 mL 
+7.50 mL 
+ 
+To avoid evaporation, test tubes were covered until ready for use. The Spectronic 20 was turned on, 
+the wavelength was set to 520 nm, and 15 minutes were given for warming up. 2 small test tubes filled to 
+75% capacity with deionized water were found and tested to ensure that both provided the same percent 
+transmission in the spectrophotometer, ensuring their proper matching. The instrument was then 
+confirmed, and adjusted if necessary, to read 0%T (transmittance) when empty and 100%T when the test 
+tube of water had been inserted. It may have been necessary to repeat the calibration several times to 
+ensure the accuracy of the two test tubes, and later in the experiment as needed. Using a permanent pen, 
+the orientations were marked so that the identical test tube setups could be made in future measurements. 
+One of the test tubes was emptied, filled with the most dilute known solution, and inserted into the 
+spectrophotometer, making sure to orient it correctly, and the %T was recorded. In between 
+measurements, the accuracy of the spectrophotometer was checked with the un-emptied test tube of water 
+– it should still have read 100%T. The procedure was then repeated for the remaining four test tubes of 
+known solution, proceeding from the most dilute to the most concentrated. Then, after rinsing and drying 
+the experimental test tube, the same procedure was performed for the unknown solutions, once again 
+going from the most dilute to the most concentrated solutions. This was done to reduce the effects of 
+solution carryover. The %T’s of the known and unknown samples were then compared – if there were 
+fewer than 3 unknown values which lay within the range of the known %T’s, new dilutions had to be 
+prepared, and more measurements taken, using the same Spectronic 20 and glassware. The waste 
+solutions were then collected, neutralized if necessary, and disposed of down the drain. 
+ 
+ 
+4. Results 
+ 
+4A. Synthesis of the Iron-Oxalate Coordination Complex 
+Observations 
+ 
+The iron (II) ammonium sulfate, of chemical equation Fe(NH4)2(SO4)2, was a light blue-green 
+crystalline substance. Exactly 1.2000g of the hydrated salt was measured out and combined with 3.0 mL 
+of deionized H2O and 3 drops of 6M H2SO4, a clear and colorless solution, in a 50 mL beaker. The 
+solution was then immersed in a water bath and achieved a maximum heating temperature of 56.6°C, then 
+was removed from the heat. 
+
+ 
+ 
+5.98 mL of 1M oxalic acid (H2C2O4, a clear and colorless solution) was then introduced into the same 
+beaker, immediately producing a yellow precipitate of Fe(C2O4) suspended – and later settling – in a clear 
+solution with a goldenrod hue. 
+ 
+Upon testing the solution with pH paper, it was confirmed that the beaker contained “strongly acidic” 
+solution. The beaker was then lowered into the same water bath and was allowed to boil for four minutes 
+at a maximum temperature of 100°C. The solution was then removed from heat and allowed to cool for 
+nine minutes. At this time, the digested precipitate had settled to the bottom of the baker, with a light, 
+clear yellow solution on the top. A watch glass was placed over the mouth of the baker to keep out any 
+possible impurities and contaminants. The decanted supernatant was a clear green-yellow solution, and a 
+soggy mustard-colored heap of solid was left behind in the original beaker. The precipitate was washed 
+with ~3 mL samples of water. The decanted liquid ranged from clear yellow to clear and colorless. 
+ 
+The potassium oxalate solution was clear and colorless. After 3.0 mL of it was added to the beaker, 
+the contents turned an orangish-yellow. The beaker was heated to 42.0°C, and upon removal from the 
+heat, 10 mL of 6% hydrogen peroxide (H2O2, a clear and colorless solution) was slowly added. Small 
+bubbles appeared with almost every drop, and the beaker turned warm to the touch, indicating the taking 
+place of an exothermic reaction. The beaker contents soon turned a rusty, murky brown. The mixture 
+was then heated to 100.0°C without noticeable change in appearance, but turned a clear green-yellow 
+color upon the addition of 2.0 mL of 1M H2C2O4. 145 drops of 95% ethanol (EtOH) were added, and 
+crystallization initiated. The beaker was wrapped in foil and left in the lab drawer for a week. Upon 
+return, a layer of small granulated radioactive-green crystals had settled to the bottom of the baker, which 
+was also filled with a clear neon-green solution. Vacuum-filtering the crystals produced a clear yellow-
+green solution, which turned cloudy after a few minutes. The crystals were left in the crucible for use in 
+the next part of the experiment. 
+ 
+Data 
+Mass of Fe(NH4)2(SO4)2: 1.2000g 
+ 
+Mass of final product, lime-green crystals: 1.1###g 
+ 
+(Additional data may be found in the Experiment 4A Lab Report2) 
+ 
+ 
+Calculations 
+Equations Used: 
+100%
+x
+moles
+in
+yield
+l
+theoretica
+maximum
+obtained
+product
+of
+moles
+actual
+yield
+,
+%
+=
+ 
+Actual moles of product = 
+crystals
+of
+mass
+molar
+crystals
+of
+mass
+ 
+Theoretical product yield = 
+reactant
+limiting
+of
+mass
+molar
+reactant
+limiting
+of
+mass
+ 
+ 
+Limiting reactant is Fe(NH4)2(SO4)2·6H2O, molar mass of 392.15 g/mol 
+ 
+Mass of synthesized crystals = mass of filled crucible (g) – mass of empty crucible (g) 
+ 
+= 14.0389g – 12.0209g 
+ 
+ 
+= 1.1###g 
+ 
+Part A: If the product is K[FeIII(C2O4)2]·2H2O – molar mass is 307.03 g/mol 
+General Equation: 2Fe(NH4)2(SO4)2·6H2O + K2C2O4 + 3H2C2O4 Æ 2K[Fe(C2O4)2] ·2H2O 
+ 
+ 
+Actual moles of product 
+= 
+g/mol
+03
+.
+307
+g
+1180
+.1
+ 
+
+ 
+ 
+ 
+= 
+mol
+ 
+0.0036413
+ 
+ 
+ 
+Theoretical product yield 
+= 
+g/mol
+15
+.
+392
+g
+2000
+.1
+ 
+ 
+ 
+= 
+0030601
+.0
+ moles beginning salt 
+ 
+ 
+= 
+0030601
+.0
+ moles final crystals (1:1 molar ratio, see equation) 
+ 
+Percentage yield 
+ 
+ 
+= 
+%
+100
+x
+mol
+0030601
+.0
+mol
+0036413
+.0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+%
+99
+.
+118
+ 
+ 
+Part B: If the product is K3[FeIII(C2O4)3]·3H2O – molar mass is 491.27 g/mol 
+ 
+ 
+General Equation: 2Fe(NH4)2(SO4)2·6H2O + 3K2C2O4 + 3H2C2O4 Æ 2K3[FeIII(C2O4)3]·3H2O 
+ 
+ 
+ 
+Actual moles of product 
+= 
+g/mol
+27
+.
+491
+g
+1180
+.1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+mol
+0022757
+.0
+ 
+ 
+ 
+ 
+Theoretical product yield 
+= 
+g/mol
+15
+.
+392
+g
+2000
+.1
+ 
+ 
+ 
+= 
+0030601
+.0
+ moles beginning salt 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+0030601
+.0
+ moles final crystals (1:1 molar ratio, see equation) 
+ 
+Percentage yield 
+ 
+ 
+= 
+%
+100
+x
+mol
+0030601
+.0
+mol
+0022757
+.0
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+= 
+%
+367
+.
+74
+ 
+ 
+Since experimental values may not exceed 100% of the theoretical value, the 11#.##% sample is 
+rejected. Therefore, the product must be K3[FeIII(C2O4)3]·3H2O. 
+ 
+ 
+4B. Analysis of the Oxalate Ligand Content through Redox Titration 
+Observations 
+ 
+KMnO4 observations: opaque purple solution, similar to grape juice 
+ 
+After combining titrated solutions, waste turned a heme red 
+Data 
+ 
+ 
+Concentration of KMnO4: 0.0100M 
+ 
+ 
+Table of the Four Redox Titration Trials (Trial “A” being “quick-and-dirty”) 
+Action/ 
+Measurement 
+Flask A 
+Flask B 
+Flask C 
+Flask D 
+mass crystals 
+0.1054 g 
+0.1052 g 
+0.1021 g 
+0.1017 g 
+vol of H2O 
+30 mL 
+30 mL 
+30 mL 
+30 mL 
+vol of 6M 
+H2SO4 
+5 mL 
+5 mL 
+5 mL 
+5 mL 
+analyte temp. 
+65.0°C 
+61.5°C 
+62.7°C 
+63.1°C 
+initial 
+0.35 mL 
+0.50 mL 
+0.00 mL 
+0.05 mL 
+
+ 
+KMnO4 vol. 
+final 
+KMnO4 vol. 
+26.22 mL 
+26.05 mL 
+25.11 mL 
+24.95 mL 
+volume 
+KMnO4 used 
+25.87 mL 
+25.55 mL 
+25.11 mL 
+24.90 mL 
+endpoint 
+color 
+dusty rose to light 
+pink to clear 
+medium rose to 
+pink to clear 
+medium rose to 
+pink to clear 
+medium rose to 
+pink to clear 
+ 
+ 
+Calculations 
+Equations Used: 
+ 
+4
+2
+4
+2
+2
+5
+4
+1
+4
+01
+.
+KMnO
+mmol
+O
+C
+H
+mmol
+KMnO
+of
+mL
+mL
+KMnO
+mmol
+sample
+complex
+in
+oxalate
+of
+mmol
+⋅
+⋅
+=
+ 
+ 
+sample
+of
+g
+mol
+O
+C
+g
+mmol
+mol
+O
+C
+mmol
+oxalate
+of
+wt
+⋅
+⋅
+⋅
+=
+1
+4
+2
+018
+.
+88
+1000
+1
+4
+2
+%
+ 
+ 
+samples
+of
+number
+samples
+all
+of
+sum
+average =
+ 
+ 
+1
+)
+(
+)
+(
+2
+−
+−
+= ∑
+N
+x
+x
+deviation
+standard
+i
+σ
+ 
+ 
+complex
+sample
+of
+g
+sample
+in
+oxalate
+mmol
+g
+complex
+g
+in
+oxalate
+of
+mmol
+⋅
+= 100
+100
+ 
+ 
+Limiting reactant is Fe(NH4)2(SO4)2·6H2O, molar mass of 392.15 g/mol 
+There is a 1:1 ratio between oxalic acid (H2C2O4) and the oxalate ion (C2O4
+2-) 
+In calculations, H2C2O4 is H2C2O4; KMnO4 is KMnO4; C2O4 is C2O4
+2-; 
+ 
+ 
+1. 2MnO4
+- (aq) + 5H2C2O4 (aq) + 6H+ (aq) ↔ 2Mn2+ (aq) + 10CO2 (g) + 8H2O (l) 
+ 
+2. Concentration of potassium permanganate (KMnO4) solution: 0.0100M 
+ 
+3. Trial A 
+C2O4
+mmol
+.647
+KMnO4
+mmol
+2
+H2C2O4
+mmol
+5
+KMnO4
+mL
+25.87
+mL
+1
+KMnO4
+mmol
+.0100
+=
+⋅
+⋅
+ 
+Trial B 
+C2O4
+mmol
+.639
+KMnO4
+mmol
+2
+H2C2O4
+mmol
+5
+KMnO4
+mL
+25.55
+mL
+1
+KMnO4
+mmol
+.0100
+=
+⋅
+⋅
+ 
+ 
+ 
+Trial C 
+ 
+ 
+C2O4
+mmol
+.628
+KMnO4
+mmol
+2
+H2C2O4
+mmol
+5
+KMnO4
+mL
+25.11
+mL
+1
+KMnO4
+mmol
+.0100
+=
+⋅
+⋅
+ 
+ 
+ 
+Trial D 
+ 
+ 
+C2O4
+mmol
+.623
+KMnO4
+mmol
+2
+H2C2O4
+mmol
+5
+KMnO4
+mL
+24.90
+mL
+1
+KMnO4
+mmol
+.0100
+=
+⋅
+⋅
+ 
+ 
+4. Trial A 
+
+ 
+C2O4
+54.03%
+100
+x
+sample
+g
+.1054
+mol
+1
+C2O4
+g
+88.018
+mmol
+1000
+mol
+1
+C2O4
+mmol
+.647
+=
+⋅
+⋅
+⋅
+ 
+Trial B 
+C2O4
+53.46%
+100
+x
+sample
+g
+.1052
+mol
+1
+C2O4
+g
+88.018
+mmol
+1000
+mol
+1
+C2O4
+mmol
+.639
+=
+⋅
+⋅
+⋅
+ 
+Trial C 
+C2O4
+54.14%
+100
+x
+sample
+g
+.1021
+mol
+1
+C2O4
+g
+88.018
+mmol
+1000
+mol
+1
+C2O4
+mmol
+.628
+=
+⋅
+⋅
+⋅
+ 
+Trial D 
+C2O4
+53.92%
+100
+x
+sample
+g
+.1017
+mol
+1
+C2O4
+g
+88.018
+mmol
+1000
+mol
+1
+C2O4
+mmol
+.623
+=
+⋅
+⋅
+⋅
+ 
+ 
+ 
+Average Weight Percentage of Oxalate Ion 
+ 
+ 
+%
+89
+.
+53
+4
+92
+.
+53
+14
+.
+54
+46
+.
+53
+03
+.
+54
+=
++
++
++
+ 
+ 
+ 
+Standard Deviation 
+ 
+ 
+ 
+1
+4
+)
+92
+.
+53
+89
+.
+53
+(
+)
+14
+.
+54
+89
+.
+53
+(
+)
+46
+.
+53
+89
+.
+53
+(
+)
+03
+.
+54
+89
+.
+53
+(
+2
+2
+2
+2
+−
+−
++
+−
++
+−
++
+−
+=
+σ
+ 
+ 
+ 
+ 
+5976
+.
+2
+2988
+.
+=
+=
+σ
+σ
+ 
+ 
+ 
+Average Weight Percentage ± 2σ: 
+ 
+ 
+ 
+53.## ± .5###% 
+ 
+ 
+5. Trial A 
+ 
+ 
+complex
+100g
+per
+C2O4
+mmol
+614
+complex
+g
+.1054
+C2O4
+mmol
+.647
+g
+100.0
+=
+⋅
+ 
+ 
+ 
+Trial B 
+ 
+ 
+complex
+100g
+per
+C2O4
+mmol
+607
+complex
+g
+.1052
+C2O4
+mmol
+.639
+g
+100.0
+=
+⋅
+ 
+ 
+ 
+Trial C 
+ 
+ 
+complex
+100g
+per
+C2O4
+mmol
+615
+complex
+g
+.1021
+C2O4
+mmol
+.628
+g
+100.0
+=
+⋅
+ 
+ 
+ 
+Trial D 
+ 
+ 
+complex
+100g
+per
+C2O4
+mmol
+613
+complex
+g
+.1017
+C2O4
+mmol
+.623
+g
+100.0
+=
+⋅
+ 
+ 
+ 
+Average Number of mmol of Oxalate in 100g of Complex 
+ 
+ 
+4
+2
+612
+4
+613
+615
+607
+614
+O
+C
+mmol
+=
++
++
++
+ 
+ 
+ 
+Standard Deviation 
+ 
+ 
+1
+4
+)
+613
+612
+(
+)
+615
+612
+(
+)
+607
+612
+(
+)
+614
+612
+(
+2
+2
+2
+2
+−
+−
++
+−
++
+−
++
+−
+=
+σ
+ 
+ 
+ 
+18
+.7
+2
+59
+.3
+=
+=
+σ
+σ
+ 
+ 
+ 
+Average Number of mmol of Oxalate ± 2σ: 
+ 
+ 
+ 
+61# ± 7.## mmol C2O4
+2- 
+
+ 
+ 
+4C. Quantitative Analysis of the Iron (II) Ion through Solution Spectrophotometry 
+Observations 
+ 
+Solution turned red after addition of 15 mL of .0020M bipyridyl solution 
+ 
+Part II supernatant: clear yellow solution 
+Data 
+ 
+Part I: Preparation of a Standard Solution of Iron (II) Bipyridyl Complex 
+Mass of solid Fe[(NH4)2(SO4)2·6H2O]: 0.1205 g 
+Mass of ascorbic acid: 0.0532 g 
+ 
+Part II: Preparation of the Iron (III) Oxalate Complex for Measurement 
+ 
+ 
+Mass of green synthesized crystals: 0.1000 g (exactly!) 
+ 
+ 
+Mass of ascorbic acid: 0.0845 g 
+ 
+Part III: Spectrophotometric Measurements 
+ 
+ 
+Wavelength set to 520 nm 
+ 
+ 
+ 
+Fe2+ and Bipyridyl Dilution – Known Solution 
+ 
+Tube 
+Fe2+volume 
+H2O volume 
+Total volume 
+%T 
+Absorbance 
+A1 
+.75 
+6.75 
+7.50 
+72% 
+.1427 
+A2 
+1.50 
+6.00 
+7.50 
+61% 
+.2147 
+A3 
+2.25 
+5.25 
+7.50 
+43% 
+.3665 
+A4 
+3.75 
+3.75 
+7.50 
+18% 
+.7447 
+A5 
+5.25 
+2.25 
+7.50 
+5% 
+1.3010 
+ 
+ 
+ 
+Fe3+ Oxalate Dilution – Unknown Solution 
+ 
+Tube 
+Fe2+volume 
+H2O volume 
+Total volume 
+%T 
+Absorbance 
+B1 
+.75 
+6.75 
+7.50 
+84% 
+.0757 
+B2 
+1.50 
+6.00 
+7.50 
+75% 
+.1249 
+B3 
+2.25 
+5.25 
+7.50 
+60% 
+.2218 
+B4 
+3.75 
+3.75 
+7.50 
+42% 
+.3768 
+B5 
+5.25 
+2.25 
+7.50 
+25% 
+.6020 
+ 
+ 
+Calculations 
+ 
+Equations Used 
+ 
+ 
+nce
+transmitta
+T
+and
+absorbance
+A
+where
+T
+A
+%
+,
+%
+100
+log
+=
+=
+
+
+
+
+
+
+=
+ 
+ 
+ 
+14519
+1528
+.
++
+= absorbance
+ion
+concentrat
+ 
+ 
+ 
+samples
+of
+number
+samples
+all
+of
+sum
+average =
+ 
+ 
+1
+)
+(
+)
+(
+2
+−
+−
+= ∑
+N
+x
+x
+deviation
+standard
+i
+σ
+ 
+ 
+ 
+ 
+1. 
+(II)
+iron
+in
+M
+10
+x
+3.072
+L
+.100
+g
+392.2
+mol
+1
+sulfate
+ammonium
+(II)
+iron
+solid
+g
+.1205
+3
+-
+=
+⋅
+⋅
+ 
+
+ 
+ 
+ 
+2. 
+bipy
+/
+Fe
+of
+10
+229
+.1
+L
+05
+.
+L
+002
+.
+L
+1
+mol
+10
+072
+.3
+2
+4
+3
++
+−
+−
+×
+=
+⋅
+×
+M
+ 
+ 
+ 
+3. Known Sample 
+Sample 
+M of Fe2+/bipy 
+ 
+Dilution Conc. 
+ 
+Final Concentration 
+A1 
+1.229 x 10-4 
+x 
+(.75mL/7.50mL) 
+= 
+1.229 x 10-5 M 
+A2 
+1.229 x 10-4 
+x 
+(1.50mL/7.50mL) 
+= 
+2.458 x 10-5 M 
+A3 
+1.229 x 10-4 
+x 
+(2.25mL/7.50mL) 
+= 
+3.687 x 10-5 M 
+A4 
+1.229 x 10-4 
+x 
+(3.75mL7.50mL) 
+= 
+6.145 x 10-5 M 
+A5 
+1.229 x 10-4 
+x 
+(5.25mL7.50mL) 
+= 
+8.603 x 10-5 M 
+ 
+ 
+ 
+ 
+4. Fe2+ Bipyrimidyl Dilution (Known) 
+ 
+ 
+ 
+ 
+Tube 
+%T 
+Absorbance 
+ A1 
+72% 
+.1427 
+A2 
+61% 
+.2147 
+A3 
+43% 
+.3665 
+A4 
+18% 
+.7447 
+A5 
+5% 
+1.3010 
+ 
+ 
+ 
+Fe3+ Oxalate Dilution (Unknown) 
+Tube 
+%T 
+Absorbance 
+B1 
+84% 
+.0757 
+B2 
+75% 
+.1249 
+B3 
+60% 
+.2218 
+B4 
+42% 
+.3768 
+B5 
+25% 
+.6020 
+ 
+For the “Beer’s Law Calibration Graph,” please refer to the attached page… 
+Also, note that the graph excludes trials B1 & B5 because their values are outside the desired 
+range of .2-.8 absorbance values… 
+ 
+ 
+5. The equation of concern (obtained from trend line of previous graph): y = 14519x -0.1528, where 
+“y” represents the absorbance and “x” the concentration in mol/L. 
+Sample 
+Equation with Unknown A 
+Solve for x… 
+Final Concentration (M) 
+B1 
+0.0757 = 14519x - 0.1528 
+… 
+x = 1.574 x 10-5 M 
+B2 
+0.1249 = 14519x - 0.1528 
+… 
+x = 1.913 x 10-5 M 
+B3 
+0.2218 = 14519x - 0.1528 
+… 
+x = 2.580 x 10-5 M 
+B4 
+0.3768 = 14519x - 0.1528 
+… 
+x = 3.648 x 10-5 M 
+B5 
+0.6020 = 14519x - 0.1528 
+… 
+x = 5.199 x 10-5 M 
+ 
+6. Concentration of Fe3+ in the 100 mL volumetric flask 
+Sample B1 
+ 
+M
+M
+3
+5
+10
+935
+.3
+mL
+2.0
+mL
+50
+mL
+1
+mL
+10
+10
+574
+.1
+−
+−
+×
+=
+⋅
+⋅
+×
+ 
+Sample B2 
+
+ 
+ 
+M
+M
+3
+5
+10
+391
+.2
+mL
+2.0
+mL
+50
+mL
+2
+mL
+10
+10
+913
+.1
+−
+−
+×
+=
+⋅
+⋅
+×
+ 
+Sample B3 
+ 
+M
+M
+3
+5
+10
+150
+.2
+mL
+2.0
+mL
+50
+mL
+3
+mL
+10
+10
+580
+.2
+−
+−
+×
+=
+⋅
+⋅
+×
+ 
+Sample B4 
+ 
+M
+M
+3
+5
+10
+280
+.2
+mL
+2.0
+mL
+50
+mL
+4
+mL
+10
+10
+648
+.3
+−
+−
+×
+=
+⋅
+⋅
+×
+ 
+Sample B5 
+ 
+M
+M
+3
+5
+10
+600
+.2
+mL
+2.0
+mL
+50
+mL
+5
+mL
+10
+10
+199
+.5
+−
+−
+×
+=
+⋅
+⋅
+×
+ 
+ 
+7. (Unknown samples B1 and B2 were omitted because their values were not within the desired 
+range of 0.2-0.8) 
+M
+x
+002343
+.
+3
+002600
+.
+002280
+.
+002150
+.
+=
++
++
+=
+ 
+ 
+ 
+8. mmol of Fe3+ (averaged with 2 standard deviations) in the ~0.1g sample, excluded B1 & B2 for 
+reasons above… 
+Sample B3 
+ 
+(.002150 mmol) x (100 mL) = .2150 mmol Fe3+ 
+Sample B4 
+ 
+(.002280 mmol) x (100 mL) = .2280 mmol Fe3+ 
+Sample B5 
+ 
+(.002600 mmol) x (100 mL) = .2600 mmol Fe3+ 
+ 
+Average Number Of mmol Of Fe3+ In The 100 mL Of Solution 
+ 
+mmol
+2343
+.
+3
+2600
+.
+2280
+.
+2150
+.
+=
++
++
+=
+x
+ 
+ 
+ 
+Standard Deviation 
+ 
+ 
+ 
+1
+3
+)
+2600
+.
+2343
+(.
+)
+2280
+.
+2343
+(.
+)
+2150
+.
+2343
+(.
+2
+2
+2
+−
+−
++
+−
++
+−
+=
+σ
+ 
+ 
+ 
+0464
+.
+2
+0232
+.
+=
+=
+σ
+σ
+ 
+ 
+ 
+Average Number of mmol of Fe3+ ± 2σ: 
+ 
+ 
+ 
+.2343 ± .0464 mmol Fe3+
+ 
+ 
+ 
+ 
+9. Calculating average percent (wt%) composition (± 2σ) of iron in original sample… 
+ 
+ 
+Sample B3 
+ 
+ 
+ 
+12.01%
+100
+sample
+.1000g
+1
+Fe
+mol
+1
+Fe
+g
+55.85
+mmol
+1000
+mol
+1
+Fe3
+mmol
+.2150
+=
+×
+⋅
+⋅
+⋅
++
+ 
+ 
+ 
+Sample B4 
+ 
+ 
+ 
+12.73%
+100
+sample
+.1000g
+1
+Fe
+mol
+1
+Fe
+g
+55.85
+mmol
+1000
+mol
+1
+Fe3
+mmol
+.2280
+=
+×
+⋅
+⋅
+⋅
++
+ 
+ 
+ 
+Sample B5 
+
+ 
+ 
+ 
+ 
+%
+52
+.4
+1
+100
+sample
+.1000g
+1
+Fe
+mol
+1
+Fe
+g
+55.85
+mmol
+1000
+mol
+1
+Fe3
+mmol
+.2600
+=
+×
+⋅
+⋅
+⋅
++
+ 
+ 
+ 
+Average Percentage Weight 
+ 
+ 
+ 
+%
+09
+.3
+1
+3
+52
+.
+14
+73
+.
+12
+01
+.
+12
+=
++
++
+=
+x
+ 
+ 
+ 
+Standard Deviation 
+ 
+ 
+ 
+1
+3
+)
+52
+.
+14
+09
+.
+13
+(
+)
+73
+.
+12
+09
+.
+13
+(
+)
+01
+.
+12
+09
+.
+13
+(
+2
+2
+2
+−
+−
++
+−
++
+−
+=
+σ
+ 
+ 
+ 
+58
+.2
+2
+29
+.1
+=
+=
+σ
+σ
+ 
+ 
+ 
+Average Weight Percentage of Fe3+ ± 2σ: 
+ 
+ 
+ 
+13.09 ± 2.58 % Fe3+
+ 
+ 
+10. Millimoles of Fe3+ Present in 100g of Complex 
+Sample B3 
+ 
+complex
+100g
+in
+Fe(III)
+mmol
+215.040
+mol
+1
+mmol
+1000
+g
+55.85
+Fe
+mol
+1
+g
+100
+100
+12.01%
+=
+⋅
+⋅
+⋅
+ 
+Sample B4 
+ 
+complex
+100g
+in
+Fe(III)
+mmol
+227.932
+mol
+1
+mmol
+1000
+g
+55.85
+Fe
+mol
+1
+g
+100
+100
+12.73%
+=
+⋅
+⋅
+⋅
+ 
+Sample B5 
+ 
+complex
+100g
+in
+Fe(III)
+mmol
+259.982
+mol
+1
+mmol
+1000
+g
+55.85
+Fe
+mol
+1
+g
+100
+100
+14.52%
+=
+⋅
+⋅
+⋅
+ 
+ 
+ 
+ 
+Average mmol of Fe3+ in 100g of Complex 
+ 
+ 
+ 
+mmol
+18
+3.
+234
+3
+982
+.
+259
+932
+.
+227
+040
+.
+215
+=
++
++
+=
+x
+ 
+ 
+ 
+Standard Deviation 
+ 
+ 
+ 
+1
+3
+)
+982
+.
+259
+318
+.
+234
+(
+)
+932
+.
+227
+318
+.
+234
+(
+)
+040
+.
+215
+318
+.
+234
+(
+2
+2
+2
+−
+−
++
+−
++
+−
+=
+σ
+ 
+ 
+ 
+28
+.
+46
+2
+14
+.
+23
+=
+=
+σ
+σ
+ 
+ 
+ 
+Average mmol of Fe3+ in 100g of Complex ± 2σ: 
+ 
+ 
+ 
+23#.### ± 4#.## mmol Fe3+ 
+ 
+4D. Wrap-Up Calculations for Complex: Experiments 4A-C 
+ 
+ 
+A. 61# mmol C2O4
+2- 
+ 
+ 
+ 
+ 
+roughly a 1:3 ratio between Fe3+:C2O4
+2- 
+ 
+ 
+23#.### mmol Fe3+ 
+ 
+ 
+x=1 and y=3 
+ 
+ 
+B. Kw[Fex(C2O4)y]·zH2O 
+ 
+ 
+1 Fe3+ gives +3…3 C2O4
+2- give -6… H2O is neutral…overall charge of -3 
+ 
+ 
+Since K+ provides charge of +1, need 3 potassium ions 
+ 
+ 
+W=3 
+ 
+
+ 
+C. K3[Fe(C2O4)3] 
+100g
+in
+K
+mol
+702.954
+Fe
+mol
+1
+K
+mol
+3
+Fe
+mmol
+234.318
++
+=
++
+⋅
+ 
+ 
+D. 
+Fe(III)
+13.09g
+Fe(III)
+mol
+1
+55.85g
+mmol
+1000
+mol
+1
+Fe
+mmol
+234.318
+=
+⋅
+⋅
+ 
+ 
+ 
++
+=
++
+⋅
+⋅
++
+K
+27.49g
+K
+mol
+1
+39.10g
+mmol
+1000
+mol
+1
+K
+mmol
+702.954
+ 
+ 
+ 
+oxalate
+53.87g
+Fe(III)
+mol
+1
+88.018g
+mmol
+1000
+mol
+1
+oxalate
+mmol
+612
+=
+⋅
+⋅
+ 
+ 
+ 
+13.09+27.49+53.87=94.45 
+ 
+ 
+100-94.45=5.55 
+ 
+ 
+...
+2
+99
+.
+307
+1
+1000
+02
+.
+18
+2
+1
+2
+55
+.5
+O
+H
+mmol
+mol
+mmol
+g
+O
+H
+mol
+O
+H
+g
+=
+⋅
+⋅
+2:1 ratio in H2O:Fe3+ 
+ 
+ 
+z = 2 
+ 
+E. Determined Empirical Formula: 
+K3[Fe(C2O4)3]·2H2O…does not correspond to the real empirical formula 
+ 
+F. Since E’s empirical formula does not correspond to postlab 2g’s empirical formula, the molecular 
+formula and molecular mass to be used in this calculation should reflect the “proper” product – 
+namely, K3[Fe(C2O4)3]·3H2O, which has a molecular mass of 491.249 g/mol. 
+2Fe(NH4)2(SO4)2·6H2O + 3K2C2O4 + 3H2C2O4 Æ 2K3[Fe(C2O4)3]·3H2O + 7H2O 
+ 
+ 
+prod
+1.503g
+mol
+1
+491.249g
+salt
+iron
+mol
+2
+salt
+potassium
+mol
+2
+392.15g
+mol
+1
+ 
+O4)2·6H2O
+Fe(NH4)2(S
+1.2000g
+=
+⋅
+⋅
+⋅
+ 
+ 
+ 
+Percentage Yield = 
+100
+yield
+l
+theoretica
+yield
+actual
+×
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ = 
+%
+38
+.
+74
+100
+503
+.1
+1180
+.1
+=
+×
+g
+g
+ 
+ 
+5. Discussion 
+ 
+ 
+4A – Synthesis of an Iron (III) Oxalate Complex 
+ 
+ 
+In the synthesis of the iron (III) oxalate complex, 1.1###g of the final lime-green crystals were 
+obtained. The percent yield of K[Fe3+(C2O4)2]·2H2O was calculated to be 11#.##%, and the percent yield 
+of K3[Fe3+(C2O4)3]·3H2O was calculated to be 74.###%. Since the experimental values may not exceed 
+100% of the calculated theoretical value (which assumes ideal conditions), the possibility of the complex 
+being K[Fe3+(C2O4)2]·2H2O is thrown out, leaving K3[Fe3+(C2O4)3]·3H2O as the correct one. There are no 
+averaged values because only one trial was performed. 
+ 
+ 
+Apart from the usual human-mediated errors in the measuring and distribution of chemicals and 
+in the readings of instrumental information – both of which are of much concern in this particular 
+experiment, given that the experimental procedure contained little else but sequential measurements and 
+readings – another source of error involved the maintenance of the solution pH level. In step two, the pH 
+was checked to be strongly acidic. Such an environment would also result in an increased presence of the 
+oxalate ion (see equation two, from Introduction), which would then be available for coordination with 
+the Fe3+ ion. Had the environment been insufficiently acidic, equation two’s equilibrium would have 
+favoured the reactant side, resulting in an excess of oxalic acid (H2C2O4), which is useless for complex 
+ion formation. Equation two’s equilibrium is carefully maintained by balancing the stoichiometric 
+
+ 
+amount of oxalic acid and aqueous potassium oxalate (K2C2O4, which dissolves in solution to give the 
+oxalate ion, C2O4
+2-). 
+ 
+ 
+Additional sources of error involved dirty and/or improperly calibrated glassware, failure to 
+completely encase the crystals in foil (they’re light-sensitive), improper cleaning of the crucible (which 
+would lead to inaccurate filtration), contaminated or already-catalyzed H2O2 (which would result in the 
+hindered oxidation of Fe2+ to Fe3+), and failure to allow the crystals to completely air-dry (mass of H2O 
+would have accidentally been included, resulting in an overestimation of the percentage yield). 
+ 
+ 
+Although the calculated percentage yield of K3[Fe3+(C2O4)3]·3H2O was sufficiently high enough 
+to conclude that this experimental procedure is both an effective and successful way to synthesize, isolate, 
+and purify an iron (III) oxalate compound, it was noted that the filtrant liquid in step 6 eventually turned 
+cloudy and appeared as if there was a minimal sprinkling of crystals in the bottom of the filter flask. 
+These crystals may have been lost in the filtration process by the use of the 95% EtOH. Had the EtOH 
+been more highly concentrated, the crystals would probably have remained in the crucible, seeing as they 
+were water-soluble and may have dissolved in the 5% of H2O present in the ethanol mixture. 
+ 
+ 
+4B – Analysis of the Oxalate Ligands in the Iron (III) Oxalate Complex 
+ 
+ 
+In the analysis of the green synthesis product for oxalate content, it was found that the four trials 
+yielded calculations of 61#, 60#, 61#, and 61# mmol of C2O4
+2- per 100g of complex analyzed. The 
+averaged value, with the inclusion of two standard deviations, reported to be 61# ± 7.## mmol of C2O4
+2- 
+per 100g of complex analyzed. The relative small size of the standard deviations (1.17% of the average) 
+suggest that the titrations were performed very precisely with one another, and such a conclusion is 
+consistent with the experimental findings as well. The millimoles of oxalate within the crystals were 
+.64#, .63#, .62#, and .62#, for trials A-D, respectively. The weight percentages for each trial (A-D) were 
+54.0#%, 53.4#%, 54.1#%, and 53.##%, with an average of 53.## ± .5###%. The standard deviation in 
+this case was 1.11% of the average value, also indicating that the samples are very precise in 
+measurement. No obvious outliers were identified, so the Q-Test was skipped and no extra trials were 
+attempted. 
+ 
+ 
+Possibility for error included the initial mass-recordings of the crystals; even small amounts of 
+crystals may have adhered to the weighing paper, and in the transfer of the crystals from the balance to 
+the flask, air currents and unsteady movements may have also caused the loss of material. A possible 
+remedy for this would be to “mass by difference,” the technique of which was practiced in an earlier 
+laboratory experiment. 
+ 
+ 
+Also, realizing that the buret is a rather large and unwieldy instrument, it may have been very 
+possible for some of the permanganate analyte to have been lost in the filling and utilizing of the buret. A 
+leaking stopcock would also be a source of error. A very common source of error with burets and 
+titration involves overshooting the endpoint – when the endpoint is fast approaching, even the extra 
+addition of a drop or two could turn the solution from clear into a permanent pink. The “quick and dirty” 
+titration was designed with student impatience in mind; after one “q&d” trial was performed, an 
+approximation for the volume of KMnO4 needed could be made, and the rest of the titrations could 
+proceed more smoothly. 
+ 
+ 
+Minor sources of error may have involved: impurity of crystals, improper massing of the crystals, 
+dirty and/or contaminated glassware, improperly calibrated instruments, failing to record the initial 
+volume of the titrant, inconsistent readings of the buret (i.e., above eye level, below, etc), the interaction 
+of the CO2 of the atmosphere on the relative acidity of the analyte (resulting in more KMnO4 used than 
+was actually needed), and general calculation errors. 
+ 
+ 
+Based upon the high precision of the results, it is feasible to suggest that redox titrations are both 
+efficient and accurate techniques by which to determine the content of a particular soluble species (here: 
+oxalate ion) in a solution. The method is not as time consuming as gravimetric analysis but is much more 
+practical, allowing multiple tests to be run in a short amount of time – incentives for any chemist as well 
+as student. 
+ 
+ 
+4C – Analysis of the Iron in the Iron (III) Oxalate Complex 
+
+ 
+ 
+ 
+The concentrations of Fe3+ within the 100 mL volumetric flasks were calculated to be, in order of 
+procedure, 3.935 x 10-3 M, 2.391 x 10-3 M, 2.150 x 10-3 M,, 2.280 x 10-3 M,, and 2.600 x 10-3 M, with an 
+average of 0.002343M. The millimoles of Fe3+ calculated to be in the initial ~0.1g sample were found to 
+be, in unknown samples 3-5, .2150 mmol Fe3+, .2280 mmol Fe3+, and .2600 mmol Fe3+, with an average 
+of .2343 ± .0464 mmol Fe3+. The average weight percentages of Fe3+ for samples 3-5 of the unknowns 
+were found to be 12.##%, 12.7#%, and 14.##%, with an average weight percentage of 13.09 ± 2.58%. 
+The number of millimoles present in 100g of complex were found to be, for unknown samples 3-5: 
+215.### mmol Fe3+, 227.### mmol Fe3+, and 259.### mmol Fe3+, with an average of 23#.### ±4#.## 
+mmol Fe3+ in every 100g of complex. 
+ 
+ 
+Firstly, the Beer’s Law graph could only reflect the innermost 3 values of the known dilution, for 
+the first and last trials had absorbance values outside the “suggested” values of .2000 to .8000. However, 
+a decent trend line was able to be drawn, and throughout the course of the calculations, the elimination of 
+the two data points did not seem to have much effect on the outcome of the rest of the experiment. 
+Likewise, two trials from the unknown had to be eliminated, for the first and second trials had 
+absorbencies below the recommended range of .2000 to .8000. 
+ 
+ 
+There were many sources of error in this experiment. First of all, the dilutions themselves were 
+prone to many mistakes, with the possibility of adding incorrect volumes to incorrect test tubes very great. 
+Incorrectly reading and using the pipet could also be a source of error. If the crystals had not been 
+sufficiently dried before use, then an excess of water would affect the final calculation of the amount of 
+water within the complex itself. Incorrectly zeroing the Spectronic 20 would have resulted in the 
+inconsistency of readings, as would the gradual dirtying of the test tubes. Even though gloves were worn, 
+there were still plenty of opportunities for the test tubes to pick up additional dust and grime along the 
+duration of the experiment, thereby affecting the absorbency readings. 
+ 
+ 
+I may have accidentally removed an excess of water from my complex without meaning to; I 
+stored my crystals in my dessicator for the better part of an hour before I realized that the dessicant would 
+be likely to have a negative effect on the water content of my hydrated iron oxalate salt. In a slightly less 
+elaborate possibility, the beaker of crystals may not have been fully capped, and water may simply have 
+evaporated out of the holding container. 
+ 
+ 
+The spectrophotometer readings were not very reliable, as the instruments seem to be a bit 
+outdated and had a rather nasty habit of fluctuating in readings, until it was decided that a bit of accuracy 
+could be sacrificed in order for everyone in the classroom to finish the procedure on time. Perhaps if 
+there were more instruments available, or better attention and vigilance had been applied towards the 
+preparation of the solutions, then Spectrophotometry would have resulted in more successful readings. 
+The empirical formula was different from that of the “true” compound mentioned in the postlab; had there 
+been a better alternate method to determining the iron (III) content within the complex, then the empirical 
+formula would have probably been correctly identified and in case of an experiment concerning the 
+identification of an unknown, the unknown would have been properly identified as well. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 Dr. Ian Ball, Chemistry 6BL Laboratory Manual, University of California, San Diego, ###### Quarter 200# 
+2 My name, Expt.4A: Synthesis of Iron (III) Oxalate Complex, November ##, 200#

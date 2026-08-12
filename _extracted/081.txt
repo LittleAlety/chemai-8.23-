@@ -1,0 +1,140 @@
+REL: 其他草酸配合物\二草酸合铜酸钾\controlled-synthesis-of-two-copper-oxalate-hydrate-complexes-kinetic-versus-thermodynamic-factors-a-laboratory.pdf
+================================================================================
+598
+Journal of Chemical Education  •  Vol. 86  No. 5  May 2009  •  www.JCE.DivCHED.org  •  © Division of Chemical Education 
+In the Laboratory
+This undergraduate laboratory experiment is used as an 
+introduction for students interested in research. The experi­
+ment develops a student’s reasoning and experimental skills. The 
+primary goal of this experiment is to synthesize two different 
+crystals by controlling the experimental conditions. The syn­
+thesis of K2[Cu(C2O4)2]·2H2O, 1, is a traditional experiment 
+in the teaching curriculum (1). However, there is a tetrahydrate 
+analog K2[Cu(C2O4)2]·4H2O, 2, that has also been prepared 
+(2). It was found that 1 and 2 can be selectively prepared by 
+controlling the concentrations of the reaction solutions. More­
+over, the tetrahydrate compound 2 can be easily converted to the 
+dihydrate compound 1 upon the loss of water molecules in air or 
+in solutions. Therefore, it is possible to obtain both kinetic and 
+thermodynamic products. This experiment illustrates that reac­
+tions (or crystallization in this case) can proceed via two routes. 
+Moreover, this experiment clearly demonstrates to students that 
+the reaction products depend on the reaction conditions.
+Experimental Overview
+Freshly prepared copper oxide was used to react with 
+KHC2O4. Therefore, the experiment first involves the syn­
+thesis of CuO and KHC2O4. Then, the reaction of CuO with 
+KHC2O4 in hot water gives blue solutions from which needle 
+or flat crystals can be obtained by evaporation of a concentrated 
+or dilute solution. The time required for the experiment is about 
+3–4 h. Water content determination can be made if time per­
+mits. This experiment is suitable for first-year students (second 
+semester). All chemicals are of analytical grade and are com­
+mercially available. The experiments are conducted in air. Other 
+relevant information is available in the online material. 
+Results and Discussion
+Students are required to discuss the reactions with respect 
+to the literature that they have studied and to calculate the yield 
+and the water content of the products (see the online material 
+for details). An instructor-modified example is presented based 
+on one group of typical students’ data and integration of the 
+students’ discussion.
+An aqueous solution of KHC2O4 (which is synthesized 
+from H2C2O4 and K2CO3) and CuO was heated at 80 °C. 
+After complete dissolution of CuO, the solution was filtered 
+while hot. From the blue filtrate, complexes 1 and 2 of differ­
+ent crystal shapes can be separated by carefully controlling the 
+concentration of the K2[Cu(C2O4)2] solutions. The reactions 
+involved are as follows:
+ 
+ 2KHC2O4 + H2O + CO2↑
+2H2C2O4 + K2CO3 
+ K2[Cu(C2O4)2](aq) + H2O
+CuO + 2KHC2O4 
+When a dilute solution of K2[Cu(C2O4)2] at 80 °C was 
+allowed to cool on the bench to room temperature, dark blue 
+needle crystals were obtained (Figure 1A). Alternatively, when a 
+concentrated solution at 80 °C was cooled on the bench to room 
+temperature, light blue flat crystals were obtained (Figure 1B). 
+Water content analyses (by heating the freshly prepared crystals 
+at 200 °C for 30 min) show that the dark blue needle crystals 
+are the tetrahydrate compound while the light blue flat crystals 
+are the dihydrate.
+ 
+ K2[Cu(C2O4)2]·4H2O(needle crystal)↓
+ K2[Cu(C2O4)2]·2H2O(ﬂat crystal)↓
+K2[Cu(C2O4)2](conc. solution) 
+K2[Cu(C2O4)2](dilute solution) 
+cooling
+cooling
+1
+2
+Interestingly, when the needle crystals of compound 2 
+were immersed in the mother liquid for more than 1.5 h, the 
+needles slowly converted to flat crystals of compound 1. The 
+conversion can be accelerated by shaking. On this basis, we 
+conclude that product crystallization proceeds via two routes 
+(Figure 2). K2[Cu(C2O4)2]·4H2O, 2, is the kinetic product with 
+a lower activation energy but with less stabilization energy, while 
+K2[Cu(C2O4)2]·2H2O, 1, is the thermodynamic product with a 
+higher activation energy but with more stabilization energy.
+Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: 
+Kinetic versus Thermodynamic Factors
+A Laboratory Experiment for Undergraduates
+Ai-Li Cui, Jing-Zhi Wei, Jin Yang, and Hui-Zhong Kou*
+Department of Chemistry, Tsinghua University, Beijing 100084, P. R. China; *kouhz@mail.tsinghua.edu.cn
+Figure 1. The shapes of crystals: (A) needle crystals (dark blue) 2 and 
+(B) flat crystals (light blue) 1.
+A
+B
+Downloaded via WUHAN UNIV on May 25, 2026 at 23:22:19 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+© Division of Chemical Education  •  www.JCE.DivCHED.org  •  Vol. 86  No. 5  May 2009  •  Journal of Chemical Education
+599
+In the Laboratory
+Hazards
+CuSO4·5H2O and K2CO3 are harmful if swallowed and 
+can cause irritation to skin, eyes, and respiratory tract. NaOH 
+is corrosive and may be fatal if swallowed. It causes burns to any 
+area of contact. H2C2O4 is corrosive and can cause severe irrita­
+tion and burns to skin, eyes, and respiratory tract.
+Conclusion
+This experiment clearly demonstrates that the concen­
+tration of the solutions is a key factor in the formation of 
+different compounds during crystallization. The concept of 
+thermodynamic and kinetic products can sometimes be dif­
+ficult for students to understand. This experiment is a good 
+example of the concept. It shows physically that different 
+products can be understood with chemical principles. Thus, 
+this complicated process of crystallization will help students 
+to understand some factors that determine the formation of 
+different complexes.
+Acknowledgments
+We acknowledge the financial support from the National 
+Science Foundation of China (20671055). We thank Nathan 
+Adams for checking the English language of this manuscript. We 
+are also grateful to Joseph F. Chiang (State University of New 
+York) for helpful discussion on the present work.
+Literature Cited
+ 1. Weichert, T.; Lohn, J. Z. Kristallogr. 1974, 139, 223.
+ 2. Fan, J.; Sun, W. Y.; Okamura, T.; Yu, K. B.; Ueyama, N. Inorg. 
+Chim. Acta 2001, 319, 240.
+Figure 2. The energy variation of crystallization processes of 
+complexes 1 and 2.
+K2[Cu(C2O4)2]·4H2O
+2
+K2[Cu(C2O4)2]·2H2O
+solution
+1
+Extent of Reaction
+Energy
+Supporting JCE Online Material
+http://www.jce.divched.org/Journal/Issues/2009/May/abs598.html
+Abstract and keywords
+Full text (PDF)
+Supplement
+ 
+Experimental procedure for the students
+ 
+Instructor notes

@@ -1,0 +1,441 @@
+REL: 摩尔盐\Iron(II) sulfate - Wikipedia, the free encyclopedia.htm
+================================================================================
+﻿ 
+ 
+ Iron(II) sulfate - Wikipedia, the free encyclopedia 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Iron(II) sulfate 
+ 
+ From Wikipedia, the free encyclopedia 
+ 
+ Jump to: navigation , 
+ search 
+ 
+ 
+ 
+ Iron(II) sulfate 
+ 
+ 
+ 
+ Other names 
+ Ferrous sulphate; Green vitriol; Iron vitriol; Copperas; Melanterite; 
+ Szomolnokite 
+ 
+ Identifiers 
+ 
+ CAS number 
+ 7720-78-7 , 17375-41-6 
+ (monohydrate), 7782-63-0 (heptahydrate) 
+ 
+ EC number 
+ 231-753-5 
+ 
+ Properties 
+ 
+ Molecular 
+ formula 
+ FeSO 4 
+ 
+ Molar mass 
+ 151.91 g/mol (anhydrous) 169.92 g/mol (monohydrate) 278.05 g/mol 
+ (heptahydrate) 
+ 
+ Appearance 
+ blue/green or white crystals 
+ 
+ Density 
+ 2.84 g/cm 3 (anhydrous) 1.898 g/cm 3 
+ (heptahydrate) 
+ 
+ Melting point 
+ 
+ 400 °C (decomp) 
+ 
+ Solubility in water 
+ 25.6 g/100mL (anhydrous) 
+ 
+ Hazards 
+ 
+ EU 
+ classification 
+ Harmful ( Xn ) Irritant ( Xi ) 
+ 
+ EU Index 
+ 026-003-00-7 (anhydrous) 026-003-01-4 (heptahydrate) 
+ 
+ R-phrases 
+ R22 , R36/38 
+ 
+ S-phrases 
+ (S2) , S46 
+ 
+ Flash point 
+ Non-flammable 
+ 
+ Related 
+ compounds 
+ 
+ Related compounds 
+ Iron(III) 
+ sulfate 
+ 
+ Except where noted otherwise, data are given 
+ for materials in their standard state (at 
+ 25 °C, 100 kPa) Infobox 
+ references 
+ 
+ 
+ 
+ Ferrous sulphate outside titanium dioxide 
+factory in Kaanaa, Pori . 
+ Iron(II) sulfate (Iron(II) sulphate) or ferrous sulfate 
+(ferrous sulphate) is the chemical compound with 
+the formula ( Fe S O 4 ). It is most 
+commonly encountered as the blue-green heptahydrate. Known since ancient times 
+as copperas , the alchemical symbol for 
+iron (II) sulfate is represented by unicode symbol U+26A8: ⚨. [ 1 ] 
+ 
+ 
+ 
+ 
+ 
+ Contents 
+ 
+ 1 Hydrates 
+ 2 Production and 
+ reactions 
+ 
+ 2.1 Reactions 
+ 
+ 3 Uses 
+ 
+ 3.1 Nutritional 
+ supplement 
+ 3.2 Colorant 
+ 3.3 Other uses 
+ 
+ 4 See also 
+ 5 References 
+ 6 External links 
+ 
+ 
+
+ 
+ [ edit ] 
+ Hydrates 
+ Iron(II) sulfate can be found in various states of hydration , and several of these 
+forms exist in nature. 
+ 
+ FeSO 4 ·H 2 O (mineral: szomolnokite, relatively rare) 
+ FeSO 4 ·4H 2 O (mineral: rozenite, white, relatively 
+ common, may be dehydratation product of melanterite) 
+ FeSO 4 ·5H 2 O (mineral: siderotil, relatively rare) 
+ FeSO 4 ·6H 2 O (mineral: ferrohexahydrite, relatively 
+ rare) 
+ FeSO 4 ·7H 2 O (mineral: melanterite, blue, relatively 
+ common) 
+ At 90°C, the heptahydrate loses water to form the colorless monohydrate, also 
+called green vitriol or copperas. In its 
+anhydrous, crystalline state, its standard 
+enthalpy of formation is Δ f H ° solid = -928.4 
+kJ.mol -1 and its standard molar 
+entropy is S ° solid = 107.5 
+J.K -1 .mol -1 . All mentioned mineral forms are connected 
+with oxidation zones of Fe-bearing ( pyrite , marcasite , chalcopyrite etc.) ore beds 
+and related environments (like coal fire sites). Many undergo rapid 
+dehydratation and sometimes oxidation. 
+ 
+ [ edit ] 
+ Production and reactions 
+ In the finishing of steel prior to plating or coating, 
+the steel sheet or rod is passed through pickling baths of 
+sulfuric acid. This treatment produces large quantities of iron(II) sulfate as a 
+by-product. [ 2 ] 
+ 
+ Fe + H 2 SO 4 → FeSO 4 + H 2 
+ 
+ Another source of large amounts results from the production of titanium dioxide from 
+ ilmenite via 
+the sulfate process. Ferrous sulfate is also prepared commercially by oxidation 
+of pyrite: 
+ 
+ 2 FeS 2 + 7 O 2 + 2 H 2 O → 2 
+ FeSO 4 + 2 H 2 SO 4 
+ 
+ [ edit ] 
+ Reactions 
+ On heating, iron(II) sulfate first loses its water of 
+crystallization and the original green crystals are converted into a 
+dirty-yellow anhydrous solid. When further, the anhydrous material releases sulfur 
+dioxide and white fumes of sulfur trioxide , leaving 
+a reddish-brown iron(III) oxide. Decomposition of iron(II) sulfate begins at 
+about 480 °C. 
+ 
+ 2 FeSO 4 → Fe 2 O 3 + SO 2 + 
+ SO 3 
+ Like all iron(II) salts, iron(II) sulfate is reducing agent. For example, it 
+reduces nitric acid to nitrogen oxide and chlorine to chloride: 
+ 
+ 6 Fe 2+ + 6 H + + 2 HNO 3 → 6 
+ Fe 3+ + 4 H 2 O + 2 NO 
+ 2 Fe 2+ + Cl 2 → 2 Fe 3+ + 2 Cl - 
+ 
+ 
+ [ edit ] 
+ Uses 
+ Industrially, ferrous sulfate is mainly used as a precursor to other iron 
+compounds. It is a reducing agent , mostly 
+for the reduction of chromate in cement . 
+ 
+ [ edit ] 
+ Nutritional supplement 
+ Together with other iron compounds, ferrous sulfate is used to fortify foods 
+and to treat iron-deficiency 
+ anemia . Copperas 
+was given indiscriminately by untrained persons to slaves in the 18th and 19th 
+centuries for various ailments. 
+ Constipation is frequent and uncomfortable side effects associated with the 
+administration of oral iron supplements. Stool softeners often are prescribed to 
+prevent constipation. 
+ 
+ [ edit ] 
+ Colorant 
+ Ferrous sulfate was used in the manufacture of inks , most notably iron 
+gall ink , which was used from the middle ages until the end of 
+the eighteenth century. It also finds use in wool dyeing as a mordant . 
+ Two different methods for the direct application of indigo dye were developed in 
+England in the eighteenth century and remained in use well into the nineteenth 
+century. One of these, known as china blue , involved iron(II) sulfate. 
+After printing an insoluble form of indigo onto the fabric, the indigo was 
+reduced to leuco -indigo in a sequence of baths of ferrous sulfate (with 
+reoxidation to indigo in air between immersions). The china blue process could 
+make sharp designs, but it could not produce the dark hues of other methods. 
+ Ferrous sulfate can also be used to stain concrete a yellowish rust 
+color. [ 3 ] 
+ Woodworkers use ferrous sulfate solutions to color maple wood a silvery 
+hue. 
+ 
+ [ edit ] 
+ Other uses 
+ In horticulture it is used as 
+a lawn conditioner 
+and moss killer. 
+ In the second half of the 19th century, ferrous sulfate was also used as a 
+photographic developer for Collodion process 
+images. 
+ Ferrous sulfate is sometimes added to the cooling water flowing through the 
+brass tubes of a turbine condenser. It forms a corrosion-resistant, protective 
+coating on the inside of the tube. 
+ It has been applied for the purification of water by flocculation and for phosphate 
+removal in municipal and industrial sewage treatment plants to 
+prevent eutrophication of surface 
+water bodies. [ citation 
+needed ] 
+ It is used as a traditional method of treating wood panel on houses, either 
+alone dissolved in water or as a component of water-based paint. 
+ 
+ [ edit ] 
+ See also 
+ 
+ Iron(III) sulfate , 
+ the other common simple sulfate of iron. 
+ Mohr's salt (Ammonium 
+ iron(II) sulfate), a common double salt of ammonium sulfate with 
+ iron(II) sulfate. 
+ 
+ [ edit ] 
+ References 
+ 
+ ^ 
+ "U+26A8 VERTICAL 
+ MALE WITH STROKE SIGN" . http://www.decodeunicode.org/en/u+26a8 . Retrieved on 2008-03-06 .   
+ ^ Egon 
+ Wildermuth, Hans Stark, Gabriele Friedrich, Franz Ludwig Ebenhöch, Brigitte 
+ Kühborth, Jack Silver, Rafael Rituper “Iron Compounds” in Ullmann’s 
+ Encyclopedia of Industrial Chemistry Wiley-VCH, Wienheim, 2005. 
+ ^ 
+ How To Stain 
+ Concrete with Iron Sulfate 
+ 
+ [ edit ] 
+ External links 
+ 
+ 
+ "Product Information" . Chemical Land21. January 10, 2007 . http://www.chemicalland21.com/industrialchem/inorganic/FERROUS%20SULFATE%20HEPTAHYDRATE.htm .   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ v  •  d  •  e    Iron 
+ compounds 
+ 
+ 
+ 
+ 
+ FeBr 2   · 
+ FeBr 3   · 
+ FeCl 2   · 
+ FeCl 3   · 
+ FeF 2   · 
+ FeF 3   · 
+ Fe(NO 3 ) 3   · 
+ FeO   · 
+ FeO(OH)   · 
+ Fe(OH) 2   · 
+ FePO 4   · 
+ FeS   · 
+ FeSO 4   · Fe 2 (CrO 4 ) 3   · 
+ Fe 2 O 3   · 
+ Fe 2 (SO 4 ) 3   · 
+ Fe 3 O 4   · 
+ Fe 3 (PO 4 ) 2 
+ Retrieved from " http://en.wikipedia.org/wiki/Iron(II)_sulfate " 
+ 
+ Categories : Iron 
+compounds | Sulfates 
+ Hidden categories: All 
+articles with unsourced statements | Articles 
+with unsourced statements since August 2008 
+ 
+ 
+ 
+ Views 
+ 
+ 
+ Article 
+ Discussion 
+ Edit 
+ this page 
+ History 
+ 
+ 
+ Personal tools 
+ 
+ 
+ Log 
+ in / create account 
+ 
+ 
+
+ 
+ Navigation 
+ 
+ 
+ Main page 
+ Contents 
+ Featured 
+ content 
+ Current events 
+ Random article 
+ 
+ 
+ Search 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ Interaction 
+ 
+ 
+ About Wikipedia 
+ Community 
+ portal 
+ Recent 
+ changes 
+ Contact Wikipedia 
+
+ Donate to Wikipedia 
+ Help 
+ 
+ 
+ Toolbox 
+ 
+ 
+ What 
+ links here 
+ Related 
+ changes 
+ Upload file 
+ Special pages 
+ Printable version 
+ Permanent 
+ link 
+ Cite 
+ this page 
+ 
+ Languages 
+ 
+ 
+ Česky 
+ Deutsch 
+ Español 
+ Français 
+ Italiano 
+ Magyar 
+ Nederlands 
+ 日本語 
+ ‪Norsk (bokmål)‬ 
+ ‪Norsk (nynorsk)‬ 
+ Polski 
+ Português 
+ Română 
+ Runa 
+ Simi 
+ Русский 
+
+ Slovenčina 
+ Slovenščina 
+ Suomi 
+ Svenska 
+ 粵語 
+ 中文 
+ 
+ 
+ 
+ 
+ 
+ 
+ This page was last modified on 23 March 2009, at 02:35. 
+ All text is available under the terms of the GNU 
+ Free Documentation License . (See Copyrights 
+ for details.) Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a 
+ U.S. registered 501(c)(3) tax-deductible 
+ nonprofit charity . 
+ Privacy policy 
+ About Wikipedia 
+ Disclaimers

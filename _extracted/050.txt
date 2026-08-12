@@ -1,0 +1,156 @@
+REL: 蓝晒\蓝晒\ref\光化学动力学分光光度法测定柠檬酸.pdf
+================================================================================
+第24卷 
+1 996年11月 
+分析化学(FENXI HUAXUE) 研究简报 
+Chinese Journa]of Ana]ytica[Chemistry 
+第ll期 
+l 33l～l 333 
+化学动力学分光光度法测定柠檬酸 
+0 6 8 
+o s ·j 
+耍
+本文基于柠檬酸可以加速铁f I)一邻菲罗啉j丕原为铁(1)一邻菲罗啉溶液体系的光 
+化学反应．建立了光化学动力学光度法测定柠檬酸的新方法。赦I定范围0～15mg柠檬酸，L 
+检出限达0．32 mg／L。 
+按用于汽水中柠檬酸的分析，结果满意 
+关键词
+光化学反应·分光光度法，垃篮醯 
+l 引 
+言 
+柠檬酸及其盐广泛存在于各种植物和动物组织中．在水果(柑桔、橙子)和蔬菜中的含量较 
+高。作为食品添加剂(酸味剂、氧化防止剂、稳定剂)，广泛用于各种食品中。但是，有关柠檬酸 
+的测定方法并不多。‘
+ ．主要为生物酶法和气相色谱法。·我们首次对光化学动力学分光光度法 
+测定柠檬酸进行了研究。结果表明，在波长为42O～450 nm 光源照射下“ ，柠檬酸可以加速铁 
+(Ⅲ)一邻菲罗啉中铁还原为铁(I)一邻菲罗啉，根据铁(I)一邻菲罗啉在510 nm 的吸光度．建立 
+了测定柠檬酸的新方法。在pH 4，5的HAc—NaAc体系中，柠檬酸浓度在O～1 5 mg／L范围内 
+呈线性关系．检出限达0．32 mg／L．本法具有体系稳定、仪器设备简单、操作方便等特点。用于 
+汽水中柠檬酸的直接测定。 ，结果令人满意。 
+2
+实验部分 
+2．1 仪器与试剂 
+721型分光光度计；pHs一2型酸度计；光化反应箱(自制)，30 W 、250 W 卤钨灯{I 25 W 自 
+镇漉荧光高压汞灯 30 W 紫外灯、100 W 钨灯。拧檬酸标准溶液：用拧檬酸钠配制成5 g／L的 
+贮备液．用时再稀释到所需浓度；铁(1
+1)溶液；用FeNH．(SO．) ·12H O配制成1 g／L贮备 
+液；邻菲罗啉溶液：500 mg／L 乙醇溶液；pH 4．5的HAc—NaAc缓 中溶液．所用试剂均为分析 
+纯 
+2．2 实验方法 
+存25 mL 比包管中．依次加入5 mL pH 4．5缓 中溶液．3，0 mL邻菲罗啉，避光下加入l，5 
+mL铁(m)溶液(100 r
+ag／L)，一定量的柠檬酸标准溶液，用蒸馏水稀释至刻度．摇匀。于125 W 
+荧光高压汞灯30 cm 处照射1．5 h，以蒸馏水为参比，用l cm 比包皿于波长S10 i
+im 处测定吸 
+光度。 
+3
+结果与讨论 
+3．1 吸收光谱 
+栽们做了Fe(Ⅲ)一邻菲罗啉体系的光化学反应吸收光谱曲线(如图1所示)。实验结 表 
+川．溶液展大吸收波长仍为510 nm．说明柠檬酸的存在并未使反应体系产生新的络台物．咀是 
+r
+iO5．I
+ 2 lI收犒{19 一03—18接蹙 
+维普资讯 http://www.cqvip.com 
+
+1332 
+分析化学 
+第24卷 
+弧邃了光化学反趣的矗盛，实验选 
+择测定波长为510 nm。 
+3．2 介质和酸度对反应的影响 
+在同一酸度(pH 4．5)对三种 
+不同介质(HAc—NaAc)，六次甲基 
+四胺一HC|，邻苯二甲酸氢钾一HCI) 
+进行考察，结果表明缓冲介质对 
+( m —A )影响不大。我们选择 
+HAc—NaAc缓冲体系进行实验，在 
+pH 3～7范围内，柠檬酸对此光化 
+学反应均有良好的催化能力，本文 
+选择测定pH 为4．5。 
+3，3
+试剂用量的测定 
+圈r 吸收光谱 
+F ．1 Absorption spectra 
+1．Phen+ 
++ Citr*tte 光jl
+曩(irradi
+ation){2．Phtn + Fe 光照 
+(irradiation)I量Phen+ +~itrate无光照(no irradltttloa)，4．1~en+ 
+h 无光照( o irrediatiQn)． 
+按实验方法，在柠檬酸浓度为4 mg／L对，分别改变锦菲罗啉、Fe(I)的甩置，溯定A 绘 
+制出A—V 曲线表明：最佳试剂用量为；邻菲罗啉3．0 mL Fe(■)1_5 mL。 
+3．4 有效光源的选择 
+． 
+根据文献<43．光化学反应的有效波长为420~450 i
+lm．我们分别对五种不同光源的照射 
+效果进行了比较，结果列于表1中，其中太阳光的效果最好，但其强度不易控耕，实验选用自镇 
+流高压汞灯为光源，光照时间为l_5 h。 
+表1 有效光源的选择 
+Table l Chosing t}le light source 
+3．s
+工作曲缝 
+在最佳条件下，做As
+ 0-C曲线，实验结果表明，柠檬酸浓度在O～15 mg／L范围内符台直 
+线关系。回归方程A=O．025X+0．063，相关系数r=0．9994。 
+3．6 捡出限及精密度 
+对台有2 mg／L的标准溶液和空白溶液各进行11次平行澳j定，结果表明，其相对标准偏 
+整为3．6 ，检出限达0．32 mg／L。 
+3．7 干抗实验 
+在柠檬酸浓度为每25 mL中含100 g时，相对误差小于5 的条件下，考察了2O种无机 
+离子和1 
+5种有机物对此反应的干扰情况，其允许量分别为：Mg 5 mg，Mn 2．5 mg，ca 20 
+g，Ba ，Cu” ，Co ，Ni ，Cd“ ，Zn ，Pb ，AI 5 g，CI 40mg，F一20mg，Br— NOr． 
+cO}一，CNS一5 mg；I一，NOr 0．3 mg；sOj，StOi一，PO：一30 g，蔗糖、麦芽糖100 mg。乳糖，葡 
+萄糖、果糖、富马酸、苯甲酸30 mg，糖精钠20 mg，琥珀酸l mg，山梨酸20 ，乳酸、苹果酸、草 
+酸、酒石酸2 pg，单宁醍1 Pg。 
+【 
+卜 
+■ 
+维普资讯 http://www.cqvip.com 
+
+b 
+r 
+■ 
+● 
+第11期 
+王占玲等：光化学动力学分光光度法测定柠檬酸 
+l333 
+4
+样品分析 
+将汽水饮料稀释10倍．分取1．00 mL按实验方法进行测定．并做回收．数据列于表2，结 
+果令人满意。 
+丧2 汽水中柠檬酸舍鼍的测定 
+TaMP 2 Dpte 
+rm jnation resu]ts of citric n aerated water 
+参
+考
+文
+献 
+1 (日'藤井正美著．李铁军，何清华译．食品添加荆分析法．兰州：甘肃质量能源标准化信息巾心．1987 
+1“5～l15 
+2 AOAC．分析方法手册t译自1984年版)．北京 中国光学学会光谱专业委员会．1986：442 
+3 车
+玲．王吉德 刘建平．张她军．分析化学．1991．19(11)：1329~ 1332 
+4 颜
+料．抄搏仁．谭明霞．无机化学，1987，8(2)：72～79 
+Photochemical Kinetics／Spectrophotometric 
+Determinaiton of Trace Citric Acid 
+W ang Zhanllng ．W ang LiMang，Liu Yilln，Li
+ Jianzhong 
+Depa~Imenl 
+Ckemislry，Shaanai N ormal Unit~rsity·X i 口 710062 
+Abstract A new method for determination of citric acid is developed．It is based 011 the 
+catalytic efkct 0f citric acid 011the reduction of Fe(Ⅱ)一1，10一Ⅱhenanthro【ineto Fe(1)一1．t0一 
+phenanthroline under irradiation n aceticacid—sodium acetate medium ．The linear range nf 
+determi
+ nation for citric acid is O～15 mg／L and the detection l
+ imit is 0．32 mg／L．Satisfactory 
+restl
+ J
+ ts were obtained for direct determ haat4on of citric acid in aerated water． 
+K eywards Photochem icaI reaction．spectrophotomet
+．ry．cittic acid 
+(R r；w d 11 Deeem ber 1995{accepted l 8 M rrh L!lgf
+i】 
+维普资讯 http://www.cqvip.com

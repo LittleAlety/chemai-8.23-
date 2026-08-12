@@ -1,0 +1,194 @@
+REL: Fe\英文\Synthesis of Potassium tris(oxalato)ferrate.mht
+================================================================================
+From: 
+Subject: Synthesis of Potassium tris(oxalato)ferrate
+Date: Sun, 4 Apr 2010 14:26:05 +0800
+MIME-Version: 1.0
+Content-Type: text/html;
+ charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.wpi.edu/Academics/Depts/Chemistry/Courses/General/feoxalate.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+ 
+ Synthesis of Potassium tris(oxalato)ferrate 
+ 
+ 
+ 
+ Synthesis of Potassium=20
+tris(oxalato)ferrate 
+ 1 lab period; work in pairs. Complete the Preparation =
+page=20
+before laboratory. 
+ Goals 
+ 
+ To improve your skill in observation=20
+ To synthesize a chemical substance and purify it by =
+recrystallization=20
+ To discover the effect of light on the substance =
+ 
+ Background 
+ Chemical synthesis --the art and practice of the design and =
+creation of=20
+molecules--is the essence of chemistry. In no other field of science =
+does the=20
+practitioner have the ability to create the objects of his/her interest. =
+It is=20
+this single fact that sets chemistry apart from physics, geology, and =
+biology,=20
+in which the scientist is restricted to examining what s/he finds, =
+rather than=20
+what s/he creates. Chemistry has an extra dimension that combines vision =
+and art=20
+in the process of creating new substances with potentially new and =
+exciting=20
+uses. 
+ This experiment provides you with an opportunity to experience =
+chemical=20
+synthesis first hand, and to spectroscopically characterize the molecule =
+(i.e.,=20
+to discover what types and energies of light the molecule interacts =
+with). The=20
+reaction that you will carry out is shown in equation (1). 
+ (1): Fe 3+ + 3 C 2 O 4 2- =
+--->=20
+Fe(C 2 O 4 ) 3 3- 
+ The reaction will be carried out in water solvent. This reaction is =
+yet=20
+another example of a class of reaction that permeates chemistry: the =
+donation of=20
+an electron pair by a Lewis base to a Lewis acid to form an adduct in =
+which acid=20
+and base are joined by a covalent bond. As we have seen and will =
+continue to=20
+see, the donation/acceptance of electron pairs is involved in a huge =
+number of=20
+chemical reactions ranging from simple laboratory processes to the =
+complex=20
+reactions in biological systems. 
+ The adduct of Fe 3+ with oxalate ion is called a =
+ transition=20
+metal complex to indicate that it is a complex molecule involving an =
+
+electron pair donor and a transition metal ion =
+(Fe 3+ ). 
+ Focus Questions 
+ 
+ In what molar ratio are the two reactants, iron chloride =
+hexahydrate and=20
+ oxalic acid, initially mixed?=20
+ Propose a 3-dimensional structure for the adduct, keeping in mind =
+that the=20
+ oxalate ions tend to arrange themselves symmetrically around the =
+iron(III)=20
+ ion.=20
+ In narrative form, discuss the infrared spectrum of the adduct. =
+Attempt to=20
+ assign observed bands to particular structural features of the adduct. =
+
+ 
+ Equipment and Materials 
+ 
+ 5.75" Pasteur pipets, 6 per group=20
+ 1 Pasteur pipet bulb=20
+ Kimwipes=20
+ aspirator with trap=20
+ 3 25-mL Erlenmeyer flasks=20
+ Rubber stoppers for Erlenmeyer flasks=20
+ ramrod=20
+ 100-mL beaker=20
+ Bunsen burner=20
+ Ring stand/ring/wire gauze=20
+ plastic wash bottle containing distilled water=20
+ Buchner funnel=20
+ suction flask=20
+ filter paper=20
+ glass stirring rod=20
+ FeCl 3 .6H 2 O=20
+ oxalic acid, H 2 C 2 O 4 =20
+ potassium hydroxide, KOH 
+ Safety 
+ Safety goggles must be worn at all times in the laboratory. Be very =
+careful=20
+around open burner flames. 
+ Experimental 
+ Record your observations in your notebook. 
+ Synthesis . Obtain the required equipment. If necessary, wash =
+the=20
+glassware using brushes and Alconox detergent, then thoroughly rinse =
+with water=20
+to remove all traces of Alconox. 
+ Place 6.5 millimoles (mmole) of oxalic acid,=20
+H 2 C 2 O 4 , and 12 mmole potassium =
+hydroxide in a=20
+25-mL Erlenmeyer flask, and add 5 mL of distilled water. Gently heat the =
+mixture=20
+until the solids dissolve. To the hot solution, add 2 mmole of=20
+FeCl 3 .6H 2 O and swirl to dissolve. What do you =
+observe?=20
+Filter the hot solution through a Kimwipe-plugged Pasteur pipet into a =
+25-mL=20
+Erlenmeyer flask. Stopper the flask, label it, and place it in an ice =
+bath in=20
+the dark for 30 minutes. During this time, the product should =
+crystallize. If no=20
+crystals are evident, scratch the inside wall of the Erlenmeyer with a =
+glass=20
+stirring rod and return the solution to the ice bath. When =
+crystallization is=20
+complete, collect the product by suction filtration. DO NOT WASH THE =
+SOLID WITH=20
+WATER. Suction the product dry. 
+ Purification . Place the product in a clean 25 Erlenmeyer. Add =
+3 mL of=20
+water and heat the mixture until the solid is dissolved. Once again =
+place the=20
+hot solution in the ice bath in the dark until the product crystallizes. =
+Quickly=20
+suction filter the mixture to isolate the product. Wash once with 1 mL =
+of ice=20
+cold water, and suction dry. Vial the solid. 
+ Characterization . If desired, you may characterize your =
+product using=20
+infrared and uv-visible spectroscopies. See your instructor for =
+assistance. 
+ Light Response .=20
+ Clean-up . When you have finished all of your work,=20
+ 
+ Clean all glassware with Alconox and water, shake dry.=20
+ Rinse Pasteur pipets and graduated pipets with distilled water by=20
+ inserting the nozzle of your wash bottle in the top end and squirting =
+water=20
+ through. Aspirate dry.=20
+ Return all components to the labkit.=20
+ Return all borrowed equipment to the instructor before leaving =
+lab.=20
+ 
+ Disposal Methods 
+ When finished with the experiment, hand in the vial containing your =
+potassium=20
+tris(oxalato)ferrate to the instructor before leaving lab. 
+ References 
+ 
+ E. Vitz, J. Chem. Ed.,=20
+ Johnson, J. Chem. Ed. 1970, 47, 702. 
+ 
+
+ 
+ 
+ Preparation Synthesis of Potassium =
+tris(oxalato)ferrate 
+ 
+ 
+ Read 
+ 
+ The appropriate sections of your textbook. 
+ Problems 
+ 
+ A chemist wants to prepare the compound,=20
+ K 3 Cr(C 2 O 4 ) 3 , by reacting=20
+ CrCl 3 .6H 2 O with =
+K 2 C 2 O 4 =20
+ in water. He can only locate 5.0 g of chromium chloride in his lab. =
+How much=20
+ potassium oxalate should he weigh out to carry out the reaction?=20

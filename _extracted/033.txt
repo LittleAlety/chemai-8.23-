@@ -1,0 +1,459 @@
+REL: Fe\英文\From JCE\a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment.pdf
+================================================================================
+A New Approach toward Cyanotype Photography Using
+Tris-(oxalato)ferrate(III): An Integrated Experiment
+Pablo Alejandro Fiorito*,# and André Sarto Polo*
+Federal University of ABC−UFABC, Av. dos Estados, 5001 Santo André, São Paulo, Brazil 09210-170
+*
+S Supporting Information
+ABSTRACT: This work presents an approach that integrates
+the preparation of a coordination compound, potassium tris-
+(oxalato)ferrate(III), with its photochemical behavior and
+provides a possible application, the printing of a photograph
+using the cyanotype technique. Through this experiment, stu-
+dents can be taught several concepts that occur in a coordina-
+tion chemistry course, including the thermodynamic aspects of
+forming a compound, its photochemistry, the detection of its
+photoproducts, and the observation of the formation of a new
+compound and the resulting intervalence band, which generates
+the blue print.
+KEYWORDS: Upper-Division Undergraduate, Inorganic Chemistry, Interdisciplinary/Multidisciplinary,
+Hands-On Learning/Manipulatives, Photochemistry
+■INTRODUCTION
+Iron(II,III) hexacyanoferrate(II,III), commonly known as
+Prussian blue, is a coordination compound that is often used
+as an example in the instruction of several topics during co-
+ordination chemistry courses. This compound can be introduced
+during a historic overview that discusses its discovery in the 16th
+century and its inﬂuence on the arts.1 Later, when the intervalence
+absorption spectrum is presented, Prussian blue can be used as an
+example while discussing this concept with the students. In our
+approach to coordination chemistry, we prefer to demonstrate
+some applications of the prepared compounds, and an experiment
+demonstrating the photochemical processes of coordination
+compounds that can be used for this purpose.
+The tris-(oxalato)ferrate(III) ion is useful for several under-
+graduate experiments2,3 and is especially interesting when
+demonstrating photochemical processes. This complex is a
+well-known chemical actinometer; therefore, its photochemical
+reactions and quantum yield are well understood and established.
+Before determining its photochemical processes, students can
+prepare this compound and measure its absorption spectrum.
+Through this approach, this complex can be utilized during an
+integrated course because students can perform the synthetic
+procedures, discuss the reaction yields and complex formation,
+obtain absorption spectra, and discuss the electronic transitions
+involved in the light absorption process. Finally, the photo-
+chemical reactions involving this compound can be discussed.
+The photochemical reaction of tris-(oxalato)ferrate(III)
+releases Fe2+ ions to the medium, which can be conveniently
+employed during the formation of Prussian blue. This process is
+utilized in the production of a cyanotype, which is one of the
+oldest photographic processes. Brieﬂy, this technique involves
+coating a paper with a mixture of potassium ferricyanide and a
+ferric salt, such as tris-(oxalato)ferrate(III). When the paper is
+exposed to light, the ferric salt is reduced to a ferrous salt, which
+precipitates Prussian blue when using ferricyanate, providing
+permanent images in an elegant assortment of blue hues. When
+used during photography, the cyanotype requires a negative
+that is the same size as the ﬁnal print. The resulting image
+is highly stable but can be degraded by alkaline solutions,
+which hydrolyze Prussian blue.4 Previous reports propose that
+using old photography techniques will increase interest in
+the hard sciences5,6 while explaining the cyanotype process7,8 or
+to introduce the concept of the human element at chemistry
+education.9
+We report an integrated experiment for chemistry students
+in their third-year to be conducted in two or three laboratory
+sessions of 2 h each. The students begin by preparing and
+characterizing potassium tris-(oxalato)ferrate(III) before inves-
+tigating its photochemical behavior and applying it to a photo-
+graphic process, which involves the formation of Prussian blue.
+■EXPERIMENTAL OVERVIEW
+Preparation of the K3[Fe(C2O4)3]·3H2O Sensitizer
+The K3[Fe(C2O4)3]·3H2O complex can be easily prepared and
+puriﬁed by students within a 2 h laboratory session when using
+a procedure described in the literature.10,11 Brieﬂy, potassium
+oxalate monohydrate (12.2 g; 66 mmol) is dissolved under
+vigorous stirring in 10−20 mL of water at 55 °C. Subsequently,
+FeCl3·6 H2O (6.0 g; 22 mmol) in 5 mL of water is poured into
+the solution, and the mixture is stirred for 30 min at 45 °C.
+Green crystals are obtained after the mixture reaches room
+Published: June 16, 2015
+Laboratory Experiment
+pubs.acs.org/jchemeduc
+© 2015 American Chemical Society and
+Division of Chemical Education, Inc.
+1721
+DOI: 10.1021/ed500809n
+J. Chem. Educ. 2015, 92, 1721−1724
+Downloaded via WUHAN UNIV on July 4, 2026 at 04:08:37 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+temperature; they are washed with 3 mL of cold water. The com-
+pound is then recrystallized by dissolving the solid in a minimal
+volume of water at 65 °C and slowly cooling the solution to room
+temperature. The students achieved yields of 5.4−6.5 g (50−60%).
+The compound can be characterized by its absorption spectrum in
+H2SO4 (0.1 mol L−1) solution (ε193 nm = 1.3 × 104 L mol−1 cm−1;
+ε280 nm = 2.9 × 103 L mol−1 cm−1), Figure 1.
+Sensitized Paper
+Caution!: This procedure should proceed under reduced light.
+A mixture of 5 mL of a 0.3 mol L−1 K3[Fe(C2O4)3]·3H2O in
+an acidic solution (0.1 mol L−1 H2SO4) and 5 mL of 0.3 mol L−1
+potassium ferricyanide solution is painted onto watercolor paper,
+which is left to dry in the dark. Any unused solutions can be stored
+separately in brown bottles away from light but will not last long after
+mixing.
+Photographic Printing
+A negative image can be previously prepared by the students or
+instructors, by using a photographic computer program, such as
+GIMP, and printed onto a transparency sheet. The negative image is
+placed onto the sensitized paper and topped with a glass sheet to
+avoid any changes in position; this apparatus is ﬁxed with clamps
+and exposed to sunlight for several minutes. The exposure time de-
+pends on the weather conditions of the day and must be deter-
+mined on the day that the experiment is carried out. Alternatively, a
+studio illuminator can be used to substitute the sunlight. Good
+results are also achieved by this method. However, longer exposition
+time is necessary in this case. After exposure to sunlight, the
+photograph is washed with excess water to remove any remaining
+sensitizer and immersed in a H2O2 solution (0.3%). Afterward, the
+photograph is washed with water to remove any H2O2.
+Complementary Experiment
+An assay tube containing a few milliliters of the [Fe(C2O4)3]3−
+acid solution is exposed to a light source for a few seconds. A
+few drops of 2,2′-bipyridine ethanolic solution should be added,
+and the changes should be observed.
+A suggestion for student’s laboratory procedure for photo-
+graphic printing and complementary experiment is available as
+Supporting Information.
+■HAZARDS
+The use of H2SO4 should be contained to a fume hood when
+preparing 0.1 mol·L−1 solution. Concentrated H2SO4 causes
+severe skin burns and eye damage. Wear protective gloves,
+protective clothing, eye and face protection. H2O2 (30% solu-
+tion) causes serious eye damage. Wear protective gloves,
+protective clothing, eye and face protection.
+Avoid the exposure of [Fe(C2O4)3]3−solution to light in
+order to prevent any undesired photochemical reaction.
+■RESULTS AND DISCUSSION
+The ﬁrst part of this experiment involves the synthesis and
+characterization of a [Fe(C2O4)3]3−complex. The procedure is
+simple for a third year student, but some aspects of the reaction
+are still interesting. The coordination of oxalate to an Fe(III)
+ion is thermodynamically favorable because oxalate is a
+bidentate ligand, and the chelate eﬀect occurs. The equilibrium
+constant can be used during this discussion. The chelate eﬀect
+means that Kformation ≫1 because the dissociation of the ligand
+is unlikely; dissociation is disfavored because both chemical
+bonds must be broken during this process, which is statistically
+unfavorable. Other thermodynamic aspects, such as the entropy
+associated with the changes in the degree of freedom because
+the ligand is coordinated by one or two sites, can also be used
+for this discussion. The compound can be characterized by its
+absorption spectrum and the nature of its electronic transitions
+can also be discussed.
+The second aspect of this experiment is the production
+of a photographic print using the cyanotype technique. The
+students prepare the sensitized paper and cover it with the
+negative, and then they use sunlight to observe the formation of
+the blue print, as shown in Figure 2. During this stage, the
+students must determine the optimal exposure time needed
+for the sensitized paper to produce the best blue print. The
+experiment was carried out on sunny days in Santo Andre, and
+the exposure time was determined at approximately 1−4 min
+by the students.
+After exposure, the photograph is washed with water until
+the yellowish solution is no longer released, indicating that the
+excess sensitizer has been completely removed and the picture
+is clearly observed as a blue print on the watercolor paper, as
+shown in Figure 3. Better contrast is observed in the photo-
+graph after immersion into the H2O2 solution, which increases
+the intensity of the blue color.
+Discussion with the students is important to assess their
+knowledge of the processes that occur to obtain the blue photo-
+graph. This discussion begins with the photochemical process
+of the tris-(oxalato)ferrate(III). This compound is a chemical
+actinometer, and its photochemical reactions are very well
+Figure 1. Absorption spectrum of the prepared compound
+K3[Fe(C2O4)3]·3H2O in H2SO4 (0.1 mol L−1) solution. [K3[Fe(C2O4)3]·
+3H2O] = 1.28 × 10−4 mol L−1.
+Figure 2. Photograph being exposed to sunlight.
+Journal of Chemical Education
+Laboratory Experiment
+DOI: 10.1021/ed500809n
+J. Chem. Educ. 2015, 92, 1721−1724
+1722
+
+established after having been described by Hatchard and
+Parker.10 The primary photochemical reaction shown in
+eq 1 and the subsequent thermal reactions shown in eqs 2
+and 3 release 2 equiv of Fe2+ ions to the medium, as shown
+in eq 4.
+→
++
+−
+−
+•−
+[Fe (C O ) ]
+[Fe (C O ) ]
+C O
+III
+2
+4 3
+3
+hv
+II
+2
+4 2
+2
+2
+4
+(1)
+→
++
+•−
+•−
+C O
+CO
+CO
+2
+4
+2
+2
+(2)
++
+→
++
+−
+•−
+−
+[Fe (C O ) ]
+CO
+[Fe (C O ) ]
+CO
+III
+2
+4 3
+3
+2
+II
+2
+4 3
+4
+2
+(3)
+→
++
++
+−
++
+−
+2[Fe (C O ) ]
+2Fe
+5C O
+2CO
+III
+2
+4 3
+3
+hv
+2
+2
+4
+2
+2
+(4)
+The formation of free Fe2+ in solution is detected after it
+reacts with 2,2′-bipyridine, bpy, eq 5, generating an intense red
+solution due to the MLCT absorption band of [Fe(bpy)3]2+
+(ε ∼1.1 × 104 L·mol−1·cm−1) formed in the auxiliary experi-
+ment. This experiment is important because the students must
+explain the formation of the blue print.
++
+→
++
++
+Fe
+3bpy
+[Fe(bpy) ]
+2
+3
+2
+(5)
+The Fe2+ ions released by the photochemical reaction of
+[Fe(C2O4)3]3−are promptly coordinated to the nitrogen atoms
+available on the ligands of the [Fe(CN)6]3−. This coordination
+process forms the Prussian blue (FeII−NC−FeIII)n, responsible
+for the intense blue color observed in the cyanotype. The blue
+color is ascribed to the intervalence absorption band of this
+compound. The absorption spectrum of a blue region of the
+photograph can be measured using a spectrophotometer with a
+diﬀuse reﬂectance accessory, as shown in Figure 4, and com-
+pared to the spectra of [Fe(CN)6]3−and [Fe(C2O4)3]3−.
+The existence of excess CO2
+•‑ radicals in the medium reduces
+the Fe3+ ions in the Prussian blue to Fe2+, as shown in eq 6, and
+the intensity of the blue color decreases because the number of
+FeII−NC−FeIII moieties responsible for the intervalence
+absorption band decreases. Immersing the photograph into a
+H2O2 solution is necessary to reoxidize these Fe2+ to Fe3+ ions,
+as shown in eq 7. This process recovers the intervalence band
+and, consequently, enhances the contrast of the photograph.
+‐
+‐
++
+→
+‐
+‐
++
+•‐
+Fe
+NC Fe
+CO
+Fe
+NC Fe
+CO
+II
+III
+2
+II
+II
+2
+(6)
+‐
+‐
++
+→
+‐
+‐
++
++
+Fe
+NC Fe
+2H O
+Fe
+NC Fe
+2H O
+O
+II
+II
+2
+2
+II
+III
+2
+2
+(7)
+Finally, a cyanotype photograph is produced for the students
+to keep, Figure 5.
+Overexposure
+Exposing the photograph to sunlight for longer periods
+(approximately 10 min) produces interesting results. These
+photographs initially provide a surprisingly accurate reproduc-
+tion of the negative. After washing with water, the same result is
+observed, but the photograph is correctly printed after immer-
+sion in H2O2, as shown in Figure 6.
+Overexposure to sunlight results in an extensive photochemical
+reaction of [Fe(C2O4)3]3−, which produces a large excess of the
+CO2
+•‑ radical. Consequently, the Fe3+ ions of the Prussian blue
+are reduced, as shown in eq 5, to a great extent, and bleaching is
+Figure 3. Photograph during a water wash to remove the excess
+sensitizer.
+Figure 4. Absorption spectrum of a blue region of the photograph
+measured using a diﬀuse reﬂectance technique (blue line) and the
+absorption spectra of [Fe(C2O4)3]3−(green line) (0.3 mol L−1) and
+[Fe(CN)6]3−(red line) (0.3 mol L−1) in H2SO4 0.1 mol L−1 solution
+(optical path = 1.000 cm).
+Figure 5. Cyanotype photograph prepared by the students.
+Journal of Chemical Education
+Laboratory Experiment
+DOI: 10.1021/ed500809n
+J. Chem. Educ. 2015, 92, 1721−1724
+1723
+
+observed in the areas exposed directly to sunlight. In the dark
+regions, no overexposure is observed, but the formation of the
+Prussian blue responsible for the blue print can be seen. When
+the photograph is immersed in H2O2 solution, however, the Fe2+
+is oxidized to Fe3+, as shown in eq 6, and the intervalence absorp-
+tion band is restored. Because a higher concentration of Prussian
+blue is present in the exposed region, a complete inversion of the
+image is observed, resulting in the desired photograph.
+■CONCLUSIONS
+In this experiment, the synthesis of tris-(oxalato)ferrate(III) is
+integrated with studies of its photochemistry and a possible
+application. This approach demonstrates that several concepts
+can be integrated during discussions in a coordination
+chemistry laboratory. To evaluate that students met the
+intended learning outcomes, a lab test was applied to a group
+of students that executed this experiment and to another group
+to which only the test of [Fe(C2O4)3]3−was carried out. The
+students having the integrated experiment demonstrated a
+better comprehension of the [Fe(C2O4)3]3−photochemical
+process as well as the subsequent thermal reactions. During
+laboratory section, the students having this integrated approach
+were able to make the correlation of the auxiliary test and the
+formation of Prussian blue and, thus, with its intervalence
+absorption band responsible for the blue print.
+■ASSOCIATED CONTENT
+*
+S
+Supporting Information
+Student laboratory procedure. This material is available via the
+Internet at http://pubs.acs.org.
+■AUTHOR INFORMATION
+Corresponding Authors
+*E-mail: andre.polo@ufabc.edu.br.
+*E-mail: paﬁorito@gmail.com.
+Present Address
+#P.A.F.: Centro de Investigación y Transferencia Villa Marı́a
+(CIT - Villa Marı́a), Instituto de Ciencias Básicas y Aplicadas,
+Universidad Nacional de Villa Marı́a, Villa Marı́a, 5900 Córdoba,
+Argentina.
+Notes
+The authors declare no competing ﬁnancial interest.
+■ACKNOWLEDGMENTS
+The authors acknowledge FAPESP (2013/25173-5) for their
+ﬁnancial support.
+■REFERENCES
+(1) Kauﬀman, G. B., General Historical Survey to 1930. In
+Comprehensive Coordination ChemistryThe Synthesis, Reactions,
+Properties & Applications of Coordination Compounds; Wilkinson, S.
+G., Gillard, R. D., McCleverty, J. A., Eds.; Pergamon Press: Oxford
+U.K., 1987; Vol. 1, pp 1−20.
+(2) Brooks, D. W. An Experiment Sequence Involving Potassium
+Trioxalatoferrate(III) Trihydrate. J. Chem. Educ. 1973, 50 (3), 218.
+(3) González, G.; Seco, M. Potassium Tris(oxalato)ferrate(III): A
+Versatile Compound To Illustrate the Principles of Chemical
+Equilibria. J. Chem. Educ. 2004, 81 (8), 1193.
+(4) Wilder, K.; Kemp, M. Proof Positive in Sir John Herschel’s
+Concept of Photography. Hist. Photogr. 2002, 26 (4), 358−366.
+(5) Rogge, C. E.; Bezur, A. Correction to An Investigation into the
+Creation, Stability, and X-ray Fluorescence Analysis of Early
+Photographic Processes: An Upper-Level Undergraduate Laboratory.
+J. Chem. Educ. 2012, 89 (9), 1215−1215.
+(6) Ware, M. Prussian Blue: Artists’ Pigment and Chemists’ Sponge.
+J. Chem. Educ. 2008, 85 (5), 612.
+(7) Lawrence, G. D.; Fishelson, S. Blueprint Photography by the
+Cyanotype Process. J. Chem. Educ. 1999, 76 (9), 1216A.
+(8) Lawrence, G. D.; Fishelson, S. UV Catalysis, Cyanotype
+Photography, and Sunscreens. J. Chem. Educ. 1999, 76 (9), 1199.
+(9) Morizot, O.; Audureau, E.; Briend, J.-Y.; Hagel, G.; Boulc’h, F.
+Introducing the Human Element in Chemistry by Synthesizing Blue
+Pigments and Creating Cyanotypes in a First-Year Chemistry Course.
+J. Chem. Educ. 2015, 92 (1), 74−78.
+(10) Hatchard, C. G.; Parker, C. A. A New Sensitive Chemical
+Actinometer 0.2. Potassium Ferrioxalate as a Standard Chemical
+Actinometer. Proc. R. Soc. London, Ser. A 1956, 235 (1203), 518−536.
+(11) Johnson, R. C. Convenient Procedure for the Preparation of
+Potassium Trioxalatoferrate(III). J. Chem. Educ. 1970, 47 (10), 702.
+Figure 6. Overexposure of the photograph to sunlight (a) and during
+H2O2 immersion (b).
+Journal of Chemical Education
+Laboratory Experiment
+DOI: 10.1021/ed500809n
+J. Chem. Educ. 2015, 92, 1721−1724
+1724

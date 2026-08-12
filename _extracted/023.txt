@@ -1,0 +1,2327 @@
+REL: Fe\英文\LAChI-manual.pdf
+================================================================================
+Inorganic chemistry 
+ 
+ 
+Laboratory Manual I 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dagmar Sýkorová 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+1
+Contents 
+Laboratory apparatus 
+Glassware ……………………………………………………………… 
+ 
+3 
+Porcelain ware …………………………………………………………. 
+4 
+Hard ware ……………………………………………………………… 
+4 
+ 
+Laboratory Rules and Safety ……………………………………… 
+5 
+Laboratory reports ……………………………………………………. 
+5 
+Categories of danger ………………………………………………….. 
+6 
+ 
+Laboratory techniques …………………………………………….. 
+7 
+Heating ………………………………………………………………… 
+7 
+Evaporation of liquids ………………………………………………… 
+9 
+Weighing ………………………………………………………………. 
+9 
+Liquid volume …………………………………………………………. 
+9 
+Density …………………………………………………………………. 
+9 
+Separation of liquid and solid phases ……………………………….. 10 
+Decantation ……………………………………………………………. 
+10 
+Filtration ………………………………………………………………… 
+10 
+Centrifugation ………………………………………………………….. 
+11 
+Crystallization ………………………………………………………….. 
+12 
+Sublimation …………………………………………………………….. 
+12 
+Preparation of gases ………………………………………………….. 
+12 
+Compressed gas cylinders …………………………………………… 
+13 
+Solutions and solubility ……………………………………………….. 
+14 
+Colloids, sols, emulsions, gels, aerosols …………………………… 
+14 
+Types of chemical reactions …………………………………………. 
+15 
+ 
+Preparation part (number of experiments is the same as in Laboratory program) 
+1.1 
+Work with glass ……………………………………………. 
+17 
+1.2.2 Crystallization of K2Cr2O7
+ (crystallization in motion) ………. 
+18 
+1.4.1. Preparation of Na2SO4. 10 H2O ……………………………… 
+18 
+1.5.1. Reactions of usual laboratory oxidizing agents ……………. 
+18 
+2.1.4 Reactions of hydrogen peroxide …………………………….. 
+19 
+2.2.1 The halogens …………………………………………………… 
+19 
+2.2.2 Reactions of halides ………………………………………….. 
+20 
+2.2.3 Reactions of pseudo halides – SCN- ……………………….. 
+20 
+2.2.4 Preparation of potassium iodate …………………………….. 
+20 
+2.3.4 Preparation of sulphur dioxide and its reduction effect …….. 
+21 
+2.4.6 Preparation of sodium nitrite …………………………………. 
+21 
+4.2.9 Preparation of potassium chromate …………………………. 
+21 
+2.4.7 Test for ammonia ……………………………………………… 
+22 
+2.4.8. Reactions of nitrite and nitrate ions ………………………….. 
+22 
+2.4.9 Brown ring test ………………………………………………… 
+23 
+2.5.2 Reactions of hypophosphite ion …………………………….. 
+23 
+2.5.1 Preparation of phosphine (demonstration) ………………… 
+24 
+2.5.5 Reactions of phosphate ions ………………………………… 
+24 
+2.3.6 Preparation of sodium thiosulphate …………………………. 
+25 
+2.3.7 Reaction of thiosulphate ion ………………………………….. 
+25 
+2.3.8 Qualitative reactions of SO4
+2-, SO3
+2-, S2O3
+2-, S2- …………… 
+25 
+
+ 
+2
+2.3.10 Preparation of hydrogen sulphide, (NH4)2S and (NH4)2Sx .. 
+25 
+3.2.4 Reactions of Al3+ ………………………………………………. 
+26 
+3.3.7 Reactions of Pb2+ ……………………………………………… 
+26 
+4.4.5 Reactions of Fe3+ ……………………………………………… 
+26 
+4.4.6 Reactions of Fe2+ ……………………………………………… 
+27 
+4.3.3 Reactions of Mn2+ …………………………………………….. 
+27 
+4.5.11 Reactions of Cu2+ ……………………………………………… 
+27 
+4.4.11 Reactions of Ni2+ ……………………………………………… 
+28 
+3.2.2 Preparation of Al2O3 from bauxite …… 
+28 
+2.6.5 Reduction effect of oxalic acid ………………………………. 
+28 
+2.6.6 Temperature stability of carbonates …………………………. 
+29 
+2.6.2 Reactions of carbon dioxide and carbonates ………………. 
+29 
+3.1.8 Reactions of magnesium, calcium, strontium and barium ions 
+29 
+2.8.1 Preparation of methyl borate …………………………………. 
+29 
+3.1.1 Flame tests ……………………………………………………… 
+30 
+3.1.2 Insoluble salts of alkaline metals …………………………….. 
+30 
+3.1.3 Preparation of sodium carbonate ……………………………. 
+30 
+3.3.6 Preparation of Pb3O4 -“red lead” …………………………….. 
+30 
+3.3.8 Reactions of Pb3O4 ……………………………………………. 
+31 
+3.3.5 Preparation of lead dioxide …………………………………… 
+31 
+4.4.10 Preparation of anhydrous nickel chloride …………………… 
+32 
+4.5.2 Preparation of copper …………………………………………. 
+32 
+4.5.6 Preparation of copper ammine sulphate ………………..……. 
+32 
+4.5.3 Preparation of copper oxide ………………………………….. 
+33 
+ 
+Qualitative analysis …………………………………………………. 
+34 
+4.7.2 Qualitative analysis of cations from group I - III……. 
+35 
+4.7.3 Determination of cations in unknown samples …………….. 
+36 
+2.9.2 Determination of anions in unknown samples ……………… 
+37 
+2.9.2 Flowchart for anions determination ………………………….. 
+37 
+4.7.4 Procedure for analysis of cations from group IV …………….. 
+38 
+4.7.5 Separation and determination of cations of insoluble chlorides 
+ 
+ 
+and sulphates groups ………………………………….. 
+40 
+4.7.6 Separation and determination of cations from groups III and IV 
+41 
+ 
+Cation separation scheme …………………………………………….. 
+42 
+Anion separation scheme ……………………………………………… 
+44 
+Solubility of inorganic compounds at different temperature 
+45 
+ 
+ 
+ 
+ 
+
+ 
+3
+ 
+Laboratory glassware 
+1,2-beakers, 3-Erlenmeyer flask, 4-filter flask, 5-boiling flask, 6-gas washing bottle, 7-
+graduated cylinder, 8-bottle, 9-fritted glass, 10-spot plate, 11-test tube, 12,13-funnels, 14-
+reagent bottle, 15-dropping bottle, 16-crystallization dish, 17-watch glass, 18-separatory 
+funnel, 19-receivers, 20-pipets, 21-volumetric flask, 22-bottle with stopcock drain 
+ 
+
+ 
+4
+ 
+ 
+Laboratory porcelain ware: 1-evaporating dish, 2-mortar and pestle, 3-Büchner funnel, 4-
+crucibles 
+ 
+ 
+ 
+ 
+Laboratory hardware: 1-stand, 2-clamp, 3-clamp holder, 4-ring, 5-wire gauze, 6-tripod, 7-screw 
+clamp, 8-pinchcock clamp, 9-clay triangle, 10-cork borer, 11-crucible tongs 
+ 
+
+ 
+5
+Laboratory Rules and Safety 
+ 
+1. Eye protection should be worn when you are working in the laboratory. 
+2. Laboratory coats should be worn to protect clothing. 
+3. Students with long hair should tie it away from the face. 
+4. Follow the instructions given in the description of experiments. Never perform 
+unauthorized experiments. 
+5. Know the location of fire extinguishers, fire blankets, eyewashes, showers and first 
+aid kits. 
+6. Read all labels before using chemicals. Do not take more chemicals than you 
+need. Never return any unused material to the storage bottle. 
+7. NEVER use flammable liquids near a flame or an ignition source. 
+8. When heating a liquid in a test tube or carrying out a reaction in a test tube, never 
+point the mouth of the test tube at yourself or your neighbour. 
+9. Never pour water into concentrated acid. Always slowly pour the acid into water 
+while mixing. 
+10. If dangerous gases are produced during the experiment, do the experiment under 
+the hood. 
+11. NEVER inhale gaseous fumes. If you need to determine the odour of a gas, fan a 
+small amount of the vapour towards your nose with your hand. 
+12. Return all waste chemicals to the containers indicated by your instructor. If no 
+containers are available, pour all waste liquids directly down the drain and then run 
+water down to drain. 
+13. NEVER put broken glass into undesignated wastebaskets. 
+14. Keep the balance area clean and free of spilled chemicals or used filter papers. 
+15. If you splash any acid or base in your eyes, face or hands, flush it with plenty of 
+water. 
+16. Report all accidents or injuries (cuts and burns) to the laboratory instructor 
+immediately. 
+17. Eating or drinking in the laboratory is strictly prohibited. 
+18. Wash your hands before leaving the laboratory. 
+19. Any student who is sensitive to chemicals is strongly advised to check with his/her 
+doctor if this course may pose any hazard to their health. 
+20. Students who may be pregnant cannot work in the laboratory. 
+ 
+ 
+Laboratory reports 
+ 
+1. The Title Page consists the name of the experiment, name of the student and the 
+date. 
+2. The Introduction states the objective of the experiment and provides the reader 
+with background of the experiment. State the topic of your report clearly and concisely, 
+in one or two sentences and give chemical reactions. 
+3. Methods and Materials (or Equipment) 
+4. Results are usually dominated by calculations, tables and figures; however, you still 
+need to state all significant results explicitly in verbal form. 
+Compare expected results with those obtained. 
+Analyze experimental error. 
+ 
+
+ 
+6
+Categories of danger 
+ 
+• Explosive, E 
+(Chemicals that explode) 
+ 
+• • Oxidising, O 
+(Chemicals that react exothermally with other chemicals) 
+ 
+• • Extremely Flammable, F+, or Highly 
+Flammable, F, or Flammable 
+(Chemicals that have an extremely low flash point and boiling point, and 
+gases that catch fire in contact with air OR chemicals that may catch fire in 
+contact with air, only need brief contact with an ignition source, have a very 
+low flash point or evolve highly flammable gases in contact with water.) 
+ 
+• • Very Toxic, T+, or Toxic, T 
+ 
+(Chemicals that in very small amounts cause damage to health OR 
+Chemicals that in small amounts cause damage to health) 
+ 
+• • Harmful 
+ 
+(Chemicals that may cause damage to health) 
+ 
+• • Corrosive, C 
+ 
+(Chemicals that may destroy living tissue on contact) 
+ 
+• • Irritant, Xi 
+ • Sensitising, Xn or Xi 
+(Chemicals that may cause inflammation to the skin or other mucous 
+membranes) 
+ 
+• • Carcinogenic, Categories 1 and 2, T 
+• • Carcinogenic, Category 3, Xn 
+(Chemicals that may cause cancer or increase its incidence) 
+ 
+• • Dangerous for the Environment, N 
+(Chemicals that may present an immediate or delayed danger to one or 
+more components of the environment) 
+ 
+
+ 
+7
+Laboratory techniques 
+ 
+Heating 
+A Bunsen burner has a weighted base where the gas supply attaches and a vertical 
+metal tube through which a fine jet of fuel gas is directed. The gas flows from the gas 
+supply connection to the base. The stream of gas then passes through a small hole at 
+the bottom of the tube and is directed upward through the tube. Air is drawn in through 
+air holes near the base of the tube and the mixture is ignited and burns at the tube's 
+upper opening. 
+Adjusting the Burner - after lighting the burner, it must be properly adjusted. In a properly adjusted 
+Bunsen burner, there will be a blue flame containing two or more cones. 
+ 
+ 
+1-tube, 2-air supply, 3-gas jet 1-inner blue cone (reducing), 2-outer cone (oxidizing) 
+A Bunsen burner can produce 3 different types of flames: 
+The "coolest" flame is of 
+yellow/orange colour. It is 
+approximately 300 °C. It is 
+never used to heat anything, 
+only to show that the Bunsen 
+burner is on. It is called the 
+safety flame. 
+The medium flame, also called 
+the blue flame or the invisible 
+flame is difficult to see in a well-
+lit room. It is the most 
+commonly used flame. It is 
+approximately 500 °C. 
+The hottest flame is called the 
+roaring blue flame. It is 
+characterized by a light blue 
+triangle in the middle and it is the 
+only flame of the 3 which makes 
+a noise. It is approximately 
+700°C. 
+ 
+ 
+ 
+ 
+ 
+The mixture of air and gas (optimally about 1 part of gas to 3 parts of air) is forced 
+by gas pressure to the top of the tube, where it is ignited with a match. It burns with a 
+pale blue flame - the primary flame (seen as a small inner cone) and a secondary, 
+almost colourless flame (seen as a larger, outer cone, which appears when the 
+remaining gas is completely oxidized by the surrounding air). 
+
+ 
+8
+The hottest part of the Bunsen flame, which is found just above the tip of the primary 
+flame, reaches about 1500 oC. When too little air is drawn in, the gas mixture will not 
+burn completely and it will form tiny carbon particles that are heated to glowing, 
+making the flame luminous. With too much air, the flame may burn inside the burner 
+tube; that is, it may strike inside. 
+ 
+Heating of solids – annealing 
+ 
+Techniques where crucibles are used - crucibles are usually made out of porcelain 
+and they may be heated to very high temperatures, either by a direct Bunsen burner 
+flame or in an oven, without breaking. The crucible should be heated slowly with the 
+Bunsen burner held at a distance at first and then brought in closer as the crucible 
+gets warmer. The crucible can be heated until it is red hot. Always place the hot 
+crucible on a wire gauze, NEVER directly on the desk top. The cold surface may 
+cause cracking of the crucible 
+ 
+Setup a ring stand with an iron ring and a clay triangle. The height should be 
+adjusted so that the hottest part of the flame (the tip of the inner blue cone) is touching 
+the crucible when the crucible is hold by the triangle. 
+ 
+ 
+ 
+ the clay triangle is used to hold a crucible while the crucible is heated. 
+ 
+Heating of liquids 
+- 
+test tube should be no more than one-third full, place a gentle flame at the same 
+level as the top of the liquid, not at the base 
+- 
+beaker or flask lay on a wire gauze, place a glass stirring rod or boiling chip in the 
+beaker (to minimise the problem of bumping) 
+- 
+a hot water bath (a) 
+
+ 
+9
+ 
+ 
+ 
+Safe heating in a test tube water bath steam bath 
+ 
+Evaporation of liquids 
+- 
+from an evaporating dish over a steam bath (b) 
+ 
+Weighing 
+- 
+chemicals should never be placed directly on the balance pan 
+- 
+use a beaker or watch glass to measure the mass of laboratory chemicals 
+- 
+do not drop anything on the pan 
+ 
+Liquid volume 
+Equipment for measurement of volume: graduated cylinder, measuring (Pasteur) pipet, 
+volumetric pipet, buret, volumetric flask. 
+The curved surface of a liquid is called the meniscus. When reading, be sure to have 
+your eye at the same level as the meniscus in order to avoid problems due to parallax. 
+ 
+Reading a meniscus 
+ 
+Density (symbol: ρ - Greek: rho) is a measure of mass per unit of volume. The higher 
+an object's density, the higher its mass per volume. The average density of an object 
+equals its total mass divided by its total volume. The SI unit of density is kilogram per 
+cubic meter (kg/m3) 
+ 
+ where ρ is the object's density (measured in kilograms per cubic meter) 
+ m is the object's total mass (measured in kilograms) 
+ V is the object's total volume (measured in cubic meters) 
+
+ 
+10
+ 
+Densimeter and measurement of density 
+ 
+Separation of liquid and solid phases 
+ 
+Decanting, or pouring of the liquid, has two major functions in the laboratory. The first 
+is to simply measure out a quantity of liquid, usually from a reagent bottle. The second 
+is pouring off a supernatant liquid, to separate it from a precipitated solid. 
+- 
+allow the solid to settle down on the bottom of the beaker, than transfer slowly the 
+liquid with the aid of a stirring rod (not to disturb the settled solid). 
+ 
+Filtration 
+Gravity filtration is most useful when the solid is to be discarded and the filtrate (the 
+liquid that flows through the filter paper) is the desired product. 
+- 
+fold the filter paper and place it into the funnel, steady the funnel with the support 
+clamp, moisten the folded filter paper with the solvent being filtered, the funnel´s tip 
+should touch wall of the beaker to reduce splashing, 
+To prepare a filter paper for gravity filtration, fold it in half, and then in quarter (with 
+one quarter slightly smaller than the other). Tear off a corner of the smaller quarter, 
+and open the cone so that there are three layers on one side, and one layer on the 
+other. 
+ 
+Vacuum filtration is often faster than gravity filtration and is most useful if the solid 
+must be kept or if a filtration must be done rapidly. 
+- 
+a Büchner funnel (connected with filter flask by rubber stopper) is used, a disc of 
+filter paper fits over flat, perforated bottom of this funnel, the vacuum is created by 
+a water aspirator. A water trap must be placed between the filter flask and the 
+aspirator to prevent water from backing up into the filter flask. 
+ 
+
+ 
+11
+ 
+ . Gravity filtration. 
+ 
+ 
+ Vacuum filtration. 
+ 
+ 
+Centrifugation is a process that use the centrifugal force for the separation of 
+mixtures. 
+A centrifuge is a piece of equipment that puts a substance in rotation around a fixed 
+axis in order to separate a fluid from a solid substance by centrifugal force. The load in 
+a laboratory centrifuge must be carefully balanced. 
+ 
+ 
+ 
+ 
+ 
+ 
+Laboratory centrifuges 
+ 
+ 
+
+ 
+12
+Crystallization is essentially solid-liquid separation technique. It is a process of 
+formation of solid crystals from a homogeneous solution. This method is used to 
+isolate and purify the required component of a reaction mixture. For crystallization to 
+occur, the solution ought to be supersaturated. This can be achieved by solvent 
+evaporation or cooling. 
+ 
+Sublimation of an element or substance is a conversion between the solid and the 
+gaseous phases of matter, with no intermediate liquid stage. The element (iodine) is 
+sublimed by heating of the reaction vessel and crystallization of the (iodine) vapour 
+using an ice-cooled watch glass. 
+ 
+ 
+ 
+ 
+ 
+Preparation of gases 
+Gases are produced as products in many chemical reactions. Several common 
+elements (H2, He, N2, O2, F2, Cl2) and compounds (NH3, CO2, H2S, SO2) are present in 
+the form of gases at room temperature. 
+The gases are prepared by temperature decomposition of solid compounds (NH4NO2, 
+Pb(NO3)2, HgO) or by reaction of solid compounds with liquid (CaCO3 + HCl, FeS + 
+HCl, Zn + HCl). 
+The suitable apparatus depends on the desired amount of evolved gas. 
+ 
+One of the most convenient apparatus for preparation of larger amounts of gas, or 
+when it is desired to have the gas always ready for use, is the Kipp generator. 
+The apparatus is made of three vertically stacked cylinders. The solid material (eg. 
+iron sulfide) is placed into the middle cylinder (b), the acid is put into the top cylinder 
+(a). A tube (e) extends from the top cylinder into the bottom cylinder. The middle 
+cylinder has a tube with a stopcock (d) attached, which is used to draw off the evolved 
+gas. When the stopcock is closed, the pressure of the gas in the middle cylinder rises 
+and expels the acid back into the top cylinder, until it is not in contact with the solid 
+material anymore, and the chemical reaction stops. 
+ 
+
+ 
+13
+ 
+ 
+ gas production apparatus Kipp apparatus 
+ 
+ 
+Compressed Gas Cylinders 
+ 
+In most laboratory applications, gases are bled from compressed gas cylinders into 
+systems that are near atmospheric pressure and that are provided with a sort of safety 
+outlet in case an exceedingly high pressure is reached. 
+ 
+There are three cases: i) the substances that remain gaseous at standard 
+temperature and increased pressure (acetylene, air, argon, helium, oxygen), ii) the 
+substances that are liquidized at standard temperature and increased pressure 
+(butane, propane) and iii) the substances that are liquidized at reduced temperature 
+and increased pressure (liquid He, N2, O2). 
+ 
+ 
+ 
+PROPER PROCEDURE OF OPENING OF CYLINDER VALVES 
+Make sure that the regulator outlet valve (A) is shut. Screw it clockwise until it seats. Do not over tighten 
+it or you may damage the valve seat. 
+Make sure that the regulator control valve (B) is shut. 
+Open the tank valve slowly (counter clockwise). Watch the tank pressure on the regulator (C). 
+Slowly turn the regulator control valve (B) until the regulator pressure (D) is at the desired level. 
+Open the regulator outlet valve (A). You can regulate flow with this valve, but the ultimate pressure 
+depends on the setting of the regulator control valve! 
+ 
+
+ 
+14
+Solutions and solubility 
+ 
+The solubility of a solution is a measure of how much of the solid can be dissolved 
+into the solvent. The solution reaches a point called the saturation point when no more 
+solid will be accepted by the solvent. Any further addition of solid will result in 
+appearance of dispersed solid mixed in the saturated solution. Each solvent and solute 
+pair has a characteristic solubility at a given temperature. Usually as you increase the 
+temperature, an increased amount of solid will be able to dissolve. 
+A solution is a homogeneous, liquid mixture of two or more substances. 
+A solvent is a dissolving agent, e.g. water. 
+A solute is a substance that is dissolved in a solution. 
+Water is a polar molecule. It will dissolve ionic compounds. It will also dissolve some 
+molecular compounds that have covalent polar bonds. 
+ 
+Strong and Weak Electrolytes 
+ 
+Electrolytes are substances whose aqueous solutions conduct electricity. It is the 
+presence of ions, which can move through the solution that allows conduction of the 
+electricity. Sometimes the ions were already present in the ionic salt, or they result 
+from the reaction of a substance with a solvent, water. 
+Strong electrolytes are substances which are completely dissociated in water or 
+substances for which the ionization reaction goes to completion (soluble salts, strong 
+inorganic acids, strong inorganic bases) 
+Weak electrolytes only ionize partially in water (weak inorganic acids, organic acids, 
+ammonia). 
+ 
+ 
+CLASSES OF SOLUBLE COMPOUNDS 
+CLASSES OF INSOLUBLE COMPOUNDS 
+compounds of Group I elements 
+carbonates (CO3
+2- ), phosphates (PO4
+3- ), oxalates 
+(C2O4
+2- ), and chromates (CrO4
+2- ) of all cations 
+EXCEPT Group I elements and NH4
++ 
+ammonium (NH4
++) compounds 
+sulfides (S2-) of all cations EXCEPT Group I, II, and 
+NH4
++ 
+chlorides (Cl-), bromides (Br-), and iodides (I-) of all 
+cations EXCEPT Ag+, Hg2
+2+ , and Pb2+ 
+hydroxides (OH-) and oxides (O2-) of all cations 
+EXCEPT Group I and II and NH4
++ 
+nitrates (NO3
+-), chlorates (ClO4
+-), perchlorates (ClO4
+-), 
+and acetates (CH3CO2
+2- ) 
+ 
+sulfates (SO4
+2- ) of all cations EXCEPT Sr2+, Ba2+, and 
+Pb2+ 
+Ca(OH)2 and Sr(OH)2 are slightly soluble. Mg(OH)2 is 
+very slightly soluble. 
+ 
+Colloids, sols, emulsions, gels, aerosols 
+(a) Colloids are glue-like amorphous substances, e.g. gelatine or starch, with particles 
+bigger than most molecules, i.e. from 10-7 to 10-5 m. The particles are too large to pass 
+through a membrane but too small to be observed under a microscope. Colloids have 
+a dispersed phase of particles scattered through a continuous phase, the medium. 
+Colloids are a type of mixture with properties between that of true solutions and 
+suspensions. The colloidal particles are still too small to settle out of solution due to 
+gravity (do not separate on standing). 
+
+ 
+15
+(b) Sols are dispersions of small groups of molecules in a medium. Sols remain 
+dispersed as the Brownian movement prevents the groups of molecules from 
+precipitating under the influence of gravity. Lyophilic ("water loving") sols, e.g. starch in 
+water have large dispersed particles with an affinity to the medium. Lyophobic sols, 
+e.g. silver chloride in water, have a dispersed phase with no affinity to the medium. 
+The particles keep apart because of their electrical charge, but eventually they 
+precipitate. 
+(c) Emulsions are colloids where both phases (the continuous one and the dispersed 
+one) are liquids, e.g. oil in water. When we shake two immiscible liquids, droplets of 
+one liquid are dispersed in the other. In temporary emulsions, e.g. kerosene in water 
+or oil in water, there is no attraction between the two liquids. The two phases will 
+disperse in each other if shaken together but will separate on standing. 
+(d) Gels are colloids in which liquids are dispersed in solids to form a jelly. Some gels 
+can lose the liquid component by heating to form a solid, e.g. silica gel. 
+(e) Aerosols (fogs) are dispersions of liquids or solids in a gas, e.g. fly spray, mist, 
+smoke. 
+(f) Foams are dispersions of gases in liquids, e.g. fire extinguisher foam or gases in 
+solids, e.g. foam rubber mattress. 
+ 
+ 
+Types of chemical reactions - the main types of reactions are precipitation reactions, 
+acid/base reactions, and redox reactions. 
+Precipitation reaction is a reaction in which soluble ions in separate solutions are 
+mixed together to form an insoluble compound that settles out of solution as a solid. 
+That insoluble compound is called a precipitate. 
+ 
+Acid-Base reaction is a reaction between an acid and a base which produces a 
+neutral (pH = 7) solution (neutralization). The reaction is between the hydrogen ions 
+and the hydroxide ions: 
+ 
+ 
+ H+(aq) + OH-(aq) → H2O 
+ 
+pH adjustment - it is often necessary to adjust the pH of a solution until it is just 
+alkaline or just acidic. This is usually accomplished by a dropwise addition of a strong 
+acid or base. In order to make sure that the solution does not become too acidic or 
+basic, the pH of the solution must be monitored. You will use universal indicator paper 
+to determine the pH of your solutions. The proper method of determination of the pH of 
+a solution involves stirring the solution with a clean glass rod and then touching a 
+piece of indicator paper with a tip of the rod. Do NOT place the indicator paper directly 
+in your solution! You should check the pH of the solution after each addition of a drop 
+of acid or base. If you are to acidify, stop the addition as soon as the indicator paper 
+registers a pH of just less than 7. If the solution is to be made basic, add base until the 
+indicator paper registers just more than 7. If you are to neutralize the solution, add the 
+appropriate acid or base until the paper indicates the pH very close to 7. 
+ 
+Oxidation-Reduction Reaction - in an oxidation-reduction or redox reaction, there 
+occurs an exchange of electrons between two reactants. The substance which loses 
+electrons is said to be oxidized. The substance which gains those electrons is said to 
+be reduced. 
+ 
+
+ 
+16
+ 
+What is ... ? 
+Definitions 
+Solution 
+Homogeneous mixture 
+Solute 
+A substance that disolves 
+Solvent 
+A substance in which the solute dissolves 
+Homogeneous mixture 
+A solution with one visible phase 
+Heterogeneous mixture 
+A mixture with two or more visible phases 
+Concentrated solution 
+A solution containing high percentage of 
+the solute 
+Dilute solution 
+A solution containing low percentage of 
+the solute 
+Saturated solution 
+A solution in which no more solute can be 
+dissolved at a fixed temperature 
+Unsaturated solution 
+A solution in which more solute can be 
+dissolved at a fixed temperature 
+Supersaturated solution 
+A solution containing more dissolved 
+solute than is normal at a particular 
+temperature 
+Solubility 
+Maximum amount of solute which will 
+dissolve in a fixed quantity of a given 
+solvent at a specific temperature 
+To dissolve 
+To disperse in a liquid to form a 
+homogeneous solution 
+Soluble 
+Ability of a substance to be dissolved in a 
+particular solvent 
+Insoluble 
+Inability of a substance to be dissolved in 
+a particular solvent 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+17
+Preparation part (number of experiment is the same as in Laboratory program) 
+ 
+1.1 Work with glass 
+ 
+Cutting of glass tubing (4.2.2). Place the tube on the table. Measure the required 
+length. Hold the tube firmly and draw a triangular file across it a couple of times so that 
+it makes a scratch. Do not saw back and forth. One or two firm scratches are usually 
+sufficient. Take the tube in both hands, one each side of the scratch. Keep your 
+thumbs as close as possible to the scratch. Press gently with your thumbs and pull 
+with the fingers. The two pieces of tubing should separate. Do not use brute strength! 
+If the tube does not break easily, make the file scratch a little deeper and longer. Fire-
+polish the cut ends (4.2.2.1). 
+ 
+Bending of glass tubing (4.2.3). Light the burner and open the air hole. This gives a 
+hot blue flame. Using both hands, move the tube back and forth through the top of the 
+flame. At the same time rotate the tube. Heat about 5 centimetres of the tube. When 
+the tubing is warm, lower it into the dark blue cone of the flame. Keep rotating the tube 
+until it glows red and the tube becomes soft. Take the tube out of the flame and bend 
+it. Do not force the bending and once bent do not reheat it. Hold the tubing until it cools 
+a little. Then put it on the wire gauze to cool. 
+ 
+ 
+
+ 
+18
+1.2.2 Crystallization of K2Cr2O7
+ (crystallization in motion) 
+Material: 30 g K2Cr2O7 
+Procedure: Using the values of solubility of K2Cr2O7 calculate the amount of water 
+needed for preparation of saturated solution at 60 oC and the theoretical yield of 
+crystals. 
+Solubility of K2Cr2O7 at 20 oC is 12 g and at 60 oC is 43 g in 100 ml H2O. 
+ 
+Measure the calculated volume of water and heat it to 80 – 90 oC in a beaker, 
+dissolve 30 g of K2Cr2O7. Hold the temperature during the dissolving near the 80 oC. 
+Filter the solution using a Büchner funnel. Cool the filtrate to 20 oC and filter the 
+crystals (Büchner funnel). Dry the crystals at 100 oC and weigh it, calculate the real 
+yield (%). 
+ 
+Weigh and measure volume of filtrate (mother liquor) and save it for procedure 
+2.3.4. 
+ 
+1.4.1 Preparation of Na2SO4. 10 H2O (15 g) 
+ 
+ 
+ 
+2 NaOH + H2SO4 → Na2SO4 + 2 H2O 
+ 
+Material: NaOH, H2SO4, pH indicator paper 
+Procedure: Calculate the amount of NaOH and H2SO4 for preparation of 15 g 
+Na2SO4.10 H2O and measure/weigh them. Prepare 10 % solutions of both chemicals. 
+The neutralization is realized by mixing about 95 % of volume of both solutions with 
+continuous stirring. Measure pH of the mixture and adjust it to value of 6 – 8 if 
+necessary (add drop of the appropriate solution). 
+ 
+Concentrate the solution of sodium sulphate through evaporation over a steam bath 
+to crystallization. Filter the crystals and dry them between sheets of filter paper. 
+ 
+1.5.1 Reactions of usual laboratory oxidizing agents – KMnO4 and K2Cr2O7 
+(record your observations and write the balanced equations for all reactions) 
+ 
+Potassium permanganate is a good oxidizing reagent in acid solution and the half-reaction is: 
+ 
+ 
+MnO4
+- + 8 H+ + e- → Mn2+ + 4 H2O 
+ pink colourless 
+Oxidation with potassium permanganate can be carried out in alkaline solution. In strong alkali the half 
+reaction is: 
+MnO4
+- + e- → MnO4
+2- 
+ 
+ 
+ pink 
+ 
+green 
+And in weakly alkaline solution: 
+ 
+ 
+MnO4
+- + 2 H2O + 3 e- → MnO2 + 4 OH- 
+ 
+ 
+Pink 
+ 
+ 
+ brown 
+Procedure: 
+a) Prepare solutions of oxidation agents – KMnO4 and K2Cr2O7 (the characteristic 
+purple-violet colour of the permanganate ion is observed in 0.02 M solution of KMnO4). 
+b) Pour about 1 – 2 ml of a 5 % Na2SO3 solution in three separate test tubes and 
+arrange pH: 
+ 
+pH ≤ 7, by a drop of diluted H2SO4 (1:5) 
+ 
+pH 6 – 8 
+ 
+pH ≥ 8, by a drop of 10 % solution of NaOH. 
+Add KMnO4 solution (dropwise) to each solution in the test tube, observe the colour 
+changes and record the reaction. 
+c) Repeat this procedure with solution of K2Cr2O7 as an oxidation agent. 
+d) Reaction b) and c) repeat with 5 % solution of NaNO2 in place of Na2SO3. 
+
+ 
+19
+2.1.4 Reactions of hydrogen peroxide (in test tubes) 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Dissolve one crystal of KMnO4 in water. Acidify this solution with diluted H2SO4 (3 
+drops) and add 3 % solution of H2O2. Observe the colour change and test the released 
+gas with a glowing splinter. 
+ 
+b) Add a solution of NH3 to 1 ml of 5 % AgNO3 solution until the created precipitate is 
+dissolved. Heat the solution and add 10 % H2O2 (0.5 ml). Observe the film on the wall 
+of a test tube. 
+ 
+c) Add dropwise 10 % solution of H2O2 to 3 ml of 10 % KI solution acidified with 1 ml of 
+diluted H2SO4 (1:2). Observe the colour change. 
+ 
+d) 2 ml of 5 % Cr2(SO4)3 solution alkalize with solution of KOH (20 %) until the created 
+precipitate is dissolved. Add 10 % H2O2 solution (dropwise) and observe the colour of 
+the solution. 
+ 
+e) Add solid MnO2 into 3 ml of 10 % H2O2 solution and test the released gas with a 
+glowing splinter. 
+ 
+f) 3 ml of 0.1 % K2Cr2O7 solution acidify with diluted H2SO4 (1:2). Cool the test tube 
+(dry ice) and add 3 % H2O2 solution (dropwise). Observe the colour of the solution. 
+ 
+ 
+2.2.1 The halogens – perform this experiment in a fume hood 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Put about 0.1 g of KMnO4, K2Cr2O7 and CaOCl2 into three separate test tubes and 
+add 1–2 ml of concentrated HCl. Hold a wet starch iodide paper in the upper part of 
+the test tubes. 
+ 
+b) Set up the gas production apparatus. Put 5 g of MnO2 into the flask. Add 
+concentrated HCl through the dropping funnel and heat the flask gently. The gas 
+should begin to evolve and is fed into two test tubes with KBr and KI solutions. Extract 
+the products into 2 ml of CCl4
+ or CHCl3, shake and then allow the organic layer to 
+separate. Observe the colour of the solutions. 
+ 
+c) Add 1 ml of bromine water to the diluted KI solution in the test tube, note the colour 
+and extract the product into CCl4 or CHCl3. 
+ 
+d) Observe solubility of small amount of I2 (0.1 g) in approx. 2 ml of 10 % KI solution, 
+ethanol, benzene, chloroform and acetone. 
+ 
+e) Mix 2 g of I2 and 0.2 g of KI in a dry beaker. Place the beaker on a tripod, cover it 
+with a round flask with cold water and warm gently. How is this process called? 
+ 
+f) Dissolve a crystal of iodine in 1 ml of 5 % NaOH solution. Acidify it with diluted 
+H2SO4 (1:4) and observe the colour of solution. 
+ 
+
+ 
+20
+2.2.2 Reactions of halides 
+a) Put 0.2 g of solid KF, KCl, KBr and KI into separate test tubes and add 1 ml of 
+concentrated H2SO4 into each one. Test the released gas by a moist indicator paper. 
+ 
+b) Acidify a solution of KI by a few drops of acetic acid (1:3) and add diluted NaNO2
+ 
+solution. Observe the colour of solution. Repeat it, using KCl and KBr instead of KI. 
+ 
+c) Put approx. 1 ml of 0.1 M solutions of KF, KCl, KBr and KI into four separate test 
+tubes. Add 3 - 5 drops of 1 % AgNO3 solution. Leave the test tubes in the light for a 
+few minutes. Observe if precipitates occur and their colour. 
+Detect solubility of precipitates in: 
+- HNO3 (1:5) 
+ 
+ 
+ 
+- conc. NH3(aq) 
+ 
+ 
+ 
+- 20 % Na2S2O3 solution 
+ 
+ 
+ 
+- conc. HCl 
+ 
+d) Add 2 ml of acetic acid (1:3) and about 0.3 g of granular zinc to the precipitate of 
+silver halide. Stir the mixture and put the test tube in the boiling water bath for 10 
+minutes. 
+ 
+e) Add diluted H2SO4 (1:2) into test tube with solution of 0.1 g KI and 0.1 g KIO3 in 3 ml 
+of water. Observe the colour of solution. 
+ 
+ 
+2.2.3 Reactions of pseudo halides – SCN- (1 mol/l KSCN solution) 
+a) Make the reactions 2.2.2 c) and d) with solution of KSCN. 
+ 
+b) Add 0.5 ml of 1 M BaCl2 solution and 0.5 ml of HNO3 (1:2) to the 1 ml of KSCN 
+solution. Stir the mixture and put the test tube in the water bath for a minute. 
+ 
+c) Add 0.5 ml of 1 M BaCl2 solution and 0.5 ml of 6 mol/l HCl, and 1 ml 3 % H2O2 to 
+1 ml of KSCN solution. Stir the mixture and put the test tube in the water bath for a 
+minute. 
+ 
+d) Add about 0.3 g of granular zinc and 0.5 ml of H2SO4 (1:5) to 1 ml of KSCN solution. 
+ 
+e) Add 2 drops of 0.1 M Fe(NO3)3 to 1 ml of KSCN solution. Observe the change of 
+colour. Add KF solution to the solution. Describe the change and reaction. 
+ 
+ 
+2.2.4 Preparation of potassium iodate (10 g) 
+ 
+ 
+KI + 2 KMnO4 + H2O → KIO3 + 2 KOH + 2 MnO2 
+ 
+Material: KMnO4, KI, ethanol, acetic acid 
+Procedure: Weight calculated amount of KMnO4 (use 10 % excess) and dissolve it in 
+400 ml of warm water (use boiling flask). Add needful amount of KI in the form of 
+saturated solution. Heat the mixture for 20 – 30 min on the water bath (colour of the 
+solution has to be violet all the time). Add ethanol to remove excess of KMnO4 
+(discolouration of solution). Filter out MnO2 (vacuum filtration), acidify the filtrate with 
+acetic acid and concentrate it on a steam bath to the crystallization. Filter out the KIO3 
+crystals and wash them with ethanol. Wash MnO2 properly and dry it. 
+ 
+
+ 
+21
+2.3.4 Preparation of sulphur dioxide and its reduction effect - perform this 
+experiment in a fume hood 
+ 
+ 
+Na2SO3 + H2SO4 → SO2 + Na2SO4 + H2O 
+ 
+K2Cr2O7 + 3 SO2 + H2SO4 → Cr2(SO4)3 + K2SO4 + H2O 
+ 
+Material: Na2SO3, H2SO4, K2Cr2O7 (mother liquor from task 1.2.2), NaOH 
+Procedure: Set up the gas production apparatus, put calculated amount of Na2SO3 (30 
+% excess) to the flask and add H2SO4 (1:1) through the dropping funnel. Blow the 
+evolved gas through the gas washing bottle with 5 % K2Cr2O7 solution (diluted mother 
+liquor from task 1.2.2) acidified with H2SO4. Bubble the unreacted gas through 
+washing bottle with 10 % NaOH solution. 
+ 
+Test for end of the reaction – to the sample of reduced solution in a test tube add 
+small amount of Na2CO3 crystals and heat the mixture just below the boiling point. The 
+solution over the precipitate has to be colourless. 
+ 
+Add NaOH solution to the solution in the gas washing bottle to set pH to 7-8. Filter 
+the precipitate using a Büchner funnel, wash it properly with water, dry it and weight. 
+Calculate the practical yield and compare it with theoretical yield. 
+ 
+ 
+2.4.6 Preparation of sodium nitrite (10 g) 
+ 
+a) 
+2 NaNO3 + C → 2 NaNO2 + CO2 
+ 
+Material: NaNO3, C (charcoal) 
+Procedure: Mix calculated amounts of NaNO3 and charcoal (10 % excess) in a dry, 
+clean iron plate. Heat this mixture over the melting temperature of NaNO3. Do not add 
+charcoal into the molten NaNO3! After 10 minutes of heating cool the molten mixture 
+on air and macerate it with hot water. Filter the unreacted charcoal and evaporate the 
+filtrate on a steam bath to the crystallisation. Collect the crystals by filtration on the 
+Büchner funnel and use the filtrate for task 2.4.8. 
+ 
+b) 
+NaNO3 + Pb → NaNO2 + PbO 
+ 
+Material: NaNO3, Pb, CO2(g) 
+Procedure: Melt calculated amount of NaNO3 in a dry, clean iron plate. Stir the melt 
+with an iron rod and add Pb (5 % excess) in parts. Finish the heating and stir until 
+solidification. Macerate the mixture with hot water, filter PbO out, wash and dry it. Blow 
+CO2(g) through hot filtrate (5 min) to remove Pb2+ in form of PbCO3 and filter it out. 
+Evaporate the filtrate on a steam bath to the crystallisation. Collect the crystals by 
+filtration on a Büchner funnel and use the filtrate for task 2.4.8. 
+ 
+ 
+4.2.9 Preparation of potassium chromate 
+ 
+a) 
+Cr2O3 + 3 KNO3 + 4 KOH → 2 K2CrO4 + 3 KNO2 + 2 H2O 
+ 
+Material: KNO3, KOH, Cr2O3 (product from 2.3.4) 
+Procedure: Use KNO3 and KOH in 10 % excess to the stoichiometry. Melt KOH in a 
+dry, clean iron plate, shut down the burner and add Cr2O3. Stir the mixture with an iron 
+rod and add KNO3. 
+
+ 
+22
+Heat and stir it for about 30 minutes (observe change of the colour). The reaction time 
+may vary from the indicated value, depending on the purity and grain size of the 
+reactants. The reaction mixture will gradually melt down to a uniform red mass. It 
+should turn yellow upon cooling. If it has a greenish tinge it still contains unreacted 
+chromium oxide and the heating should be continued. When all the oxide has reacted, 
+allow the mixture to cool below 100 °C and dissolve the solid mass in 150 ml of hot 
+water. Filter out any unreacted chromium oxide and rust particles. Evaporate the 
+filtrate on a steam bath to the crystallisation. Collect the crystals (nearly pure K2CrO4) 
+by filtration on a Büchner funnel and dry them. Evaporate the mother liquor to get a dry 
+mixture of products (K2CrO4 + KNO2). 
+ 
+Dissolve small amount of both parts of crystals in two test tubes and add dilute 
+H2SO4. Observe change of the colour and write the balanced equations for both 
+reactions. 
+ 
+b) 
+2 Cr3+ + 10 OH- + 3 H2O2 → 2 CrO4
+2- + 8 H2O 
+ 
+Material: Cr2(SO4)3, KOH, H2O2 
+Procedure: Add 10 % KOH solution dropwise to the solution of Cr2(SO4)3 until the 
+Cr(OH)3 precipitates. Filter it out on a Büchner funnel and wash it with a small amount 
+of water. Put the precipitate into 600 ml beaker and add 10% KOH solution. Oxidize 
+this suspension dropwise by 30 % H2O2 solution and stir. The green colour turns 
+yellow. Boil this solution to remove excess of H2O2 and evaporate it on a steam bath to 
+the crystallisation. Collect the crystals by filtration on a Büchner funnel and dry them. 
+Prepare Cr2O3.xH2O (2.3.4) from the mother liquor. 
+ 
+ 
+2.4.7 Test for ammonia 
+a) Put a few NaOH granules in a mortar. Add some solid ammonium chloride and 
+grind it up with the NaOH using a pestle. Wet litmus paper held over the mortar turns 
+deep blue, equivalent to a pH 10-11. 
+b) Add a few drops of 10 % NaOH solution and ’Nessler’s’ reagent (5 drops) to the 
+solution of ammonium salt. 
+The reaction with Nessler’s reagent, K2[HgI4], is a supersensitive test for ammonia. An alkaline 
+solution of this compound reacts with ammonia to form a brown precipitate with the composition 
+[Hg2N]I·H2O, the iodide of Millon’s base. 
+ 
+2.4.8. Reactions of nitrite and nitrate ions 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Add 2 – 3 drops of 10 % H2SO4 to the 0.5 ml of saturated NaNO2 solution (mother 
+liquor from 2.4.6). Observe blue colour of N2O3, which is not stable and decomposes 
+to NO and NO2. 
+b) Prepare 5 % NaNO2 solution for reactions: 
+
+ 
+23
+1. Add diluted H2SO4 (5 drops) and KMnO4 solution (1 drop) to 1 ml of NaNO2 solution. 
+Repeat this reaction without H2SO4. 
+ 
+2. Repeat reaction (1), using K2Cr2O7 solution in place of KMnO4. 
+ 
+3. Add acetic acid (5 drops) and 5 % KI solution (5 drops) to the 1 ml of NaNO2 
+solution. 
+ 
+4. Repeat reaction (3), using KBr solution in place of KI. 
+ 
+5. Add NaNO2 solution acidified with H2SO4 (1:5) dropwise to 1 ml bromine water. 
+ 
+6. Add a small amount of NH2SO3H crystals, acetic acid (3 drops) and 1 drop of KI 
+solution to the 2 – 3 ml of NaNO2 solution. 
+ 
+7. Heat gently a mixture of 2 ml of NaNO2 solution, 10 % NaOH solution (5 drops) and 
+Zn. Test the released gas with moist pH indicator paper or Nessler’s reagent. 
+ 
+8. Add 5 drops of acetic acid and a small piece of Zn to 2 ml of NaNO2 solution. After a 
+while add 5 drops of KI solution. 
+ 
+9. Repeat reactions 1–8, using 5 % NaNO3 solution instead of NaNO2. 
+ 
+ 
+2.4.9 Brown Ring Test 
+The best known qualitative test for nitrate is the "Brown Ring Test": Nitric acid is produced at the 
+interface between the nitrate solution and the concentrated sulphuric acid. The nitric acid is reduced to 
+nitrogen monoxide by the iron(II) ions and the brownish violet nitroso complex is then formed by 
+nitrogen monoxide with the excess iron(II) ions. 
+6 FeSO4 + 2 HNO3 + 3 H2SO4 → 3 Fe2(SO4)3 + 2 NO + 4 H2O 
+[Fe(H2O)6]SO4 + NO → [Fe(H2O)5NO]SO4 + H2O 
+ 
+a) Add saturated solution of FeSO4 to the test tube with NaNO3 solution. Pour 
+concentrated sulphuric acid (96 %) carefully down the inside wall of the tube. The acid 
+sinks below the aqueous solution due to large difference in density (ρ(H2SO4)=1,83 
+g·cm-3). After a short period an intensive brownish violet ring is formed at the phase 
+transition. 
+ 
+b) Repeat (a), using NaNO2 solution and compare both reactions. 
+ 
+c) Repeat reaction with NaNO3 and NaNO2 using acetic acid instead of H2SO4. 
+ 
+ 
+2.5.2 Reactions of hypophosphite ion (use 5 % NaH2PO2 solution) 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Add 1 drop of I2 in KI solution to 0.5 ml of NaH2PO2 solution. 
+b) Add 1 drop of 1 % KMnO4 solution to 0.5 ml of NaH2PO2 solution. 
+c) Add H2SO4 to 0.5 ml of NaH2PO2 solution to set pH~3 and 1 drop of 1 % KMnO4 
+solution. 
+ 
+d) Add HNO3 to 0.5 ml of NaH2PO2 solution to set pH~3 and 1 drop of 5 % AgNO3 
+solution. 
+
+ 
+24
+2.5.1 Preparation of phosphine (demonstration) - perform this experiment in a 
+fume hood 
+ 
+ 
+P4 + 3 KOH + 3 H2O → PH3 + 3 KH2PO2 
+ 
+Material: P4, KOH, Zn, HCl 
+Procedure: Arrange an apparatus as represented in the figure. Fill a Kipp generator 
+with sticks of Zn and put HCl (1:1) into the acid reservoir. 
+ 
+Place 100 ml of 5 % KOH solution and about 1 g of white phosphorous in the flask. 
+Connect the parts of apparatus and flush air from the apparatus by turning on the 
+hydrogen production for about 5 minutes. Then heat the solution. Bubbles of PH3 will 
+escape from the tube in the beaker and, on contact with air, will ignite. 
+To stop the flow gas, carefully fill the beaker with water and cease heating of the 
+generator. 
+ 
+PH3 - it is a colourless, highly toxic, flammable gas with a boiling point of −88 °C at standard pressure . It 
+can ignite spontaneously on contact with air. Pure phosphine is odourless, but "technical grade" 
+phosphine has a highly unpleasant odour like garlic or rotting fish, due to the presence of substituted 
+phosphine and diphosphine (P2H4). 
+ 
+ 
+ 
+ 
+ 
+Apparatus for PH3 preparation 
+ 
+ 
+2.5.5 Reactions of phosphate ions (use 5 % Na3PO4, NaH2PO4, Na2HPO4 solutions) 
+a) Measure pH of all solutions. 
+ 
+b) Add some crystals of CH3COONa (give reason) and 2-3 drops of 1 % AgNO3 
+solution to 1 ml of solution of phosphate. Observe colour of the precipitate and test its 
+solubility in NH3(aq) and HNO3. 
+ 
+c) Repeat reaction (b), using 5 % FeCl3 solution in place of AgNO3 and test solubility of 
+the precipitate in HCl (1:1) and HNO3. 
+ 
+d) Add a few drops of magnesium reagent (solution containing MgCl2, NH4Cl, NH3(aq)) 
+to 1 ml of phosphate solution. 
+ 
+e) Add a few drops of phosphate solution to 2 ml of ammonium molybdate reagent and 
+heat it. Dissolve the precipitate in diluted NH3 and then add diluted HNO3. 
+
+ 
+25
+2.3.6 Preparation of sodium thiosulphate (8 g) 
+ 
+ 
+Na2SO3 + S → Na2S2O3 
+ 
+Material: Na2SO3.5H2O, S, ethanol 
+Procedure: Dissolve calculated amount of Na2SO3 in 30 ml of water. Add sulphur (10 
+% excess) moistened with ethanol and boil gently (about 30 min), add water if 
+necessary, to keep the volume of the solution about the same level throughout boiling. 
+Filter the mixture and evaporate the filtrate on a steam bath to the crystallisation. Dry 
+the crystals by pressing between sheets of filter paper. 
+ 
+ 
+2.3.7 Reactions of thiosulphate ion (use 5 % Na2S2O3 solution) 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Add a few drops of conc. HCl to 1–2 ml of Na2S2O3 solution. Observe the changes 
+and cautiously smell the gas which is evolved. 
+ 
+b) Add dropwise Na2S2O3 solution to potassium triiodide solution (solution of iodine in 
+10 % KI solution). 
+ 
+c) Add 1 drop of 5 % Na2S2O3 solution to 1 ml of 5 % AgNO3 solution, in the other test 
+tube add 1 drop of 5 % AgNO3 solution to 1 ml of 5 % Na2S2O3 solution. Compare the 
+reactions in both test tubes. 
+ 
+d) Add 5 % Na2S2O3 solution to 1 ml of 5 % lead acetate solution and heat the 
+suspension. 
+ 
+ 
+2.3.8 Qualitative reactions of SO4
+2-, SO3
+2-, S2O3
+2-, S2- 
+ 
+Prepare 5 % solutions of salts of these anions. Transfer 1 ml of each of test 
+solutions to the test tubes and perform reactions with following reagents: 5 % BaCl2, 
+5 % AgNO3, concentrated H2SO4 and solution of iodine in 10 % KI. Use new 1 ml of 
+test solution for each reagent and stir after each addition. Record the results in table. 
+ 
+ 
+2.3.10 Preparation of hydrogen sulphide, (NH4)2S and (NH4)2Sx - perform this 
+experiment in a fume hood 
+ 
+Material: FeS, HCl, NH3(aq), S 
+Procedure: 
+a) Prepare H2S in a Kipp generator, fill a Kipp generator with sticks of FeS and put HCl 
+(1:1) into the acid reservoir. Pass the gas into bottle with distilled water to prepare 
+saturated solution of H2S. 
+ 
+b) (NH4)2S – dilute NH3(aq) with water (1:1) and divide it in two parts. Saturate one 
+part with H2S and mix it with the other one. 
+ 
+c) (NH4)2Sx – add excess of sulphur to the (NH4)2S solution, filter the unreacted 
+sulphur after 30 minutes. 
+ 
+
+ 
+26
+3.2.4 Reactions of Al3+ (use 0.2 mol.l-1 Al2(SO4)3 or KAl(SO4)2 solution) 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Pour 2 ml of Al3+ solution to the four separated test tubes and add these reagents 
+(dropwise): diluted NH3, NaOH, Na2CO3 and Na2S solutions. Compare the precipitates 
+in all test tubes. 
+Dissolve the precipitate by adding a slight excess of NaOH solution, than add excess 
+of NH4Cl and heat the mixture. 
+ 
+b) Pour 2 ml of Al3+ solution to the four separated test tubes, add half a spoonful of 
+tartaric acid and repeat reactions (a). Compare the results. 
+ 
+c) Add sufficient amount of NaOH solution to 1 ml of Al3+ solution to give Na[Al(OH)4] 
+solution and add alizarin reagent. Then drop acetic acid. 
+ 
+ 
+3.3.7 Reactions of Pb2+ (use 0.2 mol.l-1 Pb(NO3)2 or Pb(CH3COO)2 solution) 
+ 
+a) Pour 1-2 ml of Pb2+ solution in two test tubes add (dropwise) 5 % NaOH solution to 
+one and 5 % NH3(aq) to the other. Observe the reactions in the excess of reagents. 
+ 
+b) Add dilute HCl (1:3) dropwise to 2 ml of Pb2+ solution. Add 5 ml of distilled water to 
+the solid precipitate, heat it in the boiling water bath. Then cool it on air. Observe the 
+changes. 
+ 
+c) Add diluted HCl drop by drop to 1-2 ml of Pb2+ solution, pour off the solution above 
+precipitate. Add more diluted HCl to the precipitate and dilute the obtained solution 
+with water. 
+ 
+d) Add diluted H2SO4 (1:10) dropwise to 2 ml of Pb2+ solution. Centrifuge the 
+precipitate and decant it. Put half of the precipitate into another test tube. Add 2-3 ml 
+of concentrated H2SO4 to one tube and ammonium acetate with a few drops of 
+NH3(aq) to the other. 
+ 
+e) Add 10 % KI solution dropwise to 2 ml of Pb2+ solution. Then add distilled water to 
+the solid precipitate, heat it in the boiling water bath. Then cool it on the air. 
+ 
+f) Add 5% K2CrO4 solution to 2 ml of Pb2+ solution. 
+ 
+g) Add H2S to 2 ml of Pb2+ solution, boil the precipitate with hydrogen peroxide (3 %). 
+Add H2S to 2 ml of Pb2+ solution in the second test tube and then add saturated KCl 
+solution. 
+ 
+4.4.5 Reactions of Fe3+ (use 0.5 mol.l-1 solution of Fe3+ salt) 
+ 
+a) Put 1 ml of Fe3+ solution in each of seven test tubes (or on a spot plate). Add a few 
+drops of the following seven reagents: 1 % NH4SCN, 5 % K3[Fe(CN)6], 5 % 
+K4[Fe(CN)6], 5 % NaH2PO4, 5 % NaOH, 5 % KI and NH3(aq) to each of the seven test 
+tubes. Observe reactions and record them. 
+ 
+b) Add 5 % KF solution and 1 % NH4SCN solution to 1 ml of Fe3+ solution. Explain 
+your observation. 
+
+ 
+27
+4.4.6 Reactions of Fe2+ (use 0.5 mol.l-1 solution of fresh prepared Fe2+ salt) 
+ 
+a) Repeat reactions 4.4.5 a) using Fe2+ solution in place of Fe3+ solution. 
+ 
+b) Add one drop of H2SO4
+ (1:2) and a few drops of KMnO4 solution to 1 ml of Fe2+ 
+solution. Then add a few drops of NH4SCN solution. 
+ 
+ 
+4.3.3 Reactions of Mn2+ (use 0.3 mol.l-1 solution of Mn2+ salt) 
+ 
+a) Add NH3(aq) to 2 ml of Mn2+ solution. Observe reaction of precipitate with excess of 
+ammonia. Then add 1-2 drops of H2O2. 
+ 
+b) Use very diluted Mn2+ solution (0.02 mol.l-1), acidify it with HNO3 and add solid 
+K2S2O8 and one drop of 1 % AgNO3 solution. Heat the mixture. Compare with reaction 
+without AgNO3. 
+ 
+c) Add KMnO4 solution dropwise to 1 ml of Mn2+ solution and observe changes of 
+colour. 
+ 
+ 
+4.5.11 Reactions of Cu2+ (use 0.3 mol.l-1 solution of Cu2+ salt, test tubes or a spot plate) 
+ 
+a) Add about 0.5 ml of K4[Fe(CN)6] solution to 1-2 ml of Cu2+ solution. Try the solubility 
+of precipitate in HCl, CH3COOH and NH3(aq). 
+ 
+b) Repeat the reaction (a) with 5 % K3[Fe(CN)6] solution. 
+ 
+c) Add 10 % NaOH solution to 1-2 ml of Cu2+ solution to complete the precipitation. 
+Heat the mixture and observe change of colour. 
+ 
+d) Add 2 ml of tartaric acid solution to 1-2 ml of Cu2+ solution and repeat experiment 
+(c). Explain the difference. 
+ 
+e) Add concentrated NH3(aq) (a few drops at a time) to 1-2 ml of Cu2+ solution. Record 
+your observation. Add ammonia solution until there is no further change. Then add two 
+pellets of NaOH and boil. 
+ 
+f) Add a few drops of 5 % KI solution to 1-2 ml of Cu2+ solution. Add a few drops of 
+Na2SO3 solution to determine colour of the precipitate. 
+Precipitation of CuI, which is white, but the solution is brown because of formation of tri-iodide ions 
+(iodine). After adding Na2SO3 to the solution, tri-iodide is reduced to colourless iodide ions and the white 
+colour of the precipitate becomes visible. 
+ 
+g) Add concentrated HCl dropwise to 1-2 ml of Cu2+ solution and observe change of 
+solution. Dilute the solution with water. 
+ 
+ 
+ 
+ 
+
+ 
+28
+4.4.11 Reactions of Ni2+ (use 0.5 mol.l-1 solution of Ni2+ salt, test tubes or a spot plate) 
+ 
+a) Add diluted NH3 and 0.5 ml of dimethylglyoxime reagent to 2 ml of Ni2+ solution. 
+The Ni2+ is first complexed with ammonia and then detected as an insoluble, scarlet coordination 
+compound of dimethylglyoxime (DMGH2). 
+ 
+b) Add NaOH solution to 2 ml of Ni2+ solution to complete the precipitation. Divide the 
+precipitate into two test tubes. Add excess of NaOH to one and a few drops of H2O2 to 
+the other. 
+ 
+c) Add NH3(aq) dropwise to 2 ml of Ni2+ solution. Try the action of NH3(aq) excess. 
+Then add NaOH solution. 
+ 
+ 
+3.2.2 Preparation of Al2O3 from bauxite 
+ 
+ 
+Bauxite, AlO(OH), the most important ore of aluminum, contains only 40-60% of Al2O3, the rest 
+being a mixture of silicon dioxide and various iron oxides. The aluminum oxide must be purified before it 
+can be refined to aluminum metal. Bauxite is washed with a hot solution of sodium hydroxide. This 
+converts it to aluminum hydroxide, Al(OH)3, which dissolves in the hydroxide solution according to the 
+chemical equation 
+ 
+AlO(OH) (s) + NaOH (aq)+ H2O (l) → Na[Al(OH)4] (aq) 
+The other components of bauxite do not dissolve and can be filtered out as solid impurities. Then do 
+precipitation of aluminum hydroxide by carbon dioxide, CO2. Al(OH)3 is then filtered and dried. When 
+then heated, the aluminum hydroxide decomposes to alumina, giving off water vapour in the process: 
+ 
+Na[Al(OH)4] (aq) + H+ (aq) → Al(OH)3 (s) + H2O (l) 
+ 
+ 
+2 Al(OH)3 (s) t→ Al2O3 (s) + 3 H2O (l) 
+ 
+Material: bauxite, NaOH, CO2, CH3COOH 
+Procedure: Calculate amount of NaOH (10 % excess) for reaction of 10 g of bauxite 
+and prepare 30 % NaOH solution. Leach 10 g of bauxite in this solution for 20 minutes, 
+adding water if necessary, to keep the volume about the same level throughout 
+leaching. Dilute the suspension to a triple volume. Filter the insoluble component 
+(Fe2O3.xH2O). Use suitable method of filtration of strongly basic solution. Divide the 
+filtrate in two parts, the first one precipitate with CO2 (wash bottle) and the second one 
+with diluted CH3COOH. Filter out the precipitates (separately) and wash them with 
+water until the filtrate is not acid (second part). 
+Put the precipitates (separately) into crucible and heat gently at first and then strongly. 
+Try the action of diluted and concentrated acids and hydroxide on the product before 
+and after its heating. 
+ 
+ 
+2.6.5 Reduction effect of oxalic acid 
+A particular case of catalysis is so-called autocatalysis. Here, a slowly-reacting system itself 
+produces a positive catalyst. As a result, the original reaction runs faster and faster. The reaction of 
+permanganate with oxalate is a well-known example in which the Mn2+ ions produced by the reduction 
+of MnO4
+- catalyse the reduction of further permanganate 
+ 
+a) Put 1 ml of KMnO4 solution to the three test tubes. Add 1-2 drops of H2SO4 to the 
+first and second tube. Add 1 drop of Mn2+ to the second tube. Add excess of H2C2O4 
+solution to all three test tubes. Observe rate of reactions and write the equations. 
+
+ 
+29
+2.6.2 Reactions of carbon dioxide and carbonates 
+a) Put 3 ml of 5 % BaCl2 solution in two separate test tubes. Add 1-2 drops of NaOH 
+solution to one and pass CO2 to each. When the precipitate appears, heat the test 
+tube. 
+ 
+b) Repeat experiment (a) using 1 % AgNO3 solution in place of BaCl2. 
+ 
+c) Add 1 drop of phenolphthalein to 2 ml of 1 % Na2CO3 solution and pass CO2 to 
+decolourize the solution. Explain this reaction. 
+ 
+d) Add about 5 ml of water to the half a spoonful of solid CaCO3 and shake the 
+mixture. Observe solubility. Pass CO2 and observe the change, then boil it. 
+ 
+ 
+2.6.6 Temperature stability of carbonates 
+Material: portion again. Order the carbonates according to their temperature stability. 
+MgCO3, CaCO3, BaCO3 
+Procedure: Weigh three crucibles and put 3 g of MgCO3, CaCO3, BaCO3 there. Dry 
+the samples in a drying box at 105 oC to the constant mass. Calculate humidity in the 
+samples. Heat the crucibles by Mecker burner (or in electrical furnace) for 5 minutes. 
+Allow the crucibles to cool down to room temperature and weigh them. Handle the 
+crucibles with crucible tongs always. Calculate amount (%) of carbonates decomposed 
+by heat. Heat again for another 15 minutes and calculate the decomposed 
+ 
+ 
+3.1.8 Reactions of magnesium, calcium, strontium and barium ions 
+(observe when the precipitate appears, prepare a table for recording the results of these experiments) 
+ 
+a) Prepare 0.1 mol.l-1 solutions of Mg2+, Ca2+, Sr2+, Ba2+ salts (chlorides or nitrates). 
+ 
+b) Add 1 M Na2CO3 solution drop by drop to 1–2 ml of each salt solution. Repeat this 
+reaction with 1 M (NH4)2CO3 solution. 
+ 
+c) Add diluted H2SO4
+ (1:3) to 1–2 ml of each solution. Determine whether or not the 
+formed sulphate will react with hydrochloric acid. 
+ 
+d) Repeat reaction (c) using 0.5 M H2C2O4 and K2CrO4 solutions in place of H2SO4. 
+ 
+ 
+2.8.1 Preparation of methyl borate 
+ 
+ 
+H3BO3 + 3 CH3OH → B(OCH3)3 + 3 H2O 
+ 
+Material: H3BO3, CH3OH, H2SO4 
+Procedure: Put 0.5 g of dry H3BO3 crystals into evaporating dish, add 10 ml of 
+methanol, 1 ml of concentrated H2SO4 and ignite the solution. What colour is the 
+flame? Explain the role of H2SO4. 
+ 
+ 
+ 
+
+ 
+30
+3.1.1 Flame tests 
+ 
+Compounds of certain metals are volatilized in a non-luminous Bunsen flame and impart 
+characteristic colours to the flame. Chlorides are among the most volatile compounds, and these are 
+prepared in situ by mixing the compound with a little of concentrated HCl before carrying out the tests. 
+ 
+Material: alkaline metals and earth salts (solid or solution), HCl, platinum wire 
+Procedure: Clean a platinum wire by dipping it into concentrated HCl in the test tube 
+and holding it in the oxidizing zone of Bunsen flame (never insert the wire into 
+reducing zone of flame!). The wire is clean when it imparts no colour to the flame. The 
+wire is dipped into the solution of salt (or into HCl and then into crystals of salt) and 
+then hold in the flame. 
+ 
+ 
+3.1.2 Insoluble salts of alkaline metals (use 1 M solutions of salts) 
+ 
+a) Add 1 ml of 5 % Na2HPO4 solution and NH3(aq) to 1 ml of Li+ solution. What is the 
+colour of the precipitate? Try the action of HCl on the precipitate. 
+ 
+b) Add a few drops of 10 % Na3[Co(NO2)6] solution to each of three test tubes 
+containing 1 ml of solutions of Na+, K+ and NH4
++ salts. Observe which ion precipitates 
+and try solubility of the precipitate in HCl. 
+ 
+c) Add a few drops of HClO4 to 1 ml of each solutions of Na+ and K+ salts. Describe 
+the appearance of the precipitate. 
+ 
+ 
+3.1.3 Preparation of sodium carbonate 
+ 
+ 
+ 
+ 
+NaCl + NH3 + CO2 + H2O → NaHCO3 + NH4Cl 
+ 
+ 
+2 NaHCO3 → Na2CO3 + CO2 + H2O 
+ 
+Material: NaCl, NH3(aq), C2H5OH, CO2 
+Procedure: Saturate 40 ml of conc. NH3(aq) with 10 g of NaCl in a wash bottle. Shake 
+the mixture vigorously to dissolve all salt. Pass the CO2 until a heavy precipitate of 
+NaHCO3 is obtained. Filter out the precipitate, wash it with 5 ml of ice water and then 
+with 10 ml of C2H5OH. Dry NaHCO3 at 100 oC, put it into dish and heat gently (300 oC). 
+ 
+ 
+3.3.6 Preparation of Pb3O4 -“red lead” (5 g) 
+ 
+ 
+3 PbCO3 + NaNO3 → Pb3O4 + NaNO2 + 3 CO2 
+ 
+Material: PbCO3 (PbO), NaNO3, KClO3 
+Procedure: Mix well together calculated amounts of PbCO3 and NaNO3. Stir and heat 
+it gently in the porcelain crucible. First decomposition of PbCO3 occurs at 200 OC to 
+yellow PbO and CO2. When all mixture is yellow increase the temperature to about 
+400 - 450 OC (crucible is not red) and stir continually. When the mixture turns red add 
+1-2 g KClO3, stir and heat it for 30 minutes. When the temperature is higher (470 oC) 
+Pb3O4 decomposes. 
+ 
+ 
+
+ 
+31
+3.3.8 Reactions of Pb3O4 
+(record your observations and write the balanced equations for all reactions) 
+ 
+a) Add 3 ml of diluted HNO3 (1:1) to a small bit of Pb3O4 in a test tube. When no 
+further reaction takes place, filter the liquid. Add diluted HCl to the residue and detect 
+the evolved gas with a wet starch iodide paper. Add a few drops of sulphuric acid or KI 
+solution to the filtrate. What do you detect with this reaction? 
+ 
+b) Warm a small bit of Pb3O4 in a test tube with 2-3 ml of concentrated HCl. Detect the 
+evolved gas with a wet starch iodide paper. 
+ 
+c) Place a small amount of Pb3O4 into a crucible and heat it strongly. Observe change 
+of colour. Cool the product and repeat the reaction (a). 
+ 
+ 
+3.3.5 Preparation of lead dioxide 
+ 
+a) 
+Pb(NO3)2 + 2 NaOH → Pb(OH)2 + 2 NaNO3 
+ 
+Pb(OH)2 + 2 NaOH → Na2[Pb(OH)4] 
+ 
+Na2[Pb(OH)4] + CaOCl2 → PbO2 + CaCl2 + 2 NaOH + H2O 
+ 
+Material: Pb(NO3)2 or Pb(CH3COO)2, NaOH, CaOCl2 or NaClO, HNO3 
+Procedure: Dissolve 0.1 mol of Pb2+ salt in 300 ml of hot water and cool the solution. If 
+a small amount of substance remains undissolved, it will not affect the result. Add the 
+solution of 20 g NaOH in 180 ml of water. First white precipitate of Pb(OH)2 appears, 
+which dissolves in excess of NaOH to Na2[Pb(OH)4]. 
+ 
+Mix 40 g of CaOCl2 with 50 ml of water and necessary amount of Na2CO3 for 
+reaction with Ca2+. Add 200 ml of water to the mixture and filter it. 
+Add filtrate to the boiling solution of Na2[Pb(OH)4] until test for Pb2+ is negative. 
+ 
+Test for Pb2+: add one drop of Na2S solution to one drop of reaction mixture on filter 
+paper. Black precipitate (PbS) indicates presence of Pb2+. 
+ 
+ Pour the mixture into 500 ml of water and decant. Add 100 ml of diluted HNO3 (1:3) 
+to the precipitate, stir and decant it until pH is neutral. Filter off the lead dioxide, wash 
+it with boiling water and dry. 
+b) 
+Pb(NO3)2 + 2NaOH → Pb(OH)2 + 2NaNO3 
+Pb(OH)2 + 2NaOH + Cl2 → PbO2 + 2NaCl + 2H2O 
+Material: Pb(NO3)2 or Pb(CH3COO)2, NaOH, Cl2 
+Procedure: Dissolve 10.0 g of lead(II) nitrate in 80 ml of water acidified with a drop of 
+concentrated nitric acid and add solution of 2.4 g of sodium hydroxide dissolved in 50 
+ml of water slightly with constant stirring. Heat precipitated lead(II) hydroxide 
+suspension to 70 - 80 oC and bubble with chlorine at the same time (do not heat it over 
+80 oC or PbO will be obtained!). Decant the precipitated brown-black product with 
+diluted nitric acid (1:3) and then with water. Dry it at 100 oC. 
+ 
+ 
+ 
+ 
+
+ 
+32
+4.4.10 Preparation of anhydrous nickel chloride - perform this experiment in a 
+fume hood 
+ 
+ 
+[Ni(NH3)6]Cl2 → NiCl2 + 6 NH3 
+ 
+Material: NiCO3, HCl, NH3(aq) 
+Procedure: Dissolve 8 g of NiCO3 in calculated amount of diluted HCl (1:1). About 5 % 
+of NiCO3 has to stay undissolved. Heat to expel CO2, add water if necessary to keep 
+the volume about the same level throughout heating. Filter it, add 40 ml of 
+concentrated NH3(aq) in small amounts to the filtrate and stir it. Primarily appearing 
+Ni(OH)2 precipitate has to dissolve to a complex. Filter if necessary and add solution of 
+10 g of NH4Cl in 25 ml of water. 
+Filter off the [Ni(NH3)6]Cl2 on a Büchner funnel and wash it with solution of 10 g of 
+NH4Cl in 50 ml of NH3(aq). Put the moisten product on evaporation dish, heat it gently 
+and stir. Observe change of colour and test the evolved gas. 
+ 
+ 
+4.5.2 Preparation of copper 
+ 
+ 
+CuSO4 + Fe(Zn) → Cu + Fe(Zn)SO4 
+ 
+Material: CuSO4.5H2O, Fe (nails) or Zn, H2SO4, HCl 
+Procedure: Prepare (in a beaker) 10 % solution from 4 g CuSO4.5H2O and add a few 
+drops of concentrated H2SO4. Place the beaker on wire gauze, heat it gently to 50 oC 
+and add iron nails or Zn (in 20 % excess). Heat and stir it until the colour of solution 
+will be light green. Filter off the copper. 
+ 
+The excess of Zn will be dissolved from the product by means of diluted HCl, 
+which does not affect the copper. Add in small portions 10 ml of HCl (1:1) in about 5 
+minutes. Heat it gently and stir to determine if hydrogen is still evolved from the excess 
+of Zn used. Filter the copper out and wash it with water. Store the copper under the 
+water. 
+ 
+ 
+4.5.6 Preparation of copper ammine sulphate - perform this experiment in a fume 
+hood 
+ 
+CuSO4 + 4 NH3(aq) + H2O → [Cu(NH3)4]SO4.H2O 
+ 
+Material: CuSO4.5H2O, NH3(aq), C2H5OH 
+Procedure: Place 5 g of finely powdered copper sulphate, CuSO4.5H2O, in a small 
+beaker, pour upon it 7.5 ml of concentrated ammonia and 3 ml of water. Shake for 
+about 1 minute and then heat it gently until all the solid dissolves. Add about 10 ml of 
+ethanol to the solution, let it stand for about one hour and filter off the crystals. Wash 
+them with mixture of 5 ml of concentrated ammonia and 5 ml of ethanol. Dry them on 
+air in the hood. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+33
+4.5.3 Preparation of copper oxide 
+ 
+ 
+2 Cu + O2 → 2 CuO 
+ 
+Material: Cu (from experiment 4.5.2), for oxygen preparation: H2O2, MnO2 
+Procedure: Set up a gas production apparatus (see 2.1.2) and combustion tube (see 
+figure), where a ceramic boat with Cu is placed. Pass the oxygen through wash bottle 
+with concentrated H2SO4 and heat the tube under the boat for 20-30 minutes. 
+Discontinue the heating, but continue passing oxygen through the apparatus until the 
+combustion tube is sufficiently cool to be touched by the hand. 
+ 
+ 
+ 
+ 
+Apparatus for oxidation (reduction) by gas 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+34
+Qualitative analysis 
+ 
+ 
+Qualitative analysis schemes are used to help students understand reactivity and to 
+develop problem solving skills. There are several different approaches to these 
+experiments. In one case, students are given a step-by-step procedure, often in the 
+form of a flow chart, which they can use to isolate and identify unknown ions in 
+solution. In another, students first analyze known solutions to determine how different 
+ions will behave when reacted with various reagents. They then compile these results 
+into their own flow chart that they apply to their unknown samples. The experiments 
+can be carried out on solutions containing mixtures of cations (same anion), mixtures 
+of anions (same cation) or on salt mixtures. 
+ 
+The separation flow chart for the cations and anions are shown in figures. These 
+flow charts show the steps required to separate and identify the cations and anions 
+that you may find in your known and unknown mixtures. These charts have been 
+prepared based on theoretical information about the ions and experimental 
+observations. The flow charts can help you understand the order in which separations 
+must take place in order to isolate ions that may behave similarly. 
+There are several procedural steps that are indicated in the flow chart that are 
+described here. 
+Precipitation: after addition of a precipitating agent, it is important to mix the 
+solution thoroughly by shaking or by stirring with a clean glass rod. Be sure not 
+to add more of a precipitating agent than indicated in the procedure as this may 
+cause undesired side reactions. 
+ 
+Separation: after addition of a precipitating agent to a solution, mixture of a 
+solid (precipitate) and liquid (supernatant) phase will be obtained. These often 
+must be isolated and treated separately. The most common method for 
+separating of a supernatant and a precipitate is to centrifuge the mixture in 
+order to gather the solid at the bottom of the test tube. It is essential that the 
+centrifuge is balanced with a test tube containing the same volume of liquid as 
+your sample. After centrifuging, the supernatant can be decanted by simply 
+pouring from one test tube into another or by careful removal with a clean glass 
+pipette. 
+ 
+Washing: when a supernatant is removed from a solid, it is almost certain that 
+some of the liquid has been left behind. This liquid can be removed by the 
+addition of a clean solvent (usually cold water, but indicated in the procedure if 
+not), which is thoroughly mixed with the precipitate. After centrifuging and 
+decanting, the solid is now ready for further reaction as dictated in the 
+procedure. 
+ 
+Heating of the solutions: there are two different heating methods in qualitative 
+analysis. If a solution needs to maintain at a near boiling temperature for a few 
+minutes, the test tube should be placed in a boiling water bath. If the solution 
+needs to be heated directly, the test tube should be held in a test tube clamp 
+facing away from you and your fellow students and passed back and forth 
+through the flame of a Bunsen burner. Be careful not to let the solution bump 
+and jump out of the test tube by keeping the flame near the surface of the 
+
+ 
+35
+solution rather than at the bottom. Stirring of the solution with a glass rod may 
+also help. 
+ 
+Flame tests - in many cases, the colour imparted to a flame when a cation is 
+heated directly in a flame can help to identify the element. If a procedure 
+requires a flame test, follow the directions below. 
+1) Clean a wire loop first by dipping it in 6 M HCl and then heating it long 
+enough to drive off any contaminants from the surface. 
+ 
+2) Place the loop in the solution or solid to be tested, making sure a drop of 
+liquid or a crystal remains in the loop. 
+ 
+3) Place the wire in the flame and observe the imparted colour. If instructed, 
+view the flame through a piece of cobalt blue glass. 
+ 
+ 
+ 4.7.2 Qualitative analysis of cations from group I – III 
+Metal ions can be classified according to their behaviour towards certain group reagents. This type of 
+classification divides the elements into analytical groups. The basic principle of this separation process 
+is that of adding anions consecutively to the acid solution of cations, so that the greatest number of 
+metal ions is precipitated together. These precipitants are the hydrochloric acid group, the hydrogen 
+sulphide group, the ammonium sulphide group and the ammonium carbonate group. 
+ 
+ 
+ 
+Group 
+ H2S 
+ 
+reagent 
+ 
+ 
+ 
+ (NH4)2S 
+(NH4)2CO3 
+ 
+ 
+HCl 
+ H2S (H+) 
+ 
+ 
+Group 
+I.a 
+I.b 
+II. 
+III.a 
+III.b 
+IV. 
+V. 
+ 
+ 
+Cations 
+Ag+ 
+Cu2+ 
+As3+ 
+Al3+ 
+Mn2+ 
+Ca2+ 
+Mg2+ 
+ 
+ 
+Pb2+ 
+Hg2+ 
+As5+ 
+Cr3+ 
+Ni2+ 
+Sr2+ 
+Na+ 
+ 
+ 
+Hg2
+2+ 
+Bi3+ 
+Sb3+ 
+(Fe3+) 
+Fe2+ 
+Ba2+ 
+K+ 
+ 
+ 
+Tl+ 
+Cd2+ 
+Sb5+ 
+ 
+Fe3+ 
+ 
+NH4
++ 
+ 
+ 
+ 
+ 
+Sn2+ 
+ 
+Co2+ 
+ 
+H+ 
+ 
+ 
+ 
+ 
+Sn4+ 
+ 
+Zn2+ 
+ 
+ 
+Material: 5 % solutions of cations from group I – III, HCl, H2S (gas or saturated 
+aqueous solution), (NH4)2S, (NH4)2Sx. 
+Procedure: Use 1-2 ml of solution of each cation for reaction, observe colour of 
+solutions, adjust pH of each solution. Tabulate the results (appearance, colour and 
+solubility of precipitates). 
+ 
+ a) Add HCl (1:4) dropwise to 1 ml of the solutions of Ag+ and Pb2+ salts in the 
+separated test tubes. When the precipitate settles add an additional drop or two of HCl 
+and let the solution sit, to see if more AgCl or PbCl2 precipitate forms. Be careful to 
+avoid a large excess of HCl, since both cations form soluble complex cations with 
+excess chloride ions. 
+ 
+
+ 
+36
+b) Remove the precipitates from reaction (a) by centrifugation (or decantation). Add 
+~20 drops of hot distilled water to the solid precipitates and observe their solubility. 
+ 
+c) If necessary add HCl (1:4) to solutions of cations from group I.b and II in separated 
+test tubes (confirm acidity with pH paper), and then add H2S(aq). Observe colour of 
+the precipitates. 
+ 
+d) Remove the precipitates of sulphides from reaction (c) by centrifugation (or 
+decantation) and add 0.5 ml of concentrated HNO3. Observe if precipitates dissolve. 
+ 
+e) Separate the sulphide precipitates of cations from group II by centrifugation and add 
+(NH4)2Sx solution, shake and heat it. Observe dissolving of precipitates (formation of 
+thio-complexes). Add acetic acid (1:1) to solution of thio-complex to the acid reaction 
+(check pH with an indicator paper) and heat it. Describe the reaction. 
+ 
+f) Add a few drops of (NH4)2S solution to solutions of cations from group III in 
+separated test tubes. Observe colour of the precipitates. 
+ 
+g) Prepare mixture with one cation from each of group I – III into the test tube and 
+separate the cations with help of group reagents. 
+ 
+4.7.3 Determination of cations in unknown samples 
+ 
+The samples contain just one or mixture of two cations from different analytical 
+groups (I-III). Determine cations by reactions of group reagents (4.7.2) and by colour 
+of the precipitates. Note any simple physical characteristics of the samples such as 
+color, pH (use indicator paper), etc. 
+ 
+Use flowchart and your observations to confirm presence or absence of each 
+cation. To confirm your analysis of the unknown sample, use the known solutions of 
+single cations to observe positive confirmation tests. 
+ 
+ 
+ 
+ 
+ 
+ 
+Flow chart for the qualitative analysis of cations from groups I-III 
+Uknown sample 
+cations of groups 
+I - III 
+
+ 
+37
+2.9.2 Determination of anions in unknown samples 
+a) Preliminary tests 
+ 
+ 
+ 
+- determination of pH of the sample 
+ 
+ 
+- determination of anions of volatile acid (reaction with H2SO4) 
+b) Determination of oxidation or reduction properties of anions 
+d) Precipitation reaction with Ba2+ 
+e) Precipitation reaction with Ag+ 
+ 
+ 
+Group 
+ 
+reagent 
+H2SO4 (1:5) 
+Ba(NO3)2 
+AgNO3 
+ 
+ 
+Group 
+I. 
+II. 
+III. 
+IV. 
+ 
+ 
+Anion 
+CO3
+2- 
+SO4
+2- 
+Cl- 
+NO3
+- 
+ 
+ 
+NO2
+-(t) 
+PO4
+3- 
+Br- 
+NO2
+- 
+ 
+ 
+SO3
+2- 
+BO3
+3- 
+I- 
+CH3COO- 
+ 
+ 
+S2- 
+F- 
+CN- 
+ 
+ 
+Sx
+2- 
+ 
+SCN- 
+ 
+ 
+S2O3
+2- 
+ 
+[Fe(CN)6]4- 
+ 
+ 
+SiO3
+2- 
+ 
+[Fe(CN)6]3- 
+ 
+Flowchart for anions determination 
+ 
+Preliminary tests 
+Determination of pH of sample solution (indicator paper) 
++ H2SO4 (1:1) - CO3
+2-, SO3
+2-, S2O3
+2-, S2-, NO2
+2- 
++ conc. H2SO4 - CO3
+2-, SO3
+2-, S2O3
+2-, S2-, NO2
+2- and oxidation of Br-, I- 
+ 
+Redox reactions 
+Reducible anions: 
++ KI (0.1 mol.l-1 KI, 5 mol.l-1 HCl) 
+ 
+ 
+O2
+2-, NO2
+-, Cr2O7
+2-, MnO4
+-, NO3
+- (more acidic solution) 
+Oxidable anions: 
++ KMnO4 (0.02 mol.l-1 KMnO4, 2.5 mol.l-1 H2SO4) 
+Br-, I-, O2
+2-, SO3
+2-, S2O3
+2-, S2-, NO2
+-, SCN-, C2O4
+2-, Cl- (more acidic 
+solution) 
++ I2 (0.05 mol.l-1 KI3, 5 mol.l-1 HCl) 
+ 
+ 
+ 
+SO3
+2-, S2O3
+2-, S2- 
+ 
+Precipitation reactions 
++ Ba2+ (0.1 mol.l-1 Ba(NO3)2, BaCl2) 
+ 
+- insoluble in diluted CH3COOH, HCl, HNO3 
+ 
+ 
+SO4
+2-, SiF6
+2-, IO3
+- 
+ 
+- insoluble in diluted CH3COOH, soluble or decomposing in diluted HCl 
+ 
+ 
+SO3
+2-, S2O3
+2-, F-, C2O4
+2-, CrO4
+2-, Cr2O7
+2- 
+ 
+- soluble or decomposing in diluted CH3COOH 
+ 
+ 
+CO3
+2-, PO4
+3- 
+ 
+
+ 
+38
++ Ag+ (0.1 mol.l-1 AgNO3) 
+ 
+- soluble or decomposing in diluted HNO3 
+ 
+ 
+ CO3
+2-, SO3
+2-, S2O3
+2-, PO4
+3-, CrO4
+2-, Cr2O7
+2- 
+ 
+- insoluble in diluted HNO3 
+ 
+ 
+- insoluble in concentrated NH3(aq) 
+ 
+ 
+ I-, S2-, Sx
+2- 
+ 
+ 
+- insoluble in diluted NH3(aq), soluble in concentrated NH3(aq) 
+ 
+ 
+ Br-, SCN- 
+ 
+ 
+- soluble in diluted NH3(aq) 
+ 
+ 
+ Cl-, CN- 
+ 
+ 
+- anions do not precipitate with Ba2+ and Ag+ 
+ 
+ 
+NO2
+-, NO3
+-, ClO3
+-, ClO4
+-, MnO4
+- 
+ 
+ 
+ 
+4.7.4 Procedure for analysis of cations from group IV 
+ 
+The ions remaining in solution after the separation of cations from group III are 
+those of the alkaline earths, the alkali metals, and the ammonium. 
+ 
+Because substances containing sodium or ammonium ions are used in the general 
+separation scheme, tests for the presence of Na+ and NH4
++ are carried out on an 
+original sample of solution. Potassium ion is also identified by a flame test made on 
+the original sample. 
+Step1. 
+ 
+If you are working with only the group IV cations start with step 2. If you are 
+analyzing a general unknown solution (solution remaining after removal of the group III 
+cations), boil the solution down to a volume of 2 ml. Transfer the liquid to a test tube 
+and centrifuge out any solid matter, which you may discard. Add 1 ml of 6 M HCl to the 
+liquid in the beaker, and boil it to dryness (to drive off all the ammonium salts that were 
+added in previous steps). Let the beaker cool down, and then add 0.5 ml of 6 M HCl 
+and 2 ml of water. Warm the solution gently to dissolve the remaining salts. 
+Step 2. 
+Add 6 M NH3 until the solution becomes basic, add further 0.5 ml. Then add 1 ml of 
+1M (NH4)2CO3, stir and heat it in the water bath. Centrifuge it and decant the liquid (K+, 
+Mg2+). Wash the precipitate. 
+Step 3. 
+Confirmation of presence of Ba2+. Add 0.5 ml of 6 M CH3COOH to the precipitate (step 
+2) and stir it to dissolve the solid. Add 1 ml of H2O and 2 drops of 6 M NH3 and mix it, 
+then add 0.5 ml of 1 M K2CrO4. A yellow precipitate indicates presence of barium. 
+Centrifuge out the solid phase and decant the yellow liquid. 
+Step 4. 
+Confirmation of presence of Ca2+. Add 0.5 ml of 1 M K2C2O4 to the liquid (step 3), stir it 
+and let the solution stand for a minute. White precipitate is confirmation for presence of 
+calcium. Centrifuge out the white solid and pour the liquid (Mg2+) into the test tube. 
+Step 5. 
+Confirmation of presence of Mg2+. To the solution (step 4) add 0.5 ml of 1 M Na2HPO4, 
+stir it and warm gently in the water bath. A white precipitate is indicative of presence of 
+magnesium. 
+ 
+ 
+
+ 
+39
+Step 6. 
+Alternative Confirmation of presence of Mg2+. Repeat step 5 on the half of the solution 
+obtained in step 2. 
+Step 7. 
+Confirmation of presence of Na+ and K+. Perform a flame test on 1 ml of the original 
+sample. 
+Step 8. 
+Confirmation of presence of NH4
++. Add 1 ml of 6 M NaOH to 1 ml of the original 
+sample and heat it gently. Detect the ammonium with moisten piece of indicator paper 
+or with Nessler’s reagent. 
+ 
+ 
+Flow chart for the qualitative analysis of cations from group IV 
+
+ 
+40
+4.7.5 Separation and determination of cations of insoluble chlorides and 
+sulphates groups 
+1. group of insoluble sulphates - Pb2+, Ba2+, Ca2+, Sr2+ 
+2. group of insoluble chlorides - Ag+, Hg2
+2+, Pb2+ 
+ 
+After separation of all cations by precipitation with HCl (1:4) or H2SO4 (1:3) perform 
+separation into group. 
+ 
+ 
+ 
+ 
+Flow chart for separation and determination of cations of insoluble sulphate group 
+ 
+ 
+ 
+ 
+ 
+Flow chart for separation and determination of cations of insoluble chloride group 
+
+ 
+41
+4.7.6 Separation and determination of cations from groups III and IV (without use 
+H2S) 
+ 
+1. Add 1 ml of 6 M NH3 to the 1 ml of the sample, stir it and centrifuge out the 
+precipitate – group A (Al3+, Fe3+, Mn2+). 
+2. Add 2 ml of 1 M (NH4)2CO3 to the solution from (1), stir it and centrifuge out the 
+precipitate – group B (Ca2+, Ba2+). 
+3. Add 1 ml of 1 M Na2HPO4 (confirmation of Mg2+) to the solution from (2). Centrifuge 
+the precipitate. 
+4. The remaining solution (3) contents group C (Co2+, Ni2+, Cu2+). 
+ 
+Use known reactions and the flow chart for confirmation of particular cations. 
+ 
+Flow chart for the qualitative analysis of cations from groups III and IV 
+ 
+ 
+
+ 
+42
+ 
+Used symbols: 
+ 
+
+ 
+43
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+44
+ 
+ 
+ANION SEPARATION SCHEME 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+45
+Solubility of inorganic compounds at different temperature [g/100 g H2O] 
+ 
+ 
+
+ 
+46 
+
+ 
+47 
+
+ 
+48
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+49

@@ -1,0 +1,317 @@
+REL: 摩尔盐\What is the nature of bonds in FeSO4_7H20 - Yahoo! Answers.htm
+================================================================================
+﻿ 
+ 
+ What is the nature of bonds in FeSO4.7H20? - Yahoo! Answers 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ Yahoo! 
+ My 
+ Yahoo! 
+ Mail 
+ More 
+ Get the New, Safer IE8 
+ 
+ Make 
+ Y! My Homepage Get 
+Yahoo! Toolbar 
+ 
+
+ 
+ Account Options Hi, chemlab Sign 
+Out Help 
+ 
+ 
+ 
+ 
+ 
+ Search web search 
+ 
+
+ 
+ 
+ 
+ 
+ Ask 
+ 
+ Answer 
+ 
+ Discover 
+ 
+ 
+ 
+ Search for questions: Advanced 
+ 
+ My 
+Profile 
+ 
+ 
+ Home 
+ > 
+ Science 
+ & Mathematics > 
+ Chemistry 
+ > 
+ Resolved Question 
+ 
+ 
+ 
+ normad 
+ 
+ Member since: 
+ June 04, 2008 
+ Total points: 
+ 106 (Level 1) 
+ 
+ Add 
+ to My Contacts 
+ Block 
+ User 
+ 
+ 
+ Resolved Question Show 
+me another » 
+ What is the nature of bonds in FeSO4.7H20? 
+ are the h2o bound using bonds? then is it possible for iron 
+to have more than 6 such bonds? upto my knowledge fe2+ exists in [Fe(H2O)6]2+ 
+then where does 7h2o atoms come from?? Please help.. 
+ 
+ 9 months ago 
+ 
+ Report 
+Abuse 
+ 
+ by BME_MD 
+ 
+ Member since: 
+ June 16, 2008 
+ Total points: 
+ 385 (Level 2) 
+ 
+ Add 
+ to My Contacts 
+ Block 
+ User 
+ 
+ Best Answer - Chosen by Voters 
+ I'm not sure if you're referring to the crystalline structure 
+or the bonding molecular orbitals, but I found this article that seems extensive 
+enough to be helpful. In essense, the water molecules are held in a octahedral 
+crystal around the metal sulfate molecule by hydrogen bonding, not by direct 
+molecular bonding to the FeSO4 itself (since it is a 
+heptahydrate): Melanterite FeSO4·7H2O, is monoclinic and crystallizes in 
+the space group P21/c, with a 14.0774(9), b 6.5039(4), c 11.0506(7) Å, ß 
+105.604(1)°, Z = 4. From the literature, we know that minerals of the 
+melanterite group (M2+ = Co, Cu, Fe, Mg, Mn, Zn) consist of a sulfate 
+tetrahedron, two crystallographically distinct M2+ atoms in octahedral 
+coordination, with six H2O groups forming the coordination sphere of each M2+ 
+atom and one interstitial H2O molecule that is not a direct ligand of an M2+ 
+atom (Baur 1967, Fronczek et al. 2001). There are 14 unique H-bonds in the 
+melanterite structure linking M1 octahedra to M2 octahedra via the sulfate 
+tetrahedra, creating a flexible undulating layer of repeating SO4–M1–SO4–M2 
+polyhedra (Fig. 3). The first five H-bonds link the M1 and SO4 polyhedra within 
+the layer in a pseudo-edge-sharing arrangement of bonds (Fig. 4). Likewise, the 
+M2 and SO4 polyhedra are linked within the layer by two H-bonds in a pseudoedge- 
+sharing arrangement and three H-bonds associated with the Ow7 H2O molecule (Fig. 
+4). The remaining four H-bonds, of the 14 H-bonds in melanterite, bridge the 
+layer of polyhedra and must break for the mineral to cleave along (001) (Fig. 
+3). 
+ Source(s): 
+ http://canmin.geoscienceworld.org/cgi/content/full/45/3/457 http://en.wikipedia.org/wiki/Ferrous_sulfate http://en.wikipedia.org/wiki/Hydrates 
+ 
+ 9 months ago 
+ 
+ 100% 
+ 2 Votes 
+ 
+ 
+ 
+ 0 
+ Rating: Good Answer 
+ 0 
+ Rating: Bad Answer 
+ Report 
+ Abuse 
+ 
+ 0 stars - mark this as 
+ Interesting! 
+ Email 
+ 
+ Comment 
+ ( 0 ) 
+ Save 
+
+ 
+ Save to Yahoo! Bookmarks 
+ Add to My Yahoo! 
+ Add to Del.icio.us 
+ RSS 
+ 
+ 
+ There are currently no comments for this question. 
+ * You must be logged into Answers to add comments. Sign 
+in or Register . 
+ 
+ 
+ Other Answers (0) 
+ No other answers. 
+ 
+ Open Questions in Chemistry 
+ 
+ chmistry 
+ quesiton writing net ionic equations? 
+ homework 
+ help!!!!!!!!!!!!? 
+ H20 
+ just add water new series? 
+ If 
+ the boiling point of water is 100C, why is there water vapour in the air and 
+ why does it evaporate from a? 
+ 
+ Resolved Questions in Chemistry 
+ 
+ What 
+ is meant by a redox reaction? 
+ Can 
+ carbon gas turn into a liquid? 
+ Which 
+ has bigger london forces F2 or I2 and why? 
+ pH 
+ acids/bases question? 
+ 
+ 
+ 
+ Ready to Participate? Get 
+Started! 
+ 
+ 
+ 
+ 
+ 
+ ADVERTISEMENT 
+ 
+ 
+ 
+ Categories 
+ 
+ All 
+ Categories 
+ 
+ Science 
+ & Mathematics 
+ 
+ Agriculture 
+
+ Alternative 
+
+ Astronomy 
+ & Space 
+ Biology 
+
+ Botany 
+
+ Chemistry 
+
+ Earth 
+ Sciences & Geology 
+ Engineering 
+
+ Geography 
+
+ Mathematics 
+
+ Medicine 
+
+ Physics 
+
+ Weather 
+
+ Zoology 
+
+ Other 
+ - Science 
+ 
+ Who 
+found this interesting? 
+ Be the first person to mark this question as interesting! 
+ 
+ Sponsor Results 
+ 
+ Get 
+ Out Of Jail 
+ 24 Hour Bail Bond Services. Located near the jail. Call or... BailBonds.localplacement.com 
+
+ Medicaid 
+ Surety Bond 
+ Fill out our pre-application for your Medicare Surety Bond today. http://rc.us-east.srv.overture.com/d/sr/?xargs=20AKkWdil1pHEjNUApmvZ2RLghAg7MLfw9Y3Eq3Qz0_FuvLqSEsujydRGaVmtbaw4HM30TuUqEIF9f9fAMtRACCtAnKXyamks2YbroCRToFzTU3kMGpZiXLWYaK9YVP4_WqU0EHIJOu55p1KUAVzwxW2W0RWJODfrVhg7B7Q2KiW-g08jSSWUNeSDU0wZ1tsR7HWJd7c3EDq_G2Xa-9u221cp6SJkQkheDuEByUsdriphUfBczaNaft34.0000000215f57a0e 
+
+ Contractors 
+ Performance Bonds 
+ Contract bond specialist: 1st time, occasional, and those who... http://rc.us-east.srv.overture.com/d/sr/?xargs=20AISSVpXQ7X6EKvxVLy12JVga066H4tqZjZXt_Na8Rz7s9aZtdgM1RuZrvO18RKC7LtoI0-ZJXPhgeuEC2phl5Sxa-Kzr8VSvQEy2H1bzfvAChs54r6ERwTllUZdPWJROQ_WtKF2pve1UfmUWp-ie2gjg2LUAzFz1q-x3WqhB2sLQMGb4Pl6Gh8U5H-H9rm8LCrVrrig_C02HpLqUt0zpemgPeXf72OfB8voPdfhE7wjC.0000000215f57a0e 
+ See 
+your message here... 
+ 
+ Answers International 
+ 
+ Argentina 
+ Australia 
+ Brazil 
+ Canada 
+ China 
+ France 
+ Germany 
+ Hong Kong 
+ India 
+ Indonesia 
+ Italy 
+ Japan 
+ Malaysia 
+ Mexico 
+ New Zealand 
+ Philippines 
+ Quebec 
+ Singapore 
+ South Korea 
+ Spain 
+ Taiwan 
+ Thailand 
+ United Kingdom 
+ United States 
+ Vietnam 
+ en Español 
+ Yahoo! does not evaluate or guarantee the accuracy of any 
+Yahoo! Answers content. Click 
+here for the Full Disclaimer. 
+ Help us improve Yahoo! Answers. Tell 
+us what you think. 
+ Copyright © 2009 Yahoo! Inc. All Rights Reserved. 
+ 
+ Copyright/IP 
+ Policy - 
+ Privacy Policy 
+ - 
+ Terms of Service - 
+ Community 
+ Guidelines 
+ - Safety 
+ Tips

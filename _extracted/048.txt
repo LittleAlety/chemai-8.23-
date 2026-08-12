@@ -1,0 +1,386 @@
+REL: 蓝晒\蓝晒\ref\junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate.pdf
+================================================================================
+Growing a Display Crystal of Recycled Potassium
+Tris(oxalato)ferrate(III) Trihydrate
+Peter C. Junk, John Bacsa, and Nicholas C. Thomas*
+Cite This: J. Chem. Educ. 2021, 98, 3400−3404
+Read Online
+ACCESS
+Metrics & More
+Article Recommendations
+*
+sı
+Supporting Information
+ABSTRACT: Potassium tris(oxalato)ferrate(III) trihydrate is a commonly prepared coordination compound in general or upper-
+level chemistry laboratories and can be recycled to grow large single crystals that instructors may display when introducing the
+experiment to classes. Showing the crystal’s shape can also be used to brieﬂy introduce students to X-ray crystallography, symmetry,
+and unit cell dimensions.
+KEYWORDS: First-Year Undergraduate/General, Upper-Division Undergraduate, Laboratory Instruction, Coordination Compounds,
+X-ray Crystallography, Inorganic Chemistry, Demonstrations, Crystals/Crystallography
+■INTRODUCTION
+The preparation of potassium tris(oxalato)ferrate(III) trihy-
+drate is a well-known coordination chemistry experiment used
+in general or upper-level chemistry laboratories.1−5 This
+material can be synthesized3,4 from Fe(NH4)2(SO4)2·6H2O
+via an iron(II) oxalate intermediate, analyzed for its oxalate5 or
+iron6 content in subsequent experiments, or studied for its
+photochemical,7,8 equilibrium,9 and X-ray diﬀraction10 proper-
+ties.
+Yields of the product vary considerably, from 40% to over
+80%, depending on the student’s preparative skills. So, for a lab
+class of 24 students working in pairs, 50 g or more of product
+could be generated as waste which can reach signiﬁcant levels
+after several years of classes even if a portion of the material is
+used in additional analytical experiments. Rather than
+discarding the excess material, we have stored the products
+from multiple laboratories and recycled them to grow large
+crystals of the iron coordination compound. While the growth
+of a large crystal may require several weeks, the result is an
+impressive deep emerald-green colored crystal that can be
+stored and displayed to students prior to beginning the lab
+class. A discussion of the crystal shape and structure of the
+compound can also be informative and used to introduce
+students to X-ray crystallography, symmetry, and unit cell
+dimensions.
+■PROCEDURE
+The detailed experimental procedure for recycling potassium
+tris(oxalato)ferrate(III) trihydrate and crystal growth is
+provided in the Supporting Information. The method used is
+slow evaporation of a saturated solution as previously
+described in the Journal for growing large crystals of substances
+such as alum.11,12 The recrystallization and crystal growth
+summarized below was based on 100 g of the student waste
+product and may be scaled as needed.
+The 100 g of potassium tris(oxalato)ferrate(III) trihydrate
+student waste was ﬁrst recrystallized in water yielding
+approximately 74 g of the pure complex. A deposited seed
+crystal was collected, suspended in a saturated solution of the
+complex, and allowed to grow by slow deposition over several
+weeks. After removal from the solution, the single crystal had a
+mass of 38 g, or 51% of the original pure iron complex (see
+Figure 1). The remaining saturated solution was left to
+evaporate to dryness in air, and the solid residue was returned
+to the student waste container and used (after another
+recrystallization) to grow additional large crystals.
+■HAZARDS
+Students and instructors should wear safety glasses during the
+preparation and recrystallization of potassium tris(oxalato)-
+ferrate(III) which is classiﬁed as Class 4 in terms of acute oral
+and dermal toxicity.13 The solid may be stored in a sealed
+container away from sunlight and, if not recycled, disposed at
+an approved waste disposal plant.13 Use gloves when handling
+large crystals of the title compound for display. Safety Data
+Sheets for oxalic acid14 and potassium oxalate15 should be
+consulted when students use these materials to prepare the
+complex.
+■DISCUSSION
+Displaying a large crystal of potassium tris(oxalato)ferrate(III)
+trihydrate prior to student preparation of the complex not only
+is impressive but also will encourage students to take extra care
+during the preparative procedure since it is possible to produce
+similar, but smaller, nicely shaped individual crystals which can
+typically grow to lengths of about 5 mm or more, although in
+some cases the crystals may be clumped together.
+Received:
+July 13, 2021
+Published: September 16, 2021
+Communication
+pubs.acs.org/jchemeduc
+© 2021 American Chemical Society and
+Division of Chemical Education, Inc.
+3400
+https://doi.org/10.1021/acs.jchemed.1c00776
+J. Chem. Educ. 2021, 98, 3400−3404
+Downloaded via WUHAN UNIV on August 3, 2024 at 03:35:08 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+Growth of the title compound crystals can also be projected
+live in the classroom by connecting a standard compound
+microscope with a camera to a classroom computer. A drop of
+hot saturated aqueous potassium tris(oxalato)ferrate(III)
+trihydrate solution quickly deposits growing crystals on a
+microscope slide (see Figure 2) having a shape similar to that
+of the bulk crystal in Figure 1. Alternatively, for convenience,
+this could be recorded prior to class and inserted into a
+PowerPoint projection. This allows students to see, ﬁrsthand,
+how crystals grow and to introduce them to the ﬁeld of crystal
+chemistry. Visualizing the crystal growth will help them
+Figure 1. Large crystal of potassium tris(oxalato)ferrate(III) grown from student lab waste.
+Figure 2. Growing crystals of potassium tris(oxalato)ferrate(III) trihydrate seen under microscope, 40×.
+Journal of Chemical Education
+pubs.acs.org/jchemeduc
+Communication
+https://doi.org/10.1021/acs.jchemed.1c00776
+J. Chem. Educ. 2021, 98, 3400−3404
+3401
+
+understand growth mechanisms and how crystal growth
+inﬂuences the physical properties of solids.
+Crystallization is highly dependent on the presence or
+absence of impurities. It can be explained during these
+experiments that impurities inhibit the growth of crystals,
+and therefore, purity is important for generating good-quality
+crystals. Since this is a single-component system, the
+conditions that produce good-quality crystals can be examined,
+as well as the conditions that do not favor crystal growth.
+Crystallization occurs at the molecular or atomic level, so it
+follows the same symmetry rules as those for atomic and
+molecular symmetry. This relationship provides the link
+between matter at the macroscopic scale (the pure crystal)
+and at the atomic scale (which is normally not accessible to the
+students). The arrangement of the components of the crystal
+and the symmetry rules can be examined in the class.
+One of the authors (P.C.J.) has previously published the X-
+ray crystal structure of potassium tris(oxalato)ferrate(III)
+trihydrate;16 a brief description of this complex is provided
+below.
+While a detailed explanation of X-ray crystallography is
+appropriate for upper-level classes, it is generally beyond the
+scope of most freshman-level courses. However, general
+chemistry textbooks17 and instructors cover the lattice
+structures in crystalline solids which may include a description
+of the principles and application of the technique along with a
+discussion of unit cells. The eﬀects of the conditions in the
+crystallization solution can also be explored, and the preferred
+size and symmetry can be examined. These concepts may be
+brieﬂy introduced when displaying the bulk crystal of
+potassium tris(oxalato)ferrate(III) trihydrate. The morphology
+of the crystals is primarily governed by the size and symmetry
+of the unit cell. The details of the unit cell are given in Table 1.
+The complex crystallizes in the monoclinic space group P21/
+c. The unit cell has two angles that are exactly 90° if viewed
+along the a- and c-directions (the α and γ unit cell angles). The
+consequence of this is that the unit cell (and the crystal
+structure) has to have a perfect 2-fold rotational symmetry
+along the β-axis. Any deviation from right angles will disrupt
+the rotational symmetry. This symmetry requirement has to be
+followed during crystal growth and means that faces are related
+by the 2-fold axis. For example, the faces (11̅0) and (1̅1̅0) are
+symmetry-related. In the [Fe(C2O4)3]3−anion, the iron(III)
+center is distorted from regular octahedral geometry due to the
+chelation of the iron centers by the oxalate ligands with O−
+Fe−O bond angles from the oxalates about the iron being
+closer to 80° rather than the optimal 90° for true octahedral
+geometry. Two of the oxalate ligands are bound asymmetrically
+to the iron with Fe−O bond lengths of 1.98 and 2.03 Å while
+the third is bound more symmetrically with Fe−O bond
+lengths of 2.01 and 2.00 Å.
+The potassium counterions are either eight- or nine-
+coordinate and are bound to oxygen atoms of the oxalate
+ions in turn bound to iron and lattice water molecules. The
+eight-coordinate potassium ion is dodecahedral and is bound
+by two water molecules and six oxygen atoms of the oxalate
+ligands. The two nine-coordinate potassium ions have
+polyhedra resembling a double trigonal prism and are bound
+by two water molecules and seven oxalate oxygen atoms for
+one potassium and one water molecule and eight oxalate
+oxygen atoms for the other. The [Fe(C2O4)3]3−fragment is
+totally encapsulated by 12 potassium ions which cement the
+anionic fragments together in a three-dimensional solid where
+all but three of the oxygen atoms of the oxalate groups interact
+with at least one potassium ion. Further three-dimensional
+interactions in the solid state are provided by hydrogen
+bonding with only one oxygen atom of the oxalate ions not
+bound by a potassium ion or involved in H-bonding.
+Aspects of the above structural description could be diﬃcult
+for general chemistry students to appreciate since the concepts
+of crystal systems and group theory may be only brieﬂy alluded
+to, if at all, at the freshman level. Nevertheless, displaying the
+large crystal described here could also serve to brieﬂy introduce
+and illustrate some of these concepts which students will
+encounter in upper-level courses. This might include some
+lattice structures in crystalline solids,17 X-ray crystallogra-
+phy,18,19 crystal systems,20 or symmetry21 terminology as well
+as making a comparison between the unit cell dimensions and
+the bulk crystal appearance to help students understand the
+shape of the crystals. The crystal could also be displayed to
+classes during the solids and liquids section, usually taught in
+the ﬁrst half of the general chemistry sequence and may
+include some of these topics.
+Students will be brieﬂy introduced to the concept of
+molecular symmetry during the organic section in general
+chemistry so applying this to an actual bulk crystal, rather than
+a plastic molecular model, is a natural extension. The instructor
+can rotate the crystal through its various axes or planes to
+demonstrate symmetry without bewildering students with
+advanced group theory details.
+Likewise, while the bulk crystal shape may be proportional
+to the unit cell, it is instructional to emphasize that the two do
+not necessarily adopt identical shapes. For example, for a cubic
+cell, the unit cells can multiply along one dimension giving the
+bulk appearance of a shoebox-like shape. An analogy could be
+drawn between bricks used for masonry construction. While
+individual bricks have identical three-dimensional rectangular
+block shapes, the ﬁnal bulk structure (a wall or a house) may
+have similarly proportion dimensions but will often be diﬀerent
+because the unit blocks can be stacked in diﬀerent ways.
+Both the student potassium tris(oxalato)ferrate(III) trihy-
+drate crystals prepared during the lab experiment and the
+larger recycled crystal described here have shapes that could be
+generally described as thin, elongated “shoeboxes”, but how
+does that compare to the unit cell? While the dimensions of
+the unit cell (reported to be 7.7 Å × 19.9 Å × 10.3 Å16) and
+bulk crystal pictured (9 mm × 75 mm × 33 mm = height ×
+length × width) both indicate an approximate 2:1 length to
+width ratio (which students could easily calculate to prove),
+the thickness of the bulk crystal is proportionally less than the
+Table 1. Crystal Data for Potassium
+Tris(oxalato)ferrate(III) Trihydratea
+Crystal system
+Monoclinic
+Space group
+P21/c
+a/Å
+7.742(1)
+b/Å
+19.917(1)
+c/Å
+10.346(1)
+α/deg
+90
+β/deg
+107.85(1)
+γ/deg
+90
+Volume/Å3
+1518.5(3)
+Z
+4
+aSee ref 16.
+Journal of Chemical Education
+pubs.acs.org/jchemeduc
+Communication
+https://doi.org/10.1021/acs.jchemed.1c00776
+J. Chem. Educ. 2021, 98, 3400−3404
+3402
+
+unit cell. Thus, the shape of the bulk crystal may only loosely
+reﬂect the unit cell, since the latter does not have to add to
+each dimension at the same rate. Crystals may also grow from
+the faces at diﬀerent angles so slight variations can exist in
+growing crystals as seen in Figure 2.
+There also exists a relatively simple relationship between the
+geometric area of crystal faces and the lengths of the unit cell
+edges.22 A crystal that has a short crystallographic axis (for
+example, the a-axis in this crystal, see Figure 3) will have an
+elongated morphology in this direction.
+Qualitatively, this can be visualized by the stacking of crystal
+planes along a preferred direction. Preferred stacking gives rise
+to smaller repeat distances between the planes and conversely
+longer growth vectors (along the direction [100], in this
+crystal). The Bravais−Friedel, Donnay−Harker (BFDH)
+model can be used to predict the morphology of crystals
+using the unit cell information only (for example, the software
+WinXMorph, version 1.4.9, and BFDH Morphology in the
+Mercury software).
+Despite the diﬀerences between potassium tris(oxalato)-
+ferrate(III) trihydrate bulk crystals and the unit cell, the
+visualization will give students an appreciation of the ordering
+of molecules in the crystalline solid state rather than random
+packing in amorphous solids.
+■ASSOCIATED CONTENT
+*
+sı Supporting Information
+The Supporting Information is available at https://pubs.ac-
+s.org/doi/10.1021/acs.jchemed.1c00776.
+Instructions for growing a display crystal of recycled
+potassium tris(oxalato)ferrate(III) trihydrate (PDF,
+DOCX)
+■AUTHOR INFORMATION
+Corresponding Author
+Nicholas C. Thomas −Chemistry Department, Auburn
+University at Montgomery, Montgomery, Alabama 36124-
+4023, United States;
+orcid.org/0000-0003-0639-5026;
+Email: nthomas@aum.edu
+Authors
+Peter C. Junk −College of Science and Engineering, James
+Cook University, Townsville, Queensland 4811, Australia;
+orcid.org/0000-0002-0683-8918
+John Bacsa −Chemistry Department, Emory University,
+Atlanta, Georgia 30322, United States;
+orcid.org/0000-
+0001-5681-4458
+Complete contact information is available at:
+https://pubs.acs.org/10.1021/acs.jchemed.1c00776
+Notes
+The authors declare no competing ﬁnancial interest.
+■REFERENCES
+(1) Brooks, D. W. An experiment sequence involving potassium
+trioxalatoferrate(III) trihydrate. J. Chem. Educ. 1973, 50 (3), 218.
+(2) Johnson, R. C. Convenient procedure for the preparation of
+potassium trioxalatoferrate(III). J. Chem. Educ. 1970, 47 (10), 702.
+(3) University of Massachusetts, General Chemistry Remote
+Laboratory Program. https://genchem.chem.umass.edu/chem112/
+112_Experiment_1.pdf (accessed 2021-08-29).
+(4) Xiao, S.; Wang, X.; Bai, A.; Yang, B.; Guo, X.; Zhang, Y. J.; Jiang,
+J.; Liu, W. Improvements on synthesis of potassium tris(oxalato)
+ferrate(III) trihydrate. Daxue Huaxue 2016, 31 (7), 72−76.
+Figure 3. Potassium tris(oxalato)ferrate(III) crystal simulated using the unit cell dimensions and symmetry. The image highlights two crystal faces
+related by the 2-fold symmetry and the reciprocal relationship between crystal growth and lattice distances.
+Journal of Chemical Education
+pubs.acs.org/jchemeduc
+Communication
+https://doi.org/10.1021/acs.jchemed.1c00776
+J. Chem. Educ. 2021, 98, 3400−3404
+3403
+
+(5) Olmsted, J. Preparation and analysis of potassium tris(oxalato)-
+ferrate(III)trihydrate: A general chemistry experiment. J. Chem. Educ.
+1984, 61 (12), 1098−1099.
+(6) Dallinger, R. F. Synthesis and Characterization of Potassium
+Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method
+of Iron Analysis. J. Chem. Educ. 1995, 72 (10), 936.
+(7) Hasegawa, T.; Arata, Y.; Shimizu, T.; Iwasaki, K.; Moribe, J.;
+Usui, T. Photochemical reaction of potassium tris(oxalato) ferrate-
+(III) as teaching material. Kagaku to Kyoiku 1988, 36 (2), 194−195.
+(8) Simoni, D. d. A.; Andrade, J. C. d.; Faigle, J. F. G.; Simoni, J. d.
+A. A multipurpose experiment for general chemistry laboratory. Quim.
+Nova 2002, 25 (6), 1034−1039.
+(9) Gonzalez, G.; Seco, M. Potassium tris(oxalato) ferrate(III): a
+versatile compound to illustrate the principles of chemical equilibria. J.
+Chem. Educ. 2004, 81 (8), 1193−1195.
+(10) Narsimhulu, M.; Hussain, K. A. XRD, FE-SEM, FT-IR and ESR
+studies of cation deficient potassium tris(oxalato)ferrate(III)-
+trihydrate. IOP Conf. Ser.: Mater. Sci. Eng. 2018, 360, 012048−
+012048.
+(11) Fehlner, F. P. Growing crystals: A survey of laboratory
+methods. J. Chem. Educ. 1956, 33 (9), 449−451.
+(12) Fliedner, L. J. The preparation and preservation of large crystals
+of chrome alum. J. Chem. Educ. 1932, 9 (8), 1453−1454.
+(13) Safety Data Sheet for Potassium Tris(oxalato)ferrate(III). Santa
+Cruz Biotechnology, Inc. https://datasheets.scbt.com/sds/wpna/en/
+sc-280014.pdf (accessed 2021-08-29).
+(14) Safety Data Sheet for Oxalic Acid. Lab Chem. http://www.
+labchem.com/tools/msds/msds/LC18040.pdf (accessed 2021-08-
+29).
+(15) Safety Data Sheet for Potassium Oxalate. Lab Chem. http://
+www.labchem.com/tools/msds/msds/LC19835.pdf (accessed 2021-
+08-29).
+(16) Junk, P. C. Supramolecular interactions in the X-ray crystal
+structure of potassium tris(oxalato)ferrate(III) trihydrate. J. Coord.
+Chem. 2005, 58 (4), 355−361.
+(17) Flowers, P.; Theopold, K.; Langley, R.; Robinson, W.
+Chemistry 2e. OpenStax. Chapter 6. https://openstax.org/books/
+chemistry-2e/pages/10-6-lattice-structures-in-crystalline-solids (ac-
+cessed 2021-08-29).
+(18) Dolhun, J. J.; Müller, P. Combination of X-ray Diffraction and
+Specific Rotation to Unequivocally Characterize Carvone Semi-
+carbazone Derivatives. J. Chem. Educ. 2020, 97 (5), 1411−1417.
+(19) Brannon, J. P.; Ramirez, I.; Williams, D.; Barding, G. A.; Liu, Y.;
+McCulloch, K. M.; Chandrasekaran, P.; Stieber, S. C. E. Teaching
+Crystallography by Determining Small Molecule Structures and 3-D
+Printing: An Inorganic Chemistry Laboratory Module. J. Chem. Educ.
+2020, 97 (8), 2273−2279.
+(20) Boo, G. O. J. An introduction to fullerene structures. Geometry
+and symmetry. J. Chem. Educ. 1992, 69 (8), 605−609.
+(21) Sharma, B. D. Crystal systems and general chemistry. J. Chem.
+Educ. 1982, 59 (9), 742−743.
+(22) Donnay, J. D. H.; Harker, D. A new law of crystal morphology
+extending the Law of Bravais. Am. Mineral. 1937, 22 (5), 446−467.
+Journal of Chemical Education
+pubs.acs.org/jchemeduc
+Communication
+https://doi.org/10.1021/acs.jchemed.1c00776
+J. Chem. Educ. 2021, 98, 3400−3404
+3404

@@ -1,0 +1,820 @@
+REL: Fe\英文\labsynfes034.pdf
+================================================================================
+Synthesis of a Coordination Compound Containing Iron 
+and 
+Analysis of this Compound Using Redox Methods 
+Prelab 
+ 
+Name____________________________________ 
+Total_______/10 
+ 
+NOTE: AT THIS POINT YOU WILL ANSWER ALL PRELAB QUESTIONS IN YOUR 
+CARBON COPY LAB NOTEBOOK. BE SURE TO INCLUDE THE NAME OF THE 
+EXPERIMENT AND THE QUESTIONS ASKED. AT THE START OF LAB YOU WILL 
+HAND IN THE CARBON COPY, WHICH WILL CONTAIN ANSWERS TO ALL 
+QUESTIONS. 
+ 
+1. What is the purpose of this experiment? 
+2. What colour should the crystals you make be? 
+3. Write the generic chemical formula for the coordination compound you will be making in this 
+laboratory experiment. 
+4. What are the names of the ions that are in your coordination compound? 
+5. What are the charges of each ion in the complex that you are going to make in this 
+experiment? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+50
+
+Synthesis of a Coordination Compound Containing Iron 
+and 
+Analysis of this Compound Using Redox Methods 
+ 
+You will synthesize a complex salt containing iron and then analyze it using redox volumetric 
+methods to determine the percent composition and ultimately, its empirical formula. There will 
+be two parts to this laboratory experiment: Part I: the synthesis of the complex salt and Part II: 
+the analysis of the complex salt. The laboratory experiment will be performed over a three week 
+period. 
+ 
+Introduction 
+ 
+Ions of the transition elements exist in aqueous solution as complex ions. A complex ion is a 
+metal ion with a molecule called a ligand attached to it through coordinate covalent bonds. A 
+complex salt is an ionic compound but it differs in the fact that there are these covalent bonds 
+attaching the metal to the ligand. The iron(II) ion, for example, exists in water as Fe(H2O)6
+2+. 
+The water molecules in this ion are arranged about the iron atom with their oxygen atoms 
+bonded to the metal by donating electron pairs to it. Replacing the H2O molecules with six CN- 
+ions gives the Fe(CN)6
+4- ion. A coordination compound is a compound consisting either of 
+complex ions and other ions of opposite charge or a neutral species. An example of a 
+coordination compound is the compound K4[Fe(CN)6] which contains the complex ion Fe(CN)6
+4- 
+and four K+ ions. Some of the transition elements have biological activity and their role in 
+human nutrition depends in most cases on the formation of complexes and coordination 
+compounds. 
+ 
+In the first part of this experiment, you will make a complex salt containing iron in which water 
+molecules and oxalate ions (C2O4
+2-) act as ligands. The formula for this complex will have the 
+formula KxFey(C2O4)z • 3H2O. After this salt has been prepared you will determine its percent 
+composition in iron and oxalate ion and from this information, determine the values for x, y and 
+z in the formula written above. 
+ 
+In the synthesis of the complex salt, you will dissolve an iron(III) compound and form the 
+coordination compound. When your coordination compound is crystallized, you can begin the 
+analysis of this compound. The overall reaction for this synthesis is: 
+ 
+ y FeCl3 • 6H2O + excess reagent → KxFey(C2O4)z • 3H2O + other products 
+ 
+It is assumed that FeCl3 • 6H2O is the limiting reagent and when the number of moles of iron (y) 
+are determined from the percent composition of the coordination compound above, the equation 
+can be balanced and the theoretical yield of this compound can be determined. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+51
+
+ 
+Part I 
+Synthesis of the Complex Salt containing Iron 
+ 
+Procedure 
+ 
+YOU MUST COMPLETE THIS SYNTHESIS IN THE FIRST LABORATORY PERIOD 
+SO THE COMPOUND CAN CRYSTALLIZE BETWEEN LABORATORY MEETINGS. 
+ 
+1. In a 250.0 mL beaker, weigh out approximately 10.00 g of potassium oxalate monohydrate, 
+K2C2O4 ● H2O on the top loader balance and add 20.00 mL of distilled water. 
+ 
+2. Heat this solution, while stirring, until all of the potassium oxalate has dissolved. 
+ 
+3. While the potassium oxalate solution is heating, you can make your solution of iron (III) 
+chloride hexahydrate. In a 250.0 mL beaker, weigh out approximately 5.30 g of iron(III) 
+chloride hexahydrate, FeCl3 • 6H2O. Be sure to use the top loader balance and record the 
+mass to the nearest or 0.01g. 
+ 
+4. Dissolve the iron(III) chloride hexahydrate in 15.00 mL of water. 
+ 
+5. Filter the iron(III) chloride hexahydrate solution from step 4 into the hot potassium oxalate 
+solution. 
+ 
+6. Place the beaker in your desk and cover it with an inverted beaker that’s larger in size and it 
+will stay in your drawer until the next laboratory period. 
+ 
+When you look at your beaker the next laboratory period, you should find green crystals 
+covering the bottom and sides of the beaker. You will treat these crystals in the following 
+manner. 
+ 
+7. Prepare a suction filtration apparatus as shown by your instructor and be sure that the 
+ 
+ 
+ filter flask is very clean. You will be using the liquid, called the filtrate, that pours into it 
+ 
+ 
+ to wash your crystals. 
+ 
+8. Use a rubber policeman to scrape the crystals and solution into the funnel. If you have any 
+ 
+ 
+crystals that remain in the beaker, wash them into the funnel with some of the filtrate from the 
+ 
+filter flask. 
+ 
+9. Rinse the crystals the crystals while they are in the funnel with 15 mL of a 1:1 alcohol-water 
+ 
+solution. Pour this solution slowly so all of the crystals are washed. 
+ 
+10. Pour three 10 mL portions of acetone over the crystals so they will dry rapidly. It should not 
+ 
+ take more than 15 or 20 minutes for the crystals to thoroughly dry. BE CAREFUL WITH 
+ 
+ 
+ 
+ 
+52
+
+ THE ACETONE SINCE IT IS HIGHLY VOLATILE AND FLAMMABLE. DO NOT USE 
+ 
+ 
+ ACETONE IF THERE IS AN OPEN FLAME BY YOUR WORK AREA!!!!! 
+ 
+11. Using the top loader balance, zero a clean, dry beaker. Place all of your dry crystals in the 
+beaker and record the mass of the crystals you produced. You will then transfer your crystals 
+to a clean dry weighing vial. Wrap your vial in aluminum foil since the crystals will 
+decompose with the presence of light. 
+ 
+Part II 
+Analyzing the Complex Salt 
+ 
+There are three sections to part II of this experiment. Part A involves standardizing your 
+potassium permanganate solution which you will use in the next two parts of the experiment. 
+Part B involves determining the amount of oxalate and in part C involves analyzing the amount 
+of iron in your coordination compound. 
+ 
+ 
+Part A: Standardizing a Potassium Permanganate Solution 
+ 
+In order to determine the amount of iron and oxalate in your compound, you must know the 
+concentration of the potassium permanganate (KMnO4) you are going to use in parts B and C. 
+You will do this by titrating your permanganate solution into a solution containing a known mass 
+of sodium oxalate (Na2C2O4). The titration reaction is: 
+ 
+ 
+5 C2O4
+2- (aq) + 2 MnO4
+- (aq) + 16 H+ (aq) → 10 CO2 (g) + 2 Mn2+ (aq) + 8 H2O (l) 
+ 
+If you need a review of titration procedures, refer back to the laboratory experiment Exploring 
+Acid-Base Reactions. 
+ 
+Procedure 
+ 
+It is very important that all of your apparatus be clean and that distilled water is used in all 
+solutions. 
+ 
+For your titrations (in parts A, B and C), always have a wash bottle with distilled water in 
+it ready to use. 
+ 
+1. Collect 50.0 mL of the potassium permanganate solution that you are going to standardize. 
+ 
+2. Using the analytical balance, weigh approximately 0.1200 g of sodium oxalate and place in a 
+ 
+250 mL Erlenmeyer flask. Add 10 mL of 6 M H2SO4 to the flask and this will help the 
+ 
+ 
+sample to dissolve. Add 65 mL of water to the Erlenmeyer flask. 
+ 
+3. Clean and rinse your buret. When the proper procedure for titration preparation has been 
+ 
+performed (if unsure refer to the laboratory experiment Exploring Acid-Base Reactions) fill 
+ 
+53
+
+ 
+the buret to the top with the KMnO4 solution. Note that the solution is a very dark purple 
+ 
+colour so you should take your volume readings from the top edge of the liquid instead of the 
+ 
+bottom of the meniscus. 
+ 
+4. Heat the solution of sodium oxalate in the Erlenmeyer flask to 80-90 oC. When you remove 
+ 
+the thermometer to perform the titration, be sure to rinse the thermometer into the flask since 
+ 
+you do not want to lose any of the sodium oxalate. 
+ 
+5. Record the initial reading on the buret, to the nearest 0.01 mL and begin to add the KMnO4 
+solution to the flask but do not add too rapidly and be sure to swirl the solution. You should 
+observe that the purple solution loses its colour as it falls into the hot solution. 
+ 
+6. If you add the KMnO4 solution too rapidly, or do not swirl well, you may find you have some 
+ 
+brown colouration in your solution. This is due to the formation of manganese dioxide 
+ 
+(MnO2). If you have not added any more KMnO4 than needed to reach the endpoint, the 
+ 
+excess oxalate should reduce the MnO2 momentarily. However, if you fail to swirl the sample 
+ 
+and overshoot the endpoint while MnO2 is formed, the titration is ruined and must be 
+ 
+performed again. 
+ 
+7. You should start to notice that as you are nearing the endpoint of your titration that the 
+ 
+decolouration of the KMnO4 takes longer and longer. At this time you should add the KMnO4 
+ 
+more slowly, preferably drop by drop. When you have reached the endpoint, there will be a 
+ 
+faint colour that persists in the solution. If you are afraid that you will overshoot the endpoint 
+ 
+with one more drop, then record the volume before you add that one drop and that way if you 
+ 
+do overshoot, at least you have the final volume recorded and you will not have to perform an 
+ 
+additional trial of the titration. 
+ 
+8. Repeat this procedure two more times. 
+ 
+9. It is useful to run what is called a blank for this titration since the sulphuric acid solution may 
+contain some impurities that would react with the potassium permanganate and bring error to 
+your data. Add 10 mL of 6 M H2SO4 to the flask and then add 65 mL of water to the 
+Erlenmeyer flask.and heat it to 80-90 oC. This should not take more than one or two drops so 
+you may use your final volume from your last titration as the initial reading for this titration. 
+Titrate until you have a persistent faint pink colouration. 
+ 
+10. Subtract this volume from the volume of KMnO4 used in the titration of the sodium oxalate 
+ 
+ sample. Use this corrected volume for all of your calculations in part A. 
+ 
+Part B: Determination of the amount of Oxalate in the Complex Salt 
+ 
+The determination of oxalate in the complex salt involves oxidation-reduction or redox titrations. 
+The KMnO4 will oxidize all of the oxalate to CO2 which escapes. You will use the same 
+chemical equation from part A to calculate the amount of oxalate in the complex salt. 
+ 
+ 
+ 
+54
+
+Procedure 
+ 
+1. Using the analytical balance, weigh out 0.1000-0.1500g of your complex salt and place in a 
+ 
+ 250 mL Erlenmeyer flask. 
+ 
+2. Dissolve the sample in 10 mL of 6 M H2SO4. You may need to warm this solution to 
+ 
+dissolve your sample. 
+ 
+3. Dilute the sample to approximately 75 mL with distilled water. Heat this solution to 80-90 oC 
+ 
+and titrate as you did in part A. The endpoint will now have a peach colour instead of a pink 
+ 
+colour and this is because of the iron(III) ions which when in solution give a yellow colour. 
+ 
+4. Repeat this procedure two more times. 
+ 
+5. Use the value for the blank that you obtained from Part IIA. 
+ 
+Part C: Determination of the amount of Iron in the Complex Salt 
+ 
+Since the iron in the complex salt is iron(III), the iron will be reduced to iron(II) and then 
+oxidized with KMnO4 to iron(III). The titration reaction is 
+ 
+ 
+5 Fe2+ (aq) + MnO4
+- (aq) + 8 H+ (aq) → 5 Fe3+ (aq) + Mn2+ (aq) + 4 H2O (l) 
+ 
+Procedure 
+ 
+1. Using the analytical balance, weigh out 0.6000-0.7000g of your complex salt and place in a 
+ 
+ 250 mL beaker. 
+ 
+2. Add 25 mL of distilled water and 10 mL of 6M H2SO4. Heat this solution carefully to aid in 
+ 
+dissolving your complex salt. 
+ 
+3. To get rid of the oxalate ions you must heat the solution to near boiling and add 3% KMnO4 
+(NOT YOUR STANDARDIZED SOLUTION) with a medicine dropper until the solution 
+remains purple or brown. This may require several millilitres but there is no need to be 
+careful about measuring this amount. Of course you may want to make a note of how many 
+drops it did take to save time for the next two titrations. Be sure not to add too much and 
+make sure any droplets of 3% KMnO4 on the walls of the flask are swirled into the solution. 
+ 
+4. Heat this solution to near boiling, take the beaker off the heat and place it under the hood. 
+CAREFULLY add 4g of mossy zinc and stir with a stirring rod to avoid splashing. The 
+solution will turn from a brown solution to a yellow solution to a colourless solution. You 
+want all of the yellow colour to disappear but you do not want to add a large excess of zinc. 
+The zinc is reducing the iron(III) in the complex salt to iron(II). 
+ 
+ 
+ 
+55
+
+5. Cover the solution and wait to see if the yellow colour disappears. In the meantime, prepare 
+ 
+to filter off the excess zinc (step 7). If the colour is not disappearing, add a little more zinc 
+ 
+dust. When the solution is colourless, you have converted all of the yellow iron(III) to 
+ 
+colourless iron(II). 
+ 
+6. Quickly filter the excess zinc because iron(II) tends to oxidize to iron(III) in the presence of 
+ 
+air. 
+ 
+7. Set up a funnel and use regular qualitative filter paper. Set a clean 250 mL Erlenmeyer flask 
+ 
+under the funnel. Hold the hot beaker with a paper towel and pour the hot solution through 
+ 
+the filter paper. Using your wash bottle, rinse the beaker several times with distilled water 
+ 
+onto the filter paper. 
+ 
+8. Reheat the Erlenmeyer flask to near boiling if necessary. In the meantime, fill the buret with 
+ 
+your KMnO4 solution and record the initial volume and begin titratring as soon as the solution 
+ 
+is near boiling. 
+ 
+9. Start the titration adding KMnO4 at a fast drip, swirling constantly. You do not want the 
+ 
+solution to become cloudy. Slow down the addition of KMnO4, but keep swirling at all times, 
+ 
+when you are approaching the endpoint. The endpoint is determined by a colour change from 
+ 
+clear yellow to a clear peach colour. This colour change should stay for 20 to 30 seconds. 
+ 
+10. Repeat this procedure two more times. 
+ 
+11. Use the value for the blank that you obtained in Part IIA. 
+ 
+Once you have determined the percentages of oxalate and iron in your complex salt, you can 
+determine the empirical formula of your salt and then the theoretical and percent yield of your 
+coordination compound. 
+ 
+The following is a sample calculation for empirical formula and theoretical and percent yield. 
+ 
+Suppose you determine the following mass percentages: Mass % Oxalate = 55.20% 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mass % Iron = 6.900% 
+Assume 100 g of complex salt. 
+ 
+Convert each mass to moles: 
+oxalate
+ 
+of
+ 
+moles
+ 
+6271
+.0
+oxalate
+ 
+of
+ g 
+88.02
+oxalate
+ 
+of
+ 
+mole
+ 1
+ 
+ 
+oxalate
+ 
+of
+ g 
+55.20
+ 
+ 
+oxalate
+ 
+of
+ 
+moles
+=
+×
+=
+ 
+ 
+iron
+ 
+of
+ 
+moles
+ 
+0.1235
+ 
+iron
+ 
+of
+ g 
+55.85
+iron
+ 
+of
+ 
+mole
+ 1
+ 
+iron 
+ 
+of
+ g 
+6.900
+ 
+iron
+ 
+of
+ 
+moles
+=
+×
+=
+ 
+ 
+ 
+ 
+ 
+56
+
+Divide each mole value by the smallest number of moles (0.1235). 
+ 
+5.078
+ 
+1235
+.0
+6271
+.0
+=
+ 
+ 
+1.000
+1235
+.0
+1235
+.0
+=
+ 
+ 
+There is a ratio of 5 moles of oxalate to one mole of iron. To write the empirical formula of 
+KxFey(C2O4)z • 3H2O you must know the charges of all the ions in the coordination compound. 
+You have Fe3+, C2O4
+2- and K+. So far you know y = 1 and that z = 5 that would mean x would 
+have to equal 7 to give you the neutral compound. So your empirical formula is K7Fe (C2O4)5 • 
+3H2O. You are to assume that the empirical formula is also the molecular formula of the 
+coordination compound. You can now calculate the theoretical and percent yields of your 
+compound using the following equation. 
+ 
+ 
+y FeCl3 • 6H2O + excess reagent → KxFey(C2O4)z • 3H2O + other products 
+ 
+You are to assume that FeCl3 • 6H2O is the limiting reagent. Balance the iron on either side of 
+this equation and you get 
+ 
+ FeCl3 • 6H2O + excess reagent → K7Fe (C2O4)5 • 3H2O + other products 
+ 
+The mole ratio between FeCl3 • 6H2O and K7Fe (C2O4)5 • 3H2O is 1:1 so 
+moles of FeCl3 • 6H2O = moles of K7Fe (C2O4)5 • 3H2O 
+ 
+moles of FeCl3 • 6H2O = mass of FeCl3 • 6H2O / MW of FeCl3 • 6H2O 
+ 
+Theoretical yield = moles of K7Fe (C2O4)5 • 3H2O x MW of K7Fe (C2O4)5 • 3H2O 
+ 
+% Yield = 
+100%
+ 
+yield
+ l
+theoretica
+yield
+ 
+al
+experiment
+×
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+57
+
+ 
+Results 
+Part I Synthesis of the Complex Salt containing Iron 
+ 
+Mass of FeCl3 • 6H2O _____________ 
+ 
+Mass of complex salt 
+ 
+ _________________ 
+ 
+Part II Analyzing the Complex Salt 
+Part A Standardizing a Potassium Permanganate Solution 
+ 
+Write the titration reaction performed in Part A in the space below. 
+ 
+Titration 
+ 
+ 
+ 
+ 
+1 
+ 
+ 2 
+ 3 
+ 
+Mass of Na2C2O4 in sample 
+____________ _____________ _____________ 
+ 
+Final Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Initial Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used for blank 
+ 
+ 
+ _____________ 
+ 
+Corrected volume of KMnO4 used 
+____________ _____________ _____________ 
+ 
+Moles of Na2C2O4 
+ 
+ 
+____________ _____________ _____________ 
+ 
+Moles of C2O4
+2- 
+ 
+ 
+____________ _____________ _____________ 
+ 
+Moles of MnO4
+- used (look at 
+____________ _____________ _____________ 
+titration reaction above) 
+ 
+Moles of KMnO4 used 
+ 
+____________ _____________ _____________ 
+ 
+Molarity of KMnO4 
+ 
+____________ _____________ _____________ 
+ 
+Average Molarity of KMnO4 
+ 
+ 
+ _____________ 
+ 
+ 
+ 
+Sample calculations of just ONE trial are to be shown in your laboratory notebook. 
+ 
+ 
+ 
+ 
+ 
+58
+
+ 
+Part B Determination of the amount of Oxalate in the Complex Salt 
+ 
+Write the titration reaction for Part B in the space below. 
+ 
+ 
+ 
+ 
+Titration 
+ 
+ 
+ 
+ 
+1 
+ 
+ 2 
+ 3 
+ 
+Mass of Complex Salt 
+ 
+____________ _____________ _____________ 
+ 
+Final Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Initial Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used for blank 
+ 
+ 
+ _____________ 
+ 
+Corrected volume of KMnO4 used 
+____________ _____________ _____________ 
+ 
+Average Molarity of KMnO4 
+ 
+ 
+ _____________ 
+ 
+Moles of MnO4
+- used 
+ 
+____________ _____________ _____________ 
+ 
+Moles of C2O4
+2- in sample 
+ 
+____________ _____________ _____________ 
+(use reaction above) 
+ 
+Mass of C2O4
+2- in sample 
+ 
+____________ _____________ _____________ 
+ 
+Mass % of C2O4
+2- 
+ 
+ 
+____________ _____________ _____________ 
+ 
+Average Mass % C2O4
+2- 
+ 
+ 
+ 
+ _____________ 
+ 
+ 
+ 
+ 
+ 
+Sample calculations of just ONE trial are to be shown in your laboratory notebook. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+59
+
+ 
+60
+ 
+Part C: Determination of the amount of Iron in the Complex Salt 
+ 
+Write the titration reaction for Part C in the space below. 
+ 
+ 
+ 
+ 
+Titration 
+ 
+ 
+ 
+ 
+1 
+ 
+ 2 
+ 3 
+ 
+Mass of Complex Salt 
+ 
+____________ _____________ _____________ 
+ 
+Final Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Initial Buret Reading 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used 
+ 
+____________ _____________ _____________ 
+ 
+Volume of KMnO4 used for blank 
+ 
+ 
+ _____________ 
+ 
+Corrected volume of KMnO4 used 
+____________ _____________ _____________ 
+ 
+Average Molarity of KMnO4 
+ 
+ 
+ _____________ 
+ 
+Moles of MnO4
+- used 
+ 
+____________ _____________ _____________ 
+ 
+Moles of Fe3+ in sample 
+ 
+____________ _____________ _____________ 
+(use reaction above) 
+ 
+Mass of Fe3+ in sample 
+ 
+____________ _____________ _____________ 
+ 
+Mass % of Fe3+ 
+ 
+ 
+____________ _____________ _____________ 
+ 
+Average Mass % Fe3+ 
+ 
+ 
+ _____________ 
+ 
+ 
+ 
+Sample calculations of just ONE trial are to be shown in your laboratory notebook. 
+ 
+Empirical Formula of Coordination Compound ________________________________ 
+ 
+Theoretical Yield of Coordination Compound _________________________ 
+ 
+% Yield of Coordination Compound 
+ _________________________ 
+ 
+ 
+ 
+ 
+Sample calculations are to be shown in your laboratory notebook.

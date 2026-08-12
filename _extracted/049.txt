@@ -1,0 +1,292 @@
+REL: 蓝晒\蓝晒\ref\不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展.pdf
+================================================================================
+第24卷
+第5期 
+水处理技术 
+1998年lO月
+TECHNOLOGY OF WATER TREATMENT 
+Vo1．24 No．5 
+Oct．，1998 
+不同形态Fe(I
+I
+I)盐水解产物的光化学性质 
+及其对有机物光降解作用的研究进展 
+／ 
+周丹娜 吴 峰L，／邓南圣 
+痢 孚磊椒430072)
+ 
+(武汉大学环境科学系，武设 
+)
+ 
+7 
+o 
+摘
+要
+本文在总结国内外近4O年研究文献的基础上，对不同形态Fe(Ⅲ)盐水解产物 
+(主要包括低分子量Fe(ir)一OH 络舍物和Fe(Ⅱ)氧化物Fe2O ，及氧和氢氧化物FeOOH)的 
+形态分布、光化学特性及其对水体中有机物光降解作用进行j综述；还结合作者在Fe(Ⅲ)一OH 
+络台物体系对水溶性染料光降解的研究，探讨j应用这一体系进行水处理应用的可行性和发 
+展前 
+药剂，正是我们积极探索的课题。前人自50年代初就已研究了Fe(Ⅲ)盐光化学性质 
+。本 
+文就国内外这方面的基础研究工作进行介绍，以求引起国内环境保护技术工作者的注意，突出 
+这一新兴研究方向，推动这一研究领域的发展。 
+1 Fe(Ⅲ)一0H 络合物的光化学性质及其对有机物的光降解作用 
+1．1 Fe(Ⅲ)盐水解产物的形态 
+Fe(Ⅲ)盐水解一聚合一沉淀的过程是复杂的。Flynnn 在总结Dousma等 和Spiro等0 
+的研究文献的基础上提出了四步水解过程：初级水解低分子量络合物的形成；初级多核多羟基 
+聚合物的形成；次级聚合物的熟化；固体沉淀物的形成(包括由低分子量络合物前体直接沉淀 
+为氧化物的过程)。其中涉及的Fe(I)盐水解产物的形态可粗略地分成三类：低分子量水解产 
+物(Fe(OH)抖、Fe(OH)2
++、Fe(OH){ 等)；水解聚合物(多聚体Fe (OH) (H。O) ～ 或Fe o 
+(OH)： 
+H)；氧化物沉淀(Fe(OH) 、FeOOH或Fe O。等)。 
+1．2 Fe(I)一OH络合物的光化学性质 
+水溶液中，Fe(I)的光化学还原生成Fe(Ⅱ)口 
+；Fe(Ⅱ)再被氧化剂重新氧化成Fe(Ⅲ)。 
+在pH一3 5的Fe(I)无机盐的水解产物中，Fe(OH) 是主要的Fe(Ⅲ)一OH络合物形 
+，其光化学还原反应可表示为 
+收稿日期：1g97—08—10 
+修稿日期：1997 u 24 
+胡北省自然科学基金资助项目 
+一 
+诤 
+剩 
+愎一 
+辅 
+薹I
+ 撇 
+蜥
+ 
+蕊 
+祷 
+维普资讯 http://www.cqvip.com 
+
+周丹娜等，Fe(Ⅲ)盐水解产物的光化学性质及对有机物光解作用的研究进展 
+255 
+Fe(oH) 十—— 一Fe ++ ．OH 
+(1) 
+其实，在pHG4的条件下，至少有4种不同的Fe(Ⅲ)络离子共存于Fe(Ⅲ)盐溶液中，即 
+Fe”、Fe(OH)”、Fe(OH)／和Fe (OH){ 。除了最具活性的Fe(OH)。 (最大吸收渡长为 
+295nm，￡一2050L／mol·cm )外，其它Fe(I)-OH络合物也各自具有一定的光化学活性。 
+二聚体Fe (OH)i 能强烈吸收太阳光谱中的紫外光(290—400nm)[”]，其最大吸收波长 
+为335nm(t一8300L／mo)·cm)。在350nm 光照下，Fe (OH) 光解产生·OH 自由基的光量 
+子产率为0．007 ，远远小于Fe(oH) 在280nm 下光解产生·OH 自由基的量子产率 
+一 
+0．30。 
+光还原反应生成的Fe(Ⅱ)经过氧化剂(如水中溶解氧等)的作用，重新氧化成Fe(Ⅲ)n ： 
+o2+ F 一一
+Fe计+o 
+(2) 
+或经由反应(1)的逆反应生成Fe(Ⅲ) 
+Fe + ·OH —
+Fe(OH)。 
+(3) 
+如此，水溶液中Fe(Ⅲ)／Fe(Ⅱ)的光氧化还原循环就基本形成了。 
+1．3 Fe(Ⅱ)一OH络舍物体系对水体中有机物的光降解 
+50年代已有作者开始研究紫外光照射下酸性水溶液中的Fe(Ⅲ)-OH络离子对有机污染 
+物的光氧化过程口。” ，引起这些反应的物种被认为正是上述反应(1)中生成的·OH 自由基。 
+前人研究的基本结论是：在pH-3—5时，Fe(Ⅱ)一OH络台物体系中的主要成分是Fe(OH) ，
+ 
+它经过光化学还原产生·OH 自由基(反应(1))；·OH 自由基是一种强氧化性(R 一 
++3．06V)的几乎无选择的氧化剂，可以氧化水体中的有机物，使之降解。 
+· OH 自由基除了主要来源于反应(1)外，还可能涉及反应(2)及以下反应： 
+2o +2H 一
+H2O2+O2 
+(4) 
+Fe2 + H O2一
+F 
++ ·OH+OH一 
+(5) 
+进入90年代，光化学水处理方法的兴起，使一些研究者把注意力又投向Fe(I)一OH络合 
+物体系光降解有机物的研究 
+。作者们利用紫外光照射下的Fe(I)一OH络合物体系对多 
+种有机物进行了光氧化和降解。这些有机物主要包括苯、酚及其衍生物、胺类、有机氯以及染料 
+等；研究的内容包括光降解动力学，影响因素以及简单的反应历程的探讨。
+ 
+1992年，Kochany口 研究了Fe(I)和Mn(i)离子对水溶液中3，5一二溴，4，羟基苯腈的光 
+降解。1995年，Maruthamuthu和Huie0 以波长大于300r
+im的光源，研究了含有Fe(Ⅱ)离子 
+的氯代和氟代乙酸盐水溶液的光氧化降解反应，他们获得的Fe(I)离子对几种不同卤代乙酸 
+光降解的相对降解速率为DcA ：MFA ：McA ：DFA一9．9：9、1：7、9：1，而对于TCA 和 
+TCF两种卤代乙酸而言，光降解反应速率则相对小得多(其中M 表示取代卤原子数目为2；T 
+表示取代卤原子数目为3}FA代表氟代乙酸,CA代表氯代乙酸)。同时，他们也测定了光解反 
+应所生成的CO ，考察了卤代乙酸的矿化程度。对含有5mmol／LFe”和5mmol／LTFA，pH= 
+4-5的溶液，42min光照反应产生92gmol／L CO。，而且此后CO 的产量不再增加；而另外五 
+种卤代乙酸光解产生的CO：随光照时间的增加而增加。 
+他们还根据卤代乙酸同羟基反应的相对速率与Fe(Ⅲ)离子对其光氧化降解反应的相对 
+速率十分相似的实验结果，得出光氧化降解反应的主要机理应该是反应(1)及以下反应：
+ 
+· oH+RCOl—— 0H
++ R ·+CO 
+(6) 
+维普资讯 http://www.cqvip.com 
+
+256 
+水处理技术 
+第24卷
+第5期 
+而不是通过形成Fe(Ⅲ)一有机配体络合物所表现的光化学特性，即： 
+Fe(RCOz)抖+ hv—
+F }++R ·+ CO2 
+(7) 
+1 996年邓南圣等[24,zs]分别以30W 紫外杀菌灯和太阳光为光源，研究了Fe(Ⅱ)一OH络合 
+物pH=3的水溶液中水溶性染料的光降解，对活性艳红x一3B、活性艳蓝X—BR、活性黑K—BR、 
+阳离子桃红FG 和碱性嫩黄O 等五种染料的紫外光降解效率为40 一60 (光照时间 
+90min)；太阳光降解效率为3O 一9O (1996年9月间，光强约为30—40r
+oW／cm ，光照时间 
+为120r
+ain)。 
+从染料溶液脱色效果来看，Fe(i)_()H 络合物体系在染料废水处理中的应用是可行的}
+ 
+虽然光化学反应前后染料溶液cOD 的去除率不高，而且只能适用于中、低浓度的有机废水， 
+但是通过与其它水处理技术联用，如絮凝沉淀一光氧化两级串联法0 就能获得非常好的处理 
+效果。因此，Fe(i)_()H络合物体系在污染物光化学氧化降解处理中具有应用价值。 
+另外，虽然同H：O ／uV相比，Fe 的平均量子产率 
+要小得多(H O ／UV=1．0；Fe”一 
+OH／uV一0．02)，但由于Fe(i)一OH 络合物在313nm的摩尔消光系数(1760L／mol·cm)远 
+大于H O。在254nm处的摩尔消光系数(20L／mol·cm)，且不用加入H O ，因而，这一系统在 
+充分利用太阳能及废水处理应用方面有广阔的前景。 
+目前，对Fe(Ⅲ)一OH络合物光催化降解有机污染物的实验研究，有几点局限性需要指出： 
+Fe(I)一OH络合物体系的pH值限制在前人文献所报导的3—5之间(大部分研究中pHi
+l-3)．
+ 
+在这一pH值下，认为Fe(OH) 是主要形态的活性物种，能发生光化学还原反应。但对于不同 
+pH值条件下，Fe(i)水溶液中存在的 立形态Fe(Ⅲ)-OH 络合物的光化学性能却缺乏仔细 
+研究，尤其是多核多羟基胶态聚合协盼_
+凳化学性 的研究更是一片空白。大多数研究中，所使 
+用的光源限制在紫外区，一般有254nm，313nm等波长的紫外光源。这样单一的紫外光源限制 
+了该体系的实用性。各种影响因素(如反应温度、Fe(Ⅱ)来源及其初始用量、光强、污染物浓 
+度、共存离子等)对光化学反应速率的影响研究还很不够。对特定污染物进行光化学降解的光 
+化学反应条件的优化工作尚未积极开展 
+2 Fe(Ⅱ)氧化物的光化学特性及在有机物多相光催化降解中的作用 
+Fe(i)氧化物固体的基本性质，自然会令人联想到半导体(如TiO：、WO。、CdS等)所具有 
+的紫外光照射下产生光生e一一h 对的光电化学现象，以及由此诱发的强氧化性h 氧化有机 
+物的反应 。在对Fe(Ⅲ)氧化物的光化学特性的研究中，一些动力学模型也是建立在光生 
+e一一h 对，体(内相)和表面(外相)动力学，以及质量迁移等假设之上，从而描述反应速率的。 
+但是，由于过程的复杂性，若不作简化(如对e一一h 复合反应为一级反应的假设)，实验证实这 
+些模型是很困难的 。 
+1991年，Wells口 等研究了海水中铁氧化物胶体的光溶解，指出太阳光可以增强Fe(II) 
+氧化物分解并释放不稳定的Fe(I)离子，并且认为这些光化学过程明显形成一个循环： 
+Fe(Ⅱ)光还原溶解一快速重新氧化一Fe(i)沉淀。循环反应涉及到有机发色团，并生成无定 
+形、不稳定性较大的Fe(I)沉淀，而Fe“只是过渡形态。由此可以初步看出Fe(Ⅲ)氧化物光 
+化学特性表现的机理可能与普通的半导体不同。 
+把有机物引入Fe(I)氧化物的多相光化学反应体系，才能更好地理解Fe(Ⅲ)氧化物的 
+光化学性能，以及由此而具有的对有机物光催化氧化降解作用。 
+维普资讯 http://www.cqvip.com 
+
+周丹娜等，Fe(Ⅲ)盐水解产物的光化学性质及对有机物光解作用的研究进展 
+257 
+1984年，Waite和Morel口 研究了天然水体中胶态Fe(I)氧化物(7一FeOOH)的光还原性 
+溶解，提出了FeOOH 的光还原性溶解模型，这一模型基本上表明了Fe(I)有机配体络合物 
+在胶体表面的光还原，同时生成Fe(1)进^溶液的反应历程。 
+1986年，Faust和Hoffmann 进一步指出Fe(Ⅲ)氧化物的光溶解过程实质上是一个光 
+诱导的由配体到金属原子的电荷转移过程，即从被吸附的有机还原性配体到金雇氧化物表面 
+Fe(Ⅲ)原子中心的电荷转移过程。这一基本观点为太多数作者共识 
+。Goldberg等 1993 
+年还指出电子转移步骤是光化学反应的速控步骤，并且这一步骤的速率常数取决于金属氧化 
+物的表面特性和络合配体的性质。Pehkonen 1995．年对多种形态的Fe(1)氧化物对不同卤 
+代乙酸的光催化降解进行了研究．也证实了光催化体系的反应能力取决于Fe(Ⅲ)氧化物和有 
+机配体的性质。 
+目前，对Fe(Ⅲ)氧化物体系真正用于废水处理的研究尚未见报导，这方面的可行性研究 
+还亟待开展。此外，应当拓宽模拟实验研究中的处理对象，把典型的环境污染物和复杂的有机 
+废水作为处理对象，开发应用的光反应器和催化荆载体，丰富这一多相光催化体系的实用技术 
+和理论体系。 
+3 结束语 
+不同形态的Fe(Ⅲ)盐水解产物具有不同的光化学特性。这些不仅表现在它们不同的吸收 
+光谱、光化学反应的机理和生成的产物上{也表现在它们对环境污染物产生、迁移、转化和归宿 
+的影响上。Fe(Ⅲ)盐水解产物的这些光化学特性可以加以利用．在环境污染物的降解和治理 
+上发挥作用。不论是Fe(Ⅲ)-OH络合物均相光催化体系，还是Fe(Ⅱ)氧化物多相光催化体 
+系，均可能发展成为高效节能、无二次污染的污染治理光化学方法和技术。 
+参
+考
+文
+献 
+Evans M G and Uri N ，Nature，l949，l64：404 
+Bates H G C and Uri N，J A加Chem Soc，1953，75：2754 
+Le nd J K and Bard，A J，J Phys Chem，l987．9l：5076 
+Flynn C M _
+Ir，Chem Rev，1984．84{31 
+Dousma J and Bruyn P L+J Collid Interface Sci，1976，56}527 
+Spiro T G，Ct al，J Am Chem Soc，1966，88(12)：272l 
+B
+a lzanI V and Carassiti V ，Photochemistry of Coordination Compounds，Academic Press，London， 
+1970 l一63 
+Faust B C，Photo- induc~ed fedtJctive dissolution of hematite( Fe2os)b S(N )oxyanions Ph D 
+disseertation，California Institute of Technology，Pasadena，California，1984 
+GIadeI T E，W eschier C J and Mandich M L，Natu~e，1985，317：24O 
+Gradel T E，Mandieh M L and Wesehler C J，J Geol，hys Res，1986，91：5205 
+Faust B C and Hoffr
+e arm M R 。Environ Sc Technol，1986，20j
+ 943 
+Sulzberger B+Siffert C and Stumm W ，C}limia，l988，7：257 
+W agman D D et“ t J Phys Chem Ref DatB，1l+Supplement，1982(2) 
+l 
+2 
+3 
+I 
+5 
+7 
+8 
+维普资讯 http://www.cqvip.com 
+
+258 
+水处理技术 
+第24卷
+第5期 
+Faust B C and Hoigne，J，Atmos Environ，24A，1990，(1)，79 
+Knight R J and Sylva R N，J inorg nucl Chem ，1 975t37：779 
+Langford C H and Cary J H ，Can J Chem ，]975，53：2430 
+Baxendale J H and Magee Jt Trans Faraday Soc，]955，51：205 
+Safarzadeh——Am iri A ，Bolton J。et at．Am Chem Soc，Atlanta，Georgia 1994：19 
+Larson R A ，et al，J Agric Food Cbem，l99l，39 2059 
+Kochay J，Chemosphere，l992，25(3)：261 
+M aruthamuthu P and Huie P E．Cbel
+~osphere，1995，30(11)：21 99 
+Hideki K and Atushi I，Chemosphere．1993，27(12)：238l 
+Hideki K and Atushi I，Chemosphere，1994，28(1)：57 
+Deng Nansheng．Fang Tao and T／an Shizhong，Chemospheret1 996，33(3)：547 
+Deng Nansheng，W u Feng，Tian Shizhong and Liu ran，Chernosphere，]997 
+吴峰，邓南圣．罗凡，絮凝一光氧化两级处理法处理染料废水的试验研究，化工环保t1 997 
+Fox M A and Dulay M T ，Chem Rev．1993，93：34l 
+W ells M L，et al，Nature，l991，353(1 9)：248 
+r
+ 
+W aite T D and M orel F M ，Environ Sci Technol，1984，18：860 
+Cunnl
+ngham K M 
+al，Environ Sci
+ Technol，1988，22：1090 
+Cunning]tam K M 
+at，J Photochem Photobiol，1985，41(4)f
+ 409 
+Litter M I． 
+．Environ Sci
+ Techno1，199]，25(11)：1 907 
+Goldberg M C et a1．J Photochem Photobiolt A Chem ，1 993t 73：1O5 
+Pulgarm C and Kiwi J，Langmuir，]995，1l_5]9 
+Pehkonen S 0 ．et al，En~ron Sci Technol，l995-29：l215 
+PRoGRESS IN THE STUDIES oN THE PHoTOCHEM ICAL PRoPERTIES 
+oF HYDRoLYTIC IRON(Ⅲ)SPECIES AND THEIR EFFECT 
+oN PHoTODEGRADA．r【oN oF oRGANIC CoM PoUNDS 
+Zhou Danna，W u Feng and Deng Nansheng 
+(Department of Environmental Science，W uhan Universityt Wuhan 430072) 
+Abstract：On the basis of the research Iiteritures in 1ast forty years，the summary and com- 
+parison were made oi
+3．species distribution，photochem ical characteristics of hydrolytic Fe 
+(Ⅲ)species and the photodegradation of organic compoounds in aqueous solutions initiated 
+by them (mainly including low -molecular-weight Fe(Ⅱ)-OH complexest Fe(Ⅲ)oxides， 
+Fe2O3 and Fe(Ⅱ)hydroxides，FeO (0H )．M oreover，the feasibility and prospect of the pho- 
+toehemi~al method on using Fe(Il
+1)49H complexes system in waste water treatments were 
+also disscused． 
+Key words：Fe(I)salts，hydrolysis，species，photochemical property，photodegradation， 
+organic compound 
+H 
+M " 堪
+珀∞
+龃船；3 
+抽盯勰 
+∞n 弛
+站 
+维普资讯 http://www.cqvip.com

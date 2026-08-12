@@ -1,0 +1,43 @@
+REL: 蓝晒\蓝晒\ref\ed500809n_si_002.docx
+================================================================================
+A new approach toward cyanotype photography using tris-(oxalate)ferrate(III) - An integrated experiment
+
+Pablo Alejandro Fiorito*, André Sarto Polo*
+Federal University of ABC – UFABC,
+Av. dos Estados, 5001 - Santo André - SP – Brazil - 09210-170
+
+List of chemicals
+
+K3[Fe(C2O4)3] 
+H2SO4 
+K3[Fe(CN)6] 
+H2O2 
+2,2’-bipyridine 
+ 
+
+Hazards
+The use of H2SO4 should be contained to a fume hood when preparing 0.1 mol.L-1 solution. Concentrated H2SO4 causes severe skin burns and eye damage. Wear protective gloves, protective clothing, eye and face protection. H2O2 (30% solution) causes serious eye damage. Wear protective gloves, protective clothing, eye and face protection.
+
+Avoid the exposure of [Fe(C2O4)3]3- solution to light in order to prevent any undesired photochemical reaction.
+
+Experimental procedure
+Prepare 5 mL solution of 0.3 mol L-1 of tris-(oxalate)ferrate(III) using 0.1 mol L-1 H2SO4 solution.
+Prepare 5 mL solution of 0.3 mol L-1 of K3[Fe(CN)6]
+Preventing the incidence of light, mixture the solutions prepared in a Petri dish
+Using a paintbrush, paint the watercolour paper.
+Left it until it is completely dry. If a drier is available in the lab, it can be used.
+Put the sensitized paper onto a support.
+Place the negative photography onto the sensitized watercolour paper.
+Place a piece of glass onto the negative photography to avoid movement during the exposition to sunlight and cover it to avoid exposition to the light.
+In a sunshine place, remove the protection and wait until the photography became blue. At this time, use the protection again to shut down the light exposure. In cloudy days or to conduct this experiment at night, a studio illuminator can be used to substitute the sunlight. Good results are also achieved by this method. However, longer exposition time is necessary in this case.
+Write down the exposition time used.
+Back in the laboratory, wash your photography with plenty of water to remove the remaining sensitizer from the paper. 
+After the washing procedure, immerse your photography in a diluted hydrogen peroxide solution (0.3%) for 2 minutes.
+Wash the photography again and let it dry.
+You can also repeat the procedure, changing the exposure time you wrote (step 10) to have a better result.
+
+Auxilary test
+In a test tube, put a few drop of the tris-(oxalate)ferrate(III) acid solution prepared in step 1.
+Expose the test tube to light for a few seconds
+Add a few drops of ethanolic solution of 2,2’-bipyridine (0.1 mol L-1).
+Observe and explain.

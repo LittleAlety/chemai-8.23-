@@ -1,0 +1,284 @@
+REL: Fe\英文\From JCE\potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of-chemical-equilibria.pdf
+================================================================================
+In the Laboratory
+www.JCE.DivCHED.org
+•
+Vol. 81 No. 8 August 2004
+•
+Journal of Chemical Education
+1193
+A number of articles have appeared in this Journal deal-
+ing with the synthesis and photochemical reactivity of the
+[Fe(C2O4)3]3− anion (1–6). The potassium salt is an easy
+product to synthesize in an introductory course on inorganic
+chemistry. Typically students are required to prepare this
+product with the aim of improving laboratory skills and as
+an introduction to the synthesis of coordination compounds.
+Another much less exploited aspect of the [Fe(C2O4)3]3−
+anion is that it is a very useful product for exploring chemi-
+cal equilibria, offering an overall picture of how ligand coor-
+dination and displacement and precipitation equilibria are
+interrelated. The sufficient quantity of complex obtained in
+the synthesis permits a new utilization of the substance to
+show students a practical example of the chemistry of com-
+plexes in solution. The concepts of equilibrium, stability, and
+solubility, and the physical constants associated with these
+concepts (equilibrium constant, stability constant, and solu-
+bility product) can easily be examined through certain reac-
+tions of this anion. The anion presents an ideal balance
+between stability and lability such that a number of reactions
+can be displaced in one direction or the other, depending on
+the quantity and properties of the reagents involved.
+In our first-year inorganic chemistry laboratory, after the
+initial synthesis was complete, various reactions designed to
+highlight complex equilibrium processes were assigned and
+successfully completed. Two hours is sufficient time to per-
+form all the reactions, so the complete experimental work
+and discussion can be accomplished in a standard laboratory
+session (if filtration is used instead of centrifugation, the pro-
+cedure will be more time-consuming).
+Experiment
+Procedure
+The students first synthesize the complex
+K3[Fe(C2O4)3]·3H2O. Then they perform a series of test-
+tube experiments either individually or in groups of two. Spe-
+cific instructions are given in the Supplementary Material.W
+They observe each reaction and note color changes and pre-
+cipitation formation.
+After the experimental work is finished students are given
+a series of questions. These questions can be answered in the
+laboratory book or, as an alternative, the instructor can use
+these questions to lead a discussion about the equilibrium,
+complex stability, and solubility concepts.
+Chemicals and Laboratory Materials
+The necessary chemicals and laboratory materials are
+listed in Table 1 of the Supplementary Material.W The chemi-
+cals include those required for the synthesis of
+K3[Fe(C2O4)3]·3H2O.
+It is convenient to use small bottles (50 mL) to stock
+the solutions, which can be refilled from a reservoir bottle
+with a spigot. Pasteur pipets will be used to take the solu-
+tions from these bottles to the test tubes. When a number of
+drops are required, Pasteur pipets will be used to measure
+the drops. When a number of milliliters are required, a gradu-
+ated test tube will be used to measure the volume (this gradu-
+ated test tube can be made using a standard test tube and a
+marker).
+Reactions
+The following reactions are performed by the students.
+The reactions are grouped according to concepts examined.
+(a) Testing the stability of tris(oxalato)ferrate(III) in acid me-
+dia, checking for its decomposition products, and revert-
+ing back to the tris(oxalato)ferrate(III) complex:
+ [Fe(H2O)6]3+ + H2C2O4
+[Fe(C2O4)3]3− 
+ [Fe(SCN)3]
+[Fe(H2O)6]3+ 
+ [FeF4]−
+[Fe(SCN)3] 
+ [Fe(C2O4)3]3−
+[FeF4]− 
+SCN−
+H+
+F−
+C2O4
+2−
+1
+2
+3
+2
+4
+3
+1
+4
+(b) Testing the stability of tris(oxalato)ferrate(III) in the pres-
+ence of other complexing anions and the relative stabil-
+ity of several Fe(III) complexes:
+ [FeF4]−
+4
+[Fe(C2O4)3]3− 
+ [Fe(SCN)3]
+[Fe(C2O4)3]3− 
+ [FeF4]−
+[Fe(SCN)3] 
+SCN−
+F−
+F−
+1
+1
+5
+(small amount)
+5
+(small amount)
+4
+C2O4
+2−
+Potassium Tris(oxalato)ferrate(III): A Versatile Compound
+W
+To Illustrate the Principles of Chemical Equilibria
+Gabriel González*1 and Miquel Seco
+Departament de Química Inorgànica, Universitat de Barcelona, Martí i Franquès 1-11, E-08028 Barcelona, Spain;
+*ggonzalez@iciq.es
+Downloaded via WUHAN UNIV on July 4, 2026 at 04:05:31 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+In the Laboratory
+1194
+Journal of Chemical Education
+•
+Vol. 81 No. 8 August 2004
+•
+www.JCE.DivCHED.org
+(c) Testing the stability of tris(oxalato)ferrate(III) in basic
+media, checking for its decomposition products, and re-
+verting back to the tris(oxalato)ferrate(III) complex:
+ Fe(OH)3 + C2O4
+2−
+[Fe(C2O4)3]3− 
+ [Fe(C2O4)3]3−
+Fe(OH)3 
+ BaC2O4
+C2O4
+2− 
+ [Fe(C2O4)3]3− + BaSO4
+BaC2O4 
+H2C2O4
+OH−
+Ba+
+Fe2(SO4)3
+1
+A
+6
+1
+A
+B
+6
+1
+C
+B
+(d) Testing the solubility of tris(oxalato)ferrate(III):
+ Ba3[Fe(C2O4)3]2
+[Fe(C2O4)3]3− 
+ {Ba2+ + [Fe(C2O4)3]3−}
+Ba3[Fe(C2O4)3]2 
+ [Fe(C2O4)3]3− + BaSO4
+{Ba2+ + [Fe(C2O4)3]3−} 
+H2O, ∆
+Ba2+
+SO4
+2−
+1
+D
+D
+7
+1
+C
+7
+(e) Testing the stability of tris(oxalato)ferrate(III) in front
+of light and checking for its decomposition products:
+ no reaction
+[Fe(C2O4)3]3− 
+hν
+1
+[Fe(C2O4)3]3−
+1
+Fe3[Fe(CN)6]2
++
+[Fe(H2O)6]2+
+[Fe(CN)6]3−
+[Fe(CN)6]3−
+CO2
+Questions
+1. Identify solutions 2–7 and precipitates A–D.
+2. Write all chemical reactions involved in each step.
+3. Why does the pale-green precipitate D give a green
+solution when dissolved? Justify the difference of color
+between solid D (pale green) and solid
+K3[Fe(C2O4)3]·3H2O (emerald green). [Note: It is in-
+teresting to show the students that large crystals have a
+deeper color because they have less crystal surface than the
+same quantity of smaller crystals, and so there is less dif-
+fuse light. When any crystal is crushed in a mortar, the
+intensity of color decreases dramatically as a result of the
+creation of a huge number of microcrystals. If solid D is
+observed through a microscope, we will see the character-
+istic aggregate of very small microcrystals. We can com-
+pare it with the solid obtained after crushing a large crystal
+of potassium tris(oxalato)ferrate(III).]
+4. Of the following pairs of compounds, which is the
+most stable of each pair?
+[Fe(SCN)3] vs [FeF4]−
+[FeF4]− vs [Fe(C2O4)3]3−
+[Fe(H2O)6]3+ vs [Fe(SCN)3]
+(Note: At this level we assume that Fe3+ in acid aqueous
+solution can be considered as [Fe(H2O)6]3+ for simplicity
+of reasoning.)
+5. Of the following pairs of compounds, which is the
+most soluble compound of each pair at room tempera-
+ture?
+Ba3[Fe(C2O4)3]2 vs BaSO4
+Ba(C2O4) vs BaSO4
+6. Of the following compounds, which has a solubility
+more dependent on the temperature?
+Ba3[Fe(C2O4)3]2 vs Ba(C2O4) vs BaSO4
+7. Of the following pairs of compounds, which of each
+pair gives more free Fe3+ in solution?
+Fe(OH)3 vs [Fe(C2O4)3]3−
+[Fe(SCN)3] vs [FeF4]−
+(Note: At this level we assume that FeO(OH) can be con-
+sidered as Fe(OH)3 for simplicity of reasoning.)
+8. Write the redox reaction that occurs between
+[Fe(C2O4)3]3− and light.
+9. Should we expect the previous redox reaction rate to
+be affected by the vacuum?
+Hazards
+All chemicals used are standard in a first-year university
+laboratory, so there are no special hazards involved and the
+usual precautions must be taken. Protective clothing (lab coat)
+and safety glasses must be worn as a general rule. Barium
+and fluoride salts are toxic if swallowed or if they come into
+contact with the skin. 6 M HCl causes burns and is irritat-
+ing to the respiratory system. Therefore, the use of dispos-
+able safety gloves is recommended when handling these
+reagents; furthermore, 6 M HCl should be manipulated only
+under a fume hood. Waste is collected for disposal by a suit-
+able authority and a neutralization kit with a weak base
+(Na2CO3) must be handy in case of acid spills. Suggestions
+for substitution of the more troublesome reagents are avail-
+able in the Supplementary Material.W
+
+In the Laboratory
+www.JCE.DivCHED.org
+•
+Vol. 81 No. 8 August 2004
+•
+Journal of Chemical Education
+1195
+Summary
+It is interesting to note that the students answer correctly
+about 80% of the questions. This indicates the ability of these
+experiments to provide a good reflective tool about equilib-
+rium processes.
+WSupplemental Material
+Lab instructions for the students, supplementary student
+assignments, suggestions for alternative reagents, and the CAS
+numbers for the starting materials are available in this issue
+of JCE Online.
+Note
+1. Current address: Institut Català d’Investigació Química, Av.
+Països Catalans, s/n, E-43007 Tarragona, Spain.
+Literature Cited
+1. Dallinger, R. F. J. Chem. Educ. 1995, 72, 936.
+2. Young, C. G. J. Chem. Educ. 1985, 62, 445.
+3. Olmsted, J. J. Chem. Educ. 1984, 61, 1098.
+4. Aravamudan, G.; Gopalakrishnan, J.; Udupa, M. R. J. Chem.
+Educ. 1974, 51, 129.
+5. Brooks, D. W. J. Chem. Educ. 1973, 50, 218.
+6. Johnson, R. C. J. Chem. Educ. 1970, 47, 702.
+7. Yost, D. M.; Simons, J. H. Inorg. Synth. 1939, 1, 36.
+8. Kolthoff, I. M.; Sandell, E. B.; Meehan, E. J.; Bruckenstein,
+S. Quantitative Chemical Analysis, 4th ed.; Macmillan: New
+York, 1969.
+9. Sandell, E. B. Colorimetric Determination of Traces of Metals,
+3rd ed.; Wiley-Interscience: New York, 1959.
+10. Robin, M. B. Inorg. Chem. 1962, 1, 337.

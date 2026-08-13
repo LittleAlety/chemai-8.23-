@@ -1,8 +1,8 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
-[![Version](https://img.shields.io/badge/version-v40-blue)](https://github.com/LittleAlety/chemai-8.6-)
-[![FAQ](https://img.shields.io/badge/FAQ-833条-green)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v41-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![FAQ](https://img.shields.io/badge/FAQ-890条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-355篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
 [![Deep Qs](https://img.shields.io/badge/深度问题-~160条-purple)](https://github.com/LittleAlety/chemai-8.6-)
@@ -26,7 +26,7 @@
 
 ## 深度问题自学习迭代体系
 
-项目通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正深度实验操作问答，目前累计约 **160 条**，覆盖合成操作与表征分析两大维度。
+项目通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正深度实验操作问答，目前累计约 **217 条**，覆盖合成操作、表征分析与全文献深度学习三大维度。
 
 ### 迭代历程
 
@@ -39,6 +39,7 @@
 | v38 | 温度测量校准、玻璃仪器、时间控制、观察记录、学生心理学、环境因素、仪器故障、数据报告 | 30 | 4.2/5 |
 | v39 | **试剂用量偏差**（逐步骤逐试剂分析 +/- 影响） | 26 | 6✓/19部分/1✗ |
 | v40 | **表征分析**（磁化率、蓝晒、热分析、红外、紫外、KMnO₄滴定、计算、试剂储存、数据可靠性） | 27 | **27/27 ✓** |
+| v41 | **全文献深度学习**（对 355 篇语料再学习，补蓝晒/摩尔盐/草酸配合物/综合研究 4 大薄弱子领域）；全库按**实验讲义**权威对齐（失水100℃、H₂O₂ 8mL、0.5M草酸、KFe[Fe(CN)₆]）；六集群内容审计修正 ~188 处 + 全量渲染审计 | 57 新增 | 渲染审计 0 残留 |
 
 ### 自学习增强机制
 
@@ -98,7 +99,7 @@ chemai-8.6-/
 ├── prep.html                    # 课前预习
 │
 ├── data/
-│   ├── faq_unified.json         # FAQ 知识库（833 条）
+│   ├── faq_unified.json         # FAQ 知识库（890 条）
 │   ├── manual.json              # 实验手册（11 章）
 │   ├── corpus.json              # 语料库清单（355 篇文献）
 │   ├── kg.json                  # 知识图谱（97 节点，含 subfield 关联）
@@ -157,6 +158,7 @@ GitHub Actions + GitHub Pages 自动部署，向 `master` 分支推送后自动�
 
 | 版本 | 主要变更 |
 |------|------|
+| **v41** | **全文献深度学习 + 权威对齐**：对 355 篇语料再学习，新增 57 条 FAQ（蓝晒18/综合研究14/摩尔盐13/草酸配合物12），FAQ 833→890；建立**知识权威层级**（实验讲义>文献>搜索），按武汉大学讲义全库对齐（失水100℃、H₂O₂ 8mL、第三步0.5M草酸、滕氏蓝KFe[Fe(CN)₆]）；六集群内容审计修正 ~188 处（sp³d²、d-d自旋禁阻、Ksp、α表、历史史实、截断乱码）；全站导航统一 navbar + 标签统一 |
 | **v40** | 表征分析深度问答 27 题（27/27 正确）；语料库 291→355 篇；知识图谱深链关联 |
 | **v39** | 试剂用量偏差专项 26 题（逐步骤逐试剂分析） |
 | **v38** | 深度问答 v2：30 题对抗评审（avg 4.2/5） |

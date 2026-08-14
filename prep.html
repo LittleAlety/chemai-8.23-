@@ -199,7 +199,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <a href="index.html#/explore">科普探索</a>
       <a href="corpus.html">语料库</a>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题">🌓</button>
+    <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
     <button class="nav-toggle-mb" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
   </div>
   </div>
@@ -310,6 +310,6 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
   </footer>
 </div>
 <script>document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});</script>
-<script>function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}}</script>
+<script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 </body>
 </html>

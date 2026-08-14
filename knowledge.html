@@ -14,8 +14,9 @@
   --txt:#f1f5f9; --txt2:#94a3b8; --txt3:#64748b;
   --border:rgba(148,163,184,.08); --border2:rgba(148,163,184,.15);
   --radius:16px;
+  --kg-pill:rgba(10,14,26,.78);--kg-label-text:rgba(255,255,255,.78);--kg-stroke:rgba(10,14,26,.92);--kg-minimap:rgba(10,14,26,.88);
 }
-[data-theme="light"]{color-scheme:light;--bg:#f5f7fa;--bg2:#eaeef4;--card:#ffffff;--hover:#e8ecf2;--card-hover:#e8ecf2;--t1:#1f2937;--t2:#475569;--t3:#64748b;--txt:#1f2937;--txt2:#475569;--txt3:#64748b;--bd:rgba(15,23,42,.08);--bd2:rgba(15,23,42,.16);--border:rgba(15,23,42,.08);--border2:rgba(15,23,42,.16);--shadow:0 8px 24px rgba(15,23,42,.08)}[data-theme="light"] .navbar{background:rgba(255,255,255,.82)}.theme-toggle{background:var(--bg2);border:1px solid var(--bd2);color:var(--t2);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;justify-content:center;transition:.25s;flex-shrink:0;line-height:1}.theme-toggle:hover{border-color:var(--em);color:var(--em);transform:translateY(-1px)}body{animation:chemaiFade .45s ease}@keyframes chemaiFade{from{opacity:0}to{opacity:1}}
+[data-theme="light"]{color-scheme:light;--bg:#f5f7fa;--bg2:#eaeef4;--card:#ffffff;--hover:#e8ecf2;--card-hover:#e8ecf2;--t1:#1f2937;--t2:#475569;--t3:#64748b;--txt:#1f2937;--txt2:#475569;--txt3:#64748b;--bd:rgba(15,23,42,.08);--bd2:rgba(15,23,42,.16);--border:rgba(15,23,42,.08);--border2:rgba(15,23,42,.16);--shadow:0 8px 24px rgba(15,23,42,.08)}[data-theme="light"] .navbar{background:rgba(255,255,255,.82)}[data-theme="light"]{--kg-pill:rgba(255,255,255,.92);--kg-label-text:rgba(31,41,55,.85);--kg-stroke:rgba(255,255,255,.96);--kg-minimap:rgba(255,255,255,.9)}[data-theme="light"] .stage{background:radial-gradient(1200px 700px at 50% 42%,#eef2f7 0%,var(--bg) 62%)}[data-theme="light"] #miniMap{background:rgba(255,255,255,.9)}[data-theme="light"] .panel-close,[data-theme="light"] .doc-path{background:rgba(226,232,240,.6)}[data-theme="light"] .ov-code{background:#eef1f6;color:#047857}[data-theme="light"] .path-chip.cur{color:#059669}.theme-toggle{background:var(--bg2);border:1px solid var(--bd2);color:var(--t2);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;justify-content:center;transition:.25s;flex-shrink:0;line-height:1}.theme-toggle:hover{border-color:var(--em);color:var(--em);transform:translateY(-1px)}body{animation:chemaiFade .45s ease}@keyframes chemaiFade{from{opacity:0}to{opacity:1}}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -409,7 +410,7 @@ button{font-family:inherit;cursor:pointer}
     <a class="nav-link" href="index.html#/explore">科普探索</a>
     <a class="nav-link" href="corpus.html">语料库</a>
   </div>
-  <button class="theme-toggle" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题">🌓</button>
+  <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
   <button class="hamburger" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
 </nav>
 <div class="page">
@@ -1006,6 +1007,7 @@ function zoomAt(mx, my, factor){
 }
 
 /* ==================== 渲染 ==================== */
+function kgVar(n){try{return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}catch(e){return '';}}
 function draw(){
   const cv = $('#cv'), ctx = cv.getContext('2d');
   ctx.setTransform(DPR,0,0,DPR,0,0);
@@ -1105,14 +1107,14 @@ function draw(){
     const tw = ctx.measureText(l.label).width;
     const pw = tw + 8, ph = 14;
     ctx.globalAlpha = ea;
-    ctx.fillStyle = 'rgba(10,14,26,.78)';
+    ctx.fillStyle = kgVar('--kg-pill') || 'rgba(10,14,26,.78)';
     ctx.beginPath();
     ctx.roundRect(tx - pw/2, ty - ph/2, pw, ph, 4);
     ctx.fill();
     ctx.strokeStyle = 'rgba(148,163,184,.28)';
     ctx.lineWidth = 0.7;
     ctx.stroke();
-    ctx.fillStyle = 'rgba(255,255,255,.78)';
+    ctx.fillStyle = kgVar('--kg-label-text') || 'rgba(255,255,255,.78)';
     ctx.fillText(l.label, tx, ty);
   }
 
@@ -1224,7 +1226,7 @@ function draw(){
       const wf = Math.min(Math.max(fs/view.k, fs/1.25), fs/0.32);
       ctx.globalAlpha = Math.max(alpha * labelAlpha, 0.02);
       ctx.font = (n.level<=1 ? '700 ' : '500 ') + wf + 'px "PingFang SC","Microsoft YaHei",sans-serif';
-      ctx.lineWidth = wf*0.28; ctx.strokeStyle = 'rgba(10,14,26,.92)';
+      ctx.lineWidth = wf*0.28; ctx.strokeStyle = kgVar('--kg-stroke') || 'rgba(10,14,26,.92)';
       let lx, ly;
       if(n.level === 0){
         // 中心节点：标签置于正上方（扇区间隙方向），过长时断为两行
@@ -1272,7 +1274,7 @@ function drawMiniMap(){
   mctx.setTransform(mdp, 0, 0, mdp, 0, 0);
   mctx.clearRect(0, 0, mw, mh);
   // Background
-  mctx.fillStyle = 'rgba(10,14,26,.88)';
+  mctx.fillStyle = kgVar('--kg-minimap') || 'rgba(10,14,26,.88)';
   mctx.fillRect(0, 0, mw, mh);
   // Compute graph bounds
   let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
@@ -1639,6 +1641,6 @@ function openPanel(n){
 loadData();
 document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});
 </script>
-<script>function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}}</script>
+<script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 </body>
 </html>

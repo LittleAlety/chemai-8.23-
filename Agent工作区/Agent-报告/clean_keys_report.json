@@ -1,0 +1,1925 @@
+{
+  "generated_at": "2026-08-14",
+  "mode": "preview",
+  "total_faq": 939,
+  "tierA_removed_total": 0,
+  "entries_affected": 0,
+  "removed_per_key": {},
+  "skipped_for_lowkey": [],
+  "needs_review": {
+    "tierB_conditional_entries": [
+      {
+        "index": 11,
+        "title": "热分解方程式",
+        "subfield": "热分析",
+        "tierB_keys": [
+          "加热"
+        ]
+      },
+      {
+        "index": 32,
+        "title": "配位终点颜色判断",
+        "subfield": "光化学应用",
+        "tierB_keys": [
+          "终点"
+        ]
+      },
+      {
+        "index": 125,
+        "title": "温度控制总结",
+        "subfield": "热分析",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 128,
+        "title": "KMnO4滴定方程式",
+        "subfield": "分析测定",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 130,
+        "title": "热重分析信息",
+        "subfield": "分析测定",
+        "tierB_keys": [
+          "加热"
+        ]
+      },
+      {
+        "index": 153,
+        "title": "加热操作安全",
+        "subfield": "安全与废物处理",
+        "tierB_keys": [
+          "水浴加热"
+        ]
+      },
+      {
+        "index": 211,
+        "title": "详细操作步骤（含试剂用量、温度、时间）",
+        "subfield": "合成制备",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 224,
+        "title": "颜色解释（d-d跃迁）",
+        "subfield": "配位化学理论",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 294,
+        "title": "配合物颜色对比表",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 349,
+        "title": "滕氏蓝与相关物的颜色",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 385,
+        "title": "Fe(OH)3的颜色",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 386,
+        "title": "水合Fe3+的颜色",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 387,
+        "title": "FeC2O4的颜色",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 388,
+        "title": "水合Fe2+的颜色",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 389,
+        "title": "铁氰化钾的颜色",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 390,
+        "title": "黄血盐的颜色",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 391,
+        "title": "Fe(SCN)3的颜色",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 392,
+        "title": "FeF6的颜色",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 393,
+        "title": "Fe2O3的颜色",
+        "subfield": "热分析",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 418,
+        "title": "晶体细小：温度波动",
+        "subfield": "光化学应用",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 423,
+        "title": "晶体淡黄色的诊断",
+        "subfield": "光化学应用",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 425,
+        "title": "晶体暗绿色的诊断",
+        "subfield": "光化学应用",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 427,
+        "title": "水浴锅不加热的处理",
+        "subfield": "安全与废物处理",
+        "tierB_keys": [
+          "加热"
+        ]
+      },
+      {
+        "index": 593,
+        "title": "pH与温度控制",
+        "subfield": "摩尔盐相关",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 617,
+        "title": "能用冷水代替热水洗涤FeC₂O₄沉淀吗",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 626,
+        "title": "第三步为什么不能用40°C水浴代替微沸",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "加热",
+          "温度"
+        ]
+      },
+      {
+        "index": 633,
+        "title": "放在冰箱冷藏室代替暗处室温静置可以加速结晶吗",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 689,
+        "title": "FeC2O4沉淀为何趁热倾滗",
+        "subfield": "实验操作",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 808,
+        "title": "Curie定律与室温磁化率测定",
+        "subfield": "磁性研究",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 826,
+        "title": "KMnO₄滴定的温度控制",
+        "subfield": "分析测定",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 851,
+        "title": "影响蓝晒影像质量的因素有哪些？如何获得层次丰富、蓝白分明的照片？",
+        "subfield": "蓝晒工艺",
+        "tierB_keys": [
+          "温度"
+        ]
+      },
+      {
+        "index": 892,
+        "title": "为什么[Fe(C₂O₄)₃]³⁻的翠绿色主要来自LMCT电荷转移而不是d-d跃迁？",
+        "subfield": "配位化学理论",
+        "tierB_keys": [
+          "颜色"
+        ]
+      },
+      {
+        "index": 909,
+        "title": "Fe³⁺和Fe²⁺水合离子的颜色是什么，颜色从何而来？",
+        "subfield": "结构表征",
+        "tierB_keys": [
+          "颜色"
+        ]
+      }
+    ],
+    "low_key_entries": [],
+    "weak_key_entries": [
+      {
+        "index": 0,
+        "title": "产物名称与化学式",
+        "subfield": "结构表征",
+        "weak_keys": [
+          "产物是什么"
+        ]
+      },
+      {
+        "index": 4,
+        "title": "实验教学目标",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么做这个实验"
+        ]
+      },
+      {
+        "index": 7,
+        "title": "溶解度数据",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "多少克",
+          "溶解度是多少"
+        ]
+      },
+      {
+        "index": 11,
+        "title": "热分解方程式",
+        "subfield": "热分析",
+        "weak_keys": [
+          "会怎样"
+        ]
+      },
+      {
+        "index": 13,
+        "title": "水溶液酸碱性",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "ph多少"
+        ]
+      },
+      {
+        "index": 14,
+        "title": "与KSCN不反应",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不显色"
+        ]
+      },
+      {
+        "index": 17,
+        "title": "稳定常数数据",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "稳定常数是多少"
+        ]
+      },
+      {
+        "index": 19,
+        "title": "影响稳定常数的因素",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "为什么稳定"
+        ]
+      },
+      {
+        "index": 20,
+        "title": "螯合效应",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "为什么稳定"
+        ]
+      },
+      {
+        "index": 21,
+        "title": "结晶水数目成因",
+        "subfield": "热分析",
+        "weak_keys": [
+          "为什么是3",
+          "为什么有三个结晶水"
+        ]
+      },
+      {
+        "index": 23,
+        "title": "为何不能直接用Fe3+盐",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不能直接"
+        ]
+      },
+      {
+        "index": 24,
+        "title": "第一步沉淀Ksp分析",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "溶度积是多少"
+        ]
+      },
+      {
+        "index": 25,
+        "title": "为何加稀硫酸溶解莫尔盐",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么加酸",
+          "为什么要加酸"
+        ]
+      },
+      {
+        "index": 26,
+        "title": "洗涤至无硫酸根",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么检验"
+        ]
+      },
+      {
+        "index": 27,
+        "title": "氧化反应电位计算",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "电位是多少"
+        ]
+      },
+      {
+        "index": 28,
+        "title": "氧化为何生成氢氧化铁",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么生成氢氧化铁",
+          "为什么有沉淀"
+        ]
+      },
+      {
+        "index": 30,
+        "title": "氧化完全检验方法",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么检验"
+        ]
+      },
+      {
+        "index": 31,
+        "title": "为何用草酸而不用盐酸溶解",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么用草酸溶解",
+          "能不能用盐酸"
+        ]
+      },
+      {
+        "index": 33,
+        "title": "草酸过量的危害",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么不能过量",
+          "为什么草酸不能多加"
+        ]
+      },
+      {
+        "index": 34,
+        "title": "溶剂替换法结晶原理",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么加乙醇",
+          "为何加乙醇"
+        ]
+      },
+      {
+        "index": 35,
+        "title": "为何不用蒸发结晶",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么不用蒸发",
+          "为什么要浓缩",
+          "母液为什么要浓缩"
+        ]
+      },
+      {
+        "index": 36,
+        "title": "结晶操作参数",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么要静置"
+        ]
+      },
+      {
+        "index": 37,
+        "title": "先沉淀后氧化的设计思想",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么先沉淀",
+          "为什么分四步"
+        ]
+      },
+      {
+        "index": 38,
+        "title": "试剂用量一览",
+        "subfield": "反应原理",
+        "weak_keys": [
+          "称多少",
+          "多少克",
+          "称取多少"
+        ]
+      },
+      {
+        "index": 39,
+        "title": "第一步操作细节",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "第一步怎么做"
+        ]
+      },
+      {
+        "index": 40,
+        "title": "第二步氧化操作细节",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "第二步怎么做"
+        ]
+      },
+      {
+        "index": 41,
+        "title": "第三步配位操作细节",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "第三步怎么做",
+          "为什么微沸"
+        ]
+      },
+      {
+        "index": 42,
+        "title": "第四步结晶操作细节",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "第四步怎么做"
+        ]
+      },
+      {
+        "index": 44,
+        "title": "微沸4分钟目的",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么加热4分钟",
+          "为什么微沸"
+        ]
+      },
+      {
+        "index": 45,
+        "title": "倾滗法技巧",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么分离沉淀"
+        ]
+      },
+      {
+        "index": 47,
+        "title": "产率计算公式与基准",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "如何计算产率",
+          "怎么算产率",
+          "多少算优秀"
+        ]
+      },
+      {
+        "index": 51,
+        "title": "产率过低原因",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么产率低"
+        ]
+      },
+      {
+        "index": 53,
+        "title": "暴沸处理",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么暴沸"
+        ]
+      },
+      {
+        "index": 54,
+        "title": "晶体细小原因",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么慢慢加"
+        ]
+      },
+      {
+        "index": 55,
+        "title": "完整操作流程",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "怎么做这个实验",
+          "实验怎么做"
+        ]
+      },
+      {
+        "index": 56,
+        "title": "内外界确定方法",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "怎么证明",
+          "怎么确定内外界"
+        ]
+      },
+      {
+        "index": 58,
+        "title": "草酸根鉴定的注意事项",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "能不能检验"
+        ]
+      },
+      {
+        "index": 60,
+        "title": "加酸现象与解释",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "颜色如何变化"
+        ]
+      },
+      {
+        "index": 70,
+        "title": "蓝晒操作步骤",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "蓝晒怎么做"
+        ]
+      },
+      {
+        "index": 71,
+        "title": "普鲁士蓝颜色来源",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "普鲁士蓝为什么蓝"
+        ]
+      },
+      {
+        "index": 72,
+        "title": "量子产率",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "量子产率是多少"
+        ]
+      },
+      {
+        "index": 77,
+        "title": "分裂能影响因素",
+        "subfield": "结构表征",
+        "weak_keys": [
+          "为什么4d"
+        ]
+      },
+      {
+        "index": 78,
+        "title": "高低自旋判据",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "如何判断",
+          "怎么判断",
+          "怎么区分"
+        ]
+      },
+      {
+        "index": 81,
+        "title": "颜色与dd跃迁",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么有颜色"
+        ]
+      },
+      {
+        "index": 89,
+        "title": "废液分类处理",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "怎么处理废液",
+          "废液怎么处理"
+        ]
+      },
+      {
+        "index": 97,
+        "title": "产率优化策略",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "怎么提高",
+          "怎样提高",
+          "如何提高"
+        ]
+      },
+      {
+        "index": 100,
+        "title": "铬配合物对比",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么不光敏"
+        ]
+      },
+      {
+        "index": 106,
+        "title": "顺铂与医用配合物",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "顺铂是什么"
+        ]
+      },
+      {
+        "index": 107,
+        "title": "实验报告结构",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "报告怎么写"
+        ]
+      },
+      {
+        "index": 110,
+        "title": "误差计算公式",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "标准偏差怎么算",
+          "rsd怎么算",
+          "误差怎么算",
+          "相对误差怎么算",
+          "偏差怎么算"
+        ]
+      },
+      {
+        "index": 113,
+        "title": "文献引用格式",
+        "subfield": "反应原理",
+        "weak_keys": [
+          "怎么引用"
+        ]
+      },
+      {
+        "index": 117,
+        "title": "设备故障处理",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "加多少水"
+        ]
+      },
+      {
+        "index": 118,
+        "title": "试剂问题识别",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "潮解怎么办",
+          "如何处理"
+        ]
+      },
+      {
+        "index": 119,
+        "title": "穿滤处理",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么穿滤"
+        ]
+      },
+      {
+        "index": 120,
+        "title": "为什么避光保存",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么要避光",
+          "为什么避光"
+        ]
+      },
+      {
+        "index": 121,
+        "title": "乙醇的作用",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么加乙醇"
+        ]
+      },
+      {
+        "index": 122,
+        "title": "H2O2作氧化剂的优点",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么用双氧水",
+          "为什么用过氧化氢",
+          "为什么选"
+        ]
+      },
+      {
+        "index": 123,
+        "title": "莫尔盐为何优于硫酸亚铁",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么用莫尔盐"
+        ]
+      },
+      {
+        "index": 124,
+        "title": "抽滤操作要点",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "为什么先拔"
+        ]
+      },
+      {
+        "index": 125,
+        "title": "温度控制总结",
+        "subfield": "热分析",
+        "weak_keys": [
+          "多少度"
+        ]
+      },
+      {
+        "index": 126,
+        "title": "氧化阶段为何保持40度",
+        "subfield": "热分析",
+        "weak_keys": [
+          "为什么40",
+          "为什么保持",
+          "温度过高会怎样"
+        ]
+      },
+      {
+        "index": 127,
+        "title": "组成测定方法",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么测定组成"
+        ]
+      },
+      {
+        "index": 131,
+        "title": "磁化率测定方法",
+        "subfield": "磁性研究",
+        "weak_keys": [
+          "怎么测磁"
+        ]
+      },
+      {
+        "index": 132,
+        "title": "配合物命名规则",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "怎么命名"
+        ]
+      },
+      {
+        "index": 139,
+        "title": "洗涤晶体为何用乙醇",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么用乙醇洗",
+          "怎么洗涤"
+        ]
+      },
+      {
+        "index": 141,
+        "title": "草酸酸性",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "pka分别是多少"
+        ]
+      },
+      {
+        "index": 149,
+        "title": "溶液浑浊原因",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么浑浊"
+        ]
+      },
+      {
+        "index": 150,
+        "title": "产物保存方法",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "怎么保存",
+          "为什么避光保存"
+        ]
+      },
+      {
+        "index": 152,
+        "title": "产量计算示例",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "理论产量多少"
+        ]
+      },
+      {
+        "index": 154,
+        "title": "沉淀的纯化作用",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么先沉淀"
+        ]
+      },
+      {
+        "index": 161,
+        "title": "草酸为何逐滴加入",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么逐滴",
+          "为什么慢慢加",
+          "草酸为什么不能一次加"
+        ]
+      },
+      {
+        "index": 163,
+        "title": "为何煮沸除双氧水",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么煮沸"
+        ]
+      },
+      {
+        "index": 167,
+        "title": "母液处理",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "滤液怎么处理"
+        ]
+      },
+      {
+        "index": 173,
+        "title": "烘箱温度为何50度",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么50度"
+        ]
+      },
+      {
+        "index": 174,
+        "title": "草酸钾的作用",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么加草酸钾"
+        ]
+      },
+      {
+        "index": 178,
+        "title": "倾滗vs过滤",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么用倾滗"
+        ]
+      },
+      {
+        "index": 179,
+        "title": "产率数据记录规范",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么记录"
+        ]
+      },
+      {
+        "index": 181,
+        "title": "高自旋为何颜色不浓",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "吸收为什么弱",
+          "为什么弱"
+        ]
+      },
+      {
+        "index": 182,
+        "title": "提高产率的量化效果",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "提升多少"
+        ]
+      },
+      {
+        "index": 186,
+        "title": "反应机理总述",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "怎么反应的"
+        ]
+      },
+      {
+        "index": 190,
+        "title": "实验的地位",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么经典"
+        ]
+      },
+      {
+        "index": 194,
+        "title": "倾滗时热水洗涤",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么用热水洗",
+          "为什么沉淀后"
+        ]
+      },
+      {
+        "index": 195,
+        "title": "摘要怎么写",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "多少字"
+        ]
+      },
+      {
+        "index": 196,
+        "title": "结果与讨论写什么",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "讨论怎么写"
+        ]
+      },
+      {
+        "index": 243,
+        "title": "配体定义",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "配体是什么"
+        ]
+      },
+      {
+        "index": 246,
+        "title": "为什么用H2O2而不用KMnO4",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不用高锰酸钾"
+        ]
+      },
+      {
+        "index": 247,
+        "title": "为何要搅拌",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么搅拌"
+        ]
+      },
+      {
+        "index": 254,
+        "title": "两步草酸的区别",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么加两次草酸"
+        ]
+      },
+      {
+        "index": 256,
+        "title": "未成对电子数怎么算",
+        "subfield": "磁性研究",
+        "weak_keys": [
+          "怎么算未成对"
+        ]
+      },
+      {
+        "index": 264,
+        "title": "加乙醇量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "乙醇加多少"
+        ]
+      },
+      {
+        "index": 265,
+        "title": "沉淀颜色",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "沉淀是什么颜色"
+        ]
+      },
+      {
+        "index": 270,
+        "title": "溶液发黄处理",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "发黄怎么办"
+        ]
+      },
+      {
+        "index": 271,
+        "title": "蓝晒避光原因",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "蓝晒为什么避光"
+        ]
+      },
+      {
+        "index": 278,
+        "title": "d5构型CFSE",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "为什么cfse为零"
+        ]
+      },
+      {
+        "index": 282,
+        "title": "水浴锅温度控制",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "加多少水",
+          "多少水"
+        ]
+      },
+      {
+        "index": 283,
+        "title": "草酸溶液配制",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "草酸溶液怎么配"
+        ]
+      },
+      {
+        "index": 288,
+        "title": "翠绿色来源",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么是翠绿色",
+          "为什么呈绿色"
+        ]
+      },
+      {
+        "index": 289,
+        "title": "称量方法",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么称量"
+        ]
+      },
+      {
+        "index": 295,
+        "title": "结晶技巧：如何结出大晶体",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "晶体怎么",
+          "怎么结晶",
+          "如何结晶"
+        ]
+      },
+      {
+        "index": 298,
+        "title": "密度数值",
+        "subfield": "综合研究",
+        "weak_keys": [
+          "密度是多少",
+          "多少克每立方厘米"
+        ]
+      },
+      {
+        "index": 299,
+        "title": "失水（脱水）温度",
+        "subfield": "热分析",
+        "weak_keys": [
+          "多少度失去结晶水"
+        ]
+      },
+      {
+        "index": 300,
+        "title": "分解温度",
+        "subfield": "热分析",
+        "weak_keys": [
+          "多少度分解"
+        ]
+      },
+      {
+        "index": 301,
+        "title": "吸收波段",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "多少纳米"
+        ]
+      },
+      {
+        "index": 305,
+        "title": "实测磁矩数值",
+        "subfield": "磁性研究",
+        "weak_keys": [
+          "磁矩是多少"
+        ]
+      },
+      {
+        "index": 306,
+        "title": "加热方式",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么加热",
+          "为什么用水浴",
+          "为何用水浴",
+          "为什么水浴"
+        ]
+      },
+      {
+        "index": 308,
+        "title": "结晶溶液体积",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "多少毫升"
+        ]
+      },
+      {
+        "index": 313,
+        "title": "各试剂称取量",
+        "subfield": "反应原理",
+        "weak_keys": [
+          "各称多少"
+        ]
+      },
+      {
+        "index": 314,
+        "title": "各阶段温度一览",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "多少度"
+        ]
+      },
+      {
+        "index": 316,
+        "title": "教学采用历史",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "多少年"
+        ]
+      },
+      {
+        "index": 324,
+        "title": "废液桶容量上限",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "装多少"
+        ]
+      },
+      {
+        "index": 335,
+        "title": "理论产量数值",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "理论产量是多少"
+        ]
+      },
+      {
+        "index": 336,
+        "title": "恒重判据",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "恒重怎么",
+          "恒重怎么判断",
+          "恒重如何"
+        ]
+      },
+      {
+        "index": 342,
+        "title": "微沸温度数值",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "微沸多少度"
+        ]
+      },
+      {
+        "index": 348,
+        "title": "实验中的氧化剂与还原剂",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "氧化剂是什么"
+        ]
+      },
+      {
+        "index": 350,
+        "title": "盖表面皿的目的",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么盖"
+        ]
+      },
+      {
+        "index": 351,
+        "title": "第一步莫尔盐用量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "莫尔盐多少克"
+        ]
+      },
+      {
+        "index": 352,
+        "title": "第一步硫酸用量浓度",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "加多少硫酸"
+        ]
+      },
+      {
+        "index": 353,
+        "title": "第一步加水量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "加多少水",
+          "多少毫升",
+          "多少毫升水"
+        ]
+      },
+      {
+        "index": 354,
+        "title": "第一步草酸用量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "草酸多少克",
+          "称多少草酸"
+        ]
+      },
+      {
+        "index": 355,
+        "title": "第二步草酸钾用量",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "草酸钾多少克"
+        ]
+      },
+      {
+        "index": 356,
+        "title": "第二步过氧化氢用量浓度",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "双氧水多少"
+        ]
+      },
+      {
+        "index": 357,
+        "title": "第二步反应温度",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "氧化温度多少"
+        ]
+      },
+      {
+        "index": 359,
+        "title": "第四步乙醇用量浓度",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "加多少乙醇"
+        ]
+      },
+      {
+        "index": 360,
+        "title": "第四步烘干条件",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么干燥"
+        ]
+      },
+      {
+        "index": 369,
+        "title": "有效数字记录规则",
+        "subfield": "反应原理",
+        "weak_keys": [
+          "怎么记录数据"
+        ]
+      },
+      {
+        "index": 370,
+        "title": "K+鉴定（试剂现象沉淀）",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么检验钾"
+        ]
+      },
+      {
+        "index": 371,
+        "title": "草酸根鉴定（试剂现象沉淀）",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "怎么检验草酸根"
+        ]
+      },
+      {
+        "index": 372,
+        "title": "Fe3+鉴定（试剂现象）",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么检验铁离子",
+          "怎么鉴定",
+          "如何鉴定"
+        ]
+      },
+      {
+        "index": 376,
+        "title": "乙醇安全处置",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "酒精着火怎么办"
+        ]
+      },
+      {
+        "index": 396,
+        "title": "本实验的反应物清单",
+        "subfield": "配位化学理论",
+        "weak_keys": [
+          "原料有哪些"
+        ]
+      },
+      {
+        "index": 397,
+        "title": "滴管尖端距液面距离",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "多少厘米"
+        ]
+      },
+      {
+        "index": 400,
+        "title": "配位温度的数值",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "配位多少度"
+        ]
+      },
+      {
+        "index": 402,
+        "title": "草酸钾潮解后的烘干温度",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "多少度烘干"
+        ]
+      },
+      {
+        "index": 405,
+        "title": "草酸经验用量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "草酸需要多少"
+        ]
+      },
+      {
+        "index": 411,
+        "title": "产率低：H2O2分解失效",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "h2o2为什么分解"
+        ]
+      },
+      {
+        "index": 447,
+        "title": "检验产物中K2SO4杂质",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "怎么检验杂质"
+        ]
+      },
+      {
+        "index": 450,
+        "title": "检验结晶水含量",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "结晶水含量怎么测"
+        ]
+      },
+      {
+        "index": 457,
+        "title": "草酸过量或不足的量化后果",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "草酸多少的影响",
+          "草酸加多少的影响"
+        ]
+      },
+      {
+        "index": 459,
+        "title": "设计实验检验产物纯度",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么检验纯度"
+        ]
+      },
+      {
+        "index": 460,
+        "title": "校准曲线的制作",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "怎么做校准曲线"
+        ]
+      },
+      {
+        "index": 467,
+        "title": "为何逐滴加入过氧化氢",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么逐滴"
+        ]
+      },
+      {
+        "index": 469,
+        "title": "Fe(OH)3是怎么生成的",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "怎么生成",
+          "怎么来的"
+        ]
+      },
+      {
+        "index": 483,
+        "title": "实验安全注意事项",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "安全有哪些"
+        ]
+      },
+      {
+        "index": 484,
+        "title": "KMnO4滴定不能用的酸",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不能用盐酸",
+          "为什么不能用硝酸"
+        ]
+      },
+      {
+        "index": 485,
+        "title": "氧化步骤为何先加草酸钾",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么先加"
+        ]
+      },
+      {
+        "index": 487,
+        "title": "螯合效应的热力学解释",
+        "subfield": "结构表征",
+        "weak_keys": [
+          "为什么稳定"
+        ]
+      },
+      {
+        "index": 491,
+        "title": "KMnO4滴定自催化与温度条件",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么开始慢"
+        ]
+      },
+      {
+        "index": 493,
+        "title": "乙醇在本实验中的完整作用",
+        "subfield": "实验教学",
+        "weak_keys": [
+          "为什么加乙醇"
+        ]
+      },
+      {
+        "index": 494,
+        "title": "加热步骤有哪些",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "加热有哪些"
+        ]
+      },
+      {
+        "index": 495,
+        "title": "水溶液颜色与稀释",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "溶液是什么颜色"
+        ]
+      },
+      {
+        "index": 498,
+        "title": "产率仅15%的情景诊断与四种对策",
+        "subfield": "综合研究",
+        "weak_keys": [
+          "为什么产率这么低"
+        ]
+      },
+      {
+        "index": 500,
+        "title": "结晶质量优化——粉末vs大颗粒晶体",
+        "subfield": "综合研究",
+        "weak_keys": [
+          "为什么是粉末"
+        ]
+      },
+      {
+        "index": 503,
+        "title": "莫尔盐vs绿矾作为铁源的比较",
+        "subfield": "综合研究",
+        "weak_keys": [
+          "为什么用莫尔盐"
+        ]
+      },
+      {
+        "index": 509,
+        "title": "RSD相对标准偏差计算（含完整计算过程）",
+        "subfield": "高等理论",
+        "weak_keys": [
+          "标准偏差怎么算"
+        ]
+      },
+      {
+        "index": 512,
+        "title": "Jahn-Teller效应与配合物结构畸变详解",
+        "subfield": "高等理论",
+        "weak_keys": [
+          "为什么没有畸变",
+          "为什么不畸变"
+        ]
+      },
+      {
+        "index": 515,
+        "title": "顺铂(cisplatin)抗癌机理与几何异构差异",
+        "subfield": "高等理论",
+        "weak_keys": [
+          "为什么会",
+          "为什么反铂"
+        ]
+      },
+      {
+        "index": 517,
+        "title": "FeC2O4·2H2O溶解度异常",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么热水洗"
+        ]
+      },
+      {
+        "index": 519,
+        "title": "6% H2O2 8mL具体用量",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "H2O2多少毫升"
+        ]
+      },
+      {
+        "index": 520,
+        "title": "Mohr盐稳定性--水分类理论",
+        "subfield": "结构表征",
+        "weak_keys": [
+          "为什么莫尔盐稳定"
+        ]
+      },
+      {
+        "index": 525,
+        "title": "KMnO4滴定草酸根的自催化机理（含Mn(III)中间体）",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么先慢后快"
+        ]
+      },
+      {
+        "index": 533,
+        "title": "第一步反应类型：复分解vs氧化还原判据",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么是复分解"
+        ]
+      },
+      {
+        "index": 537,
+        "title": "摩尔盐为何遇空气变黄及防止氧化的方法",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么变黄"
+        ]
+      },
+      {
+        "index": 606,
+        "title": "抽滤滤纸的润湿与密封原理",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么润湿"
+        ]
+      },
+      {
+        "index": 610,
+        "title": "恒重判据0.002g的由来",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "0.002为什么"
+        ]
+      },
+      {
+        "index": 620,
+        "title": "H₂O₂加多了不煮沸就进行下一步会怎样",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "多加会怎样"
+        ]
+      },
+      {
+        "index": 626,
+        "title": "第三步为什么不能用40°C水浴代替微沸",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么微沸"
+        ]
+      },
+      {
+        "index": 641,
+        "title": "为什么不能用80°C加速烘干——50°C太慢了",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么不能80"
+        ]
+      },
+      {
+        "index": 648,
+        "title": "莫尔盐变黄能否使用",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "还能不能用"
+        ]
+      },
+      {
+        "index": 649,
+        "title": "溶解莫尔盐的水量",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "水量多少"
+        ]
+      },
+      {
+        "index": 650,
+        "title": "为何必须用蒸馏水溶解",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么不用自来水"
+        ]
+      },
+      {
+        "index": 652,
+        "title": "草酸溶液不加热的后果",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么加热草酸"
+        ]
+      },
+      {
+        "index": 656,
+        "title": "洗涤沉淀必须用热水",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不用冷水"
+        ]
+      },
+      {
+        "index": 659,
+        "title": "氧化温度40℃的科学依据",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么40度"
+        ]
+      },
+      {
+        "index": 661,
+        "title": "除H2O2煮沸时间的精密控制",
+        "subfield": "热分析",
+        "weak_keys": [
+          "为什么2分钟"
+        ]
+      },
+      {
+        "index": 665,
+        "title": "配位步需保持微沸的理由",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么微沸",
+          "配位为何加热"
+        ]
+      },
+      {
+        "index": 667,
+        "title": "母液过度浓缩的危害",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么浓缩"
+        ]
+      },
+      {
+        "index": 669,
+        "title": "棉线作为晶核提供者",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么挂棉线"
+        ]
+      },
+      {
+        "index": 671,
+        "title": "为何使用95%乙醇而非无水乙醇",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么95乙醇"
+        ]
+      },
+      {
+        "index": 672,
+        "title": "晶体洗涤必须用冷乙醇",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么冷乙醇"
+        ]
+      },
+      {
+        "index": 676,
+        "title": "产物必须棕色瓶避光储存",
+        "subfield": "光化学应用",
+        "weak_keys": [
+          "为什么棕色"
+        ]
+      },
+      {
+        "index": 680,
+        "title": "微沸步骤为何需通风橱",
+        "subfield": "安全与废物处理",
+        "weak_keys": [
+          "为什么通风"
+        ]
+      },
+      {
+        "index": 681,
+        "title": "产率计算基准的选择",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么不能算"
+        ]
+      },
+      {
+        "index": 687,
+        "title": "Fe3+与草酸根的氧化还原",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么不能用铁离子"
+        ]
+      },
+      {
+        "index": 690,
+        "title": "干燥器储存的原理与维护",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为何干燥器"
+        ]
+      },
+      {
+        "index": 691,
+        "title": "产率计算需要重复实验吗",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么要称三次"
+        ]
+      },
+      {
+        "index": 694,
+        "title": "Fe2+被空气氧化的动力学",
+        "subfield": "分析测定",
+        "weak_keys": [
+          "为什么容易氧化"
+        ]
+      },
+      {
+        "index": 696,
+        "title": "混合瞬间的浓度梯度如何影响FeC2O4沉淀",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "浓度梯度是什么"
+        ]
+      },
+      {
+        "index": 699,
+        "title": "K2C2O4/H2C2O4缓冲对如何精确维持氧化步骤pH",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "缓冲对是什么"
+        ]
+      },
+      {
+        "index": 701,
+        "title": "为何6步操作不可压缩为3-4步",
+        "subfield": "合成制备",
+        "weak_keys": [
+          "为什么六步",
+          "为什么四步",
+          "能否两步",
+          "为什么不能合并"
+        ]
+      },
+      {
+        "index": 720,
+        "title": "抽滤滤纸的润湿与密封原理",
+        "subfield": "实验操作",
+        "weak_keys": [
+          "为什么润湿"
+        ]
+      },
+      {
+        "index": 833,
+        "title": "为什么制备硫酸亚铁铵要用废铁屑并让铁屑过量？",
+        "subfield": "摩尔盐相关",
+        "weak_keys": [
+          "为什么用废铁屑"
+        ]
+      },
+      {
+        "index": 834,
+        "title": "制备硫酸亚铁铵时为什么要保持溶液酸性？",
+        "subfield": "摩尔盐相关",
+        "weak_keys": [
+          "为什么加硫酸"
+        ]
+      },
+      {
+        "index": 842,
+        "title": "硫酸亚铁铵（铁屑法）制备的关键操作步骤有哪些？",
+        "subfield": "摩尔盐相关",
+        "weak_keys": [
+          "怎么制备"
+        ]
+      },
+      {
+        "index": 844,
+        "title": "为什么检验亚铁离子时要用不含氧的蒸馏水？",
+        "subfield": "摩尔盐相关",
+        "weak_keys": [
+          "为什么用无氧水"
+        ]
+      },
+      {
+        "index": 847,
+        "title": "蓝晒感光液为什么要分A、B两液保存，使用前才等体积混合？",
+        "subfield": "蓝晒工艺",
+        "weak_keys": [
+          "为什么分开放"
+        ]
+      },
+      {
+        "index": 849,
+        "title": "蓝晒曝光后为什么要用流水水洗显影？水洗为什么能同时显影和定影？",
+        "subfield": "蓝晒工艺",
+        "weak_keys": [
+          "为什么水洗"
+        ]
+      },
+      {
+        "index": 853,
+        "title": "为什么蓝晒要用紫外光曝光？普通室内灯光可以吗？",
+        "subfield": "蓝晒工艺",
+        "weak_keys": [
+          "为什么紫外"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "faq_count_stable": true,
+    "proj_low_key_count": 0,
+    "proj_duplicate_keys": []
+  }
+}

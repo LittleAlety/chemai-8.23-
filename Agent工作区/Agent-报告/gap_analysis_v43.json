@@ -1,0 +1,2516 @@
+{
+  "generated_at": "2026-08-14",
+  "total_faq": 916,
+  "corpus_total": 355,
+  "referenced_ids": [
+    210,
+    211,
+    251,
+    315,
+    318,
+    320,
+    327,
+    329,
+    339,
+    340
+  ],
+  "invalid_refs": [],
+  "referenced_entries_count": 17,
+  "unreferenced_total": 345,
+  "unreferenced_corpus": [
+    {
+      "id": 1,
+      "title": "Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 2,
+      "title": "Photochemistry",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 4,
+      "title": "bridging-chemistry-and-creativity-a-cyanotype-photography-toning-and-uv-shielding-for-first-year-undergraduate",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 5,
+      "title": "flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 6,
+      "title": "introducing-the-human-element-in-chemistry-by-synthesizing-blue-pigments-and-creating-cyanotypes-in-a-first",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 7,
+      "title": "三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 8,
+      "title": "三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 10,
+      "title": "Oxalate Stoichiometry ed1002702 si 002",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 11,
+      "title": "ANALYSIS OF A COMPLEX IRON",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 12,
+      "title": "OxalateTitration",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 13,
+      "title": "molecular-charge-transfer-salt-of-bedt-ttf-bis(ethylenedithio)tetrathiafulvalene-with-the-oxalate-bridged-dimeric",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 15,
+      "title": "1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 17,
+      "title": "1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 20,
+      "title": "Fe OH 3溶胶制备及其纯化新方法",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 21,
+      "title": "Prep & Analysis of Iron Coord. Comp. Prt. A F 08",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 22,
+      "title": "Prep and Analysis of a Coordination",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 23,
+      "title": "Preparation and Analysis of Potassium",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 24,
+      "title": "Preparation of an Iron",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 25,
+      "title": "Synthesis of Potassium Ferric Oxalate",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 26,
+      "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate FeCL3",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 27,
+      "title": "The Synthesis, Chemistry and Magnetic Properties of Potassium Trioxalatoferrate(III)",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 28,
+      "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 30,
+      "title": "ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 32,
+      "title": "preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 33,
+      "title": "preparation-and-characterization-of-intercalation-compounds-of-layered-double-hydroxides-with-metallic-oxalato",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 34,
+      "title": "recovery-of-iron-resources-from-wet-process-phosphoric-acid-and-the-preparation-of-high-purity-ferrous-oxalate",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 35,
+      "title": "synthesis-of-potassium",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 36,
+      "title": "三草酸合铁 (III)酸钾的合成",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 40,
+      "title": "三草酸合铁 酸钾的合成及结构组成测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 43,
+      "title": "三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 44,
+      "title": "三草酸合铁(Ⅲ)酸钾绿色合成与结构表征",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 45,
+      "title": "三草酸合铁酸碱的制备及测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 47,
+      "title": "三草酸合铁酸钾的制备及性质",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 48,
+      "title": "三草酸合铁酸钾的制备及性质—完整",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 49,
+      "title": "三草酸合铁酸钾的制备及组成确定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 51,
+      "title": "三草酸合铁酸钾的合成及磁化率的测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 52,
+      "title": "三草酸合铁（Ⅲ）酸钾的制备及组成测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 53,
+      "title": "三草酸合铁（Ⅲ）酸钾的制备和组成测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 54,
+      "title": "三草酸＆铁酸钾的制备及表征",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 55,
+      "title": "二水合二草酸合铜 酸钾的制备和组成测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 56,
+      "title": "二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 57,
+      "title": "二草酸合铜酸钾制备中的疑难问题",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 59,
+      "title": "合成及组成分析",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 69,
+      "title": "探究两种水合草酸合铜(II)酸钾晶体的合成",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 73,
+      "title": "硫酸亚铁铵制备三草酸合铁酸钾的思考",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 76,
+      "title": "草酸合铁酸钾的制备及其离子电荷的测定",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 80,
+      "title": "ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid",
+      "subfield": "实验教学",
+      "doctype": "实验研究",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 84,
+      "title": "1",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 85,
+      "title": "10",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 86,
+      "title": "18",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 87,
+      "title": "Fe2SO4",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 88,
+      "title": "FeSO4",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 89,
+      "title": "Ferrous Ammonium",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 90,
+      "title": "SULFATE MINERAL PHASE EQUILIBRIA AS A FUNCTION OF RELATIVE HUMIDITY.",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 91,
+      "title": "melanterite",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 92,
+      "title": "melanterite-绿矾",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 93,
+      "title": "《硫酸亚铁铵的制备》简介",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 94,
+      "title": "七水合硫酸亚铁热分解及脱水非等温动力学研究",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 95,
+      "title": "七水硫酸亚铁的热分解动力学研究",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 96,
+      "title": "七水硫酸锌脱水机理热力学初探",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 97,
+      "title": "三、硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 98,
+      "title": "五水硫酸铜脱水机理的热力学求算",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 99,
+      "title": "关于硫酸亚铁铵稳定性的讨论",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 100,
+      "title": "利用七水硫酸亚铁生产一水硫酸亚铁及聚合硫酸铁",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 102,
+      "title": "南大-硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 107,
+      "title": "巧制硫酸亚铁铵晶体",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 108,
+      "title": "差热分析 DTA 法研究五水硫酸铜的失水过程",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 109,
+      "title": "摩尔盐的空气稳定性",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 110,
+      "title": "气相色谱法测定五水硫酸铜的脱水机理",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 111,
+      "title": "由废白铁制备硫酸亚铁铵-完结",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 112,
+      "title": "电导，电导率和摩尔电导率",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 113,
+      "title": "硫酸亚铁",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 114,
+      "title": "硫酸亚铁铵",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 115,
+      "title": "硫酸亚铁铵制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 118,
+      "title": "硫酸亚铁铵的制",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 119,
+      "title": "硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 120,
+      "title": "硫酸亚铁铵的制备1",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 121,
+      "title": "硫酸亚铁铵的制备及纯度分析",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 122,
+      "title": "硫酸亚铁铵的制备及纯度检验",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 123,
+      "title": "硫酸亚铁铵的制备及质量鉴定",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 124,
+      "title": "莫尔盐的空气稳定性",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 125,
+      "title": "论五水合硫酸铜中结晶水的结构形态",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 126,
+      "title": "马口铁与白铁区别",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 127,
+      "title": "Cr Fe Al Cu 草酸配合物热分析研究",
+      "subfield": "热分析",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 128,
+      "title": "Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究",
+      "subfield": "热分析",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 129,
+      "title": "复盐K 3Fe C 2O 4 3 3H 2O的热分析研究",
+      "subfield": "热分析",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 130,
+      "title": "ed079p1002-Simple Measurement of Magnetic Susceptibility with a Small Permanent Magnet and a Top-Loading Electronic",
+      "subfield": "磁性研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 131,
+      "title": "molecular-based-magnetism-in-bimetallic-two-dimensional-oxalate-bridged-networks-an-x-ray-and-neutron-diffraction",
+      "subfield": "磁性研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 132,
+      "title": "radical-salts-of-bis(ethylenediseleno)tetrathiafulvalene-with-paramagnetic-tris(oxalato)metalate",
+      "subfield": "磁性研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 133,
+      "title": "络合物的磁化率测定",
+      "subfield": "磁性研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 134,
+      "title": "growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)",
+      "subfield": "结构表征",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 135,
+      "title": "“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素",
+      "subfield": "结构表征",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 136,
+      "title": "草酸分子结构与性质的量子化学计算研究",
+      "subfield": "结构表征",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 137,
+      "title": "2008-prussian-blue-artists-pigment-and-chemists",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 138,
+      "title": "Ferric Oxalate Making",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 140,
+      "title": "SciPPTalk5,6,7",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 141,
+      "title": "[Cu2(μ-C2O4)(Him2-py)2(H2O)2] (NO3)2-from K3[Fe(C2O4)3]",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 142,
+      "title": "cm3c00063 si 001",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 143,
+      "title": "ed047p702",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 144,
+      "title": "ed050p218",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 145,
+      "title": "ed064p955-Mohr's salt as a wide coverage testing material for analytical chemistry",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 146,
+      "title": "ed065p918",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 147,
+      "title": "ed075p98-The Ligand Field Spectra of Copper(II)",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 148,
+      "title": "ed081p1193-Potassium Tris(oxalato)ferrate(III) A Versatile",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 149,
+      "title": "ed1c00776 si 001",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 150,
+      "title": "ed1c00776 si 002",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 151,
+      "title": "ed500809n si 001",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 152,
+      "title": "ed500809n si 002",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 153,
+      "title": "ed5c01101 si 002",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 154,
+      "title": "ed800051jA Simplified Approach to the Basis Functions of Symmetry Operations and Terms of Metal Complexes in an Octahedral Field with d1 to d9",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 155,
+      "title": "ic061494psi20060808 022446",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 156,
+      "title": "ic2301",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 157,
+      "title": "influence-of-electronic-spin-and-spin-orbit-coupling-on-decoherence-in-mononuclear-transition-metal",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 158,
+      "title": "intercalation-of-cr(c2o4)3-3-complex-in-mg-al-layered-double",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 159,
+      "title": "ja5037397 si 003",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 160,
+      "title": "jce2004p1193w",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 161,
+      "title": "jce2004p1193w (1)",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 162,
+      "title": "jce2004p1193w-Potassium Tris(oxalato)ferrate(III) A Versatile Compound To Illustrate the Principles of Chemical",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 163,
+      "title": "jce2005p1667w",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 164,
+      "title": "k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 165,
+      "title": "potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of-chemical-equilibria (1)",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 166,
+      "title": "rspa.1956.0102",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 167,
+      "title": "sc3c05944 si 001",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 168,
+      "title": "the-chemistry-of-the-metal-oxalato",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 169,
+      "title": "the-mechanism-of-the-permanganate-oxalate",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 170,
+      "title": "三草酸合铁 酸钾测定方法的探讨",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 171,
+      "title": "三草酸合铁酸钾",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 172,
+      "title": "三草酸合铁酸钾 II-30号会议",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 174,
+      "title": "二水合二草酸根络铜 酸钾的制取及其组成测定",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 175,
+      "title": "分 析 化 学 实 验",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 177,
+      "title": "复盐草酸合Fe Cu 酸钾标准生成焓的测定",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 179,
+      "title": "硫酸亚铁铵和硫酸亚铁稳定性的对比研究",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 180,
+      "title": "结晶的方法通常有蒸发结晶和降温结晶",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 181,
+      "title": "配合物",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 182,
+      "title": "配合物氧化态与配体",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 183,
+      "title": "AnsSheet",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 184,
+      "title": "Appen",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 185,
+      "title": "Fe(Ⅲ)草酸盐络合物的光化学性质及其应用",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 186,
+      "title": "K2CuC2O4 1-s2.0-S0020169301004662",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 187,
+      "title": "Prob 5final",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 188,
+      "title": "Prob1",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 189,
+      "title": "Prob2final",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 190,
+      "title": "Prob3",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 191,
+      "title": "Prob4",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 192,
+      "title": "Prob6final",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 193,
+      "title": "acs.jchemed.8b00399",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 195,
+      "title": "ed082p1667",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 196,
+      "title": "j100607a005",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 197,
+      "title": "ja00826a017",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 198,
+      "title": "ja01613a002",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 199,
+      "title": "jp312603m",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 200,
+      "title": "一个新的Cd(Ⅱ)草酸配合物的合成和结构研究",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 201,
+      "title": "一种确定固相反应机理函数的...合物脱水过程的非等温动力学",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 202,
+      "title": "二草酸合铜",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 203,
+      "title": "二草酸合铜酸钾产品探究 李俊玲 (1)",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 204,
+      "title": "二草酸合铜酸钾的绿色制备和形貌控制",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 205,
+      "title": "对传统二草酸合铜(II)酸钾化学式的书写纠正",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 207,
+      "title": "第13届无机试题-碳酸铜钠的制备及表征",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 208,
+      "title": "草酸根合铁（Ⅲ）酸钾的制备及表征——全面",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 209,
+      "title": "铁与铬的草酸配合物的热分析动力学研究",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 215,
+      "title": "balzani-et-al-1983-electron-transfer-reactions-involving",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 216,
+      "title": "dean-2011-the-oxalate-dianion-c2o42-planar-or",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 217,
+      "title": "ed0c00171 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 218,
+      "title": "ed0c00171 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 219,
+      "title": "ed1002702 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 220,
+      "title": "ed1002702 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 221,
+      "title": "ed1c00776 si 001 (1)",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 222,
+      "title": "ed2c00767 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 223,
+      "title": "ed2c01089 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 224,
+      "title": "ed2c01089 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 225,
+      "title": "ed2c01089 si 003",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 226,
+      "title": "ed2c01089 si 004",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 227,
+      "title": "ed2c01089 si 005",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 228,
+      "title": "ed2c01089 si 006",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 229,
+      "title": "ed2c01089 si 007",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 230,
+      "title": "ed2c01089 si 008",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 231,
+      "title": "ed2c01089 si 009",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 232,
+      "title": "ed2c01089 si 010",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 233,
+      "title": "ed3c00738 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 234,
+      "title": "ed3c00738 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 235,
+      "title": "ed3c00738 si 004",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 236,
+      "title": "ed3c00738 si 005",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 237,
+      "title": "ed3c00738 si 007",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 238,
+      "title": "ed3c00738 si 008",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 239,
+      "title": "ed3c00738 si 010",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 240,
+      "title": "ed3c00738 si 011",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 241,
+      "title": "ed5b00160 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 242,
+      "title": "ed5b00160 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 243,
+      "title": "ed6b00644 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 244,
+      "title": "ed6b00644 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 245,
+      "title": "ed9b00638 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 246,
+      "title": "ed9b00638 si 002",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 247,
+      "title": "es2c07897 si 001",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 248,
+      "title": "gonzález-seco-2004-potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 250,
+      "title": "junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 252,
+      "title": "lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 253,
+      "title": "lawrence-fishelson-1999-uv-catalysis-cyanotype-photography-and",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 255,
+      "title": "maclean-1937-a-project-for-general-chemistry-students-color-toning-of-photographic",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 256,
+      "title": "meek-et-al-2016-deducing-reaction-mechanism-a-guide-for-students-researchers-and",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 258,
+      "title": "morizot-et-al-2014-introducing-the-human-element-in-chemistry-by-synthesizing-blue-pigments-and-creating-cyanotypes",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 260,
+      "title": "parker-et-al-2021-nanochemical-activity-for-undergraduates-with-chemtoy2",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 261,
+      "title": "parmeggiani-2014-fear-of-the-dark-diazo-printing-by-photochemical-decomposition-of-aryldiazonium",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 264,
+      "title": "s10562-005-6500-z",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 268,
+      "title": "uchida-et-al-2023-discovery-based-approach-to-identify-multiple-factors-that-affect-the-spin-state-of",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 269,
+      "title": "vannatta-et-al-2010-oxalate-synthesis-and-pyrolysis-a-colorful-introduction-to",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 271,
+      "title": "vogler-kunkely-1982-photochemistry-and",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 273,
+      "title": "wang-et-al-2023-rapid-redox-cycling-of-fe(ii)-fe(iii)-in-microdroplets-during-iron-citric-acid",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 274,
+      "title": "ware-2008-prussian-blue-artists-pigment-and-chemists",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 275,
+      "title": "那一抹“蓝色”",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 276,
+      "title": "铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 292,
+      "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 294,
+      "title": "草酸合铁酸钾的制备及其离子电荷的测定",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 295,
+      "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 301,
+      "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 317,
+      "title": "Magnetic Moment Measurement of a Coordination Complex",
+      "subfield": "磁性研究",
+      "doctype": "实验研究",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 319,
+      "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+      "subfield": "综合研究",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 321,
+      "title": "Kinetic analysis of nitroxide radical formation under oxygenated photolysis",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 324,
+      "title": "Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate",
+      "subfield": "结构表征",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 326,
+      "title": "光化学动力学分光光度法测定柠檬酸",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 330,
+      "title": "邻菲啰啉分光光度法测定食用盐中柠檬酸铁铵的实际运用",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 332,
+      "title": "柠檬酸铁(Ⅲ)络合物的光致变色现象与柠檬酸的测定",
+      "subfield": "分析测定",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 334,
+      "title": "柠檬酸铁铵的制备",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 335,
+      "title": "柠檬酸铁铵的制备方法",
+      "subfield": "合成制备",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 336,
+      "title": "铁(Ⅲ)-柠檬酸的光化学反应及其应用",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 337,
+      "title": "铁(Ⅲ)-柠檬酸盐配合物光解引发橙黄Ⅱ的脱色",
+      "subfield": "光化学应用",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 347,
+      "title": "摩尔盐的空气稳定性",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 351,
+      "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 352,
+      "title": "二草酸合铜酸钾的绿色制备和形貌控制",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 353,
+      "title": "二草酸合铜酸钾制备中的疑难问题",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 354,
+      "title": "探究两种水合草酸合铜(II)酸钾晶体的合成",
+      "subfield": "草酸配合物",
+      "doctype": "实验研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 293,
+      "title": "三草酸合铁酸钾的制备及其性质（周二）",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 298,
+      "title": "《实验化学》的实施总结（执信中学）",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 3,
+      "title": "a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)",
+      "subfield": "光化学应用",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 14,
+      "title": "思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学",
+      "subfield": "分析测定",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 16,
+      "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 18,
+      "title": "EXPERIMENT 1 Preparation of a Coordination",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 19,
+      "title": "Experiment 2 - The Preparation of an Oxalate",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 29,
+      "title": "ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 31,
+      "title": "morphology-controllable-synthesis-of-microporous-prussian-blue-analogue-zn3-co(cn)6-2-xh2o",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 37,
+      "title": "三草酸合铁 酸钾制备实验探索",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 38,
+      "title": "三草酸合铁 酸钾制备实验的探究",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 50,
+      "title": "三草酸合铁酸钾的制备实验的思考",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 58,
+      "title": "以硫酸亚铁铵的制备实验为例...用基础化学实验教学中的探索",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 60,
+      "title": "同铁不同性：FeSO 4·...—硫酸亚铁铵制备的改进实验",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 61,
+      "title": "在基础化学实验教学过程中如...以“经典合成实验”教学为例",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 62,
+      "title": "在基础化学实验教学过程中如何培养学生“想”的意识——以“经典合成实验”教学为例",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 63,
+      "title": "大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 64,
+      "title": "实验十 三草酸合铁(III)酸钾的制备及组",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 65,
+      "title": "实验四十一 三草酸合铁(Ⅲ)酸钾的合成及组成测定",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 68,
+      "title": "废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 70,
+      "title": "无机化学实验教学中对三草酸...Ⅲ) 酸钾制备的实验改进",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 71,
+      "title": "无机化学实验教学中对三草酸合铁 酸钾制备的实验改进",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 72,
+      "title": "硫酸亚铁铵制备三草酸合铁(Ⅲ)酸钾的实验探索",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 74,
+      "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 75,
+      "title": "翻转课堂在无机化学实验中的探索与实践——以无机结晶化合物制备实验为例",
+      "subfield": "合成制备",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 77,
+      "title": "1973-an-experiment-sequence-involving-potassium-trioxalatoferrate(iii)",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 78,
+      "title": "Experiment 30-REDOX",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 81,
+      "title": "以实验为情境问题的PBL教学法在元素化学教学中的应用",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 82,
+      "title": "草酸亚铁综合性实验的教学",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 83,
+      "title": "问题导向式教学在基础化学实验课堂中的应用——以“探讨二草酸合铜酸钾中铜离子测定条件”为例",
+      "subfield": "实验教学",
+      "doctype": "实验教学",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 101,
+      "title": "制备硫酸亚铁铵单晶的实验研究",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 103,
+      "title": "实验 硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 104,
+      "title": "实验56 硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 105,
+      "title": "实验一 硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 106,
+      "title": "实验十六 硫酸亚铁铵的制备",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 116,
+      "title": "硫酸亚铁铵制备实验的改进",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 117,
+      "title": "硫酸亚铁铵制备实验的改进探索",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 173,
+      "title": "三草酸合铁酸钾-综合实验",
+      "subfield": "综合研究",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 176,
+      "title": "基于学科思维训练为目标的实验课程设计",
+      "subfield": "综合研究",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 178,
+      "title": "实验 三草酸合铁(Ⅲ)酸钾",
+      "subfield": "综合研究",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 194,
+      "title": "controlled-synthesis-of-two-copper-oxalate-hydrate-complexes-kinetic-versus-thermodynamic-factors-a-laboratory",
+      "subfield": "草酸配合物",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 206,
+      "title": "指向深度学习的高中化学制备类实验专题复习——以二草酸合铜(Ⅱ)酸钾的制备为例 唐苏 (1)",
+      "subfield": "草酸配合物",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 212,
+      "title": "arenson-1941-demonstrations-involving",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 213,
+      "title": "ayscough-et-al-1967-the-photochemical-oxidation-of-aqueous-iodide-solutions-an-experiment-demonstrating-the",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 214,
+      "title": "baker-et-al-1980-photochemical-reactions-of-tris(oxalato)iron-(iii)-a-first-year-chemistry",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 249,
+      "title": "goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 254,
+      "title": "liu-et-al-2016-an-advanced-spectroscopy-lab-that-integrates-art-commerce-and-science-as-students-determine",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 257,
+      "title": "mohan-mejia-2020-environmentally-friendly-organic-chemistry-laboratory-experiments-for-the-undergraduate-curriculum-a",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 259,
+      "title": "olmsted-1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 262,
+      "title": "phillips-1971-a-quantitative-photochemical-experiment-for",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 263,
+      "title": "regmi-fleming-2023-a-simple-fast-and-facile-demonstration-of-a-photochemical-redox-reaction-using-visible",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 265,
+      "title": "sattar-2016-the-chemistry-of-photography-still-a-terrific-laboratory-course-for-nonscience",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 266,
+      "title": "slyusarev-2020-a-photographic-process-using-easily-available",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 267,
+      "title": "thon-et-al-2019-plasmonic-evolution-and-arrested-development-for-silver-nanoscale-colloids-a-classroom",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 270,
+      "title": "vitz-1981-the-ferrioxalate-actinometer-a-lecture",
+      "subfield": "蓝晒工艺",
+      "doctype": "实验教学",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 297,
+      "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 302,
+      "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+      "subfield": "合成制备",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 303,
+      "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+      "subfield": "合成制备",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 304,
+      "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+      "subfield": "合成制备",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 305,
+      "title": "Synthesis of Potassium tris(oxalato)ferrate",
+      "subfield": "合成制备",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 306,
+      "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 310,
+      "title": "Transition Metal Transformations",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 312,
+      "title": "Pre-lab Report Guidelines for Iron Oxalate Experiment",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 314,
+      "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+      "subfield": "合成制备",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 322,
+      "title": "Instructions for Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate (SI)",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 338,
+      "title": "铜循环（基础化学实验01）",
+      "subfield": "实验教学",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 344,
+      "title": "硫酸亚铁铵的制备（实验33）",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 345,
+      "title": "硫酸亚铁铵的制备（课件）",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 309,
+      "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+      "subfield": "分析测定",
+      "doctype": "实验讲义",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 323,
+      "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+      "subfield": "综合研究",
+      "doctype": "实验讲义",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 346,
+      "title": "硫酸亚铁铵的制备及纯度检验",
+      "subfield": "摩尔盐相关",
+      "doctype": "实验讲义",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 350,
+      "title": "Transition Metal Complexes: Synthesis and Characterization (JCE 2005 SI)",
+      "subfield": "草酸配合物",
+      "doctype": "实验讲义",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 296,
+      "title": "教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）",
+      "subfield": "实验教学",
+      "doctype": "教案",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 9,
+      "title": "基于项目式学习的高三化学综合复习教学——蓝晒",
+      "subfield": "光化学应用",
+      "doctype": "教学研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 79,
+      "title": "ed062p445-Tris(oxalato) teaching",
+      "subfield": "实验教学",
+      "doctype": "教学研究",
+      "difficulty": "入门级"
+    },
+    {
+      "id": 272,
+      "title": "walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the",
+      "subfield": "蓝晒工艺",
+      "doctype": "教学研究",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 277,
+      "title": "A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 278,
+      "title": "Chemical actinometry (IUPAC Technical Report)",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 279,
+      "title": "Practical Chemical Actinometry—A Review",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 280,
+      "title": "The ferrioxalate and iodide-iodate actinometers in the UV region",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 281,
+      "title": "Errors in ferrioxalate actinometry",
+      "subfield": "分析测定",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 282,
+      "title": "Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 283,
+      "title": "Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 284,
+      "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+      "subfield": "实验教学",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 285,
+      "title": "Practical ferrioxalate actinometry for the determination of photon fluxes in production-oriented photoflow reactors",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 286,
+      "title": "New insight into photochemistry of ferrioxalate",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 287,
+      "title": "A chronological review of photochemical reactions of ferrioxalate at the molecular level: New insights into an old story",
+      "subfield": "综合研究",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 288,
+      "title": "Synthesis, crystal structure and characterization of chiral, three-dimensional anhydrous potassium tris(oxalato)ferrate(III)",
+      "subfield": "结构表征",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 289,
+      "title": "Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate",
+      "subfield": "实验教学",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 290,
+      "title": "Natural iron oxalates and their analogous synthetic counterparts: A review",
+      "subfield": "综合研究",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 291,
+      "title": "Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate",
+      "subfield": "光化学应用",
+      "doctype": "期刊论文",
+      "difficulty": "中"
+    },
+    {
+      "id": 307,
+      "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+      "subfield": "实验教学",
+      "doctype": "学生报告",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 331,
+      "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+      "subfield": "实验教学",
+      "doctype": "学生报告",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 308,
+      "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+      "subfield": "分析测定",
+      "doctype": "学生报告",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 348,
+      "title": "IChO32 Practical Examination: Laboratory Introduction",
+      "subfield": "实验教学",
+      "doctype": "竞赛试题",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 349,
+      "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+      "subfield": "草酸配合物",
+      "doctype": "竞赛试题",
+      "difficulty": "提高级"
+    },
+    {
+      "id": 316,
+      "title": "News from Online: Plants and Photosynthesis",
+      "subfield": "综合研究",
+      "doctype": "综述",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 328,
+      "title": "几种检测食用盐中柠檬酸铁铵含量方法的利与弊",
+      "subfield": "分析测定",
+      "doctype": "综述",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 333,
+      "title": "柠檬酸铁铵的合成及应用进展",
+      "subfield": "草酸配合物",
+      "doctype": "综述",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 325,
+      "title": "不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展",
+      "subfield": "光化学应用",
+      "doctype": "综述",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 343,
+      "title": "关于硫酸亚铁铵稳定性的讨论",
+      "subfield": "摩尔盐相关",
+      "doctype": "综述",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 355,
+      "title": "离子交换树脂的种类和性能",
+      "subfield": "分析测定",
+      "doctype": "科普/讲义",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 299,
+      "title": "三草酸合铁（III）酸钾制备——思考题",
+      "subfield": "实验教学",
+      "doctype": "习题",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 311,
+      "title": "Potassium ferrioxalate (Wikipedia)",
+      "subfield": "综合研究",
+      "doctype": "百科条目",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 313,
+      "title": "MSDS: Ammonium Iron(II) Sulfate Hexahydrate",
+      "subfield": "摩尔盐相关",
+      "doctype": "MSDS",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 341,
+      "title": "蓝色颜料之蓝晒奇旅（蓝晒资料）",
+      "subfield": "蓝晒工艺",
+      "doctype": "科普",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 342,
+      "title": "Iron(II) sulfate (Wikipedia)",
+      "subfield": "摩尔盐相关",
+      "doctype": "百科条目",
+      "difficulty": "基础级"
+    },
+    {
+      "id": 39,
+      "title": "三草酸合铁 酸钾制备条件的优化",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 41,
+      "title": "三草酸合铁(Ⅲ)酸钾制备条件的优化",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 42,
+      "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 46,
+      "title": "三草酸合铁酸钾改进制备及其光致还原性探究",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 66,
+      "title": "对 三草酸合铁 酸钾的制备",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 67,
+      "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+      "subfield": "合成制备",
+      "doctype": "方法改进",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 139,
+      "title": "Handbook of inorganic",
+      "subfield": "综合研究",
+      "doctype": "综述 (Review)",
+      "difficulty": "进阶级"
+    },
+    {
+      "id": 300,
+      "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+      "subfield": "实验教学",
+      "doctype": "习题",
+      "difficulty": "进阶级"
+    }
+  ],
+  "subfield_coverage": [
+    {
+      "subfield": "蓝晒工艺",
+      "corpus_count": 75,
+      "faq_count": 29,
+      "cited_count": 10,
+      "gap": 46
+    },
+    {
+      "subfield": "摩尔盐相关",
+      "corpus_count": 50,
+      "faq_count": 23,
+      "cited_count": 0,
+      "gap": 27
+    },
+    {
+      "subfield": "综合研究",
+      "corpus_count": 54,
+      "faq_count": 37,
+      "cited_count": 0,
+      "gap": 17
+    },
+    {
+      "subfield": "草酸配合物",
+      "corpus_count": 34,
+      "faq_count": 21,
+      "cited_count": 0,
+      "gap": 13
+    },
+    {
+      "subfield": "实验教学",
+      "corpus_count": 23,
+      "faq_count": 15,
+      "cited_count": 0,
+      "gap": 8
+    },
+    {
+      "subfield": "光化学应用",
+      "corpus_count": 22,
+      "faq_count": 115,
+      "cited_count": 0,
+      "gap": 0
+    },
+    {
+      "subfield": "分析测定",
+      "corpus_count": 13,
+      "faq_count": 115,
+      "cited_count": 0,
+      "gap": 0
+    },
+    {
+      "subfield": "合成制备",
+      "corpus_count": 71,
+      "faq_count": 104,
+      "cited_count": 0,
+      "gap": 0
+    },
+    {
+      "subfield": "热分析",
+      "corpus_count": 3,
+      "faq_count": 23,
+      "cited_count": 0,
+      "gap": 0
+    },
+    {
+      "subfield": "磁性研究",
+      "corpus_count": 5,
+      "faq_count": 19,
+      "cited_count": 0,
+      "gap": 0
+    },
+    {
+      "subfield": "结构表征",
+      "corpus_count": 5,
+      "faq_count": 29,
+      "cited_count": 0,
+      "gap": 0
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
-[![Version](https://img.shields.io/badge/version-v42-blue)](https://github.com/LittleAlety/chemai-8.6-)
-[![FAQ](https://img.shields.io/badge/FAQ-916条-green)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v43-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![FAQ](https://img.shields.io/badge/FAQ-939条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-355篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
 [![Deep Qs](https://img.shields.io/badge/深度问题-~160条-purple)](https://github.com/LittleAlety/chemai-8.6-)
@@ -26,7 +26,7 @@
 
 ## 深度问题自学习迭代体系
 
-项目通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正深度实验操作问答，目前累计约 **243 条**，覆盖合成操作、表征分析、全文献深度学习与基础教科书四大维度。
+项目通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正深度实验操作问答，目前累计约 **266 条**，覆盖合成操作、表征分析、全文献深度学习、基础教科书与语料驱动学术词表五大维度。
 
 ### 迭代历程
 
@@ -40,6 +40,7 @@
 | v39 | **试剂用量偏差**（逐步骤逐试剂分析 +/- 影响） | 26 | 6✓/19部分/1✗ |
 | v40 | **表征分析**（磁化率、蓝晒、热分析、红外、紫外、KMnO₄滴定、计算、试剂储存、数据可靠性） | 27 | **27/27 ✓** |
 | v41 | **全文献深度学习**（对 355 篇语料再学习，补蓝晒/摩尔盐/草酸配合物/综合研究 4 大薄弱子领域）；全库按**实验讲义**权威对齐（失水100℃、H₂O₂ 8mL、0.5M草酸、KFe[Fe(CN)₆]）；六集群内容审计修正 ~188 处 + 全量渲染审计 | 57 新增 | 渲染审计 0 残留 |
+| v43 | **第三轮语料自学习（学术词表驱动）**：构建语料驱动学术词表 `data/academic_lexicon.json`（17 子领域 432 学术词 + 94 实体词）；全库 916 条 keys/ents 关键词清洗（去"如何操作/数值是多少"等泛词 11 处 + 全局去重 + 52 条 keys<3 补学术词 + tierB 条件处理，keys 均值 5.77→5.99、keys<3 归零）；gap 分析补 23 条新 FAQ（蓝晒6/草酸配合物7/综合5/摩尔盐5，FAQ 916→939），新条目 keys/ents 100% 取自词表、detail 引用有效语料 ID；修正词表驱动的检索命中 | 23 新增 | 全量校验 0 错误 |
 
 ### 自学习增强机制
 
@@ -158,6 +159,7 @@ GitHub Actions + GitHub Pages 自动部署，向 `master` 分支推送后自动�
 
 | 版本 | 主要变更 |
 |------|------|
+| **v43** | **第三轮语料自学习（语料驱动学术词表 + 关键词清洗 + 补新条目）**：①构建 `data/academic_lexicon.json`（17 子领域 432 学术词/94 实体词，源自 corpus objects/methods/title + 讲义 keywords）；②全库 916 条 FAQ keys/ents 清洗——A 档删"如何操作/什么颜色/温度控制/操作步骤"等精确泛词 11 处、全局大小写去重、52 条 keys<3 补学术词、tierB 颜色/温度类条件保留（keys 均值 5.77→5.99、keys<3 52→0、重复 key 0）；③gap 分析补 23 条新 FAQ（蓝晒6/草酸配合物7/综合5/摩尔盐5，FAQ 916→939），新条目 keys/ents 100% 取自词表、detail 引用有效语料 ID、遵循讲义>文献>搜索权威层级；④新增 scripts/lib-assistant-faq.js 等 13 个工具脚本 |
 | **v42** | **基础教科书学习**：学习 Greenwood / Housecroft / 无机化学第六版 3 本教材，新增 26 条基础化学 FAQ（晶体场10/稳定常数8/铁化学8），校准 Δo(oxalate)=14100 cm⁻¹、Fe³⁺ d-d 自旋禁阻、Fe(OH)₃ 浓碱溶解、Fe(SCN)₃→[Fe(H₂O)₅(SCN)]²⁺、C₂O₄²⁻ 场强统一 | 26 新增 | 渲染 0 残留 |
 | **v41** | **全文献深度学习 + 权威对齐**：对 355 篇语料再学习，新增 57 条 FAQ（蓝晒18/综合研究14/摩尔盐13/草酸配合物12），FAQ 833→890；建立**知识权威层级**（实验讲义>文献>搜索），按武汉大学讲义全库对齐（失水100℃、H₂O₂ 8mL、第三步0.5M草酸、滕氏蓝KFe[Fe(CN)₆]）；六集群内容审计修正 ~188 处（sp³d²、d-d自旋禁阻、Ksp、α表、历史史实、截断乱码）；全站导航统一 navbar + 标签统一 |
 | **v40** | 表征分析深度问答 27 题（27/27 正确）；语料库 291→355 篇；知识图谱深链关联 |

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
+<script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,6 +14,7 @@
   --bd:rgba(148,163,184,.08);--bd2:rgba(148,163,184,.15);
   --r:16px;
 }
+[data-theme="light"]{color-scheme:light;--bg:#f5f7fa;--bg2:#eaeef4;--card:#ffffff;--hover:#e8ecf2;--card-hover:#e8ecf2;--t1:#1f2937;--t2:#475569;--t3:#64748b;--txt:#1f2937;--txt2:#475569;--txt3:#64748b;--bd:rgba(15,23,42,.08);--bd2:rgba(15,23,42,.16);--border:rgba(15,23,42,.08);--border2:rgba(15,23,42,.16);--shadow:0 8px 24px rgba(15,23,42,.08)}[data-theme="light"] .navbar{background:rgba(255,255,255,.82)}.theme-toggle{background:var(--bg2);border:1px solid var(--bd2);color:var(--t2);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;justify-content:center;transition:.25s;flex-shrink:0;line-height:1}.theme-toggle:hover{border-color:var(--em);color:var(--em);transform:translateY(-1px)}body{animation:chemaiFade .45s ease}@keyframes chemaiFade{from{opacity:0}to{opacity:1}}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -362,6 +364,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <a href="index.html#/explore">科普探索</a>
       <a href="corpus.html">语料库</a>
     </div>
+    <button class="theme-toggle" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题">🌓</button>
     <div class="nav-user">
       <span class="role-badge" id="roleBadge"><span class="rdot"></span><span class="rname" id="roleName">未选择身份</span></span>
       <button class="switch-btn" id="switchBtn" type="button">切换身份</button>
@@ -690,5 +693,6 @@ fetch("data/manual.json").then(function(r){
 }).then(renderManual).catch(showError);
 })();
 </script>
+<script>function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}}</script>
 </body>
 </html>

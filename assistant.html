@@ -111,6 +111,7 @@ a:hover{color:var(--em)}
 
 /* 富文本答案渲染 */
 .rich-answer p{margin:9px 0}
+.ans-block{margin:9px 0}
 .rich-answer ul,.rich-answer ol{margin:8px 0 8px 20px}
 .ans-line{display:block;overflow-wrap:anywhere;word-break:break-word;white-space:normal;line-height:1.85}
 .ans-head{display:block;font-weight:700;margin:10px 0 4px;color:var(--teal);overflow-wrap:anywhere;line-height:1.7}
@@ -2356,6 +2357,9 @@ function renderLatexBody(body, G){
   s=s.replace(/\\xrightarrow(?:\[[^\]]*\])?\{([^{}]*)\}/g,'→($1)');
   s=s.replace(/\\bar\{([^{}]*)\}/g,'$1̄');
   s=s.replace(/\\hat\{([^{}]*)\}/g,'$1̂');
+  // 分隔符命令：\left \right \bigl \bigr \big \Big 等，去掉命令保留定界符；\left. \right. 完全删除
+  s=s.replace(/\\left\.|\\right\./g,'');
+  s=s.replace(/\\left|\\right|\\bigl|\\bigr|\\Bigl|\\Bigr|\\big|\\Big/g,'');
   var keys=Object.keys(G);
   for(var i=0;i<keys.length;i++){s=s.split(keys[i]).join(G[keys[i]]);}
   s=s.replace(/\\q?quad(?![a-zA-Z])/g,' ');
@@ -2410,7 +2414,8 @@ function renderLatexToUnicode(text){
 function renderRichAnswer(text){
   var raw=String(text==null?'':text).replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim();
   if(!raw) return '';
-  var rendered=renderLatexToUnicode(raw);
+  var safe=esc(raw);                    // ① 先转义原始文本（防注入）
+  var rendered=renderLatexToUnicode(safe); // ② 再转 LaTeX，产生的 <sub>/<sup>/<span> 不再被二次转义
   var blocks=rendered.split(/\n{2,}/).map(function(b){return b.replace(/\n+/g,'\n').trim();}).filter(Boolean);
   if(!blocks.length) return '';
   return blocks.map(function(block){
@@ -2447,12 +2452,12 @@ function renderRichAnswer(text){
       var h=inlineRich(clean);
       return '<div class="'+(heading?'ans-head':(eq?'ans-eq':'ans-line'))+'">'+h+'</div>';
     }).join('');
-    return '<p>'+html+'</p>';
+    return '<div class="ans-block">'+html+'</div>';
   }).join('');
 }
 
 function inlineRich(line){
-  var h=esc(line);
+  var h=line; // 输入已在 renderRichAnswer 中先 esc，这里不再转义，避免破坏 <sub>/<sup>/<span>
   h=h.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   h=h.replace(/`([^`]+)`/g,'<code>$1</code>');
   return h;

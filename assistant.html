@@ -270,6 +270,10 @@ a:hover{color:var(--em)}
 .side-link b{font-size:13px;color:var(--t1);font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:6px}
 .side-link b::after{content:"↗";color:var(--t3);font-size:11px}
 .side-link span{font-size:11px;color:var(--t3)}
+.side-video{width:100%;border-radius:11px;background:#000;aspect-ratio:16/9;display:block;border:1px solid var(--bd2)}
+.side-video-wrap{margin-bottom:12px}
+.side-video-cap{font-size:12px;color:var(--t1);margin-top:5px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.side-video-cap .sz{font-weight:400;color:var(--t3)}
 footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:var(--t3);font-size:12px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -440,26 +444,42 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <div class="side-card">
         <h3>📖 学习资源</h3>
         <a class="side-link" href="knowledge.html"><b>🧭 知识图谱</b><span>知识点关联网络 · 查漏补缺</span></a>
-        <a class="side-link" href="corpus.html"><b>📚 语料库</b><span>291 篇文献知识清单 · 支持上传学习</span></a>
+        <a class="side-link" href="corpus.html"><b>📚 语料库</b><span>365 篇文献知识清单 · 支持上传学习</span></a>
         <a class="side-link" href="prep.html"><b>📝 课前预习</b><span>多轮对话预习 + 习题检测</span></a>
         <a class="side-link" href="index.html#/explore"><b>🔬 科普探索</b><span>蓝晒 · 光化学 · 配合物拓展</span></a>
       </div>
       <div class="side-card">
-        <h3>🎬 视频资源</h3>
-        <a class="side-link" href="https://www.bilibili.com/video/BV18f4y1q7gy" target="_blank" rel="noopener"><b>三草酸合铁酸钾的制备</b><span>bilibili · 全流程演示</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1xe411v7T2" target="_blank" rel="noopener"><b>翠色欲流的碧绿色晶体</b><span>bilibili · 晶体之美</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1HT4y1w7BD" target="_blank" rel="noopener"><b>制备及组成测定</b><span>bilibili · 制备 + 组成分析</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1Ly4y1J7Cf" target="_blank" rel="noopener"><b>基础化学实验-三草酸合铁酸钾</b><span>bilibili · 教学演示</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1AN411S7QP" target="_blank" rel="noopener"><b>【间甲酚实验室】制备三草酸合铁酸钾</b><span>bilibili · 实验室实操</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1sb4y117CG" target="_blank" rel="noopener"><b>草酸铁钾的制取</b><span>bilibili · 晶体养成</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1XsVD6NEoW" target="_blank" rel="noopener"><b>制备硫酸亚铁铵（摩尔盐）</b><span>bilibili · 原料合成</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1PsAdzsEr1" target="_blank" rel="noopener"><b>【蓝晒】超高速两步法蓝晒</b><span>bilibili · 光化学拓展</span></a>
-        <a class="side-link" href="index.html#/videos"><b>📺 站内视频中心</b><span>更多操作视频合集</span></a>
+        <h3>📼 本地视频（优先）</h3>
+        <div class="side-video-wrap">
+          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4" type="video/mp4">
+          </video>
+          <div class="side-video-cap"><b>三草酸合铁酸钾制备（王志勇）</b><span class="sz">135MB</span></div>
+        </div>
+        <div class="side-video-wrap">
+          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4" type="video/mp4">
+          </video>
+          <div class="side-video-cap"><b>性质与配离子电荷（王志勇）</b><span class="sz">125MB</span></div>
+        </div>
+        <div class="side-video-wrap">
+          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4" type="video/mp4">
+          </video>
+          <div class="side-video-cap"><b>三草酸合铁酸钾制备（上）· 胡锴</b><span class="sz">161MB</span></div>
+        </div>
+        <div class="side-video-wrap">
+          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4" type="video/mp4">
+          </video>
+          <div class="side-video-cap"><b>三草酸合铁酸钾制备（下）· 胡锴</b><span class="sz">350MB</span></div>
+        </div>
+        <a class="side-link" href="index.html#/videos"><b>📺 站内视频中心</b><span>在线视频合集（bilibili）</span></a>
       </div>
       <div class="side-card">
         <h3>📖 学习资源</h3>
         <a class="side-link" href="knowledge.html"><b>🧭 知识图谱</b><span>知识点关联网络 · 查漏补缺</span></a>
-        <a class="side-link" href="corpus.html"><b>📚 语料库</b><span>276 篇文献知识清单 · 支持上传学习</span></a>
+        <a class="side-link" href="corpus.html"><b>📚 语料库</b><span>365 篇文献知识清单 · 支持上传学习</span></a>
         <a class="side-link" href="prep.html"><b>📝 课前预习</b><span>多轮对话预习 + 习题检测</span></a>
         <a class="side-link" href="index.html#/explore"><b>🔬 科普探索</b><span>蓝晒 · 光化学 · 配合物拓展</span></a>
       </div>
@@ -732,6 +752,13 @@ const VIDEO_BV=[
  {t:'蓝晒（Cyanotype）——太阳的艺术',u:'https://www.bilibili.com/video/BV1PJ411J7fG'},
  {t:'蓝晒教程·自然一小时',u:'https://www.bilibili.com/video/BV1fr4y1u7m4'},
  {t:'蓝晒扇子制作教程',u:'https://www.bilibili.com/video/BV1mU4y1q75f'}
+];
+/* 本地视频（三草酸合铁酸钾视频资料 · 已入库部署，相对路径本地/线上均可播） */
+const LOCAL_VIDEOS=[
+ {t:'三草酸合铁酸钾制备（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4',size:'135MB'},
+ {t:'三草酸合铁酸钾性质与配离子电荷（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4',size:'125MB'},
+ {t:'三草酸合铁酸钾制备（上）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4',size:'161MB'},
+ {t:'三草酸合铁酸钾制备（下）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4',size:'350MB'}
 ];
 
 const SYN_GROUPS=[['抽滤','减压过滤','吸滤','布氏漏斗'],['蓝晒','晒蓝','晒图','cyanotype'],['磁化率','磁性','磁天平'],['产率','理论产量','百分产率'],['结晶','析晶','晶体析出'],['莫尔盐','摩尔盐','硫酸亚铁铵'],['过氧化氢','双氧水','h2o2','hydrogen peroxide'],['草酸','乙二酸','h2c2o4'],['三草酸合铁酸钾','草酸铁钾','k3[fe(c2o4)3]','ferrioxalate'],['滴定','高锰酸钾滴定','氧化还原滴定'],['避光','见光','光解','光化学','感光'],['配合物','络合物','配位化合物']];
@@ -2236,6 +2263,23 @@ function videoCardHTML(ops,q){
     +'<a class="lk" href="https://search.bilibili.com/all?keyword='+enc(kw)+'" target="_blank" rel="noopener">🔍 B站搜索「'+esc(kw)+'」↗</a>'
     +'<a class="lk" href="index.html#/videos">📺 站内视频中心</a></div>';
 }
+/* 本地视频卡：本地 mp4 优先于 bilibili 外链展示 */
+function localVideoCardHTML(ops,q){
+  var picks=[];
+  for(var i=0;i<LOCAL_VIDEOS.length;i++){
+    var vt=norm(LOCAL_VIDEOS[i].t);
+    var hit=ops.some(function(o){return vt.indexOf(norm(o))>=0;});
+    if(hit) picks.push(LOCAL_VIDEOS[i]);
+  }
+  if(!picks.length) picks=[LOCAL_VIDEOS[0]];
+  var html=picks.slice(0,2).map(function(v){
+    return '<video controls preload="metadata" onerror="this.remove()" style="width:100%;border-radius:9px;background:#000;aspect-ratio:16/9;margin:6px 0 2px"><source src="'+v.src+'" type="video/mp4"></video>'
+      +'<div style="font-size:12px;color:var(--t1);display:flex;justify-content:space-between;align-items:center"><b>'+esc(v.t)+'</b><span class="muted">'+v.size+'</span></div>';
+  }).join('');
+  return '<div class="link-card video"><h4>📼 本地视频（优先）</h4>'
+    +html
+    +'<div class="muted" style="margin-top:4px">本地 mp4 · 点开才加载 · 已部署 GitHub 端，线上同样可播</div></div>';
+}
 
 /* 实体补充句（无 FAQ 命中时用于丰富"核心解答"，均为本实验准确事实） */
 const ENT_TIPS={
@@ -2515,7 +2559,7 @@ async function handleQA(q){
     var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops};
     html=buildHybridAnswerHTML(q, hybridCtx);
     if(chems.length) html+=msdsCardHTML(chems);
-    if(ops.length) html+=videoCardHTML(ops,q);
+    if(ops.length){ html+=localVideoCardHTML(ops,q); html+=videoCardHTML(ops,q); }
     html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
   }
 

@@ -453,24 +453,28 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
         <div class="side-video-wrap">
           <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
             <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4" type="video/mp4">
+            <source src="https://files.catbox.moe/qdytr0.mp4" type="video/mp4">
           </video>
           <div class="side-video-cap"><b>三草酸合铁酸钾制备（王志勇）</b><span class="sz">135MB</span></div>
         </div>
         <div class="side-video-wrap">
           <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
             <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4" type="video/mp4">
+            <source src="https://files.catbox.moe/jvs8lg.mp4" type="video/mp4">
           </video>
           <div class="side-video-cap"><b>性质与配离子电荷（王志勇）</b><span class="sz">125MB</span></div>
         </div>
         <div class="side-video-wrap">
           <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
             <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4" type="video/mp4">
+            <source src="https://files.catbox.moe/gr62br.mp4" type="video/mp4">
           </video>
           <div class="side-video-cap"><b>三草酸合铁酸钾制备（上）· 胡锴</b><span class="sz">161MB</span></div>
         </div>
         <div class="side-video-wrap">
           <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
             <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4" type="video/mp4">
+            <source src="https://files.catbox.moe/w6x430.mp4" type="video/mp4">
           </video>
           <div class="side-video-cap"><b>三草酸合铁酸钾制备（下）· 胡锴</b><span class="sz">350MB</span></div>
         </div>
@@ -755,10 +759,10 @@ const VIDEO_BV=[
 ];
 /* 本地视频（三草酸合铁酸钾视频资料 · 已入库部署，相对路径本地/线上均可播） */
 const LOCAL_VIDEOS=[
- {t:'三草酸合铁酸钾制备（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4',size:'135MB'},
- {t:'三草酸合铁酸钾性质与配离子电荷（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4',size:'125MB'},
- {t:'三草酸合铁酸钾制备（上）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4',size:'161MB'},
- {t:'三草酸合铁酸钾制备（下）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4',size:'350MB'}
+ {t:'三草酸合铁酸钾制备（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4',url:'https://files.catbox.moe/qdytr0.mp4',size:'135MB'},
+ {t:'三草酸合铁酸钾性质与配离子电荷（王志勇）',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4',url:'https://files.catbox.moe/jvs8lg.mp4',size:'125MB'},
+ {t:'三草酸合铁酸钾制备（上）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4',url:'https://files.catbox.moe/gr62br.mp4',size:'161MB'},
+ {t:'三草酸合铁酸钾制备（下）· 胡锴',src:'三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4',url:'https://files.catbox.moe/w6x430.mp4',size:'50MB'}
 ];
 
 const SYN_GROUPS=[['抽滤','减压过滤','吸滤','布氏漏斗'],['蓝晒','晒蓝','晒图','cyanotype'],['磁化率','磁性','磁天平'],['产率','理论产量','百分产率'],['结晶','析晶','晶体析出'],['莫尔盐','摩尔盐','硫酸亚铁铵'],['过氧化氢','双氧水','h2o2','hydrogen peroxide'],['草酸','乙二酸','h2c2o4'],['三草酸合铁酸钾','草酸铁钾','k3[fe(c2o4)3]','ferrioxalate'],['滴定','高锰酸钾滴定','氧化还原滴定'],['避光','见光','光解','光化学','感光'],['配合物','络合物','配位化合物']];
@@ -2273,7 +2277,7 @@ function localVideoCardHTML(ops,q){
   }
   if(!picks.length) picks=[LOCAL_VIDEOS[0]];
   var html=picks.slice(0,2).map(function(v){
-    return '<video controls preload="metadata" onerror="this.remove()" style="width:100%;border-radius:9px;background:#000;aspect-ratio:16/9;margin:6px 0 2px"><source src="'+v.src+'" type="video/mp4"></video>'
+    return '<video controls preload="metadata" onerror="this.remove()" style="width:100%;border-radius:9px;background:#000;aspect-ratio:16/9;margin:6px 0 2px"><source src="'+v.src+'" type="video/mp4"><source src="'+v.url+'" type="video/mp4"></video>'
       +'<div style="font-size:12px;color:var(--t1);display:flex;justify-content:space-between;align-items:center"><b>'+esc(v.t)+'</b><span class="muted">'+v.size+'</span></div>';
   }).join('');
   return '<div class="link-card video"><h4>📼 本地视频（优先）</h4>'

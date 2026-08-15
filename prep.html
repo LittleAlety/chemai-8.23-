@@ -312,7 +312,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
 <script>document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});</script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 <style>
-/* === ChemAI 全局美化 v48：动态效果强化 + 按键边界清晰 === */
+/* === ChemAI 全局美化 v49：动态效果强化 + 按键边界清晰 + 移动端tab滚动 === */
 ::selection{background:rgba(16,185,129,.22)}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -358,6 +358,15 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
 .tab.on{background:linear-gradient(135deg,rgba(16,185,129,.22),rgba(45,212,191,.14),rgba(96,165,250,.14));border-color:rgba(16,185,129,.55);box-shadow:0 0 14px rgba(16,185,129,.2)}
 .chip{background:var(--bg2);border:1px solid rgba(148,163,184,.4);box-shadow:0 1px 2px rgba(2,6,23,.25)}
 .chip:hover{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.6)}
+
+/* —— 移动端 tab 栏横向滚动（避免窄屏溢出）—— */
+@media (max-width:1080px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .grid>*{min-width:0}
+  .tabs{overflow-x:auto;scrollbar-width:none;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;min-width:150px}
+}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>

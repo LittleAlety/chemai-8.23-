@@ -30,6 +30,7 @@ jobs:
           mkdir -p _site
           cp index.html main.html assistant.html knowledge.html prep.html corpus.html _site/
           cp -r assets data _site/
+          cp CNAME _site/
           mkdir -p "_site/三草酸合铁酸钾资料"
           cp -r "三草酸合铁酸钾资料/三草酸合铁酸钾视频资料" "_site/三草酸合铁酸钾资料/"
           touch _site/.nojekyll

@@ -2950,10 +2950,8 @@ function reportAnalysisHTML(text){
   });
   var totalScore=checks.reduce(function(a,c){return a+c.score;},0);
   var maxScore=checks.length*3;
-  var ratio=totalScore/maxScore;
-  var level=ratio>=0.85?'A+':(ratio>=0.7?'A':(ratio>=0.5?'B':'C'));
   var html='<div class="ans-sec"><h4>📝 实验报告优化建议</h4>';
-  html+='<div class="muted" style="font-size:12px;margin-bottom:8px">按武汉大学实验报告评分细则（由 22 份学生报告训练得出）分析：总分约 <b>'+totalScore+'</b>/'+maxScore+'，预估等级 <b>'+level+'</b></div>';
+  html+='<div class="muted" style="font-size:12px;margin-bottom:8px">按武汉大学实验报告评分细则（由 22 份学生报告训练得出）分析，得分约 <b>'+totalScore+'</b>/'+maxScore+'</div>';
   checks.forEach(function(c){
     var icon=c.present?'✓':'✗';
     var color=c.present?(c.score>=3?'var(--em)':(c.score>=2?'var(--yellow)':'var(--red)')):'var(--red)';
@@ -2964,7 +2962,7 @@ function reportAnalysisHTML(text){
   });
   html+='<div class="report-more"><details class="side-collapse"><summary>📋 更多优化建议与等级标准</summary>';
   html+='<div class="rs-sug" style="margin-top:6px">常见问题：'+REPORT_RUBRIC.common_issues.slice(0,5).map(esc).join('；')+'</div>';
-  html+='<div class="muted" style="font-size:12px;margin-top:6px">💠 '+level+' 等级标准：'+esc(REPORT_RUBRIC.grade_expectations[level]||'')+'</div>';
+  html+='<div class="muted" style="font-size:12px;margin-top:6px;line-height:1.8">💠 等级参考：<br>· A+：'+esc(REPORT_RUBRIC.grade_expectations['A+'])+'<br>· A：'+esc(REPORT_RUBRIC.grade_expectations['A'])+'<br>· B：'+esc(REPORT_RUBRIC.grade_expectations['B'])+'</div>';
   html+='</details></div></div>';
   return html;
 }

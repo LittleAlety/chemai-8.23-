@@ -2299,15 +2299,33 @@ function bibItemHTML(r){
   }
   return s+'</div>';
 }
+const SEARCH_EXTRA=['配位','配位数','配位平衡','配位化合物','稳定常数','晶体场','分裂能','光谱化学序列','草酸根','氧化还原','沉淀','结晶','溶剂替换','重结晶','抽滤','减压过滤','滴定','标定','磁化率','顺磁','热重','差热','蓝晒','感光','显影','摩尔盐','绿矾','风化','脱水','溶解度','摩尔质量','化学式','电荷','光化学','光还原','量子产率','摩尔电导率','离子交换','误差','纯度','产率','安全','废液','毒性','避光','分解','颜色','温度','干燥','烘干','洗涤','过滤','浓缩','母液','杂质','反应机理','副反应','螯合','配体','中心离子','内界','外界','草酸亚铁','氢氧化铁','铁氰化钾','邻菲啰啉','高锰酸钾','硫氰化钾','氯化钡','离子交换树脂','恒重','检漏','倾滗','水浴','微沸','电子天平','真空干燥','感光剂','印相','曝光','阴离子交换','络合物','复盐','单晶','重结晶'];
+function extractSearchKeywords(q){
+  var nq=String(q==null?'':q).replace(/\s+/g,'');
+  var bank=Object.keys(ENT_TIPS).concat(SEARCH_EXTRA);
+  var seen={}, uniq=[];
+  bank.forEach(function(t){ if(t.length>=2 && !seen[t.toLowerCase()]){seen[t.toLowerCase()]=1;uniq.push(t);} });
+  var hits=[];
+  uniq.forEach(function(t){ if(nq.indexOf(t)>=0) hits.push(t); });
+  // 按长度降序（更具体的学术词优先），去重，取前 3
+  hits.sort(function(a,b){return b.length-a.length;});
+  var out=[], s2={};
+  hits.forEach(function(t){ if(!s2[t]){s2[t]=1;out.push(t);} });
+  return out.slice(0,3);
+}
 function webFallbackHTML(q){
+  var kws=extractSearchKeywords(q);
+  var qry=kws.length?kws.join(' '):String(q==null?'':q).trim();
   var links=[
-    ['百度','https://www.baidu.com/s?wd='+enc(q)],
-    ['Bing','https://www.bing.com/search?q='+enc(q)],
-    ['Google','https://www.google.com/search?q='+enc(q)],
-    ['知网','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(q)],
-    ['B站','https://search.bilibili.com/all?keyword='+enc(q)]
+    ['知网','https://kns.cnki.net/kns8s/defaultresult/index?kw='+enc(qry)],
+    ['万方','https://s.wanfangdata.com.cn/paper?q='+enc(qry)],
+    ['百度学术','https://xueshu.baidu.com/s?wd='+enc(qry)],
+    ['百度','https://www.baidu.com/s?wd='+enc(qry)],
+    ['Bing','https://www.bing.com/search?q='+enc(qry)],
+    ['B站','https://search.bilibili.com/all?keyword='+enc(qry)]
   ].map(function(l){return '<a class="lk" href="'+l[1]+'" target="_blank" rel="noopener">🌐 '+l[0]+' ↗</a>';}).join('');
-  return '<div class="web-row">'+links+'</div>';
+  return (kws.length?'<div class="muted" style="margin:0 0 5px;font-size:12px">🔑 搜索关键词：'+kws.map(esc).join('、')+'</div>':'')
+    +'<div class="web-row">'+links+'</div>';
 }
 function msdsCardHTML(chems){
   const rows=chems.slice(0,4).map(c=>

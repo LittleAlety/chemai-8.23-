@@ -276,6 +276,15 @@ a:hover{color:var(--em)}
 .side-link span{font-size:11px;color:var(--t3)}
 .side-video{width:100%;border-radius:11px;background:#000;aspect-ratio:16/9;display:block;border:1px solid var(--bd2)}
 .side-video-wrap{margin-bottom:12px}
+.side-collapse{margin-bottom:8px}
+.side-collapse summary{cursor:pointer;font-size:12.5px;color:var(--t1);padding:8px 12px;border-radius:10px;background:var(--bg2);border:1px solid var(--bd);list-style:none;display:flex;align-items:center;gap:6px;transition:.2s;user-select:none}
+.side-collapse summary::-webkit-details-marker{display:none}
+.side-collapse summary::after{content:"▸";margin-left:auto;color:var(--t3);transition:transform .2s;font-size:11px}
+.side-collapse[open] summary::after{transform:rotate(90deg)}
+.side-collapse summary:hover{border-color:var(--bd2);background:var(--hover)}
+.side-collapse[open] summary{margin-bottom:9px;border-color:var(--em)}
+.side-collapse[open]{margin-bottom:10px}
+.side-collapse .side-link:last-child{margin-bottom:0}
 .side-video-cap{font-size:12px;color:var(--t1);margin-top:5px;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .side-video-cap .sz{font-weight:400;color:var(--t3)}
 .file-card{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:12px;border:1px solid var(--bd2);background:var(--bg2);margin:6px 0}
@@ -530,39 +539,44 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       </div>
       <div class="side-card">
         <h3>🎬 视频资源</h3>
-        <div class="side-video-wrap">
-          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
-            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4" type="video/mp4">
-          </video>
-          <div class="side-video-cap"><b>三草酸合铁酸钾制备（王志勇）</b><span class="sz">47MB</span></div>
-        </div>
-        <div class="side-video-wrap">
-          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
-            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4" type="video/mp4">
-          </video>
-          <div class="side-video-cap"><b>性质与配离子电荷（王志勇）</b><span class="sz">43MB</span></div>
-        </div>
-        <div class="side-video-wrap">
-          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
-            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4" type="video/mp4">
-          </video>
-          <div class="side-video-cap"><b>三草酸合铁酸钾制备（上）· 胡锴</b><span class="sz">29MB</span></div>
-        </div>
-        <div class="side-video-wrap">
-          <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
-            <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4" type="video/mp4">
-          </video>
-          <div class="side-video-cap"><b>三草酸合铁酸钾制备（下）· 胡锴</b><span class="sz">50MB</span></div>
-        </div>
-        <div class="muted" style="margin:4px 2px 8px;font-size:11px">— 本地/站内视频（已部署，点开播放）—</div>
-        <a class="side-link" href="https://www.bilibili.com/video/BV18f4y1q7gy" target="_blank" rel="noopener"><b>三草酸合铁酸钾的制备</b><span>bilibili · 全流程演示</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1xe411v7T2" target="_blank" rel="noopener"><b>翠色欲流的碧绿色晶体</b><span>bilibili · 晶体之美</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1HT4y1w7BD" target="_blank" rel="noopener"><b>制备及组成测定</b><span>bilibili · 制备 + 组成分析</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1Ly4y1J7Cf" target="_blank" rel="noopener"><b>基础化学实验-三草酸合铁酸钾</b><span>bilibili · 教学演示</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1AN411S7QP" target="_blank" rel="noopener"><b>【间甲酚实验室】制备三草酸合铁酸钾</b><span>bilibili · 实验室实操</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1sb4y117CG" target="_blank" rel="noopener"><b>草酸铁钾的制取</b><span>bilibili · 晶体养成</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1XsVD6NEoW" target="_blank" rel="noopener"><b>制备硫酸亚铁铵（摩尔盐）</b><span>bilibili · 原料合成</span></a>
-        <a class="side-link" href="https://www.bilibili.com/video/BV1PsAdzsEr1" target="_blank" rel="noopener"><b>【蓝晒】超高速两步法蓝晒</b><span>bilibili · 光化学拓展</span></a>
+        <details class="side-collapse">
+          <summary>📼 本地教学视频（4 部）</summary>
+          <div class="side-video-wrap">
+            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+              <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4" type="video/mp4">
+            </video>
+            <div class="side-video-cap"><b>三草酸合铁酸钾制备（王志勇）</b><span class="sz">47MB</span></div>
+          </div>
+          <div class="side-video-wrap">
+            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+              <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4" type="video/mp4">
+            </video>
+            <div class="side-video-cap"><b>性质与配离子电荷（王志勇）</b><span class="sz">43MB</span></div>
+          </div>
+          <div class="side-video-wrap">
+            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+              <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4" type="video/mp4">
+            </video>
+            <div class="side-video-cap"><b>三草酸合铁酸钾制备（上）· 胡锴</b><span class="sz">29MB</span></div>
+          </div>
+          <div class="side-video-wrap">
+            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+              <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4" type="video/mp4">
+            </video>
+            <div class="side-video-cap"><b>三草酸合铁酸钾制备（下）· 胡锴</b><span class="sz">50MB</span></div>
+          </div>
+        </details>
+        <details class="side-collapse">
+          <summary>🌐 在线视频（bilibili）</summary>
+          <a class="side-link" href="https://www.bilibili.com/video/BV18f4y1q7gy" target="_blank" rel="noopener"><b>三草酸合铁酸钾的制备</b><span>bilibili · 全流程演示</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1xe411v7T2" target="_blank" rel="noopener"><b>翠色欲流的碧绿色晶体</b><span>bilibili · 晶体之美</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1HT4y1w7BD" target="_blank" rel="noopener"><b>制备及组成测定</b><span>bilibili · 制备 + 组成分析</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1Ly4y1J7Cf" target="_blank" rel="noopener"><b>基础化学实验-三草酸合铁酸钾</b><span>bilibili · 教学演示</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1AN411S7QP" target="_blank" rel="noopener"><b>【间甲酚实验室】制备三草酸合铁酸钾</b><span>bilibili · 实验室实操</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1sb4y117CG" target="_blank" rel="noopener"><b>草酸铁钾的制取</b><span>bilibili · 晶体养成</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1XsVD6NEoW" target="_blank" rel="noopener"><b>制备硫酸亚铁铵（摩尔盐）</b><span>bilibili · 原料合成</span></a>
+          <a class="side-link" href="https://www.bilibili.com/video/BV1PsAdzsEr1" target="_blank" rel="noopener"><b>【蓝晒】超高速两步法蓝晒</b><span>bilibili · 光化学拓展</span></a>
+        </details>
         <a class="side-link" href="index.html#/videos"><b>📺 站内视频中心</b><span>更多操作视频合集</span></a>
       </div>
       <div class="side-card">

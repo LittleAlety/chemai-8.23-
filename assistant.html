@@ -319,6 +319,11 @@ a:hover{color:var(--em)}
 .wrong-item .wb-q{font-size:12.5px;color:var(--t2);line-height:1.7;padding:6px 10px;border-radius:8px;background:var(--bg2);margin-bottom:5px}
 .wrong-item .wb-q b{color:var(--em)}
 .wrong-item .wb-a{font-size:12px;color:var(--t3);padding:0 10px 6px;line-height:1.6}
+.report-sec{border:1px solid var(--bd2);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--bg2)}
+.report-sec .rs-head{display:flex;align-items:center;gap:6px;font-size:13px;margin-bottom:4px;flex-wrap:wrap}
+.report-sec .rs-issue{font-size:12px;color:var(--t2);margin:2px 0}
+.report-sec .rs-sug{font-size:12px;color:var(--t3);line-height:1.6}
+.report-more{margin-top:4px}
 footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:var(--t3);font-size:12px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -2805,7 +2810,8 @@ function handleFileUpload(file){
       '<div class="fc-meta">'+((file.size/1024/1024).toFixed(2))+' MB · 提取 '+text.length+' 字 · 已载入对话上下文</div></div>'+
       '<button class="fc-x" onclick="clearUploadedFile()" title="清除文件">✕</button></div>'+
       '<div class="ans-line" style="margin-top:8px"><b>📄 文件关键词：</b>'+(kws.length?kws.map(esc).join('、'):'(未识别)')+'</div>'+
-      '<div class="muted" style="margin-top:6px;font-size:12px;line-height:1.7">'+esc(text.slice(0,260))+'…</div>',false);
+      '<div class="muted" style="margin-top:6px;font-size:12px;line-height:1.7">'+esc(text.slice(0,260))+'…</div>'+
+      '<div style="margin-top:8px"><button class="btn ghost sm" onclick="analyzeUploadedReport()">📝 报告优化建议</button></div>',false);
     updateUploadBtn();
   }).catch(function(err){
     addMsg(qaChat,'ai','<p style="color:#f87171">文件解析失败：'+esc(err&&err.message||err)+'</p>',false);
@@ -2925,6 +2931,47 @@ function initQuestionBank(){
     QUESTION_BANK=(j&&j.questions)||[]; renderWrongBook();
   }).catch(function(){});
 }
+/* ================= 实验报告优化建议（基于胡锴报告集训练） ================= */
+var REPORT_RUBRIC=null;
+function initReportRubric(){
+  fetch('data/report_rubric.json').then(function(r){return r.json();}).then(function(j){ REPORT_RUBRIC=j; }).catch(function(){});
+}
+function detectReportIntent(q){ return /报告|优化|改进|评估|建议|写得怎么样|怎么改|评分/.test(q||''); }
+function reportAnalysisHTML(text){
+  if(!REPORT_RUBRIC) return '<div class="ans-sec"><h4>📝 实验报告优化建议</h4><p class="muted">评分细则加载中，请稍后重试…</p></div>';
+  var t=String(text||'');
+  var checks=REPORT_RUBRIC.sections.map(function(sec){
+    var title=sec.title.replace(/[（）]/g,'');
+    var present=t.indexOf(title)>=0 || t.indexOf(sec.title.replace('实验',''))>=0 || t.indexOf(sec.title.replace('和','及'))>=0;
+    var hits=0, miss=[];
+    sec.required.forEach(function(kw){ if(t.indexOf(kw)>=0) hits++; else miss.push(kw); });
+    var score=present?Math.min(3,1+Math.round(hits/sec.required.length*2)):0;
+    return {sec:sec, present:present, hits:hits, total:sec.required.length, miss:miss, score:score};
+  });
+  var totalScore=checks.reduce(function(a,c){return a+c.score;},0);
+  var maxScore=checks.length*3;
+  var ratio=totalScore/maxScore;
+  var level=ratio>=0.85?'A+':(ratio>=0.7?'A':(ratio>=0.5?'B':'C'));
+  var html='<div class="ans-sec"><h4>📝 实验报告优化建议</h4>';
+  html+='<div class="muted" style="font-size:12px;margin-bottom:8px">按武汉大学实验报告评分细则（由 22 份学生报告训练得出）分析：总分约 <b>'+totalScore+'</b>/'+maxScore+'，预估等级 <b>'+level+'</b></div>';
+  checks.forEach(function(c){
+    var icon=c.present?'✓':'✗';
+    var color=c.present?(c.score>=3?'var(--em)':(c.score>=2?'var(--yellow)':'var(--red)')):'var(--red)';
+    html+='<div class="report-sec"><div class="rs-head"><span style="color:'+color+'">'+icon+'</span><b>'+esc(c.sec.title)+'</b><span class="muted" style="font-size:11px">关键词 '+c.hits+'/'+c.total+'</span></div>';
+    if(!c.present) html+='<div class="rs-issue" style="color:var(--red)">⚠ 未检测到该部分，建议补充</div>';
+    else if(c.miss.length) html+='<div class="rs-issue" style="color:var(--yellow)">建议补充/完善：'+c.miss.map(esc).join('、')+'</div>';
+    html+='<div class="rs-sug">💡 '+esc(c.sec.suggestions[0])+'</div></div>';
+  });
+  html+='<div class="report-more"><details class="side-collapse"><summary>📋 更多优化建议与等级标准</summary>';
+  html+='<div class="rs-sug" style="margin-top:6px">常见问题：'+REPORT_RUBRIC.common_issues.slice(0,5).map(esc).join('；')+'</div>';
+  html+='<div class="muted" style="font-size:12px;margin-top:6px">💠 '+level+' 等级标准：'+esc(REPORT_RUBRIC.grade_expectations[level]||'')+'</div>';
+  html+='</details></div></div>';
+  return html;
+}
+function analyzeUploadedReport(){
+  if(!UPLOADED_FILE){ addMsg(qaChat,'ai','<p class="muted">请先 📎 上传报告文件</p>',false); return; }
+  addMsg(qaChat,'ai',reportAnalysisHTML(UPLOADED_FILE.text),false);
+}
 async function handleQA(q){
   if(q&&q.trim()){ CHAT_HISTORY.push(q.trim()); if(CHAT_HISTORY.length>8) CHAT_HISTORY=CHAT_HISTORY.slice(-8); }
   var rawQ=q;
@@ -2985,6 +3032,7 @@ async function handleQA(q){
   var checkResult=selfCheck(q, html, {chems:chems, ops:ops, analogies:analogies, conf:conf});
   var warnHTML=selfCheckHTML(checkResult);
   if(warnHTML){ html+=warnHTML; }
+  if(UPLOADED_FILE && detectReportIntent(rawQ)){ html=reportAnalysisHTML(UPLOADED_FILE.text)+html; }
   if(UPLOADED_FILE){ html+=fileContextHTML(q); }
 
   var totalRefs=hits.length+analogyHits.length+methodHits.length;
@@ -3451,6 +3499,7 @@ renderQAHistory();
 var mode='qa';
 try{var qp=new URLSearchParams(location.search).get('mode'); if(qp==='assess'||qp==='tools'||qp==='wrong') mode=qp;}catch(e){}
 initQuestionBank();
+initReportRubric();
 switchTab(mode,false);
 })();
 </script>

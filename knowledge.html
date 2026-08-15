@@ -1643,7 +1643,7 @@ document.getElementById("hamburgerBtn").addEventListener("click",function(){docu
 </script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 <style>
-/* === ChemAI 全局美化 v47：动态效果强化 === */
+/* === ChemAI 全局美化 v48：动态效果强化 + 按键边界清晰 === */
 ::selection{background:rgba(16,185,129,.22)}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -1680,6 +1680,16 @@ document.getElementById("hamburgerBtn").addEventListener("click",function(){docu
 .msg{animation:fadeUp .42s cubic-bezier(.22,.9,.35,1) both}
 .theme-toggle{transition:transform .4s cubic-bezier(.2,.9,.3,1.7)}
 .theme-toggle:hover{transform:rotate(40deg) scale(1.18)}
+/* —— 按键边界清晰化 —— */
+.btn.ghost{background:rgba(148,163,184,.07);border-color:rgba(148,163,184,.4);color:var(--t2);box-shadow:0 1px 2px rgba(2,6,23,.25)}
+.btn.ghost:hover{background:rgba(148,163,184,.14);border-color:rgba(148,163,184,.62);color:var(--t1)}
+.btn.warn{border-color:rgba(251,191,36,.6);background:rgba(251,191,36,.14)}
+.tab{background:rgba(148,163,184,.05);border:1px solid rgba(148,163,184,.22);color:var(--t2)}
+.tab:hover{background:rgba(148,163,184,.12);border-color:rgba(148,163,184,.45);color:var(--t1)}
+.tab.on{background:linear-gradient(135deg,rgba(16,185,129,.22),rgba(45,212,191,.14),rgba(96,165,250,.14));border-color:rgba(16,185,129,.55);box-shadow:0 0 14px rgba(16,185,129,.2)}
+.chip{background:var(--bg2);border:1px solid rgba(148,163,184,.4);box-shadow:0 1px 2px rgba(2,6,23,.25)}
+.chip:hover{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.6)}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 <script>

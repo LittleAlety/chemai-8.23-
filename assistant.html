@@ -278,6 +278,12 @@ a:hover{color:var(--em)}
 .side-video-wrap{margin-bottom:12px}
 .side-video-cap{font-size:12px;color:var(--t1);margin-top:5px;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .side-video-cap .sz{font-weight:400;color:var(--t3)}
+.file-card{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:12px;border:1px solid var(--bd2);background:var(--bg2);margin:6px 0}
+.file-card .fc-ic{font-size:20px;flex-shrink:0}
+.file-card .fc-name{font-size:13px;font-weight:600;color:var(--t1)}
+.file-card .fc-meta{font-size:11px;color:var(--t3);margin-top:1px}
+.file-card .fc-x{margin-left:auto;width:26px;height:26px;border-radius:8px;border:1px solid var(--bd2);background:transparent;color:var(--t3);cursor:pointer;font-size:12px;flex-shrink:0;transition:.2s}
+.file-card .fc-x:hover{border-color:var(--red);color:var(--red)}
 footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:var(--t3);font-size:12px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -378,7 +384,9 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
         <div class="composer">
-          <textarea id="qaInput" rows="1" placeholder="输入你的问题，如：为什么要用 H₂O₂ 作氧化剂？（Enter 发送，Shift+Enter 换行）"></textarea>
+          <button class="btn ghost sm" id="qaUpload" title="上传 txt/docx/pdf/pptx，让助手基于文件内容分析回答">📎 文件</button>
+          <input type="file" id="qaFileInput" accept=".txt,.docx,.pdf,.pptx" style="display:none">
+          <textarea id="qaInput" rows="1" placeholder="输入你的问题…（可先 📎 上传文件，让助手基于文件内容分析；Enter 发送，Shift+Enter 换行）"></textarea>
           <button class="btn primary" id="qaSend">发送 ➤</button>
         </div>
       </section>
@@ -648,6 +656,9 @@ async function callLLM(question, context, streamCallback){
 }
 function buildLLMContext(q){
   var parts=[];
+  if(UPLOADED_FILE && UPLOADED_FILE.text){
+    parts.push('【用户上传文件：'+UPLOADED_FILE.name+'】\n'+(UPLOADED_FILE.text.slice(0,3000)));
+  }
   var faq=matchFAQ(q);
   if(faq){ parts.push('【FAQ: '+faq.title+'】\n'+stripHTML(faq.answer)+(faq.detail?'\n'+stripHTML(faq.detail):'')); }
   var searchResult2=searchCorpus(q, 3);
@@ -2613,6 +2624,102 @@ function buildAnswerHTML(q,ctx){
 }
 
 
+/* ================= 文件上传与解析（txt/docx/pdf/pptx） ================= */
+var UPLOADED_FILE=null; // {name,size,text}
+function readZipEntries(buf){
+  var dv=new DataView(buf), u8=new Uint8Array(buf), td=new TextDecoder('utf-8');
+  var eocd=-1;
+  for(var i=buf.byteLength-22;i>=0;i--){ if(u8[i]===0x50&&u8[i+1]===0x4b&&u8[i+2]===0x05&&u8[i+3]===0x06){eocd=i;break;} }
+  if(eocd<0) throw new Error('无效的 ZIP/Office 文件');
+  var count=dv.getUint16(eocd+10,true), cdOff=dv.getUint32(eocd+16,true);
+  var entries={}, p=cdOff;
+  for(var k=0;k<count;k++){
+    if(u8[p]!==0x50||u8[p+1]!==0x4b||u8[p+2]!==0x01||u8[p+3]!==0x02) break;
+    var method=dv.getUint16(p+10,true), compSize=dv.getUint32(p+20,true);
+    var nameLen=dv.getUint16(p+28,true), extraLen=dv.getUint16(p+30,true), commentLen=dv.getUint16(p+32,true);
+    var localOff=dv.getUint32(p+42,true), name=td.decode(u8.slice(p+46,p+46+nameLen));
+    var lhName=dv.getUint16(localOff+26,true), lhExtra=dv.getUint16(localOff+28,true);
+    var ds=localOff+30+lhName+lhExtra;
+    entries[name]={method:method, data:u8.slice(ds,ds+compSize)};
+    p+=46+nameLen+extraLen+commentLen;
+  }
+  return entries;
+}
+function inflateRaw(data){
+  return new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+}
+async function extractDocText(file,isPptx){
+  var entries=readZipEntries(await file.arrayBuffer());
+  var keys=isPptx
+    ? Object.keys(entries).filter(function(k){return /^ppt\/slides\/slide\d+\.xml$/.test(k);}).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true});})
+    : ['word/document.xml'];
+  var parts=[];
+  for(var i=0;i<keys.length;i++){
+    var e=entries[keys[i]];
+    var u8=e.method===0?e.data:new Uint8Array(await inflateRaw(e.data));
+    var xml=new TextDecoder('utf-8').decode(u8);
+    var doc=new DOMParser().parseFromString(xml,'application/xml');
+    var nodes=doc.getElementsByTagName(isPptx?'a:t':'w:t');
+    var line='';
+    for(var j=0;j<nodes.length;j++) line+=(nodes[j].textContent||'');
+    if(line.trim()) parts.push(line);
+  }
+  return parts.join('\n');
+}
+function loadScript(src){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=src; s.onload=res; s.onerror=function(){rej(new Error('脚本加载失败'));}; document.head.appendChild(s); }); }
+async function extractPdfText(file){
+  if(!window.pdfjsLib){ await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js'); }
+  if(!window.pdfjsLib) throw new Error('PDF 解析库加载失败（需联网访问 CDN）');
+  try{ window.pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; }catch(e){}
+  var pdf=await window.pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;
+  var out=[];
+  for(var p=1;p<=pdf.numPages;p++){
+    var pg=await pdf.getPage(p);
+    var tc=await pg.getTextContent();
+    var line='';
+    for(var t=0;t<tc.items.length;t++) line+=(tc.items[t].str||'')+' ';
+    out.push(line);
+  }
+  return out.join('\n');
+}
+function handleFileUpload(file){
+  if(!file) return;
+  var ext=(file.name||'').toLowerCase().split('.').pop();
+  addMsg(qaChat,'user','📎 已选择文件：'+esc(file.name)+'（'+((file.size/1024).toFixed(1))+' KB），正在解析…',false);
+  var p;
+  if(ext==='txt'){ p=new Promise(function(res){ var r=new FileReader(); r.onload=function(){res(r.result);}; r.readAsText(file,'utf-8'); }); }
+  else if(ext==='docx'){ p=extractDocText(file,false); }
+  else if(ext==='pptx'){ p=extractDocText(file,true); }
+  else if(ext==='pdf'){ p=extractPdfText(file); }
+  else { addMsg(qaChat,'ai','<p style="color:#f87171">暂不支持 .'+esc(ext)+' 格式，请上传 .txt / .docx / .pdf / .pptx</p>',false); return; }
+  p.then(function(text){
+    text=String(text||'').trim();
+    if(text.length<20) throw new Error('未能提取到文本（可能为空、扫描版 PDF 或无文字 PPT）');
+    UPLOADED_FILE={name:file.name, size:file.size, text:text};
+    var kws=extractSearchKeywords(text.slice(0,2000));
+    addMsg(qaChat,'ai',
+      '<div class="file-card"><span class="fc-ic">📄</span><div><div class="fc-name">'+esc(file.name)+'</div>'+
+      '<div class="fc-meta">'+((file.size/1024/1024).toFixed(2))+' MB · 提取 '+text.length+' 字 · 已载入对话上下文</div></div>'+
+      '<button class="fc-x" onclick="clearUploadedFile()" title="清除文件">✕</button></div>'+
+      '<div class="ans-line" style="margin-top:8px"><b>📄 文件关键词：</b>'+(kws.length?kws.map(esc).join('、'):'(未识别)')+'</div>'+
+      '<div class="muted" style="margin-top:6px;font-size:12px;line-height:1.7">'+esc(text.slice(0,260))+'…</div>',false);
+    updateUploadBtn();
+  }).catch(function(err){
+    addMsg(qaChat,'ai','<p style="color:#f87171">文件解析失败：'+esc(err&&err.message||err)+'</p>',false);
+  });
+}
+function clearUploadedFile(){ UPLOADED_FILE=null; updateUploadBtn(); addMsg(qaChat,'ai','<p class="muted">已清除上传文件上下文</p>',false); }
+function updateUploadBtn(){ var b=document.getElementById('qaUpload'); if(b) b.textContent=UPLOADED_FILE?'📎 已上传':'📎 文件'; }
+function fileContextHTML(q){
+  if(!UPLOADED_FILE) return '';
+  var fq=extractSearchKeywords(q);
+  var ft=UPLOADED_FILE.text.slice(0,3000);
+  var overlap=fq.filter(function(k){return ft.indexOf(k)>=0;});
+  return '<div class="ans-sec"><h4>📄 已参考上传文件</h4>'+
+    '<p style="font-size:13px">《'+esc(UPLOADED_FILE.name)+'》 已并入本次分析上下文。'+
+    (overlap.length?'问题关键词与文件内容<b>重叠</b>：'+overlap.map(esc).join('、'):'问题关键词未在文件中直接命中，可按 LLM/本地推理综合判断')+
+    '</p><div class="muted" style="font-size:12px;margin-top:4px">文件共 '+UPLOADED_FILE.text.length+' 字；如需基于文件回答请尽量在问题中引用文件里的具体内容。</div></div>';
+}
 async function handleQA(q){
   addMsg(qaChat,'user',esc(q),true);
   qaBusy=true;qaSend.disabled=true;
@@ -2666,6 +2773,7 @@ async function handleQA(q){
   var checkResult=selfCheck(q, html, {chems:chems, ops:ops, analogies:analogies, conf:conf});
   var warnHTML=selfCheckHTML(checkResult);
   if(warnHTML){ html+=warnHTML; }
+  if(UPLOADED_FILE){ html+=fileContextHTML(q); }
 
   var totalRefs=hits.length+analogyHits.length+methodHits.length;
   var confLabel=conf.level==='high'?'高置信度':(conf.level==='medium'?'中置信度':'低置信度');
@@ -2695,6 +2803,11 @@ function qaSubmit(){
 qaSend.addEventListener('click',qaSubmit);
 qaInput.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
 qaInput.addEventListener('input',function(){qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
+var qaUploadBtn=document.getElementById('qaUpload'), qaFileInput=document.getElementById('qaFileInput');
+if(qaUploadBtn&&qaFileInput){
+  qaUploadBtn.addEventListener('click',function(){qaFileInput.value='';qaFileInput.click();});
+  qaFileInput.addEventListener('change',function(){if(qaFileInput.files&&qaFileInput.files[0])handleFileUpload(qaFileInput.files[0]);});
+}
 $('#qaClear').addEventListener('click',function(){
   lsDel(QA_KEY);qaChat.innerHTML='';renderQAHistory();
 });

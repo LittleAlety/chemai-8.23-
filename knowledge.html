@@ -1652,7 +1652,7 @@ document.getElementById("hamburgerBtn").addEventListener("click",function(){docu
 
 /* —— 入场：位移更大 + 轻微缩放 + 弹性缓动 —— */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
-.page-head,.panel,.side-card,.report,.banner{animation:fadeUp .55s cubic-bezier(.22,.9,.35,1) both}
+.page-head,.panel:not(#panel),.side-card,.report,.banner{animation:fadeUp .55s cubic-bezier(.22,.9,.35,1) both}
 .stat-card,.tab{animation:fadeUp .55s cubic-bezier(.22,.9,.35,1) both}
 .stat-cards .stat-card:nth-child(1){animation-delay:.05s}
 .stat-cards .stat-card:nth-child(2){animation-delay:.12s}

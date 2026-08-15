@@ -284,6 +284,32 @@ a:hover{color:var(--em)}
 .file-card .fc-meta{font-size:11px;color:var(--t3);margin-top:1px}
 .file-card .fc-x{margin-left:auto;width:26px;height:26px;border-radius:8px;border:1px solid var(--bd2);background:transparent;color:var(--t3);cursor:pointer;font-size:12px;flex-shrink:0;transition:.2s}
 .file-card .fc-x:hover{border-color:var(--red);color:var(--red)}
+.panel-title{font-size:15px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:8px}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:14px}
+.calc-card{background:var(--card);border:1px solid var(--bd2);border-radius:14px;padding:16px}
+.calc-card .cc-t{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.calc-card .cc-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.calc-card .cc-row span{font-size:12px;color:var(--t2);flex:1}
+.calc-card .cc-in{flex:2;width:100%;background:var(--bg2);border:1px solid var(--bd2);border-radius:9px;padding:8px 10px;color:var(--t1);font-size:13px;outline:none;margin-bottom:8px;font-family:ui-monospace,Consolas,monospace}
+.calc-card .cc-in:focus{border-color:var(--em)}
+.calc-card .cc-out{margin-top:10px;padding:10px;border-radius:9px;background:var(--bg2);font-size:13px;line-height:1.7;color:var(--t1)}
+.wrong-stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.wrong-stat{background:var(--card);border:1px solid var(--bd2);border-radius:12px;padding:12px 16px;min-width:110px}
+.wrong-stat b{display:block;font-size:20px;color:var(--em)}
+.wrong-stat span{font-size:11.5px;color:var(--t3)}
+.wrong-list{display:flex;flex-direction:column;gap:10px}
+.wrong-item{background:var(--card);border:1px solid var(--bd2);border-radius:12px;padding:12px 14px}
+.wrong-item .wi-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wrong-item .wi-q{font-size:13.5px;font-weight:600;color:var(--t1);flex:1}
+.wrong-item .wi-tag{font-size:11px;padding:2px 8px;border-radius:999px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.3);color:var(--purple);white-space:nowrap}
+.wrong-item .wi-time{font-size:11px;color:var(--t3)}
+.wrong-item .wi-x{margin-left:auto;cursor:pointer;color:var(--t3);border:none;background:transparent;font-size:12px}
+.wrong-item .wi-x:hover{color:var(--red)}
+.wrong-item .wi-bank{margin-top:8px;padding-top:8px;border-top:1px dashed var(--bd2)}
+.wrong-item .wi-bank .wb-t{font-size:11.5px;color:var(--t3);margin-bottom:6px}
+.wrong-item .wb-q{font-size:12.5px;color:var(--t2);line-height:1.7;padding:6px 10px;border-radius:8px;background:var(--bg2);margin-bottom:5px}
+.wrong-item .wb-q b{color:var(--em)}
+.wrong-item .wb-a{font-size:12px;color:var(--t3);padding:0 10px 6px;line-height:1.6}
 footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:var(--t3);font-size:12px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -372,6 +398,8 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <div class="tabs" role="tablist">
         <button class="tab on" data-mode="qa" role="tab">💬 直接问答<span>智能体集群 · 多策略检索 → 类比推理 → 置信度评分 → 自我检查</span></button>
         <button class="tab" data-mode="assess" role="tab">📝 掌握度测评<span>12 个知识点 · 权重满分 155 · 轮次 10~20 动态调整</span></button>
+        <button class="tab" data-mode="tools" role="tab">🧮 计算工具<span>摩尔质量 · 产率 · 溶液配制 · Ksp · 滴定</span></button>
+        <button class="tab" data-mode="wrong" role="tab">📒 错题本<span>薄弱知识点记录 · 题库联动练习</span></button>
       </div>
 
       <!-- ========== Tab 1 直接问答 ========== -->
@@ -412,6 +440,64 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
         <div id="reportZone" class="hidden"></div>
       </section>
     </section>
+
+      <!-- ========== Tab 3 计算工具 ========== -->
+      <section id="panel-tools" class="panel hidden">
+        <div class="panel-bar">
+          <div class="panel-title">🧮 化学计算工具</div>
+          <span class="muted">输入数值即可计算，专为本实验常用计算设计</span>
+        </div>
+        <div class="calc-grid">
+          <div class="calc-card">
+            <div class="cc-t">⚖️ 摩尔质量</div>
+            <input class="cc-in" id="calcMol" placeholder="化学式，如 K3[Fe(C2O4)3]·3H2O 或 FeSO4·7H2O">
+            <button class="btn primary sm" onclick="calcMolar()">计算</button>
+            <div class="cc-out" id="calcMolOut"></div>
+          </div>
+          <div class="calc-card">
+            <div class="cc-t">🎯 产率计算</div>
+            <div class="cc-row"><span>实际产量(g)</span><input class="cc-in" id="calcYieldAct" placeholder="如 5.2"></div>
+            <div class="cc-row"><span>理论产量(g)</span><input class="cc-in" id="calcYieldTheo" placeholder="如 6.26"></div>
+            <button class="btn primary sm" onclick="calcYield()">计算</button>
+            <div class="cc-out" id="calcYieldOut"></div>
+          </div>
+          <div class="calc-card">
+            <div class="cc-t">🧪 溶液配制</div>
+            <div class="cc-row"><span>浓度(mol/L)</span><input class="cc-in" id="calcSolC" placeholder="如 0.5"></div>
+            <div class="cc-row"><span>体积(L)</span><input class="cc-in" id="calcSolV" placeholder="如 0.1"></div>
+            <div class="cc-row"><span>摩尔质量(g/mol)</span><input class="cc-in" id="calcSolM" placeholder="如 126.07"></div>
+            <button class="btn primary sm" onclick="calcSol()">计算</button>
+            <div class="cc-out" id="calcSolOut"></div>
+          </div>
+          <div class="calc-card">
+            <div class="cc-t">🪨 Ksp 沉淀判断</div>
+            <div class="cc-row"><span>[M] (mol/L)</span><input class="cc-in" id="calcKspM" placeholder="如 0.01"></div>
+            <div class="cc-row"><span>[X] (mol/L)</span><input class="cc-in" id="calcKspX" placeholder="如 0.01"></div>
+            <div class="cc-row"><span>Ksp</span><input class="cc-in" id="calcKspK" placeholder="如 3.2e-7"></div>
+            <button class="btn primary sm" onclick="calcKsp()">判断</button>
+            <div class="cc-out" id="calcKspOut"></div>
+          </div>
+          <div class="calc-card">
+            <div class="cc-t">💧 滴定计算</div>
+            <div class="cc-row"><span>标准液浓度(mol/L)</span><input class="cc-in" id="calcTitC" placeholder="如 0.02"></div>
+            <div class="cc-row"><span>消耗体积(mL)</span><input class="cc-in" id="calcTitV" placeholder="如 21.5"></div>
+            <div class="cc-row"><span>待测液体积(mL)</span><input class="cc-in" id="calcTitV2" placeholder="如 10"></div>
+            <div class="cc-row"><span>摩尔比(标准:待测)</span><input class="cc-in" id="calcTitR" placeholder="如 2:5 或 1:1"></div>
+            <button class="btn primary sm" onclick="calcTit()">计算</button>
+            <div class="cc-out" id="calcTitOut"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Tab 4 错题本 ========== -->
+      <section id="panel-wrong" class="panel hidden">
+        <div class="panel-bar">
+          <div class="panel-title">📒 错题本 · 学习画像</div>
+          <button class="btn ghost sm" onclick="clearWrongBook()">🗑 清空错题本</button>
+        </div>
+        <div id="wrongStats" class="wrong-stats"></div>
+        <div id="wrongList" class="wrong-list"></div>
+      </section>
 
     <!-- ========== 常驻外部资源面板 ========== -->
     <aside class="col-side">
@@ -656,6 +742,9 @@ async function callLLM(question, context, streamCallback){
 }
 function buildLLMContext(q){
   var parts=[];
+  if(CHAT_HISTORY.length>1){
+    parts.push('【对话历史】\n'+CHAT_HISTORY.slice(0,-1).slice(-3).map(function(t){return '· '+t;}).join('\n'));
+  }
   if(UPLOADED_FILE && UPLOADED_FILE.text){
     parts.push('【用户上传文件：'+UPLOADED_FILE.name+'】\n'+(UPLOADED_FILE.text.slice(0,3000)));
   }
@@ -2720,8 +2809,117 @@ function fileContextHTML(q){
     (overlap.length?'问题关键词与文件内容<b>重叠</b>：'+overlap.map(esc).join('、'):'问题关键词未在文件中直接命中，可按 LLM/本地推理综合判断')+
     '</p><div class="muted" style="font-size:12px;margin-top:4px">文件共 '+UPLOADED_FILE.text.length+' 字；如需基于文件回答请尽量在问题中引用文件里的具体内容。</div></div>';
 }
+/* ================= 化学计算工具 ================= */
+var ATOMIC={H:1.008,He:4.003,Li:6.94,Be:9.012,B:10.81,C:12.011,N:14.007,O:15.999,F:18.998,Ne:20.18,Na:22.99,Mg:24.305,Al:26.982,Si:28.085,P:30.974,S:32.06,Cl:35.45,Ar:39.948,K:39.098,Ca:40.078,Ti:47.867,V:50.942,Cr:51.996,Mn:54.938,Fe:55.845,Co:58.933,Ni:58.693,Cu:63.546,Zn:65.38,Ga:69.723,Br:79.904,Sr:87.62,Zr:91.224,Mo:95.95,Ag:107.868,Cd:112.414,Sn:118.71,Ba:137.327,Hg:200.59,Pb:207.2};
+function parseGroup(s,mult){
+  var i=0,sum=0;
+  while(i<s.length){
+    var c=s[i];
+    if(c==='('||c==='['||c==='{'){
+      var depth=1,j=i+1; while(j<s.length&&depth>0){ if(s[j]==='('||s[j]==='['||s[j]==='{')depth++; else if(s[j]===')'||s[j]===']'||s[j]==='}')depth--; j++; }
+      var inner=s.slice(i+1,j-1), num=''; while(j<s.length&&/\d/.test(s[j])){num+=s[j];j++;}
+      sum+=parseGroup(inner,parseInt(num||'1',10)); i=j;
+    } else if(/[A-Z]/.test(c)){
+      var sym=c; if(i+1<s.length&&/[a-z]/.test(s[i+1])){sym+=s[i+1];i++;}
+      i++; var n=''; while(i<s.length&&/\d/.test(s[i])){n+=s[i];i++;}
+      var cnt=parseInt(n||'1',10);
+      if(ATOMIC[sym]) sum+=ATOMIC[sym]*cnt;
+    } else i++;
+  }
+  return sum*mult;
+}
+function parseFormulaM(f){
+  var seg=f.replace(/\s+/g,'').split(/[·.]/).filter(Boolean);
+  var total=parseGroup(seg[0],1);
+  for(var h=1;h<seg.length;h++){
+    var hm=seg[h].match(/^(\d+)?\s*(.+)$/); var cnt=hm&&hm[1]?parseInt(hm[1],10):1; var rest=hm?hm[2]:seg[h];
+    total+=parseGroup(rest,1)*cnt;
+  }
+  if(isNaN(total)||total<=0) throw new Error('无法解析（含未知元素或格式错误）');
+  return total;
+}
+function calcMolar(){ var f=($('#calcMol')||{}).value||''; var out=$('#calcMolOut'); if(!f.trim()){out.innerHTML='';return;} try{ var m=parseFormulaM(f); out.innerHTML='<b>M('+esc(f)+') = '+m.toFixed(2)+' g/mol</b>'; }catch(e){ out.innerHTML='<span style="color:#f87171">解析失败：'+esc(e.message)+'</span>'; } }
+function calcYield(){ var a=parseFloat(($('#calcYieldAct')||{}).value), t=parseFloat(($('#calcYieldTheo')||{}).value), out=$('#calcYieldOut'); if(isNaN(a)||isNaN(t)||!t){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var y=a/t*100; out.innerHTML='<b>产率 = '+y.toFixed(1)+'%</b><br><span style="color:var(--t2);font-size:12px">误差 = '+(y-100).toFixed(1)+'%'+(y>100?'（可能含杂质/未干燥）':(y<60?'（偏低，检查损失或反应完全度）':''))+'</span>'; }
+function calcSol(){ var c=parseFloat(($('#calcSolC')||{}).value),v=parseFloat(($('#calcSolV')||{}).value),m=parseFloat(($('#calcSolM')||{}).value),out=$('#calcSolOut'); if(isNaN(c)||isNaN(v)||isNaN(m)){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} out.innerHTML='<b>m = c·V·M = '+c*v*m.toFixed(2)+' g</b><br><span style="color:var(--t2);font-size:12px">需要 '+esc((m*v).toFixed(2))+' g/mol × '+v+' L × '+c+' mol/L</span>'; }
+function calcKsp(){ var m=parseFloat(($('#calcKspM')||{}).value),x=parseFloat(($('#calcKspX')||{}).value),k=parseFloat(($('#calcKspK')||{}).value),out=$('#calcKspOut'); if(isNaN(m)||isNaN(x)||isNaN(k)){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var q=m*x; out.innerHTML='<b>Q = '+q.toExponential(2)+'  vs  Ksp = '+k.toExponential(2)+'</b><br>'+(q>k?'<b style="color:#fbbf24">Q &gt; Ksp → 有沉淀生成</b>':(q<k?'Q &lt; Ksp → 未饱和，无沉淀':'Q = Ksp → 恰好饱和')); }
+function calcTit(){ var c=parseFloat(($('#calcTitC')||{}).value),v=parseFloat(($('#calcTitV')||{}).value),v2=parseFloat(($('#calcTitV2')||{}).value),out=$('#calcTitOut'); if(isNaN(c)||isNaN(v)||isNaN(v2)||!v2){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var r=String(($('#calcTitR')||{}).value||'1:1').split(':'); var ra=parseFloat(r[0])||1, rb=parseFloat(r[1])||1; var cs=c*v*ra/rb/v2; out.innerHTML='<b>待测浓度 C = '+cs.toFixed(4)+' mol/L</b><br><span style="color:var(--t2);font-size:12px">C<sub>待</sub> = C<sub>标</sub>·V<sub>标</sub>·(a/b)/V<sub>待</sub>，摩尔比 '+ra+':'+rb+'</span>'; }
+
+/* ================= 多轮对话记忆 ================= */
+var CHAT_HISTORY=[];
+function historyContextHTML(){
+  if(!CHAT_HISTORY.length) return '';
+  var prev=CHAT_HISTORY.slice(-3);
+  return '<div class="ans-sec"><h4>🔁 对话上下文</h4><p style="font-size:12.5px;color:var(--t2)">已记住最近对话：</p>'+
+    prev.map(function(t){return '<div class="muted" style="font-size:12px;margin-top:3px">· '+esc(t.slice(0,50))+(t.length>50?'…':'')+'</div>';}).join('')+'</div>';
+}
+
+/* ================= 错题本 ================= */
+var WRONG_KEY='chemaiWrongBook', LAST_QA=null, QUESTION_BANK=[];
+var SUB2CAT={'合成制备':'反应原理','反应原理':'反应原理','实验操作':'实验操作','分析测定':'综合研究','光化学应用':'综合研究','结构表征':'综合研究','磁性研究':'综合研究','热分析':'综合研究','安全与废物处理':'安全与废物处理','配位化学理论':'高等理论','实验教学':'实验操作','综合研究':'综合研究','化学史':'综合研究','高等理论':'高等理论','蓝晒工艺':'综合研究','摩尔盐相关':'实验操作','草酸配合物':'综合研究'};
+function getWrong(){ try{ return JSON.parse(localStorage.getItem(WRONG_KEY)||'[]'); }catch(e){ return []; } }
+function saveWrong(w){ try{ localStorage.setItem(WRONG_KEY,JSON.stringify(w)); }catch(e){} }
+function recordLastQA(){
+  if(!LAST_QA) return;
+  var w=getWrong();
+  if(w.some(function(x){return x.q===LAST_QA.q;})){ addMsg(qaChat,'ai','<p class="muted">该问题已在错题本中</p>',false); return; }
+  w.unshift({q:LAST_QA.q, title:LAST_QA.title||'', subfield:LAST_QA.subfield||'', low:!!LAST_QA.low, time:Date.now()});
+  if(w.length>200) w=w.slice(0,200); saveWrong(w); renderWrongBook();
+  addMsg(qaChat,'ai','<p style="color:var(--em)">📒 已记入错题本，可在「错题本」页查看并练习同类题</p>',false);
+}
+function delWrongItem(i){ var w=getWrong(); w.splice(i,1); saveWrong(w); renderWrongBook(); }
+function clearWrongBook(){ if(!confirm('确定清空错题本？'))return; saveWrong([]); renderWrongBook(); }
+function relatedBankQuestions(it,limit){
+  limit=limit||3;
+  if(!QUESTION_BANK.length) return [];
+  var kws=extractSearchKeywords((it.title||'')+' '+(it.q||''));
+  var cat=SUB2CAT[it.subfield]||'';
+  var scored=QUESTION_BANK.map(function(qb){
+    var sc=0;
+    if(cat&&qb.category===cat) sc+=3;
+    for(var i=0;i<kws.length;i++){ if((qb.question||'').indexOf(kws[i])>=0) sc+=2; if((qb.answer||'').indexOf(kws[i])>=0) sc+=1; }
+    return {qb:qb,sc:sc};
+  }).filter(function(x){return x.sc>0;}).sort(function(a,b){return b.sc-a.sc;});
+  return scored.slice(0,limit).map(function(x){return x.qb;});
+}
+function renderWrongBook(){
+  var w=getWrong();
+  var stats=$('#wrongStats'), list=$('#wrongList');
+  if(!stats||!list) return;
+  var weak={}; w.forEach(function(x){ if(x.subfield) weak[x.subfield]=(weak[x.subfield]||0)+1; });
+  var weakArr=Object.keys(weak).sort(function(a,b){return weak[b]-weak[a];}).slice(0,4);
+  stats.innerHTML='<div class="wrong-stat"><b>'+w.length+'</b><span>累计错题</span></div>'+
+    '<div class="wrong-stat"><b>'+(w.filter(function(x){return x.low;}).length)+'</b><span>低置信度</span></div>'+
+    (weakArr.length?'<div class="wrong-stat"><b>'+weakArr.slice(0,2).map(function(s){return esc(s);}).join('、')+(weakArr.length>2?' 等': '')+'</b><span>薄弱方向</span></div>':'');
+  if(!w.length){ list.innerHTML='<div class="card-empty" style="padding:30px;text-align:center;color:var(--t3)">还没有错题。问答时点击答案下方的「📒 记入错题本」即可收录，并在本页练习同类题库。</div>'; return; }
+  list.innerHTML=w.map(function(x,i){
+    var rel=relatedBankQuestions(x);
+    var relHTML=rel.length
+      ?'<div class="wi-bank"><div class="wb-t">📚 题库同类练习（'+rel.length+' 题）</div>'+rel.map(function(qb){
+        return '<div class="wb-q">'+(qb.type==='fill'?'✍️ 填空：':'❓ 题干：')+'<b>'+esc(qb.question)+'</b></div>'+(qb.answer?'<div class="wb-a">✅ 答案：'+esc(qb.answer)+'</div>':'');
+      }).join('')+'</div>'
+      :'<div class="wi-bank"><div class="wb-t">暂未在题库找到同类题</div></div>';
+    return '<div class="wrong-item"><div class="wi-head"><span class="wi-q">'+esc(x.title||x.q)+'</span>'+
+      (x.subfield?'<span class="wi-tag">'+esc(x.subfield)+'</span>':'')+
+      (x.low?'<span class="wi-tag" style="background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.3);color:var(--red)">低置信</span>':'')+
+      '<span class="wi-time">'+new Date(x.time).toLocaleString().slice(0,16)+'</span>'+
+      '<button class="wi-x" onclick="delWrongItem('+i+')" title="删除">✕</button></div>'+
+      (x.q&&x.title!==x.q?'<div class="muted" style="font-size:11.5px;margin-top:4px">原问：'+esc(x.q)+'</div>':'')+relHTML+'</div>';
+  }).join('');
+}
+function initQuestionBank(){
+  fetch('data/questions_bank.json').then(function(r){return r.json();}).then(function(j){
+    QUESTION_BANK=(j&&j.questions)||[]; renderWrongBook();
+  }).catch(function(){});
+}
 async function handleQA(q){
-  addMsg(qaChat,'user',esc(q),true);
+  if(q&&q.trim()){ CHAT_HISTORY.push(q.trim()); if(CHAT_HISTORY.length>8) CHAT_HISTORY=CHAT_HISTORY.slice(-8); }
+  var rawQ=q;
+  var ctxNote='';
+  if(CHAT_HISTORY.length>=2 && (rawQ.length<8 || /它|这个|该|其|上述|此/.test(rawQ))){
+    q=CHAT_HISTORY[CHAT_HISTORY.length-2]+'，'+rawQ;
+    ctxNote='🔁 已结合上文理解：「'+esc(CHAT_HISTORY[CHAT_HISTORY.length-2].slice(0,20))+'…」+「'+esc(rawQ.slice(0,15))+'」';
+  }
+  addMsg(qaChat,'user',esc(rawQ),true);
   qaBusy=true;qaSend.disabled=true;
   var bub=addMsg(qaChat,'ai',pipelineHTML(),false);
 
@@ -2786,6 +2984,9 @@ async function handleQA(q){
     +(!totalRefs&&!faq?' → 网络浏览':'')
     +(usedLLM?' · 🤖 LLM':'')
     +(checkResult&&!checkResult.passed?' · ⚠ 自查提示':'');
+  LAST_QA={q:rawQ, title:faq?(faq.title||''):'', subfield:faq?(faq.subfield||''):'', low:conf.level==='low'};
+  if(ctxNote) html='<div class="ans-sec" style="margin-bottom:4px"><p style="font-size:12px;color:var(--t3)">'+ctxNote+'</p></div>'+html;
+  html+='<div class="ans-sec" style="margin-top:6px"><button class="btn ghost sm" onclick="recordLastQA()">📒 记入错题本</button></div>';
   var ans=document.createElement('div');ans.innerHTML=html;bub.appendChild(ans);
   scrollChat(qaChat);saveAIBubble(bub);
   qaBusy=false;qaSend.disabled=false;
@@ -3208,17 +3409,17 @@ $('#asFinish').addEventListener('click',()=>{
 
 /* ================= Tab 切换与初始化 ================= */
 function switchTab(mode,push){
-  const qa=mode!=='assess';
+  var qa=mode==='qa', assess=mode==='assess', tools=mode==='tools', wrong=mode==='wrong';
   $('#panel-qa').classList.toggle('hidden',!qa);
-  $('#panel-assess').classList.toggle('hidden',qa);
-  $$('.tab').forEach(t=>t.classList.toggle('on',(t.dataset.mode==='assess')!==qa));
+  $('#panel-assess').classList.toggle('hidden',!assess);
+  $('#panel-tools').classList.toggle('hidden',!tools);
+  $('#panel-wrong').classList.toggle('hidden',!wrong);
+  $$('.tab').forEach(t=>t.classList.toggle('on',t.dataset.mode===mode));
   if(qa){setTimeout(()=>{scrollChat(qaChat);qaInput.focus();},50);}
-  else{
-    setTimeout(()=>{scrollChat(asChat);asInput.focus();},50);
-    startAssess();
-  }
+  else if(assess){ setTimeout(()=>{scrollChat(asChat);asInput.focus();},50); startAssess(); }
+  else if(wrong){ renderWrongBook(); }
   if(push!==false){
-    try{history.replaceState(null,'','assistant.html?mode='+(qa?'qa':'assess'));}catch(e){}
+    try{history.replaceState(null,'','assistant.html?mode='+mode);}catch(e){}
   }
 }
 $$('.tab').forEach(t=>t.addEventListener('click',function(){switchTab(t.dataset.mode);}));
@@ -3234,7 +3435,8 @@ renderQAHistory();
   var sf=$('#statFAQ'); if(sf) sf.textContent=FAQ.length;
 })();
 var mode='qa';
-try{mode=new URLSearchParams(location.search).get('mode')==='assess'?'assess':'qa';}catch(e){}
+try{var qp=new URLSearchParams(location.search).get('mode'); if(qp==='assess'||qp==='tools'||qp==='wrong') mode=qp;}catch(e){}
+initQuestionBank();
 switchTab(mode,false);
 })();
 </script>

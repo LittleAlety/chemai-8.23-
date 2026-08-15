@@ -149,9 +149,28 @@ function findArrayField(src, start, end, field) {
 }
 
 /**
- * 应用清洗清单：把指定条目 index 的 keys/ents 数组替换为新内容。
+ * 在 [start,end) 内查找标量字符串字段 field: '…' / "…" 的 value 跨度（含引号）。
+ */
+function findScalarField(src, start, end, field) {
+  const re = new RegExp('\\b' + field + '\\s*:');
+  const m = re.exec(src.slice(start, end));
+  if (!m) return null;
+  let i = start + m.index + m[0].length;
+  while (i < end && /\s/.test(src[i])) i++;
+  const q = src[i];
+  if (q !== "'" && q !== '"' && q !== '`') return null;
+  for (let j = i + 1; j < end; j++) {
+    const c = src[j];
+    if (c === '\\') { j++; continue; }
+    if (c === q) return { start: i, end: j + 1 };
+  }
+  return null;
+}
+
+/**
+ * 应用清洗清单：把指定条目 index 的 keys/ents 数组 或 answer/detail 字符串替换为新内容。
  * @param {string} html
- * @param {Array<{index:number, new_keys?:string[], new_ents?:string[]}>} changes
+ * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string}>} changes
  * @returns {string} 新 html
  */
 function applyManifest(html, changes) {
@@ -163,7 +182,7 @@ function applyManifest(html, changes) {
     if (!e) throw new Error('条目索引越界: ' + ch.index + ' (共 ' + spans.length + ' 条)');
     const entrySrc = src.slice(e.entryStart, e.entryEnd);
 
-    // 收集本条目内的编辑（keys/ents），按位置降序应用
+    // 收集本条目内的编辑，按位置降序应用
     const edits = [];
     if (ch.new_keys !== undefined && e.keysSpan) {
       const s = e.keysSpan.start - e.entryStart;
@@ -174,6 +193,20 @@ function applyManifest(html, changes) {
       const s = e.entsSpan.start - e.entryStart;
       const t = e.entsSpan.end - e.entryStart;
       edits.push([s, t, JSON.stringify(ch.new_ents)]);
+    }
+    if (ch.new_answer !== undefined) {
+      const sp = findScalarField(src, e.entryStart, e.entryEnd, 'answer');
+      if (sp) edits.push([sp.start - e.entryStart, sp.end - e.entryStart, JSON.stringify(ch.new_answer)]);
+    }
+    if (ch.new_detail !== undefined) {
+      const sp = findScalarField(src, e.entryStart, e.entryEnd, 'detail');
+      if (sp) {
+        edits.push([sp.start - e.entryStart, sp.end - e.entryStart, JSON.stringify(ch.new_detail)]);
+      } else {
+        // detail 字段缺失：在 answer 值之后插入 , detail:'…'
+        const asp = findScalarField(src, e.entryStart, e.entryEnd, 'answer');
+        if (asp) edits.push([asp.end - e.entryStart, asp.end - e.entryStart, ', detail:' + JSON.stringify(ch.new_detail)]);
+      }
     }
     edits.sort((a, b) => b[0] - a[0]);
     let newEntry = entrySrc;

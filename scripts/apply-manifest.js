@@ -28,6 +28,8 @@ function main() {
     const m = { index: c.index };
     if (c.new_keys !== undefined) m.new_keys = c.new_keys;
     if (c.new_ents !== undefined) m.new_ents = c.new_ents;
+    if (c.new_answer !== undefined) m.new_answer = c.new_answer;
+    if (c.new_detail !== undefined) m.new_detail = c.new_detail;
     return m;
   });
   const projected = applyManifest(html, projChanges);

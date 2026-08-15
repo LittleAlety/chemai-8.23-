@@ -3539,6 +3539,18 @@ try{var qp=new URLSearchParams(location.search).get('mode'); if(qp==='assess'||q
 initQuestionBank();
 initReportRubric();
 switchTab(mode,false);
+/* 暴露给内联 onclick 的全局函数（IIFE 内定义的函数需挂到 window 才能被 HTML onclick 调用） */
+window.analyzeUploadedReport=analyzeUploadedReport;
+window.clearUploadedFile=clearUploadedFile;
+window.recordLastQA=recordLastQA;
+window.clearWrongBook=clearWrongBook;
+window.delWrongItem=delWrongItem;
+window.calcMolar=calcMolar;
+window.calcYield=calcYield;
+window.calcSol=calcSol;
+window.calcKsp=calcKsp;
+window.calcTit=calcTit;
+window.renderWrongBook=renderWrongBook;
 })();
 </script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>

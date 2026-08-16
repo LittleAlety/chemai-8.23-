@@ -184,15 +184,19 @@ async function genQuestions(round) {
   const seen = exists(SEEN_FILE) ? readJson(SEEN_FILE) : [];
   const all = [];
   const batches = Math.ceil(N / GEN_BATCH);
-  for (let i = 0; i < batches; i++) {
-    const want = Math.min(GEN_BATCH, N - all.length);
-    const seenHint = seen.length ? '\n\n以下为已出过的题目（请避免重复主题与问法）：\n' + seen.slice(-40).map(s => ' - ' + (s.question || s).slice(0, 50)).join('\n') : '';
-    const user = '请生成 ' + want + ' 道高深度题目，覆盖不同 focusArea/subfield，不要重复，题与题之间差异化。\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest() + '\n\n语料文献参考：\n' + corpusDigest() + seenHint;
-    const items = await llmJSON(GEN_SYSTEM, user, 16000);
-    if (!items || !items.length) { console.log('  批次失败', i + 1); continue; }
+  const seenHint = seen.length ? '\n\n以下为已出过的题目（请避免重复主题与问法）：\n' + seen.slice(-40).map(s => ' - ' + (s.question || s).slice(0, 50)).join('\n') : '';
+  const userFor = (i) => {
+    const want = Math.min(GEN_BATCH, N - i * GEN_BATCH);
+    return '请生成 ' + want + ' 道高深度题目，覆盖不同 focusArea/subfield，不要重复，题与题之间差异化。\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest() + '\n\n语料文献参考：\n' + corpusDigest() + seenHint;
+  };
+  const batchResults = await runPool(Array.from({ length: batches }, (_, i) => i), async (i) => {
+    const items = await llmJSON(GEN_SYSTEM, userFor(i), 16000);
+    return items || [];
+  }, 5);
+  batchResults.forEach(items => {
     items.forEach((x, j) => all.push({ id: 'Q' + String(all.length + j + 1).padStart(3, '0'), ...x }));
-    console.log('  已生成', all.length);
-  }
+  });
+  console.log('  已生成', all.length);
   writeJson(fp, all.slice(0, N));
   // 累积到 seen
   const merged = seen.concat(all.slice(0, N).map(q => ({ question: q.question, focusArea: q.focusArea, subfield: q.subfield })));
@@ -205,14 +209,16 @@ async function auditQuestions() {
   if (exists(finalFp)) { console.log('[审核] 复用终审题集', readJson(finalFp).length); return; }
   const qs = readJson(qFile());
   console.log('[审核] 审核 ' + qs.length + ' 题');
+  const batches = [];
+  for (let i = 0; i < qs.length; i += BATCH) batches.push(qs.slice(i, i + BATCH));
+  const buildUser = (batch) => '逐题审核(数值以讲义为准, 6%H₂O₂=8mL)：\n' + JSON.stringify(batch.map(x => ({ question: x.question, referenceAnswer: x.referenceAnswer, focusArea: x.focusArea })), null, 2) + '\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest();
+  const batchResults = await runPool(batches, async (batch) => {
+    const items = await llmJSON(AUDIT_SYSTEM, buildUser(batch), 16000);
+    return items || [];
+  }, 5);
   const results = [];
-  for (let i = 0; i < qs.length; i += BATCH) {
-    const batch = qs.slice(i, i + BATCH);
-    const user = '逐题审核(数值以讲义为准, 6%H₂O₂=8mL)：\n' + JSON.stringify(batch.map(x => ({ question: x.question, referenceAnswer: x.referenceAnswer, focusArea: x.focusArea })), null, 2) + '\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest();
-    const items = await llmJSON(AUDIT_SYSTEM, user, 16000);
-    (items || []).forEach(v => results.push(v));
-    console.log('  已审核', results.length);
-  }
+  batchResults.forEach(items => items.forEach(v => results.push(v)));
+  console.log('  已审核', results.length);
   const byQ = {};
   qs.forEach(q => { byQ[q.question] = q; });
   results.forEach(r => {
@@ -257,7 +263,11 @@ async function scoreReplies(round) {
     }));
     return '请按标准参考答案给 AI 助手本地回复评分(0-10)：\n' + JSON.stringify(entries, null, 2);
   };
-  const raw = await llmJSONCovered(qs, SCORE_SYSTEM, buildUser, SCORE_BATCH, 16000, q => q.question, 0);
+  const raw = await runPool(qs, async (q) => {
+    // 逐题隔离评分（并发 CONC=8 加速）
+    const items = await llmJSON(SCORE_SYSTEM, buildUser([q]), 16000, 0);
+    return items && items[0] ? items[0] : null;
+  }, 8);
   const results = qs.map((q, i) => {
     const v = raw[i];
     return { id: q.id, question: q.question, score: v ? Number(v.score) : 0, accuracy: v ? Number(v.accuracy) : 0, completeness: v ? Number(v.completeness) : 0, manualCompliance: v ? Number(v.manualCompliance) : 0, why: v ? (v.why || '') : '', missing: v ? (v.missing || '') : '' };
@@ -279,6 +289,15 @@ const OPT3_SYSTEM = '你是 ChemAI 覆盖优化官。针对评分低(<9.5)的题
   '每项：{"id":"对应题目id(逐字复制)","keys":["检索词≥5个,须包含题目中最独特的实验术语(如具体试剂、温度、现象、步骤名)"],"ents":["实体词"],"title":"条目标题(反映该题主题,简洁)","q":"题目原文(逐字复制整个问题,使matchFAQ的qHit命中)","subfield":"17分类之一","answer":"完整参考答案(80~180字,以讲义为准,覆盖题目所有要点)","detail":"补充细节(含 corpus#数字 引用)"}。' +
   'keys 必须让本题及其变体能被本地检索命中，q 必须为题目原文，answer 必须准确完整覆盖题目要点。数值以讲义为准(6%H₂O₂=8mL)。';
 
+async function optCovered(items, system, buildUser, conc) {
+  const out = new Array(items.length).fill(null);
+  await runPool(items, async (x, i) => {
+    const r = await llmJSON(system, buildUser([x], i), 16000);
+    out[i] = (r && r.length) ? r[0] : null;
+  }, conc || 5);
+  return out;
+}
+
 async function threeOpt(round) {
   const qs = readJson(qFinalFile());
   const replies = runLocalReplies(round);
@@ -293,42 +312,47 @@ async function threeOpt(round) {
   const opt1fp = 'Agent工作区/Agent-优化/self_train_opt1_r' + round + '.json';
   const opt2fp = 'Agent工作区/Agent-优化/self_train_opt2_r' + round + '.json';
   const opt3fp = 'Agent工作区/Agent-优化/self_train_opt3_r' + round + '.json';
-  const OPT_BATCH = 5;
-  let opt1 = [], opt2 = [], opt3 = [];
-  if (exists(opt1fp)) { opt1 = readJson(opt1fp); } else if (low.length) {
-    const items = low.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, matchedFAQ: x.r.matchedFAQ }));
-    const raw = await llmJSONCovered(items, OPT1_SYSTEM,
-      chunk => '以下为低分题目及其命中FAQ，请为每条输出检索关键词补充方案(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY,
-      OPT_BATCH, 16000, x => x.id);
-    opt1 = items.map((x, i) => raw[i]).filter(Boolean);
-    writeJson(opt1fp, opt1); console.log('[优化1-检索]', opt1.length);
-  }
-  if (exists(opt2fp)) { opt2 = readJson(opt2fp); } else {
-    const withMatch = low.filter(x => x.r.matchedFAQ);
-    if (withMatch.length) {
+
+  // 三个优化 agent 并发执行（各用逐项并发池加速）
+  const [opt1Raw, opt2Raw, opt3Raw] = await Promise.all([
+    (async () => {
+      if (exists(opt1fp)) return null;
+      if (!low.length) return null;
+      const items = low.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, matchedFAQ: x.r.matchedFAQ }));
+      const raw = await optCovered(items, OPT1_SYSTEM, chunk => '以下为低分题目及其命中FAQ，请为每条输出检索关键词补充方案(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY, 5);
+      const out = items.map((x, i) => raw[i]).filter(Boolean);
+      writeJson(opt1fp, out); console.log('[优化1-检索]', out.length);
+      return out;
+    })(),
+    (async () => {
+      if (exists(opt2fp)) return null;
+      const withMatch = low.filter(x => x.r.matchedFAQ);
+      if (!withMatch.length) return null;
       const items = withMatch.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, matchedFAQ: x.r.matchedFAQ, missing: x.s.missing }));
-      const raw = await llmJSONCovered(items, OPT2_SYSTEM,
-        chunk => '以下为低分题目及其命中FAQ，请为确属该题主题的条目追加 detail(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY,
-        OPT_BATCH, 16000, x => x.id);
-      // 每 target 只保留第一条（避免多条 add_detail 覆盖/重复）
+      const raw = await optCovered(items, OPT2_SYSTEM, chunk => '以下为低分题目及其命中FAQ，请为确属该题主题的条目追加 detail(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY, 5);
       const seenTarget = new Set();
-      opt2 = items.map((x, i) => raw[i]).filter(Boolean).filter(o => {
+      const out = items.map((x, i) => raw[i]).filter(Boolean).filter(o => {
         const k = String(o.target || '').trim();
         if (!k || seenTarget.has(k)) return false;
         seenTarget.add(k); return true;
       });
-      writeJson(opt2fp, opt2); console.log('[优化2-答案]', opt2.length, '(按target去重)');
-    }
-  }
-  if (exists(opt3fp)) { opt3 = readJson(opt3fp); } else if (low.length) {
-    const items = low.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, referenceAnswer: (x.q.referenceAnswer || '').slice(0, 250) }));
-    const raw = await llmJSONCovered(items, OPT3_SYSTEM,
-      chunk => '以下为评分低的题目，请为每条新建专属FAQ条目(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY + '\n\n语料ID供引用：\n' + corpusDigest(60),
-      OPT_BATCH, 16000, x => x.id);
-    opt3 = items.map((x, i) => raw[i]).filter(Boolean);
-    if (opt3.length) writeJson(opt3fp, opt3);
-    console.log('[优化3-覆盖]', opt3.length);
-  }
+      writeJson(opt2fp, out); console.log('[优化2-答案]', out.length, '(按target去重)');
+      return out;
+    })(),
+    (async () => {
+      if (exists(opt3fp)) return null;
+      if (!low.length) return null;
+      const items = low.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, referenceAnswer: (x.q.referenceAnswer || '').slice(0, 250) }));
+      const raw = await optCovered(items, OPT3_SYSTEM, chunk => '以下为评分低的题目，请为每条新建专属FAQ条目(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY + '\n\n语料ID供引用：\n' + corpusDigest(60), 5);
+      const out = items.map((x, i) => raw[i]).filter(Boolean);
+      if (out.length) writeJson(opt3fp, out);
+      console.log('[优化3-覆盖]', out.length);
+      return out;
+    })(),
+  ]);
+  const opt1 = opt1Raw || (exists(opt1fp) ? readJson(opt1fp) : []);
+  const opt2 = opt2Raw || (exists(opt2fp) ? readJson(opt2fp) : []);
+  const opt3 = opt3Raw || (exists(opt3fp) ? readJson(opt3fp) : []);
   return { opt1, opt2, opt3 };
 }
 

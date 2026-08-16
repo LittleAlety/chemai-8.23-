@@ -340,14 +340,10 @@ async function threeOpt(round) {
       return out;
     })(),
     (async () => {
-      if (exists(opt3fp)) return null;
-      if (!low.length) return null;
-      const items = low.map(x => ({ id: x.q.id, question: x.q.question, score: x.s.score, referenceAnswer: (x.q.referenceAnswer || '').slice(0, 250) }));
-      const raw = await optCovered(items, OPT3_SYSTEM, chunk => '以下为评分低的题目，请为每条新建专属FAQ条目(每项带id)：\n' + JSON.stringify(chunk, null, 2) + '\n\n' + AUTHORITY + '\n\n语料ID供引用：\n' + corpusDigest(60), 5);
-      const out = items.map((x, i) => raw[i]).filter(Boolean);
-      if (out.length) writeJson(opt3fp, out);
-      console.log('[优化3-覆盖]', out.length);
-      return out;
+      // Opt3 LLM 通用条目生成已跳过：门禁由 ensureCoverage 确定性覆盖补录驱动，
+      // LLM Opt3 通用条目在 FAQ 超限时被熔断、纯耗 token（由用户选 A 优化）
+      if (exists(opt3fp)) return readJson(opt3fp);
+      return [];
     })(),
   ]);
   const opt1 = opt1Raw || (exists(opt1fp) ? readJson(opt1fp) : []);

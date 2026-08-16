@@ -3619,7 +3619,7 @@ async function handleQA(q){
   var analogyHits=retrieval2_chemicalAnalogy(q);
   var methodHits=retrieval3_methodologyTransfer(q);
 
-  var DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|/操作\|温度\|烘干\|干燥\|光照\|用量\|溶剂\|乙醇\|分解\|测定\|配制\|滤液\|母液\|产物\|原料\|陈化\|静置\|酸化\|氧化\|还原\|检验\|显色\|纯度\|终点\|杂质\|pH\|机理\|后果\|影响\//;
+  var DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响/;
   var GENERIC_RE=/原理|目的|计算|思考题|结论|步骤/;
   var domain=DOMAIN_RE.test(q)||detectChems(q).length>0||detectOps(q).length>0||(q.length<=8&&GENERIC_RE.test(q));
   var hits=domain?results.filter(function(r){return r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content);}):[];
@@ -4229,6 +4229,28 @@ window.renderWrongBook=renderWrongBook;
 
 /* 图表卡片/容器 */
 #barChart,.chart-box{background:rgba(2,6,23,.25);border:1px solid var(--bd);border-radius:12px;padding:12px 14px}
+
+/* === ChemAI 艺术字 v51 === */
+/* 主标题: 动态流光渐变 + 光晕 */
+.page-head h1,.banner h1,.hero-title,.welcome-title,.section-main-title{
+  background:linear-gradient(90deg,#34d399,#2dd4bf,#60a5fa,#a78bfa,#f472b6,#2dd4bf,#34d399);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:chemaiShine 7s linear infinite;
+  filter:drop-shadow(0 2px 16px rgba(45,212,191,.3));
+}
+@keyframes chemaiShine{0%{background-position:0% 0}100%{background-position:300% 0}}
+/* 统计数字: 霓虹光晕 */
+.stat-num{filter:drop-shadow(0 0 12px rgba(45,212,191,.45))}
+/* 等级徽章 / 徽标数字: 发光 */
+.g-tag{text-shadow:0 0 10px currentColor}
+.badge b{filter:drop-shadow(0 0 6px rgba(45,212,191,.4))}
+/* 面板/分区标题: 柔和光晕 */
+.panel-title,.section-title,.sec-title{text-shadow:0 0 16px rgba(45,212,191,.22)}
+/* 主按钮文字: 轻微立体光 */
+.btn.primary{text-shadow:0 1px 5px rgba(4,18,27,.4)}
+/* 关键词高亮 */
+.hl{text-shadow:0 0 14px rgba(45,212,191,.35)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>

@@ -448,7 +448,7 @@ button{font-family:inherit;cursor:pointer}
       <span class="badge b-teal">关联链接 <b id="statLinks">–</b></span>
       <span class="badge b-purple">语料文献 <b id="statDocs">–</b></span>
     </div>
-    <div class="tb-group" style="margin-left:auto">
+    <div class="tb-group tb-legend" style="margin-left:auto">
       <span class="tb-label">图例</span>
       <span id="legendBox" style="display:flex;align-items:center;gap:3px;flex-wrap:wrap"></span>
       <span class="legend-note">节点大小∝重要度 · 边色=知识方向 · 点击图例可筛选</span>
@@ -1774,6 +1774,41 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* 页脚: 顶部光晕分隔 */
 footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180deg,transparent,rgba(10,14,26,.6));padding-top:22px;margin-top:30px}
+
+/* === ChemAI 知识图谱 v53: 主题对比度 + 移动端 === */
+/* 浅色主题: 深色浮层元素强制浅色文字(保持"深色玻璃"观感一致) */
+[data-theme="light"] .legend-panel,
+[data-theme="light"] #tooltip,
+[data-theme="light"] .statsbar,
+[data-theme="light"] .stage-hint,
+[data-theme="light"] .zoom-ctrl button{color:#e2e8f0}
+[data-theme="light"] .legend-panel .leg-title,
+[data-theme="light"] .legend-panel .leg-row,
+[data-theme="light"] .legend-panel .leg-note,
+[data-theme="light"] .legend-panel .leg-toggle,
+[data-theme="light"] #tooltip .tt-cat,
+[data-theme="light"] .statsbar .st-group,
+[data-theme="light"] .statsbar span{color:#cbd5e1}
+[data-theme="light"] .legend-panel .leg-sec-title{color:#94a3b8}
+[data-theme="light"] .fchip:not(.on){color:#cbd5e1}
+[data-theme="light"] .seg button.on{color:#047857}
+[data-theme="light"] .statsbar b{color:#fbbf24}
+/* 浅色主题: 图例/提示面板背景改浅色(更亮)但文字保持深色? 否——保持深色浮层+浅字(上) */
+
+/* 移动端去拥挤 */
+@media (max-width:640px){
+  .tb-legend{display:none}            /* 图例chips隐藏(浮动图例面板已含) */
+  .legend-note{display:none}
+  .search-wrap{flex:1 1 130px;min-width:130px}
+  #searchInput{width:100%}
+  .stage{height:calc(100vh - 225px)}  /* 工具栏更紧凑 → 图谱舞台更多空间 */
+  .zoom-ctrl{left:6px;bottom:6px}
+  .legend-panel{max-width:150px}
+}
+@media (max-width:360px){
+  .badge.b-teal,.badge.b-purple{display:none}  /* 仅保留核心统计 */
+  .stage{height:calc(100vh - 200px)}
+}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>

@@ -540,12 +540,13 @@ function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.
   for (let round = START_ROUND; round <= ROUNDS; round++) {
     console.log('\n===== 自训练 Round ' + round + ' / ' + ROUNDS + ' =====');
     const faqBefore = parseFAQ(readHTML()).length;
+    const qs = readJson(qFinalFile());
     const scores = await scoreReplies(round);
     const nums = scores.map(s => Number(s.score)).filter(n => !isNaN(n));
     const minScore = nums.length ? Math.min(...nums) : 0;
     const avgScore = avg(nums);
     const lowCount = nums.filter(n => n < GATE).length;
-    const gatePassed = nums.length === N && minScore >= GATE;
+    const gatePassed = nums.length === qs.length && minScore >= GATE;   // 用实际题数(出题可能因批次失败<200)
     console.log('  评分: avg=' + avgScore + ' min=' + minScore + ' 低分(<9.5)=' + lowCount + '/' + nums.length + (gatePassed ? ' ✅全过门禁' : ''));
 
     const report = { round, n: nums.length, avgScore, minScore, lowCount, gatePassed, faqBefore, faqAfter: null, opt: null, generatedAt: new Date().toISOString() };

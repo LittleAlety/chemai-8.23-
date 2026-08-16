@@ -206,7 +206,7 @@ function matchFAQ(q){
     var lenBonus=Math.min(2,((f.answer||'').length+(f.detail||'').length)/800);
     var score=keyScore+entScore+longKey*0.5+lenBonus;
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
-    if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=50;
+    if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
     if(score>bestScore){bestScore=score;best=f;}
   }
   return best;

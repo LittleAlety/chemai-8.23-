@@ -60,13 +60,14 @@ button{font-family:inherit}
 /* 卡片通用 */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:24px}
 /* 条形图 */
-.bar-row{display:grid;grid-template-columns:110px 1fr 52px;align-items:center;gap:12px;padding:5px 0;font-size:13px;border-radius:8px;transition:background .2s}
-.bar-clickable{cursor:pointer}
-.bar-clickable:hover{background:rgba(45,212,191,.08)}
-.bar-name{color:var(--t2);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar-track{height:20px;background:rgba(10,14,26,.55);border-radius:6px;overflow:hidden}
-.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--blue));width:0;transition:width .8s cubic-bezier(.2,.8,.3,1);min-width:2px}
-.bar-count{color:var(--t1);font-weight:600;font-variant-numeric:tabular-nums}
+.bar-row{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:12px;padding:6px 8px;font-size:13px;border-radius:8px;transition:background .2s,transform .2s;cursor:pointer}
+.bar-clickable:hover{background:rgba(148,163,184,.08);transform:translateX(3px)}
+.bar-name{color:var(--t2);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.bar-track{height:20px;background:rgba(10,14,26,.55);border-radius:6px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.3)}
+.bar-fill{height:100%;border-radius:6px;width:0;transition:width .9s cubic-bezier(.2,.8,.3,1);min-width:2px}
+.bar-clickable:hover .bar-fill{filter:brightness(1.2)}
+.bar-count{color:var(--t1);font-weight:700;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;line-height:1.25}
+.bar-pct{font-size:10px;color:var(--t3);font-weight:400}
 /* 工具栏 */
 .toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
 .search-box{flex:1;min-width:220px;position:relative}
@@ -563,16 +564,21 @@ function refreshStats(){
   document.getElementById('statGen').textContent=getGen();
   document.getElementById('statTerms').textContent=getTermCount().toLocaleString()||'—';
 }
+const SUB_COLORS={'合成制备':'#34d399','反应原理':'#60a5fa','实验操作':'#fbbf24','分析测定':'#a78bfa','光化学应用':'#f87171','结构表征':'#22d3ee','磁性研究':'#fb923c','热分析':'#f472b6','安全与废物处理':'#fb7185','配位化学理论':'#2dd4bf','实验教学':'#818cf8','综合研究':'#94a3b8','化学史':'#c084fc','高等理论':'#38bdf8','蓝晒工艺':'#f59e0b','摩尔盐相关':'#34d399','草酸配合物':'#4ade80','其他':'#64748b'};
 function refreshBarChart(){
   const counts={};
   mergedEntries().forEach(e=>{const k=e.subfield||'其他';counts[k]=(counts[k]||0)+1});
   const rows=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
   const max=rows.length?rows[0][1]:1;
-  document.getElementById('barChart').innerHTML=rows.map(([k,v])=>
-    '<div class="bar-row bar-clickable" data-subfield="'+esc(k)+'" title="点击筛选该子领域">'
-    +'<div class="bar-name" title="'+esc(k)+'">'+esc(k)+'</div>'
-    +'<div class="bar-track"><div class="bar-fill" data-w="'+(v/max*100).toFixed(1)+'"></div></div>'
-    +'<div class="bar-count">'+v+'</div></div>').join('')||'<div class="empty-tip">暂无数据</div>';
+  const total=rows.reduce((a,[,v])=>a+v,0)||1;
+  document.getElementById('barChart').innerHTML=rows.map(([k,v])=>{
+    const col=SUB_COLORS[k]||'#2dd4bf';
+    const pct=(v/total*100);
+    return '<div class="bar-row bar-clickable" data-subfield="'+esc(k)+'" title="'+esc(k)+' · '+v+' 条 ('+pct.toFixed(1)+'%) · 点击筛选">'
+    +'<div class="bar-name" style="color:'+col+'">'+esc(k)+'</div>'
+    +'<div class="bar-track"><div class="bar-fill" data-w="'+(v/max*100).toFixed(1)+'" style="background:linear-gradient(90deg,'+col+','+col+'99);box-shadow:0 0 10px '+col+'44"></div></div>'
+    +'<div class="bar-count">'+v+'<span class="bar-pct">'+pct.toFixed(1)+'%</span></div></div>'
+  }).join('')||'<div class="empty-tip">暂无数据</div>';
   requestAnimationFrame(()=>setTimeout(()=>{
     document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%');
     // 条形图点击跳转到知识清单并筛选对应子领域
@@ -1453,6 +1459,32 @@ document.getElementById("hamburgerBtn").addEventListener("click",function(){docu
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:1 0 auto;min-width:150px}
 }
+
+/* === ChemAI 全局版面 v50：布局与可视化打磨 === */
+/* 进度条渐变光晕 */
+.kp-bar i{background:linear-gradient(90deg,#34d399,#2dd4bf,#60a5fa);box-shadow:0 0 8px rgba(45,212,191,.35)}
+.ap-bar i{background:linear-gradient(90deg,#34d399,#2dd4bf);box-shadow:0 0 8px rgba(45,212,191,.3)}
+.conf-bar .cf-fill{background:linear-gradient(90deg,var(--em),var(--teal));box-shadow:0 0 6px rgba(45,212,191,.3)}
+.assess-progress .ap-bar i,.score-bar i{background:linear-gradient(90deg,#34d399,#2dd4bf,#60a5fa)}
+
+/* 报告等级徽章 */
+.g-tag{box-shadow:0 2px 8px rgba(2,6,23,.28)}
+
+/* 统计数字渐变 */
+.stat-num{font-size:24px;background:linear-gradient(90deg,var(--em),var(--teal),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-icon{filter:drop-shadow(0 2px 5px rgba(16,185,129,.3))}
+
+/* 分区标题装饰条 */
+.section-title h2,.sec-title h2,.card-title h2,.panel-title,.rp-sec h3{position:relative;padding-left:14px}
+.section-title h2::before,.sec-title h2::before,.card-title h2::before,.rp-sec h3::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:18px;border-radius:3px;background:linear-gradient(180deg,var(--em),var(--teal));box-shadow:0 0 8px rgba(45,212,191,.4)}
+
+/* 知识图谱工具栏徽章 */
+.badge{border:1px solid var(--bd2, rgba(148,163,184,.25));background:rgba(16,185,129,.07);padding:4px 11px;border-radius:8px;font-size:12px}
+.badge b{color:var(--em)}
+.tb-group .tb-label{letter-spacing:.05em}
+
+/* 图表卡片/容器 */
+#barChart,.chart-box{background:rgba(2,6,23,.25);border:1px solid var(--bd);border-radius:12px;padding:12px 14px}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>

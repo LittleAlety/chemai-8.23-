@@ -3,85 +3,98 @@
   "rounds": [
     {
       "round": 1,
-      "n": 196,
-      "avgScore": 4.08,
-      "minScore": 1,
-      "lowCount": 193,
+      "n": 198,
+      "avgScore": 4.78,
+      "minScore": 0.5,
+      "lowCount": 191,
       "gatePassed": false,
-      "faqBefore": 1475,
-      "faqAfter": 1671,
+      "faqBefore": 2649,
+      "faqAfter": 2841,
       "opt": {
-        "opt1": 196,
-        "opt2": 30,
-        "opt3": 196
+        "opt1": 192,
+        "opt2": 21,
+        "opt3": 0
       },
-      "generatedAt": "2026-08-16T02:52:25.585Z"
+      "generatedAt": "2026-08-16T16:39:47.068Z"
     },
     {
       "round": 2,
-      "n": 196,
-      "avgScore": 9.64,
-      "minScore": 1,
-      "lowCount": 8,
+      "n": 199,
+      "avgScore": 9.83,
+      "minScore": 1.5,
+      "lowCount": 4,
       "gatePassed": false,
-      "faqBefore": 1671,
-      "faqAfter": 1673,
+      "faqBefore": 2841,
+      "faqAfter": 2843,
       "opt": {
-        "opt1": 9,
-        "opt2": 9,
-        "opt3": 9
+        "opt1": 2,
+        "opt2": 2,
+        "opt3": 0
       },
-      "generatedAt": "2026-08-16T03:42:48.187Z"
+      "generatedAt": "2026-08-16T16:46:27.439Z"
     },
     {
       "round": 3,
       "n": 199,
-      "avgScore": 9.67,
+      "avgScore": 9.84,
       "minScore": 1,
-      "lowCount": 7,
+      "lowCount": 4,
       "gatePassed": false,
-      "faqBefore": 1673,
-      "faqAfter": 1674,
+      "faqBefore": 2843,
+      "faqAfter": 2845,
       "opt": {
-        "opt1": 5,
-        "opt2": 5,
-        "opt3": 5
+        "opt1": 2,
+        "opt2": 1,
+        "opt3": 0
       },
-      "generatedAt": "2026-08-16T03:55:48.579Z"
+      "generatedAt": "2026-08-16T16:47:47.908Z"
     },
     {
       "round": 4,
       "n": 199,
-      "avgScore": 9.66,
-      "minScore": 0,
-      "lowCount": 6,
+      "avgScore": 9.82,
+      "minScore": 1,
+      "lowCount": 3,
       "gatePassed": false,
-      "faqBefore": 1674,
-      "faqAfter": 1674,
+      "faqBefore": 2845,
+      "faqAfter": 2846,
       "opt": {
-        "opt1": 4,
-        "opt2": 4,
-        "opt3": 4
+        "opt1": 1,
+        "opt2": 1,
+        "opt3": 0
       },
-      "generatedAt": "2026-08-16T04:08:04.199Z"
+      "generatedAt": "2026-08-16T16:49:13.089Z"
     },
     {
       "round": 5,
       "n": 199,
-      "avgScore": 9.68,
-      "minScore": 0.5,
-      "lowCount": 8,
+      "avgScore": 9.84,
+      "minScore": 2,
+      "lowCount": 2,
       "gatePassed": false,
-      "faqBefore": 1674,
-      "faqAfter": 1674,
+      "faqBefore": 2846,
+      "faqAfter": 2846,
       "opt": {
-        "opt1": 6,
-        "opt2": 6,
-        "opt3": 6
+        "opt1": 0,
+        "opt2": 0,
+        "opt3": 0
       },
-      "generatedAt": "2026-08-16T04:19:58.218Z"
+      "generatedAt": "2026-08-16T16:50:28.987Z"
     }
   ],
   "model": "deepseek-v4-flash",
-  "generatedAt": "2026-08-16T04:21:21.982Z"
+  "generatedAt": "2026-08-16T16:56:02.138Z",
+  "finalize": {
+    "method": "finalize_fast",
+    "fixedLow": 2,
+    "note": "修复题集重复ID(Q180/Q182)后按题目文本对齐评分"
+  },
+  "finalRescore": {
+    "n": 199,
+    "avgScore": 9.97,
+    "minScore": 9.5,
+    "passCount": 199,
+    "gatePassed": true,
+    "evidenceFile": "Agent工作区/Agent-C-答案评分/final_r6_rescore.json"
+  }
 }

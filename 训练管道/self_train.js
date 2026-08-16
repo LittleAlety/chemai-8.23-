@@ -224,7 +224,8 @@ async function auditQuestions() {
   results.forEach(r => {
     if (r && byQ[r.question]) {
       if (r.valid === false) {
-        if (r.correction && r.correction !== r.question) byQ[r.question].question = r.correction;
+        // 防"请保持原题不变"这类占位被当作修正应用
+        if (r.correction && r.correction !== r.question && !/请保持原题|保持原题|无需修改|无需改动|原题正确/.test(r.correction)) byQ[r.question].question = r.correction;
       }
       if (r.referenceCorrection) byQ[r.question].referenceAnswer = r.referenceCorrection;
     }

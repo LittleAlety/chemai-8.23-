@@ -198,7 +198,7 @@ function matchFAQ(q){
       var en=f.ents[ej];
       if(nq.indexOf(norm(en))>=0){eh++;entScore+=3;}
     }
-    var fq=norm(f.q||'');
+    var fq=norm(fixTypos(f.q||''));   // 存储q也过fixTypos, 与nq(fixT'd用户题)对齐
     var exactQ=fq && fq===nq;
     var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||exactQ;
     if(!trig) continue;

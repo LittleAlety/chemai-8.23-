@@ -30,8 +30,9 @@ const BATCH = Number(process.env.BATCH || 10);
 const GEN_BATCH = 5;   // 出题批次（参考答案长，防截断）
 const SCORE_BATCH = 1; // 评分逐题隔离（批次评分裁判严重低估，隔离才可靠）
 const CONC = 5;
-const MAX_FAQ = 1300;      // 超过则 Opt3 暂停
-const MAX_SIZE = 2.5 * 1024 * 1024;
+const MAX_FAQ = 1700;      // 超过则 Opt3 暂停
+const MAX_SIZE = 3.5 * 1024 * 1024;
+const SEEN_FILE = 'Agent工作区/Agent-B-问题生成/self_train_seen_questions.json';
 
 // ---------- LLM 助手（copy agent-loop.js）----------
 const homeDir = process.env.HOME || process.env.USERPROFILE || '';
@@ -180,17 +181,23 @@ async function genQuestions(round) {
   const fp = qFile();
   if (exists(fp)) { console.log('[出题] 复用题目集', readJson(fp).length); return; }
   console.log('[出题] 生成 ' + N + ' 题');
+  const seen = exists(SEEN_FILE) ? readJson(SEEN_FILE) : [];
   const all = [];
   const batches = Math.ceil(N / GEN_BATCH);
   for (let i = 0; i < batches; i++) {
     const want = Math.min(GEN_BATCH, N - all.length);
-    const user = '请生成 ' + want + ' 道高深度题目，覆盖不同 focusArea/subfield，不要重复，题与题之间差异化。\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest() + '\n\n语料文献参考：\n' + corpusDigest();
+    const seenHint = seen.length ? '\n\n以下为已出过的题目（请避免重复主题与问法）：\n' + seen.slice(-40).map(s => ' - ' + (s.question || s).slice(0, 50)).join('\n') : '';
+    const user = '请生成 ' + want + ' 道高深度题目，覆盖不同 focusArea/subfield，不要重复，题与题之间差异化。\n\n' + AUTHORITY + '\n\n手册：\n' + manualDigest() + '\n\n语料文献参考：\n' + corpusDigest() + seenHint;
     const items = await llmJSON(GEN_SYSTEM, user, 16000);
     if (!items || !items.length) { console.log('  批次失败', i + 1); continue; }
     items.forEach((x, j) => all.push({ id: 'Q' + String(all.length + j + 1).padStart(3, '0'), ...x }));
     console.log('  已生成', all.length);
   }
   writeJson(fp, all.slice(0, N));
+  // 累积到 seen
+  const merged = seen.concat(all.slice(0, N).map(q => ({ question: q.question, focusArea: q.focusArea, subfield: q.subfield })));
+  writeJson(SEEN_FILE, merged);
+  console.log('[出题] 已累积题目总数:', merged.length);
 }
 
 async function auditQuestions() {
@@ -555,6 +562,7 @@ function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.
     const { opt1, opt2, opt3 } = await threeOpt(round);
     applyOpts(opt1, opt2, opt3, round);
     ensureCoverage(round);   // 确定性覆盖补录：保证每道低分题都有 q=题目原文 的针对性条目
+    localAnswer.reload();    // 重载 FAQ（否则下一轮仍用旧内存 FAQ，针对性条目不命中）
     const faqAfter = parseFAQ(readHTML()).length;
     report.faqAfter = faqAfter;
     report.opt = { opt1: (opt1 || []).length, opt2: (opt2 || []).length, opt3: (opt3 || []).length };

@@ -406,8 +406,13 @@ function answer(q){
   };
 }
 
+function reload(){
+  _inited = false;   // 强制重载（自训练每轮注入 FAQ 后调用）
+  return init();
+}
+
 module.exports = {
-  init, answer,
+  init, reload, answer,
   get faqCount(){ return FAQ.length; },
   get corpusCount(){ return Corpus.entries.length; },
   // 自我检查：无头评分不使用，暴露占位符

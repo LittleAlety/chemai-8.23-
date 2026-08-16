@@ -39,8 +39,8 @@ const homeDir = process.env.HOME || process.env.USERPROFILE || '';
 const envPath = path.join(homeDir, '.codex/skills/claude-vision/.env');
 const env = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf8') : '';
 const getEnv = key => { const m = env.match(new RegExp('^' + key + '=(.*)$', 'm')); return m ? m[1].trim() : ''; };
-const API_KEY = process.env.DEEPSEEK_KEY || getEnv('DASHSCOPE_API_KEY');
-const API_URL = process.env.DEEPSEEK_KEY
+const API_KEY = process.env.DEEPSEEK_KEY || getEnv('DEEPSEEK_KEY') || getEnv('DASHSCOPE_API_KEY');
+const API_URL = (process.env.DEEPSEEK_KEY || getEnv('DEEPSEEK_KEY'))
   ? 'https://api.deepseek.com/v1/chat/completions'
   : (getEnv('DASHSCOPE_BASE_URL') || 'https://dashscope.aliyuncs.com/compatible-mode/v1') + '/chat/completions';
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';

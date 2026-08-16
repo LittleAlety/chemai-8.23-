@@ -539,6 +539,38 @@ function ensureCoverage(round) {
 }
 function writeHTML(html) { fs.writeFileSync(W('assistant.html'), html, 'utf8'); }
 
+// 题集完整性校验：唯一 id(重复重编号到缺失号) + 去除完全重复题 → 防止重复ID导致评分错位/检索命中错条目
+function validateQuestionSet() {
+  const fp = qFinalFile();
+  const qs = readJson(fp);
+  const seenId = new Set(), seenQ = new Set(), out = [];
+  const nums = qs.map(q => parseInt(String(q.id || '').replace(/\D/g, '')) || 0);
+  const used = new Set(nums);
+  const maxN = nums.length ? Math.max(...nums) : 0;
+  const missing = [];
+  for (let n = 1; n <= maxN; n++) if (!used.has(n)) missing.push(n);
+  let mi = 0, renumbered = 0, dropped = 0;
+  for (const q of qs) {
+    const nq = normQ(q.question);
+    if (seenQ.has(nq)) { dropped++; continue; }          // 完全重复题 → 去掉
+    seenQ.add(nq);
+    if (seenId.has(q.id)) {                               // 重复 id → 重编号到缺失号
+      let nn = null;
+      while (mi < missing.length) { const cand = missing[mi++]; if (!used.has(cand)) { nn = cand; break; } }
+      if (nn === null) { nn = maxN + 1; while (used.has(nn)) nn++; }
+      used.add(nn); q.id = 'Q' + String(nn).padStart(3, '0'); renumbered++;
+    }
+    seenId.add(q.id);
+    out.push(q);
+  }
+  if (renumbered || dropped) {
+    writeJson(fp, out);
+    console.log('[校验] 修复题集: 重编号 ' + renumbered + ' 个重复id, 去除 ' + dropped + ' 个重复题 → ' + out.length + ' 题');
+  } else {
+    console.log('[校验] 题集完整: ' + out.length + ' 题, id 唯一无重复');
+  }
+}
+
 // ---------- 报告与主循环 ----------
 function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.length * 100) / 100 : 0; }
 
@@ -556,6 +588,7 @@ function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.
     console.error('题目集为空，出题/审核失败，终止');
     process.exit(1);
   }
+  validateQuestionSet();   // 题集完整性：唯一 id/无重复题 → 评分与检索精准的前提
   console.log('固定题集: ' + readJson(qFinalFile()).length + ' 题 → ' + qFinalFile());
   const reports = [];
   for (let round = START_ROUND; round <= ROUNDS; round++) {

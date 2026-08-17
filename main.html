@@ -257,12 +257,20 @@ code{font-family:"JetBrains Mono",Consolas,monospace;background:rgba(96,165,250,
 .sec-body td{padding:9px 14px;border-bottom:1px solid var(--bd);color:#cfd8e6;line-height:1.65;vertical-align:top}
 .sec-body tr:last-child td{border-bottom:none}
 .sec-body tr:hover td{background:rgba(148,163,184,.04)}
-.sec-figs{display:flex;flex-wrap:wrap;gap:16px 18px;align-items:flex-start;margin:16px 0 6px}
-.sec-figs figure{margin:0;display:flex;flex-direction:column;align-items:center;flex:0 1 auto;min-width:0;max-width:360px;background:rgba(148,163,184,.06);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
-.sec-figs img{width:100%;display:block;height:auto;background:#fff}
-.sec-figs figcaption{width:100%;font-size:12.5px;color:var(--t3);padding:9px 12px;line-height:1.55;margin-top:auto;text-align:center}
-.sec-figs .fig-big{flex-basis:100%;max-width:640px;margin:0 auto}
-.sec-figs .fig-big img{width:100%}
+.sec-figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin:16px 0 6px}
+.sec-figs figure{margin:0;display:flex;flex-direction:column;background:rgba(148,163,184,.06);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:transform .18s,border-color .18s,box-shadow .18s}
+.sec-figs figure:hover{transform:translateY(-2px);border-color:var(--bd2);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.sec-figs img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#fff}
+.sec-figs figcaption{width:100%;font-size:12.5px;color:var(--t3);padding:8px 10px;line-height:1.5;text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.sec-figs .fig-big{grid-column:1/-1;max-width:760px;justify-self:center;width:100%}
+.sec-figs .fig-big img{aspect-ratio:auto;object-fit:contain}
+/* 图片灯箱 */
+.lb{position:fixed;inset:0;background:rgba(4,9,20,.93);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:28px}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 10px 50px rgba(0,0,0,.6);background:#fff}
+.lb .lb-cap{color:#dbe4f0;font-size:13.5px;line-height:1.7;margin-top:16px;text-align:center;max-width:82vw}
+.lb .lb-x{position:absolute;top:16px;right:22px;color:#fff;font-size:30px;cursor:pointer;line-height:1;opacity:.85;transition:opacity .15s}
+.lb .lb-x:hover{opacity:1}
 .sec-meta{
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;
   font-size:12px;color:var(--t3);line-height:1.6;
@@ -704,13 +712,28 @@ function showError(err){
   $("#manualBox").innerHTML='<div class="error-box"><h3>⚠️ 实验手册加载失败</h3><p>'+msg+"</p><p>"+tip+"</p></div>";
   $("#tocNav").innerHTML='<div style="padding:10px;font-size:12.5px;color:var(--t3)">手册加载失败，目录不可用</div>';
 }
-/* 实验图片按自然宽度显示（≤360px），避免卡片被长图注撑宽后图片被拉伸放大；fig-big 全宽流程图除外 */
-document.addEventListener('load',function(e){
-  var t=e.target;
-  if(t&&t.tagName==='IMG'&&t.naturalWidth&&t.closest&&t.closest('.sec-figs')&&!t.closest('.fig-big')){
-    t.style.maxWidth=Math.min(t.naturalWidth,360)+'px';
+/* 图片灯箱：点击缩略图查看全图，Esc/点背景/点✕ 关闭 */
+(function(){
+  var lb=null;
+  function openLb(img){
+    if(!lb){
+      lb=document.createElement('div');lb.className='lb';
+      lb.innerHTML='<span class="lb-x">✕</span><img alt=""><div class="lb-cap"></div>';
+      lb.addEventListener('click',function(e){ if(e.target===lb||e.target.className==='lb-x') lb.classList.remove('open'); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+      document.body.appendChild(lb);
+    }
+    var fig=img.closest('figure'),c=fig&&fig.querySelector('figcaption');
+    lb.querySelector('img').src=img.currentSrc||img.src;
+    lb.querySelector('img').alt=img.alt||'';
+    lb.querySelector('.lb-cap').textContent=c?c.textContent:'';
+    lb.classList.add('open');
   }
-},true);
+  document.addEventListener('click',function(e){
+    var f=e.target&&e.target.closest?e.target.closest('.sec-figs figure'):null;
+    if(f){ var img=f.querySelector('img'); if(img) openLb(img); }
+  });
+})();
 fetch("data/manual.json",{cache:'no-store'}).then(function(r){
   if(!r.ok)throw new Error("HTTP "+r.status);
   return r.json();

@@ -107,10 +107,10 @@ a:hover{color:var(--em)}
 .divider{border:none;border-top:1px dashed var(--bd2);margin:12px 0}
 .ans-sec{margin:8px 0}
 .ans-sec+.ans-sec{border-top:1px dashed var(--bd);padding-top:8px}
-.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:8px}
-.img-card{margin:0;display:flex;flex-direction:column;background:rgba(148,163,184,.06);border:1px solid var(--bd);border-radius:9px;overflow:hidden}
-.img-card img{width:100%;display:block;height:auto;flex-shrink:0;background:#fff}
-.img-card figcaption{font-size:11.5px;color:var(--t3);padding:6px 9px;line-height:1.45;margin-top:auto}
+.img-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.img-card{margin:0;display:flex;flex-direction:column;align-items:center;flex:0 1 auto;min-width:0;max-width:300px;background:rgba(148,163,184,.06);border:1px solid var(--bd);border-radius:10px;overflow:hidden}
+.img-card img{width:100%;display:block;height:auto;background:#fff}
+.img-card figcaption{width:100%;font-size:11.5px;color:var(--t3);padding:7px 10px;line-height:1.5;margin-top:auto;text-align:center}
 .faq-chip{font-family:inherit}
 
 /* 富文本答案渲染 */
@@ -1734,6 +1734,13 @@ function imagesHTML(imgs){
       }).join('')
     + '</div></div>';
 }
+/* 配图按自然宽度显示（≤300px），避免卡片被图注撑宽后图片被拉伸放大 */
+document.addEventListener('load',function(e){
+  var t=e.target;
+  if(t&&t.tagName==='IMG'&&t.naturalWidth&&t.closest&&t.closest('.img-card')){
+    t.style.maxWidth=Math.min(t.naturalWidth,300)+'px';
+  }
+},true);
 
 
 function buildAnswerHTML(q,ctx){

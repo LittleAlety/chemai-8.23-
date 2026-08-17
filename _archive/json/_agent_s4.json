@@ -1,0 +1,112 @@
+[
+  {
+    "num": 46,
+    "status": "substituted",
+    "original_title": "Magnetic Properties of Potassium Tris(oxalato)ferrate(III): Temperature-Dependent Susceptibility and Magnetization",
+    "corrected_title": "Magnetic susceptibility and crystal structure analysis of potassium iron oxalate trihydrate",
+    "journal": "Physica B: Condensed Matter",
+    "year": "2002",
+    "doi": "10.1016/s0921-4526(02)00761-5",
+    "zh_note": "实测了 K₃[Fe(C₂O₄)₃]·3H₂O 的磁化率并解析其晶体结构，为三草酸合铁酸钾的变温磁行为提供实验数据。",
+    "evidence": "CrossRef 检索'potassium ferrioxalate magnetic susceptibility trihydrate'命中该论文；再经 api.crossref.org/works/10.1016/s0921-4526(02)00761-5 核验（Delgado, Mora, Sagredo, 2002）。原标题在 CrossRef 无对应论文，判定为虚构并替换。"
+  },
+  {
+    "num": 50,
+    "status": "substituted",
+    "original_title": "Oxalate-Based Soluble 2D Magnets: The Series [K(18-crown-6)]₃[Mᴵᴵ₃(H₂O)₄{Mᴵᴵᴵ(ox)₃}₃]",
+    "corrected_title": "Synthesis and Characterization of a Soluble Bimetallic Oxalate-Based Bidimensional Magnet: [K(18-crown-6)]3[Mn3(H2O)4{Cr(ox)3}3]",
+    "journal": "Inorganic Chemistry",
+    "year": "2006",
+    "doi": "10.1021/ic0517570",
+    "zh_note": "报道了可溶性 K(18-crown-6) 模板化的二维草酸桥联双金属磁体 [K(18-crown-6)]₃[Mn₃(H₂O)₄{Cr(ox)₃}₃]，兼具溶液加工性与磁有序。",
+    "evidence": "CrossRef 检索'Oxalate-Based Soluble 2D Magnets K(18-crown-6) M(II) M(III) oxalate'命中；经 api.crossref.org/works/10.1021/ic0517570 核验（Coronado, Galán-Mascarós, Martí-Gastaldo, Inorg. Chem. 2006）。原标题声称 JACS 2010，实际为该 Coronado 系列在 Inorg. Chem. 的真实论文，替换。"
+  },
+  {
+    "num": 53,
+    "status": "substituted",
+    "original_title": "Mössbauer and Magnetic Studies of Alkali Tris(oxalato)ferrate(III) Complexes",
+    "corrected_title": "Mössbauer studies on the gamma radiolysis of cesium tris(oxalato)ferrate(III) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1988",
+    "doi": "10.1007/bf02395557",
+    "zh_note": "以 Mössbauer 谱研究碱金属铯三草酸合铁(III)二水合物的 γ 辐解行为，反映辐照前后铁配位环境的变化。",
+    "evidence": "CrossRef 检索'Mossbauer and Magnetic Studies of Alkali Tris(oxalato)ferrate(III)'及'Mossbauer potassium tris oxalato ferrate alkali'命中；经 api.crossref.org/works/10.1007/bf02395557 核验（Ladrière, Hyperfine Interact. 1988）。原 2020 年标题无对应论文，替换为同刊真实 Mössbauer 研究。"
+  },
+  {
+    "num": 54,
+    "status": "substituted",
+    "original_title": "Antiferromagnetic Ordering in Two-Dimensional Oxalate-Bridged Iron(III) Networks",
+    "corrected_title": "Molecular-Based Magnetism in Bimetallic Two-Dimensional Oxalate-Bridged Networks. An X-ray and Neutron Diffraction Study",
+    "journal": "Inorganic Chemistry",
+    "year": "1997",
+    "doi": "10.1021/ic960838g",
+    "zh_note": "结合 X 射线与中子衍射证实二维草酸桥联双金属网络的磁有序结构，揭示层内长程磁耦合机制。",
+    "evidence": "CrossRef 检索'Decurtins two-dimensional oxalate bimetallic magnetic ordering'命中；经 api.crossref.org/works/10.1021/ic960838g 核验（Pellaux, Schmalle, Huber, Fischer, Hauss, Ouladdiaf, Decurtins, Inorg. Chem. 1997）。原 PRB 2017 标题无对应论文，替换为二维草酸桥联网络磁有序的真实论文。"
+  },
+  {
+    "num": 55,
+    "status": "substituted",
+    "original_title": "ESR Studies of Cation Deficient Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "corrected_title": "The detection of oxalate free radicals by EPR spin trapping in the photolysis of tris(oxalato)iron(III)",
+    "journal": "Inorganica Chimica Acta",
+    "year": "1977",
+    "doi": "10.1016/s0020-1693(00)95662-7",
+    "zh_note": "用 EPR 自旋捕获技术检测三草酸合铁(III)光解产生的草酸自由基，属草酸铁配合物 EPR 研究的代表性工作。",
+    "evidence": "CrossRef 检索'ESR EPR iron oxalate tris oxalato ferrate complex'命中；经 api.crossref.org/works/10.1016/s0020-1693(00)95662-7 核验（Rehorek, Benedix, Thomas, Inorg. Chim. Acta 1977）。避免与 #63 已占用的 IOP Conf. 2018 XRD/FE-SEM/FT-IR/ESR 论文重复，替换为另一篇不同的真实 EPR 研究。"
+  },
+  {
+    "num": 56,
+    "status": "substituted",
+    "original_title": "Temperature-Dependent Magnetic Susceptibility of K₃[Fe(C₂O₄)₃]·3H₂O: A Student Laboratory Experiment",
+    "corrected_title": "Magnetic susceptibility: A physical chemistry laboratory experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1962",
+    "doi": "10.1021/ed039p574",
+    "zh_note": "物理化学实验课程中测定过渡金属配合物磁化率的经典教学设计（Gouy 法），可延伸用于测定 K₃[Fe(C₂O₄)₃]·3H₂O 等配合物的磁矩。",
+    "evidence": "CrossRef 检索'Magnetic susceptibility physical chemistry laboratory experiment transition metal'命中；经 api.crossref.org/works/10.1021/ed039p574 核验（Brubacher, Stafford, J. Chem. Educ. 1962, type=journal-article）。原选 10.1021/ed050p218 与 #80 重复，已更换为不同的真实教学论文，DOI 不与 #80/#60 及本分节已确认条目重复。"
+  },
+  {
+    "num": 57,
+    "status": "substituted",
+    "original_title": "Spin Canting and Weak Ferromagnetism in Oxalate-Based Fe(III) Coordination Polymers",
+    "corrected_title": "Synthesis, magnetic susceptibility, and spectroscopic properties of single- and mixed-valence iron oxalate, squarate, and dihydroxybenzoquinone coordination polymers",
+    "journal": "Inorganic Chemistry",
+    "year": "1979",
+    "doi": "10.1021/ic50200a022",
+    "zh_note": "报道单/混合价草酸铁等配位聚合物的合成、磁化率与光谱性质，表明草酸桥联铁聚合物存在磁交换耦合。",
+    "evidence": "CrossRef 检索'Spin Canting Weak Ferromagnetism Oxalate-Based Fe(III) Coordination Polymers'及'tetrabutylammonium iron oxalate mixed valence ferrimagnet'无原题论文；命中并核验 api.crossref.org/works/10.1021/ic50200a022（Wrobleski, Brown, Inorg. Chem. 1979），为草酸铁配位聚合物磁性研究的真实论文，替换。"
+  },
+  {
+    "num": 58,
+    "status": "substituted",
+    "original_title": "Magnetic Anisotropy of High-Spin Fe(III) in Distorted Octahedral Oxalate Environment",
+    "corrected_title": "Magnetic and high-frequency EPR studies of an octahedral Fe(iii) compound with unusual zero-field splitting parameters",
+    "journal": "Dalton Transactions",
+    "year": "2009",
+    "doi": "10.1039/b814225d",
+    "zh_note": "结合高场 EPR 与磁测量表征八面体 Fe(III) 化合物的零场分裂参数，揭示高自旋 Fe(III) 的磁各向异性来源。",
+    "evidence": "CrossRef 检索'iron III octahedral zero-field splitting EPR oxalate'命中；经 api.crossref.org/works/10.1039/b814225d 核验（Solano-Peralta et al., Dalton Trans. 2009）。原 Inorg. Chem. Front. 2022 标题无对应论文，替换为八面体 Fe(III) 磁各向异性/零场分裂的真实论文。"
+  },
+  {
+    "num": 59,
+    "status": "substituted",
+    "original_title": "Computational Study of Magnetic Exchange Coupling in Oxalate-Bridged Fe(III) Dimers",
+    "corrected_title": "Exchange Coupling in Oxalato-Bridged Copper(II) Binuclear Compounds: A Density Functional Study",
+    "journal": "Chemistry - A European Journal",
+    "year": "1998",
+    "doi": "10.1002/(sici)1521-3765(19980310)4:3<476::aid-chem476>3.0.co;2-8",
+    "zh_note": "用密度泛函方法计算草酸桥联双核配合物的磁交换耦合常数，阐明草酸桥传递磁耦合的微观机制。",
+    "evidence": "CrossRef 检索'density functional study exchange coupling oxalato bridged complexes'命中；经 api.crossref.org/works/10.1002/(sici)1521-3765(19980310)4:3<476::aid-chem476>3.0.co;2-8 核验（Cano, Alemany, Alvarez, Verdaguer, Ruiz, Chem. Eur. J. 1998）。原 J. Comput. Chem. 2023 标题无对应论文，替换为草酸桥联双核配合物磁耦合 DFT 研究的经典真实论文。"
+  },
+  {
+    "num": 60,
+    "status": "substituted",
+    "original_title": "Determination of the Magnetic Moment of K₃[Fe(C₂O₄)₃]·3H₂O by Gouy and Evans Methods",
+    "corrected_title": "Inexpensive gouy balance for magnetic susceptibility determination",
+    "journal": "Journal of Chemical Education",
+    "year": "1978",
+    "doi": "10.1021/ed055p54",
+    "zh_note": "介绍自制 Gouy 磁天平测定磁化率的方法，是教学中测定配合物磁矩（如 K₃[Fe(C₂O₄)₃]·3H₂O）的经典手段。",
+    "evidence": "CrossRef 检索'Gouy method magnetic susceptibility determination Journal of Chemical Education'命中；经 api.crossref.org/works/10.1021/ed055p54 核验（Viswanadham, J. Chem. Educ. 1978）。原 2019 年标题无对应论文，替换为 J. Chem. Educ. 中 Gouy 法测磁化率的真实论文。"
+  }
+]

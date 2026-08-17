@@ -1,0 +1,4534 @@
+[
+ {
+  "num": 1,
+  "orig": "Alfred Werner and the Foundation of Coordination Chemistry",
+  "oJ": "Angewandte Chemie International Edition",
+  "oY": "2013",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1086/350642",
+    "title": "<i>Alfred Werner, Founder of Coordination Chemistry</i>. George B. Kauffman<i>Werner Centennial</i>. George B. Kauffman<i>Classics in Coordination Chemistry, Part 1: The Selected Papers of Alfred Werner</i>. George B. Kauffman",
+    "journal": "Isis",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 43
+   },
+   {
+    "doi": "10.1333/s00897132517a",
+    "title": "Alfred Werner and Coordination Chemistry",
+    "journal": "The Chemical Educator",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.71,
+    "jAgree": false,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.2533/chimia.1994.16",
+    "title": "Coordination Chemistry in Europe since Alfred Werner",
+    "journal": "CHIMIA",
+    "year": "1994",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": false,
+    "yDiff": 19
+   },
+   {
+    "doi": "10.4324/9781315260570-9",
+    "title": "Alfred Werner and Coordination Chemistry, 1893–1914",
+    "journal": "Chemical Structure, Spatial Arrangement",
+    "year": "2017",
+    "type": "book-chapter",
+    "titleJac": 0.56,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 2,
+  "orig": "The Coordination Chemistry Legacy of Alfred Werner",
+  "oJ": "Chemical Society Reviews",
+  "oY": "2013",
+  "status": "near",
+  "top5": [
+   {
+    "doi": "10.1039/c2cs35428d",
+    "title": "Coordination chemistry: the scientific legacy of Alfred Werner",
+    "journal": "Chem. Soc. Rev.",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.86,
+    "jAgree": false,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1086/350642",
+    "title": "<i>Alfred Werner, Founder of Coordination Chemistry</i>. George B. Kauffman<i>Werner Centennial</i>. George B. Kauffman<i>Classics in Coordination Chemistry, Part 1: The Selected Papers of Alfred Werner</i>. George B. Kauffman",
+    "journal": "Isis",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": false,
+    "yDiff": 43
+   },
+   {
+    "doi": "10.1333/s00897132517a",
+    "title": "Alfred Werner and Coordination Chemistry",
+    "journal": "The Chemical Educator",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.57,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.2533/chimia.1994.16",
+    "title": "Coordination Chemistry in Europe since Alfred Werner",
+    "journal": "CHIMIA",
+    "year": "1994",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 19
+   }
+  ]
+ },
+ {
+  "num": 3,
+  "orig": "A Critical Review of the History and Development of Coordination Chemistry",
+  "oJ": "Coordination Chemistry Reviews",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.ccr.2025.216671",
+    "title": "Metal complexes containing (cycloN5)− anion: History, modernity and development prospects",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2025",
+    "type": "journal-article",
+    "titleJac": 0.2,
+    "jAgree": true,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1016/j.ccr.2022.214559",
+    "title": "The use of nanotechnology in the fight against viruses: A critical review",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1016/j.ccr.2024.215658",
+    "title": "Infiltration as a frontier bandgap engineering strategy in MOFs: A critical review",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2024",
+    "type": "journal-article",
+    "titleJac": 0.14,
+    "jAgree": true,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1016/0010-8545(90)80047-w",
+    "title": "Critical stability constants",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "1990",
+    "type": "journal-article",
+    "titleJac": 0.1,
+    "jAgree": true,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1016/j.ccr.2026.218359",
+    "title": "Surface coordination and material engineering of Group VI transition metal dichalcogenide for chemi-resistive acetone probing devices: A critical review",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.19,
+    "jAgree": true,
+    "yDiff": 6
+   }
+  ]
+ },
+ {
+  "num": 4,
+  "orig": "Crystal Field Theory: A Comprehensive Review for the Modern Coordination Chemist",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/b0-08-043748-6/01108-7",
+    "title": "Ligand Field Theory",
+    "journal": "Comprehensive Coordination Chemistry II",
+    "year": "2003",
+    "type": "book-chapter",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 16
+   },
+   {
+    "doi": "10.1016/b978-0-12-409547-2.14623-2",
+    "title": "Modern Bond Valence Theory",
+    "journal": "Comprehensive Coordination Chemistry III",
+    "year": "2021",
+    "type": "book-chapter",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1017/cbo9780511524899.020",
+    "title": "Coordination sites in host mineral structures accommodating transition metal ions",
+    "journal": "Mineralogical Applications of Crystal Field Theory",
+    "year": "1993",
+    "type": "other",
+    "titleJac": 0.06,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1017/cbo9780511524899.018",
+    "title": "Group theory nomenclature for crystal field states",
+    "journal": "Mineralogical Applications of Crystal Field Theory",
+    "year": "1993",
+    "type": "other",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1017/cbo9780511524899.004",
+    "title": "Outline of crystal field theory",
+    "journal": "Mineralogical Applications of Crystal Field Theory",
+    "year": "1993",
+    "type": "book-chapter",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 26
+   }
+  ]
+ },
+ {
+  "num": 5,
+  "orig": "Ligand Field Theory and Its Applications to Transition Metal Complexes",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2018",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 6,
+  "orig": "The Spectrochemical Series Revisited: A Quantitative Scale Based on DFT Calculations",
+  "oJ": "Dalton Transactions",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1080/00268976.2022.2040629",
+    "title": "Quantitative structure–property relationship analysis of the spectrochemical series by employing electronic descriptors from DFT calculations",
+    "journal": "Molecular Physics",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.52843/cassyni.4lzx7j",
+    "title": "Large-scale DFT calculations for materials with complex structures",
+    "journal": "",
+    "year": "2024",
+    "type": "posted-content",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 3
+   }
+  ]
+ },
+ {
+  "num": 7,
+  "orig": "Oxalate as a Versatile Ligand: Coordination Modes, Supramolecular Architectures, and Functional Materials",
+  "oJ": "Coordination Chemistry Reviews",
+  "oY": "2022",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 8,
+  "orig": "Hard and Soft Acids and Bases (HSAB) Principle: A 60-Year Retrospective",
+  "oJ": "Journal of the American Chemical Society",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/b978-0-12-350050-2.50015-3",
+    "title": "Other Applications of the HSAB Principle",
+    "journal": "Hard and Soft Acids and Bases Principle in Organic Chemistry",
+    "year": "1977",
+    "type": "book-chapter",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 46
+   },
+   {
+    "doi": "10.1002/chin.197520121",
+    "title": "ChemInform Abstract: THE HARD SOFT ACIDS BASES (HSAB) PRINCIPLE AND ORGANIC CHEMISTRY",
+    "journal": "Chemischer Informationsdienst",
+    "year": "1975",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 48
+   },
+   {
+    "doi": "10.1021/cr60293a001",
+    "title": "Hard soft acids bases (HSAB) principle and organic chemistry",
+    "journal": "Chemical Reviews",
+    "year": "1975",
+    "type": "journal-article",
+    "titleJac": 0.64,
+    "jAgree": true,
+    "yDiff": 48
+   },
+   {
+    "doi": "10.1016/b978-0-12-350050-2.50006-2",
+    "title": "Classification of Hard and Soft Acids and Bases",
+    "journal": "Hard and Soft Acids and Bases Principle in Organic Chemistry",
+    "year": "1977",
+    "type": "book-chapter",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 46
+   }
+  ]
+ },
+ {
+  "num": 9,
+  "orig": "Chelate Effect and Stability of Metal Complexes: Thermodynamic and Kinetic Aspects",
+  "oJ": "Chemical Reviews",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.5353/th_b4212750",
+    "title": "Influence of the nephelauxetic effect on the kinetic and thermodynamic stability of cobalt (III) complexes of the tetramine type",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1002/9781119966227.ch8",
+    "title": "Effect of Medium on Reaction Rates in Homogeneous Catalysis with Metal Complexes",
+    "journal": "Homogeneous Catalysis with Metal Complexes",
+    "year": "2012",
+    "type": "other",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 10,
+  "orig": "The Effective Atomic Number (EAN) Rule and Its Exceptions in Organometallic and Coordination Chemistry",
+  "oJ": "Organometallics",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1515/iupac.71.0304",
+    "title": "Effective Atomic Number (EAN) Rule",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1093/hesc/9780198558484.003.0005",
+    "title": "Effective atomic number rule to exchange energy",
+    "journal": "Essentials of Inorganic Chemistry 1",
+    "year": "1995",
+    "type": "book-chapter",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 25
+   },
+   {
+    "doi": "10.1016/0022-1902(60)80296-5",
+    "title": "The application of the effective atomic number rule to some new organometallic complexes",
+    "journal": "Journal of Inorganic and Nuclear Chemistry",
+    "year": "1960",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 60
+   },
+   {
+    "doi": "10.1016/s0277-5387(89)80007-5",
+    "title": "A new definition of coordination number and its use in lanthanide and actinide coordination and organometallic chemistry",
+    "journal": "Polyhedron",
+    "year": "1989",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 31
+   },
+   {
+    "doi": "10.1016/j.ccr.2005.12.006",
+    "title": "Low-temperature lifetimes of metastable high-spin states in spin-crossover and in low-spin iron(II) compounds: The rule and exceptions to the rule",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2006",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 11,
+  "orig": "Jahn-Teller Effect in Octahedral Complexes: Structural Manifestations and Spectroscopic Consequences",
+  "oJ": "Chemical Physics Reviews",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1002/chin.198550003",
+    "title": "ChemInform Abstract: JAHN‐TELLER EFFECT OF TITANIUM(3+) IN OCTAHEDRAL COORDINATION: A SPECTROSCOPIC STUDY OF HEXACHLOROTITANATE (TICL63‐) COMPLEXES",
+    "journal": "Chemischer Informationsdienst",
+    "year": "1985",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 37
+   },
+   {
+    "doi": "10.1021/ic00212a009",
+    "title": "Jahn-Teller effect of titanium(3+) in octahedral coordination: a spectroscopic study of hexachlorotitanate (TiCl63-) complexes",
+    "journal": "Inorganic Chemistry",
+    "year": "1985",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 37
+   },
+   {
+    "doi": "10.1016/j.ica.2018.10.040",
+    "title": "Jahn-Teller effect in high spin d4 and d9 octahedral metal-complexes",
+    "journal": "Inorganica Chimica Acta",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.46,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1515/9780691225340-014",
+    "title": "E. Jahn-Teller Interaction Matrices and Their Bases",
+    "journal": "The Jahn-Teller Effect in C60 and Other Icosahedral Complexes",
+    "year": "1998",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 24
+   },
+   {
+    "doi": "10.2307/j.ctv19fvzb8.16",
+    "title": "Jahn-Teller Interaction Matrices and Their Bases",
+    "journal": "The Jahn-Teller Effect in C60 and Other Icosahedral Complexes",
+    "year": "2021",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 12,
+  "orig": "Tassaert's Discovery (1798): The First Coordination Compound and Its Impact",
+  "oJ": "Bulletin for the History of Chemistry",
+  "oY": "2018",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1093/gao/9781884446054.article.t083414",
+    "title": "Tassaert family",
+    "journal": "Oxford Art Online",
+    "year": "2003",
+    "type": "reference-entry",
+    "titleJac": 0.09,
+    "jAgree": false,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1093/oao/9781884446054.013.90000372618",
+    "title": "Tassaert, Jean-Pierre-Antoine",
+    "journal": "Oxford Art Online",
+    "year": "2003",
+    "type": "reference-entry",
+    "titleJac": 0.08,
+    "jAgree": false,
+    "yDiff": 15
+   }
+  ]
+ },
+ {
+  "num": 13,
+  "orig": "Werner's Nobel Prize (1913): How Coordination Theory Transformed Inorganic Chemistry",
+  "oJ": "Angewandte Chemie",
+  "oY": "2013",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.64628/ab.qauk5cfvp",
+    "title": "How the winners of the Nobel Prize in Chemistry have transformed research and saved lives",
+    "journal": "",
+    "year": "2018",
+    "type": "posted-content",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1016/s0277-5387(00)88077-8",
+    "title": "Inorganic coordination compounds (Nobel prize topics in chemistry)",
+    "journal": "Polyhedron",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1038/scientificamerican02011913-80csupp",
+    "title": "The Nobel Prize",
+    "journal": "Scientific American",
+    "year": "1913",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 100
+   },
+   {
+    "doi": "10.1016/j.ccr.2019.01.012",
+    "title": "The Suzuki-Miyaura reaction after the Nobel prize",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.13,
+    "jAgree": false,
+    "yDiff": 6
+   }
+  ]
+ },
+ {
+  "num": 14,
+  "orig": "The Development of Structural Inorganic Chemistry: From Werner to Modern Crystallography",
+  "oJ": "Chemical Reviews",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1002/9783527684199.ch4",
+    "title": "Historical Development of Structural Chemistry: From Alchemy to Modern Structural Theory",
+    "journal": "Symmetry, Spectroscopy, and Crystallography",
+    "year": "2015",
+    "type": "other",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1080/0889311x.2013.812082",
+    "title": "Problems in structural inorganic chemistry",
+    "journal": "Crystallography Reviews",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": true,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1080/0889311x.2013.837896",
+    "title": "Structural methods in molecular inorganic chemistry",
+    "journal": "Crystallography Reviews",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": true,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1093/hesc/9780198557982.003.0001",
+    "title": "Basic crystallography",
+    "journal": "Inorganic Materials Chemistry",
+    "year": "1995",
+    "type": "book-chapter",
+    "titleJac": 0.1,
+    "jAgree": false,
+    "yDiff": 25
+   }
+  ]
+ },
+ {
+  "num": 15,
+  "orig": "Reticular Coordination Chemistry of Oxalate-Type Ligands: Design Principles for Advanced Multifunctional Magnetic Materials",
+  "oJ": "Coordination Chemistry Reviews",
+  "oY": "2025",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.ccr.2026.217838",
+    "title": "Reticular coordination chemistry of oxalate-type ligands: Design principles for advanced multifunctional magnetic materials in emerging technologies",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.87,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1016/j.ccr.2026.217898",
+    "title": "Bimetallic chemistry by design: Approaches to the development of multifunctional ligands",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.24,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1201/9781003345886-3",
+    "title": "Design Principles and Functional Characteristics of Multifunctional Coordination Materials",
+    "journal": "Multifunctional Coordination Materials for Green Energy Technologies",
+    "year": "2024",
+    "type": "book-chapter",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1080/00958972.2010.497206",
+    "title": "A 3-D Gd(III)–Cu(I) coordination polymer based on nicotinate and oxalate ligands: synthesis, crystal structure, and magnetic properties",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2010",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": true,
+    "yDiff": 15
+   }
+  ]
+ },
+ {
+  "num": 16,
+  "orig": "A New Sensitive Chemical Actinometer II: Potassium Ferrioxalate as a Standard Chemical Actinometer (Hatchard & Parker 经典论文)",
+  "oJ": "Proceedings of the Royal Society A",
+  "oY": "1956",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1098/rspa.1956.0102",
+    "title": "A new sensitive chemical actinometer - II. Potassium ferrioxalate as a standard chemical actinometer",
+    "journal": "Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences",
+    "year": "1956",
+    "type": "journal-article",
+    "titleJac": 0.78,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/b978-1-4832-2848-8.50016-2",
+    "title": "Ferrioxalate Chemical Actinometer for Determination of Light Intensities",
+    "journal": "Light",
+    "year": "1965",
+    "type": "book-chapter",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 9
+   },
+   {
+    "doi": "10.1098/rspa.1953.0175",
+    "title": "A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate",
+    "journal": "Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences",
+    "year": "1953",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": true,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.26434/chemrxiv.14702724.v1",
+    "title": "Application Limits of the Ferrioxalate Actinometer",
+    "journal": "",
+    "year": "2021",
+    "type": "posted-content",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 65
+   },
+   {
+    "doi": "10.1021/ed058p655.1",
+    "title": "The ferrioxalate actinometer: A lecture demonstration",
+    "journal": "Journal of Chemical Education",
+    "year": "1981",
+    "type": "journal-article",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 25
+   }
+  ]
+ },
+ {
+  "num": 17,
+  "orig": "Electron Transfer Mechanism and Photochemistry of Ferrioxalate Induced by Excitation in the Charge Transfer Band",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2008",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ic7016566",
+    "title": "Electron Transfer Mechanism and Photochemistry of Ferrioxalate Induced by Excitation in the Charge Transfer Band",
+    "journal": "Inorganic Chemistry",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/3-540-52568-8_1",
+    "title": "Photochemistry of transition metal complexes induced by outer-sphere charge transfer excitation",
+    "journal": "Topics in Current Chemistry",
+    "year": "1990",
+    "type": "book-chapter",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 18
+   }
+  ]
+ },
+ {
+  "num": 18,
+  "orig": "Femtosecond Infrared Spectroscopy Reveals the Primary Events of the Ferrioxalate Actinometer",
+  "oJ": "Physical Chemistry Chemical Physics",
+  "oY": "2020",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1039/c8cp03824d",
+    "title": "Femtosecond infrared spectroscopy reveals the primary events of the ferrioxalate actinometer",
+    "journal": "Physical Chemistry Chemical Physics",
+    "year": "2018",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1039/c9cp05233j",
+    "title": "Time-resolved Fourier-transform infrared spectroscopy reveals the hidden bimolecular process of the ferrioxalate actinometer",
+    "journal": "Physical Chemistry Chemical Physics",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.26434/chemrxiv.14702724.v1",
+    "title": "Application Limits of the Ferrioxalate Actinometer",
+    "journal": "",
+    "year": "2021",
+    "type": "posted-content",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1016/b978-1-4832-2848-8.50016-2",
+    "title": "Ferrioxalate Chemical Actinometer for Determination of Light Intensities",
+    "journal": "Light",
+    "year": "1965",
+    "type": "book-chapter",
+    "titleJac": 0.14,
+    "jAgree": false,
+    "yDiff": 55
+   },
+   {
+    "doi": "10.1002/cptc.202100122",
+    "title": "Application Limits of the Ferrioxalate Actinometer**",
+    "journal": "ChemPhotoChem",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 19,
+  "orig": "Photochemistry of Iron(III) Complexes: From Fundamental Studies to Environmental Applications",
+  "oJ": "Chemical Society Reviews",
+  "oY": "2021",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 20,
+  "orig": "The Ferrioxalate and Iodide-Iodate Actinometers in the UV Region",
+  "oJ": "Journal of Photochemistry and Photobiology A",
+  "oY": "2008",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.jphotochem.2007.06.006",
+    "title": "The ferrioxalate and iodide–iodate actinometers in the UV region",
+    "journal": "Journal of Photochemistry and Photobiology A: Chemistry",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/j.jphotochem.2011.05.017",
+    "title": "Determination of the quantum yields of the potassium ferrioxalate and potassium iodide–iodate actinometers and a method for the calibration of radiometer detectors",
+    "journal": "Journal of Photochemistry and Photobiology A: Chemistry",
+    "year": "2011",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": true,
+    "yDiff": 3
+   }
+  ]
+ },
+ {
+  "num": 21,
+  "orig": "Simplification of the Potassium Ferrioxalate Actinometer through Carbon Dioxide Monitoring",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2023",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1139/cjc-2022-0188",
+    "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+    "journal": "Canadian Journal of Chemistry",
+    "year": "2023",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.26434/chemrxiv.14702724.v1",
+    "title": "Application Limits of the Ferrioxalate Actinometer",
+    "journal": "",
+    "year": "2021",
+    "type": "posted-content",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1063/1.327434",
+    "title": "Measuring the pulse energy of a nitrogen laser with a potassium ferrioxalate actinometer",
+    "journal": "Journal of Applied Physics",
+    "year": "1980",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": true,
+    "yDiff": 43
+   },
+   {
+    "doi": "10.1016/0047-2670(79)85008-x",
+    "title": "Use of the potassium ferrioxalate actinometer below 254 nm",
+    "journal": "Journal of Photochemistry",
+    "year": "1979",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 44
+   },
+   {
+    "doi": "10.1098/rspa.1956.0102",
+    "title": "A new sensitive chemical actinometer - II. Potassium ferrioxalate as a standard chemical actinometer",
+    "journal": "Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences",
+    "year": "1956",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 67
+   }
+  ]
+ },
+ {
+  "num": 22,
+  "orig": "Determination of the Quantum Yield of the Ferrioxalate Actinometer with Electrically Calibrated Radiometers",
+  "oJ": "Journal of Physical Chemistry",
+  "oY": "1981",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/j150619a015",
+    "title": "Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers",
+    "journal": "The Journal of Physical Chemistry",
+    "year": "1981",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/b978-1-4832-2848-8.50016-2",
+    "title": "Ferrioxalate Chemical Actinometer for Determination of Light Intensities",
+    "journal": "Light",
+    "year": "1965",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 16
+   },
+   {
+    "doi": "10.1063/1.1725147",
+    "title": "Quantum Yield of the Ferrioxalate Actinometer",
+    "journal": "The Journal of Chemical Physics",
+    "year": "1964",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": true,
+    "yDiff": 17
+   },
+   {
+    "doi": "10.25039/tr.065.1985",
+    "title": "CIE 065-1985 Electrically Calibrated Thermal Detectors of Optical Radiation (Absolute Radiometers)",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.26434/chemrxiv.14702724.v1",
+    "title": "Application Limits of the Ferrioxalate Actinometer",
+    "journal": "",
+    "year": "2021",
+    "type": "posted-content",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 40
+   }
+  ]
+ },
+ {
+  "num": 23,
+  "orig": "Wavelength Dependence of the Quantum Yield of the Ferrioxalate Actinometer",
+  "oJ": "Photochemistry and Photobiology",
+  "oY": "1972",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1063/1.1725147",
+    "title": "Quantum Yield of the Ferrioxalate Actinometer",
+    "journal": "The Journal of Chemical Physics",
+    "year": "1964",
+    "type": "journal-article",
+    "titleJac": 0.71,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.26434/chemrxiv.14702724.v1",
+    "title": "Application Limits of the Ferrioxalate Actinometer",
+    "journal": "",
+    "year": "2021",
+    "type": "posted-content",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 49
+   },
+   {
+    "doi": "10.1562/0031-8655(2003)0780146qyotic2.0.co2",
+    "title": "Quantum Yield of the Iodide-Iodate Chemical Actinometer: Dependence on Wavelength and Concentration¶",
+    "journal": "Photochemistry and Photobiology",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": true,
+    "yDiff": 35
+   },
+   {
+    "doi": "10.1562/0031-8655(2003)078<0146:qyotic>2.0.co;2",
+    "title": "Quantum Yield of the Iodide–Iodate Chemical Actinometer: Dependence on Wavelength and Concentration¶",
+    "journal": "Photochemistry and Photobiology",
+    "year": "2003",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": true,
+    "yDiff": 31
+   },
+   {
+    "doi": "10.1016/b978-1-4832-2848-8.50016-2",
+    "title": "Ferrioxalate Chemical Actinometer for Determination of Light Intensities",
+    "journal": "Light",
+    "year": "1965",
+    "type": "book-chapter",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 24,
+  "orig": "Photochemistry of Fe(III)-Oxalato Complexes in Aqueous Solution: A Review",
+  "oJ": "Coordination Chemistry Reviews",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.14264/559b8c1",
+    "title": "Studies of acid-catalysed oxygen exchange, racemization and decomposition reactions in aqueous solution on oxalato cobalt (III) complexes.",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1016/0368-1874(83)80143-9",
+    "title": "A DC, AC and demodulation study of the tris-oxalato Fe(III)/tris-oxalato Fe(II) redox couple in 1 M aqueous oxalate solution at the dropping mercury electrode",
+    "journal": "Journal of Electroanalytical Chemistry",
+    "year": "1983",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": true,
+    "yDiff": 37
+   },
+   {
+    "doi": "10.1016/s0045-6535(97)00327-5",
+    "title": "Photodegradation of dyes in aqueous solutions containing Fe(III)-oxalato complexes",
+    "journal": "Chemosphere",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": false,
+    "yDiff": 23
+   },
+   {
+    "doi": "10.1109/icdma.2012.144",
+    "title": "Photochemistry of Fe(III)-Tetracycline Complexes in Aqueous Solution under UV Irradiation",
+    "journal": "2012 Third International Conference on Digital Manufacturing &amp; Automation",
+    "year": "2012",
+    "type": "proceedings-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.5958/0973-9130.2017.00167.0",
+    "title": "Fe(III)-Tetracycline Complexes in Aqueous Solution Under UV Irradiation Based on Photochemistry",
+    "journal": "Indian Journal of Forensic Medicine &amp; Toxicology",
+    "year": "2017",
+    "type": "journal-article",
+    "titleJac": 0.45,
+    "jAgree": false,
+    "yDiff": 3
+   }
+  ]
+ },
+ {
+  "num": 25,
+  "orig": "Photoinduced Electron Transfer in Iron(III)-Carboxylate Complexes: Mechanistic Insights",
+  "oJ": "Journal of the American Chemical Society",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.70675/7cb82fbfz044cz40a3za5a4z4ce943be403a",
+    "title": "Photoinduced electron transfer within heterometallic assemblies of [Ru(bpy)3]2+ linked to bisterpyridine complexes of Fe(II), Co(III) and Cr(III)",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1016/s0020-1693(00)00106-7",
+    "title": "Photoinduced electron transfer between lipidporphyrinato-zinc(II) and -iron(III) complexes in a phospholipid vesicular membrane",
+    "journal": "Inorganica Chimica Acta",
+    "year": "2000",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 19
+   }
+  ]
+ },
+ {
+  "num": 26,
+  "orig": "Ultraviolet Actinometry: Determination of Incident Photon Flux and Quantum Yields Using Low-Pressure and UV-LED Light Sources",
+  "oJ": "Journal of Environmental Chemical Engineering",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.2139/ssrn.4069726",
+    "title": "Ultraviolet Actinometry – Determination of the Incident Photon Flux and Quantum Yields for Photochemical Systems Using Low-Pressure and Ultraviolet Light-Emitting Diode Light Sources",
+    "journal": "",
+    "year": "2022",
+    "type": "posted-content",
+    "titleJac": 0.67,
+    "jAgree": false,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/j.jece.2022.107947",
+    "title": "Ultraviolet actinometry – Determination of the incident photon flux and quantum yields for photochemical systems using low-pressure and ultraviolet light-emitting diode light sources",
+    "journal": "Journal of Environmental Chemical Engineering",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.67,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.5772/intechopen.1012869",
+    "title": "UV-LEDs: Next-Generation Ultraviolet Light Sources",
+    "journal": "Fundamentals of LED Technology",
+    "year": "2025",
+    "type": "book-chapter",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1016/b978-0-12-817794-5.00002-9",
+    "title": "Technology of LED Light Sources and Systems From Visible to UV Range",
+    "journal": "Ultraviolet LED Technology for Food Applications",
+    "year": "2019",
+    "type": "book-chapter",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1007/s41981-021-00179-w",
+    "title": "A revised 1D equivalent model for the determination of incident photon flux density in a continuous-flow LED-driven spiral-shaped microreactor using the actinometry method with Reinecke’s salt",
+    "journal": "Journal of Flow Chemistry",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": true,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 27,
+  "orig": "The Photochemical Generation of Hydroxyl Radicals in the UV-vis via Ferrioxalate",
+  "oJ": "Environmental Science & Technology",
+  "oY": "2018",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1021/es9810134",
+    "title": "The Photochemical Generation of Hydroxyl Radicals in the UV−vis/Ferrioxalate/H<sub>2</sub>O<sub>2</sub> System",
+    "journal": "Environmental Science &amp; Technology",
+    "year": "1999",
+    "type": "journal-article",
+    "titleJac": 0.7,
+    "jAgree": true,
+    "yDiff": 19
+   },
+   {
+    "doi": "10.1021/acs.iecr.6c00070",
+    "title": "Photochemical Degradation of Perfluorooctanoic Acid by a Solar–Compatible Ferrioxalate–Persulfate System under UV–Vis Irradiation",
+    "journal": "Industrial &amp; Engineering Chemistry Research",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 8
+   }
+  ]
+ },
+ {
+  "num": 28,
+  "orig": "Photocatalytic Degradation of Organic Pollutants by Fe(III)-Oxalate Complexes under Visible Light",
+  "oJ": "Applied Catalysis B: Environmental",
+  "oY": "2021",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 29,
+  "orig": "Photoredox Chemistry of Iron(III) Oxalate: Formation, Dynamics, and Reactivity of Reactive Oxygen Species",
+  "oJ": "ACS Earth and Space Chemistry",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.2174/9789815036633121010004",
+    "title": "Reactive Oxygen Species Sources",
+    "journal": "Oxygen: High Enzymatic Reactivity of Reactive Oxygen Species",
+    "year": "2021",
+    "type": "book-chapter",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.2174/9789815036633121010006",
+    "title": "Flavonoids as Reactive Oxygen Species Promotors",
+    "journal": "Oxygen: High Enzymatic Reactivity of Reactive Oxygen Species",
+    "year": "2021",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1071/ch9762149",
+    "title": "The formation of iron(III) oxide hydroxides from iron(II) oxalate",
+    "journal": "Australian Journal of Chemistry",
+    "year": "1976",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": true,
+    "yDiff": 46
+   },
+   {
+    "doi": "10.2174/9789815036633121010002",
+    "title": "Oxygen",
+    "journal": "Oxygen: High Enzymatic Reactivity of Reactive Oxygen Species",
+    "year": "2021",
+    "type": "book-chapter",
+    "titleJac": 0.08,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 30,
+  "orig": "Photochemical Behavior of Fe(III)-Oxalato Complexes in Natural Waters: Implications for Carbon Cycling",
+  "oJ": "Environmental Science: Processes & Impacts",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.17077/etd.wnhgjk73",
+    "title": "Effects of carbon during Fe(II)-catalyzed Fe oxide recrystallization",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.06,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1007/s11356-016-7127-x",
+    "title": "Photochemical behavior of carbon nanotubes in natural waters: reactive oxygen species production and effects on •OH generation by Suwannee River fulvic acid, nitrate, and Fe (III)",
+    "journal": "Environmental Science and Pollution Research",
+    "year": "2016",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": true,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 31,
+  "orig": "Thermal Decomposition of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Journal of Thermal Analysis and Calorimetry",
+  "oY": "2018",
+  "status": "near",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.57,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.55,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.88,
+    "jAgree": false,
+    "yDiff": 47
+   },
+   {
+    "doi": "10.1016/s0167-2738(97)00500-6",
+    "title": "A thermal decomposition study on the intercalation of tris-(oxalato) ferrate(III) trihydrate into a layered (Mg/Al) double hydroxide",
+    "journal": "Solid State Ionics",
+    "year": "1998",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": false,
+    "yDiff": 20
+   },
+   {
+    "doi": "10.1016/0040-6031(86)80038-7",
+    "title": "Mössbauer study of the thermal decomposition of potassium tris(malonato)ferrate(III) trihydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1986",
+    "type": "journal-article",
+    "titleJac": 0.58,
+    "jAgree": false,
+    "yDiff": 32
+   }
+  ]
+ },
+ {
+  "num": 32,
+  "orig": "Non-Isothermal Decomposition Kinetics of FeC₂O₄·2H₂O Prepared by Solid-State Method",
+  "oJ": "Journal of Thermal Analysis and Calorimetry",
+  "oY": "2016",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/s10973-015-4757-z",
+    "title": "Non-isothermal decomposition kinetics of FeC2O4·2H2O prepared by solid-state method aiming at the formation of Fe2O3",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.71,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1016/j.solidstatesciences.2008.02.020",
+    "title": "Synthesis, characterization and non-isothermal decomposition kinetics of manganese hypophosphite monohydrate",
+    "journal": "Solid State Sciences",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.1016/j.solidstatesciences.2007.09.008",
+    "title": "A rapid co-precipitation and non-isothermal decomposition kinetics of new binary Mn0.5Co0.5(H2PO4)2·2H2O",
+    "journal": "Solid State Sciences",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.1016/j.jssc.2022.123275",
+    "title": "Non-isothermal solid-state synthesis kinetics of the tetragonal barium titanate",
+    "journal": "Journal of Solid State Chemistry",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1016/0040-6031(91)80008-7",
+    "title": "A differential method for kinetics of non-isothermal solid decomposition",
+    "journal": "Thermochimica Acta",
+    "year": "1991",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 25
+   }
+  ]
+ },
+ {
+  "num": 33,
+  "orig": "Thermal Kinetic TG-Analysis of Metal Oxalate Complexes",
+  "oJ": "Thermochimica Acta",
+  "oY": "2003",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/s0040-6031(03)00221-1",
+    "title": "Thermal kinetic TG-analysis of metal oxalate complexes",
+    "journal": "Thermochimica Acta",
+    "year": "2003",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1023/b:jtan.0000017341.20105.22",
+    "title": "Thermal analysis study of some transition metal complexes by TG and DSC methods",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2004",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1007/bf01914347",
+    "title": "Kinetic parameters of thermal decomposition of anisaldehyde-girard T complexes of cobalt and copper bromides from TG and DSC data",
+    "journal": "Journal of Thermal Analysis",
+    "year": "1988",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1016/j.jaap.2013.01.004",
+    "title": "Thermal kinetic parameters and evolved gas analysis (TG–FTIR–MS) for thiourea–formaldehyde based polymer metal complexes",
+    "journal": "Journal of Analytical and Applied Pyrolysis",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 10
+   },
+   {
+    "doi": "10.1023/b:jtan.0000046114.02441.c3",
+    "title": "TG-MS, TG, DTG and DTA methods in study of thermal decomposition of some d-metal complexes with 4,4'-bpy and propionates",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2004",
+    "type": "journal-article",
+    "titleJac": 0.19,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 34,
+  "orig": "A Kinetics and Mechanistic Study of the Isothermal Decomposition of Ferrous Oxalate Dihydrate",
+  "oJ": "Thermochimica Acta",
+  "oY": "1993",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/0040-6031(93)80021-2",
+    "title": "A kinetic and mechanistic study of the isothermal decomposition of ferrous oxalate dihydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1993",
+    "type": "journal-article",
+    "titleJac": 0.82,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1002/cjoc.200690069",
+    "title": "Non-isothermal Decomposition Reaction Kinetics of the Magnesium Oxalate Dihydrate",
+    "journal": "Chinese Journal of Chemistry",
+    "year": "2006",
+    "type": "journal-article",
+    "titleJac": 0.46,
+    "jAgree": false,
+    "yDiff": 13
+   },
+   {
+    "doi": "10.1016/0040-6031(84)87113-0",
+    "title": "Kinetics of isothermal dehydration of zinc oxalate dihydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 9
+   },
+   {
+    "doi": "10.1016/0040-6031(85)85990-6",
+    "title": "Thermal decomposition kinetics for Nickel /II/ Oxalate-dihydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1985",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 8
+   }
+  ]
+ },
+ {
+  "num": 35,
+  "orig": "Kinetic Modeling for Thermal Dehydration of Ferrous Oxalate Dihydrate Polymorphs",
+  "oJ": "Journal of Physical Chemistry A",
+  "oY": "2014",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1021/jp500619q",
+    "title": "Kinetic Modeling for Thermal Dehydration of Ferrous Oxalate Dihydrate Polymorphs: A Combined Model for Induction Period–Surface Reaction–Phase Boundary Reaction",
+    "journal": "The Journal of Physical Chemistry A",
+    "year": "2014",
+    "type": "journal-article",
+    "titleJac": 0.53,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/bf02069943",
+    "title": "Kinetics and thermodynamics of thermal dehydration of magnesium oxalate dihydrate",
+    "journal": "Journal of Thermal Analysis",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1016/0040-6031(93)80021-2",
+    "title": "A kinetic and mechanistic study of the isothermal decomposition of ferrous oxalate dihydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1993",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 21
+   }
+  ]
+ },
+ {
+  "num": 36,
+  "orig": "Thermal Decomposition Reactions of Metal Carboxylato Complexes in the Solid State III",
+  "oJ": "Thermochimica Acta",
+  "oY": "1987",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/0040-6031(87)88164-9",
+    "title": "Thermal decomposition reactions of metal carboxylato complexes in the solid state. III. Thermographic and differential thermal studies of metal oxalato, malonato and succinato complexes",
+    "journal": "Thermochimica Acta",
+    "year": "1987",
+    "type": "journal-article",
+    "titleJac": 0.59,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/0040-6031(87)88284-9",
+    "title": "Thermal decomposition reactions of metal carboxylato complexes in the solid state",
+    "journal": "Thermochimica Acta",
+    "year": "1987",
+    "type": "journal-article",
+    "titleJac": 0.9,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/0040-6031(87)80029-1",
+    "title": "Thermal decomposition reactions of metal carboxylato complexes in the solid state. I.",
+    "journal": "Thermochimica Acta",
+    "year": "1987",
+    "type": "journal-article",
+    "titleJac": 0.9,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1246/bcsj.45.2166",
+    "title": "Thermal Decomposition Reactions of Metal Oxalato Complexes in the Solid State. I. Thermographic Studies of Metal Oxalato Complexes",
+    "journal": "Bulletin of the Chemical Society of Japan",
+    "year": "1972",
+    "type": "journal-article",
+    "titleJac": 0.62,
+    "jAgree": false,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1246/bcsj.46.144",
+    "title": "Thermal Decomposition Reactions of Metal Oxalato Complexes in the Solid State. II. Evolved Gas Analyses of Metal Oxalato Complexes",
+    "journal": "Bulletin of the Chemical Society of Japan",
+    "year": "1973",
+    "type": "journal-article",
+    "titleJac": 0.57,
+    "jAgree": false,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 37,
+  "orig": "A Mechanistic Approach on the Solid State Thermal Decomposition of Bimetallic Oxalate Coordination Compounds",
+  "oJ": "Journal of Analytical and Applied Pyrolysis",
+  "oY": "2006",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.jaap.2006.03.006",
+    "title": "A mechanistic approach on the solid state thermal decomposition of bimetallic oxalate coordination compounds of Mn(II), Fe(II) and Cu(II) with cobalt",
+    "journal": "Journal of Analytical and Applied Pyrolysis",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 0.79,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1016/j.jaap.2007.04.010",
+    "title": "An investigation on the solid state pyrolytic decomposition of bimetallic oxalate precursors of Ca, Sr and Ba with cobalt: A mechanistic approach",
+    "journal": "Journal of Analytical and Applied Pyrolysis",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1016/j.jaap.2008.03.012",
+    "title": "An investigation on the solid-state thermal decomposition of bimetallic oxalate and tartrate coordination precursors of lanthanum(III) and palladium(II) ions",
+    "journal": "Journal of Analytical and Applied Pyrolysis",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1007/s10973-012-2437-9",
+    "title": "Solid-state thermal decomposition of heterobimetallic oxalate coordination compounds, zinc(II)tetraaquatris(oxalato)lanthanate(III)hexahydrate and cadmium(II)heptaaquatris(oxalato)lanthanate(III)tetrahydrate",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2012",
+    "type": "journal-article",
+    "titleJac": 0.32,
+    "jAgree": true,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1002/9781119117711.ch3",
+    "title": "Materials Obtained by Solid‐State Thermal Decomposition of Coordination Compounds and Metal–Organic Coordination Polymers",
+    "journal": "Reactions and Mechanisms in Thermal Analysis of Advanced Materials",
+    "year": "2015",
+    "type": "other",
+    "titleJac": 0.35,
+    "jAgree": true,
+    "yDiff": 9
+   }
+  ]
+ },
+ {
+  "num": 38,
+  "orig": "Thermal Decomposition of a Molecular Material {N(n-C₄H₉)₄[FeᴵᴵFeᴵᴵᴵ(C₂O₄)₃]}∞ Leading to Ferrite",
+  "oJ": "Journal of the Serbian Chemical Society",
+  "oY": "2013",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.2298/jsc120519145b",
+    "title": "Thermal decomposition of a molecular material {N(n-C4H9)4[FeIIFeIII(C2O4)3]}∞ leading to ferrite: A reaction kinetics study",
+    "journal": "Journal of the Serbian Chemical Society",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.75,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.5353/th_b3123388",
+    "title": "Ferrite decomposition in duplex stainless steel and its application in temperature measurement",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.12,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1016/0040-6031(93)80294-k",
+    "title": "The thermal stability and non-isothermal decomposition kinetics of a zinc ferrite precursor",
+    "journal": "Thermochimica Acta",
+    "year": "1993",
+    "type": "journal-article",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 20
+   },
+   {
+    "doi": "10.1080/00268976.2021.1961907",
+    "title": "The matrix infrared spectra of fulvenone (C\n            <sub>5</sub>\n            H\n            <sub>4</sub>\n            =C=O) and its thermal decomposition products",
+    "journal": "Molecular Physics",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.11,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.2139/ssrn.5002379",
+    "title": "Thermal Decomposition Behavior of Self-Catalyzed and Fire-Retardant Phosphorus-Nitrogen Vitrimer Material",
+    "journal": "",
+    "year": "2024",
+    "type": "posted-content",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 11
+   }
+  ]
+ },
+ {
+  "num": 39,
+  "orig": "Study of the Thermal Decomposition of Some Complex Oxalates of Iron(III) Using the Mössbauer Effect",
+  "oJ": "Journal of Inorganic and Nuclear Chemistry",
+  "oY": "1976",
+  "status": "near",
+  "top5": [
+   {
+    "doi": "10.1021/ic50036a013",
+    "title": "A Study of the Thermal Decomposition of Some Complex Oxalates of Iron(III) Using the Mössbauer Effect",
+    "journal": "Inorganic Chemistry",
+    "year": "1966",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 10
+   },
+   {
+    "doi": "10.1007/bf02397519",
+    "title": "A study of the thermal decomposition of iron(II) and iron(III) rubidium oxalates using the Mössbauer effect",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.71,
+    "jAgree": false,
+    "yDiff": 16
+   },
+   {
+    "doi": "10.1515/9783112501122-011",
+    "title": "Mössbauer Effect Study of the Thermal Decomposition in Hydrogen of Homogeneously Mixed Ferrous Nickel Oxalates with Different Iron to Nickel Ratios",
+    "journal": "May 16",
+    "year": "1983",
+    "type": "book-chapter",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1016/0040-6031(83)80001-x",
+    "title": "Mössbauer study of the thermal decomposition of some iron(III) dicarboxylates",
+    "journal": "Thermochimica Acta",
+    "year": "1983",
+    "type": "journal-article",
+    "titleJac": 0.62,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1016/0040-6031(83)85039-4",
+    "title": "Mössbauer study of the thermal decomposition of some iron(III) monocarboxylates",
+    "journal": "Thermochimica Acta",
+    "year": "1983",
+    "type": "journal-article",
+    "titleJac": 0.62,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 40,
+  "orig": "Thermal Decomposition Kinetics of Fe₂(C₂O₄)₃·5H₂O Prepared by Solid-State Reaction",
+  "oJ": "Chinese Journal of Inorganic Chemistry",
+  "oY": "2016",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1103/physrevb.86.224109",
+    "title": "Decomposition kinetics of Fe-Cr solid solutions during thermal aging",
+    "journal": "Physical Review B",
+    "year": "2012",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1134/s1063783411110254",
+    "title": "Fine structure of the thermal decomposition kinetics of polymethylmethacrylate filled with detonation nanodiamonds",
+    "journal": "Physics of the Solid State",
+    "year": "2011",
+    "type": "journal-article",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.4028/www.scientific.net/ssp.172-174.1016",
+    "title": "Simulations of Decomposition Kinetics of Fe-Cr Solid Solutions during Thermal Aging",
+    "journal": "Solid State Phenomena",
+    "year": "2011",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1016/j.ssi.2005.09.046",
+    "title": "Study on the kinetics properties of lithium hexafluorophosphate thermal decomposition reaction",
+    "journal": "Solid State Ionics",
+    "year": "2006",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 10
+   },
+   {
+    "doi": "10.1002/kin.550160604",
+    "title": "Kinetics of thermal decomposition of CuSO<sub>4</sub> · 5H<sub>2</sub>O to CuO",
+    "journal": "International Journal of Chemical Kinetics",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": true,
+    "yDiff": 32
+   }
+  ]
+ },
+ {
+  "num": 41,
+  "orig": "Secondary Catalytic Reactions During Thermal Decomposition of Oxalates of Zinc, Nickel and Iron(II)",
+  "oJ": "Thermochimica Acta",
+  "oY": "1999",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/s0040-6031(99)00128-8",
+    "title": "Secondary catalytic reactions during thermal decomposition of oxalates of zinc, nickel and iron(II)",
+    "journal": "Thermochimica Acta",
+    "year": "1999",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/s11696-023-03047-0",
+    "title": "Nickel–iron and zinc–iron bimetal oxalates: preparation, characterization and thermal decomposition to spinel ferrites",
+    "journal": "Chemical Papers",
+    "year": "2023",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": false,
+    "yDiff": 24
+   },
+   {
+    "doi": "10.1515/9783112501122-011",
+    "title": "Mössbauer Effect Study of the Thermal Decomposition in Hydrogen of Homogeneously Mixed Ferrous Nickel Oxalates with Different Iron to Nickel Ratios",
+    "journal": "May 16",
+    "year": "1983",
+    "type": "book-chapter",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 16
+   },
+   {
+    "doi": "10.1007/bf01915171",
+    "title": "Thermal decomposition of mixed oxalates",
+    "journal": "Journal of Thermal Analysis",
+    "year": "1978",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 21
+   },
+   {
+    "doi": "10.1016/0040-6031(85)85512-x",
+    "title": "Thermal decomposition of copper(II), nickel(II), cobalt(II) and iron(II) oxalates in self-generated atmospheres",
+    "journal": "Thermochimica Acta",
+    "year": "1985",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": true,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 42,
+  "orig": "Sustainable Ironmaking from Low-Grade Iron Ores: A Kinetic Study on Thermal Decomposition and Reduction of Iron(II) Oxalate",
+  "oJ": "Journal of Environmental Chemical Engineering",
+  "oY": "2025",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.jece.2025.119573",
+    "title": "Sustainable ironmaking from low-grade iron ores: A kinetic study on thermal decomposition and reduction of iron (II) oxalate",
+    "journal": "Journal of Environmental Chemical Engineering",
+    "year": "2025",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.3390/en15010137",
+    "title": "Reduction Reactivity of Low Grade Iron Ore-Biomass Pellets for a Sustainable Ironmaking Process",
+    "journal": "Energies",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.3403/00531134u",
+    "title": "Iron ores. Determination of total iron content",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0.12,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.3403/30113084",
+    "title": "Iron ores. Determination of total iron content",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0.12,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.15372/csd20180512",
+    "title": "Effect of the Mesoporous Matrix on Thermal Decomposition of Iron (III) Oxalate",
+    "journal": "Chemistry for Sustainable Development",
+    "year": "2018",
+    "type": "journal-article",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 43,
+  "orig": "In Situ XRD and TG-MS Study of the Thermal Decomposition of Potassium Tris(oxalato)ferrate(III)",
+  "oJ": "Dalton Transactions",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.63,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.58,
+    "jAgree": false,
+    "yDiff": 50
+   },
+   {
+    "doi": "10.1021/ic50084a006",
+    "title": "Moessbauer study of the thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.69,
+    "jAgree": false,
+    "yDiff": 51
+   },
+   {
+    "doi": "10.1007/bf02395572",
+    "title": "Mössbauer study of the thermal decomposition of cesium tris(oxalato) ferrate(III)dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1988",
+    "type": "journal-article",
+    "titleJac": 0.53,
+    "jAgree": false,
+    "yDiff": 33
+   },
+   {
+    "doi": "10.1016/s0167-2738(97)00500-6",
+    "title": "A thermal decomposition study on the intercalation of tris-(oxalato) ferrate(III) trihydrate into a layered (Mg/Al) double hydroxide",
+    "journal": "Solid State Ionics",
+    "year": "1998",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": false,
+    "yDiff": 23
+   }
+  ]
+ },
+ {
+  "num": 44,
+  "orig": "Evolved Gas Analysis of Iron Oxalate Decomposition by TG-FTIR and TG-MS",
+  "oJ": "Journal of Analytical and Applied Pyrolysis",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.ssi.2004.02.066",
+    "title": "Online evolved gas analyses (EGA by TG-FTIR and TG/DTA-MS) and solid state (FTIR, XRD) studies on thermal decomposition and partial reduction of ammonium paratungstate tetrahydrate",
+    "journal": "Solid State Ionics",
+    "year": "2004",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1016/j.tca.2016.11.013",
+    "title": "In situ evolved gas analysis assisted thermogravimetric (TG-FTIR and TG/DTA–MS) studies on non-activated copper benzene-1,3,5-tricarboxylate",
+    "journal": "Thermochimica Acta",
+    "year": "2017",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1023/b:jtan.0000046127.69336.90",
+    "title": "Evolved gas analysis of dichlorobis(thiourea)zinc(II) by coupled TG-FTIR and TG/DTA-MS techniques",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2004",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": true,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1016/j.jaap.2004.06.001",
+    "title": "Comparative evolved gas analyses (TG-FTIR, TG/DTA-MS) and solid state (FTIR, XRD) studies on thermal decomposition of ammonium paratungstate tetrahydrate (APT) in air",
+    "journal": "Journal of Analytical and Applied Pyrolysis",
+    "year": "2004",
+    "type": "journal-article",
+    "titleJac": 0.24,
+    "jAgree": true,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1007/s10973-006-8058-4",
+    "title": "Comparative evolved gas analyses on thermal degradation of thiourea by coupled TG-FTIR and TG/DTA-MS instruments",
+    "journal": "Journal of Thermal Analysis and Calorimetry",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": true,
+    "yDiff": 12
+   }
+  ]
+ },
+ {
+  "num": 45,
+  "orig": "Comparative Thermal Analysis of Alkali Metal Tris(oxalato)ferrate(III) Complexes (M = Na, K, Rb, Cs)",
+  "oJ": "Thermochimica Acta",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.26,
+    "jAgree": false,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1007/bf01914092",
+    "title": "Thermal and structural investigation of some oxalato-niobium complexes",
+    "journal": "Journal of Thermal Analysis",
+    "year": "1983",
+    "type": "journal-article",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 39
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 51
+   },
+   {
+    "doi": "10.1039/b417251e",
+    "title": "Bis and tris(oxalato)ferrate(iii) complexes as precursors of polynuclear compounds",
+    "journal": "CrystEngComm",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 17
+   },
+   {
+    "doi": "10.1007/bf02395572",
+    "title": "Mössbauer study of the thermal decomposition of cesium tris(oxalato) ferrate(III)dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1988",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 34
+   }
+  ]
+ },
+ {
+  "num": 46,
+  "orig": "Magnetic Properties of Potassium Tris(oxalato)ferrate(III): Temperature-Dependent Susceptibility and Magnetization",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": false,
+    "yDiff": 27
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": true,
+    "yDiff": 48
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 22
+   },
+   {
+    "doi": "10.1016/0047-2670(86)87119-2",
+    "title": "Photopolymerization of methyl methacrylate initiated by potassium tris(oxalato)ferrate(III)",
+    "journal": "Journal of Photochemistry",
+    "year": "1986",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 33
+   }
+  ]
+ },
+ {
+  "num": 47,
+  "orig": "An Oxalato-Bridged Dimetallic Heptanuclear [K₅ᴵFe₂ᴵᴵᴵ] Complex Anion: Synthesis, Crystal Structure, Hirshfeld Surface Analysis and Magnetism",
+  "oJ": "Polyhedron",
+  "oY": "2023",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.poly.2023.116459",
+    "title": "An oxalato-bridged dimetallic heptanuclear [K5IFe2III] complex anion with guanidinium as counter cation: Synthesis, crystal structure, Hirshfeld surface analysis and magnetism",
+    "journal": "Polyhedron",
+    "year": "2023",
+    "type": "journal-article",
+    "titleJac": 0.79,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.2139/ssrn.5123929",
+    "title": "A New Heterometallic Heptanuclear Oxalato-Bridged [K4icr3iii] Complex with Pyridinium Type Counter Cations: Synthesis, Crystal Structure, EPR, Magnetism and Antibacterial Activities",
+    "journal": "",
+    "year": "2025",
+    "type": "posted-content",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1016/j.poly.2020.114885",
+    "title": "Two isostructural oxalato-bridged dimetallic heptanuclear [BaII3MIII4] complexes (M = Cr; Fe) associated with 3-aminopyridinium cations: Synthesis, crystal structure and magnetic properties",
+    "journal": "Polyhedron",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.32,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1016/j.molstruc.2025.142471",
+    "title": "A new heterometallic heptanuclear oxalato-bridged [K4ICr3III] complex with pyridinium type counter cations: Synthesis, crystal structure, thermal behavior, magnetism and antibacterial activities",
+    "journal": "Journal of Molecular Structure",
+    "year": "2025",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1007/s13738-019-01805-0",
+    "title": "Crystal structure, Hirshfeld surface analysis and theoretical calculations of an oxalato-bridged copper(II) complex: μ-oxalato-bis[(2,2’-bipyridine) hydrate copper(II) nitrate]",
+    "journal": "Journal of the Iranian Chemical Society",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.41,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 48,
+  "orig": "Humidity-Sensing Properties of a 1D Antiferromagnetic Oxalate-Bridged Coordination Polymer of Iron(III)",
+  "oJ": "Materials",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.3390/ma14195543",
+    "title": "Humidity-Sensing Properties of an 1D Antiferromagnetic Oxalate-Bridged Coordination Polymer of Iron(III) and Its Temperature-Induced Structural Flexibility",
+    "journal": "Materials",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.63,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/s11243-007-0264-9",
+    "title": "Hydrothermal synthesis, crystal structure and magnetic property of oxalate-bridged iron 1D chain coordination polymer",
+    "journal": "Transition Metal Chemistry",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 49,
+  "orig": "Multifunctional Magnetic Materials Obtained by Insertion of Spin-Crossover Fe(III) Complexes into Chiral 3D Bimetallic Oxalate-Based Ferromagnets",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2011",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ic201293f",
+    "title": "Multifunctional Magnetic Materials Obtained by Insertion of Spin-Crossover Fe<sup>III</sup> Complexes into Chiral 3D Bimetallic Oxalate-Based Ferromagnets",
+    "journal": "Inorganic Chemistry",
+    "year": "2011",
+    "type": "journal-article",
+    "titleJac": 0.94,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1002/chem.200902668",
+    "title": "Multifunctional Magnetic Materials Obtained by Insertion of a Spin‐Crossover Fe<sup>III</sup> Complex into Bimetallic Oxalate‐Based Ferromagnets",
+    "journal": "Chemistry – A European Journal",
+    "year": "2010",
+    "type": "journal-article",
+    "titleJac": 0.76,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1021/ic401997w",
+    "title": "Modeling the Magnetic Properties and Mössbauer Spectra of Multifunctional Magnetic Materials Obtained by Insertion of a Spin-Crossover Fe(III) Complex into Bimetallic Oxalate-Based Ferromagnets",
+    "journal": "Inorganic Chemistry",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.59,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1039/c001067g",
+    "title": "2D and 3D bimetallic oxalate-based ferromagnets prepared by insertion of different FeIII spin crossover complexes",
+    "journal": "Dalton Transactions",
+    "year": "2010",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 50,
+  "orig": "Oxalate-Based Soluble 2D Magnets: The Series [K(18-crown-6)]₃[Mᴵᴵ₃(H₂O)₄{Mᴵᴵᴵ(ox)₃}₃]",
+  "oJ": "Journal of the American Chemical Society",
+  "oY": "2010",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 51,
+  "orig": "Polymetallic Oxalate-Based 2D Magnets: Soluble Molecular Precursors for the Nanostructuration of Magnetic Oxides",
+  "oJ": "Journal of the American Chemical Society",
+  "oY": "2010",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ja100261z",
+    "title": "Polymetallic Oxalate-Based 2D Magnets: Soluble Molecular Precursors for the Nanostructuration of Magnetic Oxides",
+    "journal": "Journal of the American Chemical Society",
+    "year": "2010",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/978-3-7091-6018-3_1",
+    "title": "Polyfunctional Two- (2D) and Three- (3D) Dimensional Oxalate Bridged Bimetallic Magnets",
+    "journal": "Molecular Magnets Recent Highlights",
+    "year": "2003",
+    "type": "book-chapter",
+    "titleJac": 0.11,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.70675/a7e5bfadzb8a2z4f90zbd12z9d990468dea0",
+    "title": "Luminescent polymetallic assemblies based on Cu(I) polymetallic pre-assembled precursors",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.19,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1002/9783527620548.ch10a",
+    "title": "Oxalate‐Based 2D and 3D Magnets",
+    "journal": "Magnetism: Molecules to Materials",
+    "year": "2003",
+    "type": "other",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 52,
+  "orig": "Selective Guest Inclusion in Oxalate-Based Iron(III) Magnetic Coordination Polymers",
+  "oJ": "Chemistry - A European Journal",
+  "oY": "2018",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 53,
+  "orig": "Mössbauer and Magnetic Studies of Alkali Tris(oxalato)ferrate(III) Complexes",
+  "oJ": "Hyperfine Interactions",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 28
+   },
+   {
+    "doi": "10.1007/bf02395557",
+    "title": "Mössbauer studies on the gamma radiolysis of cesium tris(oxalato)ferrate(III) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1988",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": true,
+    "yDiff": 32
+   },
+   {
+    "doi": "10.1007/bf02395572",
+    "title": "Mössbauer study of the thermal decomposition of cesium tris(oxalato) ferrate(III)dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1988",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 32
+   },
+   {
+    "doi": "10.1007/bf02397477",
+    "title": "Mössbauer study on the gamma radiolysis of anhydrous cesium tris (oxalato) ferrate(III)",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": true,
+    "yDiff": 28
+   },
+   {
+    "doi": "10.1039/b417251e",
+    "title": "Bis and tris(oxalato)ferrate(iii) complexes as precursors of polynuclear compounds",
+    "journal": "CrystEngComm",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.43,
+    "jAgree": false,
+    "yDiff": 15
+   }
+  ]
+ },
+ {
+  "num": 54,
+  "orig": "Antiferromagnetic Ordering in Two-Dimensional Oxalate-Bridged Iron(III) Networks",
+  "oJ": "Physical Review B",
+  "oY": "2017",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.ica.2013.05.030",
+    "title": "Oxalate-bridged binuclear iron(III) complexes of two pyridine-based aminophenol ligands",
+    "journal": "Inorganica Chimica Acta",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.3390/ma14195543",
+    "title": "Humidity-Sensing Properties of an 1D Antiferromagnetic Oxalate-Bridged Coordination Polymer of Iron(III) and Its Temperature-Induced Structural Flexibility",
+    "journal": "Materials",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 55,
+  "orig": "ESR Studies of Cation Deficient Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Materials Science and Engineering",
+  "oY": "2018",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1088/1757-899x/360/1/012048",
+    "title": "XRD, FE-SEM, FT-IR and ESR studies of cation deficient potassium tris(oxalato)ferrate(III)trihydrate",
+    "journal": "IOP Conference Series: Materials Science and Engineering",
+    "year": "2018",
+    "type": "journal-article",
+    "titleJac": 0.77,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.46,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 34
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.32,
+    "jAgree": false,
+    "yDiff": 21
+   }
+  ]
+ },
+ {
+  "num": 56,
+  "orig": "Temperature-Dependent Magnetic Susceptibility of K₃[Fe(C₂O₄)₃]·3H₂O: A Student Laboratory Experiment",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.32743/unichem.2026.141.3.21984",
+    "title": "DEVELOPMENT AND TESTING OF SIMPLE LABORATORY DEVICES FOR MEASURING THE RELATIVE MAGNETIC SUSCEPTIBILITY OF Fe₃O₄ MAGNETITE AND MAGNETIC LIQUIDS BASED ON IT",
+    "journal": "Universum:Chemistry &amp; biology",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.14,
+    "jAgree": false,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1007/978-3-662-45972-0_379",
+    "title": "Magnetic properties of tetranuclear Fe(III) complex containing an [Fe(μ3-O)2]+8 core",
+    "journal": "Landolt-Börnstein - Group II Molecules and Radicals",
+    "year": "2015",
+    "type": "book-chapter",
+    "titleJac": 0.07,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1007/978-3-662-45972-0_380",
+    "title": "Magnetic properties of tetranuclear Fe(III) complex containing an [Fe(μ3-O)2]+8 core",
+    "journal": "Landolt-Börnstein - Group II Molecules and Radicals",
+    "year": "2015",
+    "type": "book-chapter",
+    "titleJac": 0.07,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.22364/mhd.52.1-2.5",
+    "title": "Temperature dependence of initial magnetic susceptibility of polydisperse ferrofluids: A critical comparison between experiment and theory",
+    "journal": "Magnetohydrodynamics",
+    "year": "2016",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 57,
+  "orig": "Spin Canting and Weak Ferromagnetism in Oxalate-Based Fe(III) Coordination Polymers",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2021",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 58,
+  "orig": "Magnetic Anisotropy of High-Spin Fe(III) in Distorted Octahedral Oxalate Environment",
+  "oJ": "Inorganic Chemistry Frontiers",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.26434/chemrxiv.13110212.v1",
+    "title": "First-Principles Investigations of Magnetic Anisotropy and Spin-Crossover Behavior of Fe(III)-TBP Complexes",
+    "journal": "",
+    "year": "2020",
+    "type": "posted-content",
+    "titleJac": 0.24,
+    "jAgree": false,
+    "yDiff": 2
+   }
+  ]
+ },
+ {
+  "num": 59,
+  "orig": "Computational Study of Magnetic Exchange Coupling in Oxalate-Bridged Fe(III) Dimers",
+  "oJ": "Journal of Computational Chemistry",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1021/ic50171a023",
+    "title": "Magnetic exchange interactions in transition metal dimers. 10. Structural and magnetic characterization of oxalate-bridged, bis(1,1,4,7,7-pentaethyldiethylene triamine)oxalatodicopper tetraphenylborate and related dimers. Effects of nonbridging ligands and counterions on exchange interactions",
+    "journal": "Inorganic Chemistry",
+    "year": "1977",
+    "type": "journal-article",
+    "titleJac": 0.2,
+    "jAgree": true,
+    "yDiff": 46
+   }
+  ]
+ },
+ {
+  "num": 60,
+  "orig": "Determination of the Magnetic Moment of K₃[Fe(C₂O₄)₃]·3H₂O by Gouy and Evans Methods",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/978-3-642-23675-4_2056",
+    "title": "Effective magnetic moment of [Fe(hp)–O–(hp)Fe]",
+    "journal": "Landolt-Börnstein - Group II Molecules and Radicals",
+    "year": "2012",
+    "type": "book-chapter",
+    "titleJac": 0.18,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1039/jr9490000132",
+    "title": "28. The determination of magnetic susceptibility by the Gouy method",
+    "journal": "Journal of the Chemical Society (Resumed)",
+    "year": "1949",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 70
+   },
+   {
+    "doi": "10.1007/978-3-642-23675-4_2055",
+    "title": "Effective magnetic moment of [Fe(hp)–O–(hp)Fe]∙H2O",
+    "journal": "Landolt-Börnstein - Group II Molecules and Radicals",
+    "year": "2012",
+    "type": "book-chapter",
+    "titleJac": 0.17,
+    "jAgree": false,
+    "yDiff": 7
+   }
+  ]
+ },
+ {
+  "num": 61,
+  "orig": "Supramolecular Interactions in the X-Ray Crystal Structure of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Journal of Coordination Chemistry",
+  "oY": "2005",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1080/00958970512331334250",
+    "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.37,
+    "jAgree": false,
+    "yDiff": 13
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 17
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": false,
+    "yDiff": 8
+   }
+  ]
+ },
+ {
+  "num": 62,
+  "orig": "Synthesis, Crystal Structure and Characterization of Chiral, Three-Dimensional Anhydrous Potassium Tris(oxalato)ferrate(III)",
+  "oJ": "Physica B: Condensed Matter",
+  "oY": "2012",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1016/j.physb.2012.07.005",
+    "title": "Synthesis, crystal structure and characterization of chiral, three-dimensional anhydrous potassium tris(oxalato)ferrate(III)",
+    "journal": "Physica B: Condensed Matter",
+    "year": "2012",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1166/asl.2013.4858",
+    "title": "Synthesis and Characterization of 3D Chiral Anhydrous Potassium Tris(oxalato)Ferrate(III): A Way Towards Multifunctional Applications",
+    "journal": "Advanced Science Letters",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.56,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.39,
+    "jAgree": false,
+    "yDiff": 15
+   },
+   {
+    "doi": "10.1016/j.apt.2014.11.005",
+    "title": "Facile green synthesis of iron oxide nanoparticles via solid-state thermolysis of a chiral, 3D anhydrous potassium tris(oxalato)ferrate(III) precursor",
+    "journal": "Advanced Powder Technology",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.56",
+    "title": "Crystal structure of potassium sodium Δ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.39,
+    "jAgree": false,
+    "yDiff": 15
+   }
+  ]
+ },
+ {
+  "num": 63,
+  "orig": "XRD, FE-SEM, FT-IR and ESR Studies of Cation Deficient Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Materials Science and Engineering",
+  "oY": "2018",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1088/1757-899x/360/1/012048",
+    "title": "XRD, FE-SEM, FT-IR and ESR studies of cation deficient potassium tris(oxalato)ferrate(III)trihydrate",
+    "journal": "IOP Conference Series: Materials Science and Engineering",
+    "year": "2018",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.39,
+    "jAgree": false,
+    "yDiff": 34
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 21
+   }
+  ]
+ },
+ {
+  "num": 64,
+  "orig": "Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2019",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/acs.jchemed.1c00776",
+    "title": "Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.39,
+    "jAgree": false,
+    "yDiff": 22
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.46,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 27
+   },
+   {
+    "doi": "10.1080/00958970512331334250",
+    "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": true,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 65,
+  "orig": "FT-IR and Raman Spectroscopic Study of Potassium Tris(oxalato)ferrate(III): Vibrational Assignments and Coordination Mode Analysis",
+  "oJ": "Vibrational Spectroscopy",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1088/1757-899x/360/1/012048",
+    "title": "XRD, FE-SEM, FT-IR and ESR studies of cation deficient potassium tris(oxalato)ferrate(III)trihydrate",
+    "journal": "IOP Conference Series: Materials Science and Engineering",
+    "year": "2018",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1080/00958970512331334250",
+    "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.24,
+    "jAgree": false,
+    "yDiff": 16
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.46947/joaasr1120157",
+    "title": "Spectroscopic investigation (FT-IR and FT-Raman), vibrational assignments, HOMO LUMO and NLO analysis of 2-(2,4,6-Trichlorophenyl) hydrazinecarbothioamide",
+    "journal": "JOURNAL OF ADVANCED APPLIED SCIENTIFIC RESEARCH",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": false,
+    "yDiff": 6
+   }
+  ]
+ },
+ {
+  "num": 66,
+  "orig": "Mössbauer Spectroscopy of Iron(III) Oxalate Complexes: Isomer Shift and Quadrupole Splitting Correlations",
+  "oJ": "Hyperfine Interactions",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/0009-2614(74)80101-6",
+    "title": "Interpretation of isomer shift-quadrupole splitting correlations for pentacoordinate trimethyltin complexes",
+    "journal": "Chemical Physics Letters",
+    "year": "1974",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 46
+   },
+   {
+    "doi": "10.1007/bf02064600",
+    "title": "Mineral Mössbauer spectroscopy: Correlations between chemical shift and quadrupole splitting parameters",
+    "journal": "Hyperfine Interactions",
+    "year": "1994",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": true,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1016/0022-1902(77)80096-1",
+    "title": "Ligand influence on the Mössbauer isomer shift and the quadrupole splitting in some related iron complexes",
+    "journal": "Journal of Inorganic and Nuclear Chemistry",
+    "year": "1977",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": false,
+    "yDiff": 43
+   },
+   {
+    "doi": "10.1016/0375-9601(70)90408-1",
+    "title": "Effect of pressure on the isomer shift and quadrupole splitting in Au (III) compounds",
+    "journal": "Physics Letters A",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 50
+   },
+   {
+    "doi": "10.1007/bf00527634",
+    "title": "Molecular orbital structure, M�ssbauer isomer shift, and quadrupole splitting in iron complexes",
+    "journal": "Theoretica Chimica Acta",
+    "year": "1973",
+    "type": "journal-article",
+    "titleJac": 0.53,
+    "jAgree": false,
+    "yDiff": 47
+   }
+  ]
+ },
+ {
+  "num": 67,
+  "orig": "UV-Vis-NIR Spectroscopic Characterization and TD-DFT Analysis of [Fe(C₂O₄)₃]³⁻ Chromophore",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.3233/mgc-210098",
+    "title": "The study of Letrozole adsorption upon CCT nanotube: A DFT/TD-DFT and spectroscopic (excited states and UV/Vis)",
+    "journal": "Main Group Chemistry",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.2174/1570178620666221025162002",
+    "title": "Adsorption of Diethylstilbestrol Drug into BNNT: DFT/TD-DFT and Spectroscopic\n(Excited States, UV/Vis and NMR) Studies",
+    "journal": "Letters in Organic Chemistry",
+    "year": "2023",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.2139/ssrn.6723052",
+    "title": "Synthesis and Crystal Structure Characterization of a Dicopper(II) tetra benzoate dihydrogen benzoate Complex: Spectroscopic (FT-IR, UV-Vis, EPR ), DFT Investigations and Hirshfeld Surface Analysis ​",
+    "journal": "",
+    "year": "2026",
+    "type": "posted-content",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 68,
+  "orig": "Photoelectron Detachment and Solvated Electron Dynamics of the Cobalt(III) and Iron(III) Oxalato Complexes",
+  "oJ": "Journal of Physical Chemistry A",
+  "oY": "2007",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/jp075526l",
+    "title": "Photoelectron Detachment and Solvated Electron Dynamics of the Cobalt(III) and Iron(III) Oxalato Complexes",
+    "journal": "The Journal of Physical Chemistry A",
+    "year": "2007",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1246/bcsj.45.3093",
+    "title": "The Kinetics of Electron-transfer Reactions between Oxalato-Cobalt(III) Complexes and Iron(II) in Acid Aqueous Solutions",
+    "journal": "Bulletin of the Chemical Society of Japan",
+    "year": "1972",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 35
+   },
+   {
+    "doi": "10.14264/559b8c1",
+    "title": "Studies of acid-catalysed oxygen exchange, racemization and decomposition reactions in aqueous solution on oxalato cobalt (III) complexes.",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1002/chin.197614316",
+    "title": "ChemInform Abstract: METAL COMPLEXES OF SULFUR‐NITROGEN CHELATING AGENTS. III. 2‐AMINOCYCLOPENTENE‐1‐DITHIOCARBOXYLIC ACID COMPLEXES OF CHROMIUM(III), IRON(III), COBALT(III), IRON(II) AND COBALT(II)",
+    "journal": "Chemischer Informationsdienst",
+    "year": "1976",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": false,
+    "yDiff": 31
+   },
+   {
+    "doi": "10.1002/chin.197943288",
+    "title": "ChemInform Abstract: THERMAL INTRAMOLECULAR COBALT(III)‐IRON(II) AND COBALT(III)‐TITANIUM(III) ELECTRON‐TRANSFER REACTIONS INVOLVING OUTER‐SPHERE AND INNER‐SPHERE PRECURSOR COMPLEXES",
+    "journal": "Chemischer Informationsdienst",
+    "year": "1979",
+    "type": "journal-article",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 28
+   }
+  ]
+ },
+ {
+  "num": 69,
+  "orig": "X-ray Photoelectron Spectroscopy (XPS) of Transition Metal Oxalate Complexes",
+  "oJ": "Surface and Interface Analysis",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1002/chemv.201700006",
+    "title": "X-Ray Photoelectron Spectroscopy (XPS)",
+    "journal": "ChemViews",
+    "year": "2017",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.6028/nist.tn.1289",
+    "title": "NIST x-ray photoelectron spectroscopy (XPS) database",
+    "journal": "",
+    "year": "1990",
+    "type": "report",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1007/bf01393553",
+    "title": "X-ray photoelectron spectroscopy of alkaline earth metal uranate complexes",
+    "journal": "Transition Metal Chemistry",
+    "year": "1978",
+    "type": "journal-article",
+    "titleJac": 0.45,
+    "jAgree": false,
+    "yDiff": 41
+   },
+   {
+    "doi": "10.3403/30199176u",
+    "title": "Surface chemical analysis. Recording and reporting data in X-ray photoelectron spectroscopy (XPS)",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0.27,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1016/b978-0-08-052342-2.50045-0",
+    "title": "X-Ray Photoelectron Spectroscopy (XPS)",
+    "journal": "Characterization in Silicon Processing",
+    "year": "1993",
+    "type": "book-chapter",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 26
+   }
+  ]
+ },
+ {
+  "num": 70,
+  "orig": "Extended X-ray Absorption Fine Structure (EXAFS) Study of Aqueous Iron(III)-Oxalate Species",
+  "oJ": "Inorganic Chemistry",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1036/1097-8542.248950",
+    "title": "Extended x-ray absorption fine structure (EXAFS)",
+    "journal": "AccessScience",
+    "year": "",
+    "type": "dataset",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1515/physiko.4.165",
+    "title": "Unelastische Elektronenstreuung: EXAFS (Extended X-Ray Absorption Fine Structure)",
+    "journal": "Physik Online",
+    "year": "2018",
+    "type": "dataset",
+    "titleJac": 0.43,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1017/cbo9780511524264.017",
+    "title": "Extended X-ray absorption fine structure (EXAFS)",
+    "journal": "Macromolecular Crystallography with Synchrotron Radiation",
+    "year": "1992",
+    "type": "other",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1007/978-3-642-16712-6_100300",
+    "title": "Extended X-Ray Absorption Fine Structure (EXAFS)",
+    "journal": "Encyclopedia of Biophysics",
+    "year": "2013",
+    "type": "book-chapter",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 8
+   },
+   {
+    "doi": "10.1007/978-1-4757-1238-4_3",
+    "title": "Extended X-Ray Absorption Fine Structure (EXAFS) Spectroscopy: Techniques and Applications",
+    "journal": "EXAFS Spectroscopy",
+    "year": "1981",
+    "type": "book-chapter",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 40
+   }
+  ]
+ },
+ {
+  "num": 71,
+  "orig": "Single-Crystal to Single-Crystal Transformation in Potassium Tris(oxalato)ferrate(III): Dehydration and Rehydration Studied by XRD",
+  "oJ": "Crystal Growth & Design",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.27,
+    "jAgree": true,
+    "yDiff": 26
+   }
+  ]
+ },
+ {
+  "num": 72,
+  "orig": "Electron Paramagnetic Resonance of High-Spin Fe(III) in K₃[Fe(C₂O₄)₃]·3H₂O: Zero-Field Splitting Parameters",
+  "oJ": "Journal of Magnetic Resonance",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/978-3-030-39663-3_6",
+    "title": "The Zero-Field Splitting Term. EPR Spectrum for Paramagnetic Centres of Spin Greater than ½",
+    "journal": "Electron Paramagnetic Resonance Spectroscopy",
+    "year": "2020",
+    "type": "book-chapter",
+    "titleJac": 0.25,
+    "jAgree": true,
+    "yDiff": 2
+   }
+  ]
+ },
+ {
+  "num": 73,
+  "orig": "Circular Dichroism and Optical Activity of the Chiral [Fe(C₂O₄)₃]³⁻ Anion: Resolution and Characterization",
+  "oJ": "Chirality",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/978-94-015-7644-4_4",
+    "title": "Circular Dichroism and Fluorescence Detected Circular Dichroism of Macromolecules",
+    "journal": "Optical Activity and Chiral Discrimination",
+    "year": "1979",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 41
+   },
+   {
+    "doi": "10.1007/978-94-015-7644-4_5",
+    "title": "Natural and Magnetic Circular Dichroism Spectroscopy in the Vacuum Ultraviolet",
+    "journal": "Optical Activity and Chiral Discrimination",
+    "year": "1979",
+    "type": "book-chapter",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 41
+   },
+   {
+    "doi": "10.1186/s40580-015-0058-2",
+    "title": "Chiral metamaterials: enhancement and control of optical activity and circular dichroism",
+    "journal": "Nano Convergence",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.43,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1007/978-94-015-7644-4_10",
+    "title": "Vibrational Circular Dichroism: The Experimental Viewpoint",
+    "journal": "Optical Activity and Chiral Discrimination",
+    "year": "1979",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 41
+   }
+  ]
+ },
+ {
+  "num": 74,
+  "orig": "Synchrotron Powder X-ray Diffraction Study of K₃[Fe(C₂O₄)₃]·3H₂O: Temperature-Dependent Structural Changes",
+  "oJ": "Acta Crystallographica B",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1524/9783486991321-059",
+    "title": "Low temperature structural studies of zinc substituted copper ferrite using synchrotron X-ray powder diffraction",
+    "journal": "European Powder Diffraction Conference; August 2010, Darmstadt, Germany",
+    "year": "2011",
+    "type": "book-chapter",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 10
+   }
+  ]
+ },
+ {
+  "num": 75,
+  "orig": "Comprehensive Review: Spectroscopic Techniques for the Characterization of Iron(III) Oxalate Complexes",
+  "oJ": "Applied Spectroscopy Reviews",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.32792/utq/utjsci/vol3/1/9",
+    "title": "Preparation and Spectroscopic Characterization of Iron(III) Complexes of a Functionalized Crown Ether",
+    "journal": "University of Thi-Qar Journal of Science",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 76,
+  "orig": "Improvements on Synthesis of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "University Chemistry (大学化学)",
+  "oY": "2016",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.55,
+    "jAgree": false,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 24
+   },
+   {
+    "doi": "10.1021/ed072p936",
+    "title": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+    "journal": "Journal of Chemical Education",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 21
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.43,
+    "jAgree": false,
+    "yDiff": 32
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 19
+   }
+  ]
+ },
+ {
+  "num": 77,
+  "orig": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+  "oJ": "Journal of Chemical Education",
+  "oY": "1995",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ed072p936",
+    "title": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+    "journal": "Journal of Chemical Education",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": false,
+    "yDiff": 27
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": true,
+    "yDiff": 11
+   },
+   {
+    "doi": "10.1016/j.poly.2021.115420",
+    "title": "Synthesis, structural characterization and prospects for a new tris (5-methylbenzimidazole) tris (oxalato) ferrate(III) trihydrate complex as a promising antibacterial and antifungal agent",
+    "journal": "Polyhedron",
+    "year": "2021",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 26
+   }
+  ]
+ },
+ {
+  "num": 78,
+  "orig": "A Convenient Procedure for the Preparation of Potassium Trioxalatoferrate(III) (Johnson 经典)",
+  "oJ": "Journal of Chemical Education",
+  "oY": "1970",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ed047p702",
+    "title": "Convenient procedure for the preparation of potassium trioxalatoferrate(III)",
+    "journal": "Journal of Chemical Education",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.89,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1021/ed051p129",
+    "title": "Preparation and properties of potassium trioxalatoferrate(III) trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "1974",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1021/ed050p218",
+    "title": "An experiment sequence involving potassium trioxalatoferrate(III) trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "1973",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": true,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1016/j.cap.2007.06.003",
+    "title": "The dc and ac properties of potassium trioxalatoferrate (III) trihydrate",
+    "journal": "Current Applied Physics",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 38
+   }
+  ]
+ },
+ {
+  "num": 79,
+  "orig": "Preparation and Analysis of Potassium Tris(Oxalato)Ferrate(III) Trihydrate: A General Chemistry Experiment",
+  "oJ": "Journal of Chemical Education",
+  "oY": "1985",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 37
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.37,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1080/00958970512331334250",
+    "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": true,
+    "yDiff": 20
+   },
+   {
+    "doi": "10.1021/ed072p936",
+    "title": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+    "journal": "Journal of Chemical Education",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": true,
+    "yDiff": 10
+   }
+  ]
+ },
+ {
+  "num": 80,
+  "orig": "An Experiment Sequence Involving Potassium Trioxalatoferrate(III) Trihydrate",
+  "oJ": "Journal of Chemical Education",
+  "oY": "1973",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/ed050p218",
+    "title": "An experiment sequence involving potassium trioxalatoferrate(III) trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "1973",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1016/j.cap.2007.06.003",
+    "title": "The dc and ac properties of potassium trioxalatoferrate (III) trihydrate",
+    "journal": "Current Applied Physics",
+    "year": "2008",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 35
+   },
+   {
+    "doi": "10.1246/bcsj.43.789",
+    "title": "The Thermal Decomposition of Potassium Trioxalatoferrate(III) Trihydrate",
+    "journal": "Bulletin of the Chemical Society of Japan",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": true,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1021/ed051p129",
+    "title": "Preparation and properties of potassium trioxalatoferrate(III) trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "1974",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": true,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1021/ed050p656.5",
+    "title": "Experiment using potassium trioxaltoferrate(III) trihydrate",
+    "journal": "Journal of Chemical Education",
+    "year": "1973",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": true,
+    "yDiff": 0
+   }
+  ]
+ },
+ {
+  "num": 81,
+  "orig": "Green Chemistry Approach to the Synthesis of Potassium Tris(oxalato)ferrate(III): Reducing Waste and Improving Yield",
+  "oJ": "Green Chemistry",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": true,
+    "yDiff": 50
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.32,
+    "jAgree": false,
+    "yDiff": 29
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.26,
+    "jAgree": false,
+    "yDiff": 1
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 37
+   },
+   {
+    "doi": "10.1016/0022-1902(66)80142-2",
+    "title": "The solid-state photochemical dissociation of potassium tris(oxalato) ferrate (III) 3-hydrate",
+    "journal": "Journal of Inorganic and Nuclear Chemistry",
+    "year": "1966",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": true,
+    "yDiff": 55
+   }
+  ]
+ },
+ {
+  "num": 82,
+  "orig": "Microwave-Assisted Synthesis of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+  "oJ": "Inorganic Chemistry Communications",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.35,
+    "jAgree": false,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1021/ed072p936",
+    "title": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+    "journal": "Journal of Chemical Education",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": false,
+    "yDiff": 27
+   },
+   {
+    "doi": "10.1021/ed061p1098",
+    "title": "Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate: A general chemistry experiment",
+    "journal": "Journal of Chemical Education",
+    "year": "1984",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 38
+   },
+   {
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 25
+   }
+  ]
+ },
+ {
+  "num": 83,
+  "orig": "Mechanochemical Synthesis of Iron(III) Oxalate Complexes",
+  "oJ": "Green Chemistry",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/0040-6031(80)80111-0",
+    "title": "Thermal studies on oxalate complexes. II. Complexes of iron (III) and chromium (III)",
+    "journal": "Thermochimica Acta",
+    "year": "1980",
+    "type": "journal-article",
+    "titleJac": 0.4,
+    "jAgree": false,
+    "yDiff": 43
+   }
+  ]
+ },
+ {
+  "num": 84,
+  "orig": "Optimization of Reaction Parameters for the Synthesis of K₃[Fe(C₂O₄)₃]·3H₂O Using Response Surface Methodology",
+  "oJ": "Chemical Engineering Journal",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.4018/ijeoe.2014100102",
+    "title": "Optimization of Nigerian Restaurant Waste Cooking Biodiesel Reaction Parameters using Response Surface Methodology",
+    "journal": "International Journal of Energy Optimization and Engineering",
+    "year": "2014",
+    "type": "journal-article",
+    "titleJac": 0.41,
+    "jAgree": true,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1039/c4ra03978e",
+    "title": "Synthesis of lignin-based epoxy resins: optimization of reaction parameters using response surface methodology",
+    "journal": "RSC Adv.",
+    "year": "2014",
+    "type": "journal-article",
+    "titleJac": 0.5,
+    "jAgree": false,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.2139/ssrn.4548830",
+    "title": "Optimization of Cadmium Adsorption on Metal Organic Frameworks Mil-53(Fe) Using Response Surface Methodology",
+    "journal": "",
+    "year": "2023",
+    "type": "posted-content",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1039/c9ra06054e",
+    "title": "Simple synthesis of new imidazopyridinone, pyridopyrimidinone, and thiazolopyridinone derivatives and optimization of reaction parameters using response surface methodology",
+    "journal": "RSC Advances",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.42,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 85,
+  "orig": "From Steel Waste to Coordination Complex: Sustainable Synthesis of Potassium Tris(oxalato)ferrate(III) from Steel Pickling Liquor",
+  "oJ": "ACS Sustainable Chemistry & Engineering",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/0026-0657(91)92258-f",
+    "title": "Production of Fe powder from waste steel pickling liquor",
+    "journal": "Metal Powder Report",
+    "year": "1991",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 31
+   },
+   {
+    "doi": "10.3390/met5041770",
+    "title": "Preparation of Potassium Ferrate from Spent Steel  Pickling Liquid",
+    "journal": "Metals",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1080/00958970512331334250",
+    "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2005",
+    "type": "journal-article",
+    "titleJac": 0.24,
+    "jAgree": true,
+    "yDiff": 17
+   },
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": false,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 0
+   }
+  ]
+ },
+ {
+  "num": 86,
+  "orig": "Electrochemical Behavior of the [Fe(C₂O₄)₃]³⁻/[Fe(C₂O₄)₃]⁴⁻ Redox Couple in Aqueous Solution",
+  "oJ": "Electrochimica Acta",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.electacta.2014.12.061",
+    "title": "Electrochemical characteristics and transport properties of Fe(II)/Fe(III) redox couple in a non-aqueous reline deep eutectic solvent",
+    "journal": "Electrochimica Acta",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.22,
+    "jAgree": true,
+    "yDiff": 6
+   },
+   {
+    "doi": "10.1016/0368-1874(83)80143-9",
+    "title": "A DC, AC and demodulation study of the tris-oxalato Fe(III)/tris-oxalato Fe(II) redox couple in 1 M aqueous oxalate solution at the dropping mercury electrode",
+    "journal": "Journal of Electroanalytical Chemistry",
+    "year": "1983",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 38
+   },
+   {
+    "doi": "10.1149/2.f11942if",
+    "title": "Infrared Spectroelectrochemical Study of the [Fe(Cn)6]3-/[Fe(CN)6]4- Redox Couple on a Platinum Electrode",
+    "journal": "The Electrochemical Society Interface",
+    "year": "1994",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 27
+   }
+  ]
+ },
+ {
+  "num": 87,
+  "orig": "Cyclic Voltammetry Study of Potassium Tris(oxalato)ferrate(III): pH and Scan Rate Dependence",
+  "oJ": "Journal of Electroanalytical Chemistry",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.37,
+    "jAgree": false,
+    "yDiff": 28
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": true,
+    "yDiff": 49
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": false,
+    "yDiff": 23
+   },
+   {
+    "doi": "10.1021/ic50084a006",
+    "title": "Moessbauer study of the thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1970",
+    "type": "journal-article",
+    "titleJac": 0.38,
+    "jAgree": true,
+    "yDiff": 50
+   }
+  ]
+ },
+ {
+  "num": 88,
+  "orig": "Rate and Equilibrium Constants for the Formation of Monooxalate Complex of Iron(III)",
+  "oJ": "Inorganic Chemistry",
+  "oY": "1971",
+  "status": "near",
+  "top5": [
+   {
+    "doi": "10.1021/ic50045a007",
+    "title": "Rate and Equilibrium Constants for the Formation of the Monooxalate Complex of Iron(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1966",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1515/iupac.54.0566",
+    "title": "Complex Formation in Homogeneous Solutions",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.15,
+    "jAgree": false,
+    "yDiff": 45
+   },
+   {
+    "doi": "10.1002/cjoc.19890070409",
+    "title": "Linear free energy relationships between reaction rate constants and equilibrium constants of complex compounds: III. Kinetics and mechanisms of ternary complex formation between (5-X-1, 10-phenanthroline)copper(II) and threonine",
+    "journal": "Acta Chimica Sinica",
+    "year": "1989",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 18
+   }
+  ]
+ },
+ {
+  "num": 89,
+  "orig": "Stability Constants of Iron(III) Oxalate Complexes: A Critical Compilation and Re-evaluation",
+  "oJ": "Journal of Solution Chemistry",
+  "oY": "2019",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1515/iupac.54.0568",
+    "title": "Critical Survey of Stability Constants of NTA Complexes",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1515/iupac.55.0405",
+    "title": "Critical Survey of Stability Constants of Complexes of Indium",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1515/iupac.67.0146",
+    "title": "Critical Evaluation of the Stability Constants of Metal Complexes of Amino Acids With Polar Side Chains Series Title: Critical Evaluation of Stability Constants of Metal Complexes in Solution",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.24,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1515/iupac.63.0023",
+    "title": "Critical Survey of Stability Constants of Complexes of Glycine Series Title: Critical Evaluation of Stability Constants of Metal Complexes in Solution",
+    "journal": "IUPAC Standards Online",
+    "year": "2016",
+    "type": "dataset",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1016/b978-0-08-022009-3.50002-7",
+    "title": "Front Matter",
+    "journal": "Critical Survey of Stability Constants of EDTA Complexes",
+    "year": "1977",
+    "type": "book-chapter",
+    "titleJac": 0,
+    "jAgree": false,
+    "yDiff": 42
+   }
+  ]
+ },
+ {
+  "num": 90,
+  "orig": "A Solution Study of Complex Formation Between Iron(III) and Oxalate in Dimethylsulfoxide",
+  "oJ": "Monatshefte für Chemie",
+  "oY": "1987",
+  "status": "near",
+  "top5": [
+   {
+    "doi": "10.1007/bf01127866",
+    "title": "A solution study of complex formation between iron(III) and oxalate in dimethylsulphoxide",
+    "journal": "Transition Metal Chemistry",
+    "year": "1991",
+    "type": "journal-article",
+    "titleJac": 0.82,
+    "jAgree": false,
+    "yDiff": 4
+   },
+   {
+    "doi": "10.1016/s0277-5387(00)86794-7",
+    "title": "The chemistry of iron in biosystems—IV. Complex formation between iron(III) and 5-sulphosalicylic acid, in aqueous solution",
+    "journal": "Polyhedron",
+    "year": "1990",
+    "type": "journal-article",
+    "titleJac": 0.44,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.4314/epj.v29i1.5",
+    "title": "Mechanistic Study of Monodisperse Iron Oxide Nanocrystals Formation by Solution Phase Thermal Decomposition of Iron (III) Oleate Complex",
+    "journal": "Ethiopian Pharmaceutical Journal",
+    "year": "2013",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1002/chin.198225062",
+    "title": "ChemInform Abstract: KINETICS AND MECHANISM OF COMPLEX FORMATION BETWEEN (OXALATOPENTAAMMINECOBALT(III) AND IRON(III) IN ACIDIC AQUEOUS SOLUTION",
+    "journal": "Chemischer Informationsdienst",
+    "year": "1982",
+    "type": "journal-article",
+    "titleJac": 0.41,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.1021/ic00133a079",
+    "title": "Kinetics and mechanism of complex formation between (oxalatopentaamminecobalt(III) and iron(III) in acidic aqueous solution",
+    "journal": "Inorganic Chemistry",
+    "year": "1982",
+    "type": "journal-article",
+    "titleJac": 0.47,
+    "jAgree": false,
+    "yDiff": 5
+   }
+  ]
+ },
+ {
+  "num": 91,
+  "orig": "Redox Flow Battery Based on Iron(III)/Iron(II)-Oxalate Complexes",
+  "oJ": "Journal of Power Sources",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.jpowsour.2015.06.016",
+    "title": "A non-aqueous redox flow battery based on tris(1,10-phenanthroline) complexes of iron(II) and cobalt(II)",
+    "journal": "Journal of Power Sources",
+    "year": "2015",
+    "type": "journal-article",
+    "titleJac": 0.43,
+    "jAgree": true,
+    "yDiff": 7
+   },
+   {
+    "doi": "10.1016/s0039-9140(02)00427-7",
+    "title": "Flow-injection simultaneous determination of iron(III) and copper(II) and of iron(III) and palladium(II) based on photochemical reactions of thiocyanato-complexes",
+    "journal": "Talanta",
+    "year": "2002",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 20
+   }
+  ]
+ },
+ {
+  "num": 92,
+  "orig": "Influence of Organic Ligands on the Redox Properties of Fe(II) as Determined by Mediated Electrochemical Oxidation",
+  "oJ": "Environmental Science & Technology",
+  "oY": "2022",
+  "status": "real",
+  "top5": [
+   {
+    "doi": "10.1021/acs.est.2c01782",
+    "title": "Influence of Organic Ligands on the Redox Properties of Fe(II) as Determined by Mediated Electrochemical Oxidation",
+    "journal": "Environmental Science &amp; Technology",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 1,
+    "jAgree": true,
+    "yDiff": 0
+   }
+  ]
+ },
+ {
+  "num": 93,
+  "orig": "Electrochemical Detection of Oxalate Using Iron(III)-Modified Electrodes",
+  "oJ": "Sensors and Actuators B: Chemical",
+  "oY": "2021",
+  "status": "none",
+  "top5": []
+ },
+ {
+  "num": 94,
+  "orig": "Pourbaix Diagram of Iron in Oxalate-Containing Aqueous Solutions",
+  "oJ": "Corrosion Science",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/0010-938x(95)00096-3",
+    "title": "The preparation and thermodynamic properties of Fe(II)Fe(III) hydroxide-carbonate (green rust 1); Pourbaix diagram of iron in carbonate-containing aqueous media",
+    "journal": "Corrosion Science",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.28,
+    "jAgree": true,
+    "yDiff": 25
+   },
+   {
+    "doi": "10.5006/37502",
+    "title": "Atlas of Electrochemical Equilibria in Aqueous Solutions",
+    "journal": "",
+    "year": "1974",
+    "type": "book",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 46
+   },
+   {
+    "doi": "10.26434/chemrxiv.12844733.v1",
+    "title": "Predicting Aqueous Stability of Solid with Computed Pourbaix Diagram using SCAN Functional",
+    "journal": "",
+    "year": "2020",
+    "type": "posted-content",
+    "titleJac": 0.2,
+    "jAgree": false,
+    "yDiff": 0
+   }
+  ]
+ },
+ {
+  "num": 95,
+  "orig": "Ionic Conductivity and Diffusion of [Fe(C₂O₄)₃]³⁻ in Aqueous and Non-Aqueous Electrolytes",
+  "oJ": "Electrochemistry Communications",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.cplett.2019.05.004",
+    "title": "Experimental and molecular dynamics study of the ionic conductivity in aqueous LiCl electrolytes",
+    "journal": "Chemical Physics Letters",
+    "year": "2019",
+    "type": "journal-article",
+    "titleJac": 0.36,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 96,
+  "orig": "Safe Handling and Disposal of Oxalate-Containing Chemical Wastes in Teaching Laboratories",
+  "oJ": "Journal of Chemical Health and Safety",
+  "oY": "2020",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1596/0-8213-3114-1",
+    "title": "The Safe disposal of hazardous wastes",
+    "journal": "",
+    "year": "",
+    "type": "book-series",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.3403/30173209",
+    "title": "Nanotechnologies",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.3403/30173209u",
+    "title": "Nanotechnologies",
+    "journal": "",
+    "year": "",
+    "type": "standard",
+    "titleJac": 0,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.18356/47454354-en",
+    "title": "Main types of chemical waste disposal and treatment",
+    "journal": "Guidelines for the Safe Handling and Disposal of Chemicals Used in the Illicit Manufacture of Drugs",
+    "year": "2006",
+    "type": "book-chapter",
+    "titleJac": 0.21,
+    "jAgree": true,
+    "yDiff": 14
+   }
+  ]
+ },
+ {
+  "num": 97,
+  "orig": "Photocatalytic Detoxification of Ferrioxalate-Containing Laboratory Wastewater",
+  "oJ": "Journal of Hazardous Materials",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.2139/ssrn.4614415",
+    "title": "Integrating Biochar and Microbial Community for Detoxification of Wastewater Industry Containing Analgesics",
+    "journal": "",
+    "year": "2023",
+    "type": "posted-content",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.2139/ssrn.4758991",
+    "title": "Enhanced Photocatalytic Properties of White Graphene Anchored on G-C3n4 for Rapid Wastewater Detoxification",
+    "journal": "",
+    "year": "2024",
+    "type": "posted-content",
+    "titleJac": 0.21,
+    "jAgree": false,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.5353/th_991044019382703414",
+    "title": "Vacuum-UV photocatalytic oxidation for the deep treatment of industrial wastewater containing recalcitrant organic pollutants",
+    "journal": "",
+    "year": "",
+    "type": "dissertation",
+    "titleJac": 0.19,
+    "jAgree": false,
+    "yDiff": 99
+   },
+   {
+    "doi": "10.1007/978-3-642-59791-6_27",
+    "title": "Photochemical and Photocatalytic Detoxification of Reactive Dyebath Wastewater by the Fenton’s Reagent and Novel TiO2 Powders",
+    "journal": "Chemical Water and Wastewater Treatment VI",
+    "year": "2000",
+    "type": "book-chapter",
+    "titleJac": 0.19,
+    "jAgree": false,
+    "yDiff": 21
+   },
+   {
+    "doi": "10.1016/j.nxmate.2025.100714",
+    "title": "Unlocking the power of MgFe-LDHcal/TiO2 heterojunctions for superior photocatalytic detoxification of industrial wastewater",
+    "journal": "Next Materials",
+    "year": "2025",
+    "type": "journal-article",
+    "titleJac": 0.19,
+    "jAgree": true,
+    "yDiff": 4
+   }
+  ]
+ },
+ {
+  "num": 98,
+  "orig": "Recovery of Iron from Spent Potassium Tris(oxalato)ferrate(III) Solutions: A Circular Economy Approach",
+  "oJ": "Resources, Conservation and Recycling",
+  "oY": "2022",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1007/bf02397520",
+    "title": "Mössbauer study on the thermal decomposition of potassium tris (oxalato) ferrate(III) trihydrate and bis (oxalato) ferrate(II) dihydrate",
+    "journal": "Hyperfine Interactions",
+    "year": "1992",
+    "type": "journal-article",
+    "titleJac": 0.23,
+    "jAgree": false,
+    "yDiff": 30
+   },
+   {
+    "doi": "10.1007/s12045-022-1333-2",
+    "title": "Determination of Molecular Formula of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "journal": "Resonance",
+    "year": "2022",
+    "type": "journal-article",
+    "titleJac": 0.29,
+    "jAgree": false,
+    "yDiff": 0
+   },
+   {
+    "doi": "10.1021/ed072p936",
+    "title": "Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate: A Spectrophotometric Method of Iron Analysis",
+    "journal": "Journal of Chemical Education",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.3,
+    "jAgree": false,
+    "yDiff": 27
+   },
+   {
+    "doi": "10.1021/ic50102a016",
+    "title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 51
+   },
+   {
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "type": "journal-article",
+    "titleJac": 0.26,
+    "jAgree": false,
+    "yDiff": 25
+   }
+  ]
+ },
+ {
+  "num": 99,
+  "orig": "Toxicity Assessment and Environmental Impact of Iron Oxalate Complexes",
+  "oJ": "Ecotoxicology and Environmental Safety",
+  "oY": "2021",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.1016/j.eiar.2023.107413",
+    "title": "Life cycle assessment of lithium iron phosphate and electrochemical recuperator cells for city buses in Finland",
+    "journal": "Environmental Impact Assessment Review",
+    "year": "2024",
+    "type": "journal-article",
+    "titleJac": 0.16,
+    "jAgree": true,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1080/07349165.1995.9726079",
+    "title": "AMAZON'S PIG IRON INDUSTRY: THE ENVIRONMENTAL CHALLENGE",
+    "journal": "Impact Assessment",
+    "year": "1995",
+    "type": "journal-article",
+    "titleJac": 0.15,
+    "jAgree": false,
+    "yDiff": 26
+   },
+   {
+    "doi": "10.1016/j.eiar.2009.11.002",
+    "title": "Sources of toxicity and exposure information for identifying chemicals of high concern to children",
+    "journal": "Environmental Impact Assessment Review",
+    "year": "2010",
+    "type": "journal-article",
+    "titleJac": 0.12,
+    "jAgree": true,
+    "yDiff": 11
+   },
+   {
+    "doi": "10.1016/0040-6031(80)80111-0",
+    "title": "Thermal studies on oxalate complexes. II. Complexes of iron (III) and chromium (III)",
+    "journal": "Thermochimica Acta",
+    "year": "1980",
+    "type": "journal-article",
+    "titleJac": 0.33,
+    "jAgree": false,
+    "yDiff": 41
+   },
+   {
+    "doi": "10.1007/978-981-13-6798-4",
+    "title": "Microcosm Manual for Environmental Impact Risk Assessment",
+    "journal": "",
+    "year": "2020",
+    "type": "book",
+    "titleJac": 0.25,
+    "jAgree": false,
+    "yDiff": 1
+   }
+  ]
+ },
+ {
+  "num": 100,
+  "orig": "Best Practices for Chemical Waste Management in Undergraduate Inorganic Chemistry Laboratories",
+  "oJ": "Journal of Chemical Education",
+  "oY": "2023",
+  "status": "none",
+  "top5": [
+   {
+    "doi": "10.4102/ajlm.v14i1.2881",
+    "title": "Mainstreaming of biomedical waste management: Best practices for clinical laboratories in Africa",
+    "journal": "African Journal of Laboratory Medicine",
+    "year": "2025",
+    "type": "journal-article",
+    "titleJac": 0.43,
+    "jAgree": true,
+    "yDiff": 2
+   },
+   {
+    "doi": "10.1021/bk-2018-1275.ch020",
+    "title": "Implementing Best Practices to Advance Undergraduate Research in Chemistry",
+    "journal": "ACS Symposium Series",
+    "year": "2018",
+    "type": "book-chapter",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 5
+   },
+   {
+    "doi": "10.63363/aijfr.2026.v07i01.3547",
+    "title": "Green Environment, Clean Campus: Awareness and Best practices pf Solid waste management among Undergraduate Students",
+    "journal": "Advanced International Journal for Research",
+    "year": "2026",
+    "type": "journal-article",
+    "titleJac": 0.26,
+    "jAgree": true,
+    "yDiff": 3
+   },
+   {
+    "doi": "10.1201/9780429059247-6",
+    "title": "Best Practices in Construction and Demolition Waste Management",
+    "journal": "Zero Waste",
+    "year": "2019",
+    "type": "book-chapter",
+    "titleJac": 0.31,
+    "jAgree": false,
+    "yDiff": 4
+   }
+  ]
+ }
+]

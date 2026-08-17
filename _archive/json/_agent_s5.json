@@ -1,0 +1,112 @@
+[
+  {
+    "num": 65,
+    "status": "substituted",
+    "original_title": "FT-IR and Raman Spectroscopic Study of Potassium Tris(oxalato)ferrate(III): Vibrational Assignments and Coordination Mode Analysis",
+    "corrected_title": "Studies on Metal Complexes in Aqueous Solution by Infrared Spectrophotometry. I. A Qualitative Investigation of the Iron(III) and Aluminium Oxalate Systems.",
+    "journal": "Acta Chemica Scandinavica",
+    "year": "1960",
+    "doi": "10.3891/acta.chem.scand.14-1364",
+    "zh_note": "通过红外分光光度法定性考察铁(III)/铝-草酸盐水溶液配合物，为草酸根配位方式与Fe-O振动的指认提供了早期实验基础。",
+    "evidence": "原题在CrossRef按题检索无对应真实论文（多为成分/教学/热分解文献）；取同主题真实红外文献，经CrossRef DOI核验(10.3891/acta.chem.scand.14-1364)确认标题/期刊/年份/作者(Fronæus, Larsson等)。"
+  },
+  {
+    "num": 66,
+    "status": "substituted",
+    "original_title": "Mössbauer Spectroscopy of Iron(III) Oxalate Complexes: Isomer Shift and Quadrupole Splitting Correlations",
+    "corrected_title": "Moessbauer study of the thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1970",
+    "doi": "10.1021/ic50084a006",
+    "zh_note": "用Mössbauer谱研究三草酸合铁(III)酸钾热分解，获取Fe(III)配位环境的同质异能位移与四极分裂信息，是铁草酸盐Mössbauer表征的经典期刊论文。",
+    "evidence": "原题在CrossRef无完全一致文献；经DOI核验10.1021/ic50084a006(Inorg. Chem., 1970, Bancroft/Dharmawardena/Maddock)确认标题/期刊/年份/类型为journal-article，且与清单#31(10.1007/bf02397520)不重复。"
+  },
+  {
+    "num": 67,
+    "status": "substituted",
+    "original_title": "UV-Vis-NIR Spectroscopic Characterization and TD-DFT Analysis of [Fe(C₂O₄)₃]³⁻ Chromophore",
+    "corrected_title": "Photochemistry and electron-transfer mechanism of transition metal oxalato complexes excited in the charge transfer band",
+    "journal": "Proceedings of the National Academy of Sciences",
+    "year": "2008",
+    "doi": "10.1073/pnas.0806990105",
+    "zh_note": "研究过渡金属草酸配合物（含ferrioxalate）在电荷转移带激发下的光化学与电子转移机理，阐明[Fe(C₂O₄)₃]³⁻发色团的LMCT激发态行为。",
+    "evidence": "原题(TD-DFT/UV-Vis-NIR)在CrossRef无对应论文；取同主题真实文献10.1073/pnas.0806990105(PNAS, 2008, Chen/Rentzepis等)，经DOI核验标题/期刊/年份/类型为journal-article，且与清单#17(10.1021/ic7016566)不重复。"
+  },
+  {
+    "num": 69,
+    "status": "substituted",
+    "original_title": "X-ray Photoelectron Spectroscopy (XPS) of Transition Metal Oxalate Complexes",
+    "corrected_title": "X-ray Photoelectron Spectroscopy and Diffuse Reflectance Infrared Fourier Transform Spectroscopy Insight into the Pathways of Manganese Oxalate Thermal Decomposition to MnO and MnCO3",
+    "journal": "Inorganic Chemistry",
+    "year": "2022",
+    "doi": "10.1021/acs.inorgchem.2c00672",
+    "zh_note": "用XPS与DRIFTS联用解析草酸锰热分解生成MnO/MnCO₃的路径，展示XPS在过渡金属草酸盐价态与分解中间体表征中的应用。",
+    "evidence": "原题在CrossRef无对应论文（检索仅得到通用XPS工具书/标准）；取真实XPS金属草酸盐文献10.1021/acs.inorgchem.2c00672(Inorg. Chem. 2022)，经DOI核验确认。"
+  },
+  {
+    "num": 70,
+    "status": "substituted",
+    "original_title": "Extended X-ray Absorption Fine Structure (EXAFS) Study of Aqueous Iron(III)-Oxalate Species",
+    "corrected_title": "Transient Structures and Kinetics of the Ferrioxalate Redox Reaction Studied by Time-Resolved EXAFS, Optical Spectroscopy, and DFT",
+    "journal": "The Journal of Physical Chemistry A",
+    "year": "2007",
+    "doi": "10.1021/jp0733466",
+    "zh_note": "利用时间分辨EXAFS、光学光谱与DFT研究水溶液铁草酸盐（ferrioxalate）光氧化还原反应瞬态结构与动力学，直接测得Fe-O配位层的变化。",
+    "evidence": "原题在CrossRef无完全一致论文；检索到真实时间分辨EXAFS研究铁草酸盐的文献10.1021/jp0733466(J. Phys. Chem. A, 2007, Chen/Rentzepis等)，经DOI核验确认标题/期刊/年份。"
+  },
+  {
+    "num": 71,
+    "status": "substituted",
+    "original_title": "Single-Crystal to Single-Crystal Transformation in Potassium Tris(oxalato)ferrate(III): Dehydration and Rehydration Studied by XRD",
+    "corrected_title": "Crystal structure of potassium sodium Λ-tris(oxalato)ferrate(III), K2.5Na0.5Fe(C2O4)3",
+    "journal": "Zeitschrift für Kristallographie - Crystalline Materials",
+    "year": "1997",
+    "doi": "10.1524/zkri.1997.212.1.57",
+    "zh_note": "单晶X射线衍射测定Λ-构型三草酸合铁(III)酸钾钠盐晶体结构，提供该手性配合物阳离子环境与草酸根配位几何的精确结构数据。",
+    "evidence": "原题(SCSC脱水/再水合)在CrossRef无对应论文；同主题真实晶体结构文献为10.1524/zkri.1997.212.1.57(Z. Kristallogr., 1997, Wartchow)，经DOI核验确认。"
+  },
+  {
+    "num": 72,
+    "status": "substituted",
+    "original_title": "Electron Paramagnetic Resonance of High-Spin Fe(III) in K₃[Fe(C₂O₄)₃]·3H₂O: Zero-Field Splitting Parameters",
+    "corrected_title": "Single-ion and molecular contributions to the zero-field splitting in an iron(III)-oxo dimer studied by single crystal W-band EPR",
+    "journal": "Journal of Magnetic Resonance",
+    "year": "2006",
+    "doi": "10.1016/j.jmr.2005.10.016",
+    "zh_note": "用单晶W波段EPR解析铁(III)配合物中单离子与分子间零场分裂贡献，为高自旋Fe(III)八面体环境的ZFS参数测定提供方法参考。",
+    "evidence": "原题在CrossRef无对应论文；经DOI核验10.1016/j.jmr.2005.10.016(J. Magn. Reson., 2006, ter Heerdt/Goovaerts/Caneschi等)确认标题/期刊/年份/类型为journal-article，且与清单#55(10.1016/s0020-1693(00)95662-7)不重复。"
+  },
+  {
+    "num": 73,
+    "status": "substituted",
+    "original_title": "Circular Dichroism and Optical Activity of the Chiral [Fe(C₂O₄)₃]³⁻ Anion: Resolution and Characterization",
+    "corrected_title": "Spontaneous enantiomorphism in poly-phased alkaline salts of tris(oxalato)ferrate(III): crystal structure of cubic NaRb5[Fe(C2O4)3]2",
+    "journal": "Acta Crystallographica Section E Crystallographic Communications",
+    "year": "2018",
+    "doi": "10.1107/s2056989018008022",
+    "zh_note": "报道三草酸合铁(III)碱金属盐结晶过程中的自发对映异构(拆分)，给出立方相NaRb₅[Fe(C₂O₄)₃]₂晶体结构，证明[Fe(C₂O₄)₃]³⁻手性拆分可自发发生。",
+    "evidence": "原题(CD/旋光拆分)在CrossRef无对应论文；检索到真实自发对映异构文献10.1107/s2056989018008022(Acta Cryst. E, 2018, Piro/Echeverría/Baran)，经DOI核验确认。"
+  },
+  {
+    "num": 74,
+    "status": "substituted",
+    "original_title": "Synchrotron Powder X-ray Diffraction Study of K₃[Fe(C₂O₄)₃]·3H₂O: Temperature-Dependent Structural Changes",
+    "corrected_title": "Crystal structure of potassium tris(oxalato)ferrate(III) trihydrate doped with sodium, K2.9Na0.1Fe(C2O4)3 3H2O",
+    "journal": "Zeitschrift für Kristallographie - New Crystal Structures",
+    "year": "1997",
+    "doi": "10.1524/ncrs.1997.212.1.83",
+    "zh_note": "X射线晶体结构测定掺钠的三草酸合铁(III)酸钾三水合物，给出[Fe(C₂O₄)₃]³⁻三水合物的精确晶胞与配位结构参数。",
+    "evidence": "原题(同步辐射粉末XRD变温)在CrossRef无对应论文；同主题真实晶体结构文献为10.1524/ncrs.1997.212.1.83(Z. Kristallogr. NCS, 1997, Wartchow)，经DOI核验确认。"
+  },
+  {
+    "num": 75,
+    "status": "substituted",
+    "original_title": "Comprehensive Review: Spectroscopic Techniques for the Characterization of Iron(III) Oxalate Complexes",
+    "corrected_title": "Photochemistry of aqueous iron(III)-polycarboxylate complexes: roles in the chemistry of atmospheric and surface waters",
+    "journal": "Environmental Science & Technology",
+    "year": "1993",
+    "doi": "10.1021/es00048a032",
+    "zh_note": "系统综述水相Fe(III)-多羧酸(含草酸盐)配合物的光化学与光谱行为，阐明其在大气和水体化学中的作用，是铁草酸盐体系表征与光化学的经典综述。",
+    "evidence": "原题(Applied Spectroscopy Reviews综述)在CrossRef无对应论文；取真实综述性文献10.1021/es00048a032(ES&T, 1993, Faust & Zepp)，经DOI核验确认标题/期刊/年份/作者。"
+  }
+]

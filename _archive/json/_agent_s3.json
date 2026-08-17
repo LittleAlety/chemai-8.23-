@@ -1,0 +1,46 @@
+[
+  {
+    "num": 40,
+    "status": "substituted",
+    "original_title": "Thermal Decomposition Kinetics of Fe₂(C₂O₄)₃·5H₂O Prepared by Solid-State Reaction",
+    "corrected_title": "A kinetic and mechanistic study of the isothermal decomposition of ferric oxalate hydrate",
+    "journal": "Thermochimica Acta",
+    "year": "1993",
+    "doi": "10.1016/0040-6031(93)80022-3",
+    "zh_note": "采用等温TG研究草酸铁水合物的分解动力学与机理，拟合动力学方程求取活化能，为草酸铁热分解路径提供动力学证据（Galwey & Mohamed）。",
+    "evidence": "原文标题在CrossRef检索不到（中文期刊《无机化学学报》英文题名未收录）。经CrossRef bibliographic检索'kinetics thermal decomposition ferric oxalate'命中该真实论文，并单独核验DOI 10.1016/0040-6031(93)80022-3（Thermochimica Acta 1993, 作者Galwey, Mohamed），与#33/#34等已确认条目无重复。"
+  },
+  {
+    "num": 43,
+    "status": "substituted",
+    "original_title": "In Situ XRD and TG-MS Study of the Thermal Decomposition of Potassium Tris(oxalato)ferrate(III)",
+    "corrected_title": "Thermal decomposition of potassium tris(oxalato)ferrate(III)",
+    "journal": "Inorganic Chemistry",
+    "year": "1971",
+    "doi": "10.1021/ic50102a016",
+    "zh_note": "经典研究钾三草酸合铁(III)热分解的产物与过程，确定其分解生成碳酸盐及铁氧化物的路径，为三草酸合铁酸钾热分析提供基准数据（Danforth & Dix）。",
+    "evidence": "原文标题（Dalton Transactions 2021）在CrossRef检索'potassium tris(oxalato)ferrate thermal decomposition'未命中该题。命中并核验真实论文10.1021/ic50102a016（Inorganic Chemistry 1971, Inorg. Chem. 10, 1623-1627），题名直接对应该主题，且与#31(10.1007/bf02397520)不同、不重复。"
+  },
+  {
+    "num": 44,
+    "status": "substituted",
+    "original_title": "Evolved Gas Analysis of Iron Oxalate Decomposition by TG-FTIR and TG-MS",
+    "corrected_title": "Thermal Decomposition of Ferric Oxalate Tetrahydrate in Oxidative and Inert Atmospheres: The Role of Ferrous Oxalate as an Intermediate",
+    "journal": "European Journal of Inorganic Chemistry",
+    "year": "2010",
+    "doi": "10.1002/ejic.200900835",
+    "zh_note": "联用TG-DSC与逸出气体分析(EGA)研究草酸铁四水合物在氧化/惰性气氛下的分解，确认草酸亚铁为关键中间体，揭示Fe³⁺→Fe²⁺还原过程及气体产物组成（Hermankova, Hermanek, Zboril）。",
+    "evidence": "原文标题（JAAP 2019）在CrossRef检索'iron oxalate evolved gas TG-MS'未命中。命中并核验真实论文10.1002/ejic.200900835（Eur. J. Inorg. Chem. 2010），其摘要明确采用TG-DSC+逸出气体分析(EGA)研究Fe2(C2O4)3·4H2O分解，最贴合'草酸铁分解气体分析'主题，DOI单独核验通过。"
+  },
+  {
+    "num": 45,
+    "status": "substituted",
+    "original_title": "Comparative Thermal Analysis of Alkali Metal Tris(oxalato)ferrate(III) Complexes (M = Na, K, Rb, Cs)",
+    "corrected_title": "Comparative studies on the thermal analysis of alkali tris(carboxylato)ferrates(III)",
+    "journal": "Thermochimica Acta",
+    "year": "1995",
+    "doi": "10.1016/0040-6031(94)02056-t",
+    "zh_note": "系统比较碱金属三(羧酸)合铁(III)配合物的热分析行为，考察阳离子种类对分解温度与路径的影响，为理解钾盐在该系列中的热稳定性提供参照（Randhawa）。",
+    "evidence": "原文标题（Thermochimica Acta 2022）在CrossRef检索'alkali metal tris(oxalato)ferrate thermal analysis'未命中该题。命中并核验真实论文10.1016/0040-6031(94)02056-t（Thermochimica Acta 1995, 作者Randhawa, 卷254 页381-382），题名直接对应碱金属三草酸铁热分析比较主题，DOI单独核验通过。"
+  }
+]

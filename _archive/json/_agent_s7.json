@@ -1,0 +1,134 @@
+[
+  {
+    "num": 86,
+    "status": "substituted",
+    "original_title": "Electrochemical Behavior of the [Fe(C₂O₄)₃]³⁻/[Fe(C₂O₄)₃]⁴⁻ Redox Couple in Aqueous Solution",
+    "corrected_title": "A DC, AC and demodulation study of the tris-oxalato Fe(III)/tris-oxalato Fe(II) redox couple in 1 M aqueous oxalate solution at the dropping mercury electrode",
+    "journal": "Journal of Electroanalytical Chemistry",
+    "year": "1983",
+    "doi": "10.1016/0368-1874(83)80143-9",
+    "zh_note": "用直流/交流/解调极谱法系统研究1 mol/L草酸盐溶液中三草酸合铁(III/II)电对在滴汞电极上的氧化还原行为，是该电对基础电化学的经典数据源。",
+    "evidence": "CrossRef query.bibliographic 检索原题无精确命中；同主题检索返回并逐DOI核验 10.1016/0368-1874(83)80143-9（J. Electroanal. Chem. 1983），确认真实存在。"
+  },
+  {
+    "num": 87,
+    "status": "substituted",
+    "original_title": "Cyclic Voltammetry Study of Potassium Tris(oxalato)ferrate(III): pH and Scan Rate Dependence",
+    "corrected_title": "A study of the reduction of tris-oxalato Fe(III) from aqueous 1 M oxalate solution at a polycrystalline gold electrode",
+    "journal": "Journal of Electroanalytical Chemistry and Interfacial Electrochemistry",
+    "year": "1984",
+    "doi": "10.1016/s0022-0728(84)80325-3",
+    "zh_note": "在多晶金电极上研究三草酸合铁(III)在草酸盐溶液中的电还原过程，阐明该配合物的电极反应动力学特征。",
+    "evidence": "CrossRef 检索原题无精确命中；同主题检索返回 'tris-oxalato Fe(III) reduction at polycrystalline gold electrode'，经 DOI 查询核验 10.1016/s0022-0728(84)80325-3 真实。"
+  },
+  {
+    "num": 89,
+    "status": "substituted",
+    "original_title": "Stability Constants of Iron(III) Oxalate Complexes: A Critical Compilation and Re-evaluation",
+    "corrected_title": "Oxalato- and Malonato-complexes of trivalent metals. II. Stabilities of Tris-oxalato Complexes of Iron, Chromium, Aluminium, and Gallium",
+    "journal": "Zeitschrift für anorganische und allgemeine Chemie",
+    "year": "1957",
+    "doi": "10.1002/zaac.19572930307",
+    "zh_note": "测定铁(III)等三价金属三草酸配合物的分级与总稳定常数，是铁-草酸配合物稳定常数的经典真实文献。",
+    "evidence": "CrossRef 检索 'iron(III) oxalate stability' 与 WebSearch 辅助确认经典论文，逐DOI核验 10.1002/zaac.19572930307（Z. anorg. allg. Chem. 1957）真实存在。"
+  },
+  {
+    "num": 91,
+    "status": "substituted",
+    "original_title": "Redox Flow Battery Based on Iron(III)/Iron(II)-Oxalate Complexes",
+    "corrected_title": "All-Soluble All-Iron Aqueous Redox-Flow Battery",
+    "journal": "ACS Energy Letters",
+    "year": "2016",
+    "doi": "10.1021/acsenergylett.6b00049",
+    "zh_note": "报道一种全可溶的全铁水系氧化还原液流电池，利用铁基配合物作氧化还原活性物质，为铁基液流电池提供原型方案。",
+    "evidence": "CrossRef 同主题检索 'iron redox flow battery' 返回该文，经 DOI 查询核验 10.1021/acsenergylett.6b00049（ACS Energy Lett. 2016）真实。"
+  },
+  {
+    "num": 93,
+    "status": "substituted",
+    "original_title": "Electrochemical Detection of Oxalate Using Iron(III)-Modified Electrodes",
+    "corrected_title": "Large Magneto-Current Effect in the Electrochemical Detection of Oxalate in Aqueous Solution",
+    "journal": "The Journal of Physical Chemistry C",
+    "year": "2018",
+    "doi": "10.1021/acs.jpcc.8b04193",
+    "zh_note": "报道水溶液中草酸盐的电化学检测及其显著磁电流效应，为无酶草酸盐电化学传感提供新方法。",
+    "evidence": "CrossRef 同主题检索 'oxalate electrochemical detection' 返回该文，经 DOI 查询核验 10.1021/acs.jpcc.8b04193（J. Phys. Chem. C 2018）真实。"
+  },
+  {
+    "num": 94,
+    "status": "substituted",
+    "original_title": "Pourbaix Diagram of Iron in Oxalate-Containing Aqueous Solutions",
+    "corrected_title": "A Mechanism of the Anodic Dissolution of Armco Iron and High-Strength Ferritic Cast Iron in an Oxalate Medium",
+    "journal": "Protection of Metals",
+    "year": "2001",
+    "doi": "10.1023/a:1010382306992",
+    "zh_note": "研究铁及高强度球墨铸铁在草酸盐介质中的阳极溶解机理，揭示草酸根对铁活化/钝化电化学行为的影响。",
+    "evidence": "CrossRef 同主题检索 'iron oxalate medium anodic dissolution' 返回该文，经 DOI 查询核验 10.1023/a:1010382306992（Protection of Metals 2001）真实。"
+  },
+  {
+    "num": 95,
+    "status": "substituted",
+    "original_title": "Ionic Conductivity and Diffusion of [Fe(C₂O₄)₃]³⁻ in Aqueous and Non-Aqueous Electrolytes",
+    "corrected_title": "Photo electrochemical study of ferrioxalate actinometry at a glassy carbon electrode",
+    "journal": "Journal of Photochemistry and Photobiology A: Chemistry",
+    "year": "2004",
+    "doi": "10.1016/s1010-6030(03)00284-3",
+    "zh_note": "在玻碳电极上以循环伏安法研究ferrioxalate体系的电化学行为，利用Randles-Ševčík方程由峰电流对扫速平方根曲线测得Fe(II)扩散系数，为草酸铁配合物离子在电解质中的扩散性质提供实测数据。",
+    "evidence": "未检索到专门测定[Fe(C₂O₄)₃]³⁻离子电导/摩尔电导的期刊论文；经 CrossRef 检索并逐DOI核验 10.1016/s1010-6030(03)00284-3（J. Photochem. Photobiol. A 2004, journal-article, S. Ahmed）真实存在，其用循环伏安结合Randles-Ševčík方程测定ferrioxalate体系扩散系数，为该主题最贴近的真实期刊论文，作替代。"
+  },
+  {
+    "num": 96,
+    "status": "substituted",
+    "original_title": "Safe Handling and Disposal of Oxalate-Containing Chemical Wastes in Teaching Laboratories",
+    "corrected_title": "Waste disposal in the laboratory: Teaching responsibility and safety",
+    "journal": "Journal of Chemical Education",
+    "year": "1983",
+    "doi": "10.1021/ed060pa81",
+    "zh_note": "探讨教学实验室化学废物处置中的安全责任与操作规范，为实验室(含草酸盐类)废物的安全处理提供教学参考。",
+    "evidence": "CrossRef 以 container-title 过滤 Journal of Chemical Education 检索 'waste disposal teaching laboratory'，经 DOI 查询核验 10.1021/ed060pa81（J. Chem. Educ. 1983）真实。"
+  },
+  {
+    "num": 97,
+    "status": "substituted",
+    "original_title": "Photocatalytic Detoxification of Ferrioxalate-Containing Laboratory Wastewater",
+    "corrected_title": "Ferrioxalate-mediated photodegradation of organic pollutants in contaminated water",
+    "journal": "Water Research",
+    "year": "1997",
+    "doi": "10.1016/s0043-1354(96)00373-9",
+    "zh_note": "证明草酸铁(ferrioxalate)可介导有机污染物在水体中的光降解，是铁/草酸光化学(类photo-Fenton)用于污染水处理的重要依据。",
+    "evidence": "CrossRef 同主题检索 'ferrioxalate photodegradation organic pollutants water' 返回该文，经 DOI 查询核验 10.1016/s0043-1354(96)00373-9（Water Research 1997）真实。"
+  },
+  {
+    "num": 98,
+    "status": "substituted",
+    "original_title": "Recovery of Iron from Spent Potassium Tris(oxalato)ferrate(III) Solutions: A Circular Economy Approach",
+    "corrected_title": "Circular economy in hot-dip galvanizing with zinc and iron recovery from spent pickling acids",
+    "journal": "RSC Advances",
+    "year": "2023",
+    "doi": "10.1039/d2ra08195d",
+    "zh_note": "从废酸洗液中实现锌与铁的资源化回收，体现金属循环经济理念，为含铁废液(如草酸铁废液)回收利用提供借鉴。",
+    "evidence": "CrossRef 同主题检索 'iron recovery circular economy spent' 返回该文，经 DOI 查询核验 10.1039/d2ra08195d（RSC Advances 2023）真实。"
+  },
+  {
+    "num": 99,
+    "status": "substituted",
+    "original_title": "Toxicity Assessment and Environmental Impact of Iron Oxalate Complexes",
+    "corrected_title": "Formation of hydrogen peroxide and depletion of oxalic acid in atmospheric water by photolysis of iron(III)-oxalato complexes",
+    "journal": "Environmental Science & Technology",
+    "year": "1992",
+    "doi": "10.1021/es00029a022",
+    "zh_note": "揭示铁(III)-草酸配合物光解可在天然水中生成H₂O₂并消耗草酸，阐明其在环境光化学循环中的关键作用。",
+    "evidence": "CrossRef 同主题检索 'iron oxalate environmental' 返回该经典文献，经 DOI 查询核验 10.1021/es00029a022（Environ. Sci. Technol. 1992）真实。"
+  },
+  {
+    "num": 100,
+    "status": "substituted",
+    "original_title": "Best Practices for Chemical Waste Management in Undergraduate Inorganic Chemistry Laboratories",
+    "corrected_title": "Waste minimization and pollution prevention in university laboratories",
+    "journal": "Chemical Health & Safety",
+    "year": "2000",
+    "doi": "10.1016/s1074-9098(00)00080-0",
+    "zh_note": "系统总结大学实验室废物减量化与污染预防的实用措施，为本科无机化学实验室的化学废物管理提供最佳实践参考。",
+    "evidence": "CrossRef 以 container-title 过滤检索 'waste minimization pollution prevention laboratory'，经 DOI 查询核验 10.1016/s1074-9098(00)00080-0（Chemical Health & Safety 2000）真实。"
+  }
+]

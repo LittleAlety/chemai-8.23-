@@ -1,0 +1,12 @@
+const fs = require('fs');
+const stripBom = s => String(s).replace(/^﻿/, '');
+const rd = f => JSON.parse(stripBom(fs.readFileSync(f, 'utf8')));
+const q0 = rd('Agent工作区/Agent-B-问题生成/self_train_cycle0_questions.json');
+const q1 = rd('Agent工作区/Agent-B-问题生成/self_train_cycle1_questions.json');
+const q2 = rd('Agent工作区/Agent-B-问题生成/self_train_q_n200_final.json');
+console.log('Cycle0:', q0.length, 'Cycle1:', q1.length, 'Cycle2:', q2.length);
+const all = q0.concat(q1).concat(q2);
+const seen = new Set(), uniq = [];
+all.forEach(q => { if (!seen.has(q.question)) { seen.add(q.question); uniq.push(q); } });
+fs.writeFileSync('Agent工作区/Agent-B-问题生成/self_train_all_599.json', JSON.stringify(uniq, null, 2), 'utf8');
+console.log('合计(去重):', uniq.length);

@@ -1,0 +1,21 @@
+const fs = require('fs');
+const { parseFAQ, readHTML } = require('./scripts/lib-assistant-faq.js');
+const faq = parseFAQ(readHTML());
+const newTitles = new Set(faq.slice(1055).map(f => f.title));
+const r1 = JSON.parse(fs.readFileSync('Agent工作区/Agent-B-问题生成/self_train_replies_r1.json', 'utf8'));
+const r2 = JSON.parse(fs.readFileSync('Agent工作区/Agent-B-问题生成/self_train_replies_r2.json', 'utf8'));
+const s1 = JSON.parse(fs.readFileSync('Agent工作区/Agent-C-答案评分/self_train_scores_r1.json', 'utf8'));
+const s2 = JSON.parse(fs.readFileSync('Agent工作区/Agent-C-答案评分/self_train_scores_r2.json', 'utf8'));
+const sc1 = {}; s1.forEach(x => sc1[x.id] = x.score);
+const sc2 = {}; s2.forEach(x => sc2[x.id] = x.score);
+const m2 = {}; r2.forEach(x => m2[x.id] = x.matchedFAQ);
+let hitNew = 0, up = 0, down = 0;
+r1.forEach(x => {
+  const isNew = m2[x.id] && newTitles.has(m2[x.id]);
+  if (isNew) hitNew++;
+  const d = sc2[x.id] - sc1[x.id];
+  if (d >= 1) up++; if (d <= -1) down++;
+  const mark = isNew ? '【新条目】' : (m2[x.id] ? '' : '【未命中】');
+  console.log(x.id, 'R1→R2:', sc1[x.id], '→', sc2[x.id], 'Δ' + (d >= 0 ? '+' : '') + d.toFixed(1), mark, '|', (m2[x.id] || 'null').slice(0, 26));
+});
+console.log('\n命中新条目:', hitNew + '/20 | 上升:', up, '| 下降:', down, '| 新增条目数:', newTitles.size);

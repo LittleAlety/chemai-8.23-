@@ -1,0 +1,13 @@
+const fs = require('fs');
+const { parseFAQ, readHTML } = require('./scripts/lib-assistant-faq.js');
+const qs = JSON.parse(fs.readFileSync('Agent工作区/Agent-B-问题生成/self_train_q_n200_final.json', 'utf8'));
+const q = qs.find(x => x.id === 'Q175');
+const faq = parseFAQ(readHTML());
+const e = faq.find(f => f.q === q.question);
+console.log('题目:', q.question.slice(0, 60));
+console.log('参考答案:', (q.referenceAnswer || '').slice(0, 80));
+console.log('当前 answer:', e.answer.slice(0, 80));
+console.log('当前 detail:', (e.detail || '').slice(0, 80));
+const s = JSON.parse(fs.readFileSync('Agent工作区/Agent-C-答案评分/self_train_scores_r5.json', 'utf8'));
+const sc = s.find(x => x.id === 'Q175');
+console.log('R5反馈:', sc ? sc.why : '无');

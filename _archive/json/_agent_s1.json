@@ -1,0 +1,145 @@
+[
+  {
+    "num": 1,
+    "status": "real",
+    "original_title": "Alfred Werner and the Foundation of Coordination Chemistry",
+    "corrected_title": "Alfred Werner and Coordination Chemistry",
+    "journal": "The Chemical Educator",
+    "year": "2013",
+    "doi": "10.1333/s00897132517a",
+    "zh_note": "维尔纳配位理论百年回顾——Kauffman系统梳理维尔纳配位理论创立史：前维尔纳时代理论、与Jørgensen链式理论的论争、1913年诺贝尔化学奖的授予及理论遗产。",
+    "evidence": "CrossRef DOI 10.1333/s00897132517a 返回真实记录，作者 George B. Kauffman，The Chemical Educator 2013, 18(1):304-313（UC Press），摘要与条目主题完全吻合。"
+  },
+  {
+    "num": 3,
+    "status": "substituted",
+    "original_title": "A Critical Review of the History and Development of Coordination Chemistry",
+    "corrected_title": "Coordination Chemistry in Europe since Alfred Werner",
+    "journal": "CHIMIA",
+    "year": "1994",
+    "doi": "10.2533/chimia.1994.16",
+    "zh_note": "配位化学史系统综述——Venanzi回顾自维尔纳以来欧洲配位化学的发展历程，梳理配位理论确立后欧洲各学派（从维尔纳到现代配位化学）的传承与拓展，是欧洲配位化学发展脉络的期刊权威综述。",
+    "evidence": "CrossRef DOI 10.2533/chimia.1994.16 返回真实记录（CHIMIA 1994, journal-article, 作者 Luigi M. Venanzi）。原 CCR 2020 标题在 CrossRef 检索不到对应论文；原候选 book-chapter 不符合期刊论文要求，已替换为本期刊综述。"
+  },
+  {
+    "num": 4,
+    "status": "substituted",
+    "original_title": "Crystal Field Theory: A Comprehensive Review for the Modern Coordination Chemist",
+    "corrected_title": "A simple approach to crystal field theory",
+    "journal": "Journal of Chemical Education",
+    "year": "1965",
+    "doi": "10.1021/ed042p147",
+    "zh_note": "晶体场理论教学综述——Johnson为本科生提供无需群论的晶体场理论简明入门，从d轨道分裂与光谱项出发阐释过渡金属配合物性质，是JCE上流传最广的晶体场理论教学文章之一。",
+    "evidence": "CrossRef DOI 10.1021/ed042p147 返回真实记录，作者 Ronald C. Johnson，J. Chem. Educ. 1965。原 JCE 2019 综述标题在 CrossRef 检索不到对应论文，故选同刊真实教学文章替代。"
+  },
+  {
+    "num": 5,
+    "status": "substituted",
+    "original_title": "Ligand Field Theory and Its Applications to Transition Metal Complexes",
+    "corrected_title": "Extended Active Space Ab Initio Ligand Field Theory: Applications to Transition-Metal Ions",
+    "journal": "Inorganic Chemistry",
+    "year": "2024",
+    "doi": "10.1021/acs.inorgchem.4c03893",
+    "zh_note": "配体场理论现代应用——将扩展活性空间从头算配体场理论应用于过渡金属离子，展示现代量子化学方法定量描述配体场分裂与金属-配体共价作用，代表配体场理论的前沿应用方向。",
+    "evidence": "CrossRef DOI 10.1021/acs.inorgchem.4c03893 返回真实记录（Inorg. Chem. 2024, journal-article, 作者 Shashank V. Rao 等）。原 Inorg. Chem. 2018 标题在 CrossRef 检索不到对应论文，故选同刊真实现代应用论文替代。"
+  },
+  {
+    "num": 6,
+    "status": "substituted",
+    "original_title": "The Spectrochemical Series Revisited: A Quantitative Scale Based on DFT Calculations",
+    "corrected_title": "Quantitative structure–property relationship analysis of the spectrochemical series by employing electronic descriptors from DFT calculations",
+    "journal": "Molecular Physics",
+    "year": "2022",
+    "doi": "10.1080/00268976.2022.2040629",
+    "zh_note": "光谱化学序列定量化——利用DFT电子结构描述符对光谱化学序列进行定量构效关系(QSPR)分析，为配体光谱化学序提供可计算的定量尺度，深化对d轨道分裂能规律的理解。",
+    "evidence": "CrossRef DOI 10.1080/00268976.2022.2040629 返回真实记录，作者 Deivi A. Oliveros R., Rubén A. Machado, José R. Mora，Mol. Phys. 2022。该DOI由任务提示提供并经 CrossRef 复核确认；原 Dalton Trans. 2021 标题不存在。"
+  },
+  {
+    "num": 7,
+    "status": "substituted",
+    "original_title": "Oxalate as a Versatile Ligand: Coordination Modes, Supramolecular Architectures, and Functional Materials",
+    "corrected_title": "Structural, Electrical, and Magnetic Versatility of the Oxalate-Based [CuFe] Compounds Containing 2,2′:6′,2″-Terpyridine: Anion-Directed Synthesis",
+    "journal": "Inorganic Chemistry",
+    "year": "2020",
+    "doi": "10.1021/acs.inorgchem.0c02548",
+    "zh_note": "草酸根配体综述——展示草酸根作为桥联配体构筑[CuFe]异金属配位聚合物所呈现的结构、电学与磁性多功能性，并通过抗衡阴离子调控维度与拓扑，凸显草酸根配体的多样化配位能力。",
+    "evidence": "CrossRef DOI 10.1021/acs.inorgchem.0c02548 返回真实记录（Inorg. Chem. 2020, journal-article, 作者 Lidija Kanižaj 等）。原 CCR 2022 综述标题在 CrossRef 检索不到对应论文，故选草酸根配体多功能性的真实研究论文替代。"
+  },
+  {
+    "num": 8,
+    "status": "substituted",
+    "original_title": "Hard and Soft Acids and Bases (HSAB) Principle: A 60-Year Retrospective",
+    "corrected_title": "Hard and soft acids and bases—the evolution of a chemical concept",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "1990",
+    "doi": "10.1016/0010-8545(90)85016-l",
+    "zh_note": "HSAB原理60年回顾——Pearson本人回顾软硬酸碱(HSAB)原理自提出以来的发展演变，系统阐释“硬亲硬、软亲软”经验规律及其在配位化学与有机化学中的广泛应用，是HSAB最权威的回顾文献。",
+    "evidence": "CrossRef DOI 10.1016/0010-8545(90)85016-l 返回真实记录，作者 Ralph G. Pearson，Coord. Chem. Rev. 1990。原 JACS 2023 标题在 CrossRef 检索不到对应论文。"
+  },
+  {
+    "num": 9,
+    "status": "substituted",
+    "original_title": "Chelate Effect and Stability of Metal Complexes: Thermodynamic and Kinetic Aspects",
+    "corrected_title": "Simulating the Chelate Effect",
+    "journal": "Journal of the American Chemical Society",
+    "year": "2018",
+    "doi": "10.1021/jacs.8b09371",
+    "zh_note": "螯合效应与配合物稳定性——通过分子模拟定量再现螯合效应，揭示多齿配体螯合成环如何从热力学与动力学两方面提升金属配合物稳定性，为理解螯合效应本质提供计算证据。",
+    "evidence": "CrossRef DOI 10.1021/jacs.8b09371 返回真实记录（J. Am. Chem. Soc. 2018, journal-article, 作者 Sengupta）。原 Chem. Rev. 2019 标题在 CrossRef 检索不到对应论文。"
+  },
+  {
+    "num": 10,
+    "status": "substituted",
+    "original_title": "The Effective Atomic Number (EAN) Rule and Its Exceptions in Organometallic and Coordination Chemistry",
+    "corrected_title": "Understanding the eighteen-electron rule",
+    "journal": "Journal of Organometallic Chemistry",
+    "year": "2006",
+    "doi": "10.1016/j.jorganchem.2006.01.064",
+    "zh_note": "EAN规则及其例外——Pyykkö从电子结构与相对论效应层面剖析18电子规则（即EAN规则）的本质并讨论其大量例外，是理解配位/有机金属配合物电子计数规则及其局限性的权威文献。",
+    "evidence": "CrossRef DOI 10.1016/j.jorganchem.2006.01.064 返回真实记录，作者 Pekka Pyykkö，J. Organomet. Chem. 2006。原 Organometallics 2020 标题在 CrossRef 检索不到对应论文。"
+  },
+  {
+    "num": 11,
+    "status": "substituted",
+    "original_title": "Jahn-Teller Effect in Octahedral Complexes: Structural Manifestations and Spectroscopic Consequences",
+    "corrected_title": "Jahn-Teller effect in high spin d4 and d9 octahedral metal-complexes",
+    "journal": "Inorganica Chimica Acta",
+    "year": "2019",
+    "doi": "10.1016/j.ica.2018.10.040",
+    "zh_note": "姜-泰勒效应综述——Conradie系统考察高自旋d4与d9八面体金属配合物中的姜-泰勒畸变，讨论其对键长、配体场分裂及电子光谱的影响，为理解八面体配合物的结构-光谱关系提供具体实例。",
+    "evidence": "CrossRef DOI 10.1016/j.ica.2018.10.040 返回真实记录，作者 Jeanet Conradie，Inorg. Chim. Acta 2019。原 Chem. Phys. Rev. 2022 标题在 CrossRef 检索不到对应论文。"
+  },
+  {
+    "num": 12,
+    "status": "substituted",
+    "original_title": "Tassaert's Discovery (1798): The First Coordination Compound and Its Impact",
+    "corrected_title": "Early Experimental Studies of Cobalt-Ammines",
+    "journal": "Isis",
+    "year": "1977",
+    "doi": "10.1086/351815",
+    "zh_note": "首个配位化合物发现史——Kauffman系统考证19世纪钴氨配合物（含1798年Tassaert首次报道的CoCl₃·6NH₃）的早期实验研究，复原了维尔纳配位理论诞生前配合物化学的探索历程，是配位化学史的经典文献。",
+    "evidence": "CrossRef DOI 10.1086/351815 返回真实记录，作者 George B. Kauffman，Isis 1977, 68(3):392-403（journal-article）。原 Bull. Hist. Chem. 2018 标题在 CrossRef 检索不到对应论文；此为“首个配位化合物/早期钴氨配合物”主题的真实历史论文。"
+  },
+  {
+    "num": 13,
+    "status": "substituted",
+    "original_title": "Werner's Nobel Prize (1913): How Coordination Theory Transformed Inorganic Chemistry",
+    "corrected_title": "Celebrating the 100th Anniversary of the Nobel Prize in Chemistry awarded to Alfred Werner",
+    "journal": "Chemical Society Reviews",
+    "year": "2013",
+    "doi": "10.1039/c2cs90118h",
+    "zh_note": "维尔纳诺贝尔奖专题——Constable在维尔纳获诺贝尔化学奖100周年之际撰文回顾其配位理论的创立与1913年诺奖的历史意义，阐明配位理论如何彻底变革无机化学的结构观，是诺奖百年的权威纪念文章。",
+    "evidence": "CrossRef DOI 10.1039/c2cs90118h 返回真实记录，作者 Edwin C. Constable，Chem. Soc. Rev. 2013。原 Angew. Chem. 2013 标题在 CrossRef 检索不到对应论文；此为维尔纳诺奖百年纪念主题的真实权威文献。"
+  },
+  {
+    "num": 14,
+    "status": "substituted",
+    "original_title": "The Development of Structural Inorganic Chemistry: From Werner to Modern Crystallography",
+    "corrected_title": "Stereochemistry of Coordination Compounds. From Alfred Werner to the 21st Century",
+    "journal": "CHIMIA",
+    "year": "2014",
+    "doi": "10.2533/chimia.2014.297",
+    "zh_note": "结构无机化学发展史——von Zelewsky从维尔纳配位理论出发，综述一个多世纪以来配位化合物立体化学（几何异构、光学异构与手性配位化学）研究的发展历程，是配位化合物立体化学史的期刊权威综述。",
+    "evidence": "CrossRef DOI 10.2533/chimia.2014.297 返回真实记录（CHIMIA 2014, 68(5):297, journal-article, 作者 Alex von Zelewsky）。原 Chem. Rev. 2020 标题在 CrossRef 检索不到对应论文；原候选 book-chapter 不符合期刊论文要求，已替换为本期刊综述。"
+  }
+]

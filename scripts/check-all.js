@@ -51,7 +51,7 @@ try {
 // 4. assistant 语法 + 函数
 console.log('\n【4. assistant 语法与函数】');
 try {
-  const d = execSync('node "' + path.join(ROOT, '_diag.js') + '" assistant.html', { encoding: 'utf8' });
+  const d = execSync('node "' + path.join(ROOT, '_archive/js/_diag.js') + '" assistant.html', { encoding: 'utf8' });
   if (d.includes('0 unclosed')) pass('assistant.html 括号平衡 0 unclosed'); else fail('assistant 括号不平衡');
 } catch (e) { fail('diag 失败: ' + e.message.split('\n')[0]); }
 const a = fs.readFileSync(path.join(ROOT, 'assistant.html'), 'utf8');

@@ -1,0 +1,57 @@
+[
+  {
+    "num": 81,
+    "status": "substituted",
+    "original_title": "Green Chemistry Approach to the Synthesis of Potassium Tris(oxalato)ferrate(III): Reducing Waste and Improving Yield",
+    "corrected_title": "Facile green synthesis of iron oxide nanoparticles via solid-state thermolysis of a chiral, 3D anhydrous potassium tris(oxalato)ferrate(III) precursor",
+    "journal": "Advanced Powder Technology",
+    "year": "2015",
+    "doi": "10.1016/j.apt.2014.11.005",
+    "zh_note": "以手性无水三草酸合铁(III)酸钾为前驱体，经固相热解绿色合成纳米氧化铁，展示该配合物在绿色材料制备中的应用。",
+    "evidence": "原标题在 CrossRef 精确检索无匹配（虚构）。原候选 10.1021/acs.jchemed.1c00776 与清单 #64 重复，弃用。改以 query.bibliographic 检索'绿色合成/三草酸合铁(III)酸钾'，命中真实期刊论文 10.1016/j.apt.2014.11.005（Advanced Powder Technology, 2015, journal-article）；已通过 api.crossref.org/works/10.1016/j.apt.2014.11.005 核验 DOI 解析到对应标题，且不与 #64/#76/#77/#78/#79/#80 重复。"
+  },
+  {
+    "num": 82,
+    "status": "substituted",
+    "original_title": "Microwave-Assisted Synthesis of Potassium Tris(oxalato)ferrate(III) Trihydrate",
+    "corrected_title": "Microwave-assisted synthesis and characterization of a new metal-free and metallophthalocyanines",
+    "journal": "Journal of Coordination Chemistry",
+    "year": "2010",
+    "doi": "10.1080/00958971003645953",
+    "zh_note": "微波辅助合成并表征新型无金属及金属酞菁配合物，展示微波加热在配位化合物快速合成中的优势。",
+    "evidence": "原标题在 CrossRef 精确检索无匹配（虚构）。原候选 10.5772/13149 为 book-chapter，不符合清单只收期刊论文要求，弃用。检索 'microwave-assisted synthesis coordination compound'（filter: type:journal-article）命中真实期刊论文 10.1080/00958971003645953（Journal of Coordination Chemistry, 2010, journal-article）；已通过 api.crossref.org/works/10.1080/00958971003645953 核验 DOI 解析到对应标题。"
+  },
+  {
+    "num": 83,
+    "status": "substituted",
+    "original_title": "Mechanochemical Synthesis of Iron(III) Oxalate Complexes",
+    "corrected_title": "Synthesis of Mono-coordinate Iron(II)-phen Complex via a Solid State Ligand Exchange Process from Iron(II) Oxalate Dihydrate at Room Temperature under Mechanical Stressing",
+    "journal": "Synthesis and Reactivity in Inorganic, Metal-Organic, and Nano-Metal Chemistry",
+    "year": "2005",
+    "doi": "10.1081/sim-200059196",
+    "zh_note": "室温机械应力下由草酸亚铁二水合物经固相配体交换合成铁-菲咯啉配合物，展示机械化学法在草酸铁体系中的应用。",
+    "evidence": "原标题在 CrossRef 精确检索无匹配（虚构）。检索'机械化学/球磨合成铁草酸配合物'命中真实论文 10.1081/sim-200059196（以草酸亚铁为原料的固相机械合成）；已通过 api.crossref.org/works/10.1081/sim-200059196 核验 DOI 真实（journal-article, 2005）。"
+  },
+  {
+    "num": 84,
+    "status": "substituted",
+    "original_title": "Optimization of Reaction Parameters for the Synthesis of K₃[Fe(C₂O₄)₃]·3H₂O Using Response Surface Methodology",
+    "corrected_title": "Optimization of the Process Parameters for the Synthesis Process of Battery-Grade Ferrous Oxalate by Response Surface Method",
+    "journal": "Nano",
+    "year": "2016",
+    "doi": "10.1142/s179329201650123x",
+    "zh_note": "以中心复合设计（响应面法）优化硫酸亚铁与草酸液相聚沉的温度、陈化时间与浓度，获得电池级草酸亚铁最佳制备条件。",
+    "evidence": "原标题在 CrossRef 精确检索无匹配（虚构）。检索'草酸铁合成优化/响应面法'命中真实论文 10.1142/s179329201650123x；已通过 api.crossref.org/works/10.1142/s179329201650123x 核验，返回标题 'Optimization of the Process Parameters for the Synthesis Process of Battery-Grade Ferrous Oxalate by Response Surface Method'（Nano, 2016），摘要确认采用 CCD 响应面优化温度/陈化时间/浓度。"
+  },
+  {
+    "num": 85,
+    "status": "substituted",
+    "original_title": "From Steel Waste to Coordination Complex: Sustainable Synthesis of Potassium Tris(oxalato)ferrate(III) from Steel Pickling Liquor",
+    "corrected_title": "Preparation of Potassium Ferrate from Spent Steel Pickling Liquid",
+    "journal": "Metals",
+    "year": "2015",
+    "doi": "10.3390/met5041770",
+    "zh_note": "以废弃钢铁酸洗液回收的铁为原料，湿法氧化制备多功能绿色试剂高铁酸钾(K₂FeO₄)，实现废液资源化与高值化利用。",
+    "evidence": "原标题在 CrossRef 精确检索无匹配（虚构）。检索'钢铁酸洗废液回收合成'命中真实论文 10.3390/met5041770；已通过 api.crossref.org/works/10.3390/met5041770 核验，返回标题 'Preparation of Potassium Ferrate from Spent Steel Pickling Liquid'（Metals, 2015），摘要确认从废酸洗液回收铁(93%亚铁/7%三价)湿法制备高铁酸钾。"
+  }
+]

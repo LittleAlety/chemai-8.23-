@@ -1,0 +1,90 @@
+[
+  {
+    "num": 19,
+    "status": "substituted",
+    "original_title": "Photochemistry of Iron(III) Complexes: From Fundamental Studies to Environmental Applications",
+    "corrected_title": "Photochemistry of iron (III) complexes",
+    "journal": "Coordination Chemistry Reviews",
+    "year": "1997",
+    "doi": "10.1016/s0010-8545(96)01321-5",
+    "zh_note": "系统综述铁(III)配合物的光化学行为，涵盖配体到金属电荷转移(LMCT)激发与光致还原过程，是理解三草酸合铁酸钾光敏机理的基础文献。",
+    "evidence": "CrossRef bibliographic 检索命中 Šima & Makáňová, Coord. Chem. Rev. 1997; 直接 DOI 核验 10.1016/s0010-8545(96)01321-5 返回标题/期刊/年份一致。"
+  },
+  {
+    "num": 23,
+    "status": "substituted",
+    "original_title": "Wavelength Dependence of the Quantum Yield of the Ferrioxalate Actinometer",
+    "corrected_title": "Quantum Yield of the Ferrioxalate Actinometer",
+    "journal": "The Journal of Chemical Physics",
+    "year": "1964",
+    "doi": "10.1063/1.1725147",
+    "zh_note": "经典铁草酸盐(ferrioxalate)化学光量计量子产率测定论文，为草酸铁光量计在不同波长下产率标定提供基准数据。",
+    "evidence": "原文标题精确检索未命中 1972 Photochem. Photobiol.; CrossRef 检索+DOI 核验 10.1063/1.1725147 为 Lee & Seliger, J. Chem. Phys. 1964, 同主题(ferrioxalate 量子产率)真实论文。"
+  },
+  {
+    "num": 24,
+    "status": "substituted",
+    "original_title": "Photochemistry of Fe(III)-Oxalato Complexes in Aqueous Solution: A Review",
+    "corrected_title": "Environmental photochemistry in hematite-oxalate system: Fe(III)-Oxalate complex photolysis and ROS generation",
+    "journal": "Applied Catalysis B: Environmental",
+    "year": "2021",
+    "doi": "10.1016/j.apcatb.2020.119645",
+    "zh_note": "研究 Fe(III)-草酸配合物光解及其产生活性氧(ROS)的环境光化学过程，阐明草酸铁配合物在自然水环境降解中的光化学路径。",
+    "evidence": "同名综述未检索到; CrossRef 检索命中 Xu et al., Appl. Catal. B 2021; 直接 DOI 核验 10.1016/j.apcatb.2020.119645 返回标题/期刊/年份一致。"
+  },
+  {
+    "num": 25,
+    "status": "substituted",
+    "original_title": "Photoinduced Electron Transfer in Iron(III)-Carboxylate Complexes: Mechanistic Insights",
+    "corrected_title": "Exploring Ligand-to-Metal Charge-Transfer States in the Photo-Ferrioxalate System Using Excited-State Specific Optimization",
+    "journal": "The Journal of Physical Chemistry Letters",
+    "year": "2023",
+    "doi": "10.1021/acs.jpclett.3c01308",
+    "zh_note": "采用激发态优化计算方法深入解析 photo-ferrioxalate 体系中配体到金属电荷转移(LMCT)态，为草酸铁光敏过程的电子转移机制提供理论洞见。",
+    "evidence": "JACS 2019 原文标题未检索到; CrossRef 检索命中 Tran & Neuscamman, JPC Lett. 2023; 直接 DOI 核验 10.1021/acs.jpclett.3c01308 返回一致。"
+  },
+  {
+    "num": 26,
+    "status": "real",
+    "original_title": "Ultraviolet Actinometry: Determination of Incident Photon Flux and Quantum Yields Using Low-Pressure and UV-LED Light Sources",
+    "corrected_title": "Ultraviolet actinometry – Determination of the incident photon flux and quantum yields for photochemical systems using low-pressure and ultraviolet light-emitting diode light sources",
+    "journal": "Journal of Environmental Chemical Engineering",
+    "year": "2022",
+    "doi": "10.1016/j.jece.2022.107947",
+    "zh_note": "面向低压汞灯与 UV-LED 光源的紫外光量计操作规程，给出入射光子通量与量子产率的测定方法，适用于草酸铁光量计的现代标定。",
+    "evidence": "CrossRef 检索+DOI 核验 10.1016/j.jece.2022.107947 为真实论文, 标题为轻微修正版, 期刊/年份与原条目一致。"
+  },
+  {
+    "num": 28,
+    "status": "substituted",
+    "original_title": "Photocatalytic Degradation of Organic Pollutants by Fe(III)-Oxalate Complexes under Visible Light",
+    "corrected_title": "Photodegradation of dyes in aqueous solutions containing Fe(III)-oxalato complexes",
+    "journal": "Chemosphere",
+    "year": "1997",
+    "doi": "10.1016/s0045-6535(97)00327-5",
+    "zh_note": "证实含 Fe(III)-草酸配合物水溶液在光照下可高效光降解染料类有机污染物，是草酸铁光催化降解有机物的代表性研究。",
+    "evidence": "Appl. Catal. B 2021 同名标题未命中; CrossRef 检索命中 Deng Nansheng et al., Chemosphere 1997; 直接 DOI 核验 10.1016/s0045-6535(97)00327-5 返回一致。"
+  },
+  {
+    "num": 29,
+    "status": "substituted",
+    "original_title": "Photoredox Chemistry of Iron(III) Oxalate: Formation, Dynamics, and Reactivity of Reactive Oxygen Species",
+    "corrected_title": "Significantly Accelerated Hydroxyl Radical Generation by Fe(III)–Oxalate Photochemistry in Aerosol Droplets",
+    "journal": "The Journal of Physical Chemistry A",
+    "year": "2023",
+    "doi": "10.1021/acs.jpca.2c05919",
+    "zh_note": "报道 Fe(III)-草酸光化学在气溶胶液滴中显著加速羟基自由基(·OH)生成，阐明草酸铁光氧化还原过程产生活性氧的动力学规律。",
+    "evidence": "ACS Earth Space Chem 2022 同名标题未检索到; CrossRef 检索命中 Wang et al., JPC A; 直接 DOI 核验 10.1021/acs.jpca.2c05919 返回一致。"
+  },
+  {
+    "num": 30,
+    "status": "substituted",
+    "original_title": "Photochemical Behavior of Fe(III)-Oxalato Complexes in Natural Waters: Implications for Carbon Cycling",
+    "corrected_title": "Photochemical Aging of Guaiacol by Fe(III)–Oxalate Complexes in Atmospheric Aqueous Phase",
+    "journal": "Environmental Science & Technology",
+    "year": "2018",
+    "doi": "10.1021/acs.est.8b04507",
+    "zh_note": "研究 Fe(III)-草酸配合物在天然水相(大气液相)中的光化学老化作用，揭示其对有机碳化合物转化与活性氧生成的影响。",
+    "evidence": "ESPI 2023 同名标题未检索到; CrossRef 检索命中 Pang et al., ES&T 2018, 主题为天然水相 Fe(III)-Oxalate 光化学与有机碳转化; 直接 DOI 核验 10.1021/acs.est.8b04507 返回一致。"
+  }
+]

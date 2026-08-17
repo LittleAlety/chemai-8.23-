@@ -1,9 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - master
+  # 站点由 GitHub 内置「Deploy from a branch (master)」构建服务，此工作流仅保留 workflow_dispatch 手动备用，
+  # 不再随 push 触发，避免与内置构建并发竞争导致随机失败。
   workflow_dispatch:
 
 permissions:

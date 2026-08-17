@@ -1,5 +1,7 @@
-﻿*.mp4
 *.mp4
 .claude/
+node_modules/
+_site/
+_sitepreview/
 .pipeline_checkpoint.json
 .pipeline.log

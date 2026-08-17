@@ -234,7 +234,17 @@
                                               "formulas":  [
                                                                "K_3[Fe(C_2O_4)_3] cdot 3H_2O",
                                                                "M = 491.25\text{ g/mol}"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "摩尔盐晶体结构.png",
+                                                                   "caption":  "莫尔盐（硫酸亚铁铵）晶体结构"
+                                                               },
+                                                               {
+                                                                   "file":  "硫酸亚铁晶体结构.png",
+                                                                   "caption":  "硫酸亚铁晶体结构"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch2-s2",
@@ -256,7 +266,13 @@
                                                                "2[Fe(C_2O_4)_3]^{3-} \\xrightarrow{h\\nu} 2FeC_2O_4 + 3C_2O_4^{2-} + 2CO_2 \\uparrow",
                                                                "[Fe(C_2O_4)_3]^{3-} \\rightleftharpoons Fe^{3+} + 3C_2O_4^{2-}",
                                                                "K_3[Fe(C_2O_4)_3] \\cdot 3H_2O \\xrightarrow{100-120°C} K_3[Fe(C_2O_4)_3] + 3H_2O"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "配合物的TG和DTA分析曲线.png",
+                                                                   "caption":  "产物热重(TG)/差热(DTA)分析曲线（1）"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch2-s3",
@@ -280,7 +296,13 @@
                                                                "d^2sp^3",
                                                                "[Fe(C_2O_4)_3]^{3-}",
                                                                "CFSE = 0 \\times \\Delta_o = 0"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "三草酸合铁酸钾结构.png",
+                                                                   "caption":  "三草酸合铁(III)酸钾配离子结构"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch2-s4",
@@ -495,7 +517,17 @@
                                                                "Fe^{2+} + C_2O_4^{2-} \\rightarrow FeC_2O_4 \\downarrow",
                                                                "K_{sp} = 3.2 \\times 10^{-7}",
                                                                "Q = [Fe^{2+}][C_2O_4^{2-}]"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "FeC2O4-2H2O制备图1.png",
+                                                                   "caption":  "草酸亚铁 FeC₂O₄·2H₂O 沉淀制备（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "FeC2O4-2H2O制备图2.png",
+                                                                   "caption":  "草酸亚铁 FeC₂O₄·2H₂O 沉淀制备（2）"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch3-s3",
@@ -519,7 +551,21 @@
                                                                "E°_{cell} = 1.005 \\text{ V}",
                                                                "2H_2O_2 \\xrightarrow{\\Delta} 2H_2O + O_2 \\uparrow",
                                                                "3Fe^{2+} + 2[Fe(CN)_6]^{3-} \\rightarrow Fe_3[Fe(CN)_6]_2 \\downarrow"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "加入过氧化氢后颜色1.jpg",
+                                                                   "caption":  "加入 H₂O₂ 后的颜色变化（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "加入过氧化氢后颜色2.png",
+                                                                   "caption":  "加入 H₂O₂ 后的颜色变化（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "亚铁随ph氧化速率.png",
+                                                                   "caption":  "Fe²⁺ 氧化速率随 pH 变化曲线"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch3-s4",
@@ -541,7 +587,25 @@
                                                                "2Fe(OH)_3 + 3H_2C_2O_4 + 3K_2C_2O_4 \\rightarrow 2K_3[Fe(C_2O_4)_3] + 6H_2O",
                                                                "Fe^{3+} + 3C_2O_4^{2-} \\rightleftharpoons [Fe(C_2O_4)_3]^{3-}",
                                                                "K_f° = 1.6 \\times 10^{20}"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "加草酸钾后浊液.png",
+                                                                   "caption":  "加入草酸钾后形成的浑浊液"
+                                                               },
+                                                               {
+                                                                   "file":  "向FeC2O4-2H2O中加入草酸钾溶液.jpg",
+                                                                   "caption":  "向草酸亚铁中加入草酸钾溶液（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "向FeC2O4-2H2O中加入草酸钾溶液2.png",
+                                                                   "caption":  "向草酸亚铁中加入草酸钾溶液（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "绿色三草酸合铁酸钾溶液.png",
+                                                                   "caption":  "翠绿色产物溶液"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch3-s5",
@@ -565,7 +629,41 @@
                                                                "\\Delta\\mu = RT \\ln\\frac{C}{C_{sat}}",
                                                                "\\varepsilon_{水} = 78.5",
                                                                "\\varepsilon_{乙醇} = 24.3"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "过滤后搜集的滤液.png",
+                                                                   "caption":  "抽滤后收集的滤液"
+                                                               },
+                                                               {
+                                                                   "file":  "结晶装置示意图.png",
+                                                                   "caption":  "结晶装置示意"
+                                                               },
+                                                               {
+                                                                   "file":  "静置一星期后析出的晶体.png",
+                                                                   "caption":  "静置一周后析出的晶体"
+                                                               },
+                                                               {
+                                                                   "file":  "产物图1.jpg",
+                                                                   "caption":  "最终产物外观（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "产物图2.jpg",
+                                                                   "caption":  "最终产物外观（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "产物图3.jpg",
+                                                                   "caption":  "最终产物外观（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "产物图4.png",
+                                                                   "caption":  "最终产物外观（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "产物图5.png",
+                                                                   "caption":  "最终产物外观（5）"
+                                                               }
+                                              ]
                                           }
                                       ],
                          "quizzes":  [
@@ -773,7 +871,14 @@
                                                                "(NH_4)_2Fe(SO_4)_2 \\cdot 6H_2O",
                                                                "H_2C_2O_4 \\cdot 2H_2O",
                                                                "K_2C_2O_4 \\cdot H_2O"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "实验步骤.png",
+                                                                   "caption":  "实验操作流程步骤（1）",
+                                                                   "big":  true
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch4-s2",
@@ -1036,7 +1141,165 @@
                                                                "K^+ + HC_4H_4O_6^- \\rightarrow KHC_4H_4O_6 \\downarrow",
                                                                "C_2O_4^{2-} + Ca^{2+} \\rightarrow CaC_2O_4 \\downarrow",
                                                                "Fe^{3+} + 3SCN^- \\rightleftharpoons Fe(SCN)_3"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾.jpg",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾2.jpg",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾3.png",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾4.png",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾5.png",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾6.jpg",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "氯化铁溶液与产品溶液加硫氰化钾7.jpg",
+                                                                   "caption":  "硫氰化钾检验 Fe³⁺（7）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水.jpg",
+                                                                   "caption":  "氨水检验（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水2.jpg",
+                                                                   "caption":  "氨水检验（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水3.png",
+                                                                   "caption":  "氨水检验（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水4.png",
+                                                                   "caption":  "氨水检验（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水5.jpg",
+                                                                   "caption":  "氨水检验（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "在产品中加入氨水6.jpg",
+                                                                   "caption":  "氨水检验（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "加入氨水后的产品溶液-左为样品-右为加入氨水的溶液.png",
+                                                                   "caption":  "加氨水前后对照（左样品 / 右加氨水）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠.jpg",
+                                                                   "caption":  "硫化钠检验（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠2.png",
+                                                                   "caption":  "硫化钠检验（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠3.jpg",
+                                                                   "caption":  "硫化钠检验（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠4.png",
+                                                                   "caption":  "硫化钠检验（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠5.png",
+                                                                   "caption":  "硫化钠检验（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "向产品中加入硫化钠6.jpg",
+                                                                   "caption":  "硫化钠检验（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "加入硫化钠品溶液-左为样品-右为加入硫化钠.png",
+                                                                   "caption":  "加硫化钠前后对照（左样品 / 右加硫化钠）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液1.png",
+                                                                   "caption":  "CaCl₂ 检验草酸根（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液2.jpg",
+                                                                   "caption":  "CaCl₂ 检验草酸根（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液3.png",
+                                                                   "caption":  "CaCl₂ 检验草酸根（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液4.png",
+                                                                   "caption":  "CaCl₂ 检验草酸根（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液5.png",
+                                                                   "caption":  "CaCl₂ 检验草酸根（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液6.png",
+                                                                   "caption":  "CaCl₂ 检验草酸根（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "在少量K2C2O4及产品溶液中分别加入2滴-CaCl2溶液7.jpg",
+                                                                   "caption":  "CaCl₂ 检验草酸根（7）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用.jpg",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用2.jpg",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用3.png",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用4.png",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用5.png",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "取少量K2C2O4及产品溶液-分别与饱和酒石酸氢钠溶液作用6.png",
+                                                                   "caption":  "酒石酸氢钠检验 K⁺（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "在K3[Fe(CN)6]和产品溶液中分别滴入-NaOH.jpg",
+                                                                   "caption":  "铁氰化钾与产品溶液滴入 NaOH（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "在K3[Fe(CN)6]和产品溶液中分别滴入-NaOH2.png",
+                                                                   "caption":  "铁氰化钾与产品溶液滴入 NaOH（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "在K3[Fe(CN)6]和产品溶液中分别滴入-NaOH3.jpg",
+                                                                   "caption":  "铁氰化钾与产品溶液滴入 NaOH（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "铁氰化钾和产品加氢氧化钠.jpg",
+                                                                   "caption":  "铁氰化钾与产品加 NaOH 对照"
+                                                               },
+                                                               {
+                                                                   "file":  "向氟化铁中加入草酸钾.jpg",
+                                                                   "caption":  "向氟化铁中加入草酸钾（配位置换）"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch5-s2",
@@ -1104,7 +1367,41 @@
                                                                "\\alpha_{C_2O_4^{2-}} = \\frac{K_{a1}K_{a2}}{[H^+]^2 + K_{a1}[H^+] + K_{a1}K_{a2}}",
                                                                "[Fe(C_2O_4)_3]^{3-} + 6H^+ \\rightleftharpoons Fe^{3+} + 3H_2C_2O_4",
                                                                "Fe^{3+} + 3NH_3 \\cdot H_2O \\rightarrow Fe(OH)_3 \\downarrow + 3NH_4^+"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸.jpg",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸2.png",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸3.jpg",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸4.png",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸5.png",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸6.jpg",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "向加入硫氰化钾的产品中分别加入醋酸和硫酸7.png",
+                                                                   "caption":  "加酸对硫氰化铁配位平衡的影响（7）"
+                                                               },
+                                                               {
+                                                                   "file":  "加入酸后的产品溶液-左为HAc-右为H2SO4.png",
+                                                                   "caption":  "加酸对照（左 HAc / 右 H₂SO₄）"
+                                                               }
+                                              ]
                                           }
                                       ],
                          "quizzes":  [
@@ -1296,7 +1593,37 @@
                                               "formulas":  [
                                                                "2[Fe(C_2O_4)_3]^{3-} \\xrightarrow{h\\nu} 2Fe^{2+} + 3C_2O_4^{2-} + 2CO_2 \\uparrow",
                                                                "3Fe^{2+} + 2[Fe(CN)_6]^{3-} \\rightarrow Fe_3[Fe(CN)_6]_2 \\downarrow"
-                                                           ]
+                                                           ],
+                                              "images":  [
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光.jpg",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（1）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光2.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（2）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光3.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（3）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光4.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（4）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光5.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（5）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光6.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（6）"
+                                                               },
+                                                               {
+                                                                   "file":  "产品加入亚铁氰化钾见光7.png",
+                                                                   "caption":  "产品加亚铁氰化钾见光显色（普鲁士蓝）（7）"
+                                                               }
+                                              ]
                                           },
                                           {
                                               "id":  "ch6-s3",

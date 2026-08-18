@@ -102,6 +102,8 @@ chemai-8.6-/
 │   ├── images.json           # 实验图片索引（76 张）
 │   ├── kg.json / questions_bank.json / report_rubric.json / faq_unified.json
 │   └── academic_lexicon.json # 学术词表（dev-only，不部署）
+│   # 其余 dev-only（不部署）：kb.json（遗留知识块，已被 FAQ 取代）、questions_master.json（题库池）、
+│   #   categories.json、assessment_kp.json、lexicon_sources_dump.json、all_cycle_questions.json、faq_key_blacklist.json
 ├── assets/                    # CSS / JS（含 SPA 编译产物，已注入本地视频）
 ├── scripts/                   # 工具脚本（lib-assistant-faq.js、v44-inject-bundle.js 等）
 ├── Agent工作区/ 训练管道/ 诊断与调试/ 试题迭代记录/

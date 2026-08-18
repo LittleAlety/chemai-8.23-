@@ -6,7 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { readHTML, extractFAQArray, parseFAQ } = require('./lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('./lib-assistant-faq.js');
 
 const ENTRIES = process.argv[2];
 const DRY = process.argv.includes('--dry-run');
@@ -39,14 +39,10 @@ function serialize(entries) {
 
 function main() {
   const entries = readJson(ENTRIES);
-  const html = readHTML();
-  const before = parseFAQ(html);
-  const { start, end } = extractFAQArray(html);
-  const insertPos = end; // 在 ']' 前插入
-  const block = ',\n ' + serialize(entries) + '\n';
-  const newHtml = html.slice(0, insertPos) + block + html.slice(insertPos);
-
-  const after = parseFAQ(newHtml);
+  const before = readFAQRuntime();
+  const after = before.concat(entries.map(e => ({
+    keys: e.keys || [], ents: e.ents || [], title: e.title, q: e.q, knode: '', subfield: e.subfield, answer: e.answer, detail: e.detail
+  })));
   if (after.length !== before.length + entries.length) {
     console.error('条目数不符: ' + before.length + ' + ' + entries.length + ' != ' + after.length);
     process.exit(1);
@@ -57,8 +53,8 @@ function main() {
   console.log('subfield 分布: ' + JSON.stringify(entries.reduce((a, e) => { a[e.subfield] = (a[e.subfield] || 0) + 1; return a; }, {})));
 
   if (DRY) { console.log('（dry-run，未写回）'); return; }
-  fs.writeFileSync(path.join(__dirname, '..', 'assistant.html'), newHtml, 'utf8');
-  console.log('✓ 已写回 assistant.html');
+  writeFAQRuntime(after);
+  console.log('✓ 已写回 data/faq_runtime.js');
 }
 
 main();

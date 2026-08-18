@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { execSync } = require('child_process');
-const { readHTML, parseFAQ, applyManifest } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime, applyManifestToArray } = require('../scripts/lib-assistant-faq.js');
 const localAnswer = require('./local_answer.js');
 
 const root = path.join(__dirname, '..');
@@ -421,8 +421,7 @@ function resolveIndex(faq, target) {
 }
 
 function applyOpts(opt1, opt2, opt3, round) {
-  let html = readHTML();
-  let faq = parseFAQ(html);
+  let faq = readFAQRuntime();
   const manifest = [];
   for (const o of (opt1 || [])) {
     const idx = resolveIndex(faq, o.target);
@@ -455,15 +454,15 @@ function applyOpts(opt1, opt2, opt3, round) {
     if (Object.keys(m).length > 1) manifest.push(m);
   }
   if (manifest.length) {
-    html = applyManifest(html, manifest);
-    writeHTML(html);
+    faq = applyManifestToArray(faq, manifest);
+    writeFAQRuntime(faq);
     console.log('  [注入] Opt1+Opt2 manifest 应用', manifest.length, '处编辑');
   }
 
   // Opt3 覆盖优化 → v45-round（体积/数量熔断 + 去重）
-  const faq2 = parseFAQ(readHTML());
+  const faq2 = readFAQRuntime();
   if (opt3 && opt3.length) {
-    const over = faq2.length >= MAX_FAQ || fs.statSync(W('assistant.html')).size >= MAX_SIZE;
+    const over = faq2.length >= MAX_FAQ || fs.statSync(W('data/faq_runtime.js')).size >= MAX_SIZE;
     if (over) {
       console.log('  [Opt3] 已熔断(FAQ>=' + MAX_FAQ + ' 或体积超限)，跳过新增条目');
     } else {
@@ -494,7 +493,7 @@ function applyOpts(opt1, opt2, opt3, round) {
       }
     }
   }
-  const finalCount = parseFAQ(readHTML()).length;
+  const finalCount = readFAQRuntime().length;
   console.log('  [注入] FAQ: ' + faq.length + ' → ' + finalCount);
 }
 function subfieldOf(q) {
@@ -511,7 +510,7 @@ function ensureCoverage(round) {
   const scores = readJson('Agent工作区/Agent-C-答案评分/self_train_scores_r' + round + '.json');
   const byId = {}; scores.forEach(s => byId[s.id] = s);
   const low = qs.filter(q => (byId[q.id] || {}).score < GATE);
-  const faq = parseFAQ(readHTML());
+  const faq = readFAQRuntime();
   const allQs = qs.map(q => q.question);
   const toAdd = [];
   for (const q of low) {
@@ -537,7 +536,7 @@ function ensureCoverage(round) {
     console.log('  [覆盖] 无需补录（全部低分题已有针对性条目）');
   }
 }
-function writeHTML(html) { fs.writeFileSync(W('assistant.html'), html, 'utf8'); }
+function writeFAQ(arr) { writeFAQRuntime(arr); }
 
 // 题集完整性校验：唯一 id(重复重编号到缺失号) + 去除完全重复题 → 防止重复ID导致评分错位/检索命中错条目
 function validateQuestionSet() {
@@ -593,7 +592,7 @@ function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.
   const reports = [];
   for (let round = START_ROUND; round <= ROUNDS; round++) {
     console.log('\n===== 自训练 Round ' + round + ' / ' + ROUNDS + ' =====');
-    const faqBefore = parseFAQ(readHTML()).length;
+    const faqBefore = readFAQRuntime().length;
     const qs = readJson(qFinalFile());
     const scores = await scoreReplies(round);
     const nums = scores.map(s => Number(s.score)).filter(n => !isNaN(n));
@@ -618,7 +617,7 @@ function avg(a) { return a.length ? Math.round(a.reduce((x, y) => x + y, 0) / a.
     applyOpts(opt1, opt2, opt3, round);
     ensureCoverage(round);   // 确定性覆盖补录：保证每道低分题都有 q=题目原文 的针对性条目
     localAnswer.reload();    // 重载 FAQ（否则下一轮仍用旧内存 FAQ，针对性条目不命中）
-    const faqAfter = parseFAQ(readHTML()).length;
+    const faqAfter = readFAQRuntime().length;
     report.faqAfter = faqAfter;
     report.opt = { opt1: (opt1 || []).length, opt2: (opt2 || []).length, opt3: (opt3 || []).length };
     writeJson('Agent工作区/Agent-报告/self_train_round' + round + '.json', report);

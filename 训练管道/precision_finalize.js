@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { parseFAQ, readHTML, applyManifest } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime, applyManifestToArray } = require('../scripts/lib-assistant-faq.js');
 const localAnswer = require('./local_answer.js');
 
 const root = path.join(__dirname, '..');
@@ -57,7 +57,7 @@ function subfieldOf(q) {
   let injected = 0, reinforced = 0, answerFixed = 0, hitOk = 0, stillMiss = 0;
 
   // 阶段1: 找出缺 q=原文 条目的题 → 注入
-  let faq = parseFAQ(readHTML());
+  let faq = readFAQRuntime();
   const missing = qs.filter(q => !faq.some(f => f.q === q.question));
   if (missing.length) {
     const toAdd = missing.map(q => ({
@@ -74,7 +74,7 @@ function subfieldOf(q) {
     execSync('node scripts/v45-round.js "' + W(fp) + '"', { cwd: root, stdio: 'inherit' });
     injected = toAdd.length;
     console.log('[精准] 注入缺失的 q=原文 条目:', injected);
-    faq = parseFAQ(readHTML());
+    faq = readFAQRuntime();
     localAnswer.reload();
   }
 
@@ -106,13 +106,13 @@ function subfieldOf(q) {
     }
   }
   if (manifest.length) {
-    wr(W('assistant.html'), applyManifest(readHTML(), manifest));
+    writeFAQRuntime(applyManifestToArray(faq, manifest));
     console.log('[精准] 应用编辑:', manifest.length, '处 (强化检索 ' + reinforced + ', 置回参考答案 ' + answerFixed + ')');
     localAnswer.reload();
   }
 
   // 阶段4: 复核(仅统计未命中)
-  faq = parseFAQ(readHTML());
+  faq = readFAQRuntime();
   let miss = 0;
   const missList = [];
   for (const q of qs) {

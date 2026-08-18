@@ -10,17 +10,23 @@ const fs = require('fs');
 const path = require('path');
 
 const DEFAULT_HTML = path.join(__dirname, '..', 'assistant.html');
+const FAQRUNTIME = path.join(__dirname, '..', 'data', 'faq_runtime.js');
 
 /**
- * 从 assistant.html 提取 const FAQ=[...] 数组源码。
+ * 提取 FAQ 数组源码。兼容两种声明形式：
+ *   - assistant.html 内嵌：const FAQ=[...]
+ *   - data/faq_runtime.js：window.FAQ=[...]（v37.6+ 运行时唯一真相源）
  * @returns {{src:string, start:number, end:number}}
  *   start/end 为 [ 与 ] 在全文中的位置
  */
 function extractFAQArray(html) {
-  const idx = html.indexOf('const FAQ=');
-  if (idx < 0) throw new Error('const FAQ= 未找到');
+  let idx = html.indexOf('const FAQ=');
+  let tok = 'const FAQ=';
+  const wi = html.indexOf('window.FAQ=');
+  if (idx < 0 || (wi >= 0 && wi < idx)) { idx = wi; tok = 'window.FAQ='; }
+  if (idx < 0) throw new Error('FAQ 数组未找到 (const FAQ= / window.FAQ=)');
   const open = html.indexOf('[', idx);
-  if (open < 0) throw new Error('const FAQ= 后未找到 [');
+  if (open < 0) throw new Error(tok + '后未找到 [');
   let depth = 0;
   let inStr = null;   // null | "'" | '"' | '`'
   let close = -1;
@@ -219,12 +225,80 @@ function applyManifest(html, changes) {
   return cur;
 }
 
+/**
+ * 字符串 → 单引号 JS 字面量（与 v45-round.js 序列化风格一致，控制体积）。
+ */
+function jsStr(s) {
+  return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'";
+}
+
+/**
+ * 数组 → window.FAQ=[...] 数组字面量文本（不含前缀/分号）。
+ */
+function serializeFAQArray(arr) {
+  const parts = arr.map(e => {
+    e = e || {};
+    return '{keys:' + JSON.stringify(e.keys || []) + ',ents:' + JSON.stringify(e.ents || []) +
+      ',title:' + jsStr(e.title || '') + ',q:' + jsStr(e.q || '') + ',knode:' + jsStr(e.knode || '') +
+      ',subfield:' + jsStr(e.subfield || '') + ',answer:' + jsStr(e.answer || '') + ',detail:' + jsStr(e.detail || '') + '}';
+  });
+  return '[' + parts.join(',\n ') + ']';
+}
+
+/**
+ * 读取 data/faq_runtime.js（window.FAQ=[...]）→ FAQ 对象数组。
+ * @returns {Array<{keys:string[],ents:string[],title:string,q:string,knode:string,subfield:string,answer:string,detail:string}>}
+ */
+function readFAQRuntime(fp) {
+  const p = fp || FAQRUNTIME;
+  const text = fs.readFileSync(p, 'utf8');
+  const { src } = extractFAQArray(text);
+  try {
+    // eslint-disable-next-line no-new-func
+    return new Function('return (' + src + ')')();
+  } catch (e) {
+    throw new Error('faq_runtime.js 求值失败: ' + e.message);
+  }
+}
+
+/**
+ * 将 FAQ 对象数组写回 data/faq_runtime.js（window.FAQ=[...]）。
+ */
+function writeFAQRuntime(arr, fp) {
+  const p = fp || FAQRUNTIME;
+  fs.writeFileSync(p, 'window.FAQ=' + serializeFAQArray(arr) + ';\n', 'utf8');
+}
+
+/**
+ * 对 FAQ 对象数组应用清洗清单（与 applyManifest 的语义一致，但直接作用于数组对象，
+ * 无需字符串手术）。返回新数组，不改动入参。
+ * @param {Array} arr
+ * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string}>} changes
+ */
+function applyManifestToArray(arr, changes) {
+  const out = arr.map(e => Object.assign({}, e));
+  for (const ch of changes) {
+    const e = out[ch.index];
+    if (!e) throw new Error('条目索引越界: ' + ch.index + ' (共 ' + out.length + ' 条)');
+    if (ch.new_keys !== undefined) e.keys = ch.new_keys;
+    if (ch.new_ents !== undefined) e.ents = ch.new_ents;
+    if (ch.new_answer !== undefined) e.answer = ch.new_answer;
+    if (ch.new_detail !== undefined) e.detail = ch.new_detail;
+  }
+  return out;
+}
+
 module.exports = {
   DEFAULT_HTML,
+  FAQRUNTIME,
   extractFAQArray,
   parseFAQ,
   getEntrySpans,
   applyManifest,
+  readFAQRuntime,
+  writeFAQRuntime,
+  serializeFAQArray,
+  applyManifestToArray,
   readHTML(fp) {
     const p = fp || DEFAULT_HTML;
     return fs.readFileSync(p, 'utf8');

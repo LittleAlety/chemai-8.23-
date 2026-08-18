@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const { parseFAQ, readHTML, extractFAQArray } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('../scripts/lib-assistant-faq.js');
 
 const root = path.join(__dirname, '..');
 const W = p => path.join(root, p);
@@ -60,7 +60,7 @@ async function llmJ(system, user, temp = 0.3) {
 const normQ = s => String(s || '').toLowerCase().replace(/[^一-龥a-z0-9]/g, '');
 
 // ---------- 数据 ----------
-const faq = parseFAQ(readHTML());
+const faq = readFAQRuntime();
 const spec = faq.filter(f => (f.q || '').length > 30);   // 逐题专属条目
 const normal = faq.filter(f => (f.q || '').length <= 30);
 console.log('FAQ:', faq.length, '| 逐题专属:', spec.length, '| 常规:', normal.length);
@@ -109,15 +109,8 @@ async function genEntries(clusters) {
 }
 
 // ---------- Phase 3: 替换 FAQ ----------
-function jsStr(s) { return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'"; }
-function rebuildHtml(normalEntries, newEntries) {
-  const html = readHTML();
-  const { start, end } = extractFAQArray(html);
-  const block = normalEntries.concat(newEntries).map(e =>
-    '{keys:' + JSON.stringify(e.keys || []) + ',ents:' + JSON.stringify(e.ents || []) +
-    ',title:' + jsStr(e.title) + ',q:' + jsStr(e.q || '') + ",knode:''" + ',subfield:' + jsStr(e.subfield) +
-    ',answer:' + jsStr(e.answer) + ',detail:' + jsStr(e.detail || '') + '}').join(',\n ');
-  return html.slice(0, start) + '[' + block + ']' + html.slice(end + 1);
+function rebuildArray(normalEntries, newEntries) {
+  return normalEntries.concat(newEntries);
 }
 function mergeLexicon(newEntries) {
   const lexFile = 'data/academic_lexicon.json';
@@ -162,8 +155,7 @@ async function verify(questions, onlyIds) {
   // 替换 FAQ（保留常规条目 + 新通用条目，移除逐题专属条目）
   const newNormal = normal.map(e => ({ keys: e.keys, ents: e.ents, title: e.title, q: e.q, subfield: e.subfield, answer: e.answer, detail: e.detail }));
   const newGen = entries.map(e => ({ keys: e.keys, ents: e.ents || [], title: e.title, q: e.q || '', subfield: e.subfield, answer: e.answer, detail: e.detail || '' }));
-  const html = rebuildHtml(newNormal, newGen);
-  fs.writeFileSync(W('assistant.html'), html, 'utf8');
+  writeFAQRuntime(rebuildArray(newNormal, newGen));
   const added = mergeLexicon(newGen);
   console.log('已替换: FAQ', faq.length, '→', newNormal.length + newGen.length, '（移除逐题专属', spec.length, '条, 新增通用', newGen.length, '条）| 词表新增', added);
 

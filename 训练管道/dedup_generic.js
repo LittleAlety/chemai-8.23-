@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const { parseFAQ, readHTML, extractFAQArray } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('../scripts/lib-assistant-faq.js');
 const root = path.join(__dirname, '..');
 const norm = s => String(s || '').toLowerCase().replace(/[^一-龥a-z0-9]/g, '');
 // 不剥括号：化学式括号(Fe(OH)₃/Fe(SCN)₃)是语义, 剥了会误合并
-const faq = parseFAQ(readHTML());
+const faq = readFAQRuntime();
 const gen = faq.filter(f => (f.q || '').length <= 30);
 const genIdx = faq.map((f, i) => (f.q || '').length <= 30 ? i : -1).filter(i => i >= 0);
 
@@ -50,10 +50,7 @@ groups.forEach(g => {
 });
 if (process.argv.includes('--dry')) { console.log('\n（dry-run，未写入）'); process.exit(0); }
 
-// 重建 FAQ: 所有条目，移除被合并的（非 keep 的组内成员）
-const keepGroupIdx = new Set();
-groups.forEach(g => g.forEach((gi, k) => { if (k === 0) keepGroupIdx.add(g[0]); }));
-const keepGlob = new Set(groups.map(g => g[0]));
+// 重建 FAQ 并写回 faq_runtime.js
 const newFaq = faq.filter((f, i) => {
   if (genIdx.includes(i)) {
     const gi = genIdx.indexOf(i);
@@ -61,12 +58,5 @@ const newFaq = faq.filter((f, i) => {
   }
   return true;
 });
-function jsStr(s) { return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'"; }
-const html = readHTML();
-const { start, end } = extractFAQArray(html);
-const block = newFaq.map(e =>
-  '{keys:' + JSON.stringify(e.keys || []) + ',ents:' + JSON.stringify(e.ents || []) +
-  ',title:' + jsStr(e.title) + ',q:' + jsStr(e.q || '') + ",knode:''" + ',subfield:' + jsStr(e.subfield) +
-  ',answer:' + jsStr(e.answer) + ',detail:' + jsStr(e.detail || '') + '}').join(',\n ');
-fs.writeFileSync(path.join(root, 'assistant.html'), html.slice(0, start) + '[' + block + ']' + html.slice(end + 1), 'utf8');
+writeFAQRuntime(newFaq);
 console.log('已合并:', groups.length, '组, 移除', removedCount, '条 | FAQ:', faq.length, '→', newFaq.length);

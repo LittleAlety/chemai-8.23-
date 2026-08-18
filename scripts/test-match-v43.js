@@ -1,7 +1,7 @@
 'use strict';
 /** v43 matchFAQ 命中测试：验证新条目可被相关查询命中 */
-const { readHTML, parseFAQ } = require('./lib-assistant-faq.js');
-const faq = parseFAQ(readHTML());
+const { readFAQRuntime } = require('./lib-assistant-faq.js');
+const faq = readFAQRuntime();
 
 const SUBMAP = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '⁻': '-', '⁺': '+' };
 const norm = s => String(s || '').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g, c => SUBMAP[c] || c).replace(/\s+/g, '');

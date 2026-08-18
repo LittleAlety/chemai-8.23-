@@ -5,11 +5,11 @@
  */
 
 const path = require('path');
-const { readHTML, parseFAQ } = require('./lib-assistant-faq.js');
+const { readFAQRuntime } = require('./lib-assistant-faq.js');
 const { validateFAQArray, CAT_SET } = require('./validate-faq.js');
 
 function main() {
-  const faq = parseFAQ(readHTML());
+  const faq = readFAQRuntime();
   const report = validateFAQArray(faq);
 
   // subfield 非法统计（运行版允许历史分类，仅提示）
@@ -19,7 +19,7 @@ function main() {
     if (sf && !CAT_SET.has(sf)) nonCanonical[sf] = (nonCanonical[sf] || 0) + 1;
   });
 
-  console.log('=== assistant.html FAQ 全量校验 ===');
+  console.log('=== faq_runtime.js FAQ 全量校验 ===');
   console.log('总数: ' + report.total + ' | 有效: ' + report.valid + ' | 有错误: ' + report.invalid);
   console.log('缺少 detail: ' + report.missingDetail + ' | 短答案(<60字): ' + report.shortAnswers + ' | 无关键词: ' + report.noKeys);
   console.log('错误数: ' + report.errors.length + ' | 警告数: ' + report.warnings.length);

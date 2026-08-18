@@ -2,7 +2,7 @@
 // Round 2: 为通用条目派生"独有"keys（来自簇成员题目原文），修复检索路由
 const fs = require('fs');
 const path = require('path');
-const { parseFAQ, readHTML, extractFAQArray } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('../scripts/lib-assistant-faq.js');
 const root = path.join(__dirname, '..');
 const rd = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8').replace(/^﻿/, ''));
 const normQ = s => String(s || '').toLowerCase().replace(/[^一-龥a-z0-9]/g, '');
@@ -32,9 +32,8 @@ const spec = rd('Agent工作区/Agent-优化/generalize_spec_entries.json');
 // E{i} → spec[i].q
 const qById = {}; spec.forEach((f, i) => qById['E' + i] = f.q);
 
-// 当前 FAQ: 784 常规 + 239 通用（q==='' 的即通用条目）
-const html = readHTML();
-const faq = parseFAQ(html);
+// 当前 FAQ: 常规 + 通用（q==='' 的即通用条目）
+const faq = readFAQRuntime();
 const genIdx = [];
 faq.forEach((f, i) => { if ((f.q || '') === '') genIdx.push(i); });
 console.log('通用条目数:', genIdx.length, '| 聚类数:', clusters.length);
@@ -67,13 +66,7 @@ for (const ci of Object.keys(newKeysByEntry)) {
 }
 console.log('待更新 keys 的条目:', mod);
 
-// 重建 assistant.html: 常规 + 更新后的通用条目
-function jsStr(s) { return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'"; }
+// 重建 faq_runtime.js: 常规 + 更新后的通用条目
 const normal = faq.filter(f => (f.q || '') !== '');
-const { start, end } = extractFAQArray(html);
-const block = normal.concat(entries).map(e =>
-  '{keys:' + JSON.stringify(e.keys || []) + ',ents:' + JSON.stringify(e.ents || []) +
-  ',title:' + jsStr(e.title) + ',q:' + jsStr(e.q || '') + ",knode:''" + ',subfield:' + jsStr(e.subfield) +
-  ',answer:' + jsStr(e.answer) + ',detail:' + jsStr(e.detail || '') + '}').join(',\n ');
-fs.writeFileSync(path.join(root, 'assistant.html'), html.slice(0, start) + '[' + block + ']' + html.slice(end + 1), 'utf8');
-console.log('已写入 assistant.html（常规', normal.length, '+ 通用', entries.length, '= ', normal.length + entries.length, '）');
+writeFAQRuntime(normal.concat(entries));
+console.log('已写入 faq_runtime.js（常规', normal.length, '+ 通用', entries.length, '= ', normal.length + entries.length, '）');

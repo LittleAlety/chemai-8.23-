@@ -6,7 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ } = require('./lib-assistant-faq.js');
+const { readFAQRuntime } = require('./lib-assistant-faq.js');
 
 const OUT_DIR = path.join(__dirname, '..', 'Agent工作区', 'Agent-报告');
 const OUT_FILE = path.join(OUT_DIR, 'v43_baseline.json');
@@ -21,8 +21,7 @@ const PRECISE_GENERIC = [
 ];
 
 function main() {
-  const html = readHTML();
-  const faq = parseFAQ(html);
+  const faq = readFAQRuntime();
 
   // 1. 基础统计
   const keyCounts = faq.map(f => (f.keys || []).length);
@@ -85,7 +84,7 @@ function main() {
   const baseline = {
     generated_at: '2026-08-14',
     version: 'v43-baseline',
-    html_file: 'assistant.html',
+    html_file: 'data/faq_runtime.js',
     total_faq: faq.length,
     keys_stats: { min, max, mean: Math.round(mean * 100) / 100 },
     low_key_entries: lowKeys,               // keys<3

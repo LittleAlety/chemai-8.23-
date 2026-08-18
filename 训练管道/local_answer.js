@@ -7,7 +7,7 @@
  * handleQA() 在未启用 LLM 时走的检索→类比→置信度→答案组合 4 段流水线。
  *
  * 输入（init() 惰性加载）：
- *   FAQ    — 从 assistant.html 内嵌 const FAQ=[] 实时解析（1055 条）
+ *   FAQ    — 从 data/faq_runtime.js 的 window.FAQ=[] 实时解析（3047 条）
  *   Corpus — data/corpus.json 的 entries 数组（365 条）
  *
  * 浏览器依赖 stub：
@@ -332,10 +332,9 @@ function confidenceScore(directHits, analogyHits, methodHits, faq, analogies){
 /* ================= 初始化（惰性、幂等） ================= */
 function init(){
   if(_inited) return {faqCount: FAQ.length, corpusCount: Corpus.entries.length};
-  // FAQ：解析 assistant.html 内嵌实时数组（1055 条）
+  // FAQ：读取 data/faq_runtime.js（window.FAQ=，v37.6+ 运行时唯一真相源）
   const faqLib = require('../scripts/lib-assistant-faq.js');
-  const html = fs.readFileSync(ASSISTANT_HTML, 'utf8');
-  FAQ = faqLib.parseFAQ(html);
+  FAQ = faqLib.readFAQRuntime();
   // Corpus：data/corpus.json（365 条），复刻 loadCorpus 的 entries 映射与 subfield 归一化
   const raw = JSON.parse(fs.readFileSync(CORPUS_JSON, 'utf8').replace(/^﻿/, ''));
   const list = (raw && Array.isArray(raw.entries)) ? raw.entries.slice() : [];

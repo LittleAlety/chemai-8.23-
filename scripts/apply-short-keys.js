@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ, applyManifest } = require('./lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime, applyManifestToArray } = require('./lib-assistant-faq.js');
 
 const ENTRY_FILE = path.join(__dirname, '..', 'Agent工作区', 'Agent-报告', 'v43_new_entries.json');
 const LEX_FILE = path.join(__dirname, '..', 'data', 'academic_lexicon.json');
@@ -57,18 +57,18 @@ function main() {
   }
   fs.writeFileSync(LEX_FILE, JSON.stringify(lex, null, 2), 'utf8');
 
-  // 3. 应用回 assistant.html（末 23 条）
-  const html = readHTML();
-  const faq = parseFAQ(html);
+  // 3. 应用回 data/faq_runtime.js（按标题匹配，防误改；本脚本为 v43 一次性工具）
+  const faq = readFAQRuntime();
   const changes = [];
-  for (let i = 0; i < entries.length; i++) {
-    const idx = faq.length - entries.length + i;
-    changes.push({ index: idx, new_keys: entries[i].keys });
+  for (const e of entries) {
+    const idx = faq.findIndex(f => f.title === e.title);
+    if (idx < 0) { console.error('❌ 未找到标题匹配条目(数据已变化, 本脚本为 v43 一次性工具):', (e.title || '').slice(0, 24)); process.exit(1); }
+    if (JSON.stringify(faq[idx].keys || []) !== JSON.stringify(e.keys)) changes.push({ index: idx, new_keys: e.keys });
   }
-  const newHtml = applyManifest(html, changes);
-  const after = parseFAQ(newHtml);
+  if (!changes.length) { console.log('无需应用(keys 已一致)'); return; }
+  const after = applyManifestToArray(faq, changes);
   if (after.length !== faq.length) { console.error('条目数变化!'); process.exit(1); }
-  fs.writeFileSync(HTML, newHtml, 'utf8');
+  writeFAQRuntime(after);
 
   console.log('修补条目: ' + patched + ' | 词表新增: ' + added);
   console.log('FAQ: ' + faq.length + ' → ' + after.length + ' | 已应用短词 keys');

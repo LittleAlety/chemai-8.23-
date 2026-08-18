@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ, applyManifest, extractFAQArray } = require('./lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('./lib-assistant-faq.js');
 const { CANONICAL_CATS } = require('./validate-faq.js');
 
 const ENTRY = process.argv[2];
@@ -64,21 +64,14 @@ entries.forEach((e, i) => {
 });
 if (problems) { console.error('校验失败 ' + problems + ' 处'); process.exit(1); }
 
-// 3. 插入 assistant.html
-const html = readHTML();
-const before = parseFAQ(html);
+// 3. 插入 data/faq_runtime.js（v37.6+ 运行时唯一真相源）
+const before = readFAQRuntime();
 const insertEntries = entries.map(e => ({
   keys: e.keys, ents: e.ents, title: e.title, q: e.q, knode: '', subfield: e.subfield, answer: e.answer, detail: e.detail
 }));
-function jsStr(s) { return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'"; }
-const block = insertEntries.map(e => '{keys:' + JSON.stringify(e.keys) + ',ents:' + JSON.stringify(e.ents) +
-  ',title:' + jsStr(e.title) + ',q:' + jsStr(e.q) + ",knode:''" + ',subfield:' + jsStr(e.subfield) +
-  ',answer:' + jsStr(e.answer) + ',detail:' + jsStr(e.detail) + '}').join(',\n ');
-const { start, end } = extractFAQArray(html);
-const newHtml = html.slice(0, end) + ',\n ' + block + '\n' + html.slice(end);
-const after = parseFAQ(newHtml);
+const after = before.concat(insertEntries);
 if (after.length !== before.length + entries.length) { console.error('条目数不符'); process.exit(1); }
-fs.writeFileSync(path.join(__dirname, '..', 'assistant.html'), newHtml, 'utf8');
+writeFAQRuntime(after);
 
 console.log('=== v45 round ===');
 console.log('词表新增: ' + added + ' (canonical=' + canon.length + ' entity=' + entity.length + ')');

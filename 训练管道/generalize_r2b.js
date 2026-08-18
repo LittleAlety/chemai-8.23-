@@ -2,7 +2,7 @@
 // Round 2b: 为通用条目设置"成员共享独有短语"作为 q（触发 matchFAQ 子串+50），实现可靠路由
 const fs = require('fs');
 const path = require('path');
-const { parseFAQ, readHTML, extractFAQArray } = require('../scripts/lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime } = require('../scripts/lib-assistant-faq.js');
 const root = path.join(__dirname, '..');
 const rd = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8').replace(/^﻿/, ''));
 const normQ = s => String(s || '').toLowerCase().replace(/[^一-龥a-z0-9]/g, '');
@@ -59,15 +59,8 @@ entries.forEach(e => {
 });
 console.log('anchor 命中>8题(可能冲突):', conflict);
 
-// 重建 FAQ
-function jsStr(s) { return "'" + String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '\\r') + "'"; }
-const html = readHTML();
-const faq = parseFAQ(html);
+// 重建 FAQ 并写回 faq_runtime.js
+const faq = readFAQRuntime();
 const normal = faq.filter(f => (f.q || '') !== '');
-const { start, end } = extractFAQArray(html);
-const block = normal.concat(entries).map(e =>
-  '{keys:' + JSON.stringify(e.keys || []) + ',ents:' + JSON.stringify(e.ents || []) +
-  ',title:' + jsStr(e.title) + ',q:' + jsStr(e.q || '') + ",knode:''" + ',subfield:' + jsStr(e.subfield) +
-  ',answer:' + jsStr(e.answer) + ',detail:' + jsStr(e.detail || '') + '}').join(',\n ');
-fs.writeFileSync(path.join(root, 'assistant.html'), html.slice(0, start) + '[' + block + ']' + html.slice(end + 1), 'utf8');
-console.log('已写入 assistant.html（', normal.length + entries.length, '条）');
+writeFAQRuntime(normal.concat(entries));
+console.log('已写入 faq_runtime.js（', normal.length + entries.length, '条）');

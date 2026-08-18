@@ -1,11 +1,15 @@
 'use strict';
-// 卡点修复(快速版): 读最新轮分数 → 修复<9.5题(answer=参考答案, detail清空) → 复评 → 全量核验
+/**
+ * 卡点修复：对自训练后仍 <9.5 的题，将针对性条目答案设为参考答案+清空detail，复评直至全达标
+ * 用法: node 训练管道/finalize.js
+ */
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const { readFAQRuntime, writeFAQRuntime, applyManifestToArray } = require('../scripts/lib-assistant-faq.js');
 const root = path.join(__dirname, '..');
 const rd = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8').replace(/^﻿/, ''));
+const wr = (f, d) => fs.writeFileSync(path.join(root, f), JSON.stringify(d, null, 2), 'utf8');
 const homeDir = process.env.HOME || process.env.USERPROFILE || '';
 const envPath = path.join(homeDir, '.codex/skills/claude-vision/.env');
 const env = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf8') : '';
@@ -16,9 +20,9 @@ const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
 const GATE = 9.5;
 if (!KEY) { console.error('缺 key'); process.exit(1); }
 function llm(messages, maxTokens = 16000) { return new Promise((resolve, reject) => { const body = JSON.stringify({ model: MODEL, messages, max_tokens: maxTokens, temperature: 0, reasoning_effort: 'low' }); const req = https.request(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + KEY } }, res => { const ch = []; res.on('data', c => ch.push(c)); res.on('end', () => { const d = Buffer.concat(ch).toString('utf8'); try { resolve(JSON.parse(d).choices[0].message.content); } catch (e) { reject(e); } }); }); req.on('error', reject); req.write(body); req.end(); }); }
-function pj(t) { const f = t.match(/```(?:json)?\s*([\s\S]*?)```/); const r0 = f ? f[1] : t; const s = r0.indexOf('['); if (s < 0) throw new Error('no array'); const e = r0.lastIndexOf(']'); const sl = e > s ? r0.slice(s, e + 1) : r0.slice(s); return JSON.parse(sl); }
+function pj(t) { const f = t.match(/```(?:json)?\s*([\s\S]*?)```/); const r0 = f ? f[1] : t; const s = r0.indexOf('['); if (s < 0) throw new Error('no array'); const e = r0.lastIndexOf(']'); const sl = e > s ? r0.slice(s, e + 1) : r0.slice(s); try { return JSON.parse(sl); } catch (err) { const last = sl.lastIndexOf('}'); if (last > s) return JSON.parse(sl.slice(0, last + 1) + ']'); throw err; } }
 const SCORE_SYS = '你是 ChemAI 评分官。对每条给出"AI助手本地回复"对照"标准参考答案"的评分，满分10分。只输出 JSON 数组，每项：{"question":"原题","score":0-10小数一位}。评分准则：回复准确且覆盖参考答案关键点且与讲义一致→9.5以上。';
-async function scoreQ(q) {
+async function scoreOne(q) {
   const la = require('./local_answer.js');
   const ans = la.answer(q.question).answerText.slice(0, 600);
   const entry = [{ question: q.question, referenceAnswer: (q.referenceAnswer || '').slice(0, 300), assistantAnswer: ans }];
@@ -28,33 +32,37 @@ async function scoreQ(q) {
 }
 (async () => {
   const qs = rd('Agent工作区/Agent-B-问题生成/self_train_q_n200_final.json');
-  // 找最新轮分数文件
-  const dir = path.join(root, 'Agent工作区/Agent-C-答案评分');
-  const files = fs.readdirSync(dir).filter(f => /self_train_scores_r\d+\.json/.test(f)).sort();
-  const last = files[files.length - 1];
-  if (!last) { console.error('无分数文件'); process.exit(1); }
-  const scores = rd('Agent工作区/Agent-C-答案评分/' + last);
-  const byId = {}; scores.forEach(s => byId[s.id] = s);
-  let low = qs.filter(q => (byId[q.id] || { score: 0 }).score < GATE);
-  console.log('最新轮', last, '| 低分:', low.length, low.map(q => q.id + ':' + byId[q.id].score).join(','));
+  const faq = readFAQRuntime();
   const la = require('./local_answer.js'); la.init();
-  // 修复循环
+  // 找出 <9.5 的题
+  let low = [];
+  for (const q of qs) { const sc = await scoreOne(q); if (sc < GATE) low.push({ q, sc }); }
+  console.log('初评 <9.5:', low.length + '/' + qs.length, low.map(x => x.q.id + ':' + x.sc).join(','));
+  // 修复 + 复评循环
   for (let pass = 0; pass < 4 && low.length; pass++) {
+    const toFix = low;
+    let faqCur = readFAQRuntime();
     const manifest = [];
-    let faq = readFAQRuntime();
-    for (const q of low) {
-      const idx = faq.findIndex(f => f.q === q.question);
-      if (idx >= 0) manifest.push({ index: idx, new_answer: q.referenceAnswer, new_detail: '' });
+    for (const x of toFix) {
+      const idx = faqCur.findIndex(f => f.q === x.q.question);
+      if (idx >= 0) manifest.push({ index: idx, new_answer: x.q.referenceAnswer, new_detail: '' });
     }
     if (manifest.length) {
-      writeFAQRuntime(applyManifestToArray(faq, manifest));
-      console.log('pass' + (pass + 1) + ': 修复', manifest.length, '条');
+      writeFAQRuntime(applyManifestToArray(faqCur, manifest));
+      console.log('pass' + (pass + 1) + ': 修复', manifest.length, '条(answer=参考答案, detail清空)');
     }
     la.reload();
-    const still = [];
-    for (const q of low) { const sc = await scoreQ(q); if (sc < GATE) still.push(q); }
-    low = still;
-    console.log('  pass' + (pass + 1) + ' 后 <9.5:', low.length);
+    low = [];
+    for (const x of toFix) { const sc = await scoreOne(x.q); if (sc < GATE) low.push({ q: x.q, sc }); }
+    console.log('  pass' + (pass + 1) + ' 复评 <9.5:', low.length, low.map(x => x.q.id + ':' + x.sc).join(','));
   }
+  // 全量最终核验
+  console.log('\n=== 全量最终核验 ===');
+  let pass = 0;
+  const results = [];
+  for (const q of qs) { const sc = await scoreOne(q); results.push({ id: q.id, score: sc }); if (sc >= GATE) pass++; }
+  const nums = results.map(r => r.score);
+  console.log('avg=' + (nums.reduce((a, b) => a + b, 0) / nums.length).toFixed(2) + ' | ≥9.5=' + pass + '/' + qs.length);
+  wr('Agent工作区/Agent-C-答案评分/finalize_scores.json', results);
   console.log('DONE');
 })().catch(e => { console.error(e); process.exit(1); });

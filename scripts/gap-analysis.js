@@ -10,7 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ } = require('./lib-assistant-faq.js');
+const { readFAQRuntime } = require('./lib-assistant-faq.js');
 const OUT = path.join(__dirname, '..', 'Agent工作区', 'Agent-报告', 'gap_analysis_v43.json');
 
 function readJson(fp) {
@@ -20,7 +20,7 @@ function readJson(fp) {
 }
 
 function main() {
-  const faq = parseFAQ(readHTML());
+  const faq = readFAQRuntime();
   const corpus = readJson(path.join(__dirname, '..', 'data', 'corpus.json'));
   const entries = corpus.entries;
 

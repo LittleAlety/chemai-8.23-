@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ, applyManifest } = require('./lib-assistant-faq.js');
+const { readFAQRuntime, writeFAQRuntime, applyManifestToArray } = require('./lib-assistant-faq.js');
 
 const MANIFEST = process.argv[2];
 const DRY = process.argv.includes('--dry-run');
@@ -22,8 +22,7 @@ function readJson(fp) {
 
 function main() {
   const changes = readJson(MANIFEST);
-  const html = readHTML();
-  const before = parseFAQ(html);
+  const before = readFAQRuntime();
   const projChanges = changes.map(c => {
     const m = { index: c.index };
     if (c.new_keys !== undefined) m.new_keys = c.new_keys;
@@ -32,8 +31,7 @@ function main() {
     if (c.new_detail !== undefined) m.new_detail = c.new_detail;
     return m;
   });
-  const projected = applyManifest(html, projChanges);
-  const after = parseFAQ(projected);
+  const after = applyManifestToArray(before, projChanges);
 
   // 校验
   const errors = [];
@@ -64,8 +62,8 @@ function main() {
   if (errors.length) { console.log('❌ 校验失败:'); errors.forEach(e => console.log('  - ' + e)); process.exit(1); }
 
   if (DRY) { console.log('（dry-run，未写回）'); return; }
-  fs.writeFileSync(path.join(__dirname, '..', 'assistant.html'), projected, 'utf8');
-  console.log('✓ 已写回 assistant.html');
+  writeFAQRuntime(after);
+  console.log('✓ 已写回 data/faq_runtime.js');
 }
 
 main();

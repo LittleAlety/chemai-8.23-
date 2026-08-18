@@ -14,7 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  readHTML, parseFAQ, applyManifest, extractFAQArray
+  readFAQRuntime, writeFAQRuntime, applyManifestToArray
 } = require('./lib-assistant-faq.js');
 
 const APPLY = process.argv.includes('--apply');
@@ -38,8 +38,7 @@ function dedupe(arr) {
 }
 
 function main() {
-  const html = readHTML();
-  const faq = parseFAQ(html);
+  const faq = readFAQRuntime();
 
   const changes = [];   // {index, title, subfield, removed, new_keys, new_ents}
   const skipped = [];   // 删除会导致 keys<3 而跳过
@@ -102,8 +101,8 @@ function main() {
     if (c.new_ents !== undefined) m.new_ents = c.new_ents;
     return m;
   });
-  const projected = applyManifest(html, projChanges);
-  const projFaq = parseFAQ(projected);
+  const projected = applyManifestToArray(faq, projChanges);
+  const projFaq = projected;
   const projLow = projFaq.filter(f => (f.keys || []).length < 3).length;
   const dupeKeys = [];
   projFaq.forEach((f, i) => {
@@ -150,8 +149,8 @@ function main() {
     ' | 投影 keys<3=' + projLow + ' | 重复 key=' + dupeKeys.length);
 
   if (APPLY) {
-    fs.writeFileSync(path.join(__dirname, '..', 'assistant.html'), projected, 'utf8');
-    console.log('✓ 已写回 assistant.html');
+    writeFAQRuntime(projFaq);
+    console.log('✓ 已写回 data/faq_runtime.js');
   } else {
     console.log('（未写回；用 --apply 应用。清单见 clean_keys_changes.json）');
   }

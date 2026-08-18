@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { readHTML, parseFAQ } = require('./lib-assistant-faq.js');
+const { readFAQRuntime } = require('./lib-assistant-faq.js');
 
 const OUT = path.join(__dirname, '..', 'Agent工作区', 'Agent-报告', 'v43_llm_manifest.json');
 
@@ -87,7 +87,7 @@ const REMOVALS = {
 const CAP = 15;
 
 function main() {
-  const faq = parseFAQ(readHTML());
+  const faq = readFAQRuntime();
   const changes = [];
   const stats = { added: 0, removed: 0, fromLexicon: 0 };
 

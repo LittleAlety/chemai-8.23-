@@ -436,16 +436,16 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <section id="panel-qa" class="panel">
         <div class="panel-bar">
           <div class="corpus-status" id="corpusStatus"><span class="dot"></span><span id="corpusStatusTxt">正在加载知识清单…</span></div>
-          <div class="mode-switch" id="chatModeSwitch" title="回答模式：正常=快速本地答案；集群=智能体集群+网页研究">
-            <button class="mode-btn" data-mode="normal">💬 正常</button>
-            <button class="mode-btn" data-mode="cluster">🧠 集群</button>
-          </div>
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
           <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
         <div class="composer">
+          <div class="mode-switch" id="chatModeSwitch" title="回答模式：正常=快速本地答案；集群=智能体集群+网页研究">
+            <button class="mode-btn" data-mode="normal">💬 正常</button>
+            <button class="mode-btn" data-mode="cluster">🧠 集群</button>
+          </div>
           <button class="btn ghost sm" id="qaUpload" title="上传 txt/docx/pdf/pptx，让助手基于文件内容分析回答">📎 文件</button>
           <input type="file" id="qaFileInput" accept=".txt,.docx,.pdf,.pptx" style="display:none">
           <textarea id="qaInput" rows="1" placeholder="输入你的问题…（可先 📎 上传文件，让助手基于文件内容分析；Enter 发送，Shift+Enter 换行）"></textarea>
@@ -2118,17 +2118,18 @@ function animateWebStep(bub){
 function webResultsHTML(results, conflicts){
   var items=results.map(function(it){
     var href=it.url?(' href="'+esc(it.url)+'" target="_blank" rel="noopener"'):'';
+    var auth=it.internal?'<span class="auth-tag local">站内语料</span>':'<span class="auth-tag">网络资料</span>';
     return '<div class="web-item"><div class="web-top">'
       +'<span class="web-src">'+esc(it.sourceLabel||it.badge||it.source||'网页')+'</span>'
       +(it.experimental?'<span class="web-exp">实验性</span>':'')
-      +'<span class="auth-tag">网络资料</span>'
+      +auth
       +'</div>'
       +'<div class="web-title">'+(href?'<a'+href+'>':'')+esc(it.title||'')+(href?'</a>':'')+'</div>'
       +(it.snippet?'<div class="web-snippet">'+esc(it.snippet)+'</div>':'')
       +'</div>';
   }).join('');
   var warn=(conflicts&&conflicts.length)?('<div class="selfcheck-warn">'+conflicts.map(esc).join('<br>')+'</div>'):'';
-  return '<div class="link-card web web-results"><h4>🌐 网页研究员 · <span class="auth-tag">网络资料，权威层级：讲义&gt;文献&gt;搜索</span></h4>'+items+warn+'</div>';
+  return '<div class="link-card web web-results"><h4>🔍 网页研究员 · 补充检索（站内语料 / 网络资料，权威层级：讲义&gt;文献&gt;搜索）</h4>'+items+warn+'</div>';
 }
 function replaceNetworkSection(ans, newHTML){
   var secs=ans.querySelectorAll('.ans-sec');
@@ -2990,6 +2991,7 @@ footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180d
 .web-results .web-title a:hover{text-decoration:underline}
 .web-results .web-snippet{font-size:11.5px;color:var(--t3);line-height:1.6;margin-top:3px}
 .auth-tag{font-size:10px;color:var(--t3);border:1px solid var(--bd2);border-radius:10px;padding:0 6px;white-space:nowrap}
+.auth-tag.local{color:var(--teal);border-color:rgba(45,212,191,.45);background:rgba(45,212,191,.08)}
 .agent-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 /* 集群状态弹层 */
 .agent-state-pop{background:var(--card);border:1px solid var(--bd2);border-radius:12px;box-shadow:var(--shadow);padding:10px 12px;font-size:12px;color:var(--t2);max-height:70vh;overflow:auto}

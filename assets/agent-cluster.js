@@ -122,7 +122,7 @@
         if (s > 0) scored.push({ s: s, item: {
           sourceLabel: '站内题库', title: String(q.question || '').slice(0, 120),
           snippet: String(q.answer || q.referenceAnswer || '').slice(0, 200),
-          url: '', badge: '站内题库', weight: 10
+          url: '', badge: '站内题库', weight: 10, internal: true
         } });
       });
       cache.nodes.forEach(function (n) {
@@ -133,7 +133,7 @@
         if (s > 0) scored.push({ s: s, item: {
           sourceLabel: '知识图谱', title: 'KG·' + (n.name || ''),
           snippet: String(n.description || '').slice(0, 200),
-          url: 'knowledge.html', badge: '站内知识图谱', weight: 9
+          url: 'knowledge.html', badge: '站内知识图谱', weight: 9, internal: true
         } });
       });
       scored.sort(function (a, b) { return b.s - a.s; });

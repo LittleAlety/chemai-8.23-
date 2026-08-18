@@ -95,15 +95,20 @@
     return tryOnce();
   }
 
-  /* ---------- 源：站内题库 / 知识图谱（同源，最可靠） ---------- */
+  /* ---------- 源：站内题库 / 知识图谱 / 语料库（同源，最可靠） ---------- */
   var _siteCache = null, _sitePromise = null;
   function loadSiteData() {
     if (_sitePromise) return _sitePromise;
     _sitePromise = Promise.all([
       fetch('data/questions_bank.json').then(function (r) { if (!r.ok) throw new Error('qb'); return r.json(); }).catch(function () { return null; }),
-      fetch('data/kg.json').then(function (r) { if (!r.ok) throw new Error('kg'); return r.json(); }).catch(function () { return null; })
+      fetch('data/kg.json').then(function (r) { if (!r.ok) throw new Error('kg'); return r.json(); }).catch(function () { return null; }),
+      fetch('data/corpus.json').then(function (r) { if (!r.ok) throw new Error('corpus'); return r.json(); }).catch(function () { return null; })
     ]).then(function (arr) {
-      _siteCache = { questions: (arr[0] && arr[0].questions) || [], nodes: (arr[1] && arr[1].nodes) || [] };
+      _siteCache = {
+        questions: (arr[0] && arr[0].questions) || [],
+        nodes: (arr[1] && arr[1].nodes) || [],
+        corpus: (arr[2] && (arr[2].entries || arr[2])) || []
+      };
       return _siteCache;
     });
     return _sitePromise;
@@ -122,6 +127,7 @@
         if (s > 0) scored.push({ s: s, item: {
           sourceLabel: '站内题库', title: String(q.question || '').slice(0, 120),
           snippet: String(q.answer || q.referenceAnswer || '').slice(0, 200),
+          fullText: String(q.answer || q.referenceAnswer || ''),
           url: '', badge: '站内题库', weight: 10, internal: true
         } });
       });
@@ -136,8 +142,22 @@
           url: 'knowledge.html', badge: '站内知识图谱', weight: 9, internal: true
         } });
       });
+      // 语料库（与正常路径同一 corpus.json，带 corpus.html?id 深链）
+      cache.corpus.forEach(function (c) {
+        var qtext = norm((c.questions || []).join(' '));
+        var text = norm((c.title || '') + ' ' + (c.subfield || '') + ' ' + (c.objects || '') + ' ' + (c.methods || '') + ' ' + (c.abstract || '') + ' ' + qtext);
+        var s = 0;
+        if (nq && (text.indexOf(nq) >= 0 || qtext.indexOf(nq) >= 0)) s += 3;
+        for (var i = 0; i < kws.length; i++) { if (kws[i] && text.indexOf(kws[i]) >= 0) s += 1; }
+        if (s > 0) scored.push({ s: s, item: {
+          sourceLabel: '站内语料', title: String(c.title || '').slice(0, 120),
+          snippet: String((c.abstract || (c.questions && c.questions[0]) || '').slice(0, 200)),
+          url: 'corpus.html?id=' + encodeURIComponent(String(c.id)),
+          badge: '站内语料·#' + String(c.id), weight: 10, internal: true
+        } });
+      });
       scored.sort(function (a, b) { return b.s - a.s; });
-      return { items: scored.slice(0, 3).map(function (x) { return x.item; }) };
+      return { items: scored.slice(0, 4).map(function (x) { return x.item; }) };
     });
   }
 
@@ -310,7 +330,7 @@
       var max = opts.maxResults || 6;
       if (all.length > max) all = all.slice(0, max);
       all.forEach(function (it) { delete it._rank; });
-      var snippets = all.map(function (it) { return it.snippet || it.title || ''; }).join('\n');
+      var snippets = all.map(function (it) { return [it.snippet, it.fullText].filter(Boolean).join('\n'); }).join('\n');
       var conflicts = webCrossCheck(q, snippets);
       stats.results = all.length; stats.ms = Date.now() - t0;
       return { ok: all.length > 0, results: all, conflicts: conflicts, stats: stats };
@@ -321,7 +341,9 @@
   var AUTHORITY_RULES = [
     { re: /30\s*%\s*(h2o2|双氧水|过氧化氢)/i, warn: '网页资料提及 30% H₂O₂；本实验（武汉大学讲义）使用 6% H₂O₂（30% 需稀释），以讲义为准。' },
     { re: /氧化[^\n。;；]{0,12}(60|80|100)\s*[℃度]/, warn: '网页资料称氧化阶段温度 60/80/100℃；讲义规定 40℃ 水浴（过高会加速 H₂O₂ 分解），以讲义为准。' },
-    { re: /烘干[^\n。;；]{0,12}11[0-5]\s*[℃度]/, warn: '网页资料称烘干温度 110℃；本实验产物烘干为 50℃（110℃ 会使产物脱水变质），以讲义为准。' },
+    { re: /(烘干|干燥|烘箱)[^\n。;；]{0,14}11[0-5]\s*[℃度]|11[0-5]\s*[℃度][^\n。;；]{0,12}(烘干|干燥|烘箱)/, warn: '网页资料称烘干温度 110℃；本实验产物烘干为 50℃（110℃ 会使产物脱水变质），以讲义为准。' },
+    { re: /失(去|掉)?\s*结晶水[^\n。;；]{0,14}11[0-5]\s*[℃度]/, warn: '网页资料称失结晶水温度 110/113℃；讲义规定约 100℃（70-100℃，理论失重 11.0%），以讲义为准。' },
+    { re: /(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)[^\n。;；]{0,12}10\s*ml|10\s*ml[^\n。;；]{0,12}(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)/i, warn: '网页资料称 H₂O₂ 用量约 10mL；本实验（讲义）以 5.0g 莫尔盐为基准约 8mL，以讲义为准。' },
     { re: /配位数\s*[为是约]?\s*[4四]|(^|[^非不])[4四]\s*配位|四配位/, warn: '网页资料称配位数为 4；草酸根为双齿配体，[Fe(C₂O₄)₃]³⁻ 配位数为 6，以讲义为准。' },
     { re: /产率.{0,10}(以|用).{0,4}草酸|基准.{0,6}草酸/, warn: '网页资料称产率以草酸为基准；本实验以莫尔盐为基准（Fe 元素守恒），以讲义为准。' },
     { re: /fe\s*\(?\s*oh\s*\)?\s*2.{0,20}(7\.5|7\.6|7\.8|≈\s*7|约\s*7)/i, warn: '网页资料称 Fe(OH)₂ 沉淀 pH≈7.5；实际约 6.3（Ksp≈8×10⁻¹⁶），以讲义为准。' },

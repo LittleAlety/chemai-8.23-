@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://api.deepseek.com">
 <link rel="preload" href="data/faq_runtime.js" as="script">
 <link rel="preload" href="data/corpus.json" as="fetch" crossorigin="anonymous">
+<link rel="preconnect" href="https://zh.wikipedia.org">
+<link rel="preconnect" href="https://en.wikipedia.org">
+<link rel="preconnect" href="https://pubchem.ncbi.nlm.nih.gov">
+<script src="assets/agent-cluster.js" defer></script>
 <title>AI 助手 · ChemAI 三草酸合铁酸钾制备实验</title>
 <style>
 :root{
@@ -432,6 +436,10 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <section id="panel-qa" class="panel">
         <div class="panel-bar">
           <div class="corpus-status" id="corpusStatus"><span class="dot"></span><span id="corpusStatusTxt">正在加载知识清单…</span></div>
+          <div class="mode-switch" id="chatModeSwitch" title="回答模式：正常=快速本地答案；集群=智能体集群+网页研究">
+            <button class="mode-btn" data-mode="normal">💬 正常</button>
+            <button class="mode-btn" data-mode="cluster">🧠 集群</button>
+          </div>
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
           <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
@@ -1354,13 +1362,14 @@ function renderQAHistory(){
   h.forEach(m=>{addMsg(qaChat,m.role,m.role==='user'?esc(m.html):m.html,false);});
 }
 
-function pipelineHTML(){
+function pipelineHTML(clusterMode){
   return '<div class="pipe">'
     +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>多策略检索'+(Corpus.total?'（'+(Corpus.total||365)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇'):'')+'）':'')+'</div>'
     +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>类比推理引擎（跨体系模式识别）</div>'
     +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>置信度评分 · 混合答案生成</div>'
     +'<div class="pipe-step" data-s="4"><span class="pipe-dot"></span>自我检查（配位化学自洽验证）</div>'
-    +'</div><div class="pipe-meta"></div>';
+    +(clusterMode?'<div class="pipe-step" data-s="5"><span class="pipe-dot"></span>🌐 网页研究员（按需/低置信度）</div>':'')
+    +'</div>'+(clusterMode?agentBoardHTML():'')+'<div class="pipe-meta"></div>';
 }
 async function animatePipe(bub,stepCount){
   const steps=bub.querySelectorAll('.pipe-step');
@@ -2040,17 +2049,167 @@ function analyzeUploadedReport(){
   if(!UPLOADED_FILE){ addMsg(qaChat,'ai','<p class="muted">请先 📎 上传报告文件</p>',false); return; }
   addMsg(qaChat,'ai',reportAnalysisHTML(UPLOADED_FILE.text),false);
 }
+/* ================= 智能体集群工作台 + 网页研究员（v56） ================= */
+var QA_OVERRIDE={web:false,llm:false,regen:false};
+var AC_PROMISE=null;
+/* 回答模式：normal=快速本地（改造前行为）；cluster=智能体集群+网页研究 */
+var CHAT_MODE=null;
+function chatMode(){
+  if(CHAT_MODE) return CHAT_MODE;
+  var m='normal';
+  try{ var s=localStorage.getItem('chemai_chat_mode'); if(s==='cluster'||s==='normal') m=s; }catch(e){}
+  CHAT_MODE=m;
+  return m;
+}
+function setChatMode(m){
+  CHAT_MODE=(m==='cluster')?'cluster':'normal';
+  try{ localStorage.setItem('chemai_chat_mode',CHAT_MODE); }catch(e){}
+  renderChatMode();
+}
+function renderChatMode(){
+  var sw=document.getElementById('chatModeSwitch');
+  if(!sw) return;
+  var m=chatMode(), btns=sw.querySelectorAll('.mode-btn');
+  for(var i=0;i<btns.length;i++){ btns[i].classList.toggle('active',btns[i].getAttribute('data-mode')===m); }
+}
+function initChatMode(){
+  var sw=document.getElementById('chatModeSwitch');
+  if(!sw) return;
+  sw.addEventListener('click',function(e){
+    var b=e.target.closest('.mode-btn');
+    if(!b) return;
+    if(chatMode()!==b.getAttribute('data-mode')) setChatMode(b.getAttribute('data-mode'));
+  });
+  renderChatMode();
+}
+function ensureAgentCluster(){
+  if(window.AgentCluster) return Promise.resolve(window.AgentCluster);
+  if(!AC_PROMISE) AC_PROMISE=loadScript('assets/agent-cluster.js').then(function(){return window.AgentCluster||null;});
+  return AC_PROMISE;
+}
+function agentBoardHTML(){
+  return '<div class="agent-board"><div class="ab-chips">'
+    +'<span class="ab-chip" data-agent="retriever"><span class="ab-dot"></span>🕵️ 检索官</span>'
+    +'<span class="ab-chip" data-agent="reasoner"><span class="ab-dot"></span>🧠 推理官</span>'
+    +'<span class="ab-chip skip" data-agent="web"><span class="ab-dot"></span>🌐 网页研究员</span>'
+    +'<span class="ab-chip" data-agent="editor"><span class="ab-dot"></span>✍️ 编辑官</span>'
+    +'<span class="ab-chip" data-agent="checker"><span class="ab-dot"></span>✅ 质检官</span>'
+    +'</div><details class="ab-log"><summary>集群日志</summary><div class="ab-log-body"></div></details></div>';
+}
+function setAgentState(bub, aid, state){
+  var chip=bub.querySelector('.ab-chip[data-agent="'+aid+'"]');
+  if(!chip) return;
+  chip.className='ab-chip '+(state||'');
+  var dot=chip.querySelector('.ab-dot');
+  if(dot) dot.textContent=(state==='done'?'✓':(state==='warn'?'⚠':(state==='skip'?'⏭':(state==='active'?'●':'·'))));
+}
+function agentLog(bub, line){
+  var body=bub.querySelector('.ab-log-body');
+  if(!body) return;
+  body.insertAdjacentHTML('beforeend','<div class="ab-item">'+line+'</div>');
+}
+function animateWebStep(bub){
+  var steps=bub.querySelectorAll('.pipe-step');
+  var s5=steps.length>4?steps[4]:null;
+  if(!s5) return;
+  s5.classList.add('active');
+  setTimeout(function(){s5.classList.remove('active');s5.classList.add('done');var d=s5.querySelector('.pipe-dot');if(d)d.textContent='✓';},650);
+}
+function webResultsHTML(results, conflicts){
+  var items=results.map(function(it){
+    var href=it.url?(' href="'+esc(it.url)+'" target="_blank" rel="noopener"'):'';
+    return '<div class="web-item"><div class="web-top">'
+      +'<span class="web-src">'+esc(it.sourceLabel||it.badge||it.source||'网页')+'</span>'
+      +(it.experimental?'<span class="web-exp">实验性</span>':'')
+      +'<span class="auth-tag">网络资料</span>'
+      +'</div>'
+      +'<div class="web-title">'+(href?'<a'+href+'>':'')+esc(it.title||'')+(href?'</a>':'')+'</div>'
+      +(it.snippet?'<div class="web-snippet">'+esc(it.snippet)+'</div>':'')
+      +'</div>';
+  }).join('');
+  var warn=(conflicts&&conflicts.length)?('<div class="selfcheck-warn">'+conflicts.map(esc).join('<br>')+'</div>'):'';
+  return '<div class="link-card web web-results"><h4>🌐 网页研究员 · <span class="auth-tag">网络资料，权威层级：讲义&gt;文献&gt;搜索</span></h4>'+items+warn+'</div>';
+}
+function replaceNetworkSection(ans, newHTML){
+  var secs=ans.querySelectorAll('.ans-sec');
+  for(var i=0;i<secs.length;i++){
+    var h4=secs[i].querySelector('h4');
+    if(h4&&/网络补充|网络检索/.test(h4.textContent)){
+      if(newHTML!=null){ secs[i].outerHTML=newHTML; }
+      else { secs[i].parentNode.removeChild(secs[i]); }
+      return true;
+    }
+  }
+  return false;
+}
+function runWebResearch(q, bub, ctx){
+  return ensureAgentCluster().then(function(AC){
+    if(!AC){ setAgentState(bub,'web','warn'); agentLog(bub,'⚠ 网页研究员模块加载失败，已保留搜索链接。'); return; }
+    var meta=bub.querySelector('.pipe-meta');
+    setAgentState(bub,'web','active');
+    animateWebStep(bub);
+    return AC.research({q:q, kws:ctx.kws, chems:ctx.chems, enChems:ctx.enChems},{maxResults:6}).then(function(res){
+      var conflicts=res&&res.conflicts?res.conflicts:[];
+      var ans=bub.querySelector('.ans');
+      if(res&&res.ok&&res.results.length){
+        var sec=webResultsHTML(res.results, conflicts);
+        var replaced=ans?replaceNetworkSection(ans, sec):false;
+        if(!replaced&&ans){ ans.insertAdjacentHTML('beforeend',sec); }
+        setAgentState(bub,'web','done');
+        agentLog(bub,'🌐 网页研究员返回 <b>'+(res.results.length)+'</b> 条'+(conflicts.length?('，⚠ 检出 <b>'+conflicts.length+'</b> 处与讲义冲突'):''));
+        if(meta) meta.innerHTML=meta.innerHTML.replace('4阶段','5阶段')+' · 🌐 网页研究员 <b>'+(res.results.length)+'</b> 条';
+        if(conflicts.length) setAgentState(bub,'checker','warn');
+      } else {
+        setAgentState(bub,'web','warn');
+        agentLog(bub,'🌐 网页研究员无可用结果（失败源：'+(res&&res.stats&&res.stats.failed&&res.stats.failed.length?res.stats.failed.join('/'):'不可用')+'），保留搜索链接兜底。');
+        if(meta) meta.innerHTML=meta.innerHTML.replace('4阶段','5阶段')+' · 🌐 网页研究员 0 条（链接兜底）';
+      }
+    }).catch(function(err){
+      setAgentState(bub,'web','warn');
+      agentLog(bub,'⚠ 网页研究员出错：'+esc(err&&err.message||err));
+    });
+  });
+}
+function reAnswerWith(mode){
+  if(qaBusy||!LAST_QA||!LAST_QA.q) return;
+  QA_OVERRIDE.web=(mode===1); QA_OVERRIDE.llm=(mode===2); QA_OVERRIDE.regen=true;
+  handleQA(LAST_QA.q).catch(function(err){
+    QA_OVERRIDE.regen=false; QA_OVERRIDE.web=false; QA_OVERRIDE.llm=false;
+    qaBusy=false; qaSend.disabled=false;
+    addMsg(qaChat,'ai','<p style="color:#f87171">重答失败：'+esc(err&&err.message||err)+'</p>',true);
+  });
+}
+function toggleAgentState(){
+  if(!window.AgentCluster){ ensureAgentCluster().then(toggleAgentState); return; }
+  var el=document.getElementById('agentStatePanel');
+  if(!el){
+    el=document.createElement('div');
+    el.id='agentStatePanel'; el.className='agent-state-pop';
+    el.style.cssText='position:fixed;right:16px;bottom:80px;z-index:99;max-width:320px;display:none';
+    document.body.appendChild(el);
+  }
+  if(el.style.display==='none'||!el.style.display){
+    el.style.display='block';
+    el.innerHTML='<div class="ast-close" onclick="this.parentNode.style.display=\'none\'">✕</div>'+window.AgentCluster.getStateHTML();
+    el.onchange=function(){ el.innerHTML='<div class="ast-close" onclick="this.parentNode.style.display=\'none\'">✕</div>'+window.AgentCluster.getStateHTML(); };
+  } else { el.style.display='none'; }
+}
+
 async function handleQA(q){
-  if(q&&q.trim()){ CHAT_HISTORY.push(q.trim()); if(CHAT_HISTORY.length>8) CHAT_HISTORY=CHAT_HISTORY.slice(-8); }
+  var isReanswer=!!QA_OVERRIDE.regen;
+  var forceWeb=!!QA_OVERRIDE.web, forceLLM=!!QA_OVERRIDE.llm;
+  QA_OVERRIDE.regen=false; QA_OVERRIDE.web=false; QA_OVERRIDE.llm=false;
+  var clusterMode=chatMode()==='cluster';
+  if(q&&q.trim()&&!isReanswer){ CHAT_HISTORY.push(q.trim()); if(CHAT_HISTORY.length>8) CHAT_HISTORY=CHAT_HISTORY.slice(-8); }
   var rawQ=q;
-  var ctxNote='';
-  if(CHAT_HISTORY.length>=2 && (rawQ.length<8 || /它|这个|该|其|上述|此/.test(rawQ))){
+  var ctxNote=isReanswer?'🔄 智能体集群重答（策略变更，原提问保留）':'';
+  if(!isReanswer&&CHAT_HISTORY.length>=2 && (rawQ.length<8 || /它|这个|该|其|上述|此/.test(rawQ))){
     q=CHAT_HISTORY[CHAT_HISTORY.length-2]+'，'+rawQ;
     ctxNote='🔁 已结合上文理解：「'+esc(CHAT_HISTORY[CHAT_HISTORY.length-2].slice(0,20))+'…」+「'+esc(rawQ.slice(0,15))+'」';
   }
-  addMsg(qaChat,'user',esc(rawQ),true);
+  if(!isReanswer) addMsg(qaChat,'user',esc(rawQ),true);
   qaBusy=true;qaSend.disabled=true;
-  var bub=addMsg(qaChat,'ai',pipelineHTML(),false);
+  var bub=addMsg(qaChat,'ai',pipelineHTML(clusterMode),false);
 
   /* ===== 阶段1：多策略检索 ===== */
   await animatePipe(bub,1);
@@ -2065,6 +2224,8 @@ async function handleQA(q){
   var hits=domain?results.filter(function(r){return r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content);}):[];
   var faq=domain?matchFAQ(q):null;
   var chems=detectChems(q),ops=detectOps(q);
+  var kws=extractSearchKeywords(q);
+  var enChems=chems.map(function(c){return {name:c.name, en:c.pubchem||''};}).filter(function(c){return c.en;});
 
   /* ===== 阶段2：类比推理引擎 ===== */
   await animatePipe(bub,2);
@@ -2074,17 +2235,21 @@ async function handleQA(q){
   await animatePipe(bub,3);
   var conf=confidenceScore(hits, analogyHits, methodHits, faq, analogies);
   var meta=bub.querySelector('.pipe-meta');
-  var html='', usedLLM=false;
+  var html='', usedLLM=false, llmNote='';
 
-  if(LLM.enabled && LLM.apiKey){
-    try{
-      var llmCtx=buildLLMContext(q);
-      var llmAnswer=await callLLM(q, llmCtx);
-      if(llmAnswer){
-        html='<div class="ans-sec"><div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div></div>';
-        usedLLM=true;
-      }
-    }catch(e){ /* LLM unavailable, fall back to local reasoning */ }
+  if((LLM.enabled && LLM.apiKey)||forceLLM){
+    if(!LLM.enabled||!LLM.apiKey){
+      llmNote='<div class="ans-sec"><p style="font-size:12px;color:var(--t3)">🤖 已请求 LLM 重答，但未配置 Key（在 🤖 LLM 面板粘贴 DeepSeek Key 后可用）。已回退到本地集群生成。</p></div>';
+    }else{
+      try{
+        var llmCtx=buildLLMContext(q);
+        var llmAnswer=await callLLM(q, llmCtx);
+        if(llmAnswer){
+          html='<div class="ans-sec"><div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div></div>';
+          usedLLM=true;
+        }
+      }catch(e){ /* LLM unavailable, fall back to local reasoning */ }
+    }
   }
 
   if(!usedLLM){
@@ -2092,7 +2257,21 @@ async function handleQA(q){
     html=buildHybridAnswerHTML(q, hybridCtx);
     if(chems.length) html+=msdsCardHTML(chems);
     if(ops.length){ html+=localVideoCardHTML(ops,q); html+=videoCardHTML(ops,q); }
+    if(llmNote) html=llmNote+html;
     html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
+  }
+
+  /* ===== 应变：判定是否派发网页研究员（仅集群模式） ===== */
+  var webTrigger=false;
+  if(clusterMode){
+    webTrigger=forceWeb||/搜索|上网|查一下|网上|最新|外部|wiki|pubchem|chemicalbook|百度|bing/i.test(rawQ);
+    if(!webTrigger&&!usedLLM){
+      var acCfg=window.AgentCluster?window.AgentCluster.getConfig():null;
+      if(acCfg){
+        if(conf.level==='low'&&acCfg.autoWebOnLow) webTrigger=true;
+        else if(conf.level==='medium'&&acCfg.supplementMedium) webTrigger=true;
+      }
+    }
   }
 
   /* ===== 阶段4：自我检查 ===== */
@@ -2115,10 +2294,32 @@ async function handleQA(q){
     +(usedLLM?' · 🤖 LLM':'')
     +(checkResult&&!checkResult.passed?' · ⚠ 自查提示':'');
   LAST_QA={q:rawQ, title:faq?(faq.title||''):'', subfield:faq?(faq.subfield||''):'', low:conf.level==='low'};
+  /* ===== 集群状态汇总（仅集群模式渲染工作台） ===== */
+  if(clusterMode){
+    setAgentState(bub,'retriever','done');
+    agentLog(bub,'🕵️ 检索官：语料命中 <b>'+(hits.length)+'</b> 篇 · 类比检索 <b>'+(analogyHits.length+methodHits.length)+'</b> 条'+(faq?' · FAQ「'+esc(faq.title)+'」':' · FAQ 未命中'));
+    setAgentState(bub,'reasoner',analogies.length?'done':'skip');
+    agentLog(bub,'🧠 推理官：类比推理 <b>'+(analogies.length)+'</b> 条'+(analogies.length?'':'（无可桥接类比，跳过）'));
+    setAgentState(bub,'editor','done');
+    agentLog(bub,'✍️ 编辑官：'+(usedLLM?'采用 LLM 生成':'合成混合答案（'+confLabel+'）'));
+    setAgentState(bub,'checker',(checkResult&&!checkResult.passed)?'warn':'done');
+    agentLog(bub,'✅ 质检官：'+(checkResult&&!checkResult.passed?('发现 <b>'+checkResult.warnings.length+'</b> 条自查提示'):'通过自洽检查'));
+  }
   if(ctxNote) html='<div class="ans-sec" style="margin-bottom:4px"><p style="font-size:12px;color:var(--t3)">'+ctxNote+'</p></div>'+html;
   html+='<div class="ans-sec" style="margin-top:6px"><button class="btn ghost sm" onclick="recordLastQA()">📒 记入错题本</button></div>';
-  var ans=document.createElement('div');ans.innerHTML=html;bub.appendChild(ans);
-  scrollChat(qaChat);saveAIBubble(bub);
+  if(clusterMode){
+    html+='<div class="ans-sec agent-actions" style="margin-top:6px"><button class="btn ghost sm" onclick="reAnswerWith(0)">🔄 重新生成</button>'
+       +'<button class="btn ghost sm" onclick="reAnswerWith(1)">🌐 加强网页检索</button>'
+       +'<button class="btn ghost sm" onclick="reAnswerWith(2)">🤖 用LLM重答</button>'
+       +'<button class="btn ghost sm" onclick="toggleAgentState()">🛰 集群状态</button></div>';
+  }
+  var ans=document.createElement('div');ans.className='ans';ans.innerHTML=html;bub.appendChild(ans);
+  scrollChat(qaChat);
+  if(webTrigger){
+    try{ await runWebResearch(rawQ, bub, {kws:kws, chems:chems, enChems:enChems}); }
+    catch(e){ setAgentState(bub,'web','warn'); }
+  }
+  saveAIBubble(bub);
   qaBusy=false;qaSend.disabled=false;
 }
 
@@ -2139,6 +2340,7 @@ if(qaUploadBtn&&qaFileInput){
   qaUploadBtn.addEventListener('click',function(){qaFileInput.value='';qaFileInput.click();});
   qaFileInput.addEventListener('change',function(){if(qaFileInput.files&&qaFileInput.files[0])handleFileUpload(qaFileInput.files[0]);});
 }
+initChatMode();
 $('#qaClear').addEventListener('click',function(){
   lsDel(QA_KEY);qaChat.innerHTML='';renderQAHistory();
 });
@@ -2579,6 +2781,8 @@ switchTab(mode,false);
 window.analyzeUploadedReport=analyzeUploadedReport;
 window.clearUploadedFile=clearUploadedFile;
 window.recordLastQA=recordLastQA;
+window.reAnswerWith=reAnswerWith;
+window.toggleAgentState=toggleAgentState;
 window.clearWrongBook=clearWrongBook;
 window.delWrongItem=delWrongItem;
 window.calcMolar=calcMolar;
@@ -2759,6 +2963,54 @@ footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180d
 [data-theme="light"] .navbar{background:rgba(255,255,255,.86)}
 [data-theme="light"] ::-webkit-scrollbar-thumb{background:rgba(15,23,42,.2);border:2px solid transparent;background-clip:content-box;border-radius:7px}
 [data-theme="light"] .bar-track{background:rgba(15,23,42,.08)}
+
+/* ===== 智能体集群工作台 + 网页研究员（v56） ===== */
+.agent-board{margin:8px 0 2px}
+.ab-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ab-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--t3);background:var(--bg2);border:1px solid var(--bd2);border-radius:14px;padding:3px 9px;transition:.2s}
+.ab-chip .ab-dot{width:6px;height:6px;border-radius:50%;background:var(--t3);display:inline-block;flex-shrink:0}
+.ab-chip.active{border-color:var(--em);color:var(--t1)}
+.ab-chip.active .ab-dot{background:var(--em);animation:pulse 1s infinite}
+.ab-chip.done{border-color:rgba(45,212,191,.4);color:var(--teal)}
+.ab-chip.done .ab-dot{background:var(--teal)}
+.ab-chip.warn{border-color:rgba(251,191,36,.45);color:var(--yellow)}
+.ab-chip.warn .ab-dot{background:var(--yellow)}
+.ab-chip.skip{border-color:var(--bd);color:var(--t3);opacity:.6}
+.ab-chip.skip .ab-dot{background:var(--t3)}
+.ab-log{font-size:11px;color:var(--t3);margin-top:6px}
+.ab-log summary{cursor:pointer;color:var(--t2)}
+.ab-item{padding:2px 0 2px 12px;position:relative;line-height:1.6}
+.ab-item::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--bd2)}
+.web-results .web-item{background:var(--card);border:1px solid var(--bd2);border-radius:10px;padding:8px 11px;margin:6px 0}
+.web-results .web-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px}
+.web-results .web-src{font-size:10px;font-weight:600;color:var(--teal);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.3);padding:0 7px;border-radius:10px}
+.web-results .web-exp{font-size:10px;color:var(--yellow);border:1px dashed rgba(251,191,36,.4);padding:0 6px;border-radius:10px}
+.web-results .web-title{font-size:12.5px;color:var(--t1);font-weight:600;line-height:1.45}
+.web-results .web-title a{color:var(--blue);text-decoration:none}
+.web-results .web-title a:hover{text-decoration:underline}
+.web-results .web-snippet{font-size:11.5px;color:var(--t3);line-height:1.6;margin-top:3px}
+.auth-tag{font-size:10px;color:var(--t3);border:1px solid var(--bd2);border-radius:10px;padding:0 6px;white-space:nowrap}
+.agent-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+/* 集群状态弹层 */
+.agent-state-pop{background:var(--card);border:1px solid var(--bd2);border-radius:12px;box-shadow:var(--shadow);padding:10px 12px;font-size:12px;color:var(--t2);max-height:70vh;overflow:auto}
+.ast-close{float:right;cursor:pointer;color:var(--t3);font-size:13px;line-height:1}
+.ast-panel{display:flex;flex-direction:column;gap:4px}
+.ast-title{font-size:12.5px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.ast-row{display:flex;align-items:center;gap:8px}
+.ast-dot{width:7px;height:7px;border-radius:50%;background:var(--t3);flex-shrink:0}
+.ast-dot.st-on{background:var(--em)}
+.ast-dot.st-exp{background:var(--yellow)}
+.ast-dot.st-blocked{background:var(--red)}
+.ast-dot.st-off{background:var(--t3);opacity:.5}
+.ast-name{flex:1}
+.ast-sw{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--t3)}
+.ast-muted{font-size:10.5px;color:var(--t3);opacity:.85;margin-top:4px;line-height:1.6}
+/* 回答模式切换（正常/集群） */
+.mode-switch{display:inline-flex;background:var(--bg);border:1px solid var(--bd2);border-radius:16px;padding:2px;gap:2px;flex-shrink:0}
+.mode-switch .mode-btn{font-size:11.5px;color:var(--t3);background:transparent;border:none;border-radius:14px;padding:3px 10px;cursor:pointer;transition:.18s;font-family:inherit}
+.mode-switch .mode-btn:hover{color:var(--t2)}
+.mode-switch .mode-btn.active{background:var(--grad);color:#0a0e1a;font-weight:600}
+[data-theme="light"] .mode-switch .mode-btn.active{color:#fff}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>

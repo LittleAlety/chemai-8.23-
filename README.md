@@ -1,7 +1,7 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
-[![Version](https://img.shields.io/badge/version-v44-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v56-blue)](https://github.com/LittleAlety/chemai-8.6-)
 [![FAQ](https://img.shields.io/badge/FAQ-3047条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-365篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
@@ -73,7 +73,11 @@
 阶段 3：置信度评分 + 混合答案生成（FAQ / 类比 / LLM / 网络回退）
   ↓
 阶段 4：自检（12 条验证规则）
+  ↓
+阶段 5：网页研究员（集群模式 · 站内→PubChem→维基→Bing 多源，熔断降级）
 ```
+
+支持 **「💬 正常 / 🧠 集群」双模式**：正常模式为快速本地答案（改造前行为）；集群模式展示 5-agent 工作台并可按置信度自动联网检索（权威层级：实验讲义 > 文献 > 搜索，网页冲突以讲义为准）。
 
 ### 三页深度链接闭环
 
@@ -149,6 +153,7 @@ GitHub Actions + GitHub Pages 自动部署：向 `master` 推送即触发，`dep
 
 | 版本 | 主要变更 |
 |------|------|
+| **v56** | **AI 助手智能体集群化 + 双模式**：新增 `assets/agent-cluster.js` 网页研究员（站内题库/KG→PubChem→维基百科→Bing·实验性 多源降级，超时/重试/源熔断/讲义权威冲突校验）；assistant 问答升级为 **5-agent 集群工作台**（🕵️检索官/🧠推理官/🌐网页研究员/✍️编辑官/✅质检官 + 可折叠集群日志）；新增「💬 正常 / 🧠 集群」双模式切换（默认正常，localStorage 记忆，正常=改造前快速本地答案）；集群模式按置信度自适应联网、支持 重新生成/加强网页检索/LLM重答/集群状态 按钮 |
 | **v44** | **视频部署 + 界面美化**：①4 部本地教学视频 ffmpeg 压缩至 <100MB 入库 GitHub，Pages 直接服务（SPA 视频资源库页置顶 + assistant 侧栏内嵌播放器，`assets/index-B-pT4Snc.js` 注入本地视频条目）；②全站 ChemAI 艺术字（流动渐变 + 辉光 + 图标呼吸光晕）；③语料归类（10 文档入子文件夹）+ corpus.json 补 10 条（id 356-365，total 365）；④README 重写 |
 | **v43** | **第三轮语料自学习**：语料驱动学术词表 `academic_lexicon.json`（432 学术词/94 实体词）；全库 916 条 FAQ keys/ents 清洗（去泛词 11 处、keys<3 归零、重复 key 归零）；gap 分析补 23 条新 FAQ（FAQ 916→939），新条目 keys 100% 取自词表 |
 | **v42** | **基础教科书学习**：Greenwood/Housecroft 教材新增 26 条基础 FAQ，校准 Δo(oxalate)、d-d 自旋禁阻、Fe(SCN)₃ 等 11 处 |

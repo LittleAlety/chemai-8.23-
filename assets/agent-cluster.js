@@ -157,7 +157,7 @@
         } });
       });
       scored.sort(function (a, b) { return b.s - a.s; });
-      return { items: scored.slice(0, 4).map(function (x) { return x.item; }) };
+      return { items: scored.slice(0, 6).map(function (x) { return x.item; }) };
     });
   }
 

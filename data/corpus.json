@@ -7428,8 +7428,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁(III)酸钾化学光量计；Fe(II)显色测定",
+                        "methods":  "酸性草酸铁光解；邻菲啰啉光度法测定Fe(II)",
                         "difficulty":  "中",
                         "questions":  [
                                           "草酸铁(Ⅲ)酸钾光解为什么可以用作化学光量计(actinometer)？",
@@ -7445,7 +7445,7 @@
                                       ],
                         "path":  "https://doi.org/10.1098/rspa.1953.0175",
                         "journal":  "Proceedings of the Royal Society of London A: Mathematical and Physical Sciences",
-                        "abstract":  "The first of the classic two-part actinometry series: preliminary trials showing that photolysis of acidified potassium ferrioxalate, with colorimetric determination of the Fe(II) formed, provides a sensitive, precise liquid-phase chemical actinometer for the near-UV and visible region; lays the groundwork for the Hatchard–Parker standard actinometer (Part II, 1956).",
+                        "abstract":  "Parker 1953年开创性系列的第一篇：以酸化草酸铁(III)酸钾光解产生Fe(II)，用邻菲啰啉光度法测定生成的Fe(II)从而定量光通量，确立了草酸铁作为灵敏化学光量计的基础，是光化学定量测量的奠基文献。",
                         "source_url":  "https://doi.org/10.1098/rspa.1953.0175",
                         "doi":  "10.1098/rspa.1953.0175"
                     },
@@ -7457,8 +7457,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "化学光量计(草酸铁/碘化物体系)；量子产率数据表",
+                        "methods":  "标准操作流程；光通量测定与计算",
                         "difficulty":  "中",
                         "questions":  [
                                           "IUPAC推荐的草酸铁光量计标准操作流程和量子产率数据是什么？",
@@ -7486,8 +7486,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "化学光量计体系(草酸铁等)；光子通量测定",
+                        "methods":  "光量学综述；量子产率比较",
                         "difficulty":  "中",
                         "questions":  [
                                           "目前常用的化学光量计有哪些，各自适用的波长范围如何？",
@@ -7503,7 +7503,7 @@
                                       ],
                         "path":  "https://doi.org/10.1111/php.13429",
                         "journal":  "Photochemistry and Photobiology",
-                        "abstract":  "Actinometers are physical or chemical systems that can be employed to determine photon fluxes. Chemical actinometers are photochemical systems with known quantum yields that enable calculating photon fluxes from measurable reactant/product changes. This review explores in detail several practical chemical actinometers (ferrioxalate, iodide-iodate, uranyl oxalate, nitrate, uridine, hydrogen peroxide, and several actinometers for the vacuum UV), their quantum yields, practical procedures and limitations.",
+                        "abstract":  "综述化学光量计的原理与应用：化学光量计是基于已知量子产率的光化学体系，通过测定光反应程度反推光子通量。系统比较草酸铁、碘化物-碘酸根等常用光量计的适用范围、波长依赖与优缺点，为选择合适光量计提供指南。",
                         "source_url":  "https://pubmed.ncbi.nlm.nih.gov/33724415/",
                         "doi":  "10.1111/php.13429"
                     },
@@ -7515,8 +7515,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光量计；碘-碘酸盐光量计；深紫外量子产率",
+                        "methods":  "紫外区重标定；波长相关量子产率测定",
                         "difficulty":  "中",
                         "questions":  [
                                           "在深紫外区草酸铁光量计的量子产率与可见区有何不同？",
@@ -7532,7 +7532,7 @@
                                       ],
                         "path":  "https://ui.adsabs.harvard.edu/abs/2008JPPA..193...50G/abstract",
                         "journal":  "Journal of Photochemistry and Photobiology A: Chemistry",
-                        "abstract":  "The ferrioxalate and iodide-iodate actinometers were re-examined in the UV region (down to 205 nm); wavelength-dependent quantum yields were redetermined and compared with literature values, and recommendations are given for accurate actinometric measurements in the deep-UV, where ferrioxalate quantum yields differ from the commonly used near-UV/visible values.",
+                        "abstract":  "在深紫外区(低至205 nm)重新考察草酸铁与碘-碘酸盐两种光量计，重新测定波长相关的量子产率并与文献值比较，给出深紫外光量测定的准确操作建议，弥补可见区数据在UV应用的不足。",
                         "source_url":  "https://ui.adsabs.harvard.edu/abs/2008JPPA..193...50G/abstract"
                     },
                     {
@@ -7543,8 +7543,8 @@
                         "lang":  "英文",
                         "subfield":  "分析测定",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光量计；系统误差来源",
+                        "methods":  "误差分析；量子产率修正",
                         "difficulty":  "中",
                         "questions":  [
                                           "草酸铁光量计的系统误差主要来自哪些因素？",
@@ -7572,8 +7572,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光量计；电定标辐射计",
+                        "methods":  "辐射计绝对标定",
                         "difficulty":  "中",
                         "questions":  [
                                           "如何用电定标辐射计对草酸铁光量计进行绝对标定？",
@@ -7589,7 +7589,7 @@
                                       ],
                         "path":  "https://ui.adsabs.harvard.edu/abs/1981JPC....85.2766D/abstract",
                         "journal":  "The Journal of Physical Chemistry",
-                        "abstract":  "The quantum yield of the ferrioxalate actinometer was measured against electrically calibrated radiometers at several wavelengths; results largely confirm the Hatchard–Parker values (agreement within a few percent) while providing an absolute, detector-based recalibration of this standard actinometer.",
+                        "abstract":  "在多个波长用电定标辐射计直接测量光功率，对草酸铁光量计的量子产率进行基于探测器的绝对标定，结果与Hatchard-Parker经典值在百分之几误差内一致，验证了经典数据并为绝对光量学提供不依赖化学标准物的标定途径。",
                         "source_url":  "https://ui.adsabs.harvard.edu/abs/1981JPC....85.2766D/abstract"
                     },
                     {
@@ -7600,8 +7600,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁钾光量计；碘化钾-碘酸钾光量计；辐射计校准",
+                        "methods":  "多波长量子产率重测；光量计反标探测器",
                         "difficulty":  "中",
                         "questions":  [
                                           "2011年重新标定的草酸铁光量计量子产率是多少？",
@@ -7629,8 +7629,8 @@
                         "lang":  "英文",
                         "subfield":  "实验教学",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光量计；CO2释放监测",
+                        "methods":  "在线CO2监测替代Fe(II)显色分析",
                         "difficulty":  "中",
                         "questions":  [
                                           "如何用CO2释放量替代Fe(II)显色分析来简化草酸铁光量计？",
@@ -7658,8 +7658,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光量计；连续流光反应器光子通量",
+                        "methods":  "调暗光源/分段测量/时间分辨三种方案",
                         "difficulty":  "中",
                         "questions":  [
                                           "在连续流光化学反应器中如何测定实际光子通量？",
@@ -7687,8 +7687,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光化学；瞬态物种；配体-金属电荷转移",
+                        "methods":  "纳秒激光闪光光解；瞬态吸收光谱",
                         "difficulty":  "中",
                         "questions":  [
                                           "草酸铁光解的初级光化学过程包含哪些瞬态物种？",
@@ -7704,7 +7704,7 @@
                                       ],
                         "path":  "https://doi.org/10.1021/jp8040583",
                         "journal":  "The Journal of Physical Chemistry A",
-                        "abstract":  "The photochemistry of ferrioxalate was studied by nanosecond laser flash photolysis. The primary photochemical process involves ligand-to-metal charge transfer producing the oxalate radical complex, which decomposes to Fe(II) and CO2/CO2•-; the observed intermediate kinetics clarify the origin of the wavelength-dependent quantum yield of the ferrioxalate actinometer.",
+                        "abstract":  "用纳秒激光闪光光解研究草酸铁的光化学：初级光化学过程为配体-金属电荷转移(LMCT)激发，观测到相关瞬态物种，并结合量子产率的波长依赖解释其机理，为经典光量计体系提供更深入的分子层面认识。",
                         "source_url":  "https://pubs.acs.org/doi/10.1021/jp8040583",
                         "doi":  "10.1021/jp8040583"
                     },
@@ -7716,8 +7716,8 @@
                         "lang":  "英文",
                         "subfield":  "综合研究",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "草酸铁光化学反应；分子水平机理",
+                        "methods":  "时间脉络综述；飞秒光谱等新技术",
                         "difficulty":  "中",
                         "questions":  [
                                           "分子水平上草酸铁光解机理研究经历了哪些阶段？",
@@ -7745,8 +7745,8 @@
                         "lang":  "英文",
                         "subfield":  "结构表征",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "无水三草酸合铁(III)酸钾；手性三维网络晶体",
+                        "methods":  "X射线单晶衍射；红外/热分析/磁性表征",
                         "difficulty":  "中",
                         "questions":  [
                                           "无水K3[Fe(C2O4)3]与三水合物在晶体结构上有何差异？",
@@ -7774,8 +7774,8 @@
                         "lang":  "英文",
                         "subfield":  "实验教学",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "三草酸合铁(III)酸钾分子式推导",
+                        "methods":  "滴定(草酸根/铁含量)；热重灼烧(结晶水)",
                         "difficulty":  "中",
                         "questions":  [
                                           "如何由组成分析数据推导三草酸合铁(Ⅲ)酸钾的分子式？",
@@ -7803,8 +7803,8 @@
                         "lang":  "英文",
                         "subfield":  "综合研究",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "天然铁草酸盐矿物；合成铁-草酸配合物",
+                        "methods":  "综述对比",
                         "difficulty":  "中",
                         "questions":  [
                                           "自然界中存在哪些铁草酸盐矿物，其组成与结构如何？",
@@ -7832,8 +7832,8 @@
                         "lang":  "英文",
                         "subfield":  "光化学应用",
                         "doctype":  "期刊论文",
-                        "objects":  "",
-                        "methods":  "",
+                        "objects":  "水溶液草酸铁；光激发态动力学",
+                        "methods":  "液相超快光电子能谱(飞秒-皮秒)",
                         "difficulty":  "中",
                         "questions":  [
                                           "超快光电子能谱能揭示草酸铁激发态的哪些动力学信息？",
@@ -7849,7 +7849,7 @@
                                       ],
                         "path":  "https://doi.org/10.1039/D1CP02872C",
                         "journal":  "Physical Chemistry Chemical Physics",
-                        "abstract":  "用液相超快光电子能谱研究水溶液中光激发的草酸铁(ferrioxalate)：在飞秒-皮秒时间尺度上直接观测配体-金属电荷转移激发态的演化与初级光还原过程，为这一经典光量计体系的超快机理提供实验证据。",
+                        "abstract":  "用液相超快光电子能谱研究水溶液中光激发的草酸铁：在飞秒-皮秒时间尺度直接观测配体-金属电荷转移激发态的演化与初级光还原过程，为经典光量计体系的超快机理提供直接实验证据。",
                         "source_url":  "https://pubs.rsc.org/en/content/articlelanding/2021/cp/d1cp02872c",
                         "doi":  "10.1039/D1CP02872C"
                     },

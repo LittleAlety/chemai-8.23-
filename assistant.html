@@ -423,7 +423,7 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
     <section class="col-main">
       <div class="tabs" role="tablist">
         <button class="tab on" data-mode="qa" role="tab">💬 直接问答<span>智能体集群 · 多策略检索 → 类比推理 → 置信度评分 → 自我检查</span></button>
-        <button class="tab" data-mode="assess" role="tab">📝 掌握度测评<span>12 个知识点 · 权重满分 155 · 轮次 10~20 动态调整</span></button>
+        <button class="tab" data-mode="assess" role="tab">📝 掌握度测评<span>10 个知识点 · 权重满分 105 · 轮次 10~20 动态调整</span></button>
         <button class="tab" data-mode="tools" role="tab">🧮 计算工具<span>摩尔质量 · 产率 · 溶液配制 · Ksp · 滴定</span></button>
         <button class="tab" data-mode="wrong" role="tab">📒 错题本<span>薄弱知识点记录 · 题库联动练习</span></button>
       </div>
@@ -449,7 +449,7 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <section id="panel-assess" class="panel hidden">
         <div class="panel-bar">
           <div class="assess-progress">
-            <div class="ap-txt"><span id="apTxt">知识点 <b>0/10</b> · 第 <b>0</b> 轮</span><span id="apHint">10 个知识点 · 权重满分 100 · 轮次 10~20 动态调整</span></div>
+            <div class="ap-txt"><span id="apTxt">知识点 <b>0/10</b> · 第 <b>0</b> 轮</span><span id="apHint">10 个知识点 · 权重满分 105 · 轮次 10~20 动态调整</span></div>
             <div class="ap-bar"><i id="apBar"></i></div>
           </div>
           <button class="btn warn sm" id="asFinish">⏹ 结束并生成报告</button>
@@ -1356,7 +1356,7 @@ function renderQAHistory(){
 
 function pipelineHTML(){
   return '<div class="pipe">'
-    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>多策略检索'+(Corpus.total?'（'+(Corpus.total||276)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇'):'')+'）':'')+'</div>'
+    +'<div class="pipe-step" data-s="1"><span class="pipe-dot"></span>多策略检索'+(Corpus.total?'（'+(Corpus.total||365)+' 篇文献'+(Corpus.uploaded?(' + '+Corpus.uploaded+' 篇'):'')+'）':'')+'</div>'
     +'<div class="pipe-step" data-s="2"><span class="pipe-dot"></span>类比推理引擎（跨体系模式识别）</div>'
     +'<div class="pipe-step" data-s="3"><span class="pipe-dot"></span>置信度评分 · 混合答案生成</div>'
     +'<div class="pipe-step" data-s="4"><span class="pipe-dot"></span>自我检查（配位化学自洽验证）</div>'
@@ -1777,7 +1777,7 @@ function buildAnswerHTML(q,ctx){
       s+='<div class="ans-sec"><h4>🌐 网络补充</h4><p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,faq,hits);
     }else{
-      s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||276)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
+      s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||365)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
       s+='<div class="ans-sec"><h4>🌐 网络检索</h4>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,null,hits);
     }
@@ -2379,7 +2379,7 @@ function praise(){const p=['回答得很好！👏','非常棒，要点齐全！
 function startAssess(){
   if(A.started)return;
   A.started=true;
-  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。接下来通过<b>多轮对话</b>检测你对「三草酸合铁酸钾制备实验」的掌握水平：</p><ul style="margin-left:18px"><li>共 <b>'+KP.length+' 个知识点</b>（权重合计 100 分），涵盖基础到进阶，题型多样（简答/判断/选择/填空/计算/案例分析）；</li><li>回答得好 → 直接过关；答得不全 → <b>引导式追问</b>；答不出 → 先给提示，仍不会则<b>直接讲解</b>；</li><li>薄弱知识点最后会<b>换问法复测</b>，轮次 '+MIN_ROUND+'~'+MAX_ROUND+' 动态调整；</li><li>跳过会提供完整讲解，帮助理解；</li><li>可随时点「结束并生成报告」，报告支持导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？我们开始第一题 👇</p>',
+  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。接下来通过<b>多轮对话</b>检测你对「三草酸合铁酸钾制备实验」的掌握水平：</p><ul style="margin-left:18px"><li>共 <b>'+KP.length+' 个知识点</b>（权重合计 105 分，总分按 100 分制归一），涵盖基础到进阶，题型多样（简答/判断/选择/填空/计算/案例分析）；</li><li>回答得好 → 直接过关；答得不全 → <b>引导式追问</b>；答不出 → 先给提示，仍不会则<b>直接讲解</b>；</li><li>薄弱知识点最后会<b>换问法复测</b>，轮次 '+MIN_ROUND+'~'+MAX_ROUND+' 动态调整；</li><li>跳过会提供完整讲解，帮助理解；</li><li>可随时点「结束并生成报告」，报告支持导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？我们开始第一题 👇</p>',
     function(){setTimeout(nextQuestion,900);});
 }
 function kpComment(m){
@@ -2396,7 +2396,8 @@ function gradeOf(total){
 }
 function buildReportData(){
   let total=0;KP.forEach((kp,i)=>{total+=kp.weight*(A.results[i].mastery||0);});
-  total=Math.round(total*10)/10;
+  const MAXPTS=KP.reduce((s,k)=>s+k.weight,0)||1;
+  total=Math.round(total/MAXPTS*1000)/10;   // 权重合计 105 → 归一化到 100 分制（阈值/环形图/报告均按 /100）
   const items=KP.map((kp,i)=>({name:kp.name,weight:kp.weight,m:A.results[i].mastery,note:A.results[i].note,kp}));
   const assessed=items.filter(x=>x.m!==null);
   const strengths=assessed.filter(x=>x.m>=0.8).sort((a,b)=>b.m-a.m);
@@ -2436,7 +2437,7 @@ function finishAssess(reason){
    +'<div class="rp-sub">三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验 · 测评时间 '+dateStr+' · 共 '+d.rounds+' 轮对话'+(reason?(' · '+esc(reason)):'')+'</div>'
    +'<div class="rp-top"><div class="ring">'+ringSVG(d.total)+'<div class="ring-txt"><b>'+d.total+'</b><span>总分 / 100</span></div></div>'
    +'<div class="rp-grade"><span class="g-tag '+gcls+'">'+gname+'</span>'
-   +'<div class="rp-meta">已测知识点 '+d.items.filter(x=>x.m!==null).length+'/8 · 优势项 '+d.strengths.length+' 个 · 薄弱项 '+d.weakness.length+' 个'
+   +'<div class="rp-meta">已测知识点 '+d.items.filter(x=>x.m!==null).length+'/10 · 优势项 '+d.strengths.length+' 个 · 薄弱项 '+d.weakness.length+' 个'
    +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ 提前结束：'+d.unassessed.length+' 个知识点未测评，按 0 计入总分</span>'):'')
    +'</div></div></div>'
    +'<div class="rp-sec"><h3>📊 各知识点掌握度（权重 × 掌握度 = 得分）</h3>';

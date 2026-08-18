@@ -42,7 +42,7 @@
     "focusArea": "时间",
     "subfield": "无机化学",
     "difficulty": "中",
-    "literatureNote": "讲义ch3-s2沉淀动力学分析、ch12-s3颜色异常诊断"
+    "literatureNote": "讲义ch3-s2沉淀动力学分析、ch11-s3颜色异常诊断"
   },
   {
     "id": "Q006",
@@ -139,7 +139,7 @@
     "focusArea": "物质性质",
     "subfield": "无机化学",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s2关键操作要点及第11章ch12-s1产率异常原因"
+    "literatureNote": "讲义第4章ch4-s2关键操作要点及第11章ch11-s1产率异常原因"
   },
   {
     "id": "Q022",
@@ -148,7 +148,7 @@
     "focusArea": "时间",
     "subfield": "结晶学",
     "difficulty": "中",
-    "literatureNote": "讲义第3章ch3-s5溶剂替换法结晶及第11章ch12-s2晶体质量差的原因"
+    "literatureNote": "讲义第3章ch3-s5溶剂替换法结晶及第11章ch11-s2晶体质量差的原因"
   },
   {
     "id": "Q024",
@@ -211,7 +211,7 @@
     "focusArea": "试剂用量",
     "subfield": "无机合成",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s2关键操作要点与技巧；第11章ch12-s1产率异常原因"
+    "literatureNote": "讲义第4章ch4-s2关键操作要点与技巧；第11章ch11-s1产率异常原因"
   },
   {
     "id": "Q028",
@@ -238,7 +238,7 @@
     "focusArea": "浓度",
     "subfield": "配位化学",
     "difficulty": "中",
-    "literatureNote": "讲义第3章ch3-s4配位反应原理；第11章ch12-s3颜色异常的诊断流程"
+    "literatureNote": "讲义第3章ch3-s4配位反应原理；第11章ch11-s3颜色异常的诊断流程"
   },
   {
     "id": "Q034",
@@ -310,7 +310,7 @@
     "focusArea": "时间",
     "subfield": "无机化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s2、ch4-s1、ch12-s2"
+    "literatureNote": "讲义ch3-s2、ch4-s1、ch11-s2"
   },
   {
     "id": "Q040",
@@ -490,7 +490,7 @@
     "focusArea": "pH",
     "subfield": "沉淀反应与溶度积",
     "difficulty": "较难",
-    "literatureNote": "第3章ch3-s2 FeC₂O₄沉淀的热力学；第11章ch12-s1产率异常原因；讲义第1步操作"
+    "literatureNote": "第3章ch3-s2 FeC₂O₄沉淀的热力学；第11章ch11-s1产率异常原因；讲义第1步操作"
   },
   {
     "id": "Q060",
@@ -697,7 +697,7 @@
     "focusArea": "温度",
     "subfield": "固态化学",
     "difficulty": "较难",
-    "literatureNote": "讲义第2章ch2-s1及ch2-s2热稳定性；第8章ch8-s2安全规程；第11章ch12-s4"
+    "literatureNote": "讲义第2章ch2-s1及ch2-s2热稳定性；第8章ch8-s2安全规程；第11章ch11-s4"
   },
   {
     "id": "Q081",
@@ -787,7 +787,7 @@
     "focusArea": "时间",
     "subfield": "材料化学",
     "difficulty": "中",
-    "literatureNote": "ch3-s5；ch4-s1；ch12-s2"
+    "literatureNote": "ch3-s5；ch4-s1；ch11-s2"
   },
   {
     "id": "Q091",
@@ -1048,7 +1048,7 @@
     "focusArea": "时间",
     "subfield": "结晶学",
     "difficulty": "较难",
-    "literatureNote": "讲义第4章ch4-s2关键操作要点；手册第3章ch3-s5溶剂替换法结晶的热力学原理；第11章ch12-s2晶体质量差的8种原因"
+    "literatureNote": "讲义第4章ch4-s2关键操作要点；手册第3章ch3-s5溶剂替换法结晶的热力学原理；第11章ch11-s2晶体质量差的8种原因"
   },
   {
     "id": "Q124",
@@ -1147,7 +1147,7 @@
     "focusArea": "试剂用量",
     "subfield": "物理化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s5、ch4-s1、ch4-s2；手册ch12-s2"
+    "literatureNote": "讲义ch3-s5、ch4-s1、ch4-s2；手册ch11-s2"
   },
   {
     "id": "Q131",
@@ -1165,7 +1165,7 @@
     "focusArea": "时间",
     "subfield": "结晶化学",
     "difficulty": "中",
-    "literatureNote": "讲义第4章s1-s2；ch12-s2"
+    "literatureNote": "讲义第4章s1-s2；ch11-s2"
   },
   {
     "id": "Q135",
@@ -1219,7 +1219,7 @@
     "focusArea": "时间",
     "subfield": "实验故障排查",
     "difficulty": "较难",
-    "literatureNote": "讲义ch9-s3产率优化；ch12-s1产率异常原因"
+    "literatureNote": "讲义ch9-s3产率优化；ch11-s1产率异常原因"
   },
   {
     "id": "Q142",
@@ -1372,7 +1372,7 @@
     "focusArea": "时间",
     "subfield": "产率计算",
     "difficulty": "较难",
-    "literatureNote": "讲义ch4-s4产率计算方法；ch9-s3产率优化；ch12-s1产率异常"
+    "literatureNote": "讲义ch4-s4产率计算方法；ch9-s3产率优化；ch11-s1产率异常"
   },
   {
     "id": "Q156",
@@ -1543,7 +1543,7 @@
     "focusArea": "试剂用量",
     "subfield": "化学热力学",
     "difficulty": "较难",
-    "literatureNote": "讲义第3章ch3-s5溶剂替换法结晶原理；第11章ch12-s2晶体质量差的原因"
+    "literatureNote": "讲义第3章ch3-s5溶剂替换法结晶原理；第11章ch11-s2晶体质量差的原因"
   },
   {
     "id": "Q179",
@@ -1552,7 +1552,7 @@
     "focusArea": "光照",
     "subfield": "光化学",
     "difficulty": "较难",
-    "literatureNote": "讲义第6章ch6-s1 LMCT光解机理；手册第11章ch12-s3颜色异常诊断"
+    "literatureNote": "讲义第6章ch6-s1 LMCT光解机理；手册第11章ch11-s3颜色异常诊断"
   },
   {
     "id": "Q176",
@@ -1561,7 +1561,7 @@
     "focusArea": "时间",
     "subfield": "无机化学",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s3、第11章ch12-s1；#2"
+    "literatureNote": "讲义第4章ch4-s3、第11章ch11-s1；#2"
   },
   {
     "id": "Q178",
@@ -1570,7 +1570,7 @@
     "focusArea": "温度",
     "subfield": "分析化学",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s1、ch4-s2；第11章ch12-s1 产率异常→洗涤过度"
+    "literatureNote": "讲义第4章ch4-s1、ch4-s2；第11章ch11-s1 产率异常→洗涤过度"
   },
   {
     "id": "Q180",
@@ -1588,7 +1588,7 @@
     "focusArea": "物质性质",
     "subfield": "无机化学",
     "difficulty": "较难",
-    "literatureNote": "讲义第2章ch2-s2、第3章ch3-s2；第11章ch12-s5"
+    "literatureNote": "讲义第2章ch2-s2、第3章ch3-s2；第11章ch11-s5"
   },
   {
     "id": "Q184",
@@ -1642,7 +1642,7 @@
     "focusArea": "温度",
     "subfield": "配位化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s2沉淀热力学与动力学、ch12-s1产率异常分析"
+    "literatureNote": "讲义ch3-s2沉淀热力学与动力学、ch11-s1产率异常分析"
   },
   {
     "id": "Q186",

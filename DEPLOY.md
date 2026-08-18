@@ -2,30 +2,33 @@
 
 本文档说明如何将本网站完整部署到你自己的服务器。网站为**纯静态站点**（无需 Node.js、数据库或构建步骤），外加一个可选的语料云端同步接收端（Python）。
 
+> 网站文件位于**仓库根目录**（无 `app/` 子目录），部署时直接发布仓库根目录即可；线上由 GitHub Pages 分支构建 + `.github/workflows/deploy.yml` 组装发布。
+
 ---
 
 ## 一、文件结构
 
 ```
-app/
-├── index.html          # 主应用入口（身份选择页）
-├── main.html           # 主页（实验手册全文）
-├── assistant.html      # AI助手（直接问答 + 掌握度测评）
-├── knowledge.html      # 知识图谱（图谱-语料互通）
+├── index.html          # 首页（React SPA：身份选择/视频库/习题/错题本等）
+├── main.html           # 主页（实验手册全文，11 章 42 节）
+├── assistant.html      # AI助手（FAQ 问答 + 掌握度测评 + 4 部本地视频）
+├── knowledge.html      # 知识图谱（97 节点 / 136 关联）
 ├── prep.html           # 课前预习
-├── corpus.html         # 语料库管理（上传/学习迭代/云端同步）
+├── corpus.html         # 语料库管理（365 篇，上传/学习迭代/云端同步）
 ├── DEPLOY.md           # 本文档
 ├── assets/
 │   ├── index-*.js      # 主应用（React SPA，已压缩）
 │   ├── index-*.css     # 样式
-│   ├── index.es-*.js / html2canvas.esm-*.js / purify.es-*.js / index-D4K5vfL7.js
-│   │                   # 动态加载模块（PDF导出/html2canvas/DOMPurify/mammoth）
+│   ├── images/         # 实验图片（76 张，经 data/images.json 接入）
 │   ├── KaTeX_*.woff/woff2/ttf   # 公式字体
 │   └── vendor/         # 第三方库（jszip、pdf.js 等）
-├── data/
-│   ├── corpus.json     # 语料库知识清单（276+ 篇文献）
-│   ├── kg.json         # 知识图谱数据（55 节点 / 76 关联）
-│   └── manual.json     # 实验手册全文（12 章 47 节）
+├── data/               # 运行时数据（deploy.yml 组装 8 个）
+│   ├── faq_runtime.js  # 运行时 FAQ（3047 条，唯一真相源）
+│   ├── corpus.json     # 语料库清单（365 篇）
+│   ├── manual.json     # 实验手册（11 章 42 节）
+│   ├── images.json     # 图片索引（76 张）
+│   ├── kg.json         # 知识图谱（97 节点 / 136 关联）
+│   ├── questions_bank.json / report_rubric.json / faq_unified.json
 └── scripts/
     └── corpus-server.py  # 可选：语料云端同步接收端
 ```
@@ -36,7 +39,7 @@ app/
 
 ### 方案 A：Python（最简）
 ```bash
-cd app
+cd <仓库根目录>
 python3 -m http.server 8080
 # 访问 http://服务器IP:8080/
 ```
@@ -46,7 +49,7 @@ python3 -m http.server 8080
 server {
     listen 80;
     server_name your-domain.com;
-    root /var/www/chemai;        # 上传整个 app 目录到此
+    root /var/www/chemai;        # 上传整个仓库根目录到此
     index index.html;
     location / { try_files $uri $uri/ /index.html; }
     location ~* \.(js|css|json|woff2?|ttf)$ {
@@ -57,7 +60,7 @@ server {
 ```
 
 ### 方案 C：Apache
-将 app 目录放入站点根目录，并启用 `.htaccess`：
+将仓库根目录放入站点根目录，并启用 `.htaccess`：
 ```apache
 DirectoryIndex index.html
 FallbackResource /index.html
@@ -66,7 +69,7 @@ FallbackResource /index.html
 ### 方案 D：Docker
 ```dockerfile
 FROM nginx:alpine
-COPY app/ /usr/share/nginx/html/
+COPY . /usr/share/nginx/html/
 EXPOSE 80
 ```
 ```bash
@@ -97,6 +100,6 @@ python3 scripts/corpus-server.py 8765
 
 ## 五、注意事项
 
-- 首次打开会向 kimi.com 请求一个统计 SDK（不可达不影响功能）；视频为 B 站在线嵌入，离线环境显示占位。
+- 首次打开会向 kimi.com 请求一个统计 SDK（不可达不影响功能）；本地 4 部视频随仓库部署，在线直接播放；离线环境显示占位。
 - 各页面数据通过相对路径加载 `data/*.json`，部署时请保持目录结构完整。
 - 如需修改语料/图谱/手册内容，直接编辑 `data/` 下对应 JSON 即可。

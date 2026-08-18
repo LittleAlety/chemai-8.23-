@@ -403,11 +403,11 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
   <section class="banner">
     <div class="banner-tag">📖 EXPERIMENT MANUAL · HOME</div>
     <h1>三草酸合铁酸钾制备实验 · <span class="hl">实验手册</span></h1>
-    <p id="bannerSub">从实验原理到操作细节的完整手册：12 章 47 节系统讲解三草酸合铁(III)酸钾的制备、性质与应用，全部内容一站式展开阅读。</p>
+    <p id="bannerSub">从实验原理到操作细节的完整手册：11 章 42 节系统讲解三草酸合铁(III)酸钾的制备、性质与应用，全部内容一站式展开阅读。</p>
     <div><span class="banner-role" id="bannerRole" hidden></span></div>
     <div class="banner-stats">
-      <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b id="statCh">12</b>&nbsp;章节</div>
-      <div class="bstat"><span class="dot" style="background:var(--teal)"></span><b id="statSec">47</b>&nbsp;小节</div>
+      <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b id="statCh">11</b>&nbsp;章节</div>
+      <div class="bstat"><span class="dot" style="background:var(--teal)"></span><b id="statSec">42</b>&nbsp;小节</div>
       <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>6</b>&nbsp;快捷功能模块</div>
       <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>AI</b>&nbsp;智能辅助学习</div>
     </div>
@@ -661,6 +661,7 @@ function renderManual(data){
   $("#manualBox").innerHTML=bodyHtml;
   $("#statCh").textContent=chapters.length;$("#mhCh").textContent=chapters.length;
   $("#statSec").textContent=secTotal;$("#mhSec").textContent=secTotal;
+  $("#bannerSub").textContent="从实验原理到操作细节的完整手册："+chapters.length+" 章 "+secTotal+" 节系统讲解三草酸合铁(III)酸钾的制备、性质与应用，全部内容一站式展开阅读。";
   initSpy();
 }
 /* 目录滚动高亮 */

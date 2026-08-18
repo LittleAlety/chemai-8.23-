@@ -2,7 +2,7 @@
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
 [![Version](https://img.shields.io/badge/version-v44-blue)](https://github.com/LittleAlety/chemai-8.6-)
-[![FAQ](https://img.shields.io/badge/FAQ-939条-green)](https://github.com/LittleAlety/chemai-8.6-)
+[![FAQ](https://img.shields.io/badge/FAQ-3047条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-365篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
 [![Videos](https://img.shields.io/badge/本地视频-4部-teal)](https://github.com/LittleAlety/chemai-8.6-)
@@ -16,7 +16,7 @@
 | 页面 | 文件 | 说明 |
 |------|------|------|
 | **首页入口** | `index.html` | React SPA 首页，身份选择（非化学专业 / 化学专业 / 教师），含 LLM 配置面板；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频 |
-| **AI 助手** | `assistant.html` | 多策略检索 + 类比推理 + DeepSeek RAG 问答；**939 条 FAQ**；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器** |
+| **AI 助手** | `assistant.html` | 多策略检索 + 类比推理 + DeepSeek RAG 问答；**3047 条 FAQ**（运行时 `data/faq_runtime.js`）；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器** |
 | **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染 |
 | **知识图谱** | `knowledge.html` | 97 节点 / 136 关联的交互式配位化学知识网络 |
 | **语料库** | `corpus.html` | **365 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链 |
@@ -34,7 +34,7 @@
 
 ## 深度问题自学习迭代体系
 
-通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前 FAQ 累计 **939 条**（含深度操作问答、全文献学习、教材校准、学术词表驱动四代迭代）。
+通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **3047 条**（含深度操作问答、全文献学习、教材校准、学术词表驱动四代迭代）。
 
 ### 迭代历程
 
@@ -96,10 +96,12 @@ chemai-8.6-/
 ├── corpus.html                # 语料库（365 篇）
 ├── prep.html                  # 课前预习
 ├── data/
-│   ├── corpus.json            # 语料库清单（365 篇）
-│   ├── academic_lexicon.json  # 学术词表（v43，432 学术词 + 94 实体词）
-│   ├── manual.json / kg.json / kb.json
-│   └── faq_key_blacklist.json # 关键词清洗黑名单（v43）
+│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，3047 条，window.FAQ=）
+│   ├── manual.json           # 实验手册（11 章 / 42 节）
+│   ├── corpus.json           # 语料库清单（365 篇）
+│   ├── images.json           # 实验图片索引（76 张）
+│   ├── kg.json / questions_bank.json / report_rubric.json / faq_unified.json
+│   └── academic_lexicon.json # 学术词表（dev-only，不部署）
 ├── assets/                    # CSS / JS（含 SPA 编译产物，已注入本地视频）
 ├── scripts/                   # 工具脚本（lib-assistant-faq.js、v44-inject-bundle.js 等）
 ├── Agent工作区/ 训练管道/ 诊断与调试/ 试题迭代记录/
@@ -107,6 +109,13 @@ chemai-8.6-/
 ├── .github/workflows/deploy.yml  # GitHub Pages 自动部署（含视频文件夹）
 └── README.md / DEPLOY.md
 ```
+
+---
+
+## 已知限制
+
+- **SPA 落地页内嵌手册为历史快照**：`assets/index-B-pT4Snc.js`（React 落地页构建产物）内嵌旧 12 章版实验手册（含已删除的「实验报告撰写规范」章），与 `main.html` 的动态手册（11 章）分叉。React 源码未随仓库维护，暂不重建；**实验手册以 `main.html` 为准**。
+- **本地视频部署依赖分支构建**：4 部本地视频位于 `三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/`，是否在线可播取决于部署机制（内置「Deploy from a branch」会发布整个仓库根目录；`deploy.yml` 的 `_site` 精简组装不含该文件夹）。
 
 ---
 

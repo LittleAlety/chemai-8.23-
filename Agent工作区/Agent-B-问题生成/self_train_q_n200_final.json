@@ -114,7 +114,7 @@
     "focusArea": "温度",
     "subfield": "沉淀化学与晶体生长",
     "difficulty": "较难",
-    "literatureNote": "讲义ch4-s2关键操作要点；ch3-s2沉淀热力学与动力学分析；ch12-s2晶体质量差原因"
+    "literatureNote": "讲义ch4-s2关键操作要点；ch3-s2沉淀热力学与动力学分析；ch11-s2晶体质量差原因"
   },
   {
     "id": "Q017",
@@ -123,7 +123,7 @@
     "focusArea": "反应机理",
     "subfield": "氧化还原与配位化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s3氧化机理；ch3-s4配位反应原理；ch12-s3颜色异常诊断"
+    "literatureNote": "讲义ch3-s3氧化机理；ch3-s4配位反应原理；ch11-s3颜色异常诊断"
   },
   {
     "id": "Q019",
@@ -132,7 +132,7 @@
     "focusArea": "时间",
     "subfield": "非均相反应动力学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch4-s1操作步骤；ch3-s3氧化反应机理；ch12-s3颜色异常诊断"
+    "literatureNote": "讲义ch4-s1操作步骤；ch3-s3氧化反应机理；ch11-s3颜色异常诊断"
   },
   {
     "id": "Q016",
@@ -582,7 +582,7 @@
     "focusArea": "试剂用量",
     "subfield": "无机化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s2、ch4-s1、ch12-s1"
+    "literatureNote": "讲义ch3-s2、ch4-s1、ch11-s1"
   },
   {
     "id": "Q067",
@@ -591,7 +591,7 @@
     "focusArea": "时间",
     "subfield": "配位化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch3-s3、ch4-s1、ch12-s1"
+    "literatureNote": "讲义ch3-s3、ch4-s1、ch11-s1"
   },
   {
     "id": "Q069",
@@ -663,7 +663,7 @@
     "focusArea": "时间",
     "subfield": "无机化学",
     "difficulty": "中",
-    "literatureNote": "讲义ch4-s1、ch12-s1"
+    "literatureNote": "讲义ch4-s1、ch11-s1"
   },
   {
     "id": "Q075",
@@ -915,7 +915,7 @@
     "focusArea": "物质性质",
     "subfield": "分析化学",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s1、第11章ch12-s3"
+    "literatureNote": "讲义第4章ch4-s1、第11章ch11-s3"
   },
   {
     "id": "Q106",
@@ -969,7 +969,7 @@
     "focusArea": "时间",
     "subfield": "实验操作",
     "difficulty": "中",
-    "literatureNote": "讲义第4章ch4-s1；第11章ch12-s1产率异常原因"
+    "literatureNote": "讲义第4章ch4-s1；第11章ch11-s1产率异常原因"
   },
   {
     "id": "Q113",
@@ -1059,7 +1059,7 @@
     "focusArea": "试剂用量",
     "subfield": "分析化学",
     "difficulty": "中",
-    "literatureNote": "讲义ch4-s2关键操作要点；ch12-s3颜色异常诊断"
+    "literatureNote": "讲义ch4-s2关键操作要点；ch11-s3颜色异常诊断"
   },
   {
     "id": "Q123",
@@ -1140,7 +1140,7 @@
     "focusArea": "时间",
     "subfield": "氧化反应",
     "difficulty": "中",
-    "literatureNote": "讲义四步操作；手册ch3-s3 H₂O₂氧化机理；ch12-s1 产率异常分析"
+    "literatureNote": "讲义四步操作；手册ch3-s3 H₂O₂氧化机理；ch11-s1 产率异常分析"
   },
   {
     "id": "Q131",
@@ -1401,7 +1401,7 @@
     "focusArea": "试剂用量",
     "subfield": "制备策略的总体设计思路",
     "difficulty": "较难",
-    "literatureNote": "讲义第3章ch3-s2、第11章ch12-s1"
+    "literatureNote": "讲义第3章ch3-s2、第11章ch11-s1"
   },
   {
     "id": "Q159",
@@ -1500,7 +1500,7 @@
     "focusArea": "pH",
     "subfield": "反应机理",
     "difficulty": "较难",
-    "literatureNote": "讲义第3章ch3-s3氧化电位与机理；第11章ch12-s3颜色异常诊断"
+    "literatureNote": "讲义第3章ch3-s3氧化电位与机理；第11章ch11-s3颜色异常诊断"
   },
   {
     "id": "Q171",
@@ -1527,7 +1527,7 @@
     "focusArea": "反应机理",
     "subfield": "氧化还原与电化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch4-s3关键操作要点与技巧；ch12-s1产率异常的12种原因"
+    "literatureNote": "讲义ch4-s3关键操作要点与技巧；ch11-s1产率异常的12种原因"
   },
   {
     "id": "Q172",
@@ -1626,7 +1626,7 @@
     "focusArea": "试剂用量",
     "subfield": "无机化学",
     "difficulty": "较难",
-    "literatureNote": "讲义ch4-s2常见错误及解决方案、ch12-s1产率异常原因"
+    "literatureNote": "讲义ch4-s2常见错误及解决方案、ch11-s1产率异常原因"
   },
   {
     "id": "Q184",
@@ -1752,7 +1752,7 @@
     "focusArea": "时间",
     "subfield": "分析化学",
     "difficulty": "较难",
-    "literatureNote": "第4章 操作步骤完全指南 ch4-s2 ch4-s3；第11章 ch12-s3颜色异常诊断"
+    "literatureNote": "第4章 操作步骤完全指南 ch4-s2 ch4-s3；第11章 ch11-s3颜色异常诊断"
   },
   {
     "id": "Q197",
@@ -1788,6 +1788,6 @@
     "focusArea": "浓度",
     "subfield": "分析化学",
     "difficulty": "较难",
-    "literatureNote": "第4章 操作步骤完全指南 ch4-s1 ch4-s2；第11章 ch12-s3"
+    "literatureNote": "第4章 操作步骤完全指南 ch4-s1 ch4-s2；第11章 ch11-s3"
   }
 ]

@@ -1,55 +1,44 @@
 #!/usr/bin/env node
-/* 一次性迁移：把 assistant.html 内嵌的 const FAQ=[...] 字面量原样导出为 data/faq_runtime.js
- * （window.FAQ=[...]），供 loadFAQ() 异步注入（借鉴 v37.6：动态加载减小首屏体积；内嵌数据仍是唯一真相源）。
- * 注意：保留 JS 字面量而非转 JSON —— JSON 键加引号会使文件膨胀到 3.5MB 以上，JS 字面量维持 1.6MB 不倒退。
+/* 运行时 FAQ 健康检查（原为"一次性迁移"导出脚本，v37.6+ FAQ 外置后已由
+ * scripts/lib-assistant-faq.js 的 readFAQRuntime/writeFAQRuntime 直接读写 data/faq_runtime.js，
+ * 本脚本保留其校验价值，改为对 data/faq_runtime.js 做完整性/重复性体检）。
  *
  * 用法：node scripts/export-faq-runtime.js
+ * 退出码：0 = 正常；1 = 存在重复 q 或关键字段缺失（可配 --strict 视为失败）
  */
 "use strict";
-const fs = require("fs");
 const path = require("path");
+const { readFAQRuntime } = require("./lib-assistant-faq.js");
 
-const ROOT = path.resolve(__dirname, "..");
-const SRC = path.join(ROOT, "assistant.html");
-const DST = path.join(ROOT, "data", "faq_runtime.js");
+const STRICT = process.argv.includes("--strict");
+const REQUIRED = ["q", "answer", "subfield", "keys", "ents", "detail", "title", "knode"];
 
-const text = fs.readFileSync(SRC, "utf8");
-const startTok = "const FAQ=[";
-const si = text.indexOf(startTok);
-if (si < 0) throw new Error("未找到 const FAQ=[");
+const arr = readFAQRuntime();
 
-/* 字符串感知地定位外数组的收尾 ]（数据内化学式如 K₃[Fe(C₂O₄)₃] 含 ASCII 方括号） */
-let depth = 1, inStr = null, esc = false, end = -1;
-for (let i = si + startTok.length; i < text.length; i++) {
-  const c = text[i];
-  if (inStr) {
-    if (esc) esc = false;
-    else if (c === "\\") esc = true;
-    else if (c === inStr) inStr = null;
-    continue;
-  }
-  if (c === "'" || c === '"') { inStr = c; continue; }
-  if (c === "[") depth++;
-  else if (c === "]") { depth--; if (depth === 0) { end = i; break; } }
-}
-if (end < 0) throw new Error("未找到 const FAQ=[ 的收尾 ]");
+if (!Array.isArray(arr)) { console.error("❌ data/faq_runtime.js 解析结果不是数组"); process.exit(1); }
 
-const arrText = text.slice(si + startTok.length, end);   // 外层 [ ] 之间的内容
-const arr = new Function("return ([" + arrText + "]);")();
-if (!Array.isArray(arr)) throw new Error("FAQ 字面量解析后不是数组");
-
-/* 校验：条目数与唯一 q */
+/* 条数与唯一 q */
 const uniq = new Set(arr.map(e => e && e.q));
-console.log(`内嵌 FAQ 条数：${arr.length}，唯一 q：${uniq.size}`);
-if (uniq.size !== arr.length) console.warn(`⚠ 存在重复 q：${arr.length - uniq.size} 条`);
+const dupCount = arr.length - uniq.size;
+console.log(`✅ 运行时 FAQ 条数：${arr.length}，唯一 q：${uniq.size}${dupCount ? `，⚠ 重复 q：${dupCount} 条` : ""}`);
 
 /* 字段完整性统计 */
 const fieldMiss = {};
-for (const e of arr) for (const k of ["q", "answer", "subfield", "keys", "ents", "detail", "title", "knode"]) {
+for (const e of arr) for (const k of REQUIRED) {
   if (e[k] === undefined) fieldMiss[k] = (fieldMiss[k] || 0) + 1;
 }
 console.log("字段缺失：", Object.keys(fieldMiss).length ? fieldMiss : "无");
 
-/* 原样导出为 JS 字面量（window.FAQ=[...]） */
-fs.writeFileSync(DST, "window.FAQ=[" + arrText + "];\n", "utf8");
-console.log(`已导出 ${DST}（${(fs.statSync(DST).size / 1024 / 1024).toFixed(2)} MB）`);
+/* keys/ents 应为数组且非空（检索依赖） */
+const noKeys = arr.filter(e => !Array.isArray(e.keys) || !e.keys.length).length;
+const noEnts = arr.filter(e => !Array.isArray(e.ents)).length;
+if (noKeys) console.log(`⚠ 无 keys 的条目：${noKeys} 条（将无法被 matchFAQ 命中）`);
+if (noEnts) console.log(`⚠ 无 ents 数组的条目：${noEnts} 条`);
+
+const problems = dupCount + Object.keys(fieldMiss).length + noKeys;
+if (STRICT && problems > 0) {
+  console.error(`❌ 严格模式：共 ${problems} 处问题`);
+  process.exit(1);
+}
+console.log(problems ? "⚠ 发现可修复问题（正常运行不受影响，建议排查）" : "✅ 健康检查通过");
+process.exit(problems && STRICT ? 1 : 0);

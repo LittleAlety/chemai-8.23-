@@ -10438,7 +10438,7 @@
       "source": "10cycle_v2_report_cycle2.json"
     },
     {
-      "question": "第三步配位反应中，Fe(OH)₃转化为K₃[Fe(C₂O₄)₃]涉及哪两个并行的化学过程？请分别写出离��方程式。",
+      "question": "第三步配位反应中，Fe(OH)₃转化为K₃[Fe(C₂O₄)₃]涉及哪两个并行的化学过程？请分别写出离方程式。",
       "category": "综合研究",
       "type": "short",
       "difficulty": "medium",
@@ -10573,7 +10573,7 @@
       "source": "10cycle_v2_report_cycle4.json"
     },
     {
-      "question": "���出第二步H₂O₂氧化Fe²⁺的氧化半反应和还原半反应，并计算总反应的标准电动势。",
+      "question": "出第二步H₂O₂氧化Fe²⁺的氧化半反应和还原半反应，并计算总反应的标准电动势。",
       "category": "综合研究",
       "type": "short",
       "difficulty": "medium",
@@ -10591,7 +10591,7 @@
       "source": "10cycle_v2_report_cycle4.json"
     },
     {
-      "question": "已知第一步生成FeC₂O₄沉淀，其Ksp=3.2×10⁻⁷。计算在含0.10 mol·L⁻¹ C₂O₄²⁻的溶液中，FeC₂O₄的摩尔溶解度（mol·L⁻¹��",
+      "question": "已知第一步生成FeC₂O₄沉淀，其Ksp=3.2×10⁻⁷。计算在含0.10 mol·L⁻¹ C₂O₄²⁻的溶液中，FeC₂O₄的摩尔溶解度（mol·L⁻¹",
       "category": "综合研究",
       "type": "calculation",
       "difficulty": "medium",

@@ -2092,6 +2092,8 @@ function agentBoardHTML(){
     +'<span class="ab-chip" data-agent="retriever"><span class="ab-dot"></span>🕵️ 检索官</span>'
     +'<span class="ab-chip" data-agent="reasoner"><span class="ab-dot"></span>🧠 推理官</span>'
     +'<span class="ab-chip skip" data-agent="web"><span class="ab-dot"></span>🌐 网页研究员</span>'
+    +'<span class="ab-chip skip" data-agent="calc"><span class="ab-dot"></span>🧮 计算官</span>'
+    +'<span class="ab-chip skip" data-agent="manual"><span class="ab-dot"></span>📚 手册官</span>'
     +'<span class="ab-chip" data-agent="editor"><span class="ab-dot"></span>✍️ 编辑官</span>'
     +'<span class="ab-chip" data-agent="checker"><span class="ab-dot"></span>✅ 质检官</span>'
     +'</div><details class="ab-log"><summary>集群日志</summary><div class="ab-log-body"></div></details></div>';
@@ -2130,6 +2132,49 @@ function webResultsHTML(results, conflicts){
   }).join('');
   var warn=(conflicts&&conflicts.length)?('<div class="selfcheck-warn">'+conflicts.map(esc).join('<br>')+'</div>'):'';
   return '<div class="link-card web web-results"><h4>🔍 网页研究员 · 补充检索（站内语料 / 网络资料，权威层级：讲义&gt;文献&gt;搜索）</h4>'+items+warn+'</div>';
+}
+/* 技能渲染：🧮 计算官 / 📚 手册官 */
+function calcResultHTML(r){
+  var lines=(r.lines||[]).map(esc).join('<br>');
+  return '<div class="link-card calc"><h4>'+esc(r.title||'🧮 计算')+'</h4>'
+    +'<div class="calc-formula">'+esc(r.formula||'')+'</div>'
+    +(lines?'<div class="web-snippet" style="margin-top:4px">'+lines+'</div>':'')
+    +(r.note?'<div class="muted" style="font-size:12px;margin-top:4px">'+esc(r.note)+'</div>':'')
+    +'</div>';
+}
+function manualResultHTML(r){
+  var items=(r.items||[]).map(function(it){
+    return '<div class="web-item"><div class="web-top"><span class="web-src">📚 '+esc(it.ch||'实验讲义')+'</span><span class="auth-tag local">讲义·权威最高</span></div>'
+      +'<div class="web-title">'+esc(it.title||'')+'</div>'
+      +'<div class="web-snippet">'+esc(it.snippet||'')+'</div>'
+      +'</div>';
+  }).join('');
+  return '<div class="link-card web web-results"><h4>📚 手册官 · 实验讲义参考（权威层级：讲义&gt;文献&gt;搜索）</h4>'+items+'</div>';
+}
+function runSkills(q, bub, ctx){
+  var AC=window.AgentCluster;
+  if(!AC||!AC.skills) return Promise.resolve();
+  var ans=bub.querySelector('.ans');
+  // 🧮 计算官（确定性）
+  var calcRes=AC.skills.calc(q);
+  if(calcRes&&calcRes.matched){
+    setAgentState(bub,'calc','done');
+    agentLog(bub,'🧮 计算官：'+esc(calcRes.title||'完成定量计算'));
+    if(ans) ans.insertAdjacentHTML('beforeend', calcResultHTML(calcRes));
+  } else {
+    setAgentState(bub,'calc','skip');
+  }
+  // 📚 手册官（讲义检索）
+  return AC.skills.manual(q, ctx.kws).then(function(mr){
+    if(mr&&mr.matched){
+      setAgentState(bub,'manual','done');
+      agentLog(bub,'📚 手册官：命中「'+esc(mr.items[0].title||'')+'」');
+      if(ans) ans.insertAdjacentHTML('beforeend', manualResultHTML(mr));
+    } else {
+      setAgentState(bub,'manual','skip');
+      agentLog(bub,'📚 手册官：未命中讲义章节（问题超出手册覆盖）');
+    }
+  }).catch(function(){ setAgentState(bub,'manual','skip'); });
 }
 function replaceNetworkSection(ans, newHTML){
   var secs=ans.querySelectorAll('.ans-sec');
@@ -2319,6 +2364,10 @@ async function handleQA(q){
   if(webTrigger){
     try{ await runWebResearch(rawQ, bub, {kws:kws, chems:chems, enChems:enChems}); }
     catch(e){ setAgentState(bub,'web','warn'); }
+  }
+  if(clusterMode){
+    try{ await runSkills(rawQ, bub, {kws:kws, chems:chems}); }
+    catch(e){}
   }
   saveAIBubble(bub);
   qaBusy=false;qaSend.disabled=false;
@@ -2992,6 +3041,8 @@ footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180d
 .web-results .web-snippet{font-size:11.5px;color:var(--t3);line-height:1.6;margin-top:3px}
 .auth-tag{font-size:10px;color:var(--t3);border:1px solid var(--bd2);border-radius:10px;padding:0 6px;white-space:nowrap}
 .auth-tag.local{color:var(--teal);border-color:rgba(45,212,191,.45);background:rgba(45,212,191,.08)}
+.link-card.calc{border-color:rgba(96,165,250,.35);background:linear-gradient(135deg,rgba(96,165,250,.07),rgba(45,212,191,.04))}
+.link-card.calc .calc-formula{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;color:var(--blue);margin:6px 0;padding:6px 10px;background:rgba(96,165,250,.08);border-radius:8px;border:1px solid rgba(96,165,250,.2)}
 .agent-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 /* 集群状态弹层 */
 .agent-state-pop{background:var(--card);border:1px solid var(--bd2);border-radius:12px;box-shadow:var(--shadow);padding:10px 12px;font-size:12px;color:var(--t2);max-height:70vh;overflow:auto}

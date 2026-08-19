@@ -385,6 +385,144 @@
       + '<div class="ast-muted">网络资料权威层级：实验讲义 &gt; 文献 &gt; 搜索；网页结果仅供补充，与讲义冲突时以讲义为准。Bing 源经第三方代理，仅作实验性探索。</div></div>';
   }
 
+  /* ---------- 技能：🧮 计算官（确定性定量计算） ---------- */
+  var ATOMIC_MASS = {H:1.008,He:4.003,Li:6.94,Be:9.012,B:10.81,C:12.011,N:14.007,O:15.999,F:18.998,Ne:20.18,Na:22.99,Mg:24.305,Al:26.982,Si:28.085,P:30.974,S:32.06,Cl:35.45,K:39.098,Ca:40.078,Sc:44.956,Ti:47.867,V:50.942,Cr:51.996,Mn:54.938,Fe:55.845,Co:58.933,Ni:58.693,Cu:63.546,Zn:65.38,Ga:69.723,As:74.922,Se:78.96,Br:79.904,Sr:87.62,Y:88.906,Zr:91.224,Mo:95.95,Ag:107.868,Cd:112.414,In:114.818,Sn:118.71,Sb:121.76,Te:127.6,I:126.904,Ba:137.327,La:138.905,Ce:140.116,W:183.84,Pt:195.084,Au:196.967,Hg:200.592,Pb:207.2,Bi:208.98,Th:232.038,U:238.029};
+  var KNOWN_MASS = {
+    '(NH4)2Fe(SO4)2·6H2O':392.14,'硫酸亚铁铵':392.14,'莫尔盐':392.14,'摩尔盐':392.14,
+    'H2C2O4·2H2O':126.07,'草酸二水合物':126.07,'草酸':90.03,'H2C2O4':90.03,
+    'FeC2O4·2H2O':179.90,'草酸亚铁':143.87,'FeC2O4':143.87,
+    'K2C2O4·H2O':184.24,'草酸钾一水合物':184.24,'K2C2O4':166.22,
+    'K3[Fe(C2O4)3]·3H2O':491.25,'三草酸合铁酸钾':491.25,'产物':491.25,
+    'K3[Fe(C2O4)3]':437.20,'H2O2':34.01,'H2O':18.02,'CO2':44.01,'CO':28.01,
+    'C2H5OH':46.07,'乙醇':46.07,'H2SO4':98.08,'Fe2O3':159.69,'K2CO3':138.21,
+    'Fe(OH)3':106.87,'FeSO4':151.91,'KMnO4':158.03,'K3[Fe(CN)6]':329.24,'(NH4)2SO4':132.14
+  };
+  function formulaMass(f) {
+    var s = String(f || '').replace(/\s+/g, '').replace(/·/g, '.').replace(/[+\-]+\d*[+\-]?$/, '');
+    var total = 0, i = 0, n = s.length, mult = [1];
+    function digits(k) { var j = k; while (j < n && s[j] >= '0' && s[j] <= '9') j++; return j; }
+    while (i < n) {
+      var c = s[i];
+      if (c === '(' || c === '[') { mult.push(mult[mult.length - 1]); i++; }
+      else if (c === ')' || c === ']') {
+        var e = digits(i + 1); var num = (e > i + 1) ? parseFloat(s.slice(i + 1, e)) : 1;
+        mult.pop(); mult[mult.length - 1] *= num; i = e;
+      }
+      else if (c >= 'A' && c <= 'Z') {
+        var el = c, j = i + 1;
+        if (j < n && s[j] >= 'a' && s[j] <= 'z') { el += s[j]; j++; }
+        var e2 = digits(j); var cnt = (e2 > j) ? parseFloat(s.slice(j, e2)) : 1;
+        var m = ATOMIC_MASS[el]; if (m) total += m * cnt * mult[mult.length - 1];
+        i = e2;
+      } else { i++; }
+    }
+    return total;
+  }
+  function molarMassOf(term) {
+    var key = norm(term);
+    if (KNOWN_MASS[term]) return KNOWN_MASS[term];
+    for (var k in KNOWN_MASS) if (norm(k) === key) return KNOWN_MASS[k];
+    // 提取公式形态（含元素+数字+括号）
+    var fm = String(term || '').match(/[A-Z][a-z]?[\d\.·\[\]\(\)A-Za-z]*/);
+    if (fm) { var m = formulaMass(fm[0]); if (m > 10) return m; }
+    return null;
+  }
+  function calcSkill(q) {
+    var t = String(q || '');
+    var out = { matched: false, type: '', title: '', lines: [], formula: '', note: '' };
+    // ① 产率
+    if (/产率|收率|百分产率/.test(t)) {
+      out.matched = true; out.type = 'yield'; out.title = '🧮 产率计算';
+      var nums = (t.match(/(\d+(?:\.\d+)?)\s*(g|克)/g) || []).map(function (x) { return parseFloat(x); });
+      var actual = null, theory = null;
+      nums.forEach(function (n) { if (n > 0.5 && n < 15) { if (actual === null && /实际|得到|得|回收/.test(t) === false) theory = n; } });
+      // 5.0g 莫尔盐 → 理论 6.26g；若提莫尔盐质量则算理论产量
+      var salt = (t.match(/(\d+(?:\.\d+)?)\s*g\s*(莫尔盐|摩尔盐|硫酸亚铁铵)/) || [])[1];
+      if (salt) theory = parseFloat(salt) * 491.25 / 392.14;
+      var actualM = (t.match(/(\d+(?:\.\d+)?)\s*g\s*(产物|晶体|实际|最后)/) || [])[1];
+      if (actualM) actual = parseFloat(actualM);
+      out.formula = '产率(%) = 实际产量 ÷ 理论产量 × 100%';
+      if (actual && theory) {
+        var y = actual / theory * 100;
+        out.lines.push('实际 ' + actual.toFixed(2) + ' g ÷ 理论 ' + theory.toFixed(2) + ' g × 100% = ' + y.toFixed(1) + '%');
+      } else if (theory) {
+        out.lines.push('以莫尔盐为基准（Fe 守恒），1 mol 莫尔盐 → 1 mol 产物。');
+        out.lines.push('理论产量 = m(莫尔盐) × 491.25/392.14 = ' + theory.toFixed(2) + ' g');
+        out.lines.push('产率 = 实际产量 ÷ ' + theory.toFixed(2) + ' × 100%');
+      } else {
+        out.lines.push('以莫尔盐（限量试剂）为基准：1 mol 莫尔盐 → 1 mol 产物。');
+        out.lines.push('理论产量 = m(莫尔盐) × 491.25/392.14；产率 = 实际产量/理论产量 × 100%。');
+        out.note = '标准例：5.0 g 莫尔盐 → 理论 6.26 g，正常产率 50-70%。';
+      }
+      return out;
+    }
+    // ② 摩尔质量
+    var mm = t.match(/摩尔质量|分子量|相对分子质量|M\s*(?:\(|=)/);
+    if (mm || /K3\[Fe|Fe\(C2O4|莫尔盐|三草酸/.test(t)) {
+      var known = null, kname = '';
+      ['三草酸合铁酸钾','K3[Fe(C2O4)3]·3H2O','莫尔盐','(NH4)2Fe(SO4)2·6H2O','草酸','H2C2O4','草酸亚铁','K2C2O4','乙醇'].forEach(function (k) {
+        if (!known && t.indexOf(k) >= 0) { known = molarMassOf(k); kname = k; }
+      });
+      if (known) {
+        out.matched = true; out.type = 'mass'; out.title = '🧮 摩尔质量';
+        out.formula = 'M(' + kname + ') = ' + known.toFixed(2) + ' g/mol';
+        out.lines.push('由原子量加和求得：M = ' + known.toFixed(2) + ' g/mol。');
+        out.note = '常见：莫尔盐 392.14；产物 K3[Fe(C2O4)3]·3H2O 491.25。';
+        return out;
+      }
+    }
+    // ③ 溶液配制 m=c·V·M
+    var sol = t.match(/配制|称取|需要.*g/);
+    if (sol) {
+      var n3 = (t.match(/(\d+(?:\.\d+)?)/g) || []).map(parseFloat);
+      if (n3.length >= 3) {
+        out.matched = true; out.type = 'prepare'; out.title = '🧮 溶液配制';
+        out.formula = 'm = c × V × M';
+        out.lines.push('需要溶质质量 = ' + n3[0] + ' mol/L × ' + n3[1] + ' L × ' + n3[2] + ' g/mol = ' + (n3[0]*n3[1]*n3[2]).toFixed(2) + ' g');
+        return out;
+      }
+    }
+    return out;
+  }
+
+  /* ---------- 技能：📚 手册官（实验讲义检索） ---------- */
+  var _manualCache = null, _manualPromise = null;
+  function loadManual() {
+    if (_manualPromise) return _manualPromise;
+    _manualPromise = fetch('data/manual.json').then(function (r) { if (!r.ok) throw new Error('manual'); return r.json(); }).then(function (j) {
+      var sections = [];
+      (j.chapters || []).forEach(function (ch) {
+        (ch.sections || []).forEach(function (s) {
+          sections.push({ ch: ch.title || ch.id, title: s.title || s.id, id: s.id, keywords: (s.keywords || []).join(' '), content: s.content || '', source: s.source || '' });
+        });
+      });
+      _manualCache = sections;
+      return _manualCache;
+    });
+    return _manualPromise;
+  }
+  function manualSkill(q, kws) {
+    return loadManual().then(function (sections) {
+      var nq = norm(q);
+      var nk = (kws || []).map(norm);
+      var scored = [];
+      sections.forEach(function (s) {
+        var text = norm((s.title || '') + ' ' + (s.keywords || '') + ' ' + (s.ch || ''));
+        var sc = 0;
+        if (nq && (text.indexOf(nq) >= 0 || norm(s.content || '').indexOf(nq) >= 0)) sc += 3;
+        for (var i = 0; i < nk.length; i++) { if (nk[i] && text.indexOf(nk[i]) >= 0) sc += 1; }
+        if (sc > 0) scored.push({ sc: sc, s: s });
+      });
+      scored.sort(function (a, b) { return b.sc - a.sc; });
+      var top = scored.slice(0, 2).map(function (x) {
+        var c = String(x.s.content || '');
+        var snip = c.slice(0, 220) + (c.length > 220 ? '…' : '');
+        return { ch: x.s.ch, title: x.s.title, id: x.s.id, snippet: snip, source: x.s.source };
+      });
+      return { matched: top.length > 0, items: top };
+    });
+  }
+
   /* ---------- 导出 ---------- */
   if (!window.AgentCluster) {
     window.AgentCluster = {
@@ -394,7 +532,12 @@
       webCrossCheck: function (q, s) { return webCrossCheck(q, s); },
       getStateHTML: getStateHTML,
       isBroken: isBlocked,
-      esc: esc
+      esc: esc,
+      skills: {
+        calc: calcSkill,
+        manual: manualSkill,
+        molarMass: molarMassOf
+      }
     };
   }
 })();

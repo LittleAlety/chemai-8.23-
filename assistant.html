@@ -2098,6 +2098,9 @@ function agentBoardHTML(){
     +'<span class="ab-chip skip" data-agent="safety"><span class="ab-dot"></span>🔬 安全官</span>'
     +'<span class="ab-chip skip" data-agent="kg"><span class="ab-dot"></span>📊 图谱官</span>'
     +'<span class="ab-chip skip" data-agent="video"><span class="ab-dot"></span>🎥 视频官</span>'
+    +'<span class="ab-chip skip" data-agent="assess"><span class="ab-dot"></span>📝 测评官</span>'
+    +'<span class="ab-chip skip" data-agent="report"><span class="ab-dot"></span>📄 报告官</span>'
+    +'<span class="ab-chip skip" data-agent="prep"><span class="ab-dot"></span>📚 预习官</span>'
     +'<span class="ab-chip" data-agent="editor"><span class="ab-dot"></span>✍️ 编辑官</span>'
     +'<span class="ab-chip" data-agent="checker"><span class="ab-dot"></span>✅ 质检官</span>'
     +'</div><details class="ab-log"><summary>集群日志</summary><div class="ab-log-body"></div></details></div>';
@@ -2173,19 +2176,48 @@ function kgResultHTML(r){
   }).join('');
   return '<div class="link-card web web-results"><h4>📊 图谱官 · 知识图谱关联节点</h4>'+items+'</div>';
 }
+function assessResultHTML(r){
+  return '<div class="link-card safe"><h4>📝 测评官 · 掌握度测评</h4>'
+    +'<div class="web-snippet">'+esc(r.note||'')+'</div>'
+    +'<div style="margin-top:8px"><button class="btn primary sm" onclick="goAssess()">▶ 开始掌握度测评</button>'
+    +' <a class="lk" href="prep.html" target="_blank">📚 先预习 ↗</a></div>'
+    +'</div>';
+}
+function reportResultHTML(r){
+  var dims=(r.items||[]).map(function(d){
+    return '<div class="web-item"><div class="web-top"><span class="web-src">📄 '+esc(d.name)+'</span></div>'
+      +'<div class="web-snippet">'+esc(d.desc||'')+'</div></div>';
+  }).join('');
+  var secs=(r.sections||[]).map(function(s){
+    return '<span class="auth-tag local" style="margin-right:4px">'+esc(s.title||'')+'</span>';
+  }).join('');
+  return '<div class="link-card web web-results"><h4>📄 报告官 · 实验报告评分细则（6 维）</h4>'+dims
+    +'<div style="margin-top:6px"><b style="font-size:12px">重点章节：</b>'+secs+'</div>'
+    +'<div class="muted" style="font-size:12px;margin-top:4px">可 📎 上传你的实验报告，助手基于细则分析评分。</div></div>';
+}
+function prepResultHTML(r){
+  return '<div class="link-card"><h4>📚 预习官 · 课前预习</h4>'
+    +'<div class="web-snippet">'+esc(r.note||'')+'</div>'
+    +'<div style="margin-top:8px"><a class="lk" href="prep.html" target="_blank">📖 进入课前预习页 ↗</a></div>'
+    +'</div>';
+}
+function goAssess(){
+  if(typeof switchTab==='function'){ switchTab('assess', true); }
+  else { var t=document.querySelector('.tab[data-mode="assess"]'); if(t) t.click(); }
+}
 function runSkills(q, bub, ctx, force){
   var AC=window.AgentCluster;
   if(!AC||!AC.skills) return Promise.resolve();
   var cfg=(AC.getConfig().skills)||{};
   var ans=bub.querySelector('.ans');
   function skipAll(reason){
-    ['calc','manual','safety','kg','video'].forEach(function(k){ setAgentState(bub,k,'skip'); });
+    ['calc','manual','safety','kg','video','assess','report','prep'].forEach(function(k){ setAgentState(bub,k,'skip'); });
     if(reason) agentLog(bub, reason);
   }
   if(cfg.enabled===false){ skipAll('🧰 技能已关闭（🛰 集群状态可开启）'); return Promise.resolve(); }
   if(cfg.auto!==true && !force){ skipAll('🧰 技能未自动派发（自动模式关，可点「🧰 运行技能」手动触发）'); return Promise.resolve(); }
   if(ans && force) ans.querySelectorAll('.skill-card').forEach(function(el){ el.parentNode.removeChild(el); });
-  var run={ calc:cfg.calc!==false, manual:cfg.manual!==false, safety:cfg.safety!==false, kg:cfg.kg!==false, video:cfg.video!==false };
+  var run={ calc:cfg.calc!==false, manual:cfg.manual!==false, safety:cfg.safety!==false, kg:cfg.kg!==false, video:cfg.video!==false, assess:cfg.assess!==false, report:cfg.report!==false, prep:cfg.prep!==false };
   // 🧮 计算官（确定性）
   if(run.calc){
     var calcRes=AC.skills.calc(q);
@@ -2212,6 +2244,25 @@ function runSkills(q, bub, ctx, force){
       agentLog(bub,'🎥 视频官：检出操作关键词 '+esc((vidRes.items||[]).map(function(v){return v.op;}).join('、')));
     } else { setAgentState(bub,'video','skip'); }
   } else { setAgentState(bub,'video','skip'); }
+  // 📝 测评官（测试意图 → 推荐测评）
+  if(run.assess){
+    var assRes=AC.skills.assess(q);
+    if(assRes&&assRes.matched){
+      setAgentState(bub,'assess','done');
+      agentLog(bub,'📝 测评官：建议掌握度测评');
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+assessResultHTML(assRes)+'</div>');
+    } else { setAgentState(bub,'assess','skip'); }
+  } else { setAgentState(bub,'assess','skip'); }
+  // 📚 预习官（预习意图 → 预习页引导）
+  if(run.prep){
+    var prepRes=AC.skills.prep(q);
+    if(prepRes&&prepRes.matched){
+      setAgentState(bub,'prep','done');
+      agentLog(bub,'📚 预习官：建议课前预习');
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+prepResultHTML(prepRes)+'</div>');
+    } else { setAgentState(bub,'prep','skip'); }
+  } else { setAgentState(bub,'prep','skip'); }
+  // 📄 报告官（报告意图 → 评分细则，异步）
   // 📚 手册官 + 📊 图谱官（异步）
   var manualP=Promise.resolve();
   if(run.manual){
@@ -2236,7 +2287,18 @@ function runSkills(q, bub, ctx, force){
       } else { setAgentState(bub,'kg','skip'); }
     }).catch(function(){ setAgentState(bub,'kg','skip'); });
   } else { setAgentState(bub,'kg','skip'); }
-  return Promise.all([manualP, kgP]);
+  // 📄 报告官（报告意图 → 评分细则，异步）
+  var reportP=Promise.resolve();
+  if(run.report){
+    reportP=AC.skills.report(q).then(function(rr){
+      if(rr&&rr.matched){
+        setAgentState(bub,'report','done');
+        agentLog(bub,'📄 报告官：6 维评分细则');
+        if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+reportResultHTML(rr)+'</div>');
+      } else { setAgentState(bub,'report','skip'); }
+    }).catch(function(){ setAgentState(bub,'report','skip'); });
+  } else { setAgentState(bub,'report','skip'); }
+  return Promise.all([manualP, kgP, reportP]);
 }
 function runSkillsOnLast(){
   if(qaBusy||!LAST_SKILL_CTX) return;
@@ -2905,6 +2967,7 @@ window.recordLastQA=recordLastQA;
 window.reAnswerWith=reAnswerWith;
 window.toggleAgentState=toggleAgentState;
 window.runSkillsOnLast=runSkillsOnLast;
+window.goAssess=goAssess;
 window.clearWrongBook=clearWrongBook;
 window.delWrongItem=delWrongItem;
 window.calcMolar=calcMolar;

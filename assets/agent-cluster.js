@@ -40,10 +40,11 @@
     autoWebOnLow: true,        // 低置信度自动触发网页研究员
     supplementMedium: false,   // 中置信度追加网页补充（默认关，降噪）
     sources: { site: true, pubchem: true, wiki: true, bing: true }, // bing 走 CORS 代理，实验性
-    skills: {                  // 集群专业技能（计算官/手册官/安全官/图谱官/视频官）
+    skills: {                  // 集群专业技能（计算官/手册官/安全官/图谱官/视频官/测评官/报告官/预习官）
       enabled: true,           // 技能总开关
       auto: true,              // 自动模式：按问题类型自动派发
-      calc: true, manual: true, safety: true, kg: true, video: true
+      calc: true, manual: true, safety: true, kg: true, video: true,
+      assess: true, report: true, prep: true
     }
   };
   var _cfg = null;
@@ -391,6 +392,9 @@
       + chk('skills.safety', s.safety, '🔬 安全官')
       + chk('skills.kg', s.kg, '📊 图谱官')
       + chk('skills.video', s.video, '🎥 视频官')
+      + chk('skills.assess', s.assess, '📝 测评官')
+      + chk('skills.report', s.report, '📄 报告官')
+      + chk('skills.prep', s.prep, '📚 预习官')
       + '<div class="ast-muted">自动模式关：技能不自动派发，由每条回答的「🧰 运行技能」按钮手动触发；总开关关：仅核心流水线 + 网页研究。</div>';
   }
   function getStateHTML() {
@@ -613,6 +617,50 @@
     return { matched: true, items: items };
   }
 
+  /* ---------- 技能：📝 测评官（掌握度测评推荐） ---------- */
+  function assessSkill(q) {
+    var t = String(q || '');
+    if (!/测评|测试|考核|自测|练习|考考我|考我|选择题|掌握度|习题|测验/.test(t)) return { matched: false };
+    return {
+      matched: true,
+      note: '掌握度测评覆盖 10 个知识点（原理/操作/产率/误差/安全/表征/热分析等），苏格拉底式自适应问答，结束后生成三维雷达图与个性化学习建议。'
+    };
+  }
+
+  /* ---------- 技能：📄 报告官（实验报告评分细则） ---------- */
+  var _rubricCache = null, _rubricPromise = null;
+  function loadRubric() {
+    if (_rubricPromise) return _rubricPromise;
+    _rubricPromise = fetch('data/report_rubric.json').then(function (r) { if (!r.ok) throw new Error('rubric'); return r.json(); }).then(function (j) {
+      var dims = Object.keys(j.dimensions || {}).map(function (k) { return { name: k, desc: j.dimensions[k] }; });
+      var gradesObj = j.grade_expectations || {};
+      var grades = Object.keys(gradesObj).map(function (g) { return { grade: g, desc: gradesObj[g] }; }).slice(0, 3);
+      var sections = (j.sections || []).slice(0, 3).map(function (s) { return { title: s.title || s.key, q: s.quality || '' }; });
+      _rubricCache = { dims: dims, grades: grades, sections: sections };
+      return _rubricCache;
+    });
+    return _rubricPromise;
+  }
+  function reportSkill(q) {
+    var t = String(q || '');
+    if (!/实验报告|报告|撰写|评分标准|怎么评分|总结|答辩|报告怎么写/.test(t)) return Promise.resolve({ matched: false });
+    return loadRubric().then(function (rb) {
+      return { matched: true, items: rb.dims, grades: rb.grades, sections: rb.sections };
+    }).catch(function () {
+      return { matched: true, items: [], grades: [], sections: [] };
+    });
+  }
+
+  /* ---------- 技能：📚 预习官（课前预习引导） ---------- */
+  function prepSkill(q) {
+    var t = String(q || '');
+    if (!/预习|课前|准备|先学|上课前/.test(t)) return { matched: false };
+    return {
+      matched: true,
+      note: '课前预习页（prep.html）提供预习目标、关键概念梳理与自测习题，帮助提前理解三步反应原理与操作要点，带着问题进实验室。'
+    };
+  }
+
   /* ---------- 导出 ---------- */
   if (!window.AgentCluster) {
     window.AgentCluster = {
@@ -629,6 +677,9 @@
         safety: safetySkill,
         kg: kgSkill,
         video: videoSkill,
+        assess: assessSkill,
+        report: reportSkill,
+        prep: prepSkill,
         molarMass: molarMassOf
       }
     };

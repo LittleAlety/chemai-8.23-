@@ -2017,32 +2017,46 @@ function initReportRubric(){
 }
 function detectReportIntent(q){ return /报告|优化|改进|评估|建议|写得怎么样|怎么改|评分/.test(q||''); }
 function reportAnalysisHTML(text){
-  if(!REPORT_RUBRIC) return '<div class="ans-sec"><h4>📝 实验报告优化建议</h4><p class="muted">评分细则加载中，请稍后重试…</p></div>';
-  var t=String(text||'');
+  if(!REPORT_RUBRIC) return '<div class="ans-sec"><h4>📝 实验报告评估</h4><p class="muted">评分细则加载中，请稍后重试…</p></div>';
+  var t=String(text||'').trim();
+  var tlen=t.length;
+  if(tlen<80){
+    return '<div class="ans-sec"><h4>📝 实验报告评估</h4>'
+      +'<div class="rs-issue" style="color:var(--red)">⚠ 报告内容过少（仅 '+tlen+' 字），按评分细则判定为 <b>不合格（F）</b>：须包含 目的/原理/试剂仪器/内容（步骤现象）/数据处理/结论讨论 六部分，每部分需实质内容（现象、数据、分析）；仅写标题或空泛表述不计分。</div>'
+      +'<div class="muted" style="font-size:12px;margin-top:6px">可查看下方 📄 报告官细则了解各等级要求。</div></div>';
+  }
   var checks=REPORT_RUBRIC.sections.map(function(sec){
-    var title=sec.title.replace(/[（）]/g,'');
-    var present=t.indexOf(title)>=0 || t.indexOf(sec.title.replace('实验',''))>=0 || t.indexOf(sec.title.replace('和','及'))>=0;
+    var variants=[sec.title, sec.title.replace(/^实验/,''), sec.title.replace(/和/g,'及'), sec.title.replace(/[（(].*?[）)]/g,'')]
+      .filter(function(v){return v&&v.length>=3;});
+    var present=variants.some(function(v){ return t.indexOf(v)>=0; });
     var hits=0, miss=[];
     sec.required.forEach(function(kw){ if(t.indexOf(kw)>=0) hits++; else miss.push(kw); });
-    var score=present?Math.min(3,1+Math.round(hits/sec.required.length*2)):0;
+    // 命中至少 1 个要点关键词才计分（只写标题/空泛不计分）
+    var score=(present&&hits>0)?Math.min(3,1+Math.round(hits/sec.required.length*2)):0;
     return {sec:sec, present:present, hits:hits, total:sec.required.length, miss:miss, score:score};
   });
   var totalScore=checks.reduce(function(a,c){return a+c.score;},0);
   var maxScore=checks.length*3;
-  var html='<div class="ans-sec"><h4>📝 实验报告优化建议</h4>';
-  html+='<div class="muted" style="font-size:12px;margin-bottom:8px">按武汉大学实验报告评分细则（由 22 份学生报告训练得出）分析，得分约 <b>'+totalScore+'</b>/'+maxScore+'</div>';
+  var pct=totalScore/maxScore;
+  var grade=pct>=0.85?'A+':(pct>=0.7?'A':(pct>=0.5?'B':(pct>=0.35?'C':'F（不合格）')));
+  var gradeColor=pct>=0.85?'var(--em)':(pct>=0.7?'var(--teal)':(pct>=0.5?'var(--yellow)':'var(--red)'));
+  var html='<div class="ans-sec"><h4>📝 实验报告评估</h4>';
+  html+='<div class="muted" style="font-size:12px;margin-bottom:8px">按武汉大学实验报告评分细则（由 22 份学生报告训练得出）分析：得分 <b>'+totalScore+'</b>/'+maxScore+'，等级 <b style="color:'+gradeColor+'">'+grade+'</b>'+(grade==='F（不合格）'?'（未达合格要求）':'')+'</div>';
   checks.forEach(function(c){
     var icon=c.present?'✓':'✗';
     var color=c.present?(c.score>=3?'var(--em)':(c.score>=2?'var(--yellow)':'var(--red)')):'var(--red)';
-    html+='<div class="report-sec"><div class="rs-head"><span style="color:'+color+'">'+icon+'</span><b>'+esc(c.sec.title)+'</b><span class="muted" style="font-size:11px">关键词 '+c.hits+'/'+c.total+'</span></div>';
+    html+='<div class="report-sec"><div class="rs-head"><span style="color:'+color+'">'+icon+'</span><b>'+esc(c.sec.title)+'</b><span class="muted" style="font-size:11px">要点 '+c.hits+'/'+c.total+'</span></div>';
     if(!c.present) html+='<div class="rs-issue" style="color:var(--red)">⚠ 未检测到该部分，建议补充</div>';
+    else if(c.hits===0) html+='<div class="rs-issue" style="color:var(--red)">⚠ 检测到标题但无实质内容（未命中任何要点），不计分</div>';
     else if(c.miss.length) html+='<div class="rs-issue" style="color:var(--yellow)">建议补充/完善：'+c.miss.map(esc).join('、')+'</div>';
     html+='<div class="rs-sug">💡 '+esc(c.sec.suggestions[0])+'</div></div>';
   });
-  html+='<div class="report-more"><details class="side-collapse"><summary>📋 更多优化建议与等级标准</summary>';
+  html+='<div class="report-more"><details class="side-collapse"><summary>📋 等级标准与更多建议</summary>';
   html+='<div class="rs-sug" style="margin-top:6px">常见问题：'+REPORT_RUBRIC.common_issues.slice(0,5).map(esc).join('；')+'</div>';
-  html+='<div class="muted" style="font-size:12px;margin-top:6px;line-height:1.8">💠 等级参考：<br>· A+：'+esc(REPORT_RUBRIC.grade_expectations['A+'])+'<br>· A：'+esc(REPORT_RUBRIC.grade_expectations['A'])+'<br>· B：'+esc(REPORT_RUBRIC.grade_expectations['B'])+'</div>';
-  html+='</details></div></div>';
+  var ge=REPORT_RUBRIC.grade_expectations||{};
+  html+='<div class="muted" style="font-size:12px;margin-top:6px;line-height:1.8">💠 等级参考：<br>';
+  ['A+','A','B','C','F（不合格）'].forEach(function(g){ if(ge[g]) html+='· '+g+'：'+esc(ge[g])+'<br>'; });
+  html+='</div></details></div></div>';
   return html;
 }
 function analyzeUploadedReport(){
@@ -2191,9 +2205,13 @@ function reportResultHTML(r){
   var secs=(r.sections||[]).map(function(s){
     return '<span class="auth-tag local" style="margin-right:4px">'+esc(s.title||'')+'</span>';
   }).join('');
+  var grades=(r.grades||[]).map(function(g){
+    return '<div style="font-size:12px;color:var(--t2);line-height:1.7">· <b>'+esc(g.grade)+'</b>：'+esc(g.desc||'')+'</div>';
+  }).join('');
   return '<div class="link-card web web-results"><h4>📄 报告官 · 实验报告评分细则（6 维）</h4>'+dims
     +'<div style="margin-top:6px"><b style="font-size:12px">重点章节：</b>'+secs+'</div>'
-    +'<div class="muted" style="font-size:12px;margin-top:4px">可 📎 上传你的实验报告，助手基于细则分析评分。</div></div>';
+    +(grades?'<div style="margin-top:6px"><b style="font-size:12px">等级标准：</b>'+grades+'</div>':'')
+    +'<div class="muted" style="font-size:12px;margin-top:4px">可 📎 上传实验报告，助手按细则自动评估等级。</div></div>';
 }
 function prepResultHTML(r){
   return '<div class="link-card"><h4>📚 预习官 · 课前预习</h4>'

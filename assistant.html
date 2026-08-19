@@ -2094,6 +2094,9 @@ function agentBoardHTML(){
     +'<span class="ab-chip skip" data-agent="web"><span class="ab-dot"></span>🌐 网页研究员</span>'
     +'<span class="ab-chip skip" data-agent="calc"><span class="ab-dot"></span>🧮 计算官</span>'
     +'<span class="ab-chip skip" data-agent="manual"><span class="ab-dot"></span>📚 手册官</span>'
+    +'<span class="ab-chip skip" data-agent="safety"><span class="ab-dot"></span>🔬 安全官</span>'
+    +'<span class="ab-chip skip" data-agent="kg"><span class="ab-dot"></span>📊 图谱官</span>'
+    +'<span class="ab-chip skip" data-agent="video"><span class="ab-dot"></span>🎥 视频官</span>'
     +'<span class="ab-chip" data-agent="editor"><span class="ab-dot"></span>✍️ 编辑官</span>'
     +'<span class="ab-chip" data-agent="checker"><span class="ab-dot"></span>✅ 质检官</span>'
     +'</div><details class="ab-log"><summary>集群日志</summary><div class="ab-log-body"></div></details></div>';
@@ -2151,6 +2154,24 @@ function manualResultHTML(r){
   }).join('');
   return '<div class="link-card web web-results"><h4>📚 手册官 · 实验讲义参考（权威层级：讲义&gt;文献&gt;搜索）</h4>'+items+'</div>';
 }
+function safetyResultHTML(r){
+  var items=(r.items||[]).map(function(it){
+    return '<div class="web-item"><div class="web-top"><span class="web-src">⚠ '+esc(it.chem)+'</span><span class="auth-tag local">安全提示</span></div>'
+      +'<div class="web-snippet"><b>危害：</b>'+esc(it.hazard)+'<br><b>防护：</b>'+esc(it.advice)+'</div>'
+      +'</div>';
+  }).join('');
+  return '<div class="link-card warn"><h4>🔬 安全官 · 试剂危害与防护</h4>'+items
+    +'<div class="muted" style="font-size:12px;margin-top:5px">实验前请查阅 MSDS（ChemicalBook/PubChem），佩戴护目镜手套，废液分类回收。</div></div>';
+}
+function kgResultHTML(r){
+  var items=(r.items||[]).map(function(it){
+    return '<div class="web-item"><div class="web-top"><span class="web-src">📊 '+esc(it.category||'知识图谱')+'</span><a class="auth-tag local" href="'+esc(it.url||'knowledge.html')+'" target="_blank">知识图谱 ↗</a></div>'
+      +'<div class="web-title">'+esc(it.name||'')+'</div>'
+      +'<div class="web-snippet">'+esc(it.description||'')+'</div>'
+      +'</div>';
+  }).join('');
+  return '<div class="link-card web web-results"><h4>📊 图谱官 · 知识图谱关联节点</h4>'+items+'</div>';
+}
 function runSkills(q, bub, ctx){
   var AC=window.AgentCluster;
   if(!AC||!AC.skills) return Promise.resolve();
@@ -2164,8 +2185,25 @@ function runSkills(q, bub, ctx){
   } else {
     setAgentState(bub,'calc','skip');
   }
-  // 📚 手册官（讲义检索）
-  return AC.skills.manual(q, ctx.kws).then(function(mr){
+  // 🔬 安全官（安全规则）
+  var safRes=AC.skills.safety(q, ctx.chems);
+  if(safRes&&safRes.matched){
+    setAgentState(bub,'safety','done');
+    agentLog(bub,'🔬 安全官：'+esc((safRes.items||[]).length)+' 条安全提示');
+    if(ans) ans.insertAdjacentHTML('beforeend', safetyResultHTML(safRes));
+  } else {
+    setAgentState(bub,'safety','skip');
+  }
+  // 🎥 视频官（操作检测，视频卡已由主流程渲染，此处点亮芯片）
+  var vidRes=AC.skills.video(q, ctx.ops);
+  if(vidRes&&vidRes.matched){
+    setAgentState(bub,'video','done');
+    agentLog(bub,'🎥 视频官：检出操作关键词 '+esc((vidRes.items||[]).map(function(v){return v.op;}).join('、')));
+  } else {
+    setAgentState(bub,'video','skip');
+  }
+  // 📚 手册官 + 📊 图谱官（异步）
+  var manualP=AC.skills.manual(q, ctx.kws).then(function(mr){
     if(mr&&mr.matched){
       setAgentState(bub,'manual','done');
       agentLog(bub,'📚 手册官：命中「'+esc(mr.items[0].title||'')+'」');
@@ -2175,6 +2213,16 @@ function runSkills(q, bub, ctx){
       agentLog(bub,'📚 手册官：未命中讲义章节（问题超出手册覆盖）');
     }
   }).catch(function(){ setAgentState(bub,'manual','skip'); });
+  var kgP=AC.skills.kg(q, ctx.kws).then(function(kr){
+    if(kr&&kr.matched){
+      setAgentState(bub,'kg','done');
+      agentLog(bub,'📊 图谱官：关联节点 '+esc((kr.items||[]).map(function(n){return n.name;}).join('、')));
+      if(ans) ans.insertAdjacentHTML('beforeend', kgResultHTML(kr));
+    } else {
+      setAgentState(bub,'kg','skip');
+    }
+  }).catch(function(){ setAgentState(bub,'kg','skip'); });
+  return Promise.all([manualP, kgP]);
 }
 function replaceNetworkSection(ans, newHTML){
   var secs=ans.querySelectorAll('.ans-sec');
@@ -2366,7 +2414,7 @@ async function handleQA(q){
     catch(e){ setAgentState(bub,'web','warn'); }
   }
   if(clusterMode){
-    try{ await runSkills(rawQ, bub, {kws:kws, chems:chems}); }
+    try{ await runSkills(rawQ, bub, {kws:kws, chems:chems, ops:ops}); }
     catch(e){}
   }
   saveAIBubble(bub);

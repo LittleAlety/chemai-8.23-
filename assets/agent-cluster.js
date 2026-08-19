@@ -523,6 +523,74 @@
     });
   }
 
+  /* ---------- 技能：🔬 安全官（安全规则 + MSDS 入口） ---------- */
+  var SAFETY_FACTS = [
+    { chem: '草酸', hazard: '有毒：吸入/误服危害健康，刺激皮肤眼睛', advice: '戴手套护目镜、通风操作，避免皮肤接触' },
+    { chem: '过氧化氢', hazard: '腐蚀性 + 强氧化性：接触皮肤刺激，高温分解放氧', advice: '戴护目镜手套、防飞溅，远离热源；本实验用 6%' },
+    { chem: '乙醇', hazard: '易燃、挥发性', advice: '远离明火，通风处操作' },
+    { chem: '三草酸合铁', hazard: '产物低毒，光敏易分解', advice: '避光（棕色瓶）保存' },
+    { chem: '废液', hazard: '含铁 + 草酸盐属重金属废液', advice: '严禁直排下水道，倒入专用回收桶（加碱中和沉淀后处置）' }
+  ];
+  function safetySkill(q, chems) {
+    var t = String(q || '');
+    var safetyIntent = /安全|废液|防护|危险|中毒|腐蚀|易燃|泄露|应急|手套|护目镜|通风|回收|危害/.test(t);
+    var chemsList = (chems || []).map(function (c) { return c.name || ''; });
+    var matched = safetyIntent || chemsList.length > 0;
+    if (!matched) return { matched: false, items: [] };
+    var items = SAFETY_FACTS.filter(function (f) {
+      for (var i = 0; i < chemsList.length; i++) { if (f.chem.length >= 2 && chemsList[i].indexOf(f.chem.slice(0, 2)) >= 0) return true; }
+      return t.indexOf(f.chem) >= 0;
+    });
+    if (!items.length) items = SAFETY_FACTS.slice(0, 4);
+    return { matched: true, items: items };
+  }
+
+  /* ---------- 技能：📊 图谱官（知识图谱节点） ---------- */
+  var _kgCache = null, _kgPromise = null;
+  function loadKG() {
+    if (_kgPromise) return _kgPromise;
+    _kgPromise = fetch('data/kg.json').then(function (r) { if (!r.ok) throw new Error('kg'); return r.json(); }).then(function (j) {
+      _kgCache = (j.nodes || []);
+      return _kgCache;
+    });
+    return _kgPromise;
+  }
+  function kgSkill(q, kws) {
+    return loadKG().then(function (nodes) {
+      var nq = norm(q), nk = (kws || []).map(norm);
+      var scored = [];
+      nodes.forEach(function (n) {
+        var text = norm((n.name || '') + ' ' + (n.description || '') + ' ' + (n.subfield || ''));
+        var sc = 0;
+        if (nq && (text.indexOf(nq) >= 0)) sc += 3;
+        for (var i = 0; i < nk.length; i++) { if (nk[i] && text.indexOf(nk[i]) >= 0) sc += 1; }
+        if (sc > 0) scored.push({ sc: sc, n: n });
+      });
+      scored.sort(function (a, b) { return b.sc - a.sc; });
+      var top = scored.slice(0, 3).map(function (x) {
+        return { name: x.n.name, category: x.n.category, description: String(x.n.description || '').slice(0, 150), url: 'knowledge.html' };
+      });
+      return { matched: top.length > 0, items: top };
+    });
+  }
+
+  /* ---------- 技能：🎥 视频官（操作检测 → 视频推荐关键词） ---------- */
+  var OP_VIDEO_MAP = [
+    { op: '抽滤', kw: '抽滤操作' }, { op: '减压过滤', kw: '减压过滤' }, { op: '过滤', kw: '减压过滤' },
+    { op: '重结晶', kw: '重结晶' }, { op: '结晶', kw: '重结晶' },
+    { op: '滴定', kw: '滴定操作' }, { op: '氧化', kw: '制备' }, { op: '避光', kw: '制备' },
+    { op: '干燥', kw: '制备' }, { op: '洗涤', kw: '制备' }
+  ];
+  function videoSkill(q, ops) {
+    var t = String(q || '');
+    var opsList = (ops || []).slice();
+    OP_VIDEO_MAP.forEach(function (v) { if (t.indexOf(v.op) >= 0 && opsList.indexOf(v.op) < 0) opsList.push(v.op); });
+    if (!opsList.length) return { matched: false, items: [] };
+    var items = OP_VIDEO_MAP.filter(function (v) { return opsList.indexOf(v.op) >= 0; })
+      .map(function (v) { return { op: v.op, kw: v.kw }; });
+    return { matched: true, items: items };
+  }
+
   /* ---------- 导出 ---------- */
   if (!window.AgentCluster) {
     window.AgentCluster = {
@@ -536,6 +604,9 @@
       skills: {
         calc: calcSkill,
         manual: manualSkill,
+        safety: safetySkill,
+        kg: kgSkill,
+        video: videoSkill,
         molarMass: molarMassOf
       }
     };

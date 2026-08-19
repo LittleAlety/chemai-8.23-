@@ -39,7 +39,12 @@
   var DEFAULTS = {
     autoWebOnLow: true,        // 低置信度自动触发网页研究员
     supplementMedium: false,   // 中置信度追加网页补充（默认关，降噪）
-    sources: { site: true, pubchem: true, wiki: true, bing: true } // bing 走 CORS 代理，实验性
+    sources: { site: true, pubchem: true, wiki: true, bing: true }, // bing 走 CORS 代理，实验性
+    skills: {                  // 集群专业技能（计算官/手册官/安全官/图谱官/视频官）
+      enabled: true,           // 技能总开关
+      auto: true,              // 自动模式：按问题类型自动派发
+      calc: true, manual: true, safety: true, kg: true, video: true
+    }
   };
   var _cfg = null;
   function getConfig() {
@@ -371,6 +376,23 @@
         + esc(on ? '开' : '关') + '</label></div>';
     }).join('');
   }
+  function skillsStatusHTML() {
+    var cfg = getConfig(), s = cfg.skills || {};
+    function chk(path, on, label) {
+      return '<div class="ast-row"><span class="ast-name">' + label + '</span>'
+        + '<label class="ast-sw"><input type="checkbox" data-sk="' + path + '"' + (on ? ' checked' : '')
+        + ' onchange="AgentCluster.setConfig(\'' + path + '\',this.checked)"></label></div>';
+    }
+    return '<div class="ast-title" style="margin-top:8px">🧰 集群技能</div>'
+      + chk('skills.enabled', s.enabled, '技能总开关')
+      + chk('skills.auto', s.auto, '自动模式（按题派发）')
+      + chk('skills.calc', s.calc, '🧮 计算官')
+      + chk('skills.manual', s.manual, '📚 手册官')
+      + chk('skills.safety', s.safety, '🔬 安全官')
+      + chk('skills.kg', s.kg, '📊 图谱官')
+      + chk('skills.video', s.video, '🎥 视频官')
+      + '<div class="ast-muted">自动模式关：技能不自动派发，由每条回答的「🧰 运行技能」按钮手动触发；总开关关：仅核心流水线 + 网页研究。</div>';
+  }
   function getStateHTML() {
     var cfg = getConfig();
     var rows = sourceStatusHTML();
@@ -381,7 +403,7 @@
       + '<label class="ast-sw"><input type="checkbox" data-cfg="supplementMedium"' + (cfg.supplementMedium ? ' checked' : '')
       + ' onchange="AgentCluster.setConfig(\'supplementMedium\',this.checked)"></label></div>';
     return '<div class="ast-panel"><div class="ast-title">🛰 集群状态 · 网页源</div>'
-      + rows + extra
+      + rows + extra + skillsStatusHTML()
       + '<div class="ast-muted">网络资料权威层级：实验讲义 &gt; 文献 &gt; 搜索；网页结果仅供补充，与讲义冲突时以讲义为准。Bing 源经第三方代理，仅作实验性探索。</div></div>';
   }
 

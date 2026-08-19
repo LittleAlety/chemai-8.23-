@@ -2051,6 +2051,7 @@ function analyzeUploadedReport(){
 }
 /* ================= 智能体集群工作台 + 网页研究员（v56） ================= */
 var QA_OVERRIDE={web:false,llm:false,regen:false};
+var LAST_SKILL_CTX=null;
 var AC_PROMISE=null;
 /* 回答模式：normal=快速本地（改造前行为）；cluster=智能体集群+网页研究 */
 var CHAT_MODE=null;
@@ -2172,57 +2173,77 @@ function kgResultHTML(r){
   }).join('');
   return '<div class="link-card web web-results"><h4>📊 图谱官 · 知识图谱关联节点</h4>'+items+'</div>';
 }
-function runSkills(q, bub, ctx){
+function runSkills(q, bub, ctx, force){
   var AC=window.AgentCluster;
   if(!AC||!AC.skills) return Promise.resolve();
+  var cfg=(AC.getConfig().skills)||{};
   var ans=bub.querySelector('.ans');
+  function skipAll(reason){
+    ['calc','manual','safety','kg','video'].forEach(function(k){ setAgentState(bub,k,'skip'); });
+    if(reason) agentLog(bub, reason);
+  }
+  if(cfg.enabled===false){ skipAll('🧰 技能已关闭（🛰 集群状态可开启）'); return Promise.resolve(); }
+  if(cfg.auto!==true && !force){ skipAll('🧰 技能未自动派发（自动模式关，可点「🧰 运行技能」手动触发）'); return Promise.resolve(); }
+  if(ans && force) ans.querySelectorAll('.skill-card').forEach(function(el){ el.parentNode.removeChild(el); });
+  var run={ calc:cfg.calc!==false, manual:cfg.manual!==false, safety:cfg.safety!==false, kg:cfg.kg!==false, video:cfg.video!==false };
   // 🧮 计算官（确定性）
-  var calcRes=AC.skills.calc(q);
-  if(calcRes&&calcRes.matched){
-    setAgentState(bub,'calc','done');
-    agentLog(bub,'🧮 计算官：'+esc(calcRes.title||'完成定量计算'));
-    if(ans) ans.insertAdjacentHTML('beforeend', calcResultHTML(calcRes));
-  } else {
-    setAgentState(bub,'calc','skip');
-  }
+  if(run.calc){
+    var calcRes=AC.skills.calc(q);
+    if(calcRes&&calcRes.matched){
+      setAgentState(bub,'calc','done');
+      agentLog(bub,'🧮 计算官：'+esc(calcRes.title||'完成定量计算'));
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+calcResultHTML(calcRes)+'</div>');
+    } else { setAgentState(bub,'calc','skip'); }
+  } else { setAgentState(bub,'calc','skip'); }
   // 🔬 安全官（安全规则）
-  var safRes=AC.skills.safety(q, ctx.chems);
-  if(safRes&&safRes.matched){
-    setAgentState(bub,'safety','done');
-    agentLog(bub,'🔬 安全官：'+esc((safRes.items||[]).length)+' 条安全提示');
-    if(ans) ans.insertAdjacentHTML('beforeend', safetyResultHTML(safRes));
-  } else {
-    setAgentState(bub,'safety','skip');
-  }
+  if(run.safety){
+    var safRes=AC.skills.safety(q, ctx.chems);
+    if(safRes&&safRes.matched){
+      setAgentState(bub,'safety','done');
+      agentLog(bub,'🔬 安全官：'+esc((safRes.items||[]).length)+' 条安全提示');
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+safetyResultHTML(safRes)+'</div>');
+    } else { setAgentState(bub,'safety','skip'); }
+  } else { setAgentState(bub,'safety','skip'); }
   // 🎥 视频官（操作检测，视频卡已由主流程渲染，此处点亮芯片）
-  var vidRes=AC.skills.video(q, ctx.ops);
-  if(vidRes&&vidRes.matched){
-    setAgentState(bub,'video','done');
-    agentLog(bub,'🎥 视频官：检出操作关键词 '+esc((vidRes.items||[]).map(function(v){return v.op;}).join('、')));
-  } else {
-    setAgentState(bub,'video','skip');
-  }
+  if(run.video){
+    var vidRes=AC.skills.video(q, ctx.ops);
+    if(vidRes&&vidRes.matched){
+      setAgentState(bub,'video','done');
+      agentLog(bub,'🎥 视频官：检出操作关键词 '+esc((vidRes.items||[]).map(function(v){return v.op;}).join('、')));
+    } else { setAgentState(bub,'video','skip'); }
+  } else { setAgentState(bub,'video','skip'); }
   // 📚 手册官 + 📊 图谱官（异步）
-  var manualP=AC.skills.manual(q, ctx.kws).then(function(mr){
-    if(mr&&mr.matched){
-      setAgentState(bub,'manual','done');
-      agentLog(bub,'📚 手册官：命中「'+esc(mr.items[0].title||'')+'」');
-      if(ans) ans.insertAdjacentHTML('beforeend', manualResultHTML(mr));
-    } else {
-      setAgentState(bub,'manual','skip');
-      agentLog(bub,'📚 手册官：未命中讲义章节（问题超出手册覆盖）');
-    }
-  }).catch(function(){ setAgentState(bub,'manual','skip'); });
-  var kgP=AC.skills.kg(q, ctx.kws).then(function(kr){
-    if(kr&&kr.matched){
-      setAgentState(bub,'kg','done');
-      agentLog(bub,'📊 图谱官：关联节点 '+esc((kr.items||[]).map(function(n){return n.name;}).join('、')));
-      if(ans) ans.insertAdjacentHTML('beforeend', kgResultHTML(kr));
-    } else {
-      setAgentState(bub,'kg','skip');
-    }
-  }).catch(function(){ setAgentState(bub,'kg','skip'); });
+  var manualP=Promise.resolve();
+  if(run.manual){
+    manualP=AC.skills.manual(q, ctx.kws).then(function(mr){
+      if(mr&&mr.matched){
+        setAgentState(bub,'manual','done');
+        agentLog(bub,'📚 手册官：命中「'+esc(mr.items[0].title||'')+'」');
+        if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+manualResultHTML(mr)+'</div>');
+      } else {
+        setAgentState(bub,'manual','skip');
+        agentLog(bub,'📚 手册官：未命中讲义章节（问题超出手册覆盖）');
+      }
+    }).catch(function(){ setAgentState(bub,'manual','skip'); });
+  } else { setAgentState(bub,'manual','skip'); }
+  var kgP=Promise.resolve();
+  if(run.kg){
+    kgP=AC.skills.kg(q, ctx.kws).then(function(kr){
+      if(kr&&kr.matched){
+        setAgentState(bub,'kg','done');
+        agentLog(bub,'📊 图谱官：关联节点 '+esc((kr.items||[]).map(function(n){return n.name;}).join('、')));
+        if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+kgResultHTML(kr)+'</div>');
+      } else { setAgentState(bub,'kg','skip'); }
+    }).catch(function(){ setAgentState(bub,'kg','skip'); });
+  } else { setAgentState(bub,'kg','skip'); }
   return Promise.all([manualP, kgP]);
+}
+function runSkillsOnLast(){
+  if(qaBusy||!LAST_SKILL_CTX) return;
+  var ctx=LAST_SKILL_CTX, bub=ctx.bub;
+  if(!bub||!bub.isConnected) bub=document.querySelector('.msg.ai:last-child .bubble');
+  runSkills(ctx.q, bub, ctx, true).catch(function(){});
+  scrollChat(qaChat);
 }
 function replaceNetworkSection(ans, newHTML){
   var secs=ans.querySelectorAll('.ans-sec');
@@ -2405,6 +2426,7 @@ async function handleQA(q){
     html+='<div class="ans-sec agent-actions" style="margin-top:6px"><button class="btn ghost sm" onclick="reAnswerWith(0)">🔄 重新生成</button>'
        +'<button class="btn ghost sm" onclick="reAnswerWith(1)">🌐 加强网页检索</button>'
        +'<button class="btn ghost sm" onclick="reAnswerWith(2)">🤖 用LLM重答</button>'
+       +'<button class="btn ghost sm" onclick="runSkillsOnLast()">🧰 运行技能</button>'
        +'<button class="btn ghost sm" onclick="toggleAgentState()">🛰 集群状态</button></div>';
   }
   var ans=document.createElement('div');ans.className='ans';ans.innerHTML=html;bub.appendChild(ans);
@@ -2414,6 +2436,7 @@ async function handleQA(q){
     catch(e){ setAgentState(bub,'web','warn'); }
   }
   if(clusterMode){
+    LAST_SKILL_CTX={q:rawQ, kws:kws, chems:chems, ops:ops, bub:bub};
     try{ await runSkills(rawQ, bub, {kws:kws, chems:chems, ops:ops}); }
     catch(e){}
   }
@@ -2881,6 +2904,7 @@ window.clearUploadedFile=clearUploadedFile;
 window.recordLastQA=recordLastQA;
 window.reAnswerWith=reAnswerWith;
 window.toggleAgentState=toggleAgentState;
+window.runSkillsOnLast=runSkillsOnLast;
 window.clearWrongBook=clearWrongBook;
 window.delWrongItem=delWrongItem;
 window.calcMolar=calcMolar;

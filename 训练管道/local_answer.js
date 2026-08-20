@@ -181,9 +181,11 @@ function matchFAQ(q){
   var nq=norm(fixTypos(q));var best=null,bestScore=0;
   // IDF 惩罚表：高频通用词降权
   var IDF_PENALTY={'实验':0.4,'制备':0.5,'化学':0.5,'操作':0.6,'步骤':0.6,'原理':0.5,'方法':0.6,'分析':0.6,'测定':0.6,'研究':0.7,'反应':0.5,'产物':0.6,'合成':0.5,'配合物':0.6};
+  // 泛词(操作/概念)不作为"显著词"——仅命中泛词不视为主题命中
+  var GENERIC_KEYS={'实验':1,'制备':1,'化学':1,'操作':1,'步骤':1,'原理':1,'方法':1,'分析':1,'测定':1,'研究':1,'反应':1,'产物':1,'合成':1,'配合物':1,'氧化':1,'温度':1,'产率':1,'沉淀':1,'结晶':1,'过滤':1,'洗涤':1,'烘干':1,'干燥':1,'避光':1,'加热':1,'冷却':1,'溶解':1,'静置':1,'时间':1,'颜色':1,'现象':1,'安全':1,'影响':1,'原因':1,'过程':1,'条件':1,'用量':1,'浓度':1,'作用':1,'顺序':1,'终点':1,'检验':1,'验证':1,'水浴':1,'搅拌':1,'生成':1,'分解':1};
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
-    var kh=0,longKey=0,keyScore=0,hits=[];
+    var kh=0,longKey=0,keyScore=0,hits=[],distinctHits=0;
     for(var j=0;j<f.keys.length;j++){
       var k=f.keys[j];var nk=norm(k);
       if(nq.indexOf(nk)>=0){
@@ -191,23 +193,24 @@ function matchFAQ(q){
         if(nk.length>=3) longKey++;
         var idf=IDF_PENALTY[k]||1.0;
         keyScore+=2*idf;
+        if(nk.length>=2 && !GENERIC_KEYS[k]) distinctHits++;
       }
     }
     var eh=0,entScore=0;
     for(var ej=0;ej<(f.ents||[]).length;ej++){
       var en=f.ents[ej];
-      if(nq.indexOf(norm(en))>=0){eh++;entScore+=3;}
+      if(nq.indexOf(norm(en))>=0){eh++;entScore+=2;}
     }
     var fq=norm(fixTypos(f.q||''));   // 存储q也过fixTypos, 与nq(fixT'd用户题)对齐
     var exactQ=fq && fq===nq;
-    var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||exactQ;
+    var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||(distinctHits>=1)||exactQ;
     if(!trig) continue;
     // 答案长度加权：仅在命中"具体长关键词"(≥3字)时加分（与 assistant.html 同步，避免长而离题条目压过专题条目）
     var lenBonus=(longKey>0)?Math.min(2,((f.answer||'').length+(f.detail||'').length)/800):0;
-    // 标题主题加成：命中关键词出现在条目标题 → 该条目更可能是本题主题（与 assistant.html 同步）
-    var titleBonus=0, nTitle=norm(f.title||'');
-    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ titleBonus=2; break; } }
-    var score=keyScore+entScore+longKey*0.5+lenBonus+titleBonus;
+    // 标题主题加成：≥3字命中关键词在标题→+5；仅2字→+3（与 assistant.html 同步）
+    var titleTopical=0, nTitle=norm(f.title||'');
+    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ if(norm(hits[hi]).length>=3) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
+    var score=keyScore+entScore+longKey*0.5+lenBonus+titleTopical+distinctHits*2;
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
     if(score>bestScore){bestScore=score;best=f;}

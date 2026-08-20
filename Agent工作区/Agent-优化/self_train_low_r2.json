@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Q159",
+    "question": "第二步氧化中需加入3.5g K₂C₂O₄·H₂O，其不仅作为草酸根来源，还起调节pH作用。若将K₂C₂O₄等摩尔替换为K₂SO₄，试从Fe³⁺水解平衡、氧化还原反应可行性及后续配位步骤三方面分析实验会如何失败？",
+    "score": 8.3,
+    "missing": "氧化还原反应可行性方面的具体分析",
+    "matchedFAQ": "第二步氧化中需加入3.5g K₂C₂O₄·H…",
+    "answerText": "K₂SO₄不提供草酸根，Fe²⁺无法被稳定为草酸配合物，H₂O₂氧化后Fe³⁺在近中性下易水解为Fe(OH)₃沉淀，得不到可溶性翠绿色配合物；且体系缺乏碱性缓冲，pH不利于后续配位反应，第三步无法进行。\n\n参考语料：\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《preparation-analysis-and-characterization-of-some-transit"
+  },
+  {
+    "id": "Q166",
+    "question": "第二步氧化中，权威参数为6% H₂O₂ 8mL（旧资料10mL为笔误）。若学生误加12mL H₂O₂且未在沸后除尽过量H₂O₂，对后续第三步配位和最终产物可能造成什么影响？从H₂O₂的氧化性及副反应角度说明。",
+    "score": 9.2,
+    "missing": "无明显缺漏，但补充了30%H₂O₂折算的讨论未说完",
+    "matchedFAQ": "误加10mL H₂O₂（正确值8mL）的影响及过量H₂O₂去向",
+    "answerText": "过量H₂O₂会在加热煮沸2分钟时分解（2H₂O₂→2H₂O+O₂↑），但若分解不完全，残留H₂O₂会：(1) 氧化草酸根生成CO₂，导致配体损失；(2) 在后续结晶时缓慢分解放出O₂，使晶体疏松含气泡；(3) 可能氧化Fe³⁺-草酸配合物中草酸根，造成产率下降。此外需更长时间沸腾，可能增加Fe(OH)₃胶体生成，影响配位终点判断。\n\n用量及分解操作见讲义第二步；corpus#36、#42、#46均有H₂O₂用量讨论。\n讲义权威规定6%H₂O₂为8mL，此量足以使FeC₂O₄定量氧化为Fe³⁺（结合反应式2计量）。过量H₂O₂若未煮沸分解（需保持沸腾2分钟），残留会氧化草酸根生成CO₂和水，使后"
+  }
+]

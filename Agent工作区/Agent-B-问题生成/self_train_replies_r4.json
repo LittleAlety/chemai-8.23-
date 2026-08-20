@@ -1,0 +1,1395 @@
+[
+  {
+    "id": "Q001",
+    "question": "第二步氧化反应完成后，讲义规定加热至沸保持2分钟以除去过量H₂O₂。若学生担心Fe²⁺未被氧化完全，将煮沸时间延长至10分钟，产物最终颜色和纯度会发生什么变化？请从H₂O₂分解动力学与Fe³⁺-草酸根体系热稳定性两方面分析。",
+    "matchedFAQ": "第二步氧化反应完成后，讲义规定加热至沸保持2…",
+    "confidence": "high",
+    "answerText": "延长煮沸虽可彻底分解H₂O₂，但长时间沸腾会使K₃[Fe(C₂O₄)₃]部分水解，草酸根在高温下分解为CO₂，导致配体损失、体系pH升高，产物中混入Fe(OH)₃或碱式盐，颜色由翠绿变黄褐。同时沸腾可能使未反应的FeC₂O₄重新沉淀。因此2分钟足以分解H₂O₂，过度加热反而降低产率与纯度。\n\n参考语料：\n· 《探究两种水合草酸合铜(II)酸钾晶体的合成》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》"
+  },
+  {
+    "id": "Q003",
+    "question": "如何通过三种实验确定K₃[Fe(C₂O₄)₃]·3H₂O的内界与外界组成？若某学生用BaCl₂溶液滴入产物溶液产生白色沉淀，据此认定SO₄²⁻存在于外界，其结论是否可靠？请分析。",
+    "matchedFAQ": "如何通过三种实验确定K₃[Fe(C₂O₄)₃…",
+    "confidence": "high",
+    "answerText": "三种验证：①电导法——摩尔电导率与3:1型电解质相符；②离子交换——通过阳离子交换树脂后测定K⁺含量；③沉淀反应——滴加K₃[Fe(CN)₆]不显蓝（内界无游离Fe²⁺），滴加BaCl₂若产生白色沉淀需加稀硝酸检验，若不溶则为SO₄²⁻，但草酸钡溶于酸。用BaCl₂直接检验SO₄²⁻不可靠，因为草酸根也能与Ba²⁺生成白色草酸钡沉淀，造成误判。\n\n参考语料：\n· 《ed051p129-Preparation and properties of potassium trioxalatoferrate(III)》\n· 《无机化学实验教学中对三草酸合铁 酸钾制备的实验改进》\n· 《三草酸合铁 酸钾制备实验的探究》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《ed047p702》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》"
+  },
+  {
+    "id": "Q005",
+    "question": "产物K₃[Fe(C₂O₄)₃]在酸性溶液中光照下光解速率显著加快。若学生在第三步配位结束后未及时调节至弱酸性（草酸过量即可维持），而是使体系呈强酸性（如误加过量H₂SO₄），对后续结晶步骤的暗处静置和产物稳定性有何影响？",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]在酸性溶液中光…",
+    "confidence": "high",
+    "answerText": "强酸性下草酸根质子化为H₂C₂O₄，配体有效浓度降低，[Fe(C₂O₄)₃]³⁻解离加剧，游离Fe³⁺增多。光照下光解产生的Fe²⁺在酸性介质中不易被重新氧化，且质子化削弱了配体→金属的LMCT效率但加速了草酸根的氧化分解。最终产物中Fe²⁺含量升高、颜色变浅，产率下降。强酸使草酸根质子化，降低配位能力，可能导致第三步配位不完全。\n\n参考语料：\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《《硫酸亚铁铵的制备》简介》\n· 《实验 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q007",
+    "question": "蓝晒法利用K₃[Fe(C₂O₄)₃]的光敏性：紫外光照射使Fe³⁺还原为Fe²⁺，随后与铁氰化钾反应生成普鲁士蓝。若学生制备的产物因第二步H₂O₂未除净（煮沸时间不足）而残留少量H₂O₂，用该产物配制感光液进行蓝晒时，图像对比度会发生什么变化？请从氧化还原角度解释。",
+    "matchedFAQ": "蓝晒法利用K₃[Fe(C₂O₄)₃]的光敏性…",
+    "confidence": "high",
+    "answerText": "残留的H₂O₂是强氧化剂，能将光解产生的Fe²⁺重新氧化为Fe³⁺，抑制普鲁士蓝的生成，导致图像蓝色变浅、对比度下降。同时H₂O₂可能氧化草酸根或分解产生O₂干扰显色。因此第二步煮沸2分钟除尽H₂O₂是保证后续光化学应用性能的关键步骤。\n\n参考语料：\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment》"
+  },
+  {
+    "id": "Q009",
+    "question": "实验完成后，含有草酸根和Fe³⁺/Fe²⁺的滤液与洗涤液按讲义要求应分类处理。某学生将含K₃[Fe(C₂O₄)₃]的废液直接倒入含酸性Cr₂O₇²⁻的废液缸中，可能发生什么反应？对后续废液处理有何隐患？",
+    "matchedFAQ": "实验完成后，含有草酸根和Fe³⁺/Fe²⁺的…",
+    "confidence": "high",
+    "answerText": "酸性条件下，草酸根可被Cr₂O₇²⁻氧化为CO₂，同时Fe³⁺/Fe²⁺发生电子转移，Cr(VI)被还原为Cr(III)。这虽降低了Cr(VI)毒性，但反应放热且产生CO₂气体，若废液缸密闭可能鼓胀；同时Fe²⁺与Cr₂O₇²⁻反应生成的Fe³⁺可能水解产生沉淀，堵塞管道。更严重的是若体系碱性则Cr(III)可能再氧化回Cr(VI)。故应按讲义分类：含铬废液单独还原处理，草酸废液氧化后中和排放。\n\n参考语料：\n· 《Potassium ferrioxalate (Wikipedia)》\n· 《教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《Synthesis of Potassium tris(oxalato)ferrate》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》"
+  },
+  {
+    "id": "Q006",
+    "question": "第三步配位时，讲义要求将约1.5g草酸配成约0.5mol/L溶液后逐滴滴加。若学生误将草酸配成1.0mol/L（仍保持总体积约30mL），且仍以相同的目视终点（透明翠绿）判断，对反应完成度和产物纯度有何影响？请结合配位平衡和Ksp分析。",
+    "matchedFAQ": "第三步配位时，讲义要求将约1.5g草酸配成约…",
+    "confidence": "high",
+    "answerText": "草酸浓度加倍，相同体积下草酸总量翻倍（约0.03mol），远大于理论需量。虽然Fe(OH)₃能溶解且溶液变透明翠绿，但过量草酸会与产物形成竞争配位或生成H₂C₂O₄·2H₂O结晶，降低纯度；同时强酸性可能促进产物在静置时分解析出草酸。应严格控制草酸用量，终点应以恰好溶解为度。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《Photochemistry》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》"
+  },
+  {
+    "id": "Q008",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将两种溶液分别加热近沸后再混合，随后微沸4分钟。若学生将两种室温溶液直接混合后再加热至微沸，对沉淀的粒径、过滤效率和产率有何影响？从沉淀动力学和过饱和度角度解释。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "室温直接混合时反应速率慢，过饱和度低，易形成细小晶核且晶粒长大缓慢，沉淀可能呈胶状，过滤困难且损失大；加热近沸再加入则瞬间产生高过饱和度，形成较少晶核、晶体较大，易倾滗和洗涤。若未预加热，微沸时间需延长，否则沉淀不完全，产率降低。\n\n参考语料：\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《ed1c00776 si 001》\n· 《junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《morphology-controllable-synthesis-of-microporous-prussian-blue-analogue-zn3-co(cn)6-2-xh2o》"
+  },
+  {
+    "id": "Q010",
+    "question": "已知K₃[Fe(C₂O₄)₃]在中性水中稳定，但若往产物溶液中滴加稀H₂SO₄使pH降至约1，溶液由翠绿色逐渐变为浅黄色。请从配位平衡移动和草酸根质子化角度解释该现象，并说明此性质如何用于验证内外界？",
+    "matchedFAQ": "已知K₃[Fe(C₂O₄)₃]在中性水中稳定…",
+    "confidence": "high",
+    "answerText": "H⁺使C₂O₄²⁻质子化为HC₂O₄⁻或H₂C₂O₄，配体浓度下降，[Fe(C₂O₄)₃]³⁻解离出Fe³⁺和草酸，生成浅黄色的[Fe(H₂O)₆]³⁺或水解产物。此现象说明草酸根是内界配体，加酸可破坏配位平衡。利用此性质可验证配合物内外界：加入酸后若颜色改变，证明草酸根在内界。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《草酸分子结构与性质的量子化学计算研究》\n· 《ed051p129-Preparation and properties of potassium trioxalatoferrate(III)》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》"
+  },
+  {
+    "id": "Q012",
+    "question": "第一步微沸4分钟是制备FeC₂O₄·2H₂O的关键时间控制。若学生为节省时间将微沸缩短至1分钟，而沉淀似乎已生成，试分析对后续第二步氧化反应及最终产率的影响；若延长至30分钟又有何风险？",
+    "matchedFAQ": "第一步微沸4分钟是制备FeC₂O₄·2H₂O…",
+    "confidence": "high",
+    "answerText": "缩短至1分钟，沉淀反应不完全，母液中残留Fe²⁺和草酸，导致FeC₂O₄量少且细碎，第二步氧化时H₂O₂用量相对过剩，且残留Fe²⁺可能进入产物使纯度降低。延长至30分钟，长时间沸腾水分蒸发多，溶液过浓可能夹杂杂质；同时Fe²⁺在酸性有氧条件下缓慢氧化为Fe³⁺，生成Fe(OH)₃夹带，降低产率。\n\n参考语料：\n· 《recovery-of-iron-resources-from-wet-process-phosphoric-acid-and-the-preparation-of-high-purity-ferrous-oxalate》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《无机化学实验教学中对三草酸...Ⅲ) 酸钾制备的实验改进》\n· 《jp312603m》\n· 《合成及组成分析》\n· 《在基础化学实验教学过程中如何培养学生“想”的意识——以“经典合成实验”教学为例》"
+  },
+  {
+    "id": "Q014",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O在230℃分解，但讲义要求50℃烘干。若学生按光敏原理推断：既然需要暗处，温度也应低，于是将烘干温度设为80℃且烘干2小时，对产物有何影响？请从热稳定性、失结晶水和光化学反应角度分析。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O在2…",
+    "confidence": "high",
+    "answerText": "80℃虽低于230℃分解温度和100℃失结晶水温度，但已超过讲义规定的50℃烘干温度，长时间烘干可能导致表面部分氧化或晶格缺陷，甚至缓慢分解，使产物组成偏离化学计量，颜色变浅。应严格按50℃烘干20分钟。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《sattar-2016-the-chemistry-of-photography-still-a-terrific-laboratory-course-for-nonscience》\n· 《vogler-kunkely-1982-photochemistry-and》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《wang-et-al-2023-rapid-redox-cycling-of-fe(ii)-fe(iii)-in-microdroplets-during-iron-citric-acid》"
+  },
+  {
+    "id": "Q011",
+    "question": "第一步用热水洗涤FeC₂O₄沉淀时，洗涤终点是以“向洗液中滴加BaCl₂无白色沉淀”作为SO₄²⁻洗净的标志。已知BaC₂O₄也是白色难溶盐（Ksp≈1.6×10⁻⁷），而洗液中可能同时含有微量草酸根。若洗液中存在C₂O₄²⁻，用BaCl₂检验会产生什么现象？如何区分白色沉淀是BaSO₄还是BaC₂O₄？应如何改进检验方法使终点判断更可靠？",
+    "matchedFAQ": "第一步用热水洗涤FeC₂O₄沉淀时，洗涤终点…",
+    "confidence": "high",
+    "answerText": "Ba²⁺与C₂O₄²⁻也生成白色BaC₂O₄沉淀，因而产生白色浑浊不能唯一证明是SO₄²⁻。区分：向沉淀中加几滴稀盐酸，BaC₂O₄溶于酸而BaSO₄不溶。改进：向洗液中先加稀盐酸酸化，再滴BaCl₂，仅若有白色不溶沉淀生成才代表SO₄²⁻；或改用酸化后检验，避免C₂O₄²⁻干扰。\n\n参考语料：\n· 《k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《二草酸合铜酸钾制备中的疑难问题》\n· 《the-mechanism-of-the-permanganate-oxalate》\n· 《ja01613a002》\n· 《铜循环（基础化学实验01）》"
+  },
+  {
+    "id": "Q013",
+    "question": "讲义将6% H₂O₂用量定为8mL（旧资料为10mL）。按5.0g摩尔盐计算，FeC₂O₄物质的量约为0.0128mol，第二步反应方程中每6mol FeC₂O₄消耗3mol H₂O₂。请核算8mL 6% H₂O₂（密度约1.02g/cm³）是否满足化学计量要求？若改为10mL，对反应和后续操作有何影响？",
+    "matchedFAQ": "讲义将6% H₂O₂用量定为8mL（旧资料为…",
+    "confidence": "high",
+    "answerText": "8mL×1.02g/mL×6%÷34g/mol≈0.0144mol H₂O₂；需用量为0.0128÷2=0.0064mol，8mL已过量约2.25倍，足够将Fe²⁺完全氧化，故8mL足够。若用10mL（约0.018mol），过量更多，氧化更充分但需确保后续煮沸分解彻底，否则残余H₂O₂会干扰第三步配位。\n\n参考语料：\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《实验十六 硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《实验 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q015",
+    "question": "第一步要求将摩尔盐溶液和草酸溶液分别加热至近沸后再混合，然后微沸4分钟。若学生为省时，只加热草酸溶液至近沸、摩尔盐溶液仍为室温，便将两者混合后直接加热至微沸4分钟，从沉淀成核、晶体生长和杂质包裹的角度分析，这样做对FeC₂O₄·2H₂O沉淀质量会有什么不利影响？",
+    "matchedFAQ": "第一步要求将摩尔盐溶液和草酸溶液分别加热至近…",
+    "confidence": "high",
+    "answerText": "两种溶液温度差大时，混合瞬间局部过饱和度急剧升高，成核速率远大于晶体生长速率，产生大量细小晶粒而非完整大晶体；小晶粒比表面积大，易吸附母液中的Fe²⁺、NH₄⁺、SO₄²⁻等杂质且难洗涤。先分别近沸再混合使体系温度均匀，过饱和度受控，晶体易长大、纯度高。直接加热虽延长沸腾时间，但温度分布不均难以弥补初期过多核的负面效应。\n\n参考语料：\n· 《FeSO4》\n· 《三、硫酸亚铁铵的制备》\n· 《10》\n· 《Ferrous Ammonium》\n· 《制备硫酸亚铁铵单晶的实验研究》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q017",
+    "question": "第二步中，滴加完H₂O₂后需“加热至沸保持2分钟”以分解过量H₂O₂。若学生因时间紧张只煮沸半分钟就进入第三步配位，体系仍残留微量H₂O₂。已知第三步要加入草酸溶液并搅拌，H₂O₂可能与草酸发生氧化还原反应（H₂C₂O₄+H₂O₂→2CO₂+2H₂O）。请分析残留H₂O₂对第三步配位反应和最终产物的具体影响。",
+    "matchedFAQ": "第二步中，滴加完H₂O₂后需“加热至沸保持2…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会氧化草酸生成CO₂，消耗草酸配体源，同时产生气泡使体系剧烈冒泡；若Fe(OH)₃存在还可能催化H₂O₂分解，进一步加剧草酸损失。结果草酸不足导致配位不完全，溶液不能形成透明翠绿，产物中夹杂Fe(OH)₃或未配位铁，产率和纯度下降。因此必须充分煮沸彻底除尽H₂O₂。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic》"
+  },
+  {
+    "id": "Q019",
+    "question": "第二步中，H₂O₂滴加完毕后，讲义要求继续在40℃水浴中搅拌5分钟，之后才加热至沸除过量H₂O₂。若省去这5分钟直接加热煮沸，对Fe²⁺氧化的完全程度会产生什么影响？请结合H₂O₂热分解与FeC₂O₄固体表面反应的非均相特征加以分析。",
+    "matchedFAQ": "第二步中，H₂O₂滴加完毕后，讲义要求继续在…",
+    "confidence": "high",
+    "answerText": "FeC₂O₄为固体颗粒，H₂O₂的氧化发生在固液界面，滴加过程中H₂O₂未必完全渗透至颗粒内部，Fe²⁺可能残留。40℃搅拌5分钟使H₂O₂与颗粒充分接触、逐层扩散氧化，保证Fe²⁺氧化完全。若直接煮沸，H₂O₂在高温下迅速分解殆尽，大量Fe²⁺未被氧化，后续K₃[Fe(CN)₆]检验出现蓝色，产物含杂质，产率下降。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《铜循环（基础化学实验01）》\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《三草酸合铁（Ⅲ）酸钾的制备及组成测定》"
+  },
+  {
+    "id": "Q016",
+    "question": "第三步配位中，为什么讲义要求将约1.5g草酸配成约0.5mol/L溶液后逐滴滴加，而不能将草酸固体一次性加入？若草酸溶液浓度偏高（如1.0mol/L）或偏低（如0.2mol/L），对终点判断和产物纯度各有什么影响？",
+    "matchedFAQ": "第三步配位中，为什么讲义要求将约1.5g草酸…",
+    "confidence": "high",
+    "answerText": "逐滴滴加可精确控制终点，避免过量草酸以游离酸形式混入产物，保证K₃[Fe(C₂O₄)₃]纯度。浓度偏高时，单滴草酸量过大易错过终点，过量草酸结晶时夹杂在产物中，且酸性过强可能使已形成的配合物分解；浓度偏低时，滴加体积增大、耗时增加，但终点判断更精细。0.5mol/L是兼顾操作精度与效率的优化值。\n\n参考语料：\n· 《lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype》\n· 《一个新的Cd(Ⅱ)草酸配合物的合成和结构研究》\n· 《2008-prussian-blue-artists-pigment-and-chemists》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《FeSO4》"
+  },
+  {
+    "id": "Q018",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义要求微沸4分钟。若学生将体系剧烈沸腾（如水浴烧开），对FeC₂O₄·2H₂O沉淀的形貌、产率和后续氧化步骤有何影响？请从晶体生长动力学和Fe²⁺氧化角度分析。",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "剧烈沸腾使溶液中Fe²⁺更易被空气氧化为Fe³⁺，生成少量Fe(OH)₃胶体或碱式草酸铁杂质，降低FeC₂O₄纯度；同时沸腾扰动强烈，晶体成核过快、晶粒细小，比表面积大但沉降性差，倾滗分离时损失增多，产率下降。微沸提供温和过饱和条件，利于晶体长大、杂质夹带少。剧烈沸腾还可能造成溶液飞溅损失。\n\n参考语料：\n· 《ed1c00776 si 001》\n· 《morphology-controllable-synthesis-of-microporous-prussian-blue-analogue-zn3-co(cn)6-2-xh2o》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《硫酸亚铁铵的制备及纯度分析》"
+  },
+  {
+    "id": "Q020",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O具有光敏性，光照下发生LMCT光解产生Fe²⁺。请设计一个简单的检验方案，仅利用K₃[Fe(CN)₆]溶液和不同光照条件，验证产物是否发生光解，并说明如何判断光解程度。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O具有…",
+    "confidence": "high",
+    "answerText": "取三份等量产物溶液，分别置于暗处、室内自然光、强光（太阳光或紫外灯）下照射相同时间，各滴加几滴K₃[Fe(CN)₆]溶液观察。若产生蓝色沉淀（KFe[Fe(CN)₆]）则证明有Fe²⁺生成，蓝色深浅与Fe²⁺浓度成正比，可定性比较光解程度。暗处对照组应无蓝色沉淀，证明产物在避光条件下稳定。此方案可验证光敏性并指导后续实验需暗处操作。\n\n参考语料：\n· 《Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《三草酸合铁酸钾》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q022",
+    "question": "第二步氧化后，讲义要求加热至沸保持2分钟以除去过量H₂O₂。若沸腾时间不足30秒，或延长至20分钟，分别会有什么后果？如何判断H₂O₂是否已除尽？",
+    "matchedFAQ": "第二步氧化后，讲义要求加热至沸保持2分钟以除…",
+    "confidence": "high",
+    "answerText": "沸腾不足：残留H₂O₂在后续配位反应中继续氧化体系，可能将草酸根氧化为CO₂，影响产率，且H₂O₂与Fe³⁺可发生类Fenton反应产生自由基，使产物颜色异常。沸腾过久：溶液过度浓缩，可能析出杂质或使配合物部分分解，且长时间加热使草酸根分解，色泽加深。判断H₂O₂是否除尽，可用淀粉-KI试纸蘸取溶液，若变蓝则仍有H₂O₂，否则已除尽。\n\n参考语料：\n· 《FeSO4》\n· 《实验十六 硫酸亚铁铵的制备》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《硫酸亚铁》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《以硫酸亚铁铵的制备实验为例...用基础化学实验教学中的探索》"
+  },
+  {
+    "id": "Q024",
+    "question": "第二步氧化中，体系含有FeC₂O₄、K₂C₂O₄和H₂O₂，氧化产物为Fe³⁺。按热力学，Fe³⁺应优先与体系中大量C₂O₄²⁻配位生成可溶性[Fe(C₂O₄)₃]³⁻，但实际却生成Fe(OH)₃沉淀。请从酸度、草酸根存在形态和反应动力学角度解释这一现象。",
+    "matchedFAQ": "第二步氧化中，体系含有FeC₂O₄、K₂C₂…",
+    "confidence": "high",
+    "answerText": "体系pH约为4~5（草酸钾水溶液弱碱性），Fe³⁺水解倾向极强，Ksp[Fe(OH)₃]=2.79×10⁻³⁹，在pH>2时即开始沉淀。虽然Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰较大，但配位需C₂O₄²⁻与Fe³⁺碰撞并有适当配位速率；而Fe³⁺水解为Fe(OH)₃的速度远快于配位，且C₂O₄²⁻在此pH下主要以HC₂O₄⁻形式存在（pKa₂=4.2），有效配体浓度低。故Fe³⁺先水解沉淀，后续补加草酸降低pH，才能溶解Fe(OH)₃完成配位。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》"
+  },
+  {
+    "id": "Q021",
+    "question": "第三步配位中，0.00427mol Fe(OH)₃需草酸溶解。已知Ksp(Fe(OH)₃)=2.79×10⁻³⁹、Kf([Fe(C₂O₄)₃]³⁻)=1.6×10²⁰。若溶液pH≈4、总草酸根浓度约0.4mol/L，估算使Fe³⁺完全配位所需最低游离C₂O₄²⁻浓度，并与实验加入量比较；若草酸浓度减半是否仍能完全溶解？",
+    "matchedFAQ": "第三步配位中，0.00427mol Fe(O…",
+    "confidence": "high",
+    "answerText": "pH=4时[OH⁻]=10⁻¹⁰，Fe³⁺不沉淀浓度上限=Ksp/[OH⁻]³≈2.79×10⁻⁹mol/L。配位后配合物浓度约0.14mol/L，由[Fe³⁺][C₂O₄²⁻]³=[配合物]/Kf≈8.75×10⁻²²，解得[C₂O₄²⁻]≥6.8×10⁻⁵mol/L，远低于0.4mol/L。浓度减半至0.2mol/L仍远高于下限，可完全溶解，但配位速率下降，终点变慢。\n\n参考语料：\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《Lab Report: Synthesis of Potassium Ferric Oxalate》\n· 《巧制硫酸亚铁铵晶体》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《All About Ferric Oxalate (Bostick & Sullivan)》"
+  },
+  {
+    "id": "Q023",
+    "question": "第二步氧化完成后，讲义要求“加热至沸保持2分钟”以除去过量H₂O₂。若煮沸时间不足（仅30秒）或过长（10分钟），分别对后续第三步配位和最终产率有何影响？请从H₂O₂分解动力学和草酸根热稳定性角度分析。",
+    "matchedFAQ": "第二步氧化完成后，讲义要求“加热至沸保持2分…",
+    "confidence": "high",
+    "answerText": "煮沸不足则残留H₂O₂在第三步继续氧化草酸根，消耗配体，草酸不足使Fe(OH)₃溶解不全，产物发黄、产率下降；煮沸过长则草酸根高温脱羧分解，同样失去配体，且Fe³⁺可能水解生成沉淀。两者均使翠绿色变浅。故2分钟足以分解过量H₂O₂又不显著损伤配体。\n\n参考语料：\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《ed1c00776 si 001》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《铁与铬的草酸配合物的热分析动力学研究》"
+  },
+  {
+    "id": "Q025",
+    "question": "某学生第二步实际只加入4mL 6% H₂O₂（正常为8mL），后续步骤不变。已知0.0128mol FeC₂O₄完全氧化理论需H₂O₂ 0.0064mol，4mL 6% H₂O₂约0.0071mol，表面仅略过量。请预测：①最终产物用K₃[Fe(CN)₆]检验会有什么现象？②产率可能受到什么影响？③应如何补救？",
+    "matchedFAQ": "某学生第二步实际只加入4mL 6% H₂O₂…",
+    "confidence": "high",
+    "answerText": "4mL H₂O₂仅超理论11%，考虑加热分解损耗，实际不足以完全氧化Fe²⁺，产物中残留Fe²⁺，滴加K₃[Fe(CN)₆]出现蓝色沉淀。Fe²⁺残留使晶体颜色偏绿、产率偏低。补救：补加1~2mL H₂O₂至K₃[Fe(CN)₆]检验合格，再煮沸除去过量，继续配位操作。\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《EXPERIMENT 1 Preparation of a Coordination》\n· 《Prep and Analysis of a Coordination》\n· 《探究两种水合草酸合铜(II)酸钾晶体的合成》\n· 《lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype》"
+  },
+  {
+    "id": "Q027",
+    "question": "第四步结晶要求“暗处静置过夜”。若学生将产物置于阳光直射处，光解反应2[Fe(C₂O₄)₃]³⁻→2Fe²⁺+3C₂O₄²⁻+2CO₂↑发生后，溶液pH会如何变化？该光解对后续用K₃[Fe(CN)₆]检验产物中是否残留Fe²⁺会产生什么干扰？请从配位平衡和氧化还原角度解释。",
+    "matchedFAQ": "第四步结晶要求“暗处静置过夜”。若学生将产物…",
+    "confidence": "high",
+    "answerText": "光解释放的游离C₂O₄²⁻水解呈碱性，且CO₂逸出减少酸性溶解，溶液pH略升。光解本身产生Fe²⁺，使K₃[Fe(CN)₆]检验出现蓝色沉淀，易被误判为第二步氧化不完全，干扰质量评判。因此必须暗处结晶，且检验应在避光下快速进行。\n\n参考语料：\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《Photochemistry》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《基于项目式学习的高三化学综合复习教学——蓝晒》"
+  },
+  {
+    "id": "Q029",
+    "question": "结晶需“暗处静置过夜”耗时较长。若改用冰箱冷藏（4℃）取代室温静置，从过饱和度和成核动力学的角度分析析晶时间和晶体尺寸分别如何变化？想在不明显降低产率和纯度的前提下将结晶缩短至3~4小时，可采取哪些合理手段？",
+    "matchedFAQ": "结晶需“暗处静置过夜”耗时较长。若改用冰箱冷…",
+    "confidence": "high",
+    "answerText": "冷藏降低溶解度，过饱和度增大，成核速率加快，析晶时间缩短，但晶体生长速率相对较慢，产物偏细碎、易包裹杂质。缩短至3~4小时可适度增加乙醇比例（如12mL）、加入晶种、轻微搅拌或梯度降温，以促进均匀成核而非聚集；应避免过饱和度太大生成无定形粉末。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《melanterite-绿矾》\n· 《三、硫酸亚铁铵的制备》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《实验56 硫酸亚铁铵的制备》\n· 《实验一 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q026",
+    "question": "按讲义所列四步反应，理论产量6.26g是由5.0g硫酸亚铁铵（M=392.14）出发推导出的。请写出完整的化学计量推导链，并分析若第一步FeC₂O₄·2H₂O沉淀损失10%（如倾滗时部分悬浮物被倒掉），而后续各步按定埋化学计量完全转化，最终K₃[Fe(C₂O₄)₃]·3H₂O的实际产量约为多少？",
+    "matchedFAQ": "按讲义所列四步反应，理论产量6.26g是由5…",
+    "confidence": "high",
+    "answerText": "5.0g摩尔盐→nFe=0.01275mol。按Fe原子守恒，理论产量=0.01275mol×491.25g/mol≈6.26g。若第一步沉淀损失10%，则后续Fe量仅为0.01148mol，实际产量=0.01148×491.25≈5.63g。损失环节主要在倾滗洗涤时的机械转移损耗和母液残留。\n\n参考语料：\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《10》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《Ferrous Ammonium》\n· 《melanterite-绿矾》\n· 《三、硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q028",
+    "question": "第二步氧化完毕后，讲义要求在沸水浴中加热保持2分钟。若学生省略此步，冷却后直接进入第三步配位（滴加草酸溶液），体系中残留的H₂O₂将对后续配位反应和最终产物产生哪些具体影响？",
+    "matchedFAQ": "第二步氧化完毕后，讲义要求在沸水浴中加热保持…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会与第三步加入的过量草酸及产物草酸根发生氧化还原反应（H₂O₂+C₂O₄²⁻→2CO₂+2OH⁻），产生气泡干扰“透明翠绿”终点的观察，并消耗草酸配体使配位不完全；同时H₂O₂还可把产物中可能存在的Fe²⁺氧化为Fe³⁺，改变产物组成，降低纯度。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》"
+  },
+  {
+    "id": "Q030",
+    "question": "产物化学式写作K₃[Fe(C₂O₄)₃]·3H₂O。讲义规定烘干温度严禁超过50℃，150℃失结晶水、230℃分解。请推断：若将产物在80℃下烘干较长时间导致结晶水完全失去，产物的颜色是否会发生明显变化？请说明判断依据（注意结晶水在结构中的位置）。",
+    "matchedFAQ": "产物化学式写作K₃[Fe(C₂O₄)₃]·3…",
+    "confidence": "high",
+    "answerText": "颜色应基本不变。结晶水为晶格水，不直接配位于Fe³⁺；Fe³⁺的配位环境（三个双齿草酸根构成八面体）在失水前后不变，故d-d跃迁和LMCT跃迁能量不变，翠绿色保持。若温度达230℃致草酸根配体分解，配位结构被破坏，颜色才会变为黄褐色（Fe₂O₃等）。\n\n参考语料：\n· 《三草酸合铁酸钾-综合实验》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《探究两种水合草酸合铜(II)酸钾晶体的合成》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《三草酸合铁酸碱的制备及测定》"
+  },
+  {
+    "id": "Q032",
+    "question": "文献#3、#4报道的蓝晒法基于Fe³⁺-草酸盐光化学还原生成Fe²⁺，再与K₃[Fe(CN)₆]反应生成蓝色沉淀。利用这一原理，设计一个无需精密仪器的定性实验，判断本实验所得K₃[Fe(C₂O₄)₃]·3H₂O样品在储存过程中是否已发生明显光解。",
+    "matchedFAQ": "文献#3、#4报道的蓝晒法基于Fe³⁺-草酸…",
+    "confidence": "high",
+    "answerText": "取约0.1g样品溶于适量蒸馏水，在暗室或避光条件下向溶液中滴加几滴新鲜配制的K₃[Fe(CN)₆]溶液。若立即出现蓝色沉淀（滕氏蓝KFe[Fe(CN)₆]），说明样品含Fe²⁺，已发生光解；若无蓝色沉淀，则样品完好。需同时做空白对照（用新鲜样品）排除试剂干扰。\n\n参考语料：\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《ayscough-et-al-1967-the-photochemical-oxidation-of-aqueous-iodide-solutions-an-experiment-demonstrating-the》\n· 《bridging-chemistry-and-creativity-a-cyanotype-photography-toning-and-uv-shielding-for-first-year-undergraduate》\n· 《mohan-mejia-2020-environmentally-friendly-organic-chemistry-laboratory-experiments-for-the-undergraduate-curriculum-a》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》"
+  },
+  {
+    "id": "Q002",
+    "question": "第二步氧化中，6% H₂O₂实际用量8mL是理论量的多少倍？若只加理论量（约4mL）而对其他条件不加改变，用K₃[Fe(CN)₆]检验会出现什么结果？请从H₂O₂自身稳定性和Fe²⁺氧化动力学两个角度说明过量1倍以上的必要性。",
+    "matchedFAQ": "第二步氧化中，6% H₂O₂实际用量8mL是…",
+    "confidence": "high",
+    "answerText": "按5.0g摩尔盐含Fe²⁺约0.0128mol，理论需H₂O₂约0.0064mol，8mL 6% H₂O₂约含0.014mol，为理论量的2倍以上。过量原因：①40℃下H₂O₂缓慢分解；②氧化后期Fe²⁺浓度低，反应驱动力小，需过量H₂O₂保证完全氧化。若仅加理论量，Fe²⁺可能残留，K₃[Fe(CN)₆]检验出现蓝色沉淀。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《the-chemistry-of-the-metal-oxalato》\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》"
+  },
+  {
+    "id": "Q004",
+    "question": "第二步氧化中，40℃水浴滴完H₂O₂后，为何还要加热至沸并保持2分钟？若省略此步骤直接进行第三步草酸配位，会对后续反应产生什么影响？从H₂O₂残留与草酸氧化性的角度分析。",
+    "matchedFAQ": "第二步氧化中，40℃水浴滴完H₂O₂后，为何…",
+    "confidence": "high",
+    "answerText": "沸煮2分钟可使过量H₂O₂分解为O₂和水，避免残留H₂O₂进入第三步氧化草酸或干扰配位。草酸具还原性，H₂O₂残留会将其氧化为CO₂，消耗配体、产生气泡，导致配位不完全、产物量少或含有未配位的Fe³⁺（如Fe(OH)₃）杂质。省略沸煮会使第三步溶液冒泡、pH变化，滴加草酸终点不易判断。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《j100607a005》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《jp312603m》"
+  },
+  {
+    "id": "Q034",
+    "question": "第三步配位要求将约1.5g草酸配成0.5mol/L溶液后逐滴滴加。若学生图省事将草酸配成高浓度（如5mol/L）并一次性倾倒，对产物有何影响？结合草酸的还原性和配位平衡说明可能出现的异常现象及原因。",
+    "matchedFAQ": "第三步配位要求将约1.5g草酸配成0.5mo…",
+    "confidence": "high",
+    "answerText": "高浓度草酸一次性加入造成局部浓度过大、放热明显。草酸为还原剂，强酸高浓度下可将部分Fe³⁺还原为Fe²⁺，导致溶液呈黄绿色而非翠绿色，产物含Fe²⁺杂质。同时过量强酸使pH过低，不利于K₃[Fe(C₂O₄)₃]形成，可能析出H₃[Fe(C₂O₄)₃]或草酸晶体，降低产率。\n\n参考语料：\n· 《Natural iron oxalates and their analogous synthetic counterparts: A review》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)》\n· 《Photochemistry》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》"
+  },
+  {
+    "id": "Q036",
+    "question": "第二步氧化若不在正常室内光线下操作，而是将烧杯置于阳光直射处，对反应过程有何影响？已知K₃[Fe(C₂O₄)₃]见光LMCT光解生成Fe²⁺，且体系中尚有H₂O₂存在。请推测溶液颜色和K₃[Fe(CN)₆]检验结果可能的异常。",
+    "matchedFAQ": "第二步氧化若不在正常室内光线下操作，而是将烧…",
+    "confidence": "high",
+    "answerText": "阳光直射使刚生成的K₃[Fe(C₂O₄)₃]发生LMCT光解，产生Fe²⁺和CO₂；Fe²⁺又迅速被体系中H₂O₂重新氧化为Fe³⁺，形成光化学循环，使H₂O₂额外消耗、溶液颜色反复波动。沸煮除H₂O₂后若仍有Fe²⁺残留，K₃[Fe(CN)₆]检验出现蓝色沉淀，产物纯度下降。故氧化过程也应避免强光直射。\n\n参考语料：\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q038",
+    "question": "K₃[Fe(C₂O₄)₃]的Kf高达1.6×10²⁰，但热力学上草酸根可将Fe³⁺还原为Fe²⁺（E°Fe³⁺/Fe²⁺≈0.77V）。请解释为何该配合物在暗处室温下仍能稳定存在，而光照下却快速分解？从配位对氧化还原电位的影响和LMCT光化学角度分析。",
+    "matchedFAQ": "K₃[Fe(C₂O₄)₃]的Kf高达1.6×…",
+    "confidence": "high",
+    "answerText": "草酸根配位使自由Fe³⁺浓度极低，E(Fe³⁺/Fe²⁺)大幅下降，草酸还原Fe³⁺的热力学驱动力减弱，故暗处稳定。光照时发生LMCT跃迁，电子从草酸根π轨道直接转移到Fe³⁺，不受热力学活化能限制，瞬间完成光致电子转移并分解。光化学路径绕过了暗反应的动力学壁垒。\n\n参考语料：\n· 《教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《Practical ferrioxalate actinometry for the determination of photon fluxes in production-oriented photoflow reactors》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》"
+  },
+  {
+    "id": "Q035",
+    "question": "第二步氧化反应结束后，讲义要求加热至沸保持2分钟以除去过量H₂O₂，随后用K₃[Fe(CN)₆]检验Fe²⁺是否氧化完全。若学生煮沸时间不足2分钟（仅约30秒）便进行检验，可能观察到什么假象？为什么？这对第三步配位反应及最终产率有何潜在影响？",
+    "matchedFAQ": "第二步氧化反应结束后，讲义要求加热至沸保持2…",
+    "confidence": "high",
+    "answerText": "若煮沸不足，残余H₂O₂会使Fe²⁺检测出现假阴性（实际已有Fe²⁺但被H₂O₂氧化为Fe³⁺），或延迟显色导致误判氧化完全。残余H₂O₂在第三步加热时可能继续氧化草酸，消耗配体并产生CO₂，使配位不完全、产率降低，且产物可能夹杂Fe³⁺水解物。讲义要求煮沸2分钟正是为确保H₂O₂彻底分解（ch4-s3）。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《ed1c00776 si 001》\n· 《junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)》"
+  },
+  {
+    "id": "Q037",
+    "question": "第一步洗涤FeC₂O₄·2H₂O沉淀时，讲义要求用热水洗至BaCl₂检验无SO₄²⁻。若学生改用冷水洗涤3次后，BaCl₂检验发现上清液仍微浑浊（疑含SO₄²⁻），但此时沉淀已部分透出黄绿色。从溶解度和氧化稳定性两个角度分析，继续用冷水洗涤会带来什么风险？应如何处置更合理？",
+    "matchedFAQ": "第一步洗涤FeC₂O₄·2H₂O沉淀时，讲义…",
+    "confidence": "high",
+    "answerText": "FeC₂O₄·2H₂O的Ksp=3.2×10⁻⁷，冷水中仍有少量溶解损失，且Fe²⁺在冷水中更易被空气缓慢氧化为Fe³⁺（黄色Fe(OH)₃）。继续洗涤既降低产率又引入Fe³⁺杂质。合理处置：改用少量热水分次快速洗涤（热水溶解度仍低但可减少Fe²⁺氧化），洗至BaCl₂检验合格即止，不宜过度洗涤（讲义ch4-s2）。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《实验56 硫酸亚铁铵的制备》\n· 《硫酸亚铁铵制备实验的改进探索》\n· 《硫酸亚铁铵的制》\n· 《硫酸亚铁铵的制备1》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》"
+  },
+  {
+    "id": "Q039",
+    "question": "第三步配位反应中，讲义要求将约1.5g草酸配成约0.5mol/L溶液后逐滴滴加到热的Fe(OH)₃浆液中，终点为溶液透明翠绿色。若学生将草酸溶液一次性全部加入并剧烈搅拌，但最终溶液仍不完全透明（有微浑浊），可能的原因是什么？从配位平衡和Fe(OH)₃溶解动力学角度分析。",
+    "matchedFAQ": "第三步配位反应中，讲义要求将约1.5g草酸配…",
+    "confidence": "high",
+    "answerText": "一次快加虽使草酸总量足，但Fe(OH)₃（Ksp=2.79×10⁻³⁹）溶解缓慢，且大量草酸使溶液局部过酸（H⁺与C₂O₄²⁻竞争配位），不利于[Fe(C₂O₄)₃]³⁻形成。微浑浊可能是未溶解的Fe(OH)₃或中间体（如Fe₂(C₂O₄)₃·nH₂O）残留。应逐滴滴加并保持微热，使配位逐级进行、pH逐渐优化（讲义ch3-s4、ch4-s2）。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《问题导向式教学在基础化学实验课堂中的应用——以“探讨二草酸合铜酸钾中铜离子测定条件”为例》\n· 《电导，电导率和摩尔电导率》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《硫酸亚铁》"
+  },
+  {
+    "id": "Q041",
+    "question": "摩尔盐溶解时，讲义要求加数滴3mol/L H₂SO₄而非其他酸。若学生误用同浓度的盐酸，对后续两步反应（沉淀、氧化）有何不利影响？请从Cl⁻的配位竞争、Fe²⁺氧化稳定性及沉淀产率三个层面分析。",
+    "matchedFAQ": "摩尔盐溶解时，讲义要求加数滴3mol/L H…",
+    "confidence": "high",
+    "answerText": "Cl⁻能与Fe²⁺/Fe³⁺形成弱配位，干扰草酸根配位平衡；酸性Cl⁻环境中Fe²⁺更易被空气中O₂氧化为Fe³⁺，导致第一步沉淀中混入Fe(OH)₃或Fe³⁺草酸盐，降低FeC₂O₄·2H₂⁺纯度与产率。硫酸根配位弱，H₂SO₄仅提供酸性环境抑制Fe²⁺水解，不干扰草酸配位（讲义ch3-s2、ch4-s1）。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《制备硫酸亚铁铵单晶的实验研究》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《硫酸亚铁铵》"
+  },
+  {
+    "id": "Q043",
+    "question": "第四步结晶采用“悬棉线提供晶核”。若学生为图省事，将棉线改为玻璃棒插入溶液，或干脆不加任何晶核，从结晶化学角度分析这两种做法对晶体成核速率、晶体形貌及产物纯度的影响有何不同？",
+    "matchedFAQ": "第四步结晶采用“悬棉线提供晶核”。若学生为图…",
+    "confidence": "high",
+    "answerText": "棉线提供异相成核位点，降低成核能垒，使结晶缓慢有序进行，晶体颗粒大且纯度高。玻璃棒表面光滑，成核位点少，易形成局部过饱和引发均相爆发成核，得到细碎晶体且易包裹母液杂质。不加晶核则更依赖容器壁缺陷成核，成核诱导期长、不可控，可能析出粉末状产物或形成过饱和溶液不析晶。棉线最优（讲义ch4-s2、ch3-s5）。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》\n· 《探究两种水合草酸合铜(II)酸钾晶体的合成》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q040",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将草酸溶液缓慢倒入摩尔盐溶液中，边倒边搅拌。若学生未按此操作而将草酸溶液快速一次性倾入，从晶体成核与生长动力学角度分析，沉淀的粒度、过滤洗涤难度及杂质残留将发生何种变化？",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "快速倾入会使局部过饱和度骤增，成核速率远大于晶体生长速率，形成大量细小微晶，粒度小、比表面积大，易吸附SO₄²⁻、NH₄⁺等杂质且倾滗洗涤困难。缓慢滴加则过饱和度适中，晶核少而生长充分，晶体粗大，杂质易洗净，FeC₂O₄·2H₂O产率和纯度均更高。\n\n参考语料：\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《Ferrous Ammonium》\n· 《莫尔盐的空气稳定性》\n· 《马口铁与白铁区别》"
+  },
+  {
+    "id": "Q042",
+    "question": "第二步氧化反应结束后，用K₃Fe(CN)₆检验Fe²⁺，若发现仍有蓝色沉淀（说明Fe²⁺未氧化完全），此时若忽略检验结果直接进入第三步配位反应，会对最终产物K₃[Fe(C₂O₄)₃]·3H₂O的纯度和后续光化学实验产生哪些影响？应如何正确补救？",
+    "matchedFAQ": "第二步氧化反应结束后，用K₃Fe(CN)₆检…",
+    "confidence": "high",
+    "answerText": "Fe²⁺未除尽会与草酸根形成[Fe(C₂O₄)₃]⁴⁻，与K⁺共沉淀混入产物，使产物微带淡黄色，磁性偏高，光解时Fe²⁺干扰定量。补救：继续补加少量6%H₂O₂（40℃慢滴），加热煮沸2min除尽过量H₂O₂，再用K₃Fe(CN)₆复检至无蓝色沉淀后方可进入下一步。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》"
+  },
+  {
+    "id": "Q044",
+    "question": "第三步配位反应中，讲义用“约1.5g H₂C₂O₄·2H₂O配成约30mL溶液”即约0.5mol/L。请定量核算：1.5g草酸的实际浓度是否为0.5mol/L？该草酸量是否足以完全溶解第二步生成的Fe(OH)₃？若草酸不足，第三步终点会有什么现象？",
+    "matchedFAQ": "第三步配位反应中，讲义用“约1.5g H₂C…",
+    "confidence": "high",
+    "answerText": "1.5g H₂C₂O₄·2H₂O（M≈126g/mol）为0.0119mol，配成30mL实际浓度约0.397mol/L，低于0.5mol/L。按第二步生成Fe(OH)₃约0.0043mol，配位需草酸1.5倍或稍过量，仅需约0.0064mol，现有量足且过量近一倍。若不足，Fe(OH)₃不能全部溶解，溶液始终浑浊、不能达到透明翠绿终点，产率偏低。\n\n参考语料：\n· 《FeSO4》\n· 《硫酸亚铁》\n· 《硫酸亚铁铵的制》\n· 《以硫酸亚铁铵的制备实验为例...用基础化学实验教学中的探索》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment》"
+  },
+  {
+    "id": "Q046",
+    "question": "第一步溶解摩尔盐时需加数滴3mol/L H₂SO₄防Fe²⁺水解。若某学生误加了5mL 3mol/L H₂SO₄（体系pH降至1以下），草酸溶液混合后FeC₂O₄·2H₂O的沉淀平衡将受到何种影响？从草酸离解平衡与Ksp角度分析，会观察到什么现象？",
+    "matchedFAQ": "第一步溶解摩尔盐时需加数滴3mol/L H₂…",
+    "confidence": "high",
+    "answerText": "酸度过高使H₂C₂O₄→HC₂O₄⁻→C₂O₄²⁻平衡左移，游离C₂O₄²⁻浓度骤降，即使[Fe²⁺]较大，[Fe²⁺][C₂O₄²⁻]仍可能低于Ksp(FeC₂O₄)=3.2×10⁻⁷，导致沉淀不完全甚至不沉淀，溶液呈浅绿色浑浊或澄清。数滴酸维持pH≈1~2，既可抑Fe²⁺水解又保证C₂O₄²⁻浓度足够。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵制备实验的改进》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《硫酸亚铁铵的制》\n· 《硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q048",
+    "question": "第四步产物规定50℃烘干20分钟（严禁超50℃）。若学生在抽滤后不烘干，而是将产物置于暗处室温晾干一夜再称量，所得产物的称量质量与标准烘干法相比会偏高还是偏低？从水分/乙醇残留、结晶水稳定性及光敏分解三方面综合分析。",
+    "matchedFAQ": "第四步产物规定50℃烘干20分钟（严禁超50…",
+    "confidence": "high",
+    "answerText": "室温晾干不能有效去除产物表面残留的乙醇和水分（乙醇沸点78℃，室温挥发慢），称量会偏高；50℃仅去除表面挥发物而不脱结晶水（100℃才失水），产物组成仍为三水合物。若晾干时间过长且未严格避光，可能发生光致还原分解，反而使质量偏低并混入Fe²⁺杂质。故标准烘干法更可靠。\n\n参考语料：\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》\n· 《Cr Fe Al Cu 草酸配合物热分析研究》\n· 《差热分析 DTA 法研究五水硫酸铜的失水过程》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《三草酸合铁酸钾改进制备及其光致还原性探究》"
+  },
+  {
+    "id": "Q045",
+    "question": "第二步氧化反应中，K₂C₂O₄·H₂O的3.5g用量是依据什么确定的？若某学生误将K₂C₂O₄用量减半（约1.75g），在后续配位步骤中继续按讲义加入1.5g草酸，最终产品的产率和纯度分别会受到什么影响？请从化学计量配比和配位平衡角度分析。",
+    "matchedFAQ": "第二步氧化反应中，K₂C₂O₄·H₂O的3.…",
+    "confidence": "high",
+    "answerText": "3.5g K₂C₂O₄（约0.019mol）相对于0.0128mol FeC₂O₄过量约1.5倍，确保氧化和配位时草酸根足量。若减半，氧化产物中可溶性草酸铁配合物减少，Fe(OH)₃增多，第三步需消耗更多草酸，但总量不足，Fe(OH)₃可能不完全溶解，导致产率下降，且产物中可能夹杂未反应的Fe(OH)₃，纯度降低。\n\n参考语料：\n· 《实验十六 硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《实验一 硫酸亚铁铵的制备》\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》\n· 《同铁不同性：FeSO 4·...—硫酸亚铁铵制备的改进实验》\n· 《三草酸合铁(Ⅲ)酸钾制备条件的优化》"
+  },
+  {
+    "id": "Q047",
+    "question": "第四步结晶时，讲义要求加入10mL 95%乙醇作为反溶剂。请从溶剂替换法原理出发，解释为何选用乙醇而非甲醇或丙酮？若改用等体积的丙酮，对产物K₃[Fe(C₂O₄)₃]·3H₂O的结晶过程和最终晶体质量可能产生哪些具体影响？",
+    "matchedFAQ": "第四步结晶时，讲义要求加入10mL 95%乙…",
+    "confidence": "high",
+    "answerText": "乙醇是常用反溶剂，对产物溶解度低，且与水互溶，能降低体系极性，促进配离子析出；乙醇沸点适中、毒性低、易挥发，便于干燥。丙酮极性更弱，反溶剂效应更强，可能使晶体析出过快，导致晶体细小、包裹杂质；且丙酮易挥发，需注意安全。若用量不当可能产生油状物，影响纯度。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《三草酸合铁酸钾的制备及其性质（课件2）》\n· 《三草酸合铁（III）酸钾制备——思考题》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《三草酸合铁酸钾改进制备及其光致还原性探究》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》"
+  },
+  {
+    "id": "Q049",
+    "question": "第三步配位反应中，草酸溶液需“逐滴滴加”至Fe(OH)₃完全溶解且溶液透明翠绿。若学生贪图省事，将约30mL草酸溶液一次性全部倒入，反应体系会立即出现什么现象？从配位反应平衡移动和中间产物形成角度，分析可能对产物纯度和收率造成的后果。",
+    "matchedFAQ": "第三步配位反应中，草酸溶液需“逐滴滴加”至F…",
+    "confidence": "high",
+    "answerText": "一次性加入全部草酸，局部酸度骤升，使草酸电离平衡左移，游离C₂O₄²⁻浓度降低，不利于配位反应正向进行；同时Fe(OH)₃溶解生成的Fe³⁺未及时配位，可能水解重新析出Fe(OH)₃，溶液呈现浑浊。由于草酸已全部加入，无法通过补加草酸改善，需适当稀释或加入草酸钾调节酸度，但会增加操作步骤和引入杂质，最终导致产率降低，产物颜色可能不呈翠绿色，纯度下降。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》"
+  },
+  {
+    "id": "Q051",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，摩尔盐溶液加入数滴3mol/L H₂SO₄的目的之一是防止Fe²⁺水解。但如果加酸过多（例如5mL），会对后续反应产生什么影响？请结合草酸的电离平衡、FeC₂O₄的溶度积以及第二步氧化条件进行综合分析。",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，摩尔盐溶…",
+    "confidence": "high",
+    "answerText": "加酸过多使体系pH过低，草酸电离平衡向左移动，草酸根浓度降低，不利于FeC₂O₄沉淀生成，导致沉淀不完全或溶解；同时第二步氧化时，过量的酸会消耗K₂C₂O₄，使草酸根配位能力下降，影响K₃[Fe(C₂O₄)₃]形成，可能使产物产率显著下降。需额外碱中和，操作复杂。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《摩尔盐的空气稳定性》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵制备实验的改进》"
+  },
+  {
+    "id": "Q053",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将草酸溶液缓慢倒入摩尔盐溶液中并微沸4分钟。若学生将顺序颠倒（将摩尔盐溶液倒入草酸溶液），对沉淀的形貌和纯度可能产生什么影响？从反应物浓度局部过饱和和晶体成核角度说明。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "顺序颠倒后，摩尔盐滴入草酸溶液中，Fe²⁺局部浓度高，草酸根相对过量，会快速生成大量细小晶核，导致沉淀颗粒细小、易吸附杂质，洗涤困难；且可能包裹母液中的SO₄²⁻，使BaCl₂检验难达终点，最终影响产物纯度和后续氧化反应速度。\n\n参考语料：\n· 《《硫酸亚铁铵的制备》简介》\n· 《三、硫酸亚铁铵的制备》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《10》\n· 《Ferrous Ammonium》"
+  },
+  {
+    "id": "Q050",
+    "question": "第二步氧化后，讲义要求“加热至沸保持2分钟”以除去过量H₂O₂。若学生未充分煮沸除尽H₂O₂，直接进行第三步配位并最终结晶，会如何影响产物纯度？请从H₂O₂对Fe³⁺的还原性及对草酸根的氧化作用两方面分析。",
+    "matchedFAQ": "第二步氧化后，讲义要求“加热至沸保持2分钟”…",
+    "confidence": "high",
+    "answerText": "残余H₂O₂可还原Fe³⁺为Fe²⁺，使产物含K₃[Fe(C₂O₄)₃]中混入Fe²⁺杂质；同时H₂O₂氧化草酸根生成CO₂，破坏配合物配体，降低产率。产物颜色可能偏黄绿而非翠绿，K₃Fe(CN)₆检验显蓝色。故必须煮沸除尽H₂O₂。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《ed1c00776 si 001》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》\n· 《wang-et-al-2023-rapid-redox-cycling-of-fe(ii)-fe(iii)-in-microdroplets-during-iron-citric-acid》\n· 《巧制硫酸亚铁铵晶体》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q052",
+    "question": "在第一步沉淀FeC₂O₄·2H₂O时，若学生将草酸溶液与摩尔盐溶液混合后未加热至微沸，仅在室温下静置30分钟即进行倾滗。请从反应速率、晶体颗粒大小及洗涤难易角度，分析这会对沉淀的产率和后续第二步氧化产生什么影响？",
+    "matchedFAQ": "在第一步沉淀FeC₂O₄·2H₂O时，若学生…",
+    "confidence": "high",
+    "answerText": "室温下沉淀反应速率慢，FeC₂O₄·2H₂O析出不充分，产率偏低；且沉淀颗粒细小，容易穿滤或随倾滗流失。微沸促进晶体长大，利于倾滗分离和洗涤。沉淀不完全还会使第二步Fe(OH)₃量不足，最终产物产率下降。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《10》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q054",
+    "question": "第三步配位中，向Fe(OH)₃浆液中逐滴滴加约0.5mol/L草酸溶液。若学生误将草酸溶液一次性全部加入并剧烈搅拌，会有什么后果？请结合配位反应平衡、pH变化及终点判断的准确性进行分析。",
+    "matchedFAQ": "第三步配位中，向Fe(OH)₃浆液中逐滴滴加…",
+    "confidence": "high",
+    "answerText": "一次性加入草酸会使局部pH骤降，可能溶解部分Fe(OH)₃但配位不完全，或因酸度过高促使Fe³⁺水解重新沉淀；剧烈搅拌使终点颜色变化难以观察，易过量加酸，过量草酸在结晶时可能与产物共沉淀，影响纯度。逐滴滴加利于控制终点和配位完全。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《草酸分子结构与性质的量子化学计算研究》\n· 《bridging-chemistry-and-creativity-a-cyanotype-photography-toning-and-uv-shielding-for-first-year-undergraduate》"
+  },
+  {
+    "id": "Q056",
+    "question": "第二步氧化反应中，40℃水浴滴加H₂O₂后需继续搅拌5分钟。若学生省略这5分钟搅拌，立即加热煮沸2分钟，对反应有何影响？请从H₂O₂与FeC₂O₄的接触时间、氧化均匀性及副反应角度说明。",
+    "matchedFAQ": "第二步氧化反应中，40℃水浴滴加H₂O₂后需…",
+    "confidence": "high",
+    "answerText": "省略搅拌会使H₂O₂未充分与FeC₂O₄接触，氧化不完全，部分Fe²⁺残留；直接煮沸使H₂O₂迅速分解，氧化能力下降，且局部可能发生过氧化副反应。5分钟搅拌保证氧化均匀完全，避免Fe²⁺残留影响产物纯度。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《基于项目式学习的高三化学综合复习教学——蓝晒》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and》"
+  },
+  {
+    "id": "Q058",
+    "question": "在第二步氧化前，FeC₂O₄·2H₂O沉淀需用热水洗至无SO₄²⁻（BaCl₂检验）。若沉淀中残留较多(NH₄)₂SO₄，而学生未察觉直接进入氧化步骤，对后续配位和结晶有何潜在影响？请从离子干扰和产物纯度角度分析。",
+    "matchedFAQ": "在第二步氧化前，FeC₂O₄·2H₂O沉淀需…",
+    "confidence": "high",
+    "answerText": "残留SO₄²⁻可能以K₂SO₄或(NH₄)₂SO₄形式混入最终结晶，降低产物纯度；SO₄²⁻还可能影响配位平衡或与K⁺形成复盐共沉淀。BaCl₂检验可简单有效地确认洗涤终点，避免杂质干扰后续配位和结晶纯度。\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《草酸合铁酸钾的制备及其离子电荷的测定》\n· 《无机化学实验教学中对三草酸合铁 酸钾制备的实验改进》\n· 《制备硫酸亚铁铵单晶的实验研究》"
+  },
+  {
+    "id": "Q055",
+    "question": "第四步结晶中，若学生将95%乙醇的加入量从10mL减少至3mL，其余操作不变，请从溶剂替换法结晶的热力学原理出发，分析产物析出量、晶体质量及滤液中残留产物量将如何变化？",
+    "matchedFAQ": "第四步结晶中，若学生将95%乙醇的加入量从1…",
+    "confidence": "high",
+    "answerText": "乙醇作为反溶剂降低K₃[Fe(C₂O₄)₃]在水中的溶解度。乙醇量不足，溶液介电常数下降幅度小，过饱和度低，析出晶体量减少、产率下降，且滤液中残留产物增多；同时因成核速率低于生长速率，晶体可能更大但晶形不完整。若过饱和度不足以自发成核，悬棉线的晶核诱导作用也难以发挥，静置过夜后可能仍为澄清液。\n\n参考语料：\n· 《三草酸合铁酸钾的制备及其性质（课件2）》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《三草酸合铁（III）酸钾制备——思考题》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《《实验化学》的实施总结（执信中学）》\n· 《Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors》"
+  },
+  {
+    "id": "Q057",
+    "question": "第二步氧化中，滴定完8mL 6% H₂O₂后，讲义要求\"继续搅拌5分钟\"再加热煮沸除过量H₂O₂。若省去这5分钟搅拌直接加热煮沸，对Fe²⁺氧化完全程度及最终产物颜色有何影响？从反应动力学角度分析。",
+    "matchedFAQ": "第二步氧化中，滴定完8mL 6% H₂O₂后…",
+    "confidence": "high",
+    "answerText": "H₂O₂氧化FeC₂O₄为非均相反应，Fe²⁺需先溶解再被氧化。5分钟搅拌保证H₂O₂与固相充分接触，使残余Fe²⁺继续氧化。省略后直接煮沸虽加速分解H₂O₂，但Fe²⁺未能充分氧化即终止，体系残留Fe²⁺，K₃[Fe(CN)₆]检验呈蓝色；产物中混有Fe²⁺草酸盐，翠绿色加深偏暗，光解实验时初始Fe²⁺本底干扰测定。\n\n参考语料：\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《铁(Ⅲ)-柠檬酸盐配合物光解引发橙黄Ⅱ的脱色》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q059",
+    "question": "第三步配位反应中，向Fe(OH)₃浆液滴加草酸溶液至\"透明翠绿\"即终点。已知Fe(OH)₃的Ksp=2.79×10⁻³⁹，Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰。若学生判断终点时溶液呈微浑浊的绿色而非完全透明，其中可能含有何种固体？继续滴加草酸能否消除？",
+    "matchedFAQ": "第三步配位反应中，向Fe(OH)₃浆液滴加草…",
+    "confidence": "high",
+    "answerText": "微浑浊可能为未溶解的Fe(OH)₃残留或局部Fe(OH)₃重新沉淀。草酸提供H⁺和C₂O₄²⁻，既能酸溶Fe(OH)₃又促进配位，继续滴加应可消除浑浊。若滴加过量草酸仍不透明，则可能为FeC₂O₄·2H₂O沉淀（Ksp=3.2×10⁻⁷），该沉淀在过量草酸中可转化为[Fe(C₂O₄)₃]³⁻缓慢溶解，需加热搅拌促进转化。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《ed1c00776 si 001》\n· 《ed1c00776 si 001 (1)》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《问题导向式教学在基础化学实验课堂中的应用——以“探讨二草酸合铜酸钾中铜离子测定条件”为例》\n· 《ed047p702》"
+  },
+  {
+    "id": "Q061",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解产物含Fe²⁺，可用K₃[Fe(CN)₆]检验。若学生将光照后的溶液先滴加稀硫酸酸化再进行检验，蓝色沉淀的生成现象是否变化？从Fe²⁺稳定性与检验反应条件角度分析。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解…",
+    "confidence": "high",
+    "answerText": "酸化后Fe²⁺不易被空气氧化，稳定性提高，有利于检出。但过量酸会使K₃[Fe(CN)₆]分解产生HCN剧毒气体，且酸性增强可能使[Fe(C₂O₄)₃]³⁻配体部分质子化释放Fe³⁺，Fe³⁺与[Fe(CN)₆]³⁻不产生蓝色沉淀，反而干扰判断。适当酸化（稀）利于显色，强酸则不利且危险。\n\n参考语料：\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》"
+  },
+  {
+    "id": "Q063",
+    "question": "第一步洗涤FeC₂O₄·2H₂O沉淀时，讲义用BaCl₂检验SO₄²⁻。若某学生沉淀洗涤后取最后一次洗涤液，滴加BaCl₂后立即出现白色浑浊但放置后消失，可能原因是什么？对后续实验有何影响？",
+    "matchedFAQ": "第一步洗涤FeC₂O₄·2H₂O沉淀时，讲义…",
+    "confidence": "high",
+    "answerText": "可能原因：洗涤液中CO₂溶解形成碳酸根，与Ba²⁺生成BaCO₃白色浑浊，放置后遇酸溶解而消失；也可能是微量SO₄²⁻浓度极低，形成的BaSO₄悬浊液恰好肉眼可辨，放置后沉降观察不到。前者不影响，后者说明SO₄²⁻未洗净。未洗净的SO₄²⁻进入第二步，可能以(NH₄)₂SO₄形式混入最终产物，降低纯度。\n\n参考语料：\n· 《基于纺织品的浸轧-蓝晒工艺优化及性能评价》\n· 《柠檬酸铁铵的制备方法》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《《硫酸亚铁铵的制备》简介》\n· 《硫酸亚铁铵的制备》\n· 《Teaching Notes for Experiment 9 (Iron Oxalate 习题)》"
+  },
+  {
+    "id": "Q060",
+    "question": "某学生在鉴定产物K₃[Fe(C₂O₄)₃]·3H₂O的内外界时，将产物溶于水后分别：①滴加BaCl₂未见明显沉淀；②滴加KSCN溶液无红色；③滴加AgNO₃出现淡黄色浑浊。他据此判断草酸根完全处于内界。请逐项评价这三项结果的指征意义，并设计一种可定量区分内外界的实验方案说明K⁺在外界。",
+    "matchedFAQ": "某学生在鉴定产物K₃[Fe(C₂O₄)₃]·…",
+    "confidence": "high",
+    "answerText": "①BaCl₂无沉淀说明溶液中游离C₂O₄²⁻浓度极低，草酸根基本被配位，但不能排除微量游离；②KSCN无红色说明无游离Fe³⁺，Fe³⁺已全部配位，指征较强；③AgNO₃生成的淡黄色沉淀可能是Ag₂C₂O₄或产物与Ag⁺的加合物，需区分，不能单独下结论。定量方案：用电导法测定摩尔电导率并与KCl、K₃Fe(CN)₆标准对比，由每摩尔电解质的离子总数确定1:3型；或用阳离子交换树脂定量交换K⁺，以标准碱滴定洗脱酸计算K⁺物质的量。\n\n参考语料：\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《草酸亚铁综合性实验的教学》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《硫酸亚铁铵制备三草酸合铁(Ⅲ)酸钾的实验探索》\n· 《ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》"
+  },
+  {
+    "id": "Q062",
+    "question": "第二步氧化中，体系内已有大量K₂C₂O₄（配体），但反应方程式却先生成Fe(OH)₃沉淀而非直接形成[Fe(C₂O₄)₃]³⁻。请结合H₂O₂氧化Fe²⁺的反应机理、OH⁻的来源、Ksp(Fe(OH)₃)和配位平衡，分析这一反应路径的必然性，并说明第三步为何用草酸溶液将Fe(OH)₃溶解配位。",
+    "matchedFAQ": "第二步氧化中，体系内已有大量K₂C₂O₄（配…",
+    "confidence": "high",
+    "answerText": "H₂O₂氧化Fe²⁺按Fenton型反应进行：Fe²⁺+H₂O₂→Fe³⁺+OH⁻+·OH，产生OH⁻使局部pH升高；Fe(OH)₃的Ksp仅2.79×10⁻³⁹，在弱碱性条件下Fe³⁺立即水解沉淀，动力学上远快于C₂O₄²⁻的配位过程。草酸钾虽提供配体，但C₂O₄²⁻水解也贡献OH⁻，沉淀优先形成。第三步加入H₂C₂O₄既降低pH又提高C₂O₄²⁻有效浓度，使Fe(OH)₃按溶解-配位平衡转化为[Fe(C₂O₄)₃]³⁻。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》"
+  },
+  {
+    "id": "Q064",
+    "question": "取少量产物K₃[Fe(C₂O₄)₃]溶液（翠绿色），逐滴加入稀硫酸，溶液颜色逐渐变为黄绿色，继续加至强酸性则呈浅黄色；随后向其中滴加草酸钾溶液，颜色又恢复翠绿色。请用配位平衡移动原理解释该系列颜色变化，并预测若体系中没有过量的C₂O₄²⁻，继续加入强酸至pH极高（>3）后，再加入NaOH调至中性，可能观察到什么现象？为什么？",
+    "matchedFAQ": "取少量产物K₃[Fe(C₂O₄)₃]溶液（翠…",
+    "confidence": "high",
+    "answerText": "平衡：[Fe(C₂O₄)₃]³⁻⇌Fe³⁺+3C₂O₄²⁻。加酸时H⁺质子化C₂O₄²⁻成HC₂O₄⁻/H₂C₂O₄，配体浓度下降，平衡左移，游离Fe³⁺水合/水解显黄，颜色变浅；加入草酸钾补充C₂O₄²⁻，平衡右移恢复翠绿。若无过量C₂O₄²⁻且在强酸性下配合物完全解离，滴加NaOH中和至中性时，游离Fe³⁺因pH升高水解生成Fe(OH)₃沉淀，溶液变浑浊并出现黄褐色沉淀。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《Lab Report: Synthesis of Potassium Ferric Oxalate》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《三草酸合铁酸钾的制备实验的思考》\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》"
+  },
+  {
+    "id": "Q066",
+    "question": "以5.0g硫酸亚铁铵（M≈392.14 g/mol，约0.0127 mol）为起始物，经四步反应理论上最多可制得多少克K₃[Fe(C₂O₄)₃]·3H₂O（M=491.25 g/mol）？若某学生实际产量为理论值的118%，请从干燥与杂质角度分析可能原因；若产量仅为理论值的55%，请从结晶动力学角度分析可能原因（各列举2条）。",
+    "matchedFAQ": "以5.0g硫酸亚铁铵（M≈392.14 g/…",
+    "confidence": "high",
+    "answerText": "理论产量≈6.26g（按讲义）。产量偏高118%可能原因：①产物未充分干燥，仍含游离水或乙醇；②产物中混入草酸钾、草酸等杂质（未充分洗涤）。产量偏低55%可能原因：①结晶时间不足，晶核尚未充分长大即抽滤，母液中残留大量产物；②加入乙醇量不足或温度偏高，产物溶解度高未完全析出；③静置时未暗处存放导致光解损失。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《FeSO4》\n· 《硫酸亚铁铵制备三草酸合铁(Ⅲ)酸钾的实验探索》\n· 《1》\n· 《10》"
+  },
+  {
+    "id": "Q068",
+    "question": "蓝晒法（cyanotype）以K₃[Fe(C₂O₄)₃]与铁氰化钾K₃[Fe(CN)₆]混合制成感光液，涂布于纸上，遮光图案后置于日光下曝光，再用水冲洗即得蓝色图像。请写出光照时和显色时两步的化学方程式，并解释为什么曝光时间过短图像蓝色太浅、曝光时间过长图像反而模糊甚至部分区域变淡。",
+    "matchedFAQ": "蓝晒法（cyanotype）以K₃[Fe(C…",
+    "confidence": "high",
+    "answerText": "光照：2[Fe(C₂O₄)₃]³⁻ → 2Fe²⁺ + 5C₂O₄²⁻ + 2CO₂↑；显色：Fe²⁺ + [Fe(CN)₆]³⁻ + K⁺ = KFe[Fe(CN)₆]↓（蓝色）。曝光过短，Fe²⁺生成量少，显色蓝浅；曝光过长，Fe²⁺大量生成但铁氰化钾被逐步耗尽，过量Fe²⁺无法显色且可被水洗去，图像反差降低、轮廓模糊，且Fe²⁺进一步扩散导致边缘晕染。\n\n参考语料：\n· 《lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype》\n· 《ed2c01089 si 001》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《ed1002702 si 001》\n· 《ed2c01089 si 003》\n· 《ed2c01089 si 005》"
+  },
+  {
+    "id": "Q065",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定5.0g摩尔盐（约0.0128mol）与1.7g草酸二水合物（约0.0135mol）分别溶解后混合。若学生称取草酸时因看错天平少称了一半（约0.85g），请从化学计量与沉淀完全性角度分析，这对后续第二步氧化和最终产率会产生哪些具体影响？",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定…",
+    "confidence": "high",
+    "answerText": "草酸仅约0.0068mol，少于Fe²⁺的0.0128mol，Fe²⁺不能完全沉淀，部分Fe²⁺残留母液中被倾滗弃去，后续FeC₂O₄不足，Fe(OH)₃生成量减半，最终产率大幅下降；母液中Fe²⁺还可能被空气氧化成Fe³⁺形成氢氧化物胶体，增加分离困难。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《三、硫酸亚铁铵的制备》\n· 《melanterite-绿矾》\n· 《1》\n· 《10》\n· 《Ferrous Ammonium》"
+  },
+  {
+    "id": "Q067",
+    "question": "第二步氧化完成后，讲义要求“加热至沸保持2分钟”以除去过量H₂O₂。若学生担心液滴飞溅，仅加热至沸即停止（煮沸时间不足1分钟），随后立即进行第三步草酸配位，请从H₂O₂与草酸的氧化还原反应角度分析可能出现的后果。",
+    "matchedFAQ": "第二步氧化完成后，讲义要求“加热至沸保持2分…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会氧化草酸：H₂C₂O₄+H₂O₂→2CO₂↑+2H₂O，消耗第三步加入的草酸，使配体不足，Fe(OH)₃溶解不完全，反应液浑浊、产物产率降低；同时多余H₂O₂在后续加热中分解产生O₂，影响晶体质量，甚至使产物中夹杂草酸盐杂质。\n\n参考语料：\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》"
+  },
+  {
+    "id": "Q069",
+    "question": "第三步配位要求“约1.5g草酸配成约0.5mol/L溶液（约30mL）”逐滴滴加。若学生为缩短滴加时间，将草酸配成2mol/L的浓溶液（约7.5mL），请从溶液pH、游离草酸根浓度及配位平衡角度分析其对配位终点判断和产物纯度的可能影响。",
+    "matchedFAQ": "第三步配位要求“约1.5g草酸配成约0.5m…",
+    "confidence": "high",
+    "answerText": "草酸为二元弱酸，浓溶液H⁺浓度高，C₂O₄²⁻被大量质子化为HC₂O₄⁻，游离草酸根浓度低，配位能力下降，Fe(OH)₃溶解变慢，翠绿色终点更难出现；局部pH骤降可能导致草酸析出，产物中夹带草酸；且滴加体积过小不易控制滴速，易过量引入杂质，影响产物纯度。\n\n参考语料：\n· 《jp312603m》\n· 《ja01613a002》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《一个新的Cd(Ⅱ)草酸配合物的合成和结构研究》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《ed1c00776 si 001》"
+  },
+  {
+    "id": "Q071",
+    "question": "为验证产物K₃[Fe(C₂O₄)₃]·3H₂O中K⁺位于外界且草酸根全部配位（无游离草酸根），请设计两种简便的化学检验方法，分别说明实验操作与预期现象。",
+    "matchedFAQ": "为验证产物K₃[Fe(C₂O₄)₃]·3H₂…",
+    "confidence": "high",
+    "answerText": "方法一：取少量产物溶于蒸馏水，滴加BaCl₂溶液，若溶液仍澄清透明、无白色沉淀，说明无游离C₂O₄²⁻（草酸根均配位）；若出现白色沉淀则可能有K₂C₂O₄杂质。方法二：取少量产物溶于水，滴加四苯硼钠溶液，若生成白色沉淀K[B(C₆H₅)₄]，说明有游离K⁺，即K⁺位于外界（配合物外界离子）。\n\n参考语料：\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《ed075p98-The Ligand Field Spectra of Copper(II)》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《ed051p129-Preparation and properties of potassium trioxalatoferrate(III)》\n· 《废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》"
+  },
+  {
+    "id": "Q073",
+    "question": "三草酸合铁(III)酸钾光照发生2[Fe(C₂O₄)₃]³⁻→(hν)2Fe²⁺+3C₂O₄²⁻+2CO₂↑，产生Fe²⁺。若要定量测定某产物在光照一定时间后的光解程度，能否直接选用KMnO₄标准溶液滴定Fe²⁺？请说明原因并提出更合适的定量方案。",
+    "matchedFAQ": "三草酸合铁(III)酸钾光照发生2[Fe(C…",
+    "confidence": "high",
+    "answerText": "不能直接滴定。C₂O₄²⁻也被KMnO₄氧化，Fe²⁺与草酸根同时耗KMnO₄，难以区分。可采用邻菲罗啉分光光度法：Fe²⁺与邻菲罗啉生成橙红色配合物（λmax≈510nm），草酸根不干扰，由吸光度换算光解生成的Fe²⁺量；也可先加Ca²⁺沉淀除去C₂O₄²⁻后，再以KMnO₄滴定Fe²⁺。\n\n参考语料：\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《Chemical actinometry (IUPAC Technical Report)》\n· 《Practical ferrioxalate actinometry for the determination of photon fluxes in production-oriented photoflow reactors》"
+  },
+  {
+    "id": "Q070",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义选用硫酸亚铁铵（摩尔盐）而非普通FeSO₄·7H₂O作为Fe²⁺源。从纯度、稳定性和沉淀条件三方面分析：摩尔盐中的NH₄⁺和SO₄²⁻对沉淀过程有何贡献？若直接用FeSO₄·7H₂O，最可能出现的后果是什么？",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义选用…",
+    "confidence": "high",
+    "answerText": "摩尔盐是等摩尔(NH₄)₂SO₄与FeSO₄形成的复盐，空气中更稳定，Fe²⁺不易被氧化为Fe³⁺；NH₄⁺缓冲可维持弱酸性环境，抑制Fe²⁺氧化；用FeSO₄则Fe²⁺易氧化，产物中混有Fe³⁺水解生成Fe(OH)₃，影响草酸亚铁纯度和后续配比的准确性。\n\n参考语料：\n· 《硫酸亚铁铵》\n· 《Ferrous Ammonium》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《FeSO4》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《三、硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q072",
+    "question": "第二步氧化结束后，讲义要求将体系“加热至沸保持2分钟”除去过量H₂O₂，随后立即进行第三步配位。若学生为节省时间，在沸腾后直接冰水浴冷却至室温再加草酸溶液，对第三步配位反应的速率和完全程度有何影响？请从配位反应动力学角度分析。",
+    "matchedFAQ": "第二步氧化结束后，讲义要求将体系“加热至沸保…",
+    "confidence": "high",
+    "answerText": "配位反应是Fe(OH)₃固相溶解的异相反应，升温可提高溶解速率和配位交换速率。若冷至室温，草酸溶解Fe(OH)₃的速率显著降低，需更长时间才能达到“透明翠绿”终点，且低温下草酸溶解度降低，局部过饱和易析出草酸结晶，造成配位不完全、产率下降。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《the-chemistry-of-the-metal-oxalato》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》"
+  },
+  {
+    "id": "Q074",
+    "question": "第三步配位中，讲义要求将约1.5g草酸配成约0.5mol/L的溶液（约30mL）逐滴滴加。若学生为操作方便改用2mol/L草酸溶液（仅约7.5mL），在相同滴速下可能产生什么后果？从局部浓度和pH变化两方面分析。",
+    "matchedFAQ": "第三步配位中，讲义要求将约1.5g草酸配成约…",
+    "confidence": "high",
+    "answerText": "高浓度草酸溶液局部酸度过大，会形成H₂C₂O₄局部过饱和，导致草酸结晶析出或草酸与Fe³⁺形成其他配比中间物种；同时H⁺浓度过高会推动配位平衡逆向移动，抑制[Fe(C₂O₄)₃]³⁻形成。溶液滴定终点难以准确判断，产物可能混有草酸晶体，纯度下降。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《翻转课堂在无机化学实验中的探索与实践——以无机结晶化合物制备实验为例》\n· 《探究两种水合草酸合铜(II)酸钾晶体的合成》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《j100607a005》"
+  },
+  {
+    "id": "Q076",
+    "question": "第三步配位终点为“透明翠绿”。若学生不熟悉终点判断，在溶液已透明翠绿后仍继续滴加剩余草酸溶液，使体系中草酸根显著过量。从配位平衡（Kf=1.6×10²⁰）、pH变化和后续乙醇结晶三方面讨论：过量草酸对产物产率和纯度有何影响？",
+    "matchedFAQ": "第三步配位终点为“透明翠绿”。若学生不熟悉终…",
+    "confidence": "high",
+    "answerText": "草酸过量使体系pH降低，H⁺质子化草酸根，降低有效C₂O₄²⁻浓度，反而可能使配位平衡稍向解离方向移动；过量草酸在乙醇加入时自身析出晶体，与产物共沉淀；同时酸性增强可能使K₃[Fe(C₂O₄)₃]部分水解，产物颜色变浅、纯度下降，产率表面增加但实际含草酸杂质。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《巧制硫酸亚铁铵晶体》\n· 《ed1c00776 si 001》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《《硫酸亚铁铵的制备》简介》\n· 《实验56 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q078",
+    "question": "第二步氧化中，H₂O₂滴加完毕后讲义要求“继续搅拌5分钟”再加热煮沸。若学生跳过这5分钟搅拌直接加热至沸，除H₂O₂的同时对反应体系有何影响？请从氧化还原反应完全程度和Fe(OH)₃形态两方面分析。",
+    "matchedFAQ": "第二步氧化中，H₂O₂滴加完毕后讲义要求“继…",
+    "confidence": "high",
+    "answerText": "搅拌5分钟是为了使H₂O₂在40℃下与FeC₂O₄充分接触、完成氧化反应。若直接煮沸，H₂O₂在高温下剧烈分解为O₂和水，未及氧化FeC₂O₄即损耗，导致Fe²⁺氧化不完全（K₃Fe(CN)₆检验仍有蓝色沉淀）；且已生成的Fe(OH)₃在急剧升温下颗粒粗化，后续草酸配位溶解变慢。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《柠檬酸铁铵的制备方法》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《基于项目式学习的高三化学综合复习教学——蓝晒》"
+  },
+  {
+    "id": "Q075",
+    "question": "第一步FeC₂O₄·2H₂O沉淀完成后，讲义规定用“热水”洗涤至无SO₄²⁻。若学生取用刚煮沸的沸水（约100℃）反复洗涤，从沉淀溶解度、产率损失及Fe²⁺可能发生的变化三方面分析会带来何种不利影响？",
+    "matchedFAQ": "第一步FeC₂O₄·2H₂O沉淀完成后，讲义…",
+    "confidence": "high",
+    "answerText": "FeC₂O₄的Ksp虽小，但溶解度随温度升高而显著增大，沸水洗涤会明显增加沉淀溶解损失，降低产率；且Fe²⁺在高温、含氧水中更易被氧化为Fe³⁺，生成Fe(OH)₃胶体混入沉淀，使后续氧化配位产物颜色不纯。因此应用80~90℃热水而非沸水。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《三、硫酸亚铁铵的制备》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《硫酸亚铁铵制备》\n· 《硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q077",
+    "question": "第二步氧化结束后，用铁氰化钾K₃[Fe(CN)₆]检验Fe²⁺是否氧化完全。若在含Fe³⁺的绿色透明液中滴加铁氰化钾后观察到极少量蓝色沉淀，应如何准确判定Fe²⁺残留程度并决定是否需要补加H₂O₂？",
+    "matchedFAQ": "第二步氧化结束后，用铁氰化钾K₃[Fe(CN…",
+    "confidence": "high",
+    "answerText": "K₃[Fe(CN)₆]遇Fe²⁺生成蓝色滕氏蓝KFe[Fe(CN)₆]沉淀，对Fe²⁺极灵敏。若出现蓝色沉淀（无论多少）即表明仍有Fe²⁺未氧化完全，应补加适量6%H₂O₂（约1~2mL），加热至沸2分钟后再用铁氰化钾检验，直至无蓝色沉淀生成。注意Fe³⁺与铁氰化钾不生成蓝色沉淀，仅使溶液呈棕色或黄色，需仔细观察。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《mohan-mejia-2020-environmentally-friendly-organic-chemistry-laboratory-experiments-for-the-undergraduate-curriculum-a》\n· 《柠檬酸铁铵的合成及应用进展》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《2008-prussian-blue-artists-pigment-and-chemists》"
+  },
+  {
+    "id": "Q079",
+    "question": "第三步配位反应中，向Fe(OH)₃浆液中逐滴滴加约0.5mol/L草酸溶液，以“溶液变为透明翠绿”为终点。若草酸滴加过量（超出刚好溶解Fe(OH)₃所需的量），对产物纯度、后续结晶及配合物稳定性可能造成哪些不利后果？",
+    "matchedFAQ": "第三步配位反应中，向Fe(OH)₃浆液中逐滴…",
+    "confidence": "high",
+    "answerText": "草酸过量会使溶液酸性过强，H⁺浓度升高可能使[Fe(C₂O₄)₃]³⁻部分转化为低配位物种如H[Fe(C₂O₄)₂]，稳定性下降；过量草酸结晶时共沉淀，污染产物；且酸性环境促进光解逆反应或Fe³⁺水解平衡移动。故须逐滴观察，恰好全溶即停。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《Cr Fe Al Cu 草酸配合物热分析研究》\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《差热分析 DTA 法研究五水硫酸铜的失水过程》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》"
+  },
+  {
+    "id": "Q081",
+    "question": "第二步氧化完成后，讲义要求加热至沸保持2分钟以除去过量H₂O₂。若学生省略该步骤，直接将含H₂O₂的溶液进入第三步配位和第四步结晶，可能引发哪些问题？请从H₂O₂对Fe³⁺/草酸根体系及结晶过程的影响说明。",
+    "matchedFAQ": "第二步氧化完成后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会持续氧化草酸根，消耗配体C₂O₄²⁻，破坏配位平衡，并使产物夹杂草酸分解产物（CO₂气体在结晶时产生气泡，晶体质量差）；H₂O₂在Fe³⁺催化下分解产生O₂气泡搅动溶液，干扰结晶；还可能氧化Fe²⁺，使光化学还原性减弱。故必须沸煮2分钟彻底除尽。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q083",
+    "question": "第四步加入10mL乙醇并悬棉线后暗处静置过夜，次日发现烧杯中仍无晶体析出，溶液仍为透明翠绿色。请从溶液过饱和度、晶核来源及温度三方面分析可能原因，并提出两种可行的补救措施。",
+    "matchedFAQ": "第四步加入10mL乙醇并悬棉线后暗处静置过夜…",
+    "confidence": "high",
+    "answerText": "可能原因：乙醇量不足，溶液未达过饱和临界点，无晶体自发析出；棉线未提供有效晶核或悬挂不牢脱落；静置温度偏高（高于室温），溶解度未降至析晶阈值。补救措施：补加5~10mL乙醇搅拌后重新静置，或置冰水浴降温促进过饱和析晶。切勿剧烈搅拌以免产生大量微晶。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《《实验化学》的实施总结（执信中学）》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《硫酸亚铁》\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《电导，电导率和摩尔电导率》"
+  },
+  {
+    "id": "Q080",
+    "question": "在第二步氧化反应中，H₂O₂用量为8mL（6%），且要求逐滴滴加。若学生在滴加过程中观察到反应液突然由黄绿色变为红棕色浑浊，但继续滴加后红棕色又逐渐消褪并转为澄清的黄绿色。请解释这一颜色变化的原因，并说明若此时立即停止滴加H₂O₂并用铁氰化钾检验Fe²⁺，结果会怎样？",
+    "matchedFAQ": "在第二步氧化反应中，H₂O₂用量为8mL（6…",
+    "confidence": "high",
+    "answerText": "红棕色浑浊是Fe(OH)₃生成（因H₂O₂局部过量氧化Fe²⁺并水解），继续滴加后草酸根与Fe³⁺配位形成可溶性[Fe(C₂O₄)₃]³⁻，红棕色消褪。若立即停止，体系仍含过量Fe²⁺，铁氰化钾检验会生成蓝色沉淀，说明未氧化完全。正常应继续滴加至Fe²⁺完全反应。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《柠檬酸铁铵的合成及应用进展》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《liu-et-al-2016-an-advanced-spectroscopy-lab-that-integrates-art-commerce-and-science-as-students-determine》\n· 《mohan-mejia-2020-environmentally-friendly-organic-chemistry-laboratory-experiments-for-the-undergraduate-curriculum-a》"
+  },
+  {
+    "id": "Q082",
+    "question": "第一步制备FeC₂O₄·2H₂O沉淀时，讲义要求将草酸溶液缓慢倒入摩尔盐溶液中，并微沸4分钟。若学生将滴加顺序颠倒，即把摩尔盐溶液倒入草酸溶液中，且微沸时间延长至20分钟，对沉淀的产率和纯度有何影响？请从反应物配比、水解氧化和草酸过量三个角度分析。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O沉淀时，讲义…",
+    "confidence": "high",
+    "answerText": "颠倒顺序使草酸始终过量，有利于Fe²⁺完全沉淀，但过量的草酸可能使部分FeC₂O₄溶解形成[Fe(C₂O₄)₂]²⁻等络离子，降低产率。微沸时间过长，Fe²⁺易被空气氧化为Fe³⁺，生成Fe(OH)₃混入沉淀，降低纯度，且洗涤时不易除净，影响后续步骤。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《实验十六 硫酸亚铁铵的制备》\n· 《五水硫酸铜脱水机理的热力学求算》"
+  },
+  {
+    "id": "Q084",
+    "question": "第三步配位反应中，向热的Fe(OH)₃浆液中滴加约0.5 mol/L H₂C₂O₄溶液，终点为透明翠绿色。若学生滴加时发现溶液始终浑浊，经检验体系pH为中性，且继续加草酸无明显改善。试分析可能的原因，并给出合理的补救措施。",
+    "matchedFAQ": "第三步配位反应中，向热的Fe(OH)₃浆液中…",
+    "confidence": "high",
+    "answerText": "可能原因：Fe(OH)₃沉淀未充分洗涤，夹带K⁺、SO₄²⁻等；或Fe(OH)₃老化，反应活性降低；也可能草酸浓度不足或pH不适宜（中性下C₂O₄²⁻浓度不足）。补救：滴加少量稀硫酸调节pH至2～3，加热搅拌促进溶解；如仍浑浊，可补加少量草酸钾，增大草酸根浓度，促进配位溶解。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《问题导向式教学在基础化学实验课堂中的应用——以“探讨二草酸合铜酸钾中铜离子测定条件”为例》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征》\n· 《10》\n· 《FeSO4》"
+  },
+  {
+    "id": "Q086",
+    "question": "第四步结晶时，加入95%乙醇后需悬棉线并暗处静置过夜。若学生将烧杯放在窗边，次日发现晶体呈黄褐色而非翠绿色，且表面有气泡产生。请解释现象，并说明黄褐色物质是什么？该情况下产物的产率与纯度如何变化？",
+    "matchedFAQ": "第四步结晶时，加入95%乙醇后需悬棉线并暗处…",
+    "confidence": "high",
+    "answerText": "K₃[Fe(C₂O₄)₃]见光发生LMCT光解，Fe³⁺还原为Fe²⁺，草酸根氧化为CO₂逸出，产生气泡。Fe²⁺可生成FeC₂O₄或[Fe(C₂O₄)₂]²⁻等黄色或绿褐色杂质，导致晶体发黄。光解使产物组成改变，纯度显著下降，产率计算值偏高但实际有效组分降低。\n\n参考语料：\n· 《差热分析 DTA 法研究五水硫酸铜的失水过程》\n· 《10》\n· 《三、硫酸亚铁铵的制备》\n· 《Fe2SO4》\n· 《Ferrous Ammonium》\n· 《SULFATE MINERAL PHASE EQUILIBRIA AS A FUNCTION OF RELATIVE HUMIDITY.》"
+  },
+  {
+    "id": "Q088",
+    "question": "在第一步沉淀后热水洗涤FeC₂O₄·2H₂O时，若用BaCl₂检验洗涤液，发现仍有白色沉淀，但学生认为少量SO₄²⁻不会影响后续步骤而停止洗涤。请分析残留SO₄²⁻对第二步氧化和最终产物的影响，并说明是否可以通过后续操作弥补。",
+    "matchedFAQ": "在第一步沉淀后热水洗涤FeC₂O₄·2H₂O…",
+    "confidence": "high",
+    "answerText": "残留的SO₄²⁻会与K⁺、Fe³⁺形成可溶性硫酸盐（如KFe(SO₄)₂），在结晶时随产物共析出，降低纯度。在第二步碱性氧化环境中SO₄²⁻可能干扰沉淀转化，且洗涤时乙醇洗无法去除SO₄²⁻，使产品不合格。须补洗至BaCl₂无沉淀，否则需重结晶提纯。\n\n参考语料：\n· 《柠檬酸铁铵的制备方法》\n· 《三草酸合铁酸钾的制备及其性质（课件2）》\n· 《Prep & Analysis of Iron Coord. Comp. Prt. A F 08》\n· 《Prep and Analysis of a Coordination》\n· 《recovery-of-iron-resources-from-wet-process-phosphoric-acid-and-the-preparation-of-high-purity-ferrous-oxalate》\n· 《无机化学实验教学中对三草酸合铁 酸钾制备的实验改进》"
+  },
+  {
+    "id": "Q085",
+    "question": "第二步氧化完全后，讲义要求用K₃[Fe(CN)₆]检验Fe²⁺是否残留。若产物溶液呈亮黄色，且Fe²⁺浓度已低于检出限，仅靠“不出现蓝色沉淀”能否判定氧化完全？请分析该检验方法在含大量草酸根和Fe³⁺体系中的干扰因素，并给出更可靠的判定策略。",
+    "matchedFAQ": "第二步氧化完全后，讲义要求用K₃[Fe(CN…",
+    "confidence": "high",
+    "answerText": "不能仅凭无蓝色沉淀判定。体系中有大量草酸根和Fe³⁺，黄色滤液吸收蓝光会使蓝色沉淀反差降低，且若Fe²⁺残留极微量，蓝色可能不明显。可靠策略：取少量滤液加稀盐酸酸化，再加新配K₃[Fe(CN)₆]如出现蓝色即残留；可浓缩后检验以提高灵敏度。本实验已煮沸除H₂O₂，无需再煮沸。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion》\n· 《Teaching Notes for Experiment 9 (Iron Oxalate 习题)》\n· 《Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods》"
+  },
+  {
+    "id": "Q087",
+    "question": "三草酸合铁(III)酸钾晶体呈翠绿色。若学生将产物置于阳光直射处数小时后，观察其颜色由翠绿色变为黄棕色，原因是什么？从晶体场理论和LMCT机理解释颜色变化，并说明能否用这种颜色变化作为产物光解程度的定性判断。",
+    "matchedFAQ": "三草酸合铁(III)酸钾晶体呈翠绿色。若学生…",
+    "confidence": "high",
+    "answerText": "翠绿色源于[Fe(C₂O₄)₃]³⁻中草酸根→Fe³⁺的LMCT跃迁，吸收红橙光而透过绿光。光照后发生LMCT光解，Fe³⁺被还原为Fe²⁺，放出CO₂，配体减少，[Fe(C₂O₄)₃]³⁻浓度降低；Fe²⁺的d-d跃迁（d⁶高自旋）产生新的吸收，叠加后颜色向黄棕偏移。因此颜色变化可定性指示光解，但不灵敏，更可靠的是溶解后加K₃[Fe(CN)₆]检验Fe²⁺。\n\n参考语料：\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《Practical Chemical Actinometry—A Review》\n· 《1973-an-experiment-sequence-involving-potassium-trioxalatoferrate(iii)》\n· 《jce2005p1667w》\n· 《A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》"
+  },
+  {
+    "id": "Q089",
+    "question": "已知Ksp(FeC₂O₄)=3.2×10⁻⁷，草酸的pKa₁=1.23、pKa₂=4.19。第一步沉淀FeC₂O₄·2H₂O时，若体系酸度过高（如pH≈1）或过低（如pH≈6），各会通过什么机制影响沉淀完全程度？请用平衡移动和质子化原理推导最佳pH范围。",
+    "matchedFAQ": "已知Ksp(FeC₂O₄)=3.2×10⁻⁷…",
+    "confidence": "high",
+    "answerText": "酸度过高时，C₂O₄²⁻质子化为HC₂O₄⁻和H₂C₂O₄，游离C₂O₄²⁻浓度骤降，使[Fe²⁺][C₂O₄²⁻]<Ksp，沉淀不完全。酸度过低时，Fe²⁺水解生成Fe(OH)₂或碱式盐，沉淀组成不纯。利用Ksp与分布系数计算，最佳pH约3~4（此时C₂O₄²⁻约占10⁻²~10⁻¹，且Fe²⁺不水解）。故仅加数滴3mol/L H₂SO₄维持pH≈3。\n\n参考语料：\n· 《无机化学实验教学中对三草酸...Ⅲ) 酸钾制备的实验改进》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate FeCL3》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《recovery-of-iron-resources-from-wet-process-phosphoric-acid-and-the-preparation-of-high-purity-ferrous-oxalate》"
+  },
+  {
+    "id": "Q091",
+    "question": "第三步配位要求“逐滴滴加草酸至Fe(OH)₃完全溶解、溶液透明翠绿即终点”。若学生滴加过量草酸（超出理论量50%），对第四步结晶产物的纯度和晶体组成有何不利影响？从配位平衡、酸度和反溶剂结晶三个方面分析。",
+    "matchedFAQ": "第三步配位要求“逐滴滴加草酸至Fe(OH)₃…",
+    "confidence": "high",
+    "answerText": "过量草酸使体系酸度升高，H⁺与C₂O₄²⁻结合降低配体有效浓度，可能使[Fe(C₂O₄)₃]³⁻部分解离为[Fe(C₂O₄)₂]⁻或[Fe(C₂O₄)]⁺，产物配位数不足，组成偏离预期。第四步加乙醇时，过量草酸可能析出H₂C₂O₄或KHC₂O₄晶体与产物共沉淀，降低纯度，烘干时草酸分解产生CO₂使晶体开裂。因此必须滴至恰好翠绿透明即止。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》"
+  },
+  {
+    "id": "Q093",
+    "question": "第二步氧化后必须加热至沸保持2分钟以除去过量H₂O₂。若学生忘记煮沸除H₂O₂，直接进入第三步配位，会对后续反应和最终产物产生哪些连锁影响？请从H₂O₂与草酸根的氧化反应、Fe³⁺配位稳定性及产物光敏性三个角度分析。",
+    "matchedFAQ": "第二步氧化后必须加热至沸保持2分钟以除去过量…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会氧化草酸根：H₂C₂O₄+H₂O₂→2CO₂+2H₂O，使配体消耗，第三步需更多草酸才能溶解Fe(OH)₃，且CO₂逸出使溶液冒泡。体系H⁺增多，pH下降，[Fe(C₂O₄)₃]³⁻稳定性降低。H₂O₂还能与Fe³⁺形成红色过氧配合物，干扰翠绿色终点判断。产物中若夹带过氧物种，光解行为异常，光敏性下降。因此必须煮沸除尽H₂O₂。\n\n参考语料：\n· 《ed1c00776 si 001》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《制备硫酸亚铁铵单晶的实验研究》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《gonzález-seco-2004-potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of》\n· 《jp312603m》"
+  },
+  {
+    "id": "Q090",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将两种溶液加热近沸后混合，再微沸保持4分钟。若学生为省时改为室温下直接将两种溶液混合并搅拌20分钟，对沉淀的产率和纯度会有何影响？请从反应吉布斯自由能、晶体成核速率及Fe²⁺氧化副反应三个角度分析。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "室温下反应速率显著降低，FeC₂O₄·2H₂O沉淀不充分，产率下降；同时成核慢但晶体长大，可能包裹杂质或母液，导致纯度下降。室温放置时间延长，Fe²⁺更易被溶解氧氧化为Fe³⁺，生成Fe(OH)₃胶体混入沉淀。微沸可促进反应完全并破坏胶体，提高纯度和产率。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《Fe2SO4》\n· 《三、硫酸亚铁铵的制备》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q092",
+    "question": "第二步氧化中，讲义规定滴加8mL 6% H₂O₂（权威值）。若学生误加为12mL，且仍按原步骤煮沸2分钟除H₂O₂，对后续第三步配位及最终产物纯度可能产生哪些不良影响？请从H₂O₂过量后可能发生的氧化还原副反应角度分析。",
+    "matchedFAQ": "第二步氧化中，讲义规定滴加8mL 6% H₂…",
+    "confidence": "high",
+    "answerText": "过量H₂O₂煮沸2分钟可能不足以完全分解，残余H₂O₂会继续氧化草酸根生成CO₂，导致草酸根损耗，配位不完全；同时H₂O₂可将Fe³⁺还原为Fe²⁺，使产物含Fe²⁺杂质，颜色变浅。此外过量H₂O₂可能氧化FeC₂O₄中未反应的Fe²⁺，产生额外Fe(OH)₃，影响后续溶解和配位。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《phillips-1971-a-quantitative-photochemical-experiment-for》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q094",
+    "question": "第三步配位时，草酸溶液浓度定为约0.5mol/L而非更高的2mol/L。若改用2mol/L草酸溶液并相应减少滴加体积，对终点判断和产物纯度有何不同？请从酸度对配位平衡及Fe(OH)₃溶解速率的影响分析。",
+    "matchedFAQ": "第三步配位时，草酸溶液浓度定为约0.5mol…",
+    "confidence": "high",
+    "answerText": "高浓度草酸溶液酸度更强，虽能加快Fe(OH)₃溶解，但强酸性可促进H⁺与草酸根结合，降低有效配位离子[C₂O₄²⁻]浓度，不利于形成[Fe(C₂O₄)₃]³⁻，导致终点不明显或需更多量。同时强酸可能使草酸分解或形成H[Fe(C₂O₄)₂]等副产物，降低纯度。0.5mol/L浓度适中，便于逐滴控制终点。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and》"
+  },
+  {
+    "id": "Q096",
+    "question": "用AgNO₃溶液检验三草酸合铁(III)酸钾的离子组成。若向新鲜配制的产物溶液中滴加AgNO₃，预期有何现象？若将产物溶液暴露在日光下数小时后再滴加AgNO₃，又可能出现什么现象？请从配离子内外界及光解产物角度解释。",
+    "matchedFAQ": "用AgNO₃溶液检验三草酸合铁(III)酸钾…",
+    "confidence": "high",
+    "answerText": "新鲜溶液中K⁺在外界，C₂O₄²⁻在内界，滴加AgNO₃不产生草酸银沉淀，仅可能因未除净Cl⁻等产生少量浑浊。光照后配离子光解生成游离C₂O₄²⁻和Fe²⁺，C₂O₄²⁻与Ag⁺生成白色Ag₂C₂O₄沉淀。Fe²⁺不能还原Ag⁺，因此无银灰色沉淀。若Ag₂C₂O₄见光分解可能变黑，但直接现象仍以白色沉淀为主。\n\n参考语料：\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate》\n· 《三草酸合铁（Ⅲ）酸钾的制备和组成测定》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》"
+  },
+  {
+    "id": "Q098",
+    "question": "第四步结晶时，若加入95%乙醇后未盖表面皿，而是将烧杯置于日光直射处静置过夜，对最终产物的颜色和纯度有何影响？请从光解反应和溶剂蒸发两方面分析。",
+    "matchedFAQ": "第四步结晶时，若加入95%乙醇后未盖表面皿，…",
+    "confidence": "high",
+    "answerText": "日光照射使[Fe(C₂O₄)₃]³⁻发生LMCT光解，生成Fe²⁺和草酸根及CO₂，产物颜色由翠绿色变为黄褐色，含Fe²⁺杂质。未盖表面皿使乙醇加速挥发，溶剂蒸发过快可能使产物过早析出，包裹杂质油状物，晶体质量差。同时光解产生的草酸根可能被氧化，进一步降低纯度。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Photochemistry》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《lawrence-fishelson-1999-uv-catalysis-cyanotype-photography-and》"
+  },
+  {
+    "id": "Q095",
+    "question": "第二步氧化结束后，讲义要求加热至沸保持2分钟以除去过量H₂O₂。若学生省略此步骤或仅加热30秒便进入第三步配位，过量H₂O₂残留会对后续反应和最终产物产生哪些具体影响？请从H₂O₂的化学性质、第三步配位反应的氧化还原竞争及最终产物纯度三个角度分析。",
+    "matchedFAQ": "第二步氧化结束后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂在第三步加热配位时可能氧化草酸根（C₂O₄²⁻→CO₂），消耗配体并改变配位平衡，导致配位不完全；同时H₂O₂可将Fe³⁺还原为Fe²⁺或与草酸根竞争配位，使产物含Fe²⁺杂质、颜色异常，且K₃[Fe(C₂O₄)₃]产率降低。残留H₂O₂还会在后续乙醇结晶时引发副反应。故必须煮沸2分钟分解尽H₂O₂（讲义ch4-s2）。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《News from Online: Plants and Photosynthesis》\n· 《三草酸合铁酸碱的制备及测定》"
+  },
+  {
+    "id": "Q097",
+    "question": "按5.0g摩尔盐(0.0128mol)计算，第二步氧化FeC₂O₄理论需H₂O₂约0.0064mol，而6% H₂O₂取8mL（约0.014mol，理论量2.2倍）。请结合H₂O₂在40℃水浴中的分解特性及反应体系要求，分析为何需过量2倍以上？若仅按理论量减半加入，可能观察哪些现象？",
+    "matchedFAQ": "按5.0g摩尔盐(0.0128mol)计算，…",
+    "confidence": "high",
+    "answerText": "需过量是因为40℃下H₂O₂会自行分解（2H₂O₂→2H₂O+O₂↑），且滴加过程中局部浓度不足以维持氧化电位，过量可确保Fe²⁺氧化完全；若减半加入，H₂O₂不足则Fe²⁺氧化不完全，K₃[Fe(CN)₆]检验仍显蓝色，后续配位时Fe²⁺与草酸形成FeC₂O₄沉淀或混入产物，导致产物不纯、产率低（参见讲义ch3-s3、ch4-s1权威值8mL）。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《摩尔盐的空气稳定性》\n· 《1》\n· 《melanterite-绿矾》"
+  },
+  {
+    "id": "Q099",
+    "question": "第三步配位时，向含Fe(OH)₃浆液中逐滴滴加稀草酸溶液至“透明翠绿”即终点。已知Ksp[Fe(OH)₃]=2.79×10⁻³⁹，Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰。请从配位平衡移动角度解释：为何草酸根能将Ksp极小的Fe(OH)₃完全溶解？若草酸加至恰好溶解但溶液呈黄绿色而非翠绿色，说明什么问题？",
+    "matchedFAQ": "第三步配位时，向含Fe(OH)₃浆液中逐滴滴…",
+    "confidence": "high",
+    "answerText": "C₂O₄²⁻与Fe³⁺生成稳定配合物，Kf=1.6×10²⁰极大，使溶液中游离Fe³⁺浓度降至极低，远小于Ksp[Fe(OH)₃]/[OH⁻]³，从而拉动Fe(OH)₃沉淀不断溶解。翠绿色为K₃[Fe(C₂O₄)₃]特征色；若黄绿色，则配位不完全或存在Fe²⁺杂质（Fe²⁺-草酸配离子颜色浅），应继续滴加草酸或重检Fe²⁺（讲义ch3-s4、ch5-s4）。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征》"
+  },
+  {
+    "id": "Q101",
+    "question": "第二步氧化反应方程式为：6FeC₂O₄+3H₂O₂+6K₂C₂O₄→4K₃[Fe(C₂O₄)₃]+2Fe(OH)₃↓。可见H₂O₂将6个Fe²⁺全部氧化为Fe³⁺，其中4个Fe³⁺配入络合物，2个Fe³⁺留在Fe(OH)₃中。若改用足量H₂O₂将Fe²⁺全部氧化为Fe³⁺并直接配位，看似更高效，但实际不可行。请从pH环境、草酸根的配位保护及产物稳定性角度解释该设计的原因。",
+    "matchedFAQ": "第二步氧化反应方程式为：6FeC₂O₄+3H…",
+    "confidence": "high",
+    "answerText": "Fe²⁺被H₂O₂氧化后全部变为Fe³⁺，在近中性草酸钾溶液中Fe³⁺水解倾向极强（Ksp[Fe(OH)₃]=2.79×10⁻³⁹），故2个Fe³⁺以Fe(OH)₃沉淀形式稳定存在。若全部氧化并直接配位，需大量H₂O₂，产生的强酸性环境会使草酸根质子化（HC₂O₄⁻/H₂C₂O₄）而失去配位能力，且Fe³⁺水解竞争加剧；保留部分Fe³⁺形成Fe(OH)₃沉淀可缓冲体系pH、避免Fe³⁺过早配位后过度水解生成难溶碱式盐。此外，过量H₂O₂会氧化配位的草酸根，破坏产物稳定性。该设计利用沉淀平衡控制Fe³⁺浓度，保证配位选择性（讲义ch3-s3）。\n\n参考语料：\n· 《制备硫酸亚铁铵单晶的实验研究》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》"
+  },
+  {
+    "id": "Q103",
+    "question": "三草酸合铁(III)酸钾具有光致还原性：2[Fe(C₂O₄)₃]³⁻→2Fe²⁺+3C₂O₄²⁻+2CO₂↑。现有一份未经光照的K₃[Fe(C₂O₄)₃]·3H₂O晶体，请设计一套简便实验方案验证其光敏性，要求说明产物Fe²⁺的检测方法和判断依据（不涉及精密仪器）。",
+    "matchedFAQ": "三草酸合铁(III)酸钾具有光致还原性：2[…",
+    "confidence": "high",
+    "answerText": "分别取少量晶体溶于水，一份置于阳光下照射30min，另一份避光保存作对照。各滴加新配K₃[Fe(CN)₆]溶液：光照组出现蓝色沉淀（KFe[Fe(CN)₆]）证明生成Fe²⁺，避光组无蓝色沉淀。此方案依据光解LMCT机理及铁氰化钾专属检验（讲义ch6-s1、ch5-s1）。若需进一步确认，可先加入过量Ca²⁺沉淀草酸根排除干扰，再酸化后滴加KMnO₄，紫色褪色可辅助证明Fe²⁺。\n\n参考语料：\n· 《Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate》\n· 《Errors in ferrioxalate actinometry》\n· 《三草酸合铁酸钾改进制备及其光致还原性探究》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers》"
+  },
+  {
+    "id": "Q100",
+    "question": "第二步氧化反应中，反应方程式显示H₂O₂氧化FeC₂O₄先生成Fe(OH)₃沉淀，而非直接生成可溶性K₃[Fe(C₂O₄)₃]配合物。请从热力学（Ksp、Kf）和实验步骤设计逻辑角度，分析这种“氧化—沉淀—再配位”分步设计的必要性。",
+    "matchedFAQ": "第二步氧化反应中，反应方程式显示H₂O₂氧化…",
+    "confidence": "high",
+    "answerText": "FeC₂O₄氧化后产生的Fe³⁺在近中性草酸钾溶液中水解倾向极强（Ksp[Fe(OH)₃]=2.79×10⁻³⁹），故以Fe(OH)₃沉淀形式稳定存在；若氧化阶段就加入过量草酸根直接配位，Fe³⁺会形成可溶性配合物而无法与未反应的FeC₂O₄分离，且后续难以控制配位程度。Kf=1.6×10²⁰保证了第三步草酸能从Fe(OH)₃中定量夺取Fe³⁺完成配位，体现分步设计的合理性与必要。\n\n参考语料：\n· 《三草酸合铁酸钾的制备及其性质（周二）》\n· 《Synthesis of Potassium tris(oxalato)ferrate》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》"
+  },
+  {
+    "id": "Q102",
+    "question": "第三步配位中，讲义称取约1.5g H₂C₂O₄·2H₂O配成约0.5mol/L溶液逐滴滴加。按5.0g摩尔盐（含Fe²⁺约0.0128mol）计算，第二步生成Fe(OH)₃约0.00427mol，第三步理论需草酸约0.0064mol，而实际1.5g草酸约0.0119mol，是过量的。请分析实际用量大于理论量的原因，以及若将草酸用量增至2倍（约3.0g）对结晶和产物纯度有何影响。",
+    "matchedFAQ": "第三步配位中，讲义称取约1.5g H₂C₂O…",
+    "confidence": "high",
+    "answerText": "按第二步方程式，FeC₂O₄的物质的量即为Fe²⁺的物质的量（约0.0128mol），其中生成Fe(OH)₃的Fe占1/3（约0.00427mol）。第三步配位反应2Fe(OH)₃+3H₂C₂O₄，需草酸约0.0064mol，实际1.5g草酸（0.0119mol）过量，能提供足够H⁺溶解Fe(OH)₃并保证配位完全。若草酸增至3.0g（0.0238mol），溶液酸度过高会抑制配位平衡，且草酸根与K⁺可能生成KHC₂O₄或草酸晶体，在第四步结晶时与产物共析出，降低纯度。\n\n参考语料：\n· 《制备硫酸亚铁铵单晶的实验研究》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《FeSO4》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《1》"
+  },
+  {
+    "id": "Q104",
+    "question": "第一步沉淀用热水洗涤至无SO₄²⁻时，讲义用BaCl₂检验。但洗涤液中可能残留草酸根，Ba²⁺也能与C₂O₄²⁻生成白色BaC₂O₄沉淀。请说明如何区分BaSO₄与BaC₂O₄沉淀，并据此判断检验时是否应先酸化洗涤液，若未酸化可能造成什么误判？",
+    "matchedFAQ": "第一步沉淀用热水洗涤至无SO₄²⁻时，讲义用…",
+    "confidence": "high",
+    "answerText": "BaSO₄不溶于稀盐酸，而BaC₂O₄可溶于稀盐酸（生成可溶性HC₂O₄⁻/H₂C₂O₄）。检验时应先加稀盐酸酸化洗涤液，再滴加BaCl₂：若出现白色沉淀且不溶于酸，则确证SO₄²⁻；若沉淀溶于酸则为草酸根干扰。未酸化时草酸根可产生假阳性，导致洗涤过度或误判。\n\n参考语料：\n· 《Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《二草酸合铜酸钾制备中的疑难问题》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《the-mechanism-of-the-permanganate-oxalate》\n· 《ja01613a002》"
+  },
+  {
+    "id": "Q106",
+    "question": "第三步配位时，讲义将约1.5g草酸配成约0.5mol/L溶液（约30mL）逐滴滴加，而非使用更稀（如0.1mol/L）或更浓（如2mol/L）的溶液。请从Fe(OH)₃溶解动力学、终点“透明翠绿”的判断灵敏度以及草酸局部过量对配合物稳定性的影响三方面，分析0.5mol/L浓度选择的合理性。",
+    "matchedFAQ": "第三步配位时，讲义将约1.5g草酸配成约0.…",
+    "confidence": "high",
+    "answerText": "0.5mol/L时滴加体积约30mL，逐滴加入使Fe(OH)₃溶解速率适中、固相逐渐减少，终点由浑浊红棕突变为透明翠绿，颜色变化敏锐易判。若太稀则体积过大、溶解慢、终点拖尾；太浓则局部酸度过高，可能使已生成的[Fe(C₂O₄)₃]³⁻分解（酸效应）或草酸局部过饱和析出，干扰终点判断并影响配位完全程度。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《the-chemistry-of-the-metal-oxalato》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《五水硫酸铜脱水机理的热力学求算》"
+  },
+  {
+    "id": "Q108",
+    "question": "产物K₃[Fe(C₂O₄)₃]溶液呈翠绿色，Kf=1.6×10²⁰表明配合物极稳定。若向溶液中滴加稀盐酸，颜色逐渐变为浅黄；随后再缓慢滴加KOH中和，颜色能否恢复翠绿？请从草酸根质子化、配位平衡移动及Fe³⁺水解竞争角度分析pH对配位平衡的可逆性影响，并说明pH过高时为何无法恢复。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]溶液呈翠绿色，…",
+    "confidence": "high",
+    "answerText": "加酸使H⁺与C₂O₄²⁻结合生成HC₂O₄⁻/H₂C₂O₄，有效配体浓度下降，配位平衡右移释放Fe³⁺，翠绿变浅黄；若在此阶段滴碱中和，H⁺减少、C₂O₄²⁻再生，配位可逆向恢复，故颜色可回翠绿。但若酸过多导致Fe³⁺完全解离后，再加碱使pH升高至Fe(OH)₃（Ksp=2.79×10⁻³⁹）沉淀阈值，Fe³⁺被锁定为氢氧化物，配位无法重建，颜色不再恢复。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《Synthesis of Potassium tris(oxalato)ferrate》\n· 《Potassium ferrioxalate (Wikipedia)》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《ed1c00776 si 001》\n· 《potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of-chemical-equilibria (1)》"
+  },
+  {
+    "id": "Q105",
+    "question": "第一步滴加摩尔盐与草酸溶液时，讲义要求两者分别加热至“近沸”后混合再微沸4分钟。若学生将两溶液冷却至室温后混合，再直接加热至微沸并保持4分钟，沉淀的粒径分布、过滤难度及产率将如何变化？请从成核速率与晶体生长竞争的角度分析，并说明为何“先热后混”优于“先混后热”。",
+    "matchedFAQ": "第一步滴加摩尔盐与草酸溶液时，讲义要求两者分…",
+    "confidence": "high",
+    "answerText": "先热后混使反应在高温下进行，FeC₂O₄过饱和度相对较低，成核速率慢，晶体生长速率快，有利于形成颗粒较大且均匀的沉淀，易于过滤和洗涤，产率与纯度较高。若先混后热，室温下过饱和度高，成核迅速产生大量细小晶核，后续加热时晶核可能继续生长但不均匀，导致沉淀细小、过滤困难，且易包藏母液中的SO₄²⁻等杂质，降低产率和纯度。因此“先热后混”优于“先混后热”。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《Ferrous Ammonium》\n· 《melanterite-绿矾》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《马口铁与白铁区别》\n· 《10》"
+  },
+  {
+    "id": "Q107",
+    "question": "第一步溶解5.0g摩尔盐时加入数滴3mol/L H₂SO₄（约0.5mL），请定量估算这数滴酸能将溶液pH降至何范围。若体系pH=1.0时，Fe²⁺是否仍存在显著水解？若pH升高至5.0，FeC₂O₄沉淀的Ksp是否会因Fe²⁺水解消耗而受影响？请用平衡移动原理说明加酸的根本目的。",
+    "matchedFAQ": "第一步溶解5.0g摩尔盐时加入数滴3mol/…",
+    "confidence": "high",
+    "answerText": "15mL水中加约0.5mL 3mol/L H₂SO₄，H⁺当量约0.003mol，溶液体积约15.5mL，[H⁺]≈0.19mol/L，pH≈0.7。pH=1.0时Fe²⁺水解极微弱，加酸主要目的是抑制Fe²⁺水解（生成Fe(OH)₂）及形成羟基配合物，保持Fe²⁺以简单离子形式存在。若pH升至5附近，Fe²⁺水解加剧，游离Fe²⁺浓度下降，使FeC₂O₄沉淀计算偏离简单溶度积关系。加酸的根本目的是维持酸性条件，确保Fe²⁺稳定存在于溶液中，避免因水解影响第一步沉淀的定量进行。\n\n参考语料：\n· 《硫酸亚铁铵制备实验的改进》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《三、硫酸亚铁铵的制备》\n· 《实验 硫酸亚铁铵的制备》\n· 《实验56 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q109",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O对光敏感，LMCT光解产生Fe²⁺。若学生未严格执行“暗处静置过夜”，而是在日光下静置，最终产物颜色会发生什么变化？产物中出现的Fe²⁺将如何影响第四步乙醇反溶剂法的结晶收率与晶体质量？请从光解方程式与Fe²⁺在乙醇-水体系中的溶解度角度综合判断。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O对光…",
+    "confidence": "high",
+    "answerText": "日光下[Fe(C₂O₄)₃]³⁻发生LMCT光解，生成Fe²⁺、C₂O₄²⁻和CO₂。Fe²⁺可与残余C₂O₄²⁻形成FeC₂O₄沉淀，使溶液变浑浊、颜色由翠绿转为黄绿或带褐。光解产生的Fe²⁺为杂质，在乙醇反溶剂法结晶时Fe²⁺草酸盐溶解度低，共沉淀或混晶导致产物纯度下降、颜色不纯，产率亦因母液中部分铁以FeC₂O₄形式沉淀而偏离理论值。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》"
+  },
+  {
+    "id": "Q111",
+    "question": "第二步氧化滴加H₂O₂完毕后，讲义要求“继续搅拌5分钟”，随后“加热至沸保持2分钟”。若学生忽略这5分钟搅拌直接加热至沸，对反应结果有何影响？从H₂O₂分解动力学与Fe²⁺氧化完全程度的角度，说明这5分钟对保证Fe²⁺检验合格（K₃[Fe(CN)₆]不显蓝色）的关键意义。",
+    "matchedFAQ": "第二步氧化滴加H₂O₂完毕后，讲义要求“继续…",
+    "confidence": "high",
+    "answerText": "5分钟搅拌使已滴入的H₂O₂在40℃下充分与FeC₂O₄反应，使残余Fe²⁺完全氧化，同时H₂O₂在搅拌中缓慢分解。若省略，溶液中残留较多Fe²⁺和未反应的H₂O₂，加热至沸时H₂O₂快速分解，氧化能力骤降，Fe²⁺难以氧化完全，K₃[Fe(CN)₆]检验出现蓝色。即使补加H₂O₂也需重新控温，操作反复且易引入过量H₂O₂影响后续配位。\n\n参考语料：\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q113",
+    "question": "用K₃[Fe(CN)₆]检验Fe²⁺时，若含Fe²⁺的溶液中同时存在大量C₂O₄²⁻，是否会干扰蓝色沉淀KFe[Fe(CN)₆]的生成？请从Fe²⁺被C₂O₄²⁻配位的角度分析检验的可行性，并说明为何讲义仍推荐此方法用于第二步氧化完全的判据。",
+    "matchedFAQ": "用K₃[Fe(CN)₆]检验Fe²⁺时，若含…",
+    "confidence": "high",
+    "answerText": "C₂O₄²⁻对Fe²⁺有配位作用，但其配合物稳定性远低于KFe[Fe(CN)₆]沉淀的生成趋势。KFe[Fe(CN)₆]溶度积极小，加入过量K₃[Fe(CN)₆]后，Fe²⁺从草酸配合物中释放并与铁氰根结合生成蓝色沉淀，检验仍敏鼋。但若C₂O₄²⁻过量太多，需稍加酸降低游离C₂O₄²⁻浓度，否则检验灵敏度略降。此法便捷可靠，适合作终点判据。\n\n参考语料：\n· 《不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)》\n· 《光化学动力学分光光度法测定柠檬酸》\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》"
+  },
+  {
+    "id": "Q110",
+    "question": "第二步氧化反应中，FeC₂O₄·2H₂O被H₂O₂氧化，反应方程式给出6FeC₂O₄+3H₂O₂+6K₂C₂O₄→4K₃[Fe(C₂O₄)₃]+2Fe(OH)₃+12H₂O，但实际反应过程中，为什么先生成Fe(Ⅲ)的草酸配合物，随后部分水解生成Fe(OH)₃？请从配体取代和羟基配位竞争角度解释，并说明若草酸钾不足（K₂C₂O₄用量偏低），产物中Fe(OH)₃量会怎样变化？",
+    "matchedFAQ": "第二步氧化反应中，FeC₂O₄·2H₂O被H…",
+    "confidence": "high",
+    "answerText": "Fe³⁺与C₂O₄²⁻配位能力强，H₂O₂将Fe²⁺氧化为Fe³⁺后立即与过量C₂O₄²⁻配位形成[Fe(C₂O₄)₃]³⁻，但该配合物在溶液近中性条件下部分水解生成Fe(OH)₃。K₂C₂O₄不足时，游离C₂O₄²⁻少，配位不完全，水解更严重，Fe(OH)₃增多，导致后续配位需更多草酸，产率下降。\n\n参考语料：\n· 《A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate》\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》\n· 《Practical ferrioxalate actinometry for the determination of photon fluxes in production-oriented photoflow reactors》\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《Chemical actinometry (IUPAC Technical Report)》"
+  },
+  {
+    "id": "Q112",
+    "question": "第三步配位反应中，讲义要求将约1.5g草酸配成约0.5mol/L溶液（约30mL）后逐滴滴加。若学生误配成2mol/L的浓溶液，且仍逐滴加入，从配位平衡和局部过浓角度分析，会对Fe(OH)₃溶解和最终产物纯度有何影响？",
+    "matchedFAQ": "第三步配位反应中，讲义要求将约1.5g草酸配…",
+    "confidence": "high",
+    "answerText": "浓草酸局部过大会使体系pH骤降，草酸根质子化，配位能力减弱，已溶解的Fe³⁺可能再次水解生成Fe(OH)₃或析出草酸结晶，导致终点判断困难；过量草酸可能以杂质混入产物，需多次洗涤，降低纯度。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Photochemistry》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》"
+  },
+  {
+    "id": "Q114",
+    "question": "第二步氧化中，滴加完H₂O₂后，讲义规定“继续在水浴中搅拌5分钟”，然后再“加热至沸保持2分钟”。若学生省略搅拌5分钟，直接加热至沸，会有什么后果？请从H₂O₂分解速率和Fe²⁺氧化完全程度两方面说明。",
+    "matchedFAQ": "第二步氧化中，滴加完H₂O₂后，讲义规定“继…",
+    "confidence": "high",
+    "answerText": "省略搅拌直接加热至沸，H₂O₂在高温下分解加速，有效氧化剂量减少，且反应不均匀，Fe²⁺可能氧化不完全（K₃[Fe(CN)₆]检验呈蓝色）。煮沸虽能除去H₂O₂，但氧化不充分的Fe²⁺会残留在体系中，影响产物纯度。应严格按规程：滴加完毕后继续40℃水浴搅拌5分钟，再加热至沸除过量H₂O₂。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定》\n· 《Ferrous Ammonium》\n· 《melanterite-绿矾》"
+  },
+  {
+    "id": "Q116",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O在100℃失去结晶水，230℃分解。讲义规定烘干温度50℃、时间20分钟。若学生因烘箱温度不准实际达到75℃，烘干30分钟，从热重角度分析产物的组成变化，并说明对产率计算（按三水合物计）的影响。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O在1…",
+    "confidence": "high",
+    "answerText": "75℃略低于失结晶水温度100℃，但长时间烘干可能使部分结晶水缓慢失去，产物组成变为K₃[Fe(C₂O₄)₃]·(3-x)H₂O，实际质量低于理论三水合物。按三水合物理论产量计算，产率会偏低；同时失水可能使晶体表面发白，影响纯度判断。故必须严格控制温度≤50℃。\n\n参考语料：\n· 《三草酸合铁酸钾-综合实验》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》\n· 《1973-an-experiment-sequence-involving-potassium-trioxalatoferrate(iii)》"
+  },
+  {
+    "id": "Q118",
+    "question": "三草酸合铁(III)酸钾溶液在光照下发生LMCT光解，生成Fe²⁺和CO₂。若将一定浓度产物溶液置于阳光下照射10分钟后，用K₃[Fe(CN)₆]检验可观察到蓝色沉淀。请设计一个定性实验，利用该光解反应判断产物纯度（即是否含有游离草酸或Fe²⁺杂质），并说明原理。",
+    "matchedFAQ": "三草酸合铁(III)酸钾溶液在光照下发生LM…",
+    "confidence": "high",
+    "answerText": "取产物配成两份相同浓度溶液，一份立即滴加K₃[Fe(CN)₆]（避光），另一份强光照射10分钟后滴加。若避光样品出现蓝色，则产物含Fe²⁺杂质，纯度低；若避光无蓝色而光照样品变蓝，说明产物具正常光化学活性。要判断游离草酸，可另取一份溶液滴加CaCl₂，若生成白色沉淀说明有游离C₂O₄²⁻。通过两者综合分析产物纯度。\n\n参考语料：\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《ayscough-et-al-1967-the-photochemical-oxidation-of-aqueous-iodide-solutions-an-experiment-demonstrating-the》\n· 《教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》"
+  },
+  {
+    "id": "Q115",
+    "question": "第三步配位操作中，讲义要求将草酸溶液逐滴滴加至Fe(OH)₃完全溶解、溶液呈透明翠绿色即为终点。已知Ksp[Fe(OH)₃]=2.79×10⁻³⁹，Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰。请从热力学角度定量分析：为什么Fe(OH)₃沉淀能在草酸/草酸钾混合体系中溶解？若要判断终点是否到达，除观察溶液颜色外，还可通过什么现象辅助判断？",
+    "matchedFAQ": "第三步配位操作中，讲义要求将草酸溶液逐滴滴加…",
+    "confidence": "high",
+    "answerText": "溶解推动力来自草酸根与Fe³⁺配位使游离Fe³⁺浓度极低（Kf巨大），远低于Ksp所需浓度，使沉淀溶解平衡向溶解方向移动；K₂C₂O₄提供大量C₂O₄²⁻，协同促进溶解。终点辅助判断：观察溶液完全透明无浑浊颗粒，或取少量上层清液滴加KSCN，若不显红色说明Fe³⁺已全部配位（无游离Fe³⁺）。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《All About Ferric Oxalate (Bostick & Sullivan)》\n· 《硫酸亚铁》\n· 《硫酸亚铁铵的制》\n· 《Chemical actinometry (IUPAC Technical Report)》"
+  },
+  {
+    "id": "Q117",
+    "question": "第二步氧化反应中，讲义规定加入3.5g K₂C₂O₄·H₂O（约0.019mol）与15mL水，再滴加6% H₂O₂ 8mL（约0.014mol H₂O₂）。按反应式6FeC₂O₄+3H₂O₂+6K₂C₂O₄→4K₃[Fe(C₂O₄)₃]+2Fe(OH)₃+12H₂O计算，FeC₂O₄约0.0128mol时理论上需要K₂C₂O₄和H₂O₂各为多少？实际用量分别超出理论量的多少倍？这种过量设计对后续第三步配位有何影响？",
+    "matchedFAQ": "第二步氧化反应中，讲义规定加入3.5g K₂…",
+    "confidence": "high",
+    "answerText": "理论需K₂C₂O₄约0.0128mol（约2.35g），实际3.5g为1.5倍；理论需H₂O₂约0.0064mol，实际0.014mol为2.2倍。K₂C₂O₄过量保证第二步生成的Fe(OH)₃与多余草酸根可被第三步进一步配位，且提供配位根离子源；H₂O₂过量确保Fe²⁺氧化完全，但需煮沸除尽以免分解产物干扰后续配位平衡。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《柠檬酸铁铵的制备方法》\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》\n· 《junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》"
+  },
+  {
+    "id": "Q119",
+    "question": "第一步配制摩尔盐溶液时，讲义要求加数滴3mol/L H₂SO₄。已知Fe²⁺在pH>5时开始水解，而酸性条件下Fe²⁺氧化为Fe³⁺的电极电位随pH降低而升高。请结合Nernst方程分析：加酸除了抑制Fe²⁺水解外，对后续FeC₂O₄沉淀的纯度还有何保护作用？若不加酸，沉淀中可能混入什么杂质？",
+    "matchedFAQ": "第一步配制摩尔盐溶液时，讲义要求加数滴3mo…",
+    "confidence": "high",
+    "answerText": "加酸使溶液pH降为1~2，Fe²⁺/Fe³⁺电对的能斯特电位正移，即Fe²⁺更不易被空气中的O₂氧化为Fe³⁺，防止生成Fe(OH)₃或碱式草酸铁混入FeC₂O₄沉淀。若不调酸，Fe²⁺水解生成Fe(OH)₂进而氧化为Fe(OH)₃，沉淀产物不纯，Ksp沉淀平衡也受影响。\n\n参考语料：\n· 《Ferrous Ammonium》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《《硫酸亚铁铵的制备》简介》\n· 《FeSO4》\n· 《1》"
+  },
+  {
+    "id": "Q121",
+    "question": "第二步氧化完毕后，讲义要求加热至沸保持2分钟以除去过量H₂O₂，随后用K₃[Fe(CN)₆]检验Fe²⁺。若学生忽略煮沸步骤直接进行检验，可能出现什么假象？从H₂O₂与K₃[Fe(CN)₆]的氧化还原性质出发，说明为什么必须先煮沸再过量检验。",
+    "matchedFAQ": "第二步氧化完毕后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "若忽略煮沸直接检验，残留H₂O₂具有氧化性，可将Fe²⁺氧化为Fe³⁺，使K₃[Fe(CN)₆]不能与Fe²⁺生成蓝色沉淀，导致误判Fe²⁺已氧化完全（假阴性）。煮沸可使H₂O₂分解为H₂O和O₂，排除其氧化干扰，保证检验结果真实反映Fe²⁺残留情况。\n\n参考语料：\n· 《Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)》\n· 《柠檬酸铁铵的制备》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《News from Online: Plants and Photosynthesis》"
+  },
+  {
+    "id": "Q123",
+    "question": "第四步产物K₃[Fe(C₂O₄)₃]·3H₂O的干燥温度为50℃（严禁超过）。已知该配合物的失结晶水温度为100℃、分解温度为230℃。请从晶体结构与热稳定性角度分析：若学生在60~70℃下烘干20分钟，可能对产物产生哪些不利影响？产物外观和后续光解实验（用K₃[Fe(C₂O₄)₃]作光敏剂）会如何变化？",
+    "matchedFAQ": "第四步产物K₃[Fe(C₂O₄)₃]·3H₂…",
+    "confidence": "high",
+    "answerText": "60~70℃虽低于100℃失水温度，但高于规定干燥温度50℃，可能造成表面吸附水快速蒸发，引起晶体开裂或表面色泽变化，但结晶水不会失去。长期处于该温度下可能使晶格产生应力，影响晶体完整性，但对光化学性质影响不大。操作时应严格控温≤50℃，确保产品质量。\n\n参考语料：\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《Cr Fe Al Cu 草酸配合物热分析研究》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》\n· 《New insight into photochemistry of ferrioxalate》\n· 《Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate》\n· 《差热分析 DTA 法研究五水硫酸铜的失水过程》"
+  },
+  {
+    "id": "Q120",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定“微沸4分钟”。若学生将时间缩短至1分钟即开始倾滗，或延长至15分钟才停止加热，分别会对沉淀的纯度、晶形及第二步氧化产生什么影响？请从成核与晶体生长动力学角度分析。",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定…",
+    "confidence": "high",
+    "answerText": "微沸4分钟使沉淀晶粒长大，便于倾滗和洗涤。仅1分钟结晶不完全，晶体细小，洗涤时易损失并夹带母液杂质；延至15分钟，Fe²⁺在微沸条件下长时间接触空气，可能部分被氧化为Fe³⁺，混入FeC₂O₄沉淀中，使沉淀不纯，后续反应中可能形成副产物，影响产物纯度。故应控制4分钟。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《ed1c00776 si 001 (1)》\n· 《三、硫酸亚铁铵的制备》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q122",
+    "question": "第二步氧化中，讲义规定先在含FeC₂O₄沉淀的烧杯中加入K₂C₂O₄并搅拌溶解，再滴加H₂O₂。若学生颠倒顺序——先滴加H₂O₂、后加K₂C₂O₄，反应现象和产物组成将如何变化？请从配体稳定化作用与反应机理角度分析。",
+    "matchedFAQ": "第二步氧化中，讲义规定先在含FeC₂O₄沉淀…",
+    "confidence": "high",
+    "answerText": "K₂C₂O₄提供的C₂O₄²⁻能与Fe²⁺/Fe³⁺形成可溶性草酸配离子，使FeC₂O₄逐步溶解并稳定中间态，有利于H₂O₂温和氧化。若先加H₂O₂，Fe²⁺在无足量C₂O₄²⁻配位保护下被氧化，Fe³⁺易水解生成大量Fe(OH)₃胶状沉淀，难以被后续草酸完全溶解，导致产物产率下降、颜色加深且可能混入Fe(OH)₃杂质。\n\n参考语料：\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》"
+  },
+  {
+    "id": "Q124",
+    "question": "已知Ksp(Fe(OH)₃)=2.79×10⁻³⁹，Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰。第三步配位时，向热的Fe(OH)₃浆液中逐滴滴加0.5mol/L草酸溶液。请从热力学角度解释：为什么草酸能使极难溶的Fe(OH)₃完全溶解？若草酸过量太多（如30mL溶液中加入5g草酸），对产物纯度和结晶会有什么不利影响？",
+    "matchedFAQ": "已知Ksp(Fe(OH)₃)=2.79×10…",
+    "confidence": "high",
+    "answerText": "草酸通过双重作用溶解Fe(OH)₃：H⁺使OH⁻转化为水使[OH⁻]降低，C₂O₄²⁻与Fe³⁺配位使游离Fe³⁺浓度极低，两者共同拉动Ksp平衡右移，Kf极大（1.6×10²⁰）保证配离子稳定。草酸过量太多时，溶液中残留大量H₂C₂O₄，加入乙醇后草酸溶解度骤降析出结晶，混入产物中降低纯度，且酸性过强可能使产物部分分解。\n\n参考语料：\n· 《Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors》\n· 《二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三、硫酸亚铁铵的制备》\n· 《CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex》"
+  },
+  {
+    "id": "Q126",
+    "question": "第四步烘干温度严令不超过50℃。已知产物100℃才失结晶水，230℃才分解。若学生因温度计失灵，烘箱实际温度升至75℃并维持20分钟，产物可能发生哪些肉眼可见的变化？对后续光解实验有何潜在影响？",
+    "matchedFAQ": "第四步烘干温度严令不超过50℃。已知产物10…",
+    "confidence": "high",
+    "answerText": "虽尚不至于失去全部结晶水（100℃才完全失去），但75℃下部分表面或通道中的结晶水可能缓慢逸出或重排，产物颜色可能由翠绿变为黄绿或浅黄，晶体表面出现裂纹、光泽减弱。配体在230℃才分解，75℃下不发生热分解。光解实验中，若仅失去部分结晶水，配离子结构基本保持，光解性能可能受影响不大；但如果晶体出现裂纹或部分表面变质，可能导致光解速率略有下降，K₃[Fe(CN)₆]检验Fe²⁺的蓝色沉淀可能稍浅。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Photochemistry》\n· 《sattar-2016-the-chemistry-of-photography-still-a-terrific-laboratory-course-for-nonscience》"
+  },
+  {
+    "id": "Q128",
+    "question": "如何通过实验验证K₃[Fe(C₂O₄)₃]·3H₂O中内界为[Fe(C₂O₄)₃]³⁻、外界为K⁺？请设计两种原理不同的检验方法，并解释为什么不能用直接滴加BaCl₂或AgNO₃来判定草酸根是否处于内界。",
+    "matchedFAQ": "如何通过实验验证K₃[Fe(C₂O₄)₃]·…",
+    "confidence": "high",
+    "answerText": "方法一：电导率法——配制等浓度KCl、K₂SO₄、K₃[Fe(C₂O₄)₃]溶液测摩尔电导，产物摩尔电导与3:1型电解质类似，证明外界有三个K⁺。方法二：化学分析法——取产物溶液，加入强酸（如H₂SO₄）破坏配离子，使草酸根释放，然后加入CaCl₂或BaCl₂生成草酸盐沉淀，通过沉淀量确定C₂O₄²⁻与Fe³⁺之比为3:1（或用EDTA滴定Fe³⁺）。不能直接用BaCl₂或AgNO₃，因草酸根与Fe³⁺配位后不再游离，无法与其形成沉淀；只有内界解离出的C₂O₄²⁻才能沉淀。\n\n参考语料：\n· 《k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《ed051p129-Preparation and properties of potassium trioxalatoferrate(III)》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《实验十 三草酸合铁(III)酸钾的制备及组》"
+  },
+  {
+    "id": "Q125",
+    "question": "取出产物晶体后，某学生向K₃[Fe(C₂O₄)₃]水溶液中滴加足量AgNO₃溶液，预期与草酸根生成白色Ag₂C₂O₄沉淀，却几乎观察不到沉淀。请从配离子结构与配位平衡角度解释，并说明应如何设计实验验证该配合物的内外界组成。",
+    "matchedFAQ": "取出产物晶体后，某学生向K₃[Fe(C₂O₄…",
+    "confidence": "high",
+    "answerText": "草酸根处于配离子内界，以螯合键与Fe³⁺强配位，游离C₂O₄²⁻浓度极低且内界不电离，Ag₂C₂O₄无法达到Ksp故不沉淀。验证内界：测电导确定离子数；加酸/碱破坏配离子后再检C₂O₄²⁻；外界K⁺可用焰色反应确证。\n\n参考语料：\n· 《Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid》\n· 《Synthesis of Potassium tris(oxalato)ferrate》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《bridging-chemistry-and-creativity-a-cyanotype-photography-toning-and-uv-shielding-for-first-year-undergraduate》"
+  },
+  {
+    "id": "Q127",
+    "question": "第三步配位要求将约1.5g H₂C₂O₄·2H₂O配成约0.5mol/L溶液（约30mL）后逐滴滴加。若将草酸总量不变但配成2mol/L的浓溶液（约7.5mL）一次加入，从草酸的分步解离平衡、Fe(OH)₃溶解速率及末端颜色判断三方面说明为什么讲义采用稀溶液。",
+    "matchedFAQ": "第三步配位要求将约1.5g H₂C₂O₄·2…",
+    "confidence": "high",
+    "answerText": "草酸浓度高使溶液H⁺浓度急剧增大，H⁺竞争使C₂O₄²⁻平衡浓度反而降低，Fe(OH)₃溶解速率下降且局部pH过低不利配位；一次加入反应剧烈、热量集中，中间产物不均一，“透明翠绿”终点难以渐次判定；稀溶液逐滴可维持温和pH和动力学可控，保证终点灵敏。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定》\n· 《All About Ferric Oxalate (Bostick & Sullivan)》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》"
+  },
+  {
+    "id": "Q129",
+    "question": "第二步要求在40℃水浴完成H₂O₂氧化后，加热至沸保持2分钟分解过量H₂O₂。若学生因疏忽将煮沸时间延长至10分钟，从H₂O₂分解动力学、Fe(OH)₃沉淀的物理性质及第三步配位速度三方面分析对产率的影响。",
+    "matchedFAQ": "第二步要求在40℃水浴完成H₂O₂氧化后，加…",
+    "confidence": "high",
+    "answerText": "H₂O₂在沸腾时分解已足够，延长至10min持续释放O₂引起剧烈冒泡，部分沉淀被冲溅裹带损失；同时Fe(OH)₃胶体老化、颗粒增大、表面羟基缩合，第三步酸溶解速率显著下降，形成难溶残余物被夹带，导致产率偏低、纯度下降。\n\n参考语料：\n· 《Iron(II) sulfate (Wikipedia)》\n· 《the-chemistry-of-the-metal-oxalato》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》"
+  },
+  {
+    "id": "Q131",
+    "question": "本实验选择硫酸亚铁铵（摩尔盐）而非普通FeSO₄·7H₂O作为铁源。请从试剂的氧化稳定性、Fe²⁺有效含量准确性及离子强度对第一步沉淀的影响三方面分析，若改用FeSO₄·7H₂O可能产生哪些偏差。",
+    "matchedFAQ": "本实验选择硫酸亚铁铵（摩尔盐）而非普通FeS…",
+    "confidence": "high",
+    "answerText": "摩尔盐是(NH₄)₂SO₄与FeSO₄的复盐，晶格保护Fe²⁺不易被空气氧化变黄，称量所得Fe²⁺含量准确；普通FeSO₄长期存放易氧化为Fe³⁺，Fe³⁺在弱酸性条件水解并干扰沉淀组成。两者SO₄²⁻/Fe²⁺比相同，离子强度差异不大，但若FeSO₄已氧化，第一步沉淀将夹杂Fe(OH)₃或碱式草酸铁，降低纯度。\n\n参考语料：\n· 《FeSO4》\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《Ferrous Ammonium》\n· 《硫酸亚铁铵的制》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》"
+  },
+  {
+    "id": "Q133",
+    "question": "结晶在暗处静置过夜是光稳定操作的重要一环。若抽滤时正值午后强日光，学生为赶时间将盛有晶体的布氏漏斗直接置于窗边完成抽滤、洗涤和转移（约10分钟），产物表面即出现褐色斑块且绿色变浅。请解释原因，并说明应如何避免。",
+    "matchedFAQ": "结晶在暗处静置过夜是光稳定操作的重要一环。若…",
+    "confidence": "high",
+    "answerText": "K₃[Fe(C₂O₄)₃]³⁻中Fe³⁺-草酸根发生LMCT光解：2[Fe(C₂O₄)₃]³⁻→2Fe²⁺+3C₂O₄²⁻+2CO₂↑，Fe²⁺生成使绿色变浅；表面Fe²⁺在空气中氧化为Fe(OH)₃形成褐斑。避免方法：抽滤、洗涤、转移全过程尽量遮光或暗室操作，用黑布/表面皿遮盖，缩短日光暴露时间。\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》\n· 《三草酸合铁酸钾的制备实验的思考》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《三草酸合铁酸钾的制备及组成确定》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《三草酸合铁 酸钾测定方法的探讨》"
+  },
+  {
+    "id": "Q130",
+    "question": "第二步氧化完成后，讲义要求加热至沸保持2分钟以除去过量H₂O₂。若省略此步骤直接进入第三步配位，过量H₂O₂对后续反应及最终产物有何具体危害？请结合H₂O₂与Fe³⁺/Fe²⁺的氧化还原行为说明。",
+    "matchedFAQ": "第二步氧化完成后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂可将Fe³⁺还原为Fe²⁺（H₂O₂在酸性介质中具还原性），导致产物混入Fe²⁺杂质，K₃[Fe(CN)₆]检验呈蓝色；同时H₂O₂分解产生O₂气泡干扰沉淀沉降与后续配位，Fe(OH)₃溶解不完全，产物颜色发黄、纯度下降。故需煮沸分解完全。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁酸钾的制备及其性质（课件2）》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》"
+  },
+  {
+    "id": "Q132",
+    "question": "第三步配位中，按Fe(OH)₃物质量（约0.0128mol FeC₂O₄对应约0.0043mol Fe³⁺）计算，理论需草酸约0.0064mol，而讲义称取约1.5g（约0.012mol）草酸配成0.5mol/L溶液滴加。草酸为何需过量近2倍？若学生仅按理论量滴加，会出现什么现象？",
+    "matchedFAQ": "第三步配位中，按Fe(OH)₃物质量（约0.…",
+    "confidence": "high",
+    "answerText": "草酸除作配体外还提供H⁺溶解Fe(OH)₃，且过量可抑制Fe(OH)₃重新沉淀、防止草酸被Fe³⁺氧化分解消耗。仅加理论量时，Fe(OH)₃溶解不完全，溶液浑浊呈黄绿色而非透明翠绿，产物含未配位Fe(OH)₃，产率与纯度均下降。故需过量并逐滴滴加至终点。\n\n参考语料：\n· 《Natural iron oxalates and their analogous synthetic counterparts: A review》\n· 《Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》\n· 《uchida-et-al-2023-discovery-based-approach-to-identify-multiple-factors-that-affect-the-spin-state-of》\n· 《差热分析 DTA 法研究五水硫酸铜的失水过程》\n· 《Cr Fe Al Cu 草酸配合物热分析研究》"
+  },
+  {
+    "id": "Q134",
+    "question": "第一步沉淀时，讲义规定微沸4分钟使FeC₂O₄·2H₂O沉淀完全。若学生将微沸时间缩短为1分钟，对后续两步反应有何影响？请从沉淀完全度、母液杂质残留与Fe²⁺氧化的角度综合分析。",
+    "matchedFAQ": "第一步沉淀时，讲义规定微沸4分钟使FeC₂O…",
+    "confidence": "high",
+    "answerText": "时间不足，FeC₂O₄·2H₂O沉淀不完全，母液中残留大量Fe²⁺和SO₄²⁻。第二步滴加H₂O₂时，残留Fe²⁺被氧化为Fe³⁺并水解生成Fe(OH)₃，混入目标沉淀；因母液未充分倾滗，SO₄²⁻杂质留存，第三步配位后产物纯度下降、产率偏低，K₃[Fe(CN)₆]检验可能出现异常蓝色。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》"
+  },
+  {
+    "id": "Q136",
+    "question": "第四步加入95%乙醇后，讲义要求盖表面皿并暗处静置过夜。若学生敞开烧杯且置于日光下静置，产率与纯度将如何变化？请从乙醇挥发与光解两方面展开分析。",
+    "matchedFAQ": "第四步加入95%乙醇后，讲义要求盖表面皿并暗…",
+    "confidence": "high",
+    "answerText": "敞开时乙醇大量挥发，水/乙醇比例升高，产物溶解度增大，结晶量减少，产率下降；光照下[Fe(C₂O₄)₃]³⁻发生LMCT光解，生成Fe²⁺与CO₂，产物含Fe²⁺杂质、颜色变暗，纯度显著降低。故必须盖表面皿并暗处静置，以保证结晶完全且产物稳定。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q138",
+    "question": "第三步配位中，终点要求为“滴加草酸溶液至Fe(OH)₃完全溶解、溶液透明翠绿”。若学生滴加草酸后溶液始终浑浊、呈黄绿色，可能的原因有哪些？应如何判断并处理？请从配位平衡与pH效应角度分析。",
+    "matchedFAQ": "第三步配位中，终点要求为“滴加草酸溶液至Fe…",
+    "confidence": "high",
+    "answerText": "可能原因：草酸不足Fe(OH)₃未溶完；或草酸过量过多使pH过低，配合物部分分解，再次析出Fe(OH)₃沉淀；或局部酸度不够致Fe³⁺水解。处理：继续滴加草酸并充分搅拌观察是否转透明翠绿；若仍浑浊，可微热促进溶解，或补加少量K₂C₂O₄调节pH至配合物稳定区间，判据为溶液澄清翠绿。\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《硫酸亚铁》\n· 《电导，电导率和摩尔电导率》\n· 《硫酸亚铁铵制备实验的改进》\n· 《《硫酸亚铁铵的制备》简介》\n· 《ja01613a002》"
+  },
+  {
+    "id": "Q135",
+    "question": "第三步配位中，讲义规定用约0.5mol/L的草酸溶液（约30mL）逐滴滴入Fe(OH)₃浆液，而不是直接加入草酸钾酸性溶液。若改用等物质的量的K₂C₂O₄代替H₂C₂O₄来溶解Fe(OH)₃，会出现什么现象？从酸度与配位平衡角度说明原因。",
+    "matchedFAQ": "第三步配位中，讲义规定用约0.5mol/L的…",
+    "confidence": "high",
+    "answerText": "草酸是弱酸，电离出的H⁺可溶解Fe(OH)₃，同时C₂O₄²⁻作配体配位，酸解与配位协同。K₂C₂O₄溶液因草酸根水解呈弱碱性，不能提供足够H⁺溶解Fe(OH)₃，故浑浊无法澄清；且K⁺不参与配位，直接加K₂C₂O₄会使体系碱度升高，可能导致Fe³⁺重新水解，配位不完全。草酸在第三步中既作酸又作配体，不可或缺。\n\n参考语料：\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《1》\n· 《硫酸亚铁》\n· 《FeSO4》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《草酸分子结构与性质的量子化学计算研究》"
+  },
+  {
+    "id": "Q137",
+    "question": "第二步氧化完成后，讲义要求加热至沸保持2分钟以除去过量H₂O₂。若学生为省时，改为在40℃水浴中延长搅拌30分钟让H₂O₂自然分解，对后续产物有何影响？从H₂O₂分解动力学与氧化活性角度分析。",
+    "matchedFAQ": "第二步氧化完成后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "H₂O₂分解速率随温度升高而显著加快，40℃下半衰期达数小时，30分钟只能去除少量；残留H₂O₂在后续配位中会继续氧化草酸根，产生CO₂使配体消耗，还可能氧化产物Fe³⁺-草酸配合物，导致产率降低、产物发黄。沸腾2分钟可快速分解H₂O₂，且产物在100℃只失结晶水不分解，安全有效。因此不能以低温长时间替代煮沸。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《铁(Ⅲ)-柠檬酸盐配合物光解引发橙黄Ⅱ的脱色》"
+  },
+  {
+    "id": "Q139",
+    "question": "第一步洗涤FeC₂O₄·2H₂O沉淀时，用BaCl₂检验滤液中有无SO₄²⁻。若沉淀上残留草酸根，BaCl₂同样会生成白色BaC₂O₄沉淀而干扰判断。如何区分洗涤液中的白色沉淀是BaSO₄还是BaC₂O₄？请设计一种简便可靠的检验方法。",
+    "matchedFAQ": "第一步洗涤FeC₂O₄·2H₂O沉淀时，用B…",
+    "confidence": "high",
+    "answerText": "取少量洗涤液，加入数滴稀盐酸酸化，再滴加BaCl₂：若有白色沉淀则说明SO₄²⁻未洗净（BaSO₄不溶于盐酸），若加入BaCl₂后虽有沉淀但加酸后溶解，则为BaC₂O₄。更规范的做法是洗涤液先用稀盐酸酸化，使C₂O₄²⁻转化为HC₂O₄⁻或H₂C₂O₄，消除草酸根干扰，再检验SO₄²⁻即可避免误判。\n\n参考语料：\n· 《ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid》\n· 《草酸亚铁综合性实验的教学》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《ed075p98-The Ligand Field Spectra of Copper(II)》\n· 《k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion》"
+  },
+  {
+    "id": "Q141",
+    "question": "第二步操作中，加入3.5g K₂C₂O₄·H₂O和15mL水后，须在40℃水浴中搅拌5分钟使草酸钾充分溶解，才开始滴加H₂O₂。若学生将K₂C₂O₄加入后立即开始滴加H₂O₂而不预搅拌，对氧化反应有何影响？从反应物浓度均一性和固-液非均相反应角度分析。",
+    "matchedFAQ": "第二步操作中，加入3.5g K₂C₂O₄·H…",
+    "confidence": "high",
+    "answerText": "K₂C₂O₄未溶解完全时，溶液中C₂O₄²⁻浓度不足且分布不均，H₂O₂滴入后无法均匀氧化FeC₂O₄，部分区域Fe²⁺氧化不完全而残留。且FeC₂O₄为固体，预搅拌可使固体与溶液充分接触、表面活化，利于多相氧化。不预搅拌会造成Fe²⁺残留，K₃Fe(CN)₆检验呈蓝色，产物含杂质，产率下降。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q143",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解后生成Fe²⁺，讲义用K₃[Fe(CN)₆]检验Fe²⁺。若学生误用K₄[Fe(CN)₆]（亚铁氰化钾）溶液检验，也能得到蓝色沉淀。据此能否判断产物已光解？请从两种铁氰化物与Fe²⁺/Fe³⁺反应的选择性解释。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解…",
+    "confidence": "high",
+    "answerText": "不能判断。K₃[Fe(CN)₆]（铁氰化钾）只与Fe²⁺反应生成蓝色沉淀KFe[Fe(CN)₆]（滕氏蓝），与Fe³⁺不反应，故出现蓝色可确证光解产生了Fe²⁺。而K₄[Fe(CN)₆]（亚铁氰化钾）与Fe³⁺反应生成普鲁士蓝Fe₄[Fe(CN)₆]₃，颜色相似但用于检测Fe³⁺。若误用K₄[Fe(CN)₆]，样品中本来的Fe³⁺即可产生蓝色，无法区分光解与否，必须选用正确试剂。\n\n参考语料：\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《wang-et-al-2023-rapid-redox-cycling-of-fe(ii)-fe(iii)-in-microdroplets-during-iron-citric-acid》\n· 《柠檬酸铁铵的制备》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》"
+  },
+  {
+    "id": "Q140",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将摩尔盐溶液（含数滴稀硫酸）和草酸溶液分别加热至近沸后混合，再微沸4分钟。若将两种常温溶液直接混合后再加热至微沸，对产品产率和纯度有何不利影响？请从反应速率、晶体成核和包藏杂质角度分析。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "常温混合反应慢，FeC₂O₄·2H₂O缓慢析出，晶体细小且易吸附Fe²⁺、SO₄²⁻等杂质。加热近沸可提高反应速率，利于较大晶体形成，减少包藏；同时可加速NH₄⁺、SO₄²⁻溶解，便于洗涤。直接混合后加热可能因局部过饱和产生胶状沉淀，难过滤且洗涤不净，导致产率低、纯度差。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《电导，电导率和摩尔电导率》\n· 《马口铁与白铁区别》"
+  },
+  {
+    "id": "Q142",
+    "question": "第二步氧化反应中，按化学计量，0.0128mol FeC₂O₄完全氧化只需约4mL 6% H₂O₂，但讲义规定加入8mL。请解释必须过量近一倍的原因，并说明若只加理论量可能如何判断反应不完全？",
+    "matchedFAQ": "第二步氧化反应中，按化学计量，0.0128m…",
+    "confidence": "high",
+    "answerText": "H₂O₂在Fe³⁺催化下易分解，且与Fe²⁺反应需一定浓度推动，过量可确保氧化完全。若只加理论量，可能因分解损失而不足，用铁氰化钾检验会现蓝色（Fe²⁺）。但过量过多产生大量气泡且后续需煮沸除尽，否则残留H₂O₂会氧化草酸根，影响产物稳定。\n\n参考语料：\n· 《jp312603m》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《FeSO4》\n· 《硫酸亚铁》\n· 《Fe2SO4》\n· 《《硫酸亚铁铵的制备》简介》"
+  },
+  {
+    "id": "Q144",
+    "question": "第三步配位时，要求将约1.5g草酸配成约0.5mol/L溶液（约30mL）逐滴滴加。若误配成2mol/L（约7.5mL）并仍逐滴滴加，从局部酸度和反应速率角度，可能出现什么现象？对产物有何影响？",
+    "matchedFAQ": "第三步配位时，要求将约1.5g草酸配成约0.…",
+    "confidence": "high",
+    "answerText": "2mol/L草酸浓度高，滴入时局部酸度过大，可能破坏已形成的配合物或使Fe(OH)₃溶解过快，产生大量H⁺使体系pH过低，不利于配位反应。溶液可能变黄或浑浊，且草酸浓度过高易析出草酸晶体，造成配位不完全，产率下降。应缓慢滴加并搅拌，控制pH在弱酸性。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Photochemistry》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》"
+  },
+  {
+    "id": "Q146",
+    "question": "第二步氧化后，讲义要求加热至沸保持2分钟除去过量H₂O₂。若仅加热至沸立即停止（保持<1分钟），对后续第三步有何影响？如何检验H₂O₂是否除尽？",
+    "matchedFAQ": "第二步氧化后，讲义要求加热至沸保持2分钟除去…",
+    "confidence": "high",
+    "answerText": "若H₂O₂未除尽，后续加热时H₂O₂会继续氧化草酸根（生成CO₂）或残留的Fe²⁺，导致产物分解或颜色异常。检验方法：取少量反应液，加入少量MnO₂，若有气泡产生（O₂）则说明H₂O₂未除尽；也可用淀粉-KI试纸，H₂O₂氧化I⁻变蓝。需再次加热煮沸至无气泡。\n\n参考语料：\n· 《柠檬酸铁铵的制备方法》\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q148",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O中，草酸根究竟在内界还是外界？请设计两种简便实验证明，并说明预期现象。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O中，…",
+    "confidence": "high",
+    "answerText": "1. 沉淀法：向溶液中滴加BaCl₂，若有白色BaC₂O₄沉淀，说明有游离C₂O₄²⁻；若无沉淀，则草酸根配位。2. 电导率法：比较与K₃[Fe(CN)₆]等已知型电解质的摩尔电导，若为1:3型，则草酸根全部内界。或加FeCl₃看是否显红色（草酸根游离）。实际实验表明产物无游离草酸根，证明其在内界。\n\n参考语料：\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《ed081p1193-Potassium Tris(oxalato)ferrate(III) A Versatile》\n· 《三草酸合铁酸钾改进制备及其光致还原性探究》\n· 《废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计》"
+  },
+  {
+    "id": "Q145",
+    "question": "反应2的化学计量式为6FeC₂O₄·2H₂O + 3H₂O₂ + 6K₂C₂O₄ → 4K₃[Fe(C₂O₄)₃] + 2Fe(OH)₃↓ + 12H₂O。请逐一分析该反应中Fe、C、O三种元素在反应前后的氧化数变化，并说明为何Fe²⁺被H₂O₂氧化为Fe³⁺的过程中，产生了Fe(OH)₃沉淀而未被C₂O₄²⁻完全配位。",
+    "matchedFAQ": "反应2的化学计量式为6FeC₂O₄·2H₂O…",
+    "confidence": "high",
+    "answerText": "Fe从+2升至+3（6个Fe²⁺中有4个进入配合物，2个生成Fe(OH)₃）；C₂O₄²⁻中C为+3价，配位后不变；H₂O₂中O为-1价，被还原为-2价（产物H₂O）。反应中草酸根总数为6（来自FeC₂O₄）+6（来自K₂C₂O₄）=12，恰好配位4个Fe³⁺，剩余2个Fe³⁺因缺少草酸根，在近中性条件下水解生成Fe(OH)₃沉淀。\n\n该反应中Fe²⁺被H₂O₂氧化为Fe³⁺（Fe由+2→+3），C在草酸根中保持+3不变；H₂O₂中O由-1还原至-2生成H₂O。虽Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰较大，但Ksp[Fe(OH)₃]=2.79×10⁻³⁹更小，近中性下Fe³⁺优先水解沉淀；化学计量显示6 mol Fe²⁺仅4 mol配位、2 mol成Fe(OH)₃↓。第③步须用0.5 mol/L H₂C₂O₄滴加使沉淀溶解释放翠绿色配合物。\n\n参考语料：\n· 《三草酸合铁酸钾的制备及其性质（周二）》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《无机化学实验教学中对三草酸合铁 酸钾制备的实验改进》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《三草酸合铁 酸钾测定方法的探讨》"
+  },
+  {
+    "id": "Q147",
+    "question": "第二步氧化完成后，讲义要求将体系加热至沸保持2分钟以除去过量H₂O₂。若学生因疏忽省略此步，直接用K₃[Fe(CN)₆]检验Fe²⁺，可能观察到什么现象？残余H₂O₂会对第三步配位反应及最终产物纯度产生什么影响？",
+    "matchedFAQ": "第二步氧化完成后，讲义要求将体系加热至沸保持…",
+    "confidence": "high",
+    "answerText": "残余H₂O₂会继续氧化微量Fe²⁺，使K₃[Fe(CN)₆]检验呈假阴性（无蓝色沉淀），误判氧化完全。同时H₂O₂可能氧化草酸根产生CO₂，降低配体浓度；残余氧化剂在第三步中可能与Fe(OH)₃反应产生O₂气泡，干扰终点判断，最终产物中可能夹杂未反应的草酸或铁盐，影响纯度。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁 酸钾的合成及结构组成测定》"
+  },
+  {
+    "id": "Q149",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义规定将草酸溶液缓慢倒入摩尔盐溶液（含数滴3mol/L H₂SO₄）中。若学生将加料顺序颠倒——将摩尔盐溶液倒入草酸溶液中，对沉淀的生成速率、颗粒大小及纯度有何影响？从沉淀动力学角度解释。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义规定…",
+    "confidence": "high",
+    "answerText": "颠倒后草酸过量，局部过饱和度骤增，瞬间生成大量细小晶核，沉淀颗粒细小、比表面积大，易吸附杂质且过滤困难。正确顺序使Fe²⁺过量，草酸缓慢加入，过饱和度适中，晶核少而晶体颗粒大，便于倾滗洗涤。细小沉淀在洗涤时更易因溶解损失，且吸附的(NH₄)₂SO₄更难洗净。\n\n参考语料：\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《《硫酸亚铁铵的制备》简介》"
+  },
+  {
+    "id": "Q151",
+    "question": "第二步氧化完成后，讲义用铁氰化钾K₃[Fe(CN)₆]检验Fe²⁺是否氧化完全，生成蓝色沉淀KFe[Fe(CN)₆]·xH₂O。若改用K₄[Fe(CN)₆]（亚铁氰化钾）作为检测试剂，将得到什么结果？该检验方法能否区分Fe²⁺和Fe³⁺？请从配合物生成的热力学稳定性角度分析。",
+    "matchedFAQ": "第二步氧化完成后，讲义用铁氰化钾K₃[Fe(…",
+    "confidence": "high",
+    "answerText": "K₄[Fe(CN)₆]与Fe³⁺反应生成蓝色普鲁士蓝沉淀，与Fe²⁺反应生成白色Fe₂[Fe(CN)₆]沉淀，因此可区分Fe²⁺和Fe³⁺。但本实验用K₃[Fe(CN)₆]检验Fe²⁺，原理是Fe²⁺与[Fe(CN)₆]³⁻生成滕氏蓝KFe[Fe(CN)₆]，而K₄[Fe(CN)₆]不适用于检验Fe²⁺（因生成白色沉淀不易观察）。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《五水硫酸铜脱水机理的热力学求算》"
+  },
+  {
+    "id": "Q153",
+    "question": "本实验选用硫酸亚铁铵（摩尔盐）(NH₄)₂Fe(SO₄)₂·6H₂O作为Fe²⁺源，而非直接使用FeSO₄·7H₂O。除了摩尔盐不易被空气氧化的常规解释外，请从Fe²⁺的水解平衡、溶液酸度控制以及后续草酸沉淀纯度三个角度，分析(NH₄)₂SO₄的存在对实验成功的关键作用。",
+    "matchedFAQ": "本实验选用硫酸亚铁铵（摩尔盐）(NH₄)₂F…",
+    "confidence": "high",
+    "answerText": "①NH₄⁺水解提供微弱酸性环境（NH₄⁺+H₂O⇌NH₃·H₂O+H⁺），抑制Fe²⁺水解生成Fe(OH)₂。②(NH₄)₂SO₄与FeSO₄形成复盐后晶体更稳定，溶解时体系pH较FeSO₄单一盐溶液更低，减少Fe²⁺氧化。③摩尔盐中SO₄²⁻和NH₄⁺在第一步沉淀后均可用热水洗涤除去，且NH₄⁺在酸性洗涤液中不会残留，不影响沉淀纯度。\n\n参考语料：\n· 《硫酸亚铁铵》\n· 《硫酸亚铁铵的制》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《实验一 硫酸亚铁铵的制备》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q150",
+    "question": "第二步氧化中，讲义规定8mL 6% H₂O₂滴加完毕后需在40℃水浴继续搅拌5分钟，然后再加热至沸2分钟。若学生为赶时间，滴完后立即加热至沸2分钟（省略40℃搅拌5分钟），从反应机理角度分析可能对氧化完全性和产物纯度造成哪些影响？",
+    "matchedFAQ": "第二步氧化中，讲义规定8mL 6% H₂O₂…",
+    "confidence": "high",
+    "answerText": "H₂O₂氧化FeC₂O₄的反应在40℃下速率适中，搅拌5分钟保证H₂O₂与FeC₂O₄充分接触、逐步氧化完全。若省略该步骤直接煮沸，大量未反应的H₂O₂在高温下迅速分解（2H₂O₂→2H₂O+O₂），氧化能力下降，导致Fe²⁺残留；同时局部H₂O₂浓度过高，可能将部分Fe²⁺直接氧化为Fe³⁺后与过量C₂O₄²⁻生成可溶性产物而绕过FeC₂O₄，造成总产率下降。\n\n参考语料：\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《morizot-et-al-2014-introducing-the-human-element-in-chemistry-by-synthesizing-blue-pigments-and-creating-cyanotypes》\n· 《三草酸合铁 酸钾制备实验的探究》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》"
+  },
+  {
+    "id": "Q152",
+    "question": "第三步配位反应中，讲义要求将草酸溶液“逐滴滴加至Fe(OH)₃完全溶解、溶液透明翠绿即终点”。若学生滴定过量，多加约10mL 0.5mol/L草酸溶液，对后续第四步结晶产物的产量、纯度及光化学性质可能产生什么不利影响？",
+    "matchedFAQ": "第三步配位反应中，讲义要求将草酸溶液“逐滴滴…",
+    "confidence": "high",
+    "answerText": "过量草酸使溶液酸度升高，H⁺会与C₂O₄²⁻结合，降低有效配体浓度，甚至可能使配合物部分解离。第四步加入乙醇反溶剂时，游离草酸易一同析出或被晶体包藏，降低产物纯度；残留草酸在50℃烘干时不易完全除尽，可能形成白色斑点，影响光敏实验。应严格在Fe(OH)₃刚完全溶解、溶液透明翠绿时停止滴加。\n\n参考语料：\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《Errors in ferrioxalate actinometry》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q154",
+    "question": "第四步结晶时，讲义要求“盖表面皿暗处静置过夜”而非密封或完全敞口放置。若学生改用保鲜膜将烧杯完全密封，或完全敞口不盖表面皿，各自会对结晶过程及产物纯度产生什么影响？",
+    "matchedFAQ": "第四步结晶时，讲义要求“盖表面皿暗处静置过夜…",
+    "confidence": "high",
+    "answerText": "完全密封时，乙醇不能挥发，但体系中乙醇作为反溶剂已存在，仍可缓慢析晶，只是缺乏蒸发浓缩过程，晶体生长慢；密封空间内氧气和水分不可控，且可能因长期静置增加副反应风险。完全敞口时，乙醇优先挥发，乙醇/水比例下降，反溶剂效应减弱，配合物溶解度回升，导致晶体溶解、产率下降；同时水分蒸发使K₂C₂O₄等杂质可能析出，灰尘进入影响纯度。盖表面皿可减缓乙醇挥发、维持反溶剂条件，同时挡尘和避光，有利于晶体长大。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《Instructions for Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate (SI)》\n· 《Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《草酸合铁酸钾的制备及其离子电荷的测定》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q156",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定加热微沸4分钟后趁热采用倾滗法分离沉淀。若学生等溶液冷却至室温后再进行倾滗，会对沉淀的纯度及后续操作造成哪些不利影响？",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定…",
+    "confidence": "high",
+    "answerText": "冷却后，母液中(NH₄)₂SO₄、H₂SO₄等可溶性盐溶解度下降，可能析出或吸附在沉淀表面，使沉淀含杂质，BaCl₂洗涤难以完全除净；冷却后细小沉淀沉降更慢，倾滗时易悬浮损失；趁热倾滗可减少杂质共析，并保持沉淀颗粒粗大，便于后续洗涤和转移。\n\n参考语料：\n· 《实验 硫酸亚铁铵的制备》\n· 《实验56 硫酸亚铁铵的制备》\n· 《实验十六 硫酸亚铁铵的制备》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《硫酸亚铁铵制备实验的改进》\n· 《硫酸亚铁铵的制备及纯度分析》"
+  },
+  {
+    "id": "Q158",
+    "question": "第二步氧化完成后，用K₃[Fe(CN)₆]检验Fe²⁺若仍显蓝色，说明氧化不完全。学生直接向体系中补加大量（如10mL）6% H₂O₂再加热至沸2分钟以图补救。请分析这种做法可能带来哪些问题，并给出正确的处理方法。",
+    "matchedFAQ": "第二步氧化完成后，用K₃[Fe(CN)₆]检…",
+    "confidence": "high",
+    "answerText": "补加大量H₂O₂在高温下不仅氧化残留Fe²⁺，还会将体系中的C₂O₄²⁻氧化为CO₂（H₂O₂具有氧化性，可氧化草酸根），破坏配体，导致目标配合物产率下降；同时过量H₂O₂残留会与后续草酸反应产生气泡并影响结晶纯度。正确做法：补加少量（数滴）H₂O₂，在40℃下搅拌数分钟，再次检验Fe²⁺，直至无蓝色沉淀后再加热至沸除尽过量H₂O₂。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《柠檬酸铁铵的制备》\n· 《无机化学实验教学中对三草酸合铁 酸钾制备的实验改进》"
+  },
+  {
+    "id": "Q155",
+    "question": "第二步氧化中，加完H₂O₂后须加热至沸并维持2分钟以除去过量H₂O₂。若学生忽略此步骤直接进入第三步配位，从反应机理和杂质角度分析，可能对后续反应和最终产率产生哪些具体影响？",
+    "matchedFAQ": "第二步氧化中，加完H₂O₂后须加热至沸并维持…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会继续氧化第三步加入的草酸，消耗配体，使Fe(OH)₃溶解/配位不完全；同时产生CO₂气泡干扰反应和后续结晶。H₂O₂分解产物还可能使产物颜色不正、纯度下降。正确操作是加完H₂O₂后加热至沸保持2min，使过量H₂O₂彻底分解，冷却后再进入第三步。\n\n参考语料：\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《三草酸合铁 酸钾制备实验的探究》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《j100607a005》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》"
+  },
+  {
+    "id": "Q157",
+    "question": "第一步制备FeC₂O₄·2H₂O时，1.7g草酸与5.0g摩尔盐按计量基本匹配。若学生称得草酸过量至2.5g（超出约47%），请从沉淀溶解平衡和配位竞争角度预测对沉淀产率及后续第二步氧化反应的影响。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，1.7g…",
+    "confidence": "high",
+    "answerText": "过量草酸会使初始沉淀阶段体系酸度升高，FeC₂O₄溶解度增大（Ksp=3.2×10⁻⁷），且可能生成可溶性[Fe(C₂O₄)₂]²⁻配合物，导致沉淀产率降低；过量草酸残留在母液中，进入第二步会额外消耗H₂O₂，并改变氧化条件。\n\n参考语料：\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵制备实验的改进》\n· 《硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《硫酸亚铁铵的制备及纯度检验》"
+  },
+  {
+    "id": "Q159",
+    "question": "第二步氧化中需加入3.5g K₂C₂O₄·H₂O，其不仅作为草酸根来源，还起调节pH作用。若将K₂C₂O₄等摩尔替换为K₂SO₄，试从Fe³⁺水解平衡、氧化还原反应可行性及后续配位步骤三方面分析实验会如何失败？",
+    "matchedFAQ": "第二步氧化中需加入3.5g K₂C₂O₄·H…",
+    "confidence": "high",
+    "answerText": "K₂SO₄不提供草酸根，Fe²⁺无法被稳定为草酸配合物，H₂O₂氧化后Fe³⁺在近中性下易水解为Fe(OH)₃沉淀，得不到可溶性翠绿色配合物；且体系缺乏碱性缓冲，pH不利于后续配位反应，第三步无法进行。\n\n若将K₂C₂O₄等摩尔替换为K₂SO₄，氧化还原反应热力学上虽可行（E°(H₂O₂/H₂O)≈1.776 V > E°(Fe³⁺/Fe²⁺)≈0.771 V），但生成的Fe³⁺失去草酸根配位稳定，立即水解为Fe(OH)₃沉淀，无法与草酸根配位生成K₃[Fe(C₂O₄)₃]。同时K₂SO₄不具备调节pH能力，体系酸度改变会促使H₂O₂分解加剧，氧化不彻底，Fe²⁺残留，后续配位步骤也无法进行，实验必然失败。\n\n参考语料：\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《The Synthesis, Chemistry and Magnetic Properties of Potassium Trioxalatoferrate(III)》\n· 《硫酸亚铁铵制备三草酸合铁(Ⅲ)酸钾的实验探索》\n· 《三草酸合铁 酸钾的合成及结构组成测定》"
+  },
+  {
+    "id": "Q161",
+    "question": "第四步结晶采用95%乙醇作为反溶剂。若实验室仅有丙酮或异丙醇，从溶剂极性、溶解能力、安全性和干燥难易角度分析，改用丙酮或异丙醇替代是否合理？并指出最可能导致的后果。",
+    "matchedFAQ": "第四步结晶采用95%乙醇作为反溶剂。若实验室…",
+    "confidence": "high",
+    "answerText": "丙酮也可作反溶剂，但毒性较大且沸点低，易挥发需加强通风；异丙醇溶解性较强，可能降低反溶剂效果，且沸点较高不利于低温干燥。改用后可能影响析出率或引入杂质，故讲义指定95%乙醇最为安全有效。\n\n参考语料：\n· 《实验一 硫酸亚铁铵的制备》\n· 《硫酸亚铁》\n· 《硫酸亚铁铵的制》\n· 《FeSO4》\n· 《七水硫酸锌脱水机理热力学初探》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q163",
+    "question": "第四步结晶要求“盖表面皿暗处静置过夜”。若学生仅置于暗处但未盖表面皿，从溶剂蒸发、晶体成核与光照隔离三个角度分析可能对产物晶体质量产生哪些不利影响？",
+    "matchedFAQ": "第四步结晶要求“盖表面皿暗处静置过夜”。若学…",
+    "confidence": "high",
+    "answerText": "不盖表面皿时乙醇和水蒸发过快，溶液过饱和度骤增，产生大量细小晶核，晶体颗粒小且易夹杂杂质；同时空气尘埃可能进入，且无法完全隔绝光线，轻微光照可能引发光解，导致产物中混有Fe²⁺。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》"
+  },
+  {
+    "id": "Q160",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将摩尔盐溶液和草酸溶液分别加热至近沸后再混合，且微沸保持4分钟。若学生为省时，将两种室温溶液直接混合后再加热至微沸，对沉淀的产率和颗粒形态可能产生哪些影响？请从沉淀动力学和溶度积角度分析。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "室温混合时，溶液中Fe²⁺和C₂O₄²⁻浓度局部过饱和，瞬间成核生成大量细小晶体，颗粒小、易吸附杂质；且未加热时反应速率低，4分钟可能不完全，导致产率偏低。加热近沸可提高离子活度和扩散速率，缓慢成核得到较大颗粒，便于倾滗洗涤，且减少Fe²⁺被空气氧化。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《三、硫酸亚铁铵的制备》\n· 《五水硫酸铜脱水机理的热力学求算》\n· 《实验十六 硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q162",
+    "question": "第三步配位反应中，草酸溶液浓度为0.5mol/L约30mL，逐滴滴加至Fe(OH)₃完全溶解。若学生误将草酸配成2mol/L的高浓度溶液，并仍以‘透明翠绿’为终点，实际消耗的体积会明显减少。从配位平衡角度，高浓度草酸对反应速率和终点判断有何影响？可能带来的杂质是什么？",
+    "matchedFAQ": "第三步配位反应中，草酸溶液浓度为0.5mol…",
+    "confidence": "high",
+    "answerText": "高浓度草酸使局部c(C₂O₄²⁻)过高，虽可加速Fe(OH)₃溶解，但过量草酸易与K⁺形成KHC₂O₄或草酸结晶，随产物析出；且高浓度导致滴加过程中终点突跃明显，可能因局部过量生成草酸铁配合物提前澄清，造成反应未完全。应保持约0.5mol/L逐滴加入，使配位平稳，避免杂质。\n\n参考语料：\n· 《浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《基于项目式学习的高三化学综合复习教学——蓝晒》\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》"
+  },
+  {
+    "id": "Q164",
+    "question": "第三步配位终点为‘溶液透明翠绿’。若学生为促使Fe(OH)₃完全溶解而继续滴加草酸溶液1~2mL，从酸度和配位平衡角度，过量草酸对产物K₃[Fe(C₂O₄)₃]·3H₂O的结晶质量和化学计量比有何影响？如何通过简单实验判断是否过量？",
+    "matchedFAQ": "第三步配位终点为‘溶液透明翠绿’。若学生为促…",
+    "confidence": "high",
+    "answerText": "过量草酸会使溶液pH降低，可能使产物部分转化为H₃[Fe(C₂O₄)₃]或草酸氢盐，影响晶格纯度；同时草酸自身结晶混杂。判断方法：取少量滤液，滴加CaCl₂或BaCl₂，若有白色草酸盐沉淀说明草酸过量；也可用pH试纸，正常终点pH约3-4。若过量，可补加少量K₂C₂O₄调回。\n\n参考语料：\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《ed1c00776 si 001》"
+  },
+  {
+    "id": "Q166",
+    "question": "第二步氧化中，权威参数为6% H₂O₂ 8mL（旧资料10mL为笔误）。若学生误加12mL H₂O₂且未在沸后除尽过量H₂O₂，对后续第三步配位和最终产物可能造成什么影响？从H₂O₂的氧化性及副反应角度说明。",
+    "matchedFAQ": "第二步氧化中，权威参数为6% H₂O₂ 8m…",
+    "confidence": "high",
+    "answerText": "过量H₂O₂未除尽，后续加热时可能进一步氧化已生成的[Fe(C₂O₄)₃]³⁻或草酸根，导致草酸配体被氧化为CO₂，配合物分解；同时残留H₂O₂在结晶过程中缓慢分解放出O₂，干扰晶体生长，降低产率和纯度。因此必须严格控制8mL，且滴加后加热煮沸2分钟彻底分解。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《铁(Ⅲ)-柠檬酸的光化学反应及其应用》"
+  },
+  {
+    "id": "Q168",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解后生成Fe²⁺和C₂O₄²⁻。若学生将产物置于室内自然光下数小时后，欲用K₃[Fe(CN)₆]检验其是否光解，请描述预期的实验现象和判据。若产物未光照，直接加K₃[Fe(CN)₆]却出现蓝色沉淀，可能的原因是什么？",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O光解…",
+    "confidence": "high",
+    "answerText": "光解后产生Fe²⁺，加K₃[Fe(CN)₆]生成蓝色沉淀KFe[Fe(CN)₆]↓，颜色明显。若未光照直接出现蓝色，可能原料中Fe²⁺未氧化完全（第二步检验不彻底），或操作中引入Fe²⁺。可另做空白对照排除干扰。此外，K₃[Fe(CN)₆]本身是强氧化剂，但不会氧化Fe³⁺，只会与Fe²⁺反应，故蓝色即为阳性。\n\n参考语料：\n· 《Teaching Notes for Experiment 9 (Iron Oxalate 习题)》\n· 《七水合硫酸亚铁热分解及脱水非等温动力学研究》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)》\n· 《问题导向式教学在基础化学实验课堂中的应用——以“探讨二草酸合铜酸钾中铜离子测定条件”为例》\n· 《《硫酸亚铁铵的制备》简介》"
+  },
+  {
+    "id": "Q165",
+    "question": "第三步配位反应要求向热的Fe(OH)₃浆液中逐滴滴加草酸溶液至“透明翠绿”即终点。若学生因滴速过快误加了过量草酸（超过理论量约2倍），产物中可能引入哪些杂质？从配位平衡与杂质去除两个角度分析，过量草酸对最终产率、纯度及光化学实验有何影响？",
+    "matchedFAQ": "第三步配位反应要求向热的Fe(OH)₃浆液中…",
+    "confidence": "high",
+    "answerText": "过量草酸使体系酸度升高，部分[Fe(C₂O₄)₃]³⁻可能质子化分解为Fe³⁺与HC₂O₄⁻，结晶时草酸或酸式草酸钾可能共沉淀。乙醇洗涤难以完全去除游离草酸，导致产物纯度下降，产率虚高。光化学实验中，过量草酸可充当自由基清除剂，干扰Fe²⁺定量。应以刚出现翠绿透明为终点，避免过量。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》\n· 《Photochemistry》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》"
+  },
+  {
+    "id": "Q167",
+    "question": "第二步氧化完毕后，讲义要求加热至沸保持2分钟以“除去过量H₂O₂”。请设计一种不受体系中草酸根干扰的简便化学检验法判断H₂O₂是否除尽，并分析若煮沸时间不足、残留H₂O₂进入第三步，会对配位反应及最终产物的光化学实验造成什么影响？",
+    "matchedFAQ": "第二步氧化完毕后，讲义要求加热至沸保持2分钟…",
+    "confidence": "high",
+    "answerText": "取少量试液，滴加稀硫酸酸化后加KI-淀粉试纸：H₂O₂氧化I⁻为I₂使淀粉变蓝，草酸根不干扰。若残留H₂O₂进入第三步，会氧化部分C₂O₄²⁻生成CO₂，消耗配体使配位不完全；还可能使体系中Fe²⁺微量氧化，影响产物纯净度。后续光解实验时残余H₂O₂将氧化光生Fe²⁺，致定量结果偏低。\n\n参考语料：\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《Photochemistry》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》"
+  },
+  {
+    "id": "Q169",
+    "question": "第二步氧化体系中，K₂C₂O₄与FeC₂O₄悬浊液呈近中性。若第一步FeC₂O₄沉淀洗涤不彻底，残留大量草酸进入第二步，使体系pH明显降低。请从H₂O₂氧化还原电位和Fe(OH)₃生成两个角度，分析酸化环境对氧化反应进程及中间产物组成的影响。",
+    "matchedFAQ": "第二步氧化体系中，K₂C₂O₄与FeC₂O₄…",
+    "confidence": "high",
+    "answerText": "草酸残留降低pH，H₂O₂在酸性下虽氧化性增强但分解加速，且酸性利于Fe²⁺稳定，使氧化不完全。同时低pH下Fe³⁺难以水解生成Fe(OH)₃沉淀，而是以可溶性Fe³⁺配合物形式存在，干扰后续配位终点判断。故第一步洗涤必须彻底，确保体系弱酸性至中性，保证Fe(OH)₃沉淀形成与氧化顺利进行。\n\n参考语料：\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《ja01613a002》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《柠檬酸铁铵的制备》\n· 《柠檬酸铁铵的制备方法》"
+  },
+  {
+    "id": "Q171",
+    "question": "K₃[Fe(C₂O₄)₃]·3H₂O对光敏感，结晶须在暗处进行。若学生在结晶静置阶段误将烧杯置于直射日光下2小时，从光解产物（Fe²⁺、C₂O₄²⁻、CO₂）对溶液过饱和度、晶体成核与产物纯度的影响角度，分析会出现哪些可见异常，以及如何补救。",
+    "matchedFAQ": "K₃[Fe(C₂O₄)₃]·3H₂O对光敏感…",
+    "confidence": "high",
+    "answerText": "光照引发LMCT光解产生Fe²⁺和CO₂，溶液出现气泡，Fe²⁺使溶液由翠绿变微黄绿色。光解消耗配体并降低过饱和度，成核速率改变，晶体细小或呈包裹杂质的不规则状。产物含Fe²⁺杂质，后续光化学定量实验基线值偏高。补救：应立即避光、补加少量草酸并重新加热溶解后再结晶，光照严重时废弃重做。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》\n· 《Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate》\n· 《实验十 三草酸合铁(III)酸钾的制备及组》\n· 《三草酸合铁酸钾的制备及其性质（周二）》"
+  },
+  {
+    "id": "Q173",
+    "question": "第二步反应中，按计量比理论需K₂C₂O₄·H₂O约0.0128 mol（约2.4g），实际讲义使用3.5g（0.019 mol）以确保氧化和配位充分。若学生误将K₂C₂O₄用量减半至约1.7g（0.0092 mol），从配位竞争与Fe(OH)₃溶解度两个角度，推断溶液颜色、沉淀情况、第三步配位终点判断及最终产率会有何变化。",
+    "matchedFAQ": "第二步反应中，按计量比理论需K₂C₂O₄·H…",
+    "confidence": "high",
+    "answerText": "K₂C₂O₄不足时（0.0092 mol < 理论0.0128 mol），H₂O₂氧化Fe²⁺后生成的Fe³⁺缺少足够C₂O₄²⁻配位，大量Fe(OH)₃沉淀生成，溶液呈棕褐色而非红棕色澄清液。第三步滴加草酸时Fe(OH)₃溶解慢、终点“透明翠绿”难以达到，需额外补充草酸。最终因原料不足，产率明显低于理论值6.26g，且产物中可能夹带未反应Fe(OH)₃。\n\n参考语料：\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《三草酸合铁 酸钾制备条件的优化》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《All About Ferric Oxalate (Bostick & Sullivan)》\n· 《jp312603m》\n· 《Chemical actinometry (IUPAC Technical Report)》"
+  },
+  {
+    "id": "Q170",
+    "question": "第二步氧化完全后，讲义规定须将混合液加热至沸并保持2分钟以除去过量H₂O₂。若省略该步骤直接进入第三步配位，会给后续操作带来什么后果？请从H₂O₂残留对Fe³⁺的还原作用、对配位反应终点判断的干扰两方面分析。",
+    "matchedFAQ": "第二步氧化完全后，讲义规定须将混合液加热至沸…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会与Fe³⁺发生类Fenton反应，产生羟基自由基使Fe³⁺部分还原为Fe²⁺，导致第三步配位不完全、产物混有Fe²⁺杂质（可用K₃[Fe(CN)₆]检出蓝色沉淀）。且H₂O₂受热分解放出O₂气泡会干扰\"透明翠绿\"终点的观察，使判断失真。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《preparation-analysis-and-characterization-of-some-transition-metal-complexes-a-holistic》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《ja01613a002》"
+  },
+  {
+    "id": "Q172",
+    "question": "按氧化反应式6FeC₂O₄+3H₂O₂+6K₂C₂O₄→4K₃[Fe(C₂O₄)₃]+2Fe(OH)₃+12H₂O，计算0.0128mol FeC₂O₄理论需30%H₂O₂约多少毫升？讲义使用6%H₂O₂ 8mL（约14.1mmol H₂O₂），远超理论量约2.2倍。请解释过量H₂O₂的双重作用，并说明若将8mL改为4mL是否可行及后果。",
+    "matchedFAQ": "按氧化反应式6FeC₂O₄+3H₂O₂+6K…",
+    "confidence": "high",
+    "answerText": "理论上0.0128mol FeC₂O₄需0.0064mol H₂O₂（30%约0.64mL，6%约3.6mL），8mL（约14.1mmol）约为理论2.2倍。过量H₂O₂一是确保Fe²⁺彻底氧化，二是维持强氧化环境防止Fe²⁺重新生成。若减至4mL（约7.1mmol）仍略超理论化学计量，但仅为原用量一半，且H₂O₂在反应中会有部分分解，4mL可能不够保证氧化完全，K₃[Fe(CN)₆]检验可能因Fe²⁺残留而出现蓝色，Fe(OH)₃生成不彻底也会影响后续配位产物产量。\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《柠檬酸铁铵的制备》\n· 《三草酸合铁酸钾的制备及其性质（周二）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》"
+  },
+  {
+    "id": "Q174",
+    "question": "第二步中滴加完H₂O₂后，讲义要求\"继续在40℃水浴中搅拌5分钟\"。若学生省去这5分钟直接加热至沸腾，从反应完全程度与H₂O₂分解行为两个角度分析对产率的影响。",
+    "matchedFAQ": "第二步中滴加完H₂O₂后，讲义要求\"继续在4…",
+    "confidence": "high",
+    "answerText": "继续搅拌5分钟使尚未反应的H₂O₂在温和温度下与FeC₂O₄充分接触，使氧化反应完全。若直接煮沸，H₂O₂在高温下迅速分解放出O₂逸出，导致氧化剂量不足，Fe²⁺氧化不彻底，最终产物含Fe²⁺杂质且理论产量降低。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《三草酸合铁 酸钾制备实验的探究》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《the-chemistry-of-the-metal-oxalato》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三、硫酸亚铁铵的制备》"
+  },
+  {
+    "id": "Q176",
+    "question": "第三步配位时，向Fe(OH)₃浆液中逐滴滴加草酸溶液至\"透明翠绿\"即停止。若学生因判断失误多滴加了10mL草酸溶液，对最终产物的产量与纯度有何影响？从草酸根质子化平衡和产物中水含量两个角度分析。",
+    "matchedFAQ": "第三步配位时，向Fe(OH)₃浆液中逐滴滴加…",
+    "confidence": "high",
+    "answerText": "过量草酸使溶液pH下降，H⁺与C₂O₄²⁻结合生成HC₂O₄⁻，降低游离C₂O₄²⁻浓度，虽因Kf极高（1.6×10²⁰）配位平衡受影响不大，但酸性增强使产物在母液中溶解度增大，加乙醇后结晶不完全，产率降低。同时，过量草酸可能使晶体中夹杂草酸或影响结晶水数目——强酸性条件下结晶时，产物可能以无定形或含水不一致的形态析出，烘干后组成偏离K₃[Fe(C₂O₄)₃]·3H₂O，导致纯度下降。滤饼若洗涤不净，残留草酸还会造成杂质污染。\n\n参考语料：\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《ed1c00776 si 001》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《morphology-controllable-synthesis-of-microporous-prussian-blue-analogue-zn3-co(cn)6-2-xh2o》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》"
+  },
+  {
+    "id": "Q178",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O中，K⁺位于外界、C₂O₄²⁻配位于内界。请设计一种不需光谱仪、仅用试管反应即可验证K⁺在外界、草酸根在内界的实验方法，并说明预期现象。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O中，…",
+    "confidence": "high",
+    "answerText": "取少量产物溶于水，分为两份。一份滴加饱和酒石酸氢钠溶液或四苯硼酸钠，若K⁺在外界，立即产生白色K⁺沉淀（KB(C₆H₅)₄），证明K⁺游离；另一份滴加CaCl₂溶液，草酸根若在外界将产生白色CaC₂O₄沉淀，但配位后草酸根不游离，无沉淀，由此证明C₂O₄²⁻在内界。\n\n参考语料：\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《草酸亚铁综合性实验的教学》\n· 《三草酸合铁酸钾改进制备及其光致还原性探究》\n· 《废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计》"
+  },
+  {
+    "id": "Q175",
+    "question": "第一步溶解5.0g摩尔盐时，除了外加数滴3mol/L H₂SO₄维持酸性外，硫酸亚铁铵中的NH₄⁺本身是否也参与抑制Fe²⁺氧化？若将摩尔盐直接换成等物质的量的FeSO₄·7H₂O，从Fe²⁺稳定性与草酸亚铁沉淀纯度两个角度分析可能产生的差异。",
+    "matchedFAQ": "第一步溶解5.0g摩尔盐时，除了外加数滴3m…",
+    "confidence": "high",
+    "answerText": "NH₄⁺水解呈弱酸性，能与外加H₂SO₄协同维持较低pH，减缓Fe²⁺→Fe³⁺氧化；且NH₄⁺形成稳定复盐晶格，避免直接暴露FeSO₄易氧化变质。若改用FeSO₄，体系pH缓冲能力下降，Fe²⁺更易氧化，FeC₂O₄·2H₂O沉淀中可能夹杂Fe(OH)₃或Fe³⁺草酸盐，降低后续产物纯度与产率。\n\n参考语料：\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》\n· 《硫酸亚铁铵的制》\n· 《硫酸亚铁铵的制备及质量鉴定》\n· 《FeSO4》\n· 《1》"
+  },
+  {
+    "id": "Q177",
+    "question": "第二步氧化反应中，加入的3.5g K₂C₂O₄·H₂O（约0.019mol）在体系中同时扮演哪些角色？除提供C₂O₄²⁻配体外，其水解产生的弱碱性环境对H₂O₂氧化Fe²⁺和Fe(OH)₃生成有何影响？若体系pH因草酸钾过量而明显升高，对H₂O₂稳定性及后续第三步配位有何连锁效应？",
+    "matchedFAQ": "第二步氧化反应中，加入的3.5g K₂C₂O…",
+    "confidence": "high",
+    "answerText": "K₂C₂O₄水解使体系呈弱碱性，有利于H₂O₂氧化Fe²⁺及Fe(OH)₃生成；同时C₂O₄²⁻可预配位Fe³⁺，稳定中间态防颗粒过粗。但碱性过强会加速H₂O₂分解，故需40℃控温、缓慢滴加。用量3.5g略高于理论化学计量，保证配体充足。若pH过高，H₂O₂无效分解增多，氧化不完全，且第三步草酸用量需额外中和过量碱，影响终点判断。\n\n参考语料：\n· 《铁(Ⅲ)—邻菲罗啉溶液体系的光化学还原 Ⅱ.气相色谱法研究光化反应机理》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《a-new-approach-toward-cyanotype-photography-using-tris-(oxalato)ferrate(iii)-an-integrated-experiment (1)》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《morizot-et-al-2014-introducing-the-human-element-in-chemistry-by-synthesizing-blue-pigments-and-creating-cyanotypes》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》"
+  },
+  {
+    "id": "Q179",
+    "question": "文献指出K₃[Fe(C₂O₄)₃]是化学露光计的核心物质，其光解量子产率Φ（365nm处约1.2）已被精确标定。若你需测定某单色光源在λ=365nm处的光量子通量，请设计基于本实验产物光解及可定量检测Fe²⁺的显色方案（可用邻菲啰啉等），说明关键操作步骤与应控制的干扰因素。",
+    "matchedFAQ": "文献指出K₃[Fe(C₂O₄)₃]是化学露光…",
+    "confidence": "high",
+    "answerText": "将已知浓度K₃[Fe(C₂O₄)₃]溶液置于光路中，确保所有入射光子被吸收（足够浓度与光程），准确照射一定时间t，立即加入1,10-菲啰啉显色，在510nm处测定生成Fe²⁺-邻菲啰啉配合物的吸光度，由标准曲线得Fe²⁺浓度。由n(Fe²⁺)/(Φ·t)得光量子通量。关键干扰：全程暗处操作、滤除杂散光、充分搅拌保证均匀照射、控制光照时间避免产物光解过度产生次级吸收，显色前需酸化防止Fe(OH)₃析出。若仍用K₃[Fe(CN)₆]仅可定性判断，无法准确定量。\n\n参考语料：\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》\n· 《三草酸合铁酸钾的制备及性质—完整》\n· 《实验四十一 三草酸合铁(Ⅲ)酸钾的合成及组成测定》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《Chemical actinometry (IUPAC Technical Report)》\n· 《Errors in ferrioxalate actinometry》"
+  },
+  {
+    "id": "Q181",
+    "question": "第一步FeC₂O₄·2H₂O沉淀的洗涤，讲义仅指定“热水”而未给具体温度。若分别用刚煮沸的沸水（约100℃）与室温冷水（约20℃）洗涤，从FeC₂O₄溶度积的温度依赖性、杂离子扩散速率及洗涤次数三方面，分析各自对产率与纯度的利弊，并推断合适的洗涤温度范围。",
+    "matchedFAQ": "第一步FeC₂O₄·2H₂O沉淀的洗涤，讲义…",
+    "confidence": "high",
+    "answerText": "FeC₂O₄溶解度随温度升高而增大，沸水虽扩散快、洗涤效率高，但沉淀溶解损失显著增大，产率下降；冷水虽溶解损失小，但离子扩散慢、粘度大，需多次洗涤且耗时，SO₄²⁻不易洗净。宜取60~80℃热水，兼顾溶解损失与洗涤效率，保证BaCl₂检验合格且产率损失可控。\n\n参考语料：\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate》\n· 《melanterite-绿矾》\n· 《三、硫酸亚铁铵的制备》\n· 《实验一 硫酸亚铁铵的制备》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《硫酸亚铁铵的制备及纯度分析》"
+  },
+  {
+    "id": "Q183",
+    "question": "第二步氧化后，需用K₃[Fe(CN)₆]检验Fe²⁺是否残留。为什么在该步骤中选择K₃[Fe(CN)₆]（铁氰化钾）而非K₄[Fe(CN)₆]（亚铁氰化钾）或KSCN？从Fe²⁺/Fe³⁺的选择性反应及产物颜色两方面对比说明，若误用K₄[Fe(CN)₆]或KSCN，会得出什么错误结论？",
+    "matchedFAQ": "第二步氧化后，需用K₃[Fe(CN)₆]检验…",
+    "confidence": "high",
+    "answerText": "K₃[Fe(CN)₆]的Fe(CN)₆³⁻与Fe²⁺生成蓝色沉淀KFe[Fe(CN)₆]，而与Fe³⁺不反应，专一检出Fe²⁺残留；若用K₄[Fe(CN)₆]，其Fe(CN)₆⁴⁻遇Fe³⁺生成普鲁士蓝，而产物中大量Fe³⁺会给出假阳性，无法判断氧化是否完全；KSCN仅与Fe³⁺呈血红色，对Fe²⁺无响应，不能用于Fe²⁺检测。故需用K₃[Fe(CN)₆]。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《kmet-et-al-2023-the-cyanotype-process-and-its-potential-in-chemistry》\n· 《walden-et-al-2019-revealing-the-wavelength-dependence-of-photochemical-reactions-cutting-edge-research-in-the》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《lawrence-fishelson-1999-blueprint-photography-by-the-cyanotype》\n· 《Fe(Ⅲ)草酸盐络合物的光化学性质及其应用》"
+  },
+  {
+    "id": "Q180",
+    "question": "第一步洗涤FeC₂O₄·2H₂O沉淀时，用BaCl₂检验SO₄²⁻。若洗涤液中含有少量Fe³⁺，请分析：未酸化直接滴加BaCl₂时，Fe³⁺的水解行为会对检验结果造成怎样的干扰？为何讲义中强调需先用稀盐酸酸化洗涤液再检验？",
+    "matchedFAQ": "第一步洗涤FeC₂O₄·2H₂O沉淀时，用B…",
+    "confidence": "high",
+    "answerText": "Fe³⁺在近中性条件水解生成Fe(OH)₃胶体，使溶液浑浊，易被误判为BaSO₄沉淀，导致过度洗涤和产物损失。用稀盐酸酸化可抑制Fe³⁺水解，排除胶体干扰，同时防止BaCO₃等沉淀生成，确保检验结果仅反映SO₄²⁻是否洗净。\n\n参考语料：\n· 《硫酸亚铁铵的制备及纯度检验》\n· 《实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定》\n· 《The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)》\n· 《Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)》\n· 《Synthesis and Component Analysis of an Iron (III) Oxalate Complex》\n· 《The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate》"
+  },
+  {
+    "id": "Q182",
+    "question": "第二步氧化完成后，若用K₃Fe(CN)₆检验发现仍显蓝色（Fe²⁺未氧化完全）。此时能否直接补加8mL H₂O₂？应如何正确补加？请从过量H₂O₂对草酸根的氧化破坏及对后续反应的影响分析。",
+    "matchedFAQ": "第二步氧化完成后，若用K₃Fe(CN)₆检验…",
+    "confidence": "high",
+    "answerText": "不能一次补加8mL，因过量H₂O₂会在煮沸时氧化草酸根生成CO₂，降低产率并引入杂质。正确做法：将体系升至40℃，以每秒1~2滴极慢速度补加少量H₂O₂，边加边搅拌，每加几滴用K₃Fe(CN)₆检验，至蓝色消失即停，再加热至沸2分钟分解过量H₂O₂。\n\n参考语料：\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《jp312603m》\n· 《ed1c00776 si 001》\n· 《the-mechanism-of-the-permanganate-oxalate》"
+  },
+  {
+    "id": "Q184",
+    "question": "第二步滴完H₂O₂后，讲义要求“加热至沸保持2分钟”以除尽过量H₂O₂。若学生仅加热至约60℃且未保持沸腾即进入第三步，残留的H₂O₂会对配位反应和第四步结晶产生哪些不利影响？",
+    "matchedFAQ": "H₂O₂过量12mL对配位反应及产物纯度的影响分析",
+    "confidence": "high",
+    "answerText": "加热煮沸能分解大部分H₂O₂，但12mL显著过量，2分钟内可能残留微量H₂O₂。残留H₂O₂在后续步骤中会氧化草酸根或配合物中的草酸配体，产生CO₂，使配体浓度降低，导致配位不完全；同时过量H₂O₂在沸腾时剧烈分解放出O₂，可能破坏已生成的配合物结构，使产物颜色变黄、产率下降。若检验Fe²⁺未彻底，可延长煮沸时间。\n\n沸腾除H₂O₂不仅因热分解加速，更关键的是水蒸气气泡的气提效应：气泡形成时H₂O₂分子可扩散进入气泡并被带出液面，同时沸腾使溶液剧烈对流，远优于60℃时的静态分解。60℃时分解慢且无气提，残留H₂O₂会与Fe²⁺/Fe³⁺发生Fenton反应生成·OH，氧化草酸根生成CO₂，降低配体浓度，还可引发链式反应破坏配合物，直接影响第三步配位完全及产物光稳定性。\n残留H₂O₂具强氧化性，可将草酸根氧化为CO₂，消耗配体，使第三步配位反应不彻底，目标配合物[Fe(C₂O₄)₃]³⁻生成量减少；同时可能氧化体系中的Fe²⁺（若存在）为Fe³⁺，干扰K₃Fe(CN)₆检验结果。且未除尽的H₂O₂在后续结晶过程中持续作用，导致产物中混入过氧化物或Fe³⁺杂质，使晶体形成不规整、透明度下降，降低纯度与晶型质量。应严格控制加热至沸保持2分钟，以完全去除H₂O₂。\n检验残留H₂O₂可取少量氧化后溶液，加入Ti(SO₄)₂溶液，出现黄色（过氧钛酸）即证明；或加KI和淀粉变蓝。若残留进入第三步，会氧化Fe²⁺为Fe³⁺，使配位反应终点模糊，草酸消耗增加，产物含铁（Ⅲ）杂质，颜色加深，纯度下降；H₂O₂分解释氧使溶液浑浊，干扰观察翠绿色透明终点。\n省略加热至沸2分钟会使残留H₂O₂未除尽。H₂O₂具有较强的氧化性（E°≈1.776V），能将草酸根氧化为CO₂，消耗第三步配位反应所需的配体C₂O₄²⁻，导致Fe(OH)₃溶解不完全，产生胶状Fe(OH)₃杂质；同时H₂O₂分解释放O₂气泡，使产物夹带气体，降低结晶纯度。残留H₂O₂还会干扰K₃[Fe(C₂O₄)₃]的形成，最终造成产率下降和产品颜色不纯。\n残留H₂O₂会与第三步加入的草酸发生氧化还原反应（H₂C₂O₄+H₂O₂→2CO₂+2H₂O），直接消耗配位所需草酸，使Fe(OH)₃溶解不完全，配位反应不彻底，导致产物中混有Fe(OH)₃杂质。此外，体系中生成的Fe(OH)₃对H₂O₂分解有催化作用，加速H₂O₂分解并产生O₂，进一步加剧草酸的氧化损失。因此必须煮沸2分钟彻底除尽H₂O₂，以保证配位完全和产物纯度。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《ed1c00776 si 001 (1)》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》"
+  },
+  {
+    "id": "Q186",
+    "question": "第四步结晶时，讲义要求加入95%乙醇后“悬棉线提供晶核”。从晶体成核与生长理论角度，说明棉线为何能显著促进结晶？若省去棉线仅静置，对晶体数量和质量有何影响？",
+    "matchedFAQ": "第四步结晶时，讲义要求加入95%乙醇后“悬棉…",
+    "confidence": "high",
+    "answerText": "棉线提供了异相成核位点，显著降低成核活化能，使晶体在较低过饱和度下即可析出；均相成核需更高过饱和度，成核慢且晶核少。无棉线时静置虽可析出，但耗时长，易生成少量大块或细粉状晶体，质量不稳定。棉线引导晶体定向生长，减少杂晶，提高晶体均匀性。\n\n参考语料：\n· 《Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate》\n· 《柠檬酸铁铵的制备方法》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《ed1c00776 si 001》\n· 《草酸合铁酸钾的制备及其离子电荷的测定》\n· 《1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method》"
+  },
+  {
+    "id": "Q188",
+    "question": "第三步配位中，草酸需预先配成约0.5mol/L溶液并逐滴滴加至Fe(OH)₃完全溶解、溶液透明翠绿。若学生将1.5g草酸固体直接一次性加入，或配成极浓溶液快速倒入，会对配位反应速率、终点判断及产物纯度产生哪些具体影响？",
+    "matchedFAQ": "第三步配位中，草酸需预先配成约0.5mol/…",
+    "confidence": "high",
+    "answerText": "草酸一次加入或浓度过高，反应过快，局部草酸过量，可能导致生成多核草酸铁中间体或未完全溶解的草酸盐，同时酸度虽升高但草酸过量会作为杂质混入产物，降低纯度；且“透明翠绿”终点极易被越过，无法准确控制配比。缓慢滴加可控制反应进程，利于观察终点，确保配比准确，提高产率和质量。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《flash-photolysis-of-potassium-tris(oxalato)cobaltate(iii)》\n· 《goodall-et-al-1972-flash-photolysis-experiments-for-teaching-kinetics-and》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》"
+  },
+  {
+    "id": "Q185",
+    "question": "第三步配位中，讲义要求将约1.5g草酸配成约0.5mol/L溶液（约30mL）后逐滴滴加。若学生将草酸溶液浓度配成0.1mol/L（体积相应增至约150mL）或2mol/L（体积约7.5mL），分别会对配位反应产生什么影响？请从反应速率、终点判断和产物纯度三个角度分析。",
+    "matchedFAQ": "第三步配位中，讲义要求将约1.5g草酸配成约…",
+    "confidence": "high",
+    "answerText": "0.1mol/L时溶液过稀，滴加体积大，稀释反应体系，降低反应速率，终点难以准确判断（翠绿色变浅），且过多水分增加后续结晶难度；2mol/L时溶液过浓，局部草酸过量，酸度过高可能使草酸根质子化、配位能力下降，且滴加量少难以控制终点，可能未完全溶解Fe(OH)₃或生成杂质。应保持约0.5mol/L以平衡速率与判断。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《jp312603m》\n· 《一种确定固相反应机理函数的...合物脱水过程的非等温动力学》\n· 《铁与铬的草酸配合物的热分析动力学研究》\n· 《二草酸合铜酸钾的绿色制备和形貌控制》\n· 《Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors》"
+  },
+  {
+    "id": "Q187",
+    "question": "第一步制备FeC₂O₄·2H₂O时，讲义要求将混合液微沸并保持4分钟。若学生将时间缩短至1分钟或延长至10分钟，对沉淀的形态、过滤洗涤及产物纯度分别有何影响？请结合晶体生长动力学和Fe²⁺的氧化稳定性分析。",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+    "confidence": "high",
+    "answerText": "缩短至1分钟：晶体细小，易穿滤，包藏母液杂质，洗涤困难；延长至10分钟：晶体粗大，但Fe²⁺在加热下易被空气氧化为Fe³⁺，生成Fe(OH)₃混入沉淀，且草酸可能分解，导致产物纯度下降。4分钟可兼顾晶体长大与避免氧化。\n\n参考语料：\n· 《balzani-et-al-1983-electron-transfer-reactions-involving》\n· 《三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证》\n· 《七水硫酸亚铁的热分解动力学研究》\n· 《由废白铁制备硫酸亚铁铵-完结》\n· 《柠檬酸铁铵的制备方法》\n· 《三草酸合铁(Ⅲ)酸钾绿色合成与结构表征》"
+  },
+  {
+    "id": "Q189",
+    "question": "第三步配位时，向Fe(OH)₃浆液中逐滴滴加草酸溶液，终点为“透明翠绿”。若在滴加过程中溶液始终呈浑浊状，或滴加后稍微变绿又立即浑浊，请从酸碱平衡和配位平衡角度分析可能原因，并提出两条可行的调整措施。",
+    "matchedFAQ": "第三步配位时，向Fe(OH)₃浆液中逐滴滴加…",
+    "confidence": "high",
+    "answerText": "始终浑浊说明草酸不足或pH偏高，Fe(OH)₃未完全溶解；变绿又浑浊可能是局部草酸过量导致pH波动，或生成的配合物在较高pH下水解重新析出Fe(OH)₃。调整措施：保持加热并缓慢滴加，适当增加草酸总量，同时用pH试纸监测，维持溶液弱酸性（pH≈3～4）以促进配位。\n\n参考语料：\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《三草酸合铁(Ⅲ)酸钾制备条件的优化》\n· 《Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods》\n· 《三草酸合铁酸钾》"
+  },
+  {
+    "id": "Q191",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O中草酸根全部为配位内界，无游离草酸根。请设计一个无需精密仪器的化学实验证明这一点，并说明预期现象。若产物中混有少量游离草酸根，该实验现象会如何变化？",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O中草…",
+    "confidence": "high",
+    "answerText": "取少量产物溶于蒸馏水，滴加CaCl₂溶液。若草酸根全为内界，则无白色CaC₂O₄沉淀生成，溶液保持翠绿色；若混有游离草酸根，则出现白色沉淀，说明存在外界草酸根。也可用BaCl₂溶液，但CaCl₂更灵敏。注意需使用蒸馏水且避免光照。\n\n参考语料：\n· 《思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学》\n· 《growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)》\n· 《“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素》\n· 《ed075p98-The Ligand Field Spectra of Copper(II)》\n· 《ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid》\n· 《废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计》"
+  },
+  {
+    "id": "Q193",
+    "question": "第四步产物烘干时，讲义规定50℃烘干20分钟，并强调严禁超过50℃。若学生将烘箱温度误调至80℃、100℃或120℃，分别会对产物的组成、外观和后续光化学实验产生什么后果？请结合失结晶水和热分解数据说明。",
+    "matchedFAQ": "第四步产物烘干时，讲义规定50℃烘干20分钟…",
+    "confidence": "high",
+    "answerText": "80℃时部分结晶水失去，产物为部分失水的混合物，组成不纯，称量计算产率会产生偏差（实际产物质量减少但若按三水合物计算产率会偏低），颜色可能略变暗；100℃时完全失去结晶水，产物变为无水K₃[Fe(C₂O₄)₃]，质量明显减轻，翠绿色变暗，但仍保持配合物结构，光化学活性可能因水合环境改变而受影响；120℃时同样完全失水（失水温度100℃），但尚未达到分解温度230℃，不会分解，主要影响是失水导致的组成变化和外观变化。因此必须严格控制在50℃以获得稳定三水合物。\n\n参考语料：\n· 《铜循环（基础化学实验01）》\n· 《教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）》\n· 《Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究》\n· 《Cr Fe Al Cu 草酸配合物热分析研究》\n· 《复盐K 3Fe C 2O 4 3 3H 2O的热分析研究》\n· 《wang-et-al-2023-rapid-redox-cycling-of-fe(ii)-fe(iii)-in-microdroplets-during-iron-citric-acid》"
+  },
+  {
+    "id": "Q190",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义选择硫酸亚铁铵（摩尔盐）而非FeSO₄或FeCl₂作为铁(II)源。请从Fe²⁺稳定性、沉淀纯度及后续产物三方面分析摩尔盐的优势，并说明若改用FeSO₄·7H₂O可能带来哪些不利影响。",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义选择…",
+    "confidence": "high",
+    "answerText": "摩尔盐(NH₄)₂Fe(SO₄)₂·6H₂O为复盐，溶液中同时含NH₄⁺和SO₄²⁻，Fe²⁺不易被空气氧化，稳定性优于简单亚铁盐；NH₄⁺不参与配位不引入杂质，而FeCl₂引入的Cl⁻可能与Fe³⁺配位或残留在产物中；摩尔盐易纯化、结晶好、称量准确，FeSO₄易风化氧化，FeCl₂易吸水潮解且Cl⁻难洗净，可能影响K₃[Fe(C₂O₄)₃]纯度。\n\n参考语料：\n· 《FeSO4》\n· 《三、硫酸亚铁铵的制备》\n· 《Ferrous Ammonium》\n· 《melanterite-绿矾》\n· 《硫酸亚铁铵》\n· 《硫酸亚铁铵的制》"
+  },
+  {
+    "id": "Q192",
+    "question": "第二步氧化完成并检验Fe²⁺完全后，讲义要求加热至沸保持2分钟除去过量H₂O₂。若学生忽略此步骤或煮沸时间不足1分钟，直接进行第三步配位，从H₂O₂与草酸的氧化还原反应及后续配位反应两个角度分析会产生什么后果。",
+    "matchedFAQ": "第二步氧化完成并检验Fe²⁺完全后，讲义要求…",
+    "confidence": "high",
+    "answerText": "残留H₂O₂会氧化草酸根生成CO₂，消耗配体，使第三步草酸用量不足，Fe(OH)₃溶解不完全、产率下降；H₂O₂在后续加热中也可能氧化Fe³⁺配合物中的草酸根，导致产物分解变色；此外残留H₂O₂会使K₃[Fe(C₂O₄)₃]中夹杂未反应物质，影响产物纯度与光化学性质。若煮沸不足，需补煮2分钟并重新检验以保证氧化完全。\n\n参考语料：\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《三草酸合铁 酸钾的合成及结构组成测定》\n· 《ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron》\n· 《Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring》\n· 《三草酸合铁酸钾制备（王志勇）》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》"
+  },
+  {
+    "id": "Q194",
+    "question": "第三步配位中，讲义要求将约1.5g草酸配成约0.5mol/L的溶液（约30mL）逐滴滴加至Fe(OH)₃完全溶解。请计算1.5g草酸所含草酸根物质的量，并与Fe(OH)₃按反应3的化学计量比所需草酸量作对比，讨论草酸略过量的必要性与过量太多（如改用3g）的后果。",
+    "matchedFAQ": "第三步配位中，讲义要求将约1.5g草酸配成约…",
+    "confidence": "high",
+    "answerText": "1.5g H₂C₂O₄·2H₂O约0.0119mol，而0.0128mol摩尔盐产生约0.00427mol Fe(OH)₃，按反应3每2mol Fe(OH)₃需3mol草酸，理论需要约0.0064mol，草酸过量约1.86倍。过量的草酸可提供配位平衡所需的过量配体，使配位完全、终点清晰；但若过量太多（如3g），未反应的草酸结晶时混入产物，降低纯度，且产物可能呈酸性，影响晶形与稳定性。\n\n参考语料：\n· 《草酸分子结构与性质的量子化学计算研究》\n· 《三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证》\n· 《ed075p98-The Ligand Field Spectra of Copper(II)》\n· 《abrahamson-2001-the-photochemical-basis-of-cyanotype》\n· 《gonzález-seco-2004-potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of》\n· 《baker-et-al-1980-photochemical-reactions-of-tris(oxalato)iron-(iii)-a-first-year-chemistry》"
+  },
+  {
+    "id": "Q196",
+    "question": "第一步制备FeC₂O₄·2H₂O时，草酸与摩尔盐均需加热近沸后混合，且微沸保温4分钟。若学生将两溶液在室温下直接混合后立即过滤（不加热），从Ksp=3.2×10⁻⁷的沉淀溶解平衡和沉淀晶型角度分析，对沉淀的产率和后续第二步氧化有何影响？",
+    "matchedFAQ": "第一步制备FeC₂O₄·2H₂O时，草酸与摩…",
+    "confidence": "high",
+    "answerText": "室温下FeC₂O₄·2H₂O溶度积小（3.2×10⁻⁷），沉淀理论上可生成，但沉淀颗粒细小、吸附杂质多，倾滗法难以分离，损失大；加热可促进晶体生长、获得较大晶粒，便于过滤洗涤。若室温直接过滤，沉淀为无定形或微晶，夹带Fe²⁺与SO₄²⁻，洗涤不净，第二步氧化时杂质干扰且H₂O₂消耗增加，还可能使氧化不完全。\n\n参考语料：\n· 《三、硫酸亚铁铵的制备》\n· 《硫酸亚铁铵的制备及纯度分析》\n· 《电导，电导率和摩尔电导率》\n· 《马口铁与白铁区别》\n· 《Ferrous Ammonium》\n· 《《硫酸亚铁铵的制备》简介》"
+  },
+  {
+    "id": "Q198",
+    "question": "产物K₃[Fe(C₂O₄)₃]·3H₂O具有光敏性，其光解产物为Fe²⁺和CO₂。文献报道该配合物可应用于蓝晒法（氰版照相）。若学生将产物溶液见光后，用K₃[Fe(CN)₆]检验光解生成的Fe²⁺，请说明检验原理，并解释为什么光照后溶液的绿色会逐渐变浅甚至褪色，且久置后可能产生黄色浑浊。",
+    "matchedFAQ": "产物K₃[Fe(C₂O₄)₃]·3H₂O具有…",
+    "confidence": "high",
+    "answerText": "光解生成的Fe²⁺遇铁氰化钾立即生成蓝色沉淀KFe[Fe(CN)₆]（滕氏蓝），是检验Fe²⁺的灵敏方法。绿色来自[Fe(C₂O₄)₃]³⁻中Fe³⁺与草酸根配位场中的d-d跃迁或LMCT吸收；光解使Fe³⁺还原为Fe²⁺，配合物浓度下降，绿色变浅。久置后Fe²⁺被空气氧化为Fe³⁺，在碱性或中性条件下生成Fe(OH)₃胶体，呈黄色浑浊；草酸根被氧化成CO₂逸出，配体减少，体系进一步降解。\n\n参考语料：\n· 《Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers》\n· 《A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate》\n· 《Natural iron oxalates and their analogous synthetic counterparts: A review》\n· 《Errors in ferrioxalate actinometry》\n· 《meek-et-al-2016-deducing-reaction-mechanism-a-guide-for-students-researchers-and》\n· 《ayscough-et-al-1967-the-photochemical-oxidation-of-aqueous-iodide-solutions-an-experiment-demonstrating-the》"
+  },
+  {
+    "id": "Q195",
+    "question": "第二步氧化反应结束后，讲义规定加热至沸保持2分钟以除去过量H₂O₂，随后用K₃[Fe(CN)₆]检验Fe²⁺。已知K₃[Fe(CN)₆]检验Fe²⁺的灵敏度很高（可检出极微量Fe²⁺）。若学生煮沸时间过短或未煮沸，K₃[Fe(CN)₆]检验可能会呈现什么现象？这能真实反映Fe²⁺氧化不完全吗？请从H₂O₂分解规律与检验方法的选择性两方面分析。",
+    "matchedFAQ": "第二步氧化反应结束后，讲义规定加热至沸保持2…",
+    "confidence": "high",
+    "answerText": "未充分煮沸时，残余H₂O₂可能继续氧化Fe²⁺，使检验时Fe²⁺浓度降低，可能出现蓝色沉淀不明显或延迟出现，造成“氧化完全”的假象（假阴性）；同时残余H₂O₂也会干扰后续配位（氧化草酸根）。因此必须煮沸2分钟除尽H₂O₂后再检验，以保证检验结果真实反映Fe²⁺是否氧化完全。\n\n参考语料：\n· 《柠檬酸铁铵的制备》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《uchida-et-al-2023-discovery-based-approach-to-identify-multiple-factors-that-affect-the-spin-state-of》\n· 《Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate》\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》"
+  },
+  {
+    "id": "Q197",
+    "question": "第一步沉淀FeC₂O₄·2H₂O时，讲义选择硫酸亚铁铵（摩尔盐）而非FeSO₄·7H₂O作为Fe²⁺源。已知(NH₄)₂SO₄与FeSO₄形成复盐后，其在空气中更稳定、不易被氧化。请从亚铁离子氧化保护的角度，分析摩尔盐中NH₄⁺和SO₄²⁻对Fe²⁺稳定性的具体作用机制，以及若改用FeSO₄·7H₂O可能对沉淀纯度产生的影响。",
+    "matchedFAQ": "第一步沉淀FeC₂O₄·2H₂O时，讲义选择…",
+    "confidence": "high",
+    "answerText": "摩尔盐为复盐，晶格中NH₄⁺与SO₄²⁻交替排列形成致密结构，减缓空气中O₂向Fe²⁺的扩散；溶解后NH₄⁺水解使溶液微酸性，抑制Fe²⁺水解和氧化。若改用FeSO₄·7H₂O，表面易氧化产生少量Fe³⁺黄褐色斑点，溶解后Fe³⁺会与草酸生成可溶性配合物或Fe(OH)₃胶体，夹杂于FeC₂O₄沉淀中，降低纯度并干扰后续计量。（ch2-s1、ch3-s2）\n\n参考语料：\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《关于硫酸亚铁铵稳定性的讨论》\n· 《硫酸亚铁铵和硫酸亚铁稳定性的对比研究》\n· 《FeSO4》\n· 《利用七水硫酸亚铁生产一水硫酸亚铁及聚合硫酸铁》\n· 《制备硫酸亚铁铵单晶的实验研究》"
+  },
+  {
+    "id": "Q199",
+    "question": "第三步配位反应中，向Fe(OH)₃浆液中逐滴滴加约0.5mol/L草酸溶液至\"透明翠绿\"为终点。已知Ksp[Fe(OH)₃]=2.79×10⁻³⁹，Kf[Fe(C₂O₄)₃³⁻]=1.6×10²⁰。若学生为加快溶解将草酸溶液浓度提高至2mol/L且一次性加入过量（约为理论量的2倍），除可能造成草酸浪费外，还会对产物产生哪些具体影响？请从配位平衡移动、溶液酸度及产物结晶三个角度分析。",
+    "matchedFAQ": "第三步配位反应中，向Fe(OH)₃浆液中逐滴…",
+    "confidence": "high",
+    "answerText": "①过量草酸使体系pH降低，H⁺与C₂O₄²⁻结合形成HC₂O₄⁻，有效配体浓度下降，反而降低配位效率；②强酸性下已生成的[Fe(C₂O₄)₃]³⁻可能部分分解，重新释放Fe³⁺；③结晶时过量草酸与产物共沉淀，降低产物纯度；④酸性过强还可能使产物结晶水数量改变。故必须逐滴滴加并观察颜色变化控制终点。（ch5-s4配位平衡影响因素）\n\n参考语料：\n· 《jp312603m》\n· 《Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria》\n· 《三草酸合铁酸钾制备（王志勇·PPTX）》\n· 《ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry》\n· 《ja01613a002》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》"
+  },
+  {
+    "id": "Q201",
+    "question": "第二步氧化反应中，讲义规定6% H₂O₂用量为8mL（权威修正值），理论计算显示氧化0.0128mol FeC₂O₄仅需约0.0064mol H₂O₂，而8mL 6% H₂O₂（约0.014mol）已是理论量的约2.2倍。若学生误将H₂O₂用量加倍至16mL且严格按40℃、每秒1~2滴加入，后续未充分煮沸除H₂O₂，请分析过量H₂O₂对第三步配位和最终产物光敏性的影响。",
+    "matchedFAQ": "第二步氧化反应中，讲义规定6% H₂O₂用量…",
+    "confidence": "high",
+    "answerText": "过量H₂O₂若未除尽，在第三步加热条件下会继续氧化草酸根生成CO₂和H₂O，消耗配体C₂O₄²⁻，降低配位效率；同时H₂O₂可氧化Fe³⁺体系中的草酸根配体，破坏配合物结构。残留H₂O₂还会与产物共存，光照时加速光解（H₂O₂产生羟基自由基），使产物光敏性异常增强、保存稳定性下降。故必须严格控制用量并彻底煮沸分解。（ch3-s3、ch6-s1）\n\n参考语料：\n· 《三草酸合铁(Ⅲ)酸钾合成方法的改进》\n· 《对“三草酸合铁(Ⅲ)酸钾的制备”的改进》\n· 《Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究》\n· 《Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors》\n· 《ed1c00776 si 001》\n· 《gonzález-seco-2004-potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of》"
+  },
+  {
+    "id": "Q203",
+    "question": "第一步倾滗法洗涤FeC₂O₄·2H₂O沉淀时，讲义要求用热水洗至BaCl₂检验无SO₄²⁻。已知Ksp(BaSO₄)=1.1×10⁻¹⁰，而BaC₂O₄的Ksp也较小。若洗涤时BaCl₂检验出现白色浑浊，能否确定一定是SO₄²⁻未洗净？若沉淀中残留草酸或C₂O₄²⁻，会对检验产生什么干扰？如何设计一个简单的对照实验加以区分？",
+    "matchedFAQ": "第一步倾滗法洗涤FeC₂O₄·2H₂O沉淀时…",
+    "confidence": "high",
+    "answerText": "不能确定。热水洗涤时若草酸未完全反应或过量，残留的C₂O₄²⁻遇BaCl₂也会生成BaC₂O₄白色沉淀，产生假阳性。区分方法：取少量洗涤液两份，一份加BaCl₂观察沉淀；另一份先加稀HNO₃酸化再滴加BaCl₂——BaSO₄不溶于酸，而BaC₂O₄溶于酸，沉淀消失即为草酸根干扰。此对照实验是洗涤终点判断的可靠验证。（ch4-s1、ch4-s2）\n\n参考语料：\n· 《大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征》\n· 《mohan-mejia-2020-environmentally-friendly-organic-chemistry-laboratory-experiments-for-the-undergraduate-curriculum-a》\n· 《bridging-chemistry-and-creativity-a-cyanotype-photography-toning-and-uv-shielding-for-first-year-undergraduate》\n· 《ayscough-et-al-1967-the-photochemical-oxidation-of-aqueous-iodide-solutions-an-experiment-demonstrating-the》\n· 《在基础化学实验教学过程中如...以“经典合成实验”教学为例》\n· 《在基础化学实验教学过程中如何培养学生“想”的意识——以“经典合成实验”教学为例》"
+  }
+]

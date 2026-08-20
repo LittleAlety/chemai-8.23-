@@ -28,8 +28,8 @@ function webFallbackHTML(q){ return ''; }
 
 /* ================= 常量（来源标注，逐字复制） ================= */
 // 来源 assistant.html:628-629
-const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+'};
-const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺]/g,c=>SUBMAP[c]||c).replace(/\s+/g,'');
+const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9','⁻':'-','⁺':'+','⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'};
+const norm=s=>String(s||'').toLowerCase().replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>SUBMAP[c]||c).replace(/\s+/g,'');
 
 // 来源 assistant.html:632-634（分类归一化，loadCorpus 对 subfield 做同样处理）
 const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理'};
@@ -176,13 +176,16 @@ let Corpus = {entries:[], total:0, subfields:[], loaded:false, uploaded:0};
 let _inited = false;
 
 /* ================= 函数（来源标注，逐字复制） ================= */
-// 来源 assistant.html:2058-2087
+// 来源 assistant.html:1022-1064
 function matchFAQ(q){
   var nq=norm(fixTypos(q));var best=null,bestScore=0;
   // IDF 惩罚表：高频通用词降权
   var IDF_PENALTY={'实验':0.4,'制备':0.5,'化学':0.5,'操作':0.6,'步骤':0.6,'原理':0.5,'方法':0.6,'分析':0.6,'测定':0.6,'研究':0.7,'反应':0.5,'产物':0.6,'合成':0.5,'配合物':0.6};
   // 泛词(操作/概念)不作为"显著词"——仅命中泛词不视为主题命中
   var GENERIC_KEYS={'实验':1,'制备':1,'化学':1,'操作':1,'步骤':1,'原理':1,'方法':1,'分析':1,'测定':1,'研究':1,'反应':1,'产物':1,'合成':1,'配合物':1,'氧化':1,'温度':1,'产率':1,'沉淀':1,'结晶':1,'过滤':1,'洗涤':1,'烘干':1,'干燥':1,'避光':1,'加热':1,'冷却':1,'溶解':1,'静置':1,'时间':1,'颜色':1,'现象':1,'安全':1,'影响':1,'原因':1,'过程':1,'条件':1,'用量':1,'浓度':1,'作用':1,'顺序':1,'终点':1,'检验':1,'验证':1,'水浴':1,'搅拌':1,'生成':1,'分解':1};
+  // 化学名词(共享实体词)不作为"显著词"——化学实体靠实体分,不靠显著词
+  var CHEM_NOUN={'草酸':1,'莫尔盐':1,'摩尔盐':1,'乙醇':1,'过氧化氢':1,'铁氰化钾':1,'硫酸亚铁':1,'草酸钾':1,'草酸根':1,'三草酸':1,'氢氧化铁':1,'硫酸':1,'氨水':1,'双氧水':1,'配离子':1,'酸根':1,'草酸氢钾':1,'草酸亚铁':1};
+  function isChemicalKey(k){ return /[a-z0-9]/.test(norm(k)) || !!CHEM_NOUN[k]; }
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
     var kh=0,longKey=0,keyScore=0,hits=[],distinctHits=0;
@@ -193,23 +196,24 @@ function matchFAQ(q){
         if(nk.length>=3) longKey++;
         var idf=IDF_PENALTY[k]||1.0;
         keyScore+=2*idf;
-        if(nk.length>=2 && !GENERIC_KEYS[k]) distinctHits++;
+        if(nk.length>=2 && !GENERIC_KEYS[k] && !isChemicalKey(k)) distinctHits++;
       }
     }
     var eh=0,entScore=0;
+    // 实体分：非化学/非泛词的概念实体记2分(强主题证据)；共享化学实体词记1分——避免过宽条目靠化学实体词海量累计赢题（与 assistant.html 同步）
     for(var ej=0;ej<(f.ents||[]).length;ej++){
       var en=f.ents[ej];
-      if(nq.indexOf(norm(en))>=0){eh++;entScore+=2;}
+      if(nq.indexOf(norm(en))>=0){eh++; if(!GENERIC_KEYS[en]&&!isChemicalKey(en)) entScore+=2; else entScore+=1;}
     }
     var fq=norm(fixTypos(f.q||''));   // 存储q也过fixTypos, 与nq(fixT'd用户题)对齐
     var exactQ=fq && fq===nq;
     var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||(distinctHits>=1)||exactQ;
     if(!trig) continue;
-    // 答案长度加权：仅在命中"具体长关键词"(≥3字)时加分（与 assistant.html 同步，避免长而离题条目压过专题条目）
+    // 答案长度加权：仅在命中"具体长关键词"(≥3字)时加分（与 assistant.html 同步）
     var lenBonus=(longKey>0)?Math.min(2,((f.answer||'').length+(f.detail||'').length)/800):0;
-    // 标题主题加成：≥3字命中关键词在标题→+5；仅2字→+3（与 assistant.html 同步）
+    // 标题主题加成：≥3字非化学显著词在标题→+5；其余→+3（与 assistant.html 同步）
     var titleTopical=0, nTitle=norm(f.title||'');
-    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ if(norm(hits[hi]).length>=3) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
+    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ if(norm(hits[hi]).length>=3 && !isChemicalKey(hits[hi])) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
     var score=keyScore+entScore+longKey*0.5+lenBonus+titleTopical+distinctHits*2;
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
@@ -218,7 +222,7 @@ function matchFAQ(q){
   return best;
 }
 
-// 来源 assistant.html:2090-2132
+// 来源 assistant.html:1067-1109
 function retrieval2_chemicalAnalogy(q){
   var nq=norm(q);
   var analogyHits=[];

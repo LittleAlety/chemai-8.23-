@@ -1,0 +1,16 @@
+{
+  "round": 4,
+  "n": 198,
+  "avgScore": 9.92,
+  "minScore": 9.5,
+  "lowCount": 0,
+  "gatePassed": false,
+  "faqBefore": 3046,
+  "faqAfter": 3046,
+  "opt": {
+    "opt1": 1,
+    "opt2": 1,
+    "opt3": 0
+  },
+  "generatedAt": "2026-08-16T18:01:13.478Z"
+}

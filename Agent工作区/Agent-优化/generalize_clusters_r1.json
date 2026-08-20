@@ -1,0 +1,2564 @@
+[
+  {
+    "name": "摩尔盐铁源选择",
+    "ids": [
+      "E3",
+      "E17",
+      "E30",
+      "E13",
+      "E28"
+    ],
+    "distinctivePhrase": "摩尔盐作为铁源",
+    "batch": 0
+  },
+  {
+    "name": "结晶与pH温度调控",
+    "ids": [
+      "E0",
+      "E6",
+      "E12",
+      "E27"
+    ],
+    "distinctivePhrase": "结晶条件控制",
+    "batch": 0
+  },
+  {
+    "name": "综合实验设计与技能",
+    "ids": [
+      "E2",
+      "E9",
+      "E21"
+    ],
+    "distinctivePhrase": "综合实验设计",
+    "batch": 0
+  },
+  {
+    "name": "反应机理与顺序",
+    "ids": [
+      "E8",
+      "E18",
+      "E19",
+      "E20"
+    ],
+    "distinctivePhrase": "反应原理与加料",
+    "batch": 0
+  },
+  {
+    "name": "光化学与光谱理论",
+    "ids": [
+      "E1",
+      "E7",
+      "E14",
+      "E16",
+      "E23",
+      "E24"
+    ],
+    "distinctivePhrase": "光化学光谱性质",
+    "batch": 0
+  },
+  {
+    "name": "蓝晒感光机理",
+    "ids": [
+      "E25",
+      "E26"
+    ],
+    "distinctivePhrase": "蓝晒感光应用",
+    "batch": 0
+  },
+  {
+    "name": "历史与科学意义",
+    "ids": [
+      "E5",
+      "E22"
+    ],
+    "distinctivePhrase": "历史与意义",
+    "batch": 0
+  },
+  {
+    "name": "草酸配位与稳定性",
+    "ids": [
+      "E4",
+      "E10",
+      "E29"
+    ],
+    "distinctivePhrase": "草酸配位与性质",
+    "batch": 0
+  },
+  {
+    "name": "安全与废物处理",
+    "ids": [
+      "E11"
+    ],
+    "distinctivePhrase": "安全与三废",
+    "batch": 0
+  },
+  {
+    "name": "操作细节与误差",
+    "ids": [
+      "E15",
+      "E31",
+      "E32",
+      "E33",
+      "E34",
+      "E37"
+    ],
+    "distinctivePhrase": "实验操作与误差",
+    "batch": 0
+  },
+  {
+    "name": "加料顺序与防错",
+    "ids": [
+      "E35",
+      "E36",
+      "E38",
+      "E39"
+    ],
+    "distinctivePhrase": "加料顺序与防误",
+    "batch": 0
+  },
+  {
+    "name": "微沸时间与热水洗涤",
+    "ids": [
+      "E40",
+      "E41",
+      "E77",
+      "E79"
+    ],
+    "distinctivePhrase": "微沸与热水",
+    "batch": 40
+  },
+  {
+    "name": "草酸加料与搅拌操作",
+    "ids": [
+      "E75",
+      "E76",
+      "E78"
+    ],
+    "distinctivePhrase": "草酸加料搅拌",
+    "batch": 40
+  },
+  {
+    "name": "沉淀质量异常与检验",
+    "ids": [
+      "E42",
+      "E43"
+    ],
+    "distinctivePhrase": "沉淀颜色检验",
+    "batch": 40
+  },
+  {
+    "name": "H₂O₂用量与煮沸除杂",
+    "ids": [
+      "E44",
+      "E45",
+      "E46"
+    ],
+    "distinctivePhrase": "H₂O₂用量煮沸",
+    "batch": 40
+  },
+  {
+    "name": "氧化滴加与配体添加",
+    "ids": [
+      "E47",
+      "E48",
+      "E49"
+    ],
+    "distinctivePhrase": "滴加配体添加",
+    "batch": 40
+  },
+  {
+    "name": "配位阶段温度与草酸",
+    "ids": [
+      "E50",
+      "E51",
+      "E52",
+      "E53",
+      "E54"
+    ],
+    "distinctivePhrase": "配位温度草酸",
+    "batch": 40
+  },
+  {
+    "name": "乙醇加入与搅拌",
+    "ids": [
+      "E55",
+      "E56"
+    ],
+    "distinctivePhrase": "乙醇加搅拌",
+    "batch": 40
+  },
+  {
+    "name": "结晶条件与晶种策略",
+    "ids": [
+      "E57",
+      "E58",
+      "E59",
+      "E60",
+      "E61"
+    ],
+    "distinctivePhrase": "结晶晶种条件",
+    "batch": 40
+  },
+  {
+    "name": "抽滤干燥与保存",
+    "ids": [
+      "E62",
+      "E63",
+      "E64",
+      "E65"
+    ],
+    "distinctivePhrase": "抽滤干燥保存",
+    "batch": 40
+  },
+  {
+    "name": "废液处理与安全",
+    "ids": [
+      "E66",
+      "E67",
+      "E68"
+    ],
+    "distinctivePhrase": "废液安全",
+    "batch": 40
+  },
+  {
+    "name": "产率与失败分析",
+    "ids": [
+      "E69",
+      "E70"
+    ],
+    "distinctivePhrase": "产率失败分析",
+    "batch": 40
+  },
+  {
+    "name": "原料准备与称量",
+    "ids": [
+      "E71",
+      "E72",
+      "E73",
+      "E74"
+    ],
+    "distinctivePhrase": "原料称量",
+    "batch": 40
+  },
+  {
+    "name": "反应物与加料操作",
+    "ids": [
+      "E80",
+      "E107",
+      "E108",
+      "E109"
+    ],
+    "distinctivePhrase": "加料顺序与用量",
+    "batch": 80
+  },
+  {
+    "name": "氧化阶段条件",
+    "ids": [
+      "E81",
+      "E82",
+      "E83"
+    ],
+    "distinctivePhrase": "氧化条件控制",
+    "batch": 80
+  },
+  {
+    "name": "配位阶段条件",
+    "ids": [
+      "E84",
+      "E85",
+      "E86",
+      "E87"
+    ],
+    "distinctivePhrase": "配位条件优化",
+    "batch": 80
+  },
+  {
+    "name": "结晶阶段操作",
+    "ids": [
+      "E88",
+      "E89",
+      "E90",
+      "E91",
+      "E92"
+    ],
+    "distinctivePhrase": "结晶调控",
+    "batch": 80
+  },
+  {
+    "name": "洗涤干燥后处理",
+    "ids": [
+      "E93",
+      "E95",
+      "E96",
+      "E110"
+    ],
+    "distinctivePhrase": "洗涤干燥",
+    "batch": 80
+  },
+  {
+    "name": "抽滤操作细节",
+    "ids": [
+      "E94",
+      "E105",
+      "E106"
+    ],
+    "distinctivePhrase": "抽滤操作",
+    "batch": 80
+  },
+  {
+    "name": "安全与储存",
+    "ids": [
+      "E97",
+      "E98",
+      "E99",
+      "E100",
+      "E101"
+    ],
+    "distinctivePhrase": "安全储存",
+    "batch": 80
+  },
+  {
+    "name": "产率计算与称量",
+    "ids": [
+      "E102",
+      "E103",
+      "E104",
+      "E111",
+      "E112",
+      "E113"
+    ],
+    "distinctivePhrase": "产率计算误差",
+    "batch": 80
+  },
+  {
+    "name": "氧化与缓冲机理",
+    "ids": [
+      "E114",
+      "E119"
+    ],
+    "distinctivePhrase": "氧化与缓冲",
+    "batch": 80
+  },
+  {
+    "name": "沉淀结晶机理",
+    "ids": [
+      "E115",
+      "E116",
+      "E117",
+      "E118"
+    ],
+    "distinctivePhrase": "沉淀机理",
+    "batch": 80
+  },
+  {
+    "name": "步骤顺序与溶剂效应",
+    "ids": [
+      "E121",
+      "E122",
+      "E124"
+    ],
+    "distinctivePhrase": "步骤顺序与溶剂",
+    "batch": 120
+  },
+  {
+    "name": "操作误差与失误后果",
+    "ids": [
+      "E120",
+      "E125",
+      "E145",
+      "E156"
+    ],
+    "distinctivePhrase": "操作误差与失误",
+    "batch": 120
+  },
+  {
+    "name": "温度与热量效应",
+    "ids": [
+      "E123",
+      "E135",
+      "E139",
+      "E154"
+    ],
+    "distinctivePhrase": "温度热量影响",
+    "batch": 120
+  },
+  {
+    "name": "氧化反应与H2O2",
+    "ids": [
+      "E134",
+      "E158"
+    ],
+    "distinctivePhrase": "H2O2氧化分解",
+    "batch": 120
+  },
+  {
+    "name": "沉淀洗涤与胶体",
+    "ids": [
+      "E126",
+      "E127",
+      "E142",
+      "E155"
+    ],
+    "distinctivePhrase": "沉淀洗涤胶体",
+    "batch": 120
+  },
+  {
+    "name": "杂质与污染效应",
+    "ids": [
+      "E128",
+      "E138",
+      "E146"
+    ],
+    "distinctivePhrase": "杂质污染影响",
+    "batch": 120
+  },
+  {
+    "name": "结晶成核动力学",
+    "ids": [
+      "E131",
+      "E132",
+      "E133",
+      "E143",
+      "E152",
+      "E157"
+    ],
+    "distinctivePhrase": "结晶成核过饱和",
+    "batch": 120
+  },
+  {
+    "name": "过滤操作与效率",
+    "ids": [
+      "E140",
+      "E141",
+      "E150",
+      "E153"
+    ],
+    "distinctivePhrase": "过滤抽滤效率",
+    "batch": 120
+  },
+  {
+    "name": "干燥过程与水分",
+    "ids": [
+      "E130",
+      "E144"
+    ],
+    "distinctivePhrase": "干燥与含水量",
+    "batch": 120
+  },
+  {
+    "name": "母液后处理与光解",
+    "ids": [
+      "E129",
+      "E136",
+      "E137",
+      "E149"
+    ],
+    "distinctivePhrase": "母液后处理光解",
+    "batch": 120
+  },
+  {
+    "name": "产物光谱与物相",
+    "ids": [
+      "E147",
+      "E151"
+    ],
+    "distinctivePhrase": "光谱物相表征",
+    "batch": 120
+  },
+  {
+    "name": "物理性质与产率",
+    "ids": [
+      "E148",
+      "E159"
+    ],
+    "distinctivePhrase": "堆积密度理论产率",
+    "batch": 120
+  },
+  {
+    "name": "温度计使用与误差",
+    "ids": [
+      "E170",
+      "E171",
+      "E172",
+      "E173",
+      "E174"
+    ],
+    "distinctivePhrase": "温度计选择与误差",
+    "batch": 160
+  },
+  {
+    "name": "器皿清洁与残留",
+    "ids": [
+      "E175",
+      "E176",
+      "E177"
+    ],
+    "distinctivePhrase": "烧杯洗涤与残留影响",
+    "batch": 160
+  },
+  {
+    "name": "量取与配制",
+    "ids": [
+      "E178",
+      "E179"
+    ],
+    "distinctivePhrase": "量筒移液管使用",
+    "batch": 160
+  },
+  {
+    "name": "氧化操作控制",
+    "ids": [
+      "E160",
+      "E168",
+      "E169",
+      "E182",
+      "E184",
+      "E190",
+      "E192"
+    ],
+    "distinctivePhrase": "氧化阶段操作要点",
+    "batch": 160
+  },
+  {
+    "name": "氧化终点观察",
+    "ids": [
+      "E180",
+      "E181",
+      "E185",
+      "E187"
+    ],
+    "distinctivePhrase": "氧化终点与观察",
+    "batch": 160
+  },
+  {
+    "name": "结晶条件调控",
+    "ids": [
+      "E161",
+      "E163",
+      "E166",
+      "E183",
+      "E195"
+    ],
+    "distinctivePhrase": "结晶过程与条件",
+    "batch": 160
+  },
+  {
+    "name": "干燥避光保存",
+    "ids": [
+      "E196",
+      "E197"
+    ],
+    "distinctivePhrase": "干燥与避光保存",
+    "batch": 160
+  },
+  {
+    "name": "产物杂质分析",
+    "ids": [
+      "E186",
+      "E189",
+      "E191"
+    ],
+    "distinctivePhrase": "产物异常与杂质影响",
+    "batch": 160
+  },
+  {
+    "name": "安全与废液",
+    "ids": [
+      "E162",
+      "E165",
+      "E198"
+    ],
+    "distinctivePhrase": "安全与废液处理",
+    "batch": 160
+  },
+  {
+    "name": "记录与称量",
+    "ids": [
+      "E188",
+      "E199"
+    ],
+    "distinctivePhrase": "记录规范与称量",
+    "batch": 160
+  },
+  {
+    "name": "时间与注意",
+    "ids": [
+      "E193",
+      "E194"
+    ],
+    "distinctivePhrase": "时间压力与注意分配",
+    "batch": 160
+  },
+  {
+    "name": "DSC热分析",
+    "ids": [
+      "E164"
+    ],
+    "distinctivePhrase": "DSC热分析",
+    "batch": 160
+  },
+  {
+    "name": "固体试剂用量偏差",
+    "ids": [
+      "E200",
+      "E203",
+      "E205",
+      "E208"
+    ],
+    "distinctivePhrase": "固体试剂称量偏差",
+    "batch": 200
+  },
+  {
+    "name": "水用量偏差",
+    "ids": [
+      "E202",
+      "E204",
+      "E207",
+      "E209"
+    ],
+    "distinctivePhrase": "各步水量偏差",
+    "batch": 200
+  },
+  {
+    "name": "非水液体试剂偏差",
+    "ids": [
+      "E201",
+      "E206",
+      "E210",
+      "E211"
+    ],
+    "distinctivePhrase": "酸/氧化剂/乙醇偏差",
+    "batch": 200
+  },
+  {
+    "name": "单变量配比失衡",
+    "ids": [
+      "E212",
+      "E213",
+      "E214",
+      "E215",
+      "E216",
+      "E217"
+    ],
+    "distinctivePhrase": "单变量配比失衡",
+    "batch": 200
+  },
+  {
+    "name": "多试剂同步调整",
+    "ids": [
+      "E218",
+      "E219",
+      "E220"
+    ],
+    "distinctivePhrase": "双试剂同步调整",
+    "batch": 200
+  },
+  {
+    "name": "多因素叠加效应",
+    "ids": [
+      "E221",
+      "E222",
+      "E223",
+      "E224"
+    ],
+    "distinctivePhrase": "叠加与全局偏差",
+    "batch": 200
+  },
+  {
+    "name": "磁性测量与校正",
+    "ids": [
+      "E225",
+      "E226",
+      "E227",
+      "E228"
+    ],
+    "distinctivePhrase": "磁化率测定修正",
+    "batch": 200
+  },
+  {
+    "name": "蓝晒与光量化学",
+    "ids": [
+      "E229",
+      "E230",
+      "E231",
+      "E232"
+    ],
+    "distinctivePhrase": "蓝晒量子产率",
+    "batch": 200
+  },
+  {
+    "name": "热分析TG/DSC",
+    "ids": [
+      "E233",
+      "E234",
+      "E235"
+    ],
+    "distinctivePhrase": "TG/DSC制样条件",
+    "batch": 200
+  },
+  {
+    "name": "红外光谱表征",
+    "ids": [
+      "E236",
+      "E237",
+      "E238",
+      "E239"
+    ],
+    "distinctivePhrase": "红外KBr制样与归属",
+    "batch": 200
+  },
+  {
+    "name": "UV-Vis光谱与跃迁",
+    "ids": [
+      "E240",
+      "E241",
+      "E242",
+      "E243",
+      "E259",
+      "E261",
+      "E262",
+      "E264",
+      "E266"
+    ],
+    "distinctivePhrase": "UV-Vis光谱与跃迁",
+    "batch": 240
+  },
+  {
+    "name": "KMnO₄滴定标定",
+    "ids": [
+      "E244",
+      "E245",
+      "E246",
+      "E247",
+      "E249"
+    ],
+    "distinctivePhrase": "KMnO₄滴定条件",
+    "batch": 240
+  },
+  {
+    "name": "化学计算与推导",
+    "ids": [
+      "E248",
+      "E250",
+      "E251",
+      "E268"
+    ],
+    "distinctivePhrase": "产率计算与推导",
+    "batch": 240
+  },
+  {
+    "name": "蓝晒实验",
+    "ids": [
+      "E252",
+      "E253",
+      "E254",
+      "E255"
+    ],
+    "distinctivePhrase": "蓝晒感光与显影",
+    "batch": 240
+  },
+  {
+    "name": "磁矩理论",
+    "ids": [
+      "E260",
+      "E263",
+      "E265"
+    ],
+    "distinctivePhrase": "配合物磁矩",
+    "batch": 240
+  },
+  {
+    "name": "应用拓展",
+    "ids": [
+      "E256",
+      "E257",
+      "E258",
+      "E269",
+      "E270"
+    ],
+    "distinctivePhrase": "热分解与环境应用",
+    "batch": 240
+  },
+  {
+    "name": "第一步沉淀控制",
+    "ids": [
+      "E271",
+      "E276",
+      "E277"
+    ],
+    "distinctivePhrase": "FeC₂O₄沉淀条件",
+    "batch": 240
+  },
+  {
+    "name": "H₂O₂氧化操作",
+    "ids": [
+      "E272",
+      "E273"
+    ],
+    "distinctivePhrase": "H₂O₂滴加与除过量",
+    "batch": 240
+  },
+  {
+    "name": "铁氰化钾检验",
+    "ids": [
+      "E267",
+      "E274",
+      "E279"
+    ],
+    "distinctivePhrase": "Fe²⁺检验方法",
+    "batch": 240
+  },
+  {
+    "name": "配位与结晶控制",
+    "ids": [
+      "E275",
+      "E278"
+    ],
+    "distinctivePhrase": "配位终点与结晶",
+    "batch": 240
+  },
+  {
+    "name": "加硫酸酸化作用",
+    "ids": [
+      "E289",
+      "E313",
+      "E319"
+    ],
+    "distinctivePhrase": "加H₂SO₄目的",
+    "batch": 280
+  },
+  {
+    "name": "省略加酸后果",
+    "ids": [
+      "E283",
+      "E296",
+      "E304",
+      "E308"
+    ],
+    "distinctivePhrase": "省略加酸影响",
+    "batch": 280
+  },
+  {
+    "name": "加酸异常情况",
+    "ids": [
+      "E294",
+      "E315"
+    ],
+    "distinctivePhrase": "替代酸或加酸过多",
+    "batch": 280
+  },
+  {
+    "name": "沉淀条件与草酸量",
+    "ids": [
+      "E281",
+      "E288",
+      "E290"
+    ],
+    "distinctivePhrase": "加热洗涤草酸用量",
+    "batch": 280
+  },
+  {
+    "name": "洗涤检验干扰",
+    "ids": [
+      "E292",
+      "E299",
+      "E306",
+      "E314"
+    ],
+    "distinctivePhrase": "BaCl₂检验干扰",
+    "batch": 280
+  },
+  {
+    "name": "H₂O₂滴加控制",
+    "ids": [
+      "E285",
+      "E291",
+      "E300",
+      "E309",
+      "E312"
+    ],
+    "distinctivePhrase": "滴加速率温度",
+    "batch": 280
+  },
+  {
+    "name": "H₂O₂用量影响",
+    "ids": [
+      "E282",
+      "E286",
+      "E295",
+      "E316"
+    ],
+    "distinctivePhrase": "用量不足过量",
+    "batch": 280
+  },
+  {
+    "name": "草酸滴加过量",
+    "ids": [
+      "E284",
+      "E297",
+      "E301",
+      "E317"
+    ],
+    "distinctivePhrase": "草酸过量滴加",
+    "batch": 280
+  },
+  {
+    "name": "草酸加热定量",
+    "ids": [
+      "E298",
+      "E310"
+    ],
+    "distinctivePhrase": "加热草酸定量",
+    "batch": 280
+  },
+  {
+    "name": "结晶暗处与乙醇",
+    "ids": [
+      "E293",
+      "E302",
+      "E305",
+      "E311",
+      "E318"
+    ],
+    "distinctivePhrase": "暗处乙醇结晶",
+    "batch": 280
+  },
+  {
+    "name": "烘干温度影响",
+    "ids": [
+      "E303",
+      "E307"
+    ],
+    "distinctivePhrase": "烘干温度超温",
+    "batch": 280
+  },
+  {
+    "name": "光解与检测",
+    "ids": [
+      "E280",
+      "E287"
+    ],
+    "distinctivePhrase": "光解杂质检测",
+    "batch": 280
+  },
+  {
+    "name": "氧化H₂O₂滴速控制",
+    "ids": [
+      "E320",
+      "E324",
+      "E334",
+      "E338",
+      "E345",
+      "E357"
+    ],
+    "distinctivePhrase": "H2O2滴速与快速加入",
+    "batch": 320
+  },
+  {
+    "name": "氧化温度与副反应",
+    "ids": [
+      "E329",
+      "E341",
+      "E349"
+    ],
+    "distinctivePhrase": "氧化温度及副反应",
+    "batch": 320
+  },
+  {
+    "name": "草酸过量影响",
+    "ids": [
+      "E321",
+      "E325",
+      "E336",
+      "E346",
+      "E359"
+    ],
+    "distinctivePhrase": "草酸过量影响",
+    "batch": 320
+  },
+  {
+    "name": "配位终点控制",
+    "ids": [
+      "E342",
+      "E351",
+      "E355"
+    ],
+    "distinctivePhrase": "配位终点判据",
+    "batch": 320
+  },
+  {
+    "name": "沉淀洗涤与检验",
+    "ids": [
+      "E327",
+      "E328",
+      "E333",
+      "E339",
+      "E343"
+    ],
+    "distinctivePhrase": "洗涤与硫酸根检验",
+    "batch": 320
+  },
+  {
+    "name": "烘干温度与结晶水",
+    "ids": [
+      "E322",
+      "E347",
+      "E353",
+      "E356"
+    ],
+    "distinctivePhrase": "烘干温度结晶水",
+    "batch": 320
+  },
+  {
+    "name": "避光与光解防护",
+    "ids": [
+      "E326",
+      "E331",
+      "E335",
+      "E344",
+      "E352",
+      "E358"
+    ],
+    "distinctivePhrase": "避光防光解",
+    "batch": 320
+  },
+  {
+    "name": "加酸与摩尔盐",
+    "ids": [
+      "E332",
+      "E340",
+      "E348",
+      "E354"
+    ],
+    "distinctivePhrase": "预酸化与摩尔盐",
+    "batch": 320
+  },
+  {
+    "name": "第一步沉淀预热",
+    "ids": [
+      "E323",
+      "E337"
+    ],
+    "distinctivePhrase": "沉淀预热微沸",
+    "batch": 320
+  },
+  {
+    "name": "氧化完全检验",
+    "ids": [
+      "E330",
+      "E350"
+    ],
+    "distinctivePhrase": "Fe²⁺检验与补加",
+    "batch": 320
+  },
+  {
+    "name": "H2O2滴加温度控制",
+    "ids": [
+      "E363",
+      "E369",
+      "E373",
+      "E388"
+    ],
+    "distinctivePhrase": "H2O2滴加温度",
+    "batch": 360
+  },
+  {
+    "name": "H2O2滴加速率控制",
+    "ids": [
+      "E365",
+      "E378",
+      "E384"
+    ],
+    "distinctivePhrase": "滴加速率控制",
+    "batch": 360
+  },
+  {
+    "name": "过量H2O2去除与煮沸",
+    "ids": [
+      "E361",
+      "E367",
+      "E382",
+      "E392",
+      "E396",
+      "E397"
+    ],
+    "distinctivePhrase": "过量H2O2去除",
+    "batch": 360
+  },
+  {
+    "name": "Fe²⁺检验方法",
+    "ids": [
+      "E360",
+      "E374",
+      "E385",
+      "E393"
+    ],
+    "distinctivePhrase": "铁氰化钾检验",
+    "batch": 360
+  },
+  {
+    "name": "配位草酸用量控制",
+    "ids": [
+      "E370",
+      "E376",
+      "E379",
+      "E386",
+      "E389",
+      "E394"
+    ],
+    "distinctivePhrase": "草酸配体用量",
+    "batch": 360
+  },
+  {
+    "name": "干燥温度控制",
+    "ids": [
+      "E366",
+      "E375"
+    ],
+    "distinctivePhrase": "烘干温度影响",
+    "batch": 360
+  },
+  {
+    "name": "结晶条件控制",
+    "ids": [
+      "E364",
+      "E371",
+      "E398"
+    ],
+    "distinctivePhrase": "乙醇与避光结晶",
+    "batch": 360
+  },
+  {
+    "name": "光解与光敏性",
+    "ids": [
+      "E372",
+      "E377",
+      "E380"
+    ],
+    "distinctivePhrase": "光解反应检验",
+    "batch": 360
+  },
+  {
+    "name": "第一步酸化原因",
+    "ids": [
+      "E381",
+      "E383",
+      "E390",
+      "E391",
+      "E399"
+    ],
+    "distinctivePhrase": "加硫酸酸化",
+    "batch": 360
+  },
+  {
+    "name": "沉淀温度与洗涤",
+    "ids": [
+      "E362",
+      "E368",
+      "E387",
+      "E395"
+    ],
+    "distinctivePhrase": "微沸与SO₄²⁻洗涤",
+    "batch": 360
+  },
+  {
+    "name": "H₂O₂滴加与煮沸操作",
+    "ids": [
+      "E401",
+      "E403",
+      "E416",
+      "E419",
+      "E426",
+      "E429",
+      "E433",
+      "E417"
+    ],
+    "distinctivePhrase": "H₂O₂滴加速率温度",
+    "batch": 400
+  },
+  {
+    "name": "H₂O₂用量偏差与过量处理",
+    "ids": [
+      "E404",
+      "E435",
+      "E420"
+    ],
+    "distinctivePhrase": "H₂O₂用量过量",
+    "batch": 400
+  },
+  {
+    "name": "光敏性与避光保存",
+    "ids": [
+      "E405",
+      "E409",
+      "E413",
+      "E423",
+      "E432",
+      "E437"
+    ],
+    "distinctivePhrase": "光解及避光",
+    "batch": 400
+  },
+  {
+    "name": "结晶条件与乙醇使用",
+    "ids": [
+      "E402",
+      "E408",
+      "E428",
+      "E434",
+      "E438"
+    ],
+    "distinctivePhrase": "乙醇结晶条件",
+    "batch": 400
+  },
+  {
+    "name": "草酸过量对产物影响",
+    "ids": [
+      "E407",
+      "E412",
+      "E418",
+      "E422"
+    ],
+    "distinctivePhrase": "草酸过量影响",
+    "batch": 400
+  },
+  {
+    "name": "草酸滴加方式与终点",
+    "ids": [
+      "E427",
+      "E430"
+    ],
+    "distinctivePhrase": "草酸滴加方式",
+    "batch": 400
+  },
+  {
+    "name": "第一步酸化与铁源",
+    "ids": [
+      "E406",
+      "E410",
+      "E415",
+      "E421",
+      "E424"
+    ],
+    "distinctivePhrase": "第一步酸化",
+    "batch": 400
+  },
+  {
+    "name": "氧化完全性检验与补救",
+    "ids": [
+      "E411",
+      "E425",
+      "E439"
+    ],
+    "distinctivePhrase": "Fe²⁺检验补救",
+    "batch": 400
+  },
+  {
+    "name": "产物绿色理论解释",
+    "ids": [
+      "E414",
+      "E436"
+    ],
+    "distinctivePhrase": "绿色来源理论",
+    "batch": 400
+  },
+  {
+    "name": "沉淀处理与洗涤误判",
+    "ids": [
+      "E400",
+      "E431"
+    ],
+    "distinctivePhrase": "沉淀洗涤",
+    "batch": 400
+  },
+  {
+    "name": "第一步加酸目的与影响",
+    "ids": [
+      "E452",
+      "E457",
+      "E462",
+      "E465",
+      "E470",
+      "E472",
+      "E478",
+      "E474"
+    ],
+    "distinctivePhrase": "加酸防Fe2+水解",
+    "batch": 440
+  },
+  {
+    "name": "第一步加热条件控制",
+    "ids": [
+      "E441",
+      "E471"
+    ],
+    "distinctivePhrase": "沸腾与微沸影响",
+    "batch": 440
+  },
+  {
+    "name": "第一步沉淀洗涤",
+    "ids": [
+      "E443",
+      "E455"
+    ],
+    "distinctivePhrase": "热水洗涤SO4检验",
+    "batch": 440
+  },
+  {
+    "name": "H2O2用量与过量影响",
+    "ids": [
+      "E450",
+      "E473",
+      "E479"
+    ],
+    "distinctivePhrase": "H2O2用量计算",
+    "batch": 440
+  },
+  {
+    "name": "H2O2滴加操作",
+    "ids": [
+      "E442",
+      "E453",
+      "E458"
+    ],
+    "distinctivePhrase": "慢滴与快速加入",
+    "batch": 440
+  },
+  {
+    "name": "Fe2+检验方法",
+    "ids": [
+      "E446",
+      "E459",
+      "E467"
+    ],
+    "distinctivePhrase": "铁氰化钾检验Fe2+",
+    "batch": 440
+  },
+  {
+    "name": "草酸滴加过量影响",
+    "ids": [
+      "E444",
+      "E447",
+      "E454",
+      "E460",
+      "E463",
+      "E466"
+    ],
+    "distinctivePhrase": "草酸过量配位",
+    "batch": 440
+  },
+  {
+    "name": "乙醇在结晶中作用",
+    "ids": [
+      "E440",
+      "E468"
+    ],
+    "distinctivePhrase": "乙醇盐析与用量",
+    "batch": 440
+  },
+  {
+    "name": "暗处结晶与光化学",
+    "ids": [
+      "E445",
+      "E448",
+      "E449",
+      "E451",
+      "E456",
+      "E461",
+      "E464",
+      "E469",
+      "E475",
+      "E476"
+    ],
+    "distinctivePhrase": "见光光解LMCT",
+    "batch": 440
+  },
+  {
+    "name": "烘干温度过高影响",
+    "ids": [
+      "E477"
+    ],
+    "distinctivePhrase": "烘干温度超标",
+    "batch": 440
+  },
+  {
+    "name": "光解机理与光照危害",
+    "ids": [
+      "E480",
+      "E484",
+      "E489",
+      "E494",
+      "E500"
+    ],
+    "distinctivePhrase": "光照导致光解",
+    "batch": 480
+  },
+  {
+    "name": "草酸亚铁沉淀洗涤",
+    "ids": [
+      "E487",
+      "E491",
+      "E508",
+      "E514",
+      "E516"
+    ],
+    "distinctivePhrase": "洗涤方式与后果",
+    "batch": 480
+  },
+  {
+    "name": "加热微沸时间温度影响",
+    "ids": [
+      "E495",
+      "E497",
+      "E501",
+      "E511"
+    ],
+    "distinctivePhrase": "微沸时间/温度",
+    "batch": 480
+  },
+  {
+    "name": "草酸用量与配位方式",
+    "ids": [
+      "E485",
+      "E493",
+      "E503",
+      "E507",
+      "E513",
+      "E519"
+    ],
+    "distinctivePhrase": "草酸浓度用量",
+    "batch": 480
+  },
+  {
+    "name": "H₂O₂氧化条件控制",
+    "ids": [
+      "E488",
+      "E496",
+      "E502",
+      "E512",
+      "E517"
+    ],
+    "distinctivePhrase": "H2O2氧化条件",
+    "batch": 480
+  },
+  {
+    "name": "Fe²⁺检验与除H₂O₂",
+    "ids": [
+      "E481",
+      "E492",
+      "E498"
+    ],
+    "distinctivePhrase": "Fe2+检验干扰",
+    "batch": 480
+  },
+  {
+    "name": "结晶条件与乙醇作用",
+    "ids": [
+      "E482",
+      "E483",
+      "E504",
+      "E509",
+      "E518"
+    ],
+    "distinctivePhrase": "乙醇/静置结晶",
+    "batch": 480
+  },
+  {
+    "name": "产物杂质检测与来源",
+    "ids": [
+      "E499",
+      "E505",
+      "E515"
+    ],
+    "distinctivePhrase": "杂质检测与来源",
+    "batch": 480
+  },
+  {
+    "name": "配位平衡与配体场",
+    "ids": [
+      "E490",
+      "E506",
+      "E510"
+    ],
+    "distinctivePhrase": "配位平衡/配体场",
+    "batch": 480
+  },
+  {
+    "name": "第一步加酸量影响",
+    "ids": [
+      "E486"
+    ],
+    "distinctivePhrase": "加H2SO4量",
+    "batch": 480
+  },
+  {
+    "name": "理论产量与产率计算",
+    "ids": [
+      "E521",
+      "E554"
+    ],
+    "distinctivePhrase": "理论产量与损失",
+    "batch": 520
+  },
+  {
+    "name": "微沸时间对沉淀的影响",
+    "ids": [
+      "E522",
+      "E536",
+      "E540",
+      "E549"
+    ],
+    "distinctivePhrase": "微沸时间影响",
+    "batch": 520
+  },
+  {
+    "name": "酸度控制与酸的选择",
+    "ids": [
+      "E520",
+      "E546",
+      "E542",
+      "E559"
+    ],
+    "distinctivePhrase": "酸度与酸选择",
+    "batch": 520
+  },
+  {
+    "name": "沉淀剂与溶解剂选择",
+    "ids": [
+      "E529",
+      "E530",
+      "E531",
+      "E538",
+      "E552"
+    ],
+    "distinctivePhrase": "草酸选择原因",
+    "batch": 520
+  },
+  {
+    "name": "试剂用量与过量分析",
+    "ids": [
+      "E524",
+      "E526",
+      "E537",
+      "E539",
+      "E541",
+      "E550",
+      "E558"
+    ],
+    "distinctivePhrase": "试剂过量与计量",
+    "batch": 520
+  },
+  {
+    "name": "氧化步骤条件控制",
+    "ids": [
+      "E532",
+      "E535",
+      "E548",
+      "E551"
+    ],
+    "distinctivePhrase": "氧化条件控制",
+    "batch": 520
+  },
+  {
+    "name": "配位反应与终点判断",
+    "ids": [
+      "E543",
+      "E547"
+    ],
+    "distinctivePhrase": "配位终点与陈化",
+    "batch": 520
+  },
+  {
+    "name": "结晶条件与晶核",
+    "ids": [
+      "E544",
+      "E557"
+    ],
+    "distinctivePhrase": "结晶条件控制",
+    "batch": 520
+  },
+  {
+    "name": "颜色与光谱性质",
+    "ids": [
+      "E523",
+      "E534",
+      "E555"
+    ],
+    "distinctivePhrase": "颜色与光谱",
+    "batch": 520
+  },
+  {
+    "name": "光解与检验",
+    "ids": [
+      "E527",
+      "E528",
+      "E533",
+      "E545",
+      "E553"
+    ],
+    "distinctivePhrase": "光解与Fe2+检验",
+    "batch": 520
+  },
+  {
+    "name": "废液处理",
+    "ids": [
+      "E525",
+      "E556"
+    ],
+    "distinctivePhrase": "废液处理",
+    "batch": 520
+  },
+  {
+    "name": "沉淀洗涤方式及影响",
+    "ids": [
+      "E561",
+      "E572",
+      "E579",
+      "E586",
+      "E591",
+      "E598"
+    ],
+    "distinctivePhrase": "沉淀洗涤方式与残留影响",
+    "batch": 560
+  },
+  {
+    "name": "第一步沉淀条件控制",
+    "ids": [
+      "E562",
+      "E565",
+      "E577",
+      "E587"
+    ],
+    "distinctivePhrase": "微沸时间与酸度影响",
+    "batch": 560
+  },
+  {
+    "name": "氧化机理与Fe(OH)₃生成",
+    "ids": [
+      "E560",
+      "E564",
+      "E570",
+      "E581",
+      "E585",
+      "E588"
+    ],
+    "distinctivePhrase": "氧化生成Fe(OH)₃原因",
+    "batch": 560
+  },
+  {
+    "name": "第二步试剂用量及后果",
+    "ids": [
+      "E563",
+      "E566",
+      "E578",
+      "E596",
+      "E599"
+    ],
+    "distinctivePhrase": "H₂O₂与草酸钾用量影响",
+    "batch": 560
+  },
+  {
+    "name": "配位反应条件与pH影响",
+    "ids": [
+      "E567",
+      "E574",
+      "E589",
+      "E592",
+      "E597"
+    ],
+    "distinctivePhrase": "草酸浓度与pH效应",
+    "batch": 560
+  },
+  {
+    "name": "铁氰化钾检验Fe²⁺",
+    "ids": [
+      "E573",
+      "E593"
+    ],
+    "distinctivePhrase": "铁氰化钾检验原理",
+    "batch": 560
+  },
+  {
+    "name": "其他检验与结构确认",
+    "ids": [
+      "E575",
+      "E580",
+      "E582",
+      "E590"
+    ],
+    "distinctivePhrase": "钡盐/高锰酸钾/钙盐鉴定",
+    "batch": 560
+  },
+  {
+    "name": "产物产率与纯度异常",
+    "ids": [
+      "E568",
+      "E569",
+      "E571"
+    ],
+    "distinctivePhrase": "产量计算与杂质影响",
+    "batch": 560
+  },
+  {
+    "name": "结晶条件与晶体质量",
+    "ids": [
+      "E576",
+      "E594"
+    ],
+    "distinctivePhrase": "乙醇浓度与晶核影响",
+    "batch": 560
+  },
+  {
+    "name": "光谱与光化学性质",
+    "ids": [
+      "E583",
+      "E595",
+      "E584"
+    ],
+    "distinctivePhrase": "翠绿色来源与光解评估",
+    "batch": 560
+  },
+  {
+    "name": "BaCl₂检验干扰",
+    "ids": [
+      "E600",
+      "E610"
+    ],
+    "distinctivePhrase": "BaCl₂检验干扰",
+    "batch": 600
+  },
+  {
+    "name": "产率计算与偏差",
+    "ids": [
+      "E601",
+      "E609",
+      "E618"
+    ],
+    "distinctivePhrase": "产率计算偏差",
+    "batch": 600
+  },
+  {
+    "name": "草酸钾用量影响",
+    "ids": [
+      "E604",
+      "E608",
+      "E620",
+      "E627"
+    ],
+    "distinctivePhrase": "草酸钾用量",
+    "batch": 600
+  },
+  {
+    "name": "酸度影响",
+    "ids": [
+      "E606",
+      "E628"
+    ],
+    "distinctivePhrase": "酸度过高影响",
+    "batch": 600
+  },
+  {
+    "name": "配位反应条件",
+    "ids": [
+      "E605",
+      "E616",
+      "E621",
+      "E623",
+      "E638"
+    ],
+    "distinctivePhrase": "配位条件控制",
+    "batch": 600
+  },
+  {
+    "name": "加热时间控制",
+    "ids": [
+      "E607",
+      "E622",
+      "E629",
+      "E633"
+    ],
+    "distinctivePhrase": "微沸时间偏差",
+    "batch": 600
+  },
+  {
+    "name": "结晶条件优化",
+    "ids": [
+      "E603",
+      "E617",
+      "E626",
+      "E634"
+    ],
+    "distinctivePhrase": "乙醇结晶条件",
+    "batch": 600
+  },
+  {
+    "name": "光敏性与检验干扰",
+    "ids": [
+      "E602",
+      "E612",
+      "E630",
+      "E635"
+    ],
+    "distinctivePhrase": "光解干扰检验",
+    "batch": 600
+  },
+  {
+    "name": "配位结构验证",
+    "ids": [
+      "E613",
+      "E625"
+    ],
+    "distinctivePhrase": "配位内界验证",
+    "batch": 600
+  },
+  {
+    "name": "洗涤与沉淀放置",
+    "ids": [
+      "E614",
+      "E619",
+      "E624",
+      "E637"
+    ],
+    "distinctivePhrase": "洗涤过度放置",
+    "batch": 600
+  },
+  {
+    "name": "氧化剂用量与作用",
+    "ids": [
+      "E611",
+      "E615",
+      "E632",
+      "E636"
+    ],
+    "distinctivePhrase": "H₂O₂用量影响",
+    "batch": 600
+  },
+  {
+    "name": "原料选择原理",
+    "ids": [
+      "E631",
+      "E639"
+    ],
+    "distinctivePhrase": "原料选用原因",
+    "batch": 600
+  },
+  {
+    "name": "微沸时间影响",
+    "ids": [
+      "E645",
+      "E646",
+      "E656",
+      "E659",
+      "E671"
+    ],
+    "distinctivePhrase": "微沸时长与方式",
+    "batch": 640
+  },
+  {
+    "name": "洗涤去除SO₄²⁻",
+    "ids": [
+      "E641",
+      "E654",
+      "E665",
+      "E648"
+    ],
+    "distinctivePhrase": "洗涤检验SO₄²⁻",
+    "batch": 640
+  },
+  {
+    "name": "Fe²⁺检验与离子确证",
+    "ids": [
+      "E649",
+      "E668",
+      "E678"
+    ],
+    "distinctivePhrase": "Fe²⁺检验与确证",
+    "batch": 640
+  },
+  {
+    "name": "结晶条件与晶核",
+    "ids": [
+      "E643",
+      "E655",
+      "E664",
+      "E667",
+      "E673"
+    ],
+    "distinctivePhrase": "结晶条件优化",
+    "batch": 640
+  },
+  {
+    "name": "H₂O₂氧化操作",
+    "ids": [
+      "E644",
+      "E650",
+      "E652",
+      "E677",
+      "E642"
+    ],
+    "distinctivePhrase": "H₂O₂用量与操作",
+    "batch": 640
+  },
+  {
+    "name": "配位平衡与草酸条件",
+    "ids": [
+      "E647",
+      "E663",
+      "E666",
+      "E676"
+    ],
+    "distinctivePhrase": "配位平衡与草酸",
+    "batch": 640
+  },
+  {
+    "name": "颜色与磁性理论",
+    "ids": [
+      "E653",
+      "E657",
+      "E672",
+      "E662"
+    ],
+    "distinctivePhrase": "颜色与磁性理论",
+    "batch": 640
+  },
+  {
+    "name": "光敏性与光化学",
+    "ids": [
+      "E640",
+      "E658",
+      "E670",
+      "E679"
+    ],
+    "distinctivePhrase": "光敏性与光化学",
+    "batch": 640
+  },
+  {
+    "name": "酸度与Fe²⁺稳定性",
+    "ids": [
+      "E651",
+      "E660",
+      "E675"
+    ],
+    "distinctivePhrase": "酸度与Fe²⁺稳定",
+    "batch": 640
+  },
+  {
+    "name": "热稳定性与干燥",
+    "ids": [
+      "E661",
+      "E674",
+      "E669"
+    ],
+    "distinctivePhrase": "热稳定性与干燥",
+    "batch": 640
+  },
+  {
+    "name": "第一步加硫酸抑制水解",
+    "ids": [
+      "E691",
+      "E699",
+      "E702",
+      "E707",
+      "E712",
+      "E716"
+    ],
+    "distinctivePhrase": "加H2SO4抑制水解",
+    "batch": 680
+  },
+  {
+    "name": "草酸亚铁沉淀条件",
+    "ids": [
+      "E682",
+      "E683",
+      "E686"
+    ],
+    "distinctivePhrase": "沉淀条件控制",
+    "batch": 680
+  },
+  {
+    "name": "氧化中H2O2温度与搅拌",
+    "ids": [
+      "E684",
+      "E692",
+      "E697",
+      "E700",
+      "E705",
+      "E708"
+    ],
+    "distinctivePhrase": "温度/搅拌控制",
+    "batch": 680
+  },
+  {
+    "name": "草酸钾的作用与用量",
+    "ids": [
+      "E698",
+      "E711",
+      "E715",
+      "E717"
+    ],
+    "distinctivePhrase": "草酸钾作用与用量",
+    "batch": 680
+  },
+  {
+    "name": "氧化反应机理与Fe³⁺分配",
+    "ids": [
+      "E687",
+      "E694"
+    ],
+    "distinctivePhrase": "Fe³⁺分配机理",
+    "batch": 680
+  },
+  {
+    "name": "草酸溶解与配位操作",
+    "ids": [
+      "E688",
+      "E695",
+      "E703",
+      "E709",
+      "E713"
+    ],
+    "distinctivePhrase": "草酸溶解配位",
+    "batch": 680
+  },
+  {
+    "name": "产物光敏性与颜色",
+    "ids": [
+      "E680",
+      "E689",
+      "E690",
+      "E704",
+      "E714"
+    ],
+    "distinctivePhrase": "光敏性与颜色",
+    "batch": 680
+  },
+  {
+    "name": "烘干温度与时间控制",
+    "ids": [
+      "E693",
+      "E701",
+      "E706",
+      "E719"
+    ],
+    "distinctivePhrase": "烘干条件控制",
+    "batch": 680
+  },
+  {
+    "name": "结晶过程与条件",
+    "ids": [
+      "E710",
+      "E718"
+    ],
+    "distinctivePhrase": "结晶过程条件",
+    "batch": 680
+  },
+  {
+    "name": "配合物结构确证",
+    "ids": [
+      "E696"
+    ],
+    "distinctivePhrase": "结构确证",
+    "batch": 680
+  },
+  {
+    "name": "废液处理与安全",
+    "ids": [
+      "E681"
+    ],
+    "distinctivePhrase": "废液处理",
+    "batch": 680
+  },
+  {
+    "name": "配体场与磁矩",
+    "ids": [
+      "E685"
+    ],
+    "distinctivePhrase": "配体场磁矩",
+    "batch": 680
+  },
+  {
+    "name": "光解速率检测设计",
+    "ids": [
+      "E720",
+      "E721",
+      "E733"
+    ],
+    "distinctivePhrase": "光解检测方法",
+    "batch": 720
+  },
+  {
+    "name": "光解影响与检出",
+    "ids": [
+      "E731",
+      "E745",
+      "E756",
+      "E759"
+    ],
+    "distinctivePhrase": "光解产物检验",
+    "batch": 720
+  },
+  {
+    "name": "干燥温度影响",
+    "ids": [
+      "E722",
+      "E730",
+      "E740",
+      "E743"
+    ],
+    "distinctivePhrase": "干燥温度控制",
+    "batch": 720
+  },
+  {
+    "name": "洗涤BaCl₂检验",
+    "ids": [
+      "E723",
+      "E751"
+    ],
+    "distinctivePhrase": "洗涤终点检验",
+    "batch": 720
+  },
+  {
+    "name": "废液处理方案",
+    "ids": [
+      "E724"
+    ],
+    "distinctivePhrase": "废液处理",
+    "batch": 720
+  },
+  {
+    "name": "第一步加酸影响",
+    "ids": [
+      "E725",
+      "E728",
+      "E732",
+      "E738",
+      "E741",
+      "E750",
+      "E753"
+    ],
+    "distinctivePhrase": "加酸作用与影响",
+    "batch": 720
+  },
+  {
+    "name": "草酸用量与温度",
+    "ids": [
+      "E736",
+      "E747",
+      "E757"
+    ],
+    "distinctivePhrase": "草酸用量与温度",
+    "batch": 720
+  },
+  {
+    "name": "氢氧化铁生成机理",
+    "ids": [
+      "E726",
+      "E735"
+    ],
+    "distinctivePhrase": "Fe(OH)₃成因",
+    "batch": 720
+  },
+  {
+    "name": "H₂O₂氧化与后处理",
+    "ids": [
+      "E727",
+      "E737",
+      "E744",
+      "E746",
+      "E748",
+      "E754"
+    ],
+    "distinctivePhrase": "H₂O₂使用条件",
+    "batch": 720
+  },
+  {
+    "name": "配位操作影响",
+    "ids": [
+      "E729",
+      "E734",
+      "E742",
+      "E752"
+    ],
+    "distinctivePhrase": "配位操作错误",
+    "batch": 720
+  },
+  {
+    "name": "结晶条件与操作",
+    "ids": [
+      "E739",
+      "E749",
+      "E755",
+      "E758"
+    ],
+    "distinctivePhrase": "结晶条件影响",
+    "batch": 720
+  },
+  {
+    "name": "第一步加酸抑制Fe²⁺水解及影响",
+    "ids": [
+      "E761",
+      "E766",
+      "E769",
+      "E773",
+      "E777",
+      "E782",
+      "E791",
+      "E795"
+    ],
+    "distinctivePhrase": "加酸抑制水解",
+    "batch": 760
+  },
+  {
+    "name": "H₂O₂氧化操作与副反应影响",
+    "ids": [
+      "E760",
+      "E767",
+      "E770",
+      "E778",
+      "E781",
+      "E783",
+      "E790",
+      "E796"
+    ],
+    "distinctivePhrase": "H₂O₂氧化步骤",
+    "batch": 760
+  },
+  {
+    "name": "烘干温度超标影响",
+    "ids": [
+      "E762",
+      "E775",
+      "E780"
+    ],
+    "distinctivePhrase": "烘干温度超标",
+    "batch": 760
+  },
+  {
+    "name": "结晶条件变化对产物影响",
+    "ids": [
+      "E772",
+      "E774",
+      "E779",
+      "E789",
+      "E793",
+      "E799"
+    ],
+    "distinctivePhrase": "结晶条件变化",
+    "batch": 760
+  },
+  {
+    "name": "配离子内外界验证",
+    "ids": [
+      "E763",
+      "E771",
+      "E786"
+    ],
+    "distinctivePhrase": "内外界验证",
+    "batch": 760
+  },
+  {
+    "name": "第三步配位操作条件影响",
+    "ids": [
+      "E768",
+      "E787",
+      "E792",
+      "E797"
+    ],
+    "distinctivePhrase": "第三步配位条件",
+    "batch": 760
+  },
+  {
+    "name": "光解副反应与Fe²⁺检验",
+    "ids": [
+      "E764",
+      "E784",
+      "E794",
+      "E798"
+    ],
+    "distinctivePhrase": "光解与Fe²⁺检验",
+    "batch": 760
+  },
+  {
+    "name": "废液安全环保处理",
+    "ids": [
+      "E765"
+    ],
+    "distinctivePhrase": "废液处理",
+    "batch": 760
+  },
+  {
+    "name": "热重法定量验证水合物",
+    "ids": [
+      "E785"
+    ],
+    "distinctivePhrase": "热重法验证",
+    "batch": 760
+  },
+  {
+    "name": "FeC₂O₄制备加热顺序影响",
+    "ids": [
+      "E788"
+    ],
+    "distinctivePhrase": "加热顺序影响",
+    "batch": 760
+  },
+  {
+    "name": "BaCl₂检验SO₄²⁻干扰排除",
+    "ids": [
+      "E776"
+    ],
+    "distinctivePhrase": "SO₄²⁻检验干扰",
+    "batch": 760
+  },
+  {
+    "name": "氧化步骤H₂O₂操作",
+    "ids": [
+      "E800",
+      "E802",
+      "E818",
+      "E823",
+      "E837"
+    ],
+    "distinctivePhrase": "H₂O₂浓度与滴加方式",
+    "batch": 800
+  },
+  {
+    "name": "第一步硫酸用量作用",
+    "ids": [
+      "E808",
+      "E809",
+      "E820",
+      "E824",
+      "E829"
+    ],
+    "distinctivePhrase": "第一步加酸的影响",
+    "batch": 800
+  },
+  {
+    "name": "沉淀生成与洗涤检验",
+    "ids": [
+      "E816",
+      "E821",
+      "E822"
+    ],
+    "distinctivePhrase": "沉淀操作与洗涤检验",
+    "batch": 800
+  },
+  {
+    "name": "草酸滴加方式与浓度",
+    "ids": [
+      "E804",
+      "E819",
+      "E828",
+      "E830",
+      "E838"
+    ],
+    "distinctivePhrase": "草酸浓度与滴加速度",
+    "batch": 800
+  },
+  {
+    "name": "配位溶解酸度与平衡",
+    "ids": [
+      "E801",
+      "E810",
+      "E815",
+      "E827",
+      "E835",
+      "E839"
+    ],
+    "distinctivePhrase": "酸度与配位溶解平衡",
+    "batch": 800
+  },
+  {
+    "name": "配体选择与用量",
+    "ids": [
+      "E826",
+      "E831"
+    ],
+    "distinctivePhrase": "草酸钾选择与用量",
+    "batch": 800
+  },
+  {
+    "name": "光照光解影响",
+    "ids": [
+      "E803",
+      "E807",
+      "E817",
+      "E836"
+    ],
+    "distinctivePhrase": "光照对产物光解影响",
+    "batch": 800
+  },
+  {
+    "name": "结晶分离与干燥条件",
+    "ids": [
+      "E806",
+      "E825",
+      "E832",
+      "E834"
+    ],
+    "distinctivePhrase": "结晶静置与干燥温度",
+    "batch": 800
+  },
+  {
+    "name": "产物表征与杂质分析",
+    "ids": [
+      "E811",
+      "E812",
+      "E813",
+      "E833"
+    ],
+    "distinctivePhrase": "产物组成与杂质检验",
+    "batch": 800
+  },
+  {
+    "name": "配位理论性质",
+    "ids": [
+      "E805",
+      "E814"
+    ],
+    "distinctivePhrase": "颜色与电极电位理论",
+    "batch": 800
+  },
+  {
+    "name": "第一步加酸防Fe2+水解",
+    "ids": [
+      "E842",
+      "E853",
+      "E865",
+      "E869",
+      "E875"
+    ],
+    "distinctivePhrase": "加酸对沉淀纯度",
+    "batch": 840
+  },
+  {
+    "name": "第一步沉淀条件与洗涤",
+    "ids": [
+      "E847",
+      "E872",
+      "E879",
+      "E859"
+    ],
+    "distinctivePhrase": "草酸用量与洗涤",
+    "batch": 840
+  },
+  {
+    "name": "第二步氧化条件控制",
+    "ids": [
+      "E845",
+      "E854",
+      "E862",
+      "E866",
+      "E878"
+    ],
+    "distinctivePhrase": "氧化操作条件",
+    "batch": 840
+  },
+  {
+    "name": "氧化完全性检验方法",
+    "ids": [
+      "E849",
+      "E870"
+    ],
+    "distinctivePhrase": "氧化检验方法",
+    "batch": 840
+  },
+  {
+    "name": "第三步草酸过量影响",
+    "ids": [
+      "E848",
+      "E850",
+      "E856",
+      "E858"
+    ],
+    "distinctivePhrase": "草酸过量影响",
+    "batch": 840
+  },
+  {
+    "name": "配位剂选择与平衡",
+    "ids": [
+      "E843",
+      "E855",
+      "E863",
+      "E871",
+      "E873"
+    ],
+    "distinctivePhrase": "配位原理与酸度",
+    "batch": 840
+  },
+  {
+    "name": "结晶条件与晶体质量",
+    "ids": [
+      "E841",
+      "E851",
+      "E861"
+    ],
+    "distinctivePhrase": "结晶时间与降温",
+    "batch": 840
+  },
+  {
+    "name": "干燥温度与结晶水",
+    "ids": [
+      "E857",
+      "E864",
+      "E877"
+    ],
+    "distinctivePhrase": "干燥温度控制",
+    "batch": 840
+  },
+  {
+    "name": "光解影响与防护",
+    "ids": [
+      "E840",
+      "E844",
+      "E868",
+      "E876",
+      "E860"
+    ],
+    "distinctivePhrase": "光解影响与检测",
+    "batch": 840
+  },
+  {
+    "name": "产量分析与废液处理",
+    "ids": [
+      "E846",
+      "E852",
+      "E867",
+      "E874"
+    ],
+    "distinctivePhrase": "产量纯度废液",
+    "batch": 840
+  },
+  {
+    "name": "第一步沉淀条件与洗涤",
+    "ids": [
+      "E880",
+      "E885",
+      "E886"
+    ],
+    "distinctivePhrase": "第一步沉淀洗涤",
+    "batch": 880
+  },
+  {
+    "name": "氧化与配位条件",
+    "ids": [
+      "E881",
+      "E882",
+      "E883",
+      "E884"
+    ],
+    "distinctivePhrase": "氧化及草酸用量",
+    "batch": 880
+  },
+  {
+    "name": "光解避光影响",
+    "ids": [
+      "E887",
+      "E888",
+      "E889"
+    ],
+    "distinctivePhrase": "光解避光问题",
+    "batch": 880
+  }
+]

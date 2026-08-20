@@ -2724,7 +2724,11 @@ async function handleQA(q){
     var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops};
     html=buildHybridAnswerHTML(q, hybridCtx);
     if(chems.length) html+=msdsCardHTML(chems);
-    if(ops.length){ html+=localVideoCardHTML(ops,q); html+=videoCardHTML(ops,q); }
+    /* v61.1 视频默认折叠，点击展开（避免每条回答内嵌播放器占版面） */
+    if(ops.length){
+      html+='<div class="ans-sec"><details class="ref-fold"><summary>🎥 相关视频（操作：'+esc(ops.slice(0,4).join('、'))+'）<span class="rf-arrow">▸</span></summary>'
+        +'<div class="ref-fold-body">'+localVideoCardHTML(ops,q)+videoCardHTML(ops,q)+'</div></details></div>';
+    }
     if(llmNote) html=llmNote+html;
     html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
   }

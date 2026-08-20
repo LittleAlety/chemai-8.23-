@@ -804,7 +804,7 @@ const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
 async function loadCorpus(){
   let base=null;
   try{
-    const res=await fetch('data/corpus.json',{cache:'no-store'});
+    const res=await fetch('data/corpus.json',{cache:'default'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     base=await res.json();
     Corpus.loaded=true;
@@ -1365,8 +1365,9 @@ function pipelineHTML(clusterMode){
 async function animatePipe(bub,stepCount){
   const steps=bub.querySelectorAll('.pipe-step');
   for(let i=0;i<stepCount&&i<steps.length;i++){
+    if(steps[i].classList.contains('done')) continue; // 已完成步骤不再重复动画，避免每次阶段重复等待
     steps[i].classList.add('active');
-    await delay(360+Math.random()*320);
+    await delay(240+Math.random()*260);
     steps[i].classList.remove('active');steps[i].classList.add('done');
     steps[i].querySelector('.pipe-dot').textContent='✓';
     scrollChat(qaChat);
@@ -1729,7 +1730,7 @@ function answerHeaderHTML(conf, source, refCount, usedLLM){
 var IMG_INDEX=[];
 async function loadImages(){
   try{
-    const res=await fetch('data/images.json',{cache:'no-store'});
+    const res=await fetch('data/images.json',{cache:'default'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     const data=await res.json();
     if(Array.isArray(data)) IMG_INDEX=data;
@@ -2746,8 +2747,9 @@ async function handleQA(q){
   var checkResult=selfCheck(q, html, {chems:chems, ops:ops, analogies:analogies, conf:conf});
   var warnHTML=selfCheckHTML(checkResult);
   if(warnHTML){ html+=warnHTML; }
-  /* v60 讲义权威进主路径（normal+cluster 均执行；渲染层增强，无头路径已 stub） */
-  html += await manualAuthorityHTML(q, kws, html);
+  /* v60 讲义权威进主路径（normal+cluster 均执行；渲染层增强，无头路径已 stub）。
+     异步弹入：不阻塞答案渲染，manual.json 就绪后补插「讲义原文/核对」块，保持正常模式"快速本地答案"。 */
+  var maPromise = manualAuthorityHTML(q, kws, html);
   if(UPLOADED_FILE && detectReportIntent(rawQ)){ html=reportAnalysisHTML(UPLOADED_FILE.text)+html; }
   if(UPLOADED_FILE){ html+=fileContextHTML(q); }
 
@@ -2785,6 +2787,8 @@ async function handleQA(q){
   }
   var ans=document.createElement('div');ans.className='ans';ans.innerHTML=html;bub.appendChild(ans);
   scrollChat(qaChat);
+  /* v60 讲义权威异步弹入：答案先渲染，讲义原文/核对块就绪后补插 */
+  maPromise.then(function(ma){ if(ma&&ans&&ans.isConnected) ans.insertAdjacentHTML('beforeend', ma); }).catch(function(){});
   if(webTrigger){
     try{ await runWebResearch(rawQ, bub, {kws:kws, chems:chems, enChems:enChems}); }
     catch(e){ setAgentState(bub,'web','warn'); }
@@ -3252,6 +3256,12 @@ try{var qp=new URLSearchParams(location.search).get('mode'); if(qp==='assess'||q
 initQuestionBank();
 initReportRubric();
 switchTab(mode,false);
+/* v60 空闲预热 manual.json：讲义权威异步弹入时无需等首次 fetch */
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    try{ if(window.AgentCluster&&AgentCluster.skills&&AgentCluster.skills.manual) AgentCluster.skills.manual('',[]).catch(function(){}); }catch(e){}
+  },1500);
+});
 /* 暴露给内联 onclick 的全局函数（IIFE 内定义的函数需挂到 window 才能被 HTML onclick 调用） */
 window.analyzeUploadedReport=analyzeUploadedReport;
 window.clearUploadedFile=clearUploadedFile;

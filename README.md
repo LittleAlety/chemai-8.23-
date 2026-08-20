@@ -1,4 +1,4 @@
-﻿# ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
+# ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
 [![Version](https://img.shields.io/badge/version-v60-blue)](https://github.com/LittleAlety/chemai-8.6-)

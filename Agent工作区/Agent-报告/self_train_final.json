@@ -1,5 +1,5 @@
 {
-  "n": 200,
+  "n": 30,
   "rounds": [
     {
       "round": 1,
@@ -8,87 +8,16 @@
       "minScore": 0,
       "lowCount": 197,
       "gatePassed": false,
-      "faqBefore": 2848,
-      "faqAfter": 3045,
+      "faqBefore": 3070,
+      "faqAfter": 3100,
       "opt": {
         "opt1": 197,
         "opt2": 28,
         "opt3": 0
       },
-      "generatedAt": "2026-08-16T17:50:10.018Z"
-    },
-    {
-      "round": 2,
-      "n": 199,
-      "avgScore": 9.9,
-      "minScore": 8.3,
-      "lowCount": 2,
-      "gatePassed": false,
-      "faqBefore": 3045,
-      "faqAfter": 3046,
-      "opt": {
-        "opt1": 2,
-        "opt2": 2,
-        "opt3": 0
-      },
-      "generatedAt": "2026-08-16T17:57:39.516Z"
-    },
-    {
-      "round": 3,
-      "n": 198,
-      "avgScore": 9.92,
-      "minScore": 9.5,
-      "lowCount": 0,
-      "gatePassed": false,
-      "faqBefore": 3046,
-      "faqAfter": 3046,
-      "opt": {
-        "opt1": 1,
-        "opt2": 1,
-        "opt3": 0
-      },
-      "generatedAt": "2026-08-16T17:59:14.352Z"
-    },
-    {
-      "round": 4,
-      "n": 198,
-      "avgScore": 9.92,
-      "minScore": 9.5,
-      "lowCount": 0,
-      "gatePassed": false,
-      "faqBefore": 3046,
-      "faqAfter": 3046,
-      "opt": {
-        "opt1": 1,
-        "opt2": 1,
-        "opt3": 0
-      },
-      "generatedAt": "2026-08-16T18:01:13.478Z"
-    },
-    {
-      "round": 5,
-      "n": 199,
-      "avgScore": 9.92,
-      "minScore": 9.5,
-      "lowCount": 0,
-      "gatePassed": true,
-      "faqBefore": 3046,
-      "faqAfter": null,
-      "opt": null,
-      "generatedAt": "2026-08-16T18:02:44.668Z"
+      "generatedAt": "2026-08-20T17:30:41.618Z"
     }
   ],
   "model": "deepseek-v4-flash",
-  "generatedAt": "2026-08-16T18:04:59.773Z",
-  "finalize": {
-    "method": "validateQuestionSet(重复id自动修复)+precision_finalize(检索兜底,补1条覆盖)"
-  },
-  "finalRescore": {
-    "n": 199,
-    "avgScore": 9.97,
-    "minScore": 9.5,
-    "passCount": 199,
-    "gatePassed": true,
-    "evidenceFile": "Agent工作区/Agent-C-答案评分/final_r7_rescore.json"
-  }
+  "generatedAt": "2026-08-20T17:30:46.044Z"
 }

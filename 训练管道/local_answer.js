@@ -183,11 +183,11 @@ function matchFAQ(q){
   var IDF_PENALTY={'实验':0.4,'制备':0.5,'化学':0.5,'操作':0.6,'步骤':0.6,'原理':0.5,'方法':0.6,'分析':0.6,'测定':0.6,'研究':0.7,'反应':0.5,'产物':0.6,'合成':0.5,'配合物':0.6};
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
-    var kh=0,longKey=0,keyScore=0;
+    var kh=0,longKey=0,keyScore=0,hits=[];
     for(var j=0;j<f.keys.length;j++){
       var k=f.keys[j];var nk=norm(k);
       if(nq.indexOf(nk)>=0){
-        kh++;
+        kh++;hits.push(k);
         if(nk.length>=3) longKey++;
         var idf=IDF_PENALTY[k]||1.0;
         keyScore+=2*idf;
@@ -202,9 +202,12 @@ function matchFAQ(q){
     var exactQ=fq && fq===nq;
     var trig=(kh>=2)||(kh>=1&&eh>=1)||(eh>=2)||exactQ;
     if(!trig) continue;
-    // 答案长度加权：长答案更可能是核心问题（上限+2）
-    var lenBonus=Math.min(2,((f.answer||'').length+(f.detail||'').length)/800);
-    var score=keyScore+entScore+longKey*0.5+lenBonus;
+    // 答案长度加权：仅在命中"具体长关键词"(≥3字)时加分（与 assistant.html 同步，避免长而离题条目压过专题条目）
+    var lenBonus=(longKey>0)?Math.min(2,((f.answer||'').length+(f.detail||'').length)/800):0;
+    // 标题主题加成：命中关键词出现在条目标题 → 该条目更可能是本题主题（与 assistant.html 同步）
+    var titleBonus=0, nTitle=norm(f.title||'');
+    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ titleBonus=2; break; } }
+    var score=keyScore+entScore+longKey*0.5+lenBonus+titleBonus;
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
     if(score>bestScore){bestScore=score;best=f;}

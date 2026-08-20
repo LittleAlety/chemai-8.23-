@@ -185,7 +185,7 @@ function buildContext(q) {
       parts.push('【KB补充 · ' + m.second.topic + '】\n' + (m.second.answer || ''));
     }
   }
-  const CHEATSHEET = '【实验关键参数】莫尔盐M=392.14g/mol | 产物M=491.25g/mol | 标准5.0g莫尔盐→理论6.26g | 氧化40℃ | 结晶水失重110℃ | 草酸pKa1=1.25 pKa2=4.27 | H2O2 φ°=+1.77V | Fe3+/Fe2+ φ°=+0.771V | [Fe(C2O4)3]3- lgKf≈20.2 | 高自旋d5 μeff≈5.92BM';
+  const CHEATSHEET = '【实验关键参数】莫尔盐M=392.14g/mol | 产物M=491.25g/mol | 标准5.0g莫尔盐→理论6.26g | 氧化40℃ | 结晶水失重100℃ | 草酸pKa1=1.25 pKa2=4.27 | H2O2 φ°=+1.77V | Fe3+/Fe2+ φ°=+0.771V | [Fe(C2O4)3]3- lgKf≈20.2 | 高自旋d5 μeff≈5.92BM';
   parts.push(CHEATSHEET);
   return parts.join('\n\n---\n\n');
 }

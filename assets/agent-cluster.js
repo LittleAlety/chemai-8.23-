@@ -40,11 +40,11 @@
     autoWebOnLow: true,        // 低置信度自动触发网页研究员
     supplementMedium: false,   // 中置信度追加网页补充（默认关，降噪）
     sources: { site: true, pubchem: true, wiki: true, bing: true }, // bing 走 CORS 代理，实验性
-    skills: {                  // 集群专业技能（计算官/手册官/安全官/图谱官/视频官/测评官/报告官/预习官）
+    skills: {                  // 集群专业技能（计算官/手册官/安全官/图谱官/视频官/测评官/报告官/预习官/异常排查官/现象官）
       enabled: true,           // 技能总开关
       auto: true,              // 自动模式：按问题类型自动派发
       calc: true, manual: true, safety: true, kg: true, video: true,
-      assess: true, report: true, prep: true
+      assess: true, report: true, prep: true, trouble: true, phenomena: true
     }
   };
   var _cfg = null;
@@ -345,20 +345,45 @@
 
   /* ---------- 网页事实 vs 讲义权威 冲突校验 ---------- */
   var AUTHORITY_RULES = [
-    { re: /30\s*%\s*(h2o2|双氧水|过氧化氢)/i, warn: '网页资料提及 30% H₂O₂；本实验（武汉大学讲义）使用 6% H₂O₂（30% 需稀释），以讲义为准。' },
-    { re: /氧化[^\n。;；]{0,12}(60|80|100)\s*[℃度]/, warn: '网页资料称氧化阶段温度 60/80/100℃；讲义规定 40℃ 水浴（过高会加速 H₂O₂ 分解），以讲义为准。' },
-    { re: /(烘干|干燥|烘箱)[^\n。;；]{0,14}11[0-5]\s*[℃度]|11[0-5]\s*[℃度][^\n。;；]{0,12}(烘干|干燥|烘箱)/, warn: '网页资料称烘干温度 110℃；本实验产物烘干为 50℃（110℃ 会使产物脱水变质），以讲义为准。' },
-    { re: /失(去|掉)?\s*结晶水[^\n。;；]{0,14}11[0-5]\s*[℃度]/, warn: '网页资料称失结晶水温度 110/113℃；讲义规定约 100℃（70-100℃，理论失重 11.0%），以讲义为准。' },
-    { re: /(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)[^\n。;；]{0,12}10\s*ml|10\s*ml[^\n。;；]{0,12}(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)/i, warn: '网页资料称 H₂O₂ 用量约 10mL；本实验（讲义）以 5.0g 莫尔盐为基准约 8mL，以讲义为准。' },
-    { re: /配位数\s*[为是约]?\s*[4四]|(^|[^非不])[4四]\s*配位|四配位/, warn: '网页资料称配位数为 4；草酸根为双齿配体，[Fe(C₂O₄)₃]³⁻ 配位数为 6，以讲义为准。' },
-    { re: /产率.{0,10}(以|用).{0,4}草酸|基准.{0,6}草酸/, warn: '网页资料称产率以草酸为基准；本实验以莫尔盐为基准（Fe 元素守恒），以讲义为准。' },
-    { re: /fe\s*\(?\s*oh\s*\)?\s*2.{0,20}(7\.5|7\.6|7\.8|≈\s*7|约\s*7)/i, warn: '网页资料称 Fe(OH)₂ 沉淀 pH≈7.5；实际约 6.3（Ksp≈8×10⁻¹⁶），以讲义为准。' },
-    { re: /氯(离子|化物)[^\n。;；]{0,8}杂质|杂质[^\n。;；]{0,8}氯(离子|化物)/, warn: '网页资料提到氯离子杂质；本体系铁源为莫尔盐，可溶性杂质为 K₂SO₄/(NH₄)₂SO₄/K₂C₂O₄，无氯离子，以讲义为准。' }
+    { re: /30\s*%\s*(h2o2|双氧水|过氧化氢)/i, warn: '文中提到 30% H₂O₂；本实验（武汉大学讲义）使用 6% H₂O₂（30% 需稀释），以讲义为准。' },
+    { re: /氧化(温度|阶段|步骤|反应|时|在|过程|体系|水浴)[^\n。;；]{0,8}(60|80|100)\s*[℃度]/, warn: '文中称氧化阶段温度 60/80/100℃；讲义规定 40℃ 水浴（过高会加速 H₂O₂ 分解），以讲义为准。' },
+    { re: /(烘干|干燥|烘箱)[^\n。;；]{0,14}11[0-5]\s*[℃度]|11[0-5]\s*[℃度][^\n。;；]{0,12}(烘干|干燥|烘箱)/, warn: '文中称烘干温度 110℃；本实验产物烘干为 50℃（110℃ 会使产物脱水变质），以讲义为准。' },
+    { re: /失(去|掉)?\s*(\d+\s*分子\s*)?结晶水[^\n。;；]{0,14}11[0-5]\s*[℃度]|11[0-5]\s*[℃度][^\n。;；]{0,12}失(去|掉)?\s*(\d+\s*分子\s*)?结晶水/, warn: '文中称失结晶水温度 110/113℃；讲义规定约 100℃（理论失重 11.0%），以讲义为准。' },
+    { re: /(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)(?:[^\n。;；乙醇水]){0,6}10\s*ml(?!水)|10\s*ml(?!水|乙醇)(?:[^\n。;；乙醇水]){0,6}(h(?:₂|2)o(?:₂|2)|双氧水|过氧化氢)/i, warn: '文中称 H₂O₂ 用量约 10mL；本实验（讲义）以 5.0g 莫尔盐为基准约 8mL，以讲义为准。' },
+    { re: /(?:(配位数\s*[为是约]?\s*[4四])|([4四]\s*配位|四配位))(?=[\s\S]{0,25}(铁|Fe|三草酸合铁|\[Fe))|(铁|Fe|三草酸合铁|\[Fe)[\s\S]{0,25}(配位数\s*[为是约]?\s*[4四]|[4四]\s*配位|四配位)/, warn: '文中称配位数为 4；草酸根为双齿配体，[Fe(C₂O₄)₃]³⁻ 配位数为 6，以讲义为准。' },
+    { re: /产率.{0,8}(以|用).{0,4}草酸|产率.{0,12}基准.{0,4}草酸/, warn: '文中称产率以草酸为基准；本实验以莫尔盐为基准（Fe 元素守恒），以讲义为准。' },
+    { re: /fe\s*\(?\s*oh\s*\)?\s*2.{0,20}(7\.5|7\.6|7\.8|≈\s*7|约\s*7)/i, warn: '文中称 Fe(OH)₂ 沉淀 pH≈7.5；实际约 6.3（Ksp≈8×10⁻¹⁶），以讲义为准。' },
+    { re: /氯(离子|化物)[^\n。;；]{0,8}杂质|杂质[^\n。;；]{0,8}氯(离子|化物)/, warn: '文中提到氯离子杂质；本体系铁源为莫尔盐，可溶性杂质为 K₂SO₄/(NH₄)₂SO₄/K₂C₂O₄，无氯离子，以讲义为准。' },
+    // v60 增补（讲义权威进主路径）：方向性锚定 + 前后断言防误伤摩尔质量/正确数值
+    { re: /草酸钾[^\n。;；]{0,10}15\s*ml|15\s*ml[^\n。;；]{0,10}草酸钾|K₂C₂O₄[^\n。;；]{0,10}15\s*ml|K_2C_2O_4[^\n。;；]{0,14}15\s*ml/i, warn: '文中称草酸钾溶解用 15mL 水；讲义规定 K₂C₂O₄·H₂O 3.5 g + 10 mL 蒸馏水微热溶解，以讲义为准。' },
+    { re: /(?<![\d.])[2456](?![\d.])\s*g[^\n。;；]{0,4}草酸钾/, warn: '文中称 K₂C₂O₄ 用量偏误；讲义规定 3.5 g K₂C₂O₄·H₂O（1.7 g 草酸另算），以讲义为准。' },
+    { re: /(?<![\d.])[4678](?![\d.])\s*g[^\n。;；]{0,6}莫尔盐/, warn: '文中称莫尔盐用量偏误；讲义规定称取 5.0 g 莫尔盐（产物理论 6.26 g），以讲义为准。' }
   ];
   function webCrossCheck(q, snippets) {
     var text = String(snippets || '');
     var conflicts = [];
     AUTHORITY_RULES.forEach(function (rule) { if (rule.re.test(text)) conflicts.push(rule.warn); });
+    return conflicts;
+  }
+  /* 扫描任意文本（本地答案/网页摘要）中的讲义冲突数值。
+   * 逐条规则扫描全部命中，命中处上下文含纠正/否定语境（严禁/以讲义为准/应为/错误…）则跳过，
+   * 避免对「110℃烘干会失水变质」「乙醇增至20mL（讲义规定10mL）」等反说误报。 */
+  function scanFacts(text) {
+    var t = String(text || '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+      .replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+    var GUARD = /严禁|以讲义为准|应为|应以|实为|错误|不是|而非|≠|勿|仅适用|仅适用于|不要|切勿|误|若|如果|假如|假设|超过|高于|以上|多余|额外|倍|偏高|偏低|不足|减至|增至|加倍|理论|文献|报道|教材|有些|另一|正确|错选|误选|优化|改进|正交|非|不同|旧版|过量|过长|过久|缩短|稀释|需稀释|不能|不可|无法|不应|二草酸合铜|铜盐|铜配合物|铜\(II\)|Cu\(|50mL的/;
+    var conflicts = [], m;
+    AUTHORITY_RULES.forEach(function (rule) {
+      var re = new RegExp(rule.re.source, (rule.re.flags || '').replace('g', '') + 'g');
+      var hit = false;
+      while ((m = re.exec(t)) !== null) {
+        var ctx = t.slice(Math.max(0, m.index - 30), m.index + (m[0] || '').length + 30);
+        if (!GUARD.test(ctx)) { hit = true; break; }
+      }
+      if (hit) conflicts.push(rule.warn);
+    });
     return conflicts;
   }
 
@@ -395,6 +420,8 @@
       + chk('skills.assess', s.assess, '📝 测评官')
       + chk('skills.report', s.report, '📄 报告官')
       + chk('skills.prep', s.prep, '📚 预习官')
+      + chk('skills.trouble', s.trouble, '🔍 异常排查官')
+      + chk('skills.phenomena', s.phenomena, '🧭 现象官')
       + '<div class="ast-muted">自动模式关：技能不自动派发，由每条回答的「🧰 运行技能」按钮手动触发；总开关关：仅核心流水线 + 网页研究。</div>';
   }
   function getStateHTML() {
@@ -661,6 +688,63 @@
     };
   }
 
+  /* ---------- 技能：🔍 异常排查官（实验异常诊断，贴合本实验讲义） ---------- */
+  var TROUBLE_FACTS = [
+    { symptom: '产率明显偏低（<50%）', causes: ['转移/过滤时沉淀或晶体洒落残留', '洗涤用水或乙醇过多，产物溶解流失', 'H₂O₂ 量不足或受热分解，氧化不完全（残留黄色 FeC₂O₄）', '乙醇量不足或冷却太快，结晶不完全', '见光导致产物光解流失'], remedy: '全程注意转移与洗涤"少量多次"；复核 8mL 6% H₂O₂ 缓慢滴加并 K₃Fe(CN)₆ 检验至无蓝色；母液浓缩至约 25-30mL 再加 10mL 乙醇暗处静置过夜', basis: '讲义 5.0g 莫尔盐→理论 6.26g；步骤与用量见 manual.json ch4' },
+    { symptom: '产率偏高甚至 >100%', causes: ['产物未干燥至恒重，含母液水分/残留乙醇', '杂质（K₂C₂O₄、草酸、硫酸盐）与产物共结晶'], remedy: '50℃ 烘 20min 至恒重（两次称量差 ≤0.002g）；抽滤后用少量乙醇洗涤 2 次除可溶杂质', basis: '讲义：烘箱烘 20min；产物 100℃ 失结晶水，禁止高温' },
+    { symptom: '产品颜色发黄 / 黄褐色', causes: ['见光发生 LMCT 光化学还原（Fe³⁺→Fe²⁺，生成黄色草酸亚铁）', '氧化不完全残留黄色 FeC₂O₄'], remedy: '制备与保存全程避光（棕色瓶、暗处静置）；复核氧化终点（K₃Fe(CN)₆ 检验 Fe²⁺ 至无蓝色）', basis: '讲义：吸收光能生成黄色草酸亚铁；晶体为翠绿色' },
+    { symptom: '加草酸后溶液不透明 / 浑浊不绿', causes: ['Fe²⁺ 未氧化完全，Fe(OH)₃ 溶解不彻底', '草酸不足或酸度不当，配位不完全', '趁热过滤不及时，Fe(OH)₃ 包裹 FeC₂O₄'], remedy: '若检验仍有 Fe²⁺：40℃ 补加少量 H₂O₂ 再检验；或趁热过滤后继续加 0.5mol/L 草酸至透明翠绿', basis: '讲义注意事项：Fe(Ⅱ) 一定要氧化完全，否则加再多草酸也不透明' },
+    { symptom: '晶体不析出 / 析出慢', causes: ['母液过稀（未浓缩至约 25-30mL）', '乙醇不足，过饱和度不够', '未暗处静置或温度过低'], remedy: '微沸蒸发浓缩控制总体积；加足 10mL 乙醇；盖好暗处放置数小时至过夜', basis: '讲义：控制总体积利于结晶；加 10mL 乙醇暗处数小时' },
+    { symptom: '晶体细小 / 粉末状', causes: ['乙醇一次猛加，过饱和度骤增爆发成核', '搅拌过久或冷却过快'], remedy: '乙醇缓慢沿壁加入并搅拌；静置避免频繁移动；必要时浓缩母液后再结晶', basis: '讲义：母液 25-30mL 加 10mL 乙醇' },
+    { symptom: '烘干后产物变质 / 失重异常', causes: ['烘干温度 ≥100℃，产物失去结晶水（理论失重 11%）'], remedy: '严格 50℃ 烘 20min，严禁超过 50℃；用外用温度计校验烘箱', basis: '讲义：100℃ 失结晶水、230℃ 分解；烘干须 <100℃' },
+    { symptom: '滴加 H₂O₂ 时暴沸飞溅', causes: ['滴加速度过快或水浴温度过高（>60℃ 加速分解）', '未搅拌使局部浓度过高'], remedy: '40℃ 水浴每秒 1-2 滴缓滴、边加边搅拌；气泡剧烈时暂停滴加', basis: '讲义：40℃ 热水浴慢慢滴加 8mL 6% H₂O₂' }
+  ];
+  function troubleSkill(q) {
+    var t = String(q || '');
+    var intent = /产率.{0,4}(低|偏|高|超)|偏低|过低|太低|偏高|过高|太高|发黄|发棕|黄褐|黄绿色|不透明|浑浊|不绿|不析出|析出.{0,2}(慢|难|缓)|晶体.{0,4}(小|细|少)|细小粉末|粉末|失败|补救|补救措施|异常|变质|变色|暴沸|飞溅|没结晶/.test(t);
+    if (!intent) return { matched: false, items: [] };
+    var items = TROUBLE_FACTS.filter(function (f) {
+      var s = f.symptom;
+      if (/产率/.test(t) && /产率/.test(s)) return true;
+      if (/黄/.test(t) && /黄/.test(s)) return true;
+      if (/不透明|浑浊|不绿/.test(t) && /不透明/.test(s)) return true;
+      if (/不析出|析出|结晶/.test(t) && /不析出/.test(s)) return true;
+      if (/细小|粉末/.test(t) && /细小/.test(s)) return true;
+      if (/烘干|变质|失水/.test(t) && /烘干/.test(s)) return true;
+      if (/暴沸|飞溅/.test(t) && /暴沸/.test(s)) return true;
+      return f.symptom.indexOf(t.slice(0, 3)) >= 0;
+    }).slice(0, 2);
+    if (!items.length) items = TROUBLE_FACTS.slice(0, 2);
+    return { matched: true, title: '实验异常诊断', items: items };
+  }
+
+  /* ---------- 技能：🧭 现象官（各步骤预期现象与原理对应） ---------- */
+  var PHENOM_FACTS = [
+    { step: '第一步·沉淀', target: ['草酸', '黄色', '沉淀'], phenomenon: '加入草酸后生成淡黄色 FeC₂O₄·2H₂O 沉淀', principle: '复分解/非氧化还原：Fe²⁺ + C₂O₄²⁻ → FeC₂O₄↓（黄色）', verify: '倾滗分离，热水洗涤至 BaCl₂ 检验无 SO₄²⁻' },
+    { step: '第二步·氧化', target: ['过氧化氢', '氧化', '黄褐'], phenomenon: '滴加 H₂O₂ 后悬浊液由黄转黄褐色（Fe³⁺ + Fe(OH)₃ 生成）', principle: '2Fe²⁺ + H₂O₂ + 2H⁺ → 2Fe³⁺ + 2H₂O（40℃ 水浴）', verify: 'K₃Fe(CN)₆ 检验 Fe²⁺ 至无蓝色（无蓝色 = 氧化完全）' },
+    { step: '第二步·配位', target: ['草酸', '透明', '翠绿', '绿'], phenomenon: '加 0.5mol/L 草酸并保持微沸，红褐色 Fe(OH)₃ 溶解，溶液变透明翠绿色', principle: 'Fe³⁺ + 3C₂O₄²⁻ ⇌ [Fe(C₂O₄)₃]³⁻（草酸兼作酸化与配位）', verify: '溶液完全透明、无悬浮物 = 配位终点' },
+    { step: '第三步·结晶', target: ['乙醇', '晶体', '翠绿'], phenomenon: '加乙醇后暗处静置数小时，析出翠绿色 K₃[Fe(C₂O₄)₃]·3H₂O 晶体（棉线上尤佳）', principle: '溶剂替换：产物水溶醇不溶，加乙醇降低溶剂极性析出', verify: '减压过滤、乙醇洗涤、50℃ 烘干 20min' },
+    { step: '性质·光化学', target: ['见光', '变黄', '蓝晒'], phenomenon: '晶体/溶液见光由翠绿变黄绿（光还原）；蓝晒字迹强光照射浅黄→深蓝', principle: 'LMCT：吸收光能 Fe³⁺→Fe²⁺（黄色草酸亚铁）；Fe²⁺ + K₃Fe(CN)₆ → 蓝色 KFe[Fe(CN)₆]', verify: '曝光区变深蓝，未曝光保持原色（蓝底白线）' },
+    { step: '性质·内外界', target: ['KSCN', '血红色', '血红'], phenomenon: '产品溶液加 KSCN 不显血红色（或极浅）', principle: 'Fe³⁺ 牢固配位在内界，游离 Fe³⁺ 浓度极低，不足以生成 [Fe(SCN)]²⁺', verify: '先加酸破坏配离子后再加 KSCN 才显血红色' },
+    { step: '性质·沉淀反应', target: ['NaOH', '沉淀', '碱'], phenomenon: '产品溶液加 NaOH 可能有 Fe(OH)₃ 红棕色沉淀；K₃Fe(CN)₆ 加 NaOH 无现象', principle: '碱破坏配位平衡使 Fe³⁺ 水解沉淀；[Fe(CN)₆]³⁻ 极稳定不解离', verify: '对比 [Fe(CN)₆]³⁻ 与 [Fe(C₂O₄)₃]³⁻ 稳定性' },
+    { step: '性质·酸影响', target: ['酸', 'HAc', 'H₂SO₄', '变淡', '变浅'], phenomenon: '加 HAc/H₂SO₄ 溶液颜色变淡黄（配位平衡左移）', principle: '酸使 C₂O₄²⁻ 质子化、配离子解离，游离 Fe³⁺ 增多', verify: '与 KSCN 检验联用观察颜色变化' }
+  ];
+  function phenomenaSkill(q) {
+    var t = String(q || '');
+    var intent = /现象|看到什么|颜色|变色|变(色|绿|黄|蓝|白|淡)|观察|翠绿|黄褐|血红|血红色|蓝晒|显色|不透明|透明/.test(t);
+    if (!intent) return { matched: false, items: [] };
+    var items = PHENOM_FACTS.filter(function (f) {
+      for (var i = 0; i < f.target.length; i++) { if (t.indexOf(f.target[i]) >= 0) return true; }
+      return false;
+    }).slice(0, 2);
+    if (!items.length && intent) {
+      // 颜色/变色类通用问题 → 优先结晶（翠绿晶体）与光化学（见光变黄）现象
+      if (/颜色|变色|变黄/.test(t)) items = PHENOM_FACTS.filter(function (f) { return /结晶|光化学/.test(f.step); }).slice(0, 2);
+      else items = PHENOM_FACTS.slice(0, 2);
+    }
+    return { matched: items.length > 0, items: items };
+  }
+
   /* ---------- 导出 ---------- */
   if (!window.AgentCluster) {
     window.AgentCluster = {
@@ -668,6 +752,7 @@
       setConfig: setConfig,
       research: research,
       webCrossCheck: function (q, s) { return webCrossCheck(q, s); },
+      scanFacts: function (text) { return scanFacts(text); },
       getStateHTML: getStateHTML,
       isBroken: isBlocked,
       esc: esc,
@@ -680,6 +765,8 @@
         assess: assessSkill,
         report: reportSkill,
         prep: prepSkill,
+        trouble: troubleSkill,
+        phenomena: phenomenaSkill,
         molarMass: molarMassOf
       }
     };

@@ -25,6 +25,9 @@ const CORPUS_JSON = path.join(__dirname, '..', 'data', 'corpus.json');
 function escHTML(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 // 来源 assistant.html:2475（网络补充段落在无头评分中不使用）
 function webFallbackHTML(q){ return ''; }
+// 来源 assistant.html:v60 manualAuthorityHTML —— 浏览器渲染层增强（讲义原文/讲义核对块）。
+// 本地无头回答路径不调用（answer() 只复刻检索/类比/置信度/组合 4 段），stub 为 no-op 保证零漂移。
+function manualAuthorityHTML(){ return ''; }
 
 /* ================= 常量（来源标注，逐字复制） ================= */
 // 来源 assistant.html:628-629

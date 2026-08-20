@@ -1,8 +1,8 @@
-# ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
+﻿# ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
-[![Version](https://img.shields.io/badge/version-v56-blue)](https://github.com/LittleAlety/chemai-8.6-)
-[![FAQ](https://img.shields.io/badge/FAQ-3047条-green)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v60-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![FAQ](https://img.shields.io/badge/FAQ-3070条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-365篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
 [![Videos](https://img.shields.io/badge/本地视频-4部-teal)](https://github.com/LittleAlety/chemai-8.6-)
@@ -18,7 +18,7 @@
 | 页面 | 文件 | 说明 |
 |------|------|------|
 | **首页入口** | `index.html` | React SPA 首页，身份选择（非化学专业 / 化学专业 / 教师），含 LLM 配置面板；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频 |
-| **AI 助手** | `assistant.html` | **正常/集群双模式**；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3047 条 FAQ**（运行时 `data/faq_runtime.js`）；**5-agent 集群工作台**（集群模式：检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器** |
+| **AI 助手** | `assistant.html` | **正常/集群双模式**；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3070 条 FAQ**（运行时 `data/faq_runtime.js`）；**5-agent 集群工作台**（集群模式：检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器** |
 | **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染 |
 | **知识图谱** | `knowledge.html` | 97 节点 / 136 关联的交互式配位化学知识网络 |
 | **语料库** | `corpus.html` | **365 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链 |
@@ -36,7 +36,7 @@
 
 ## 深度问题自学习迭代体系
 
-通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **3047 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环**（详见 [版本历史](#版本历史)）。
+通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **3070 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环**（详见 [版本历史](#版本历史)）。
 
 ### 迭代历程
 
@@ -104,7 +104,7 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 ```
 chemai-8.6-/
 ├── index.html                 # 首页入口（React SPA，含视频资源库页）
-├── assistant.html             # AI 助手（3047 FAQ + 智能体集群 + 双模式 + 本地视频 + 测评）
+├── assistant.html             # AI 助手（3070 FAQ + 智能体集群 + 双模式 + 本地视频 + 测评）
 ├── main.html                  # 实验手册（11 章）
 ├── knowledge.html             # 知识图谱（97 节点 / 136 关联）
 ├── corpus.html                # 语料库（365 篇）
@@ -113,7 +113,7 @@ chemai-8.6-/
 │   ├── agent-cluster.js      # 网页研究员模块（v56，自包含 IIFE：站内/PubChem/维基/Bing 多源+熔断+冲突校验）
 │   └── ...                   # CSS / JS（含 SPA 编译产物，已注入本地视频）
 ├── data/
-│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，3047 条，window.FAQ=）
+│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，3070 条，window.FAQ=）
 │   ├── manual.json           # 实验手册（11 章 / 42 节）
 │   ├── corpus.json           # 语料库清单（365 篇）
 │   ├── images.json           # 实验图片索引（76 张）
@@ -179,6 +179,8 @@ npx serve .                     # Node.js
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v60** | 08-20 | **服务实验深化：讲义权威进主路径 + 实验服务技能 + 数据一致性修复**。① 讲义权威进主路径：normal+cluster 双模式给答案附「📖 讲义原文（权威最高）」引用块 + 「⚠ 讲义核对」冲突修正（`manualAuthorityHTML` 渲染层增强，无头评分零漂移）；`agent-cluster.js` 新增 `scanFacts`（AUTHORITY_RULES 9→15 条，方向性锚定 + 前后断言防误伤），回归守门 `scripts/verify-lecture-facts.js`。② 新增 🔍 异常排查官（产率低/产品发黄/不透明/不析出/细小/变质/暴沸 8 类诊断）+ 🧭 现象官（各步骤预期现象与原理 8 条）。③ 数据一致性修复：`assessment_kp` H₂O₂ 10→8mL、K₂C₂O₄ 15→10mL；`manual.json` 失水 110→100℃（含 q2-2 答案键 C→B、试剂表 10→8mL、第二步总量 10→8mL）；`faq_runtime` 15 条 110℃/15mL/10mL 修正；`questions_bank` c1-033/c1-031 修正；训练管道 cheatsheet 结晶水失重 110→100℃（run_pipeline/eval_llm/score_answers/gen_round3）——全部以讲义 PDF（100℃ 失水 / 8mL 6% H₂O₂ / 10mL K₂C₂O₄ 水）为基准 |
+| **v57–v59** | 08-18/20 | （补录）v57 网页研究员双途径 + questions_bank 12 条目修正（烘干 50℃/失水 100℃/H₂O₂ 8mL）；v58 集群技能库（计算/手册/安全/图谱/视频/测评/报告/预习官，技能可选）；v59 题库驱动 FAQ 优化（+10 条）+ matchFAQ 精准度根治（distinctive 触发/标题主题分级/泛词 ents 清理） |
 | **v56** | 08-18 | **AI 助手智能体集群化 + 双模式**：新增 `assets/agent-cluster.js` 网页研究员（站内题库/KG→PubChem→维基百科→Bing·实验性 多源降级，6s 超时/重试/源熔断/讲义权威冲突校验）；assistant 升级为 **5-agent 集群工作台**（🕵️检索官/🧠推理官/🌐网页研究员/✍️编辑官/✅质检官 + 可折叠集群日志）；新增「💬 正常 / 🧠 集群」双模式切换（输入框内，默认正常，localStorage 记忆）；集群模式按置信度自适应联网 + 重新生成/加强网页检索/LLM重答/集群状态按钮；站内/网络资料分级权威标签 |
 | **v55** | 08-17 | **精致化重构**：修复 main/corpus/prep `--em` 缺失致统计数字不可见、语料概览 5 卡错位；7 色彩虹标题收敛为**品牌三色流光**（翠绿-青-蓝）；卡片优雅抬升 + 顶部发丝高光；浅色主题精致化（柔和分层阴影/细边框/半透明导航栏） |
 | **v54** | 08-16/17 | **令牌覆盖式样式（被否决，未上线）**：强制全局字体/禁用 hover/移动端钳位等加法覆盖致整体观感变差，用户否决；仅留存 5 页 dark/light/mobile 截图 |

@@ -311,6 +311,17 @@ a:hover{color:var(--em)}
 .file-card .fc-x:hover{border-color:var(--red);color:var(--red)}
 .panel-title{font-size:15px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:8px}
 .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:14px}
+.calc-wrap{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.calc-cats{display:flex;gap:8px;flex-wrap:wrap}
+.calc-cat-btn{padding:7px 14px;border-radius:999px;border:1px solid var(--bd2);background:var(--card);color:var(--t2);font-size:12.5px;cursor:pointer;transition:all .2s}
+.calc-cat-btn:hover{border-color:var(--em);color:var(--t1)}
+.calc-cat-btn.active{background:linear-gradient(135deg,rgba(16,185,129,.18),rgba(6,182,212,.14));border-color:var(--em);color:var(--em);font-weight:700}
+.calc-mode-btns{display:flex;gap:8px;flex-wrap:wrap}
+.calc-mode-btn{padding:7px 13px;border-radius:10px;border:1px solid var(--bd2);background:var(--card);color:var(--t2);font-size:12.5px;cursor:pointer;transition:all .2s}
+.calc-mode-btn:hover{border-color:var(--em);color:var(--t1)}
+.calc-mode-btn.active{background:var(--em);border-color:var(--em);color:#04201c;font-weight:700}
+.calc-mode-btn .cm-i{font-size:14px;margin-right:4px}
+.calc-hint{font-size:11.5px;color:var(--t3);margin-top:4px;line-height:1.6}
 .calc-card{background:var(--card);border:1px solid var(--bd2);border-radius:14px;padding:16px}
 .calc-card .cc-t{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .calc-card .cc-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -480,44 +491,14 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
           <div class="panel-title">🧮 化学计算工具</div>
           <span class="muted">输入数值即可计算，专为本实验常用计算设计</span>
         </div>
-        <div class="calc-grid">
+        <div class="calc-wrap">
+          <div class="calc-cats" id="calcCats"></div>
+          <div class="calc-mode-btns" id="calcModeBtns"></div>
           <div class="calc-card">
-            <div class="cc-t">⚖️ 摩尔质量</div>
-            <input class="cc-in" id="calcMol" placeholder="化学式，如 K3[Fe(C2O4)3]·3H2O 或 FeSO4·7H2O">
-            <button class="btn primary sm" onclick="calcMolar()">计算</button>
-            <div class="cc-out" id="calcMolOut"></div>
-          </div>
-          <div class="calc-card">
-            <div class="cc-t">🎯 产率计算</div>
-            <div class="cc-row"><span>实际产量(g)</span><input class="cc-in" id="calcYieldAct" placeholder="如 5.2"></div>
-            <div class="cc-row"><span>理论产量(g)</span><input class="cc-in" id="calcYieldTheo" placeholder="如 6.26"></div>
-            <button class="btn primary sm" onclick="calcYield()">计算</button>
-            <div class="cc-out" id="calcYieldOut"></div>
-          </div>
-          <div class="calc-card">
-            <div class="cc-t">🧪 溶液配制</div>
-            <div class="cc-row"><span>浓度(mol/L)</span><input class="cc-in" id="calcSolC" placeholder="如 0.5"></div>
-            <div class="cc-row"><span>体积(L)</span><input class="cc-in" id="calcSolV" placeholder="如 0.1"></div>
-            <div class="cc-row"><span>摩尔质量(g/mol)</span><input class="cc-in" id="calcSolM" placeholder="如 126.07"></div>
-            <button class="btn primary sm" onclick="calcSol()">计算</button>
-            <div class="cc-out" id="calcSolOut"></div>
-          </div>
-          <div class="calc-card">
-            <div class="cc-t">🪨 Ksp 沉淀判断</div>
-            <div class="cc-row"><span>[M] (mol/L)</span><input class="cc-in" id="calcKspM" placeholder="如 0.01"></div>
-            <div class="cc-row"><span>[X] (mol/L)</span><input class="cc-in" id="calcKspX" placeholder="如 0.01"></div>
-            <div class="cc-row"><span>Ksp</span><input class="cc-in" id="calcKspK" placeholder="如 3.2e-7"></div>
-            <button class="btn primary sm" onclick="calcKsp()">判断</button>
-            <div class="cc-out" id="calcKspOut"></div>
-          </div>
-          <div class="calc-card">
-            <div class="cc-t">💧 滴定计算</div>
-            <div class="cc-row"><span>标准液浓度(mol/L)</span><input class="cc-in" id="calcTitC" placeholder="如 0.02"></div>
-            <div class="cc-row"><span>消耗体积(mL)</span><input class="cc-in" id="calcTitV" placeholder="如 21.5"></div>
-            <div class="cc-row"><span>待测液体积(mL)</span><input class="cc-in" id="calcTitV2" placeholder="如 10"></div>
-            <div class="cc-row"><span>摩尔比(标准:待测)</span><input class="cc-in" id="calcTitR" placeholder="如 2:5 或 1:1"></div>
-            <button class="btn primary sm" onclick="calcTit()">计算</button>
-            <div class="cc-out" id="calcTitOut"></div>
+            <div class="cc-t" id="calcModeTitle">👆 请选择上方计算模式</div>
+            <div id="calcModeForm"></div>
+            <button class="btn primary sm" id="calcRunBtn" style="display:none" onclick="runCalc()">计算</button>
+            <div class="cc-out" id="calcOut" style="display:none"></div>
           </div>
         </div>
       </section>
@@ -1465,6 +1446,33 @@ function webFallbackHTML(q){
   return (kws.length?'<div class="muted" style="margin:0 0 5px;font-size:12px">🔑 搜索关键词：'+kws.map(esc).join('、')+'</div>':'')
     +'<div class="web-row">'+links+'</div>';
 }
+/* v60 讲义权威进主路径：normal+cluster 双模式给答案附「📖 讲义原文」引用 + 「⚠ 讲义核对」冲突修正。
+ * 渲染层增强：无头路径(local_answer.js)已 stub 本函数，不参与本地答案评分，零漂移。 */
+var AUTHORITY_DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响/;
+async function manualAuthorityHTML(q, kws, html){
+  if(!q||!AUTHORITY_DOMAIN_RE.test(q)) return '';
+  var AC=null;
+  try{ AC=await ensureAgentCluster(); }catch(e){ return ''; }
+  if(!AC||!AC.skills||!AC.skills.manual||!AC.scanFacts) return '';
+  try{
+    var out='';
+    var mr=await AC.skills.manual(q, kws||[]);
+    if(mr&&mr.matched&&mr.items&&mr.items.length){
+      var it=mr.items[0];
+      var txt=String(it.snippet||'').replace(/\$[^$]*\$/g,'').trim();
+      if(txt){
+        out+='<div class="ans-sec" style="margin-top:4px"><div class="link-card web web-results"><h4>📖 讲义原文（权威最高）· '+esc(it.ch||'实验讲义')+' · '+esc(it.title||'')+'</h4>'
+          +'<div class="web-snippet">'+esc(txt)+'</div></div></div>';
+      }
+    }
+    var conflicts=AC.scanFacts(html);
+    if(conflicts&&conflicts.length){
+      out+='<div class="ans-sec" style="margin-top:4px"><div class="selfcheck-warn"><b>讲义核对：</b>'
+        +conflicts.map(esc).join('<br>')+'</div></div>';
+    }
+    return out;
+  }catch(e){ return ''; }
+}
 function msdsCardHTML(chems){
   const rows=chems.slice(0,4).map(c=>
     '<div class="chem-row"><span class="cn">⚠ '+esc(c.name)+'</span>'
@@ -1947,11 +1955,224 @@ function parseFormulaM(f){
   if(isNaN(total)||total<=0) throw new Error('无法解析（含未知元素或格式错误）');
   return total;
 }
-function calcMolar(){ var f=($('#calcMol')||{}).value||''; var out=$('#calcMolOut'); if(!f.trim()){out.innerHTML='';return;} try{ var m=parseFormulaM(f); out.innerHTML='<b>M('+esc(f)+') = '+m.toFixed(2)+' g/mol</b>'; }catch(e){ out.innerHTML='<span style="color:#f87171">解析失败：'+esc(e.message)+'</span>'; } }
-function calcYield(){ var a=parseFloat(($('#calcYieldAct')||{}).value), t=parseFloat(($('#calcYieldTheo')||{}).value), out=$('#calcYieldOut'); if(isNaN(a)||isNaN(t)||!t){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var y=a/t*100; out.innerHTML='<b>产率 = '+y.toFixed(1)+'%</b><br><span style="color:var(--t2);font-size:12px">误差 = '+(y-100).toFixed(1)+'%'+(y>100?'（可能含杂质/未干燥）':(y<60?'（偏低，检查损失或反应完全度）':''))+'</span>'; }
-function calcSol(){ var c=parseFloat(($('#calcSolC')||{}).value),v=parseFloat(($('#calcSolV')||{}).value),m=parseFloat(($('#calcSolM')||{}).value),out=$('#calcSolOut'); if(isNaN(c)||isNaN(v)||isNaN(m)){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} out.innerHTML='<b>m = c·V·M = '+c*v*m.toFixed(2)+' g</b><br><span style="color:var(--t2);font-size:12px">需要 '+esc((m*v).toFixed(2))+' g/mol × '+v+' L × '+c+' mol/L</span>'; }
-function calcKsp(){ var m=parseFloat(($('#calcKspM')||{}).value),x=parseFloat(($('#calcKspX')||{}).value),k=parseFloat(($('#calcKspK')||{}).value),out=$('#calcKspOut'); if(isNaN(m)||isNaN(x)||isNaN(k)){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var q=m*x; out.innerHTML='<b>Q = '+q.toExponential(2)+'  vs  Ksp = '+k.toExponential(2)+'</b><br>'+(q>k?'<b style="color:#fbbf24">Q &gt; Ksp → 有沉淀生成</b>':(q<k?'Q &lt; Ksp → 未饱和，无沉淀':'Q = Ksp → 恰好饱和')); }
-function calcTit(){ var c=parseFloat(($('#calcTitC')||{}).value),v=parseFloat(($('#calcTitV')||{}).value),v2=parseFloat(($('#calcTitV2')||{}).value),out=$('#calcTitOut'); if(isNaN(c)||isNaN(v)||isNaN(v2)||!v2){out.innerHTML='<span style="color:#f87171">请输入有效数值</span>';return;} var r=String(($('#calcTitR')||{}).value||'1:1').split(':'); var ra=parseFloat(r[0])||1, rb=parseFloat(r[1])||1; var cs=c*v*ra/rb/v2; out.innerHTML='<b>待测浓度 C = '+cs.toFixed(4)+' mol/L</b><br><span style="color:var(--t2);font-size:12px">C<sub>待</sub> = C<sub>标</sub>·V<sub>标</sub>·(a/b)/V<sub>待</sub>，摩尔比 '+ra+':'+rb+'</span>'; }
+/* ================= 化学计算工具：多模式（14 种，贴合本实验） ================= */
+var CALC_NA=6.022e23, CALC_HC=119700, CALC_RT=2.4776, CALC_NV=0.0592, CALC_KSP_FEC2O4=3.2e-7, CALC_KSP_FE=2.79e-39;
+var CALC_COMPOUNDS=[
+ {n:'莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O',f:'(NH4)2Fe(SO4)2·6H2O',M:392.14},
+ {n:'草酸 H₂C₂O₄·2H₂O',f:'H2C2O4·2H2O',M:126.07},
+ {n:'草酸钾 K₂C₂O₄·H₂O',f:'K2C2O4·H2O',M:184.24},
+ {n:'产物 K₃[Fe(C₂O₄)₃]·3H₂O',f:'K3[Fe(C2O4)3]·3H2O',M:491.25},
+ {n:'FeC₂O₄·2H₂O',f:'FeC2O4·2H2O',M:179.90},
+ {n:'草酸钠 Na₂C₂O₄',f:'Na2C2O4',M:134.00},
+ {n:'FeSO₄·7H₂O',f:'FeSO4·7H2O',M:278.01},
+ {n:'H₂O₂',f:'H2O2',M:34.01},
+ {n:'Fe₂O₃',f:'Fe2O3',M:159.69},
+ {n:'Fe(OH)₃',f:'Fe(OH)3',M:106.87},
+ {n:'KMnO₄',f:'KMnO4',M:158.03},
+ {n:'H₂O',f:'H2O',M:18.02}
+];
+var CALC_PPTS=[
+ {n:'FeC₂O₄',k:3.2e-7,stoi:'11'},
+ {n:'Fe(OH)₃',k:2.79e-39,stoi:'13'},
+ {n:'CaC₂O₄',k:2.32e-9,stoi:'11'},
+ {n:'CaCO₃',k:3.36e-9,stoi:'11'},
+ {n:'AgCl',k:1.8e-10,stoi:'11'},
+ {n:'Ag₂C₂O₄',k:5.4e-12,stoi:'21'}
+];
+var CALC_CATS=['制备计算','溶液计算','分析滴定','物化计算'];
+var CALC_MODES=[
+ /* ===== 制备计算 ===== */
+ {id:'yield',cat:0,icon:'🎯',label:'理论产量与产率',fields:[
+   {k:'mo',l:'莫尔盐用量 (g)',d:'5.0',ph:'如 5.0'},
+   {k:'act',l:'实际产物质量 (g)',ph:'如 5.2'}
+ ],hint:'按 Fe 元素守恒：n(莫尔盐)→n(产物)=1:1；理论产量 = 0.01275×491.25 ≈ 6.26 g。产率评级 ≥75%优秀 / 60-75%良好 / 45-60%合格 / <45%不合格。',
+ run:function(){var mid=this.id,mo=calcNum(mid,'mo')||5.0,act=calcNum(mid,'act');if(act==null){calcErr('请输入实际产量');return;}
+  var n=mo/392.14,mt=Math.round(n*491.25*100)/100,y=act/mt*100;
+  var g=y>=95?'异常（可能含杂质/未干燥，请查纯度）':y>=75?'优秀':y>=60?'良好':y>=45?'合格':'不合格';
+  var d=y>100?'<br><span style="color:#fbbf24">⚠ 产率&gt;100% 提示产物未干燥或含杂质</span>':(y<60?'<br><span style="color:#fbbf24">⚠ 偏低：检查 Fe²⁺氧化是否完全、Fe(OH)₃是否溶尽、洗涤结晶是否有损失</span>':'');
+  calcOut('<b>产率 = '+y.toFixed(1)+'% ｜ '+g+'</b>'+d+'<br><span style="color:var(--t2);font-size:12px">步骤：n(莫尔盐)='+mo+'÷392.14='+n.toFixed(5)+' mol → 理论产量 = '+n.toFixed(5)+'×491.25 = <b>'+mt.toFixed(2)+' g</b> → 产率 = '+act+'÷'+mt.toFixed(2)+'×100%</span>');}},
+
+ {id:'reagent',cat:0,icon:'🧂',label:'试剂用量计算',fields:[
+   {k:'cpd',l:'化合物',type:'sel'},
+   {k:'n',l:'物质的量 (mol)',ph:'如 0.0128'},
+   {k:'m',l:'质量 (g)',ph:'如 5.0'}
+ ],hint:'输入物质的量或质量之一，自动换算（m=n×M）。实验基准：莫尔盐 5.0 g≈0.0128 mol，各试剂按其化学计量比缩放。',
+ run:function(){var mid=this.id,ci=parseInt(calcGet(mid,'cpd'))||0,c=CALC_COMPOUNDS[ci],n=calcNum(mid,'n'),m=calcNum(mid,'m');
+  if(n==null&&m==null){calcErr('请输入物质的量或质量之一');return;}
+  var h='<b>'+c.n+'　M = '+c.M.toFixed(2)+' g/mol</b>';
+  if(n!=null) h+='<br>质量 m = n×M = '+n+'×'+c.M.toFixed(2)+' = <b>'+(n*c.M).toFixed(2)+' g</b>';
+  if(m!=null) h+='<br>物质的量 n = m÷M = '+m+'÷'+c.M.toFixed(2)+' = <b>'+(m/c.M).toFixed(5)+' mol</b>';
+  h+='<br><span style="color:var(--t2);font-size:12px">标准用量对照：莫尔盐5.0g｜草酸1.7g｜草酸钾3.5g｜6%H₂O₂ 8mL｜乙醇10mL</span>';
+  calcOut(h);}},
+
+ {id:'molar',cat:0,icon:'⚖️',label:'摩尔质量查询',fields:[
+   {k:'cpd',l:'实验化合物',type:'sel'},
+   {k:'formula',l:'或自定义化学式',type:'text',ph:'如 K3[Fe(C2O4)3]·3H2O'}
+ ],hint:'直接选实验化合物，或输入任意化学式（支持括号/水合/[]）。',
+ run:function(){var mid=this.id,f=calcGet(mid,'formula');
+  if(f){try{var m=parseFormulaM(f);calcOut('<b>M('+esc(f)+') = '+m.toFixed(2)+' g/mol</b>');}catch(e){calcErr('解析失败：'+esc(e.message));}return;}
+  var ci=parseInt(calcGet(mid,'cpd'))||0,c=CALC_COMPOUNDS[ci];
+  calcOut('<b>M('+c.f+') = '+c.M.toFixed(2)+' g/mol</b><br><span style="color:var(--t2);font-size:12px">'+c.n+'</span>');}},
+
+ /* ===== 溶液计算 ===== */
+ {id:'dilute',cat:1,icon:'💧',label:'溶液稀释 C₁V₁=C₂V₂',fields:[
+   {k:'c1',l:'原液浓度 C₁',ph:'如 30'},
+   {k:'c2',l:'目标浓度 C₂',ph:'如 6'},
+   {k:'v2',l:'目标体积 V₂ (mL)',ph:'如 100'}
+ ],hint:'按 C₁V₁=C₂V₂ 求需取原液 V₁ = C₂V₂/C₁。例：30% H₂O₂(ρ=1.11)→6% 配 100 mL：体积法 V₁=6×100/30=20 mL；质量分数密度校正 V₁=100×0.06/(0.30×1.11)≈18.0 mL。',
+ run:function(){var mid=this.id,c1=calcNum(mid,'c1'),c2=calcNum(mid,'c2'),v2=calcNum(mid,'v2');
+  if(c1==null||c2==null||v2==null){calcErr('请输入原液浓度、目标浓度、目标体积');return;}
+  var v1=c2*v2/c1;
+  calcOut('<b>需取原液 V₁ = '+v1.toFixed(2)+' mL</b><br><span style="color:var(--t2);font-size:12px">步骤：V₁ = C₂V₂/C₁ = '+c2+'×'+v2+'÷'+c1+' = '+v1.toFixed(2)+' mL（再加溶剂定容至 '+v2+' mL）</span>');}},
+
+ {id:'solprep',cat:1,icon:'🧪',label:'固体配制溶液',fields:[
+   {k:'cpd',l:'溶质',type:'sel'},
+   {k:'c',l:'目标浓度 (mol/L)',ph:'如 0.5'},
+   {k:'v',l:'体积 (L)',ph:'如 0.1'}
+ ],hint:'m = C·V·M。例：配 0.5 mol/L 草酸 100 mL 需 H₂C₂O₄·2H₂O：0.5×0.1×126.07=6.30 g。',
+ run:function(){var mid=this.id,ci=parseInt(calcGet(mid,'cpd'))||0,c=CALC_COMPOUNDS[ci],cc=calcNum(mid,'c'),v=calcNum(mid,'v');
+  if(cc==null||v==null){calcErr('请输入浓度与体积');return;}
+  var m=cc*v*c.M;
+  calcOut('<b>需称量 '+m.toFixed(2)+' g</b><br><span style="color:var(--t2);font-size:12px">步骤：m = C·V·M = '+cc+'×'+v+'×'+c.M.toFixed(2)+' = '+m.toFixed(2)+' g（'+c.n+'）</span>');}},
+
+ {id:'mole',cat:1,icon:'🔢',label:'物质的量换算',fields:[
+   {k:'m',l:'质量 (g)',ph:'如 5.0'},
+   {k:'cpd',l:'化合物',type:'sel'}
+ ],hint:'n = m/M，粒子数 N = n×N_A。',
+ run:function(){var mid=this.id,m=calcNum(mid,'m'),ci=parseInt(calcGet(mid,'cpd'))||0,c=CALC_COMPOUNDS[ci];
+  if(m==null){calcErr('请输入质量');return;}
+  var n=m/c.M, N=n*CALC_NA;
+  calcOut('<b>'+c.n+'</b><br>物质的量 n = '+m+'÷'+c.M.toFixed(2)+' = <b>'+n.toFixed(5)+' mol</b><br>粒子数 N = n·N_A = <b>'+N.toExponential(3)+'</b><br><span style="color:var(--t2);font-size:12px">M = '+c.M.toFixed(2)+' g/mol</span>');}},
+
+ /* ===== 分析滴定 ===== */
+ {id:'kmno4',cat:2,icon:'🧫',label:'KMnO₄ 滴定测 C₂O₄²⁻',fields:[
+   {k:'ckm',l:'C(KMnO₄) (mol/L)',ph:'如 0.02'},
+   {k:'vkm',l:'消耗体积 (mL)',ph:'如 21.5'},
+   {k:'vsp',l:'待测液体积 (mL)',ph:'如 25'},
+   {k:'mprod',l:'产物质量 (g，算质量分数用)',ph:'如 0.5'}
+ ],hint:'2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂↑ + 8H₂O，摩尔比 MnO₄⁻:C₂O₄²⁻ = 2:5。产物理论 C₂O₄²⁻ 质量分数 53.8%。',
+ run:function(){var mid=this.id,ckm=calcNum(mid,'ckm'),vkm=calcNum(mid,'vkm'),vsp=calcNum(mid,'vsp'),mp=calcNum(mid,'mprod');
+  if(ckm==null||vkm==null||vsp==null||!vsp){calcErr('请输入完整滴定数据');return;}
+  var nkm=ckm*vkm/1000, nox=nkm*5/2, cox=nox/(vsp/1000);
+  var h='<b>C(C₂O₄²⁻) = '+cox.toFixed(4)+' mol/L</b><br><span style="color:var(--t2);font-size:12px">步骤：n(KMnO₄)='+ckm+'×'+vkm+'/1000='+nkm.toFixed(6)+' mol → n(C₂O₄²⁻)=n(KMnO₄)×5/2='+nox.toFixed(6)+' mol → C='+nox.toFixed(6)+'÷('+vsp+'/1000)</span>';
+  if(mp!=null&&mp>0){var w=nox*88.02/mp*100;h+='<br><b>C₂O₄²⁻ 质量分数 = '+w.toFixed(1)+'%</b><span style="color:var(--t2);font-size:12px">（理论 53.8%，M(C₂O₄²⁻)=88.02）'+(Math.abs(w-53.8)>3?' ｜ 偏离&gt;3% 提示产物纯度异常':' ｜ 与理论吻合')+'</span>';}
+  calcOut(h);}},
+
+ {id:'kmno4std',cat:2,icon:'🎯',label:'KMnO₄ 标定',fields:[
+   {k:'bpd',l:'基准物',type:'sel'},
+   {k:'m',l:'基准物质量 (g)',ph:'如 0.67'},
+   {k:'vkm',l:'消耗 KMnO₄ 体积 (mL)',ph:'如 40'}
+ ],hint:'草酸钠/草酸标定：2MnO₄⁻+5C₂O₄²⁻+16H⁺→2Mn²⁺+10CO₂+8H₂O，n(KMnO₄)=n(基准物)×2/5。',
+ run:function(){var mid=this.id,bi=parseInt(calcGet(mid,'bpd'))||0,bm=[134.00,126.07][bi],m=calcNum(mid,'m'),vkm=calcNum(mid,'vkm');
+  if(m==null||vkm==null||!vkm){calcErr('请输入完整数据');return;}
+  var nb=m/bm, nkm=nb*2/5, ckm=nkm/(vkm/1000);
+  calcOut('<b>C(KMnO₄) = '+ckm.toFixed(4)+' mol/L</b><br><span style="color:var(--t2);font-size:12px">步骤：n(基准物)='+m+'÷'+bm+'='+nb.toFixed(6)+' mol → n(KMnO₄)=n×2/5='+nkm.toFixed(6)+' mol → C='+nkm.toFixed(6)+'÷('+vkm+'/1000)'+(bi===0?'（基准：草酸钠 Na₂C₂O₄）':'（基准：草酸 H₂C₂O₄·2H₂O）')+'</span>');}},
+
+ {id:'fe',cat:2,icon:'🩸',label:'Fe 含量测定（氧化还原滴定）',fields:[
+   {k:'ckm',l:'C(KMnO₄) (mol/L)',ph:'如 0.02'},
+   {k:'vkm',l:'消耗体积 (mL)',ph:'如 12.6'},
+   {k:'mprod',l:'产物质量 (g)',ph:'如 0.5'}
+ ],hint:'Fe³⁺ 还原为 Fe²⁺ 后用 KMnO₄ 滴定：5Fe²⁺+MnO₄⁻+8H⁺→5Fe³⁺+Mn²⁺+4H₂O，n(Fe)=n(KMnO₄)×5。产物理论 Fe 含量 11.4%。',
+ run:function(){var mid=this.id,ckm=calcNum(mid,'ckm'),vkm=calcNum(mid,'vkm'),mp=calcNum(mid,'mprod');
+  if(ckm==null||vkm==null||mp==null||!mp){calcErr('请输入完整数据');return;}
+  var nkm=ckm*vkm/1000, nfe=nkm*5, mfe=nfe*55.85, w=mfe/mp*100;
+  calcOut('<b>Fe 含量 = '+w.toFixed(1)+'%</b><span style="color:var(--t2);font-size:12px">（理论 11.4%，M(Fe)=55.85）'+(Math.abs(w-11.4)>1.5?' ｜ 偏离&gt;1.5% 提示纯度或滴定误差':' ｜ 与理论吻合')+'</span><br><span style="color:var(--t2);font-size:12px">步骤：n(Fe)=n(KMnO₄)×5='+nfe.toFixed(6)+' mol → m(Fe)='+nfe.toFixed(6)+'×55.85='+mfe.toFixed(4)+' g → '+mfe.toFixed(4)+'÷'+mp+'×100%</span>');}},
+
+ {id:'ksp',cat:2,icon:'🪨',label:'Ksp 沉淀判断',fields:[
+   {k:'ppt',l:'沉淀',type:'sel'},
+   {k:'a',l:'阳离子浓度 (mol/L)',ph:'如 0.01'},
+   {k:'b',l:'阴离子浓度 (mol/L)',ph:'如 0.01'}
+ ],hint:'Q vs Ksp：Q&gt;Ksp 生成沉淀；Q&lt;Ksp 未饱和。FeC₂O₄ 的 Ksp=3.2×10⁻⁷，Fe(OH)₃ 的 Ksp=2.79×10⁻³⁹（Q=[Fe][OH]³）。',
+ run:function(){var mid=this.id,pi=parseInt(calcGet(mid,'ppt'))||0,p=CALC_PPTS[pi],a=calcNum(mid,'a'),b=calcNum(mid,'b');
+  if(a==null||b==null){calcErr('请输入两种离子浓度');return;}
+  var q=(p.stoi==='11')?a*b:(p.stoi==='13')?a*b*b*b:a*a*b;
+  var r=q>p.k?'<b style="color:#fbbf24">Q &gt; Ksp → 有沉淀生成</b>':(q<p.k?'Q &lt; Ksp → 未饱和，无沉淀':'Q = Ksp → 恰好饱和');
+  calcOut('<b>'+p.n+'　Q = '+q.toExponential(2)+'　vs　Ksp = '+p.k.toExponential(2)+'</b><br>'+r+'<br><span style="color:var(--t2);font-size:12px">Q 按化学计量计算（'+p.n+' '+p.stoi.split('').join(':')+'）</span>');}},
+
+ /* ===== 物化计算 ===== */
+ {id:'deltag',cat:3,icon:'⚡',label:'配位 ΔG° = −RT·lnK',fields:[
+   {k:'kf',l:'稳定常数 Kf',ph:'如 1.6e20'},
+   {k:'dg',l:'或 ΔG° (kJ/mol)',ph:'如 -115.2'}
+ ],hint:'ΔG° = −RT·lnKf（T=298 K，RT=2.478 kJ/mol）。预填 Kf([Fe(C₂O₄)₃]³⁻)=1.6×10²⁰ → ΔG°≈−115.2 kJ/mol。',
+ run:function(){var mid=this.id,kf=calcNum(mid,'kf'),dg=calcNum(mid,'dg');
+  if(kf==null&&dg==null){calcErr('请输入 Kf 或 ΔG° 之一');return;}
+  if(kf!=null){var g=-CALC_RT*Math.log(kf);calcOut('<b>ΔG° = '+g.toFixed(1)+' kJ/mol</b><br><span style="color:var(--t2);font-size:12px">ΔG° = −RT·lnKf = −2.478×ln('+kf+')（T=298K）'+(g<0?' ｜ ΔG°&lt;0 反应自发、配位有利':' ｜ ΔG°&gt;0 不利')+'</span>');}
+  else{var k=Math.exp(-dg/CALC_RT);calcOut('<b>Kf = '+k.toExponential(2)+'</b><br><span style="color:var(--t2);font-size:12px">Kf = e^(−ΔG°/RT) = e^(−('+dg+')/2.478)</span>');}}},
+
+ {id:'nernst',cat:3,icon:'🔋',label:'能斯特方程',fields:[
+   {k:'e0',l:'E° (V)',ph:'如 1.005'},
+   {k:'n',l:'转移电子数 n',ph:'如 2'},
+   {k:'q',l:'反应商 Q',ph:'如 1'}
+ ],hint:'E = E° − (0.0592/n)·lgQ（298K）。例：H₂O₂ 氧化 Fe²⁺ E°=1.005 V，n=2。',
+ run:function(){var mid=this.id,e0=calcNum(mid,'e0'),n=calcNum(mid,'n'),q=calcNum(mid,'q');
+  if(e0==null||n==null||q==null||!n){calcErr('请输入 E°、n、Q');return;}
+  var e=e0-(CALC_NV/n)*Math.log10(q);
+  calcOut('<b>E = '+e.toFixed(3)+' V</b><br><span style="color:var(--t2);font-size:12px">E = E° − (0.0592/n)·lgQ = '+e0+' − (0.0592/'+n+')×lg('+q+')'+(e>0?' ｜ E&gt;0 反应可自发':' ｜ E&lt;0 不自发')+'</span>');}},
+
+ {id:'spectrum',cat:3,icon:'🌈',label:'波长-能量换算',fields:[
+   {k:'wl',l:'波长 λ (nm)',ph:'如 650'},
+   {k:'e',l:'或能量 ΔE (kJ/mol)',ph:'如 184'}
+ ],hint:'E(kJ/mol) = 119700 / λ(nm)。本实验 [Fe(C₂O₄)₃]³⁻ 吸收橙红光 ~600-700 nm（呈翠绿，互补色）。',
+ run:function(){var mid=this.id,wl=calcNum(mid,'wl'),e=calcNum(mid,'e');
+  if(wl==null&&e==null){calcErr('请输入波长或能量之一');return;}
+  if(wl!=null){var ek=CALC_HC/wl;calcOut('<b>ΔE = '+ek.toFixed(1)+' kJ/mol</b><br><span style="color:var(--t2);font-size:12px">E = hc/λ = 119700÷'+wl+' nm'+(wl>=600&&wl<=700?' ｜ 落在橙红光区，为 [Fe(C₂O₄)₃]³⁻ 吸收、呈翠绿':'')+'</span>');}
+  else{var lam=CALC_HC/e;calcOut('<b>λ = '+lam.toFixed(0)+' nm</b><br><span style="color:var(--t2);font-size:12px">λ = 119700÷E = 119700÷'+e+'</span>');}}},
+
+ {id:'tga',cat:3,icon:'🔥',label:'热重失重 → 结晶水数',fields:[
+   {k:'loss',l:'失重 (%)',ph:'如 11.0'},
+   {k:'cpd',l:'化合物',type:'sel'}
+ ],hint:'n(H₂O) = 失重%×M ÷ 100 ÷ 18.02。产物 K₃[Fe(C₂O₄)₃]·3H₂O 理论失水 11.0%（=3 个结晶水）；第一失重台阶验证组成。',
+ run:function(){var mid=this.id,loss=calcNum(mid,'loss'),ci=parseInt(calcGet(mid,'cpd'))||3,c=CALC_COMPOUNDS[ci];
+  if(loss==null){calcErr('请输入失重百分比');return;}
+  var nw=loss/100*c.M/18.02;
+  calcOut('<b>结晶水数 n(H₂O) = '+nw.toFixed(2)+'</b><br><span style="color:var(--t2);font-size:12px">n = 失重%×M÷18.02 = '+loss+'%×'+c.M.toFixed(2)+'÷100÷18.02'+(ci===3?' ｜ 产物理论 11.0% → 3 个结晶水（与 n=3 对照验证三水合物组成）':'')+'</span>');}}
+];
+var calcCurMode=null;
+function cfind(arr,fn){ for(var i=0;i<arr.length;i++){ if(fn(arr[i])) return arr[i]; } return null; }
+function calcGet(mid,k){var el=document.getElementById(mid+'_'+k);return el?el.value.trim():'';}
+function calcNum(mid,k){var v=parseFloat(calcGet(mid,k));return isNaN(v)?null:v;}
+function calcOut(html){var o=document.getElementById('calcOut');if(o){o.style.display='block';o.innerHTML=html;}}
+function calcErr(msg){calcOut('<span style="color:#f87171">'+msg+'</span>');}
+function calcFldHTML(mid,f){
+  if(f.type==='sel'){
+    var opts='';
+    if(f.k==='cpd') opts=CALC_COMPOUNDS.map(function(c,i){return '<option value="'+i+'">'+c.n+'</option>';}).join('');
+    else if(f.k==='ppt') opts=CALC_PPTS.map(function(p,i){return '<option value="'+i+'">'+p.n+'</option>';}).join('');
+    else if(f.k==='bpd') opts='<option value="0">草酸钠 Na₂C₂O₄ (134.00)</option><option value="1">草酸 H₂C₂O₄·2H₂O (126.07)</option>';
+    return '<div class="cc-row"><span>'+f.l+'</span><select class="cc-in" id="'+mid+'_'+f.k+'">'+opts+'</select></div>';
+  }
+  var ph=f.ph?'placeholder="'+f.ph+'"':'';
+  var dv=f.d!==undefined?'value="'+f.d+'"':'';
+  var itype=(f.type==='text')?'text':'number';
+  return '<div class="cc-row"><span>'+f.l+'</span><input class="cc-in" type="'+itype+'" step="any" '+ph+' '+dv+' id="'+mid+'_'+f.k+'"></div>';
+}
+function switchCalcCat(ci){
+  document.getElementById('calcCats').innerHTML=CALC_CATS.map(function(c,i){
+    return '<button class="calc-cat-btn'+(i===ci?' active':'')+'" onclick="switchCalcCat('+i+')">'+c+'</button>';
+  }).join('');
+  document.getElementById('calcModeBtns').innerHTML=CALC_MODES.filter(function(m){return m.cat===ci;}).map(function(m){
+    return '<button class="calc-mode-btn" id="cm_'+m.id+'" onclick="switchCalcMode(\''+m.id+'\')"><span class="cm-i">'+m.icon+'</span>'+m.label+'</button>';
+  }).join('');
+  var first=cfind(CALC_MODES,function(m){return m.cat===ci;});
+  if(first) switchCalcMode(first.id);
+}
+function switchCalcMode(id){
+  var m=cfind(CALC_MODES,function(x){return x.id===id;}); if(!m) return;
+  calcCurMode=m.id;
+  document.getElementById('calcModeTitle').innerHTML=m.icon+' '+m.label;
+  document.getElementById('calcModeForm').innerHTML=m.fields.map(function(f){return calcFldHTML(m.id,f);}).join('')+(m.hint?'<div class="calc-hint">'+m.hint+'</div>':'');
+  document.getElementById('calcRunBtn').style.display='';
+  var o=document.getElementById('calcOut'); if(o) o.style.display='none';
+  var btns=document.querySelectorAll('.calc-mode-btn');
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove('active');
+  var sel=document.getElementById('cm_'+id); if(sel) sel.classList.add('active');
+}
+function runCalc(){
+  var m=cfind(CALC_MODES,function(x){return x.id===calcCurMode;}); if(!m) return;
+  try{ m.run(); }catch(e){ calcErr('计算错误：'+esc(e.message)); }
+}
+function calcMolar(){ switchCalcMode('molar'); runCalc(); }
+switchCalcCat(0);
 
 /* ================= 多轮对话记忆 ================= */
 var CHAT_HISTORY=[];
@@ -2125,6 +2346,8 @@ function agentBoardHTML(){
     +'<span class="ab-chip skip" data-agent="assess"><span class="ab-dot"></span>📝 测评官</span>'
     +'<span class="ab-chip skip" data-agent="report"><span class="ab-dot"></span>📄 报告官</span>'
     +'<span class="ab-chip skip" data-agent="prep"><span class="ab-dot"></span>📚 预习官</span>'
+    +'<span class="ab-chip skip" data-agent="trouble"><span class="ab-dot"></span>🔍 异常排查官</span>'
+    +'<span class="ab-chip skip" data-agent="phenomena"><span class="ab-dot"></span>🧭 现象官</span>'
     +'<span class="ab-chip" data-agent="editor"><span class="ab-dot"></span>✍️ 编辑官</span>'
     +'<span class="ab-chip" data-agent="checker"><span class="ab-dot"></span>✅ 质检官</span>'
     +'</div><details class="ab-log"><summary>集群日志</summary><div class="ab-log-body"></div></details></div>';
@@ -2229,6 +2452,27 @@ function prepResultHTML(r){
     +'<div style="margin-top:8px"><a class="lk" href="prep.html" target="_blank">📖 进入课前预习页 ↗</a></div>'
     +'</div>';
 }
+function troubleResultHTML(r){
+  var items=(r.items||[]).map(function(it){
+    return '<div class="web-item"><span class="web-src">⚠ '+esc(it.symptom)+'</span>'
+      +'<div class="web-snippet"><b>可能原因：</b>'+esc((it.causes||[]).join('；'))
+      +'<br><b>补救措施：</b>'+esc(it.remedy||'')
+      +(it.basis?'<br><b>讲义依据：</b>'+esc(it.basis||''):'')
+      +'</div></div>';
+  }).join('');
+  return '<div class="link-card warn"><h4>🔍 异常排查官 · '+esc(r.title||'实验异常诊断')+'</h4>'+items
+    +'<div class="muted" style="font-size:12px;margin-top:4px">按讲义参数排查：莫尔盐 5.0g · H₂O₂ 8mL(6%) · 40℃ · 微沸4min · 10mL乙醇 · 50℃烘干</div></div>';
+}
+function phenomenaResultHTML(r){
+  var items=(r.items||[]).map(function(it){
+    return '<div class="web-item"><span class="web-src">'+esc(it.step||'')+'</span>'
+      +'<div class="web-title">'+esc(it.phenomenon||'')+'</div>'
+      +'<div class="web-snippet">'+esc(it.principle||'')
+      +(it.verify?'<br><b>验证：</b>'+esc(it.verify||''):'')
+      +'</div></div>';
+  }).join('');
+  return '<div class="link-card web web-results"><h4>🧭 现象官 · 各步骤预期现象与原理</h4>'+items+'</div>';
+}
 function goAssess(){
   if(typeof switchTab==='function'){ switchTab('assess', true); }
   else { var t=document.querySelector('.tab[data-mode="assess"]'); if(t) t.click(); }
@@ -2239,13 +2483,13 @@ function runSkills(q, bub, ctx, force){
   var cfg=(AC.getConfig().skills)||{};
   var ans=bub.querySelector('.ans');
   function skipAll(reason){
-    ['calc','manual','safety','kg','video','assess','report','prep'].forEach(function(k){ setAgentState(bub,k,'skip'); });
+    ['calc','manual','safety','kg','video','assess','report','prep','trouble','phenomena'].forEach(function(k){ setAgentState(bub,k,'skip'); });
     if(reason) agentLog(bub, reason);
   }
   if(cfg.enabled===false){ skipAll('🧰 技能已关闭（🛰 集群状态可开启）'); return Promise.resolve(); }
   if(cfg.auto!==true && !force){ skipAll('🧰 技能未自动派发（自动模式关，可点「🧰 运行技能」手动触发）'); return Promise.resolve(); }
   if(ans && force) ans.querySelectorAll('.skill-card').forEach(function(el){ el.parentNode.removeChild(el); });
-  var run={ calc:cfg.calc!==false, manual:cfg.manual!==false, safety:cfg.safety!==false, kg:cfg.kg!==false, video:cfg.video!==false, assess:cfg.assess!==false, report:cfg.report!==false, prep:cfg.prep!==false };
+  var run={ calc:cfg.calc!==false, manual:cfg.manual!==false, safety:cfg.safety!==false, kg:cfg.kg!==false, video:cfg.video!==false, assess:cfg.assess!==false, report:cfg.report!==false, prep:cfg.prep!==false, trouble:cfg.trouble!==false, phenomena:cfg.phenomena!==false };
   // 🧮 计算官（确定性）
   if(run.calc){
     var calcRes=AC.skills.calc(q);
@@ -2290,6 +2534,24 @@ function runSkills(q, bub, ctx, force){
       if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+prepResultHTML(prepRes)+'</div>');
     } else { setAgentState(bub,'prep','skip'); }
   } else { setAgentState(bub,'prep','skip'); }
+  // 🔍 异常排查官（实验异常诊断）
+  if(run.trouble){
+    var tbRes=AC.skills.trouble(q);
+    if(tbRes&&tbRes.matched){
+      setAgentState(bub,'trouble','done');
+      agentLog(bub,'🔍 异常排查官：'+esc((tbRes.items||[]).length)+' 条症状诊断');
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+troubleResultHTML(tbRes)+'</div>');
+    } else { setAgentState(bub,'trouble','skip'); }
+  } else { setAgentState(bub,'trouble','skip'); }
+  // 🧭 现象官（各步骤预期现象）
+  if(run.phenomena){
+    var phRes=AC.skills.phenomena(q);
+    if(phRes&&phRes.matched){
+      setAgentState(bub,'phenomena','done');
+      agentLog(bub,'🧭 现象官：'+esc((phRes.items||[]).length)+' 条现象解释');
+      if(ans) ans.insertAdjacentHTML('beforeend', '<div class="skill-card">'+phenomenaResultHTML(phRes)+'</div>');
+    } else { setAgentState(bub,'phenomena','skip'); }
+  } else { setAgentState(bub,'phenomena','skip'); }
   // 📄 报告官（报告意图 → 评分细则，异步）
   // 📚 手册官 + 📊 图谱官（异步）
   var manualP=Promise.resolve();
@@ -2484,6 +2746,8 @@ async function handleQA(q){
   var checkResult=selfCheck(q, html, {chems:chems, ops:ops, analogies:analogies, conf:conf});
   var warnHTML=selfCheckHTML(checkResult);
   if(warnHTML){ html+=warnHTML; }
+  /* v60 讲义权威进主路径（normal+cluster 均执行；渲染层增强，无头路径已 stub） */
+  html += await manualAuthorityHTML(q, kws, html);
   if(UPLOADED_FILE && detectReportIntent(rawQ)){ html=reportAnalysisHTML(UPLOADED_FILE.text)+html; }
   if(UPLOADED_FILE){ html+=fileContextHTML(q); }
 
@@ -2999,10 +3263,9 @@ window.goAssess=goAssess;
 window.clearWrongBook=clearWrongBook;
 window.delWrongItem=delWrongItem;
 window.calcMolar=calcMolar;
-window.calcYield=calcYield;
-window.calcSol=calcSol;
-window.calcKsp=calcKsp;
-window.calcTit=calcTit;
+window.switchCalcCat=switchCalcCat;
+window.switchCalcMode=switchCalcMode;
+window.runCalc=runCalc;
 window.renderWrongBook=renderWrongBook;
 })();
 </script>

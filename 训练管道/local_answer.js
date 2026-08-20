@@ -8,7 +8,7 @@
  *
  * 输入（init() 惰性加载）：
  *   FAQ    — 从 data/faq_runtime.js 的 window.FAQ=[] 实时解析（3047 条）
- *   Corpus — data/corpus.json 的 entries 数组（365 条）
+ *   Corpus — data/corpus.json 的 entries 数组（355 条）
  *
  * 浏览器依赖 stub：
  *   esc → escHTML；webFallbackHTML → ''；无 document/$ 使用（纯函数）
@@ -348,7 +348,7 @@ function init(){
   // FAQ：读取 data/faq_runtime.js（window.FAQ=，v37.6+ 运行时唯一真相源）
   const faqLib = require('../scripts/lib-assistant-faq.js');
   FAQ = faqLib.readFAQRuntime();
-  // Corpus：data/corpus.json（365 条），复刻 loadCorpus 的 entries 映射与 subfield 归一化
+  // Corpus：data/corpus.json（355 条），复刻 loadCorpus 的 entries 映射与 subfield 归一化
   const raw = JSON.parse(fs.readFileSync(CORPUS_JSON, 'utf8').replace(/^﻿/, ''));
   const list = (raw && Array.isArray(raw.entries)) ? raw.entries.slice() : [];
   Corpus.entries = list;

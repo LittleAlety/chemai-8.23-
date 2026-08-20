@@ -3,7 +3,7 @@
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://littlealety.github.io/chemai-8.6-/)
 [![Version](https://img.shields.io/badge/version-v60-blue)](https://github.com/LittleAlety/chemai-8.6-)
 [![FAQ](https://img.shields.io/badge/FAQ-3070条-green)](https://github.com/LittleAlety/chemai-8.6-)
-[![Corpus](https://img.shields.io/badge/语料库-365篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
+[![Corpus](https://img.shields.io/badge/语料库-355篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-97节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
 [![Videos](https://img.shields.io/badge/本地视频-4部-teal)](https://github.com/LittleAlety/chemai-8.6-)
 
@@ -21,7 +21,7 @@
 | **AI 助手** | `assistant.html` | **正常/集群双模式**；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3070 条 FAQ**（运行时 `data/faq_runtime.js`）；**5-agent 集群工作台**（集群模式：检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器** |
 | **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染 |
 | **知识图谱** | `knowledge.html` | 97 节点 / 136 关联的交互式配位化学知识网络 |
-| **语料库** | `corpus.html` | **365 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链 |
+| **语料库** | `corpus.html` | **355 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链 |
 | **课前预习** | `prep.html` | 多轮对话预习 + 自适应习题检测 + 错题本 |
 
 ---
@@ -107,7 +107,7 @@ chemai-8.6-/
 ├── assistant.html             # AI 助手（3070 FAQ + 智能体集群 + 双模式 + 本地视频 + 测评）
 ├── main.html                  # 实验手册（11 章）
 ├── knowledge.html             # 知识图谱（97 节点 / 136 关联）
-├── corpus.html                # 语料库（365 篇）
+├── corpus.html                # 语料库（355 篇）
 ├── prep.html                  # 课前预习
 ├── assets/
 │   ├── agent-cluster.js      # 网页研究员模块（v56，自包含 IIFE：站内/PubChem/维基/Bing 多源+熔断+冲突校验）
@@ -115,7 +115,7 @@ chemai-8.6-/
 ├── data/
 │   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，3070 条，window.FAQ=）
 │   ├── manual.json           # 实验手册（11 章 / 42 节）
-│   ├── corpus.json           # 语料库清单（365 篇）
+│   ├── corpus.json           # 语料库清单（355 篇）
 │   ├── images.json           # 实验图片索引（76 张）
 │   ├── kg.json / questions_bank.json / report_rubric.json / faq_unified.json
 │   └── academic_lexicon.json # 学术词表（dev-only，不部署）

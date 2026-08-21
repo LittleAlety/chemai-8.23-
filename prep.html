@@ -504,5 +504,13 @@ document.addEventListener('DOMContentLoaded',function(){
   }catch(e){}
 });
 </script>
+<style id="polish-v63">
+/* v63 精致化：恢复 .card 彩色顶部强调条（修复 v55 hairline 覆盖回归）+ .subcard 悬浮辉光 */
+.card::before{ height:3px;background:var(--accent,var(--emerald,#10b981));opacity:.85; }
+.card:hover::before{ opacity:1; }
+.subcard:hover{ transform:translateY(-4px);border-color:var(--emerald,#10b981); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent),0 14px 34px rgba(0,0,0,.3); transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
+.banner h1{ filter:drop-shadow(0 4px 22px rgba(45,212,191,.28)); }
+@media (prefers-reduced-motion:reduce){ .subcard:hover{ transform:none; } }
+</style>
 </body>
 </html>

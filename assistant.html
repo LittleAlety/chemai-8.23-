@@ -3528,5 +3528,13 @@ document.addEventListener('DOMContentLoaded',function(){
   }catch(e){}
 });
 </script>
+<style id="polish-v63">
+/* v63 精致化：主工作面 .panel 悬浮环形辉光 + .panel-title 强调条 + --radius 令牌统一 */
+:root{ --radius:16px; }
+.panel-title{ position:relative; }
+.panel-title::before{ content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:1.05em;border-radius:2px;background:linear-gradient(180deg,#10b981,#2dd4bf); }
+.panel:hover{ border-color:var(--emerald,#10b981); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent),0 18px 44px rgba(0,0,0,.26); transition:box-shadow .25s ease,border-color .25s ease; }
+@media (prefers-reduced-motion:reduce){ .panel:hover{ box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent); } }
+</style>
 </body>
 </html>

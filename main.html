@@ -933,5 +933,12 @@ document.addEventListener('DOMContentLoaded',function(){
   }catch(e){}
 });
 </script>
+<style id="polish-v63">
+/* v63 精致化：手册章节标题升温（左侧品牌渐变强调条 + 弱投影辉光）+ 主标题辉光 */
+.manual-head h2,.ch-head h2,.sec-head h3{ position:relative;padding-left:14px;text-shadow:0 2px 14px rgba(45,212,191,.16); }
+.manual-head h2::before,.ch-head h2::before,.sec-head h3::before{ content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:1.05em;border-radius:2px;background:linear-gradient(180deg,#10b981,#2dd4bf); }
+.banner h1{ filter:drop-shadow(0 4px 22px rgba(45,212,191,.28)); }
+@media (prefers-reduced-motion:reduce){ .manual-head h2,.ch-head h2,.sec-head h3{ text-shadow:none; } }
+</style>
 </body>
 </html>

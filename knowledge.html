@@ -6,7 +6,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>知识图谱 · ChemAI 三草酸合铁酸钾制备实验</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.js"></script>
+<!-- KaTeX 改为按需加载（见下方 loadKatex()），仅在首次打开含公式节点时注入，避免阻塞首屏渲染 -->
 <style>
 :root{
   --bg:#0a0e1a; --bg2:#111827; --card:#1a2235; --hover:#243049;
@@ -1504,6 +1504,51 @@ function relatedDocs(n){
 }
 
 /* ==================== 节点详情面板 ==================== */
+/* 公式渲染库按需加载：head 已移除同步 CDN 加载，仅在首次打开含公式节点时注入 KaTeX，
+   就绪后自动把当前节点公式升级为 KaTeX 排版；CDN 不可达时保留 HTML 回退。 */
+let _katexPromise = null;
+function loadKatex(){
+  if(typeof katex !== 'undefined') return Promise.resolve();
+  if(_katexPromise) return _katexPromise;
+  _katexPromise = new Promise(function(resolve){
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.css';
+    document.head.appendChild(css);
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.14/dist/katex.min.js';
+    s.onload = function(){
+      try{ if(selectedId){ const nn = nodeById.get(selectedId); if(nn) renderFormulas(nn); } }catch(e){}
+      resolve();
+    };
+    s.onerror = function(){ _katexPromise = null; resolve(); };  // CDN 不可达 → 保留回退
+    document.head.appendChild(s);
+  });
+  return _katexPromise;
+}
+function renderFormulas(n){
+  const fmBox = $('#pFormulas');
+  fmBox.innerHTML = '';
+  if(!(n.formulas && n.formulas.length > 0)){ fmBox.style.display = 'none'; return; }
+  fmBox.style.display = 'block';
+  fmBox.innerHTML = n.formulas.map(function(f){
+    // KaTeX 渲染 > HTML 回退
+    return '<div class="fm-line">' + (typeof katex !== 'undefined'
+      ? (function(){
+          try { return katex.renderToString(f, {throwOnError:false, displayMode:false}); }
+          catch(e){ return esc(f); }
+        })()
+      : esc(f)
+          .replace(/\\([a-zA-Z]+)/g, '<i class="fm-cmd">\\$1</i>')
+          .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
+          .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+          .replace(/_(?=[a-zA-Z0-9])/g, '')
+          .replace(/\^(?=[a-zA-Z0-9])/g, '')
+    ) + '</div>';
+  }).join('');
+  // 首次渲染时若无 KaTeX，异步注入并在就绪后重渲当前节点
+  if(typeof katex === 'undefined' && n.formulas.length) loadKatex();
+}
 function selectNode(id){
   const n = nodeById.get(id);
   if(!n) return;
@@ -1541,27 +1586,8 @@ function openPanel(n){
   $('#pDesc').textContent = n.description || '暂无描述';
   $('#pConn').textContent = n.connectionToExperiment || '暂无说明';
 
-  // 公式渲染（kg.json formulas 字段）
-  const fmBox = $('#pFormulas');
-  fmBox.innerHTML = '';
-  if(n.formulas && n.formulas.length > 0){
-    fmBox.style.display = 'block';
-    fmBox.innerHTML = n.formulas.map(function(f){
-      // KaTeX 渲染 > HTML 回退
-      return '<div class="fm-line">' + (typeof katex !== 'undefined'
-        ? (function(){
-            try { return katex.renderToString(f, {throwOnError:false, displayMode:false}); }
-            catch(e){ return esc(f); }
-          })()
-        : esc(f)
-          .replace(/\\([a-zA-Z]+)/g, '<i class="fm-cmd">\\$1</i>')
-          .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
-          .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
-          .replace(/_(?=[a-zA-Z0-9])/g, '')
-          .replace(/\^(?=[a-zA-Z0-9])/g, '')
-      ) + '</div>';
-    }).join('');
-  }else fmBox.style.display = 'none';
+  // 公式渲染（kg.json formulas 字段）— KaTeX 按需加载
+  renderFormulas(n);
 
   // 知识路径（中心 → … → 当前节点，可点击跳转）
   const pathBox = $('#pPath');

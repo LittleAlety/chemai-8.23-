@@ -163,7 +163,7 @@ button{font-family:inherit;cursor:pointer}
       <div class="formula-chip">(NH<sub>4</sub>)<sub>2</sub>Fe(SO<sub>4</sub>)<sub>2</sub>·6H<sub>2</sub>O <span class="arr">→</span> FeC<sub>2</sub>O<sub>4</sub>·2H<sub>2</sub>O <span class="arr">→</span> K<sub>3</sub>[Fe(C<sub>2</sub>O<sub>4</sub>)<sub>3</sub>]·3H<sub>2</sub>O</div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#identity">选择身份，开始探索 <span>→</span></a>
-        <a class="btn btn-ghost" href="main.html">查看实验手册</a>
+        <a class="btn btn-ghost" href="main.html" onclick="try{localStorage.setItem('chem-user',JSON.stringify({state:{role:'chemistry'}}));}catch(e){}">查看实验手册</a>
       </div>
       <div class="hero-scroll"><div class="mouse"></div>向下滑动选择身份</div>
     </div>

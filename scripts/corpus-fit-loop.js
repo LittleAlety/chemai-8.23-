@@ -1,9 +1,9 @@
 /* 语料-文献贴合度评分 loop（v61.2）
  * 对题集每题: local_answer 作答 → LLM 双维评分(accuracy 0-10 / corpusFit 0-10)
  * corpusFit: 答案内容是否由语料库(文献)充分支撑、语料是否覆盖该题主题
- * 用法: node scripts/corpus-fit-loop.js <round>
- *   round=1  → 写 Agent工作区/corpus_fit_r1.json
- *   round=2  → 写 Agent工作区/corpus_fit_r2.json (验证)
+ * 用法: node scripts/corpus-fit-loop.js <round> [题集路径]
+ *   round=1..4  → 写 Agent工作区/corpus_fit_r<round>.json
+ *   题集路径默认 Agent工作区/Agent-B-问题生成/self_train_q_n30.json（可指定 n100 等）
  */
 'use strict';
 const fs = require('fs');
@@ -69,10 +69,12 @@ function relatedEntries(q, n = 2) {
   return scored.slice(0, n).map(x => ({ id: x.e.id, title: x.e.title, abstract: String(x.e.abstract || '').slice(0, 200) }));
 }
 
-// 题集
-const qs = readJson('Agent工作区/Agent-B-问题生成/self_train_q_n30.json');
+// 题集（可指定路径，默认 n30）
+const qsArg = process.argv[3];
+const qsFile = qsArg || 'Agent工作区/Agent-B-问题生成/self_train_q_n30.json';
+const qs = readJson(qsFile);
 const arr = Array.isArray(qs) ? qs : (qs.questions || []);
-console.log('题数:', arr.length, '| round', round);
+console.log('题数:', arr.length, '| round', round, '| 题集:', qsFile);
 
 const localAnswer = require('../训练管道/local_answer.js');
 localAnswer.init();

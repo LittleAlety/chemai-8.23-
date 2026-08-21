@@ -450,6 +450,13 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
           <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
+        <div class="role-bar" id="roleBar">
+          <span class="rb-label">🎭 讲话风格随身份切换</span>
+          <button class="rs-chip" data-role="non-chemistry">🧑‍🎓 通俗</button>
+          <button class="rs-chip" data-role="chemistry">🎓 专业</button>
+          <button class="rs-chip" data-role="teacher">👩‍🏫 教学</button>
+          <span class="rb-hint" id="roleHint"></span>
+        </div>
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
         <div class="composer">
@@ -686,6 +693,7 @@ async function callLLM(question, context, streamCallback){
     '- 化学式请使用 Unicode 上下标格式（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻）\n'+
     '- 用中文回答，专业简洁，分点列出时使用 · 或数字编号\n'+
     '- 每个答案控制在 300 字以内，保留关键数字和化学式';
+  systemPrompt += rolePersona(chatRole());
   var messages=[{role:'system', content: systemPrompt}];
   // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
   var userMsg=question;
@@ -2789,6 +2797,9 @@ async function handleQA(q){
        +'<button class="btn ghost sm" onclick="runSkillsOnLast()">🧰 运行技能</button>'
        +'<button class="btn ghost sm" onclick="toggleAgentState()">🛰 集群状态</button></div>';
   }
+  var _role=chatRole();
+  if(_lastRoleIntro!==_role){ _lastRoleIntro=_role; html = roleIntroHTML(_role) + html; }
+  html += roleOutroHTML(_role);
   var ans=document.createElement('div');ans.className='ans';ans.innerHTML=html;bub.appendChild(ans);
   scrollChat(qaChat);
   /* v60 讲义权威异步弹入：答案先渲染，讲义原文/核对块就绪后补插 */
@@ -2818,6 +2829,31 @@ function qaSubmit(){
 qaSend.addEventListener('click',qaSubmit);
 qaInput.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();qaSubmit();}});
 qaInput.addEventListener('input',function(){qaInput.style.height='auto';qaInput.style.height=Math.min(130,qaInput.scrollHeight)+'px';});
+
+/* ================= v65 身份化语言风格 ================= */
+var _lastRoleIntro=null;
+var ROLE_META={
+  'non-chemistry':{label:'🧑‍🎓 通俗',hint:'非化学专业 · 通俗讲解',intro:'👋 我尽量用大白话给你讲，遇到化学术语会顺带解释一下。哪里没看懂，随时打断我~',outro:['再讲通俗一点','这一步为什么这么做','换成生活里的例子']},
+  'chemistry':{label:'🎓 专业',hint:'化学专业 · 严谨',intro:'🙂 我按专业口径回答，直接给机理、参数与依据。需要更深的推导或计算，尽管提。',outro:['展开原理推导','给出定量计算','列出参考文献']},
+  'teacher':{label:'👩‍🏫 教学',hint:'教师 · 教学引导',intro:'👩‍🏫 咱们把这个点捋清楚：先看要解决什么，再分步走，最后小结。哪个环节卡住了，咱们再细讲。',outro:['考考我','这步为什么是关键','帮我出个练习题']}
+};
+function _esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function chatRole(){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'{}'); return (u.state&&u.state.role)||'chemistry'; }catch(e){ return 'chemistry'; } }
+function setRole(r){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'null')||{}; u.state=u.state||{}; u.state.role=r; localStorage.setItem('chem-user',JSON.stringify(u)); }catch(e){} _lastRoleIntro=null; refreshRoleSwitch(); }
+function refreshRoleSwitch(){ var r=chatRole(),chips=document.querySelectorAll('#roleBar .rs-chip'),m=ROLE_META[r]||ROLE_META.chemistry; for(var i=0;i<chips.length;i++) chips[i].className='rs-chip'+(chips[i].getAttribute('data-role')===r?' on':''); var h=document.getElementById('roleHint'); if(h) h.textContent='当前：'+m.hint; }
+function roleIntroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-intro"><div class="ri-bubble">'+_esc(m.intro)+'</div></div>'; }
+function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro"><div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div></div>'; }
+function askUser(t){ var inp=document.getElementById('qaInput'); if(inp) inp.value=t; qaSubmit(); }
+function rolePersona(role){
+  if(role==='teacher') return '\n\n【讲话风格 · 教学引导】像一位耐心的化学老师：先点明这一问要解决什么，再一步步引导思考，善用设问（如"你有没有想过这一步为什么要…"）与生活类比；多用「咱们/我们」拉近距离；答完给一句小结，并预估学生可能卡住的地方主动补充。循序渐进、严谨但不堆砌术语。';
+  if(role==='non-chemistry') return '\n\n【讲话风格 · 通俗科普】面对几乎无化学基础的提问者：多用生活化类比与大白话解释，尽量少用专业术语；非用不可时先用一句话解释其含义；多强调"这一步为什么做、有什么意义"；语气亲切、鼓励，像给朋友把知识点讲清楚。';
+  return '\n\n【讲话风格 · 专业严谨】面对化学专业提问者：可直接使用化学术语（如配位、CFSE、沉淀溶解平衡、热分析等）而不必科普；直接给出机理、参数、方程式与依据；语气专业、简洁、精确，层层递进；无需铺垫或重复基础知识。';
+}
+document.addEventListener('click',function(e){
+  var qbtn=e.target.closest('[data-q]'); if(qbtn){ askUser(qbtn.getAttribute('data-q')); return; }
+  var rbtn=e.target.closest('[data-role]'); if(rbtn){ setRole(rbtn.getAttribute('data-role')); }
+});
+refreshRoleSwitch();
 var qaUploadBtn=document.getElementById('qaUpload'), qaFileInput=document.getElementById('qaFileInput');
 if(qaUploadBtn&&qaFileInput){
   qaUploadBtn.addEventListener('click',function(){qaFileInput.value='';qaFileInput.click();});
@@ -3535,6 +3571,21 @@ document.addEventListener('DOMContentLoaded',function(){
 .panel-title::before{ content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:1.05em;border-radius:2px;background:linear-gradient(180deg,#10b981,#2dd4bf); }
 .panel:hover{ border-color:var(--emerald,#10b981); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent),0 18px 44px rgba(0,0,0,.26); transition:box-shadow .25s ease,border-color .25s ease; }
 @media (prefers-reduced-motion:reduce){ .panel:hover{ box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent); } }
+</style>
+<style id="role-style">
+/* v65 身份化语言风格：切换器 + 开场/收尾 */
+.role-bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 18px;border-bottom:1px solid var(--bd,#1e2636);background:var(--bg2,#0e141f)}
+.role-bar .rb-label{font-size:12px;color:var(--t2,#9aa6bd)}
+.role-bar .rb-hint{font-size:12px;color:var(--t3,#7c879c);margin-left:auto}
+.rs-chip{border:1px solid rgba(148,163,184,.22);background:transparent;color:var(--t2,#9aa6bd);border-radius:8px;padding:3px 10px;font-size:12px;line-height:1.5;cursor:pointer;transition:border-color .18s ease,color .18s ease,background .18s ease}
+.rs-chip:hover{border-color:var(--emerald,#10b981);color:var(--emerald,#10b981)}
+.rs-chip.on{background:var(--emerald,#10b981);color:#04121a;border-color:var(--emerald,#10b981);font-weight:600}
+.role-intro{margin-bottom:6px}
+.role-intro .ri-bubble{display:inline-block;background:rgba(45,212,191,.10);border:1px solid rgba(45,212,191,.22);color:var(--t2,#c9d4e6);border-radius:12px;padding:7px 12px;font-size:13px;line-height:1.6}
+.role-outro{margin-top:6px}
+.role-outro .ro-txt{font-size:12px;color:var(--t3,#7c879c);margin-bottom:6px}
+.role-outro .ro-chips{display:flex;flex-wrap:wrap;gap:6px}
+@media (prefers-reduced-motion:reduce){ .rs-chip{transition:none} }
 </style>
 <script src="assets/bg-particles.js" defer></script>
 </body>

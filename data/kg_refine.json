@@ -1,0 +1,404 @@
+{
+  "_meta": {
+    "version": "v2.1-refine",
+    "sourceJournal": "wf_697b058f-748",
+    "dedupe": "蓝晒工艺被 蓝晒/光化学/综合研究 三代理重复提出，仅保留 cyano-* 一套(sensitizer/exposure/prussian-blue/development/toning/substrate)；化学光量计被 综合研究/光化学 重复提出，合并为单一 photo-actinometer；删除冗余伞点 photo-application(与 photochem 相近)；删除 comp-prussian-blue、comp-cyanotype-toning、photo-cyanotype-*(x3)、comp-ferrioxalate-actinometer、photo-application。net +26 节点。",
+    "levelFixes": "mohr-preparation 由 level2 降为 level3(父=mohr-salt-chemistry)；cyano-process 定为 level2(父=physical) 以收敛蓝晒子树于 L3，避免 7 个 L4 堆叠。",
+    "note": "knowledge.html 详情面板取 n.description，本批新增节点均以 description 富字段；同时为 15 个缺 description 的稀疏节点补齐 description/parent/connectionToExperiment/relatedNodes/formulas。"
+  },
+  "addNodes": [
+    {
+      "id": "thermo-dehydration", "name": "脱水失水过程", "category": "physical", "level": 3,
+      "description": "三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 及系列草酸配合物在程序升温时第一步均为脱结晶水（失水）。失水温度约 100 ℃（文献区间约 70–130 ℃），对应失去 3 分子结晶水，TG 第一平台理论失重约 11.0%（3×18.02/491.25）。Cu 配合物脱水温度高于 Al、Fe、Cr 配合物，吸热峰与脱水步骤一一对应。",
+      "symbolSize": 34, "parent": "tg-dsc-analysis", "difficulty": 2,
+      "connectionToExperiment": "讲义记载本产物约 100 ℃ 失去结晶水；加热实验中首次失重即脱结晶水，失水温度是否接近 100 ℃、失重是否约 11.0% 可反推结晶水数目并衡量产物纯度。",
+      "relatedNodes": ["tg-dsc-analysis","thermo-tg-interpretation","thermodynamics"], "subfield": "热分析",
+      "formulas": ["K_3[Fe(C_2O_4)_3]\\cdot 3H_2O \\xrightarrow{100^\\circ C} K_3[Fe(C_2O_4)_3] + 3H_2O"]
+    },
+    {
+      "id": "thermo-tg-interpretation", "name": "TG曲线解读与质量损失", "category": "physical", "level": 3,
+      "description": "依据 TG 曲线各平台间失重百分数，定量识别并区分失水、草酸根氧化分解等各步。K₃[Fe(C₂O₄)₃]·3H₂O 第一步失去结晶水理论失重约 11.0%，第二步草酸根分解失重约 43%（对应草酸根→CO₂），各平台温度区间标定分解次序。",
+      "symbolSize": 34, "parent": "tg-dsc-analysis", "difficulty": 2,
+      "connectionToExperiment": "处理产物 TG 数据时，由第一步实际失重反推结晶水数目 n≈Δm×M/18，与理论失重 11.0% 对照判断含结晶水是否正常；再用第二步失重估算草酸根含量，作为产物纯度辅助判据。",
+      "relatedNodes": ["tg-dsc-analysis","thermo-dehydration","thermo-decomposition-products"], "subfield": "热分析",
+      "formulas": ["\\Delta m_1 = \\frac{3\\times18.02}{491.25}\\times100\\% \\approx 11.0\\%","\\Delta m_2 \\approx 43\\%"]
+    },
+    {
+      "id": "thermo-decomposition-products", "name": "热分解产物", "category": "physical", "level": 3,
+      "description": "三草酸合铁(III)酸钾程序升温热分解最终产物为碳酸盐与铁的氧化物（如 K₂CO₃/碳酸盐 + Fe₂O₃），分解经草酸亚铁中间体并伴随 Fe³⁺→Fe²⁺ 还原。对照 K₂[Cu(C₂O₄)₂]·2H₂O：依次失水、脱 CO₂ 与 CO，残余物为 Cu 和 K₂CO₃——金属不同则分解路径与残余物不同。",
+      "symbolSize": 34, "parent": "tg-dsc-analysis", "difficulty": 3,
+      "connectionToExperiment": "结合 TG-DSC 与逸出气体分析(EGA)可确定气体产物(CO₂/CO)组成，Mössbauer 谱可原位追踪分解中 Fe³⁺→Fe²⁺→铁氧化物物种，XRD 确认固体残余物(碳酸盐/铁氧化物)相，从而验证产物组成与纯度。",
+      "relatedNodes": ["tg-dsc-analysis","thermo-ferrous-intermediate","xrd-characterization"], "subfield": "热分析",
+      "formulas": ["K_3[Fe(C_2O_4)_3]\\cdot 3H_2O \\xrightarrow{\\Delta} K_2CO_3 + Fe_2O_3 + CO_2\\uparrow","K_2[Cu(C_2O_4)_2]\\cdot 2H_2O \\xrightarrow{\\Delta} Cu + K_2CO_3 + CO_2\\uparrow + CO\\uparrow"]
+    },
+    {
+      "id": "thermo-thermal-stability", "name": "热稳定性与分解温度", "category": "physical", "level": 3,
+      "description": "比较不同金属草酸配合物的热稳定性：第一步失水温度 Cu 配合物高于 Al、Fe、Cr 配合物；碱金属三(羧酸)合铁(III)配合物中阳离子种类会改变分解温度与路径。热分解起始温度与各失重台阶是衡量热稳定性的直接实验指标。",
+      "symbolSize": 34, "parent": "tg-dsc-analysis", "difficulty": 2,
+      "connectionToExperiment": "用 TG-DTA 系统比较 Cr(Ⅲ)、Fe(Ⅲ)、Al(Ⅲ)、Cu(Ⅱ)草酸配合物可得热稳定性顺序，并可自金属 d 电子构型、配体场与晶格能角度解释——是晶体场理论向热力学稳定性的延伸。",
+      "relatedNodes": ["tg-dsc-analysis","oxalate-comparison","stability-const","thermo-dehydration"], "subfield": "热分析"
+    },
+    {
+      "id": "thermo-decomposition-kinetics", "name": "热分解动力学与活化能", "category": "physical", "level": 3,
+      "description": "对非等温 TG 数据用多种动力学方法(Kissinger、Ozawa-Flynn-Wall、Coats-Redfern 等)拟合，求取各分解步骤活化能 Ea 与指前因子 A。草酸亚铁二水合物多晶型脱水需用诱导期–表面反应–相边界反应联合模型描述；氧化/惰性气氛显著改变分解路径与动力学参数。",
+      "symbolSize": 34, "parent": "tg-dsc-analysis", "difficulty": 3,
+      "connectionToExperiment": "由加热过程 TG-DSC 曲线结合 Arrhenius 关系求脱水和草酸根分解的活化能，对应反应速率与动力学方程，用于判断可控/不可控的分解放热与安全操作温度。",
+      "relatedNodes": ["tg-dsc-analysis","kinetics","thermo-dehydration"], "subfield": "热分析",
+      "formulas": ["k = A e^{-E_a/RT}","\\ln\\frac{k_2}{k_1} = -\\frac{E_a}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)"]
+    },
+    {
+      "id": "thermo-ferrous-intermediate", "name": "草酸亚铁中间体", "category": "physical", "level": 4,
+      "description": "草酸铁类配合物热分解的关键中间物种为草酸亚铁(FeC₂O₄·2H₂O 或无水草酸亚铁)，伴随 Fe³⁺→Fe²⁺ 还原及 CO₂/CO 逸出；氧化气氛下进一步氧化为 Fe₂O₃，惰性气氛下可生成铁或铁氧体。Mössbauer 谱可区分分解过程 Fe²⁺/Fe³⁺ 物种。",
+      "symbolSize": 26, "parent": "thermo-decomposition-products", "difficulty": 3,
+      "connectionToExperiment": "制备第一步生成的 FeC₂O₄·2H₂O 黄色沉淀正是该热分解中间体；加热时草酸铁经草酸亚铁中间体分解发生 Fe³⁺→Fe²⁺ 还原，与光化学路径中的 Fe³⁺→Fe²⁺ 相呼应，可作对照理解 Fe 价态变化。",
+      "relatedNodes": ["thermo-decomposition-products","precipitation-mechanism","thermo-dehydration"], "subfield": "热分析",
+      "formulas": ["FeC_2O_4\\cdot 2H_2O \\xrightarrow{\\Delta} FeC_2O_4 + 2H_2O","4FeC_2O_4 + 3O_2 \\xrightarrow{\\Delta} 2Fe_2O_3 + 8CO_2\\uparrow"]
+    },
+    {
+      "id": "mohr-preparation", "name": "摩尔盐制备原理与路线", "category": "redox", "level": 3,
+      "description": "硫酸亚铁铵(摩尔盐，(NH₄)₂Fe(SO₄)₂·6H₂O)的合成原理与路线：铁屑(废白铁皮)与稀硫酸反应制得 FeSO₄，再加等物质的量 (NH₄)₂SO₄，利用复盐溶解度小于其简单组分(FeSO₄·7H₂O 与 (NH₄)₂SO₄)的性质，经水浴蒸发浓缩、冷却结晶、吸滤析出复盐。控制 pH 1~2、使用不含氧蒸馏水，蒸发至表面出现晶膜后缓慢冷却，用 95% 乙醇洗涤以除水并防 Fe²⁺ 氧化。",
+      "symbolSize": 38, "parent": "mohr-salt-chemistry", "difficulty": 2,
+      "connectionToExperiment": "本实验是制备三草酸合铁(III)酸钾的 Fe²⁺ 前驱体环节。摩尔盐组成固定、相对稳定，作为限量基准——1 mol 摩尔盐理论上生成 1 mol K₃[Fe(C₂O₄)₃]·3H₂O，产率计算以其为基准；铁屑先经碳酸钠去油是保证产率与纯度的预处理步骤。",
+      "relatedNodes": ["mohr-salt-chemistry","mohr-acidity-protection","mohr-crystallization","redox"], "subfield": "摩尔盐相关",
+      "formulas": ["(NH₄)₂Fe(SO₄)₂·6H₂O","Fe + H₂SO₄ → FeSO₄ + H₂↑","FeSO₄ + (NH₄)₂SO₄ + 6H₂O → (NH₄)₂Fe(SO₄)₂·6H₂O"], "tags": ["铁屑","复盐结晶","无氧水","pH1~2"]
+    },
+    {
+      "id": "mohr-acidity-protection", "name": "酸性条件防Fe²⁺氧化水解", "category": "redox", "level": 4,
+      "description": "制备全程须保持溶液强酸性(pH 1~2)并隔离空气(无氧水、避放久)。Fe²⁺ 在中性或碱性溶液中易水解为 Fe(OH)₂ 并被 O₂、Fe³⁺ 氧化，使产品含三价铁杂质、晶体发黄；保持酸度可抑制 Fe²⁺ 水解与氧化，使铁以 FeSO₄/(NH₄)₂Fe(SO₄)₂ 形式稳定存在。",
+      "symbolSize": 26, "parent": "mohr-preparation", "difficulty": 2,
+      "connectionToExperiment": "硫酸亚铁铵制备的关键操作——铁屑加稀硫酸后趁热减压过滤、保持酸性、用不含氧蒸馏水溶解，均为防止 Fe²⁺ 被氧化；若酸度不足或进水含氧，产品 Fe³⁺ 偏高，比色检验易不合格。",
+      "relatedNodes": ["mohr-preparation","mohr-air-stability","redox-potential"], "subfield": "摩尔盐相关",
+      "formulas": ["Fe²⁺ + 2H₂O ⇌ Fe(OH)₂ + 2H⁺","4Fe²⁺ + O₂ + 4H⁺ → 4Fe³⁺ + 2H₂O"], "tags": ["pH控制","无氧水","抗水解"]
+    },
+    {
+      "id": "mohr-crystallization", "name": "复盐结晶与单晶培养", "category": "analytical", "level": 4,
+      "description": "复盐 (NH₄)₂Fe(SO₄)₂·6H₂O 溶解度小于组成它的简单盐(FeSO₄·7H₂O、(NH₄)₂SO₄)，故混合浓缩冷却时优先析出；溶解度随温度升高显著增大，降温利于结晶。控制蒸发浓缩至出现晶膜后缓慢冷却、搅拌、加晶种可得较大颗粒；也可加乙醇降低介电常数促结晶，或用少量苯覆盖液面防 Fe²⁺ 氧化，静置生长单晶。",
+      "symbolSize": 26, "parent": "mohr-preparation", "difficulty": 2,
+      "connectionToExperiment": "培养硫酸亚铁铵单晶时在饱和溶液中加晶种生长，考察浓度、温度、酸度、溶剂与生长空间对晶形与生长速度的影响；出现晶膜即停止加热、缓慢冷却并静置，是保证产率与晶体品质的关键限点。",
+      "relatedNodes": ["mohr-preparation","ethanol-crystallization","yield-optimization"], "subfield": "摩尔盐相关",
+      "formulas": ["FeSO₄ + (NH₄)₂SO₄ + 6H₂O → (NH₄)₂Fe(SO₄)₂·6H₂O↓"], "tags": ["晶膜","冷却结晶","单晶生长"]
+    },
+    {
+      "id": "mohr-purity-test", "name": "Fe³⁺限量分析与Fe²⁺滴定标定", "category": "analytical", "level": 3,
+      "description": "产品纯度检验两条途径：(1)目视比色限量分析——Fe³⁺ 与 KSCN 生成血红色 [Fe(SCN)ₙ]³⁻ⁿ，与标准色阶目视比较以定产品等级(一级/二级)；(2)定量标定——用直接法配制的 K₂Cr₂O₇ 标准液(二苯胺磺酸钠指示剂)氧化滴定 Fe²⁺，或 KMnO₄ 滴定。摩尔盐因组成确定、相对稳定而成为标定 KMnO₄/K₂Cr₂O₇ 的基准物质。",
+      "symbolSize": 34, "parent": "mohr-salt-chemistry", "difficulty": 2,
+      "connectionToExperiment": "制备完成后先目视比色判定产品等级，再用 K₂Cr₂O₇ 或 KMnO₄ 标准液滴定 Fe²⁺ 含量以计算纯度并验证组成；Fe³⁺/黄绿色过多说明酸度不足或 Fe²⁺ 被氧化过度，需调整工艺。",
+      "relatedNodes": ["mohr-salt-chemistry","redox-titration","standard-solution"], "subfield": "摩尔盐相关",
+      "formulas": ["Fe³⁺ + nSCN⁻ → [Fe(SCN)ₙ]³⁻ⁿ(血红色)","Cr₂O₇²⁻ + 6Fe²⁺ + 14H⁺ → 2Cr³⁺ + 6Fe³⁺ + 7H₂O"], "tags": ["目视比色","KSCN","K₂Cr₂O₇标定"]
+    },
+    {
+      "id": "mohr-air-stability", "name": "摩尔盐空气稳定性机制", "category": "redox", "level": 3,
+      "description": "摩尔盐比七水硫酸亚铁在空气中稳定得多。批判性讨论两种流行解释的缺陷：「空隙说」(晶胞比例失当、O₂ 无法穿过晶体表面)与「氢键说」(NH₄⁺ 形成较弱的 N-H…O 氢键，键能 64 kJ/mol 小于 O-H…O 的 84 kJ/mol)；主张以盐类水合物结构理论解释——摩尔盐 6 个结晶水均与 Fe²⁺ 配位结合、晶格(Mohrite, Z=2, a=9.32, b=12.65, c=6.24 Å, β=106.8°)排列紧密，O₂ 难以进入；而 FeSO₄·7H₂O 有一个仅靠氢键维系的水分子，易风化失水而暴露 Fe²⁺ 被氧化。",
+      "symbolSize": 34, "parent": "mohr-salt-chemistry", "difficulty": 3,
+      "connectionToExperiment": "由能斯特方程分析两溶液 Fe²⁺ 被 O₂ 氧化的电位差相近(约 0.458 V)，说明溶液态稳定性差别不大，稳定性主要源于晶体结构差异——这解释了实验里摩尔盐可敞口干燥而绿矾易风化，并可与金属钝化原理类比(表面状态对反应的影响)。",
+      "relatedNodes": ["mohr-salt-chemistry","nernst-equation","redox-potential","mohr-acidity-protection"], "subfield": "摩尔盐相关",
+      "formulas": ["(NH₄)₂Fe(SO₄)₂·6H₂O vs FeSO₄·7H₂O","4Fe²⁺ + O₂ + 4H⁺ → 4Fe³⁺ + 2H₂O"], "tags": ["稳定机理","氢键说","水合物结构理论"]
+    },
+    {
+      "id": "mohr-thermal-decomposition", "name": "水合硫酸亚铁热分解动力学", "category": "physical", "level": 3,
+      "description": "七水硫酸亚铁(绿矾, melanterite, FeSO₄·7H₂O)热失水分四步脱去结晶水，TG/DTG 显示最终热解为 Fe₂O₃；用 Achar 法与 Coats-Redfern 法处理非等温动力学数据，对多个机理函数优选，推断第一、二步失水分别符合一维扩散与三维扩散球对称模型并求出动力学参数与补偿效应。绿矾单斜晶系、空间群 P2₁/c，空气中易吸湿风化。",
+      "symbolSize": 34, "parent": "mohr-salt-chemistry", "difficulty": 3,
+      "connectionToExperiment": "为理解铁盐水合物结晶水的结合方式与热稳定性提供对照：摩尔盐比绿矾热稳定、难失水；可通过 TG/DTG 判断含水量与纯度，若第一步失水比例偏离约 11% 则说明结晶水异常。",
+      "relatedNodes": ["mohr-salt-chemistry","tg-dsc-analysis","thermodynamics"], "subfield": "摩尔盐相关",
+      "formulas": ["FeSO₄·7H₂O → FeSO₄·xH₂O → … → FeSO₄ → Fe₂O₃","FeSO₄·7H₂O 四步失水"], "tags": ["绿矾","TG/DTG","脱水动力学"]
+    },
+    {
+      "id": "cyano-process", "name": "蓝晒工艺总论", "category": "physical", "level": 2,
+      "description": "蓝晒(Cyanotype，铁氰酸盐印相法)是 J. Herschel 于 1842 年发明的古老摄影工艺，以 Fe(III)-草酸盐/铁氰化钾体系的光化学为核心：感光剂涂布纸或织物→紫外光曝光→Fe(III) 发生 LMCT 光致还原为 Fe(II)→与铁氰化钾 [Fe(CN)₆]³⁻ 反应生成不溶性普鲁士蓝 Fe₃[Fe(CN)₆]₂ 而成蓝像，水洗同时完成显影与定影。整个『感光剂配制—曝光—成像—显影定影—调色』链条均建立在 Fe(III)-草酸盐光还原之上。",
+      "symbolSize": 46, "parent": "physical", "difficulty": 2,
+      "connectionToExperiment": "本实验产物 K₃[Fe(C₂O₄)₃]·3H₂O 正是蓝晒的感光单元：紫外光下 LMCT 使 Fe³⁺→Fe²⁺，为蓝晒成像与草酸铁化学光量计提供同一光化学基础，实现合成实验与摄影应用的融合。",
+      "relatedNodes": ["photochem","cyanotype","lmct","physical"], "subfield": "蓝晒工艺",
+      "formulas": ["Fe₃[Fe(CN)₆]₂","Fe³⁺ + C₂O₄²⁻ —hν→ Fe²⁺ + C₂O₄•⁻"]
+    },
+    {
+      "id": "cyano-sensitizer", "name": "蓝晒感光剂配方", "category": "physical", "level": 3,
+      "description": "经典蓝晒感光剂由 A、B 两液组成：A 液为柠檬酸铁铵(ferric ammonium citrate，Fe(III) 络合物，组成不固定)水溶液，B 液为铁氰化钾 K₃[Fe(CN)₆] 水溶液，使用时按比例混合。代表性配方：何绮婷版 A 液 40g 柠檬酸铁铵/200mL 水、B 液 16g 铁氰化钾/200mL 水等体积混合；王慧版 A 液 100g/500mL、B 液 40g/500mL，静置 24h 后 1:1 混合；吕小兰版 A 液 0.30g/mL、B 液 0.25g/mL 等体积。A 液提供受光还原的 Fe(III) 源，B 液提供显色用 [Fe(CN)₆]³⁻，二者缺一不可。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 2,
+      "connectionToExperiment": "实验合成的 K₃[Fe(C₂O₄)₃]·3H₂O 配成约 0.3M 感光液并与铁氰化钾溶液共同涂布水彩纸即构成蓝晒感光层，感光剂浓度与 A、B 配比直接决定图像密度与曝光时间。",
+      "relatedNodes": ["cyano-process","cyanotype","lmct","lmct-quantum-yield"], "subfield": "蓝晒工艺",
+      "formulas": ["K₃[Fe(CN)₆]","柠檬酸铁铵(Fe(III)络盐，组成不定)"]
+    },
+    {
+      "id": "cyano-exposure", "name": "蓝晒曝光与紫外线", "category": "physical", "level": 3,
+      "description": "蓝晒依靠紫外光曝光成像，符合 Grotthuss-Draper 光化学第一定律与 Stark-Einstein 第二定律。感光层 Fe(III) 吸收紫外光经 LMCT 还原为 Fe(II)，产生潜影；曝光时长依光源不同：夏日阳光约 10min、紫外灯管更稳定、Fiorito&Polo 方案日光 1-4min、浸轧织物工艺紫外灯 20min。紫外光比可见光更易驱动光致还原(Φ(254nm)≈1.2、Φ(400nm)≈0.9)，且蓝晒可作化学光量计以量子产率反推光子通量；曝光过度影像过深、不足偏浅。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 2,
+      "connectionToExperiment": "以三草酸合铁(III)酸钾为感光单元做蓝晒时，其 254nm 量子产率(≈1.2)高于 400nm(≈0.9)，说明紫外区光致还原更强——这正是蓝晒曝光优先选紫外灯/日光的依据，也支撑其作为化学光量计的光学计量用途。",
+      "relatedNodes": ["cyano-process","lmct","lmct-quantum-yield","photochemical-kinetics","photochem"], "subfield": "蓝晒工艺",
+      "formulas": ["Φ(254 nm)≈1.2","Φ(400 nm)≈0.9"]
+    },
+    {
+      "id": "cyano-prussian-blue", "name": "蓝晒普鲁士蓝成像", "category": "physical", "level": 3,
+      "description": "蓝晒影像的蓝色来自普鲁士蓝(Fe₃[Fe(CN)₆]₂，又称滕氏蓝/铁蓝)。曝光光致还原的 Fe(II) 与铁氰化钾 [Fe(CN)₆]³⁻ 在水溶液中生成不溶性沉淀 Fe₃[Fe(CN)₆]₂(3Fe²⁺+2[Fe(CN)₆]³⁻→Fe₃[Fe(CN)₆]₂↓)，其深蓝色源于 Fe(II)-NC-Fe(III) 价间电荷转移(IVCT)吸收带——电子在相邻 Fe(II) 与 Fe(III) 间跃迁而强烈吸收可见光，是配位聚合物型颜料，不溶于水故影像耐水洗。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 2,
+      "connectionToExperiment": "实验由光分解产生的 Fe²⁺ 与铁氰化钾(K₃[Fe(CN)₆])即生成普鲁士蓝；本节点在已有『蓝晒法原理』沉淀式基础上，进一步强调其价间电荷转移(IVCT)的显色本质，解释蓝色为何呈特征蓝。",
+      "relatedNodes": ["cyano-process","cyanotype","ferricyanide-test","redox","photochem"], "subfield": "蓝晒工艺",
+      "formulas": ["Fe₃[Fe(CN)₆]₂","3Fe²⁺+2[Fe(CN)₆]³⁻→Fe₃[Fe(CN)₆]₂↓"]
+    },
+    {
+      "id": "cyano-development", "name": "蓝晒显影定影", "category": "physical", "level": 3,
+      "description": "蓝晒的显影与定影同时完成于水洗：曝光处生成不溶性普鲁士蓝留在基材上，未曝光处仍是水溶性的 Fe(III)-柠檬酸/草酸络合物被水冲走，形成正像并固定影像——这就是『为什么蓝晒曝光后要水洗』的答案(洗去未反应感光剂=定影，浮出影像=显影)。为加深蓝色、增强对比度，可在水洗后用 H₂O₂(约 3%)再氧化，使残留 Fe(II) 转 Fe(III) 补齐普鲁士蓝，影像更浓更黑。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 2,
+      "connectionToExperiment": "本实验蓝晒在水洗基础上加 3%H₂O₂ 可加深蓝色、提高对比度，与实验中用铁氰化钾检验 Fe²⁺(滕氏蓝沉淀)同属 [Fe(CN)₆]³⁻ 的显色化学，验证光还原 Fe(II) 的生成。",
+      "relatedNodes": ["cyano-process","ferricyanide-test","cyano-prussian-blue","redox"], "subfield": "蓝晒工艺",
+      "formulas": ["Fe²⁺ —H₂O₂→ Fe³⁺(加深普鲁士蓝)"]
+    },
+    {
+      "id": "cyano-toning", "name": "蓝晒调色", "category": "physical", "level": 3,
+      "description": "蓝晒影像可通过后处理改变色相：显影后用鞣酸、硼砂、氨水、红茶等调色液浸泡，可把纯蓝调成棕、青或紫等不同色调；或用酸浴/双氧水强化蓝调。更深层的是普鲁士黄(Fe(III)盐)、普鲁士蓝、普鲁士白之间的可逆电化学/化学转化——普鲁士蓝可被还原为无色的普鲁士白，再氧化恢复蓝色，这一 Fe(II)/Fe(III) 可逆氧化还原使蓝晒与电化学教学及『蓝晒遇碱变质』现象相衔接。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 2,
+      "connectionToExperiment": "蓝晒调色与普鲁士黄/蓝/白转化是 [Fe(CN)₆]³⁻ 配离子参与的可逆氧化还原的直观展示，可与实验中铁氰化钾检验 Fe²⁺ 的滕氏蓝显色、以及含铁废液处理中的氧化还原转化对照理解。",
+      "relatedNodes": ["cyano-process","cyano-prussian-blue","cyanotype","redox"], "subfield": "蓝晒工艺",
+      "formulas": ["普鲁士蓝 Fe₃[Fe(CN)₆]₂ ↔ 普鲁士白(还原态)"]
+    },
+    {
+      "id": "cyano-substrate", "name": "蓝晒基材处理", "category": "physical", "level": 3,
+      "description": "蓝晒感光层需附着于亲水、吸水且有纤维结构的基材。纸张选择(水彩/棉浆纸优于办公纸)与织物种类(棉>亚麻>蚕丝)因润湿性、感光剂扩散与纤维吸附能力不同而直接影响成像清晰度与色密度——光滑拒水的纸会使感光层不匀、易脱落。浸轧-蓝晒棉织物工艺最佳条件为感光剂 140g/L、A:B=1:1、曝光 20min，SEM 显示棉表面均匀沉积直径约 0.42μm 的普鲁士蓝颗粒，热重残渣率由 1.61% 升至 14.22% 证明色素固着，耐水洗牢度约 4 级。",
+      "symbolSize": 34, "parent": "cyano-process", "difficulty": 1,
+      "connectionToExperiment": "蓝晒纸张/织物基材的选择与处理，与实验中的沉淀附着、固相洗涤干燥及产物表征(TG-DSC、SEM)方法相衔接，是感光层物理附着与耐久性的来源。",
+      "relatedNodes": ["cyano-process","precipitation","tg-dsc-analysis"], "subfield": "蓝晒工艺",
+      "formulas": ["普鲁士蓝粒径 ≈0.42 μm","热重残渣率 1.61%→14.22%"]
+    },
+    {
+      "id": "comp-green-synthesis", "name": "草酸合铁酸钾绿色温和合成", "category": "analytical", "level": 2,
+      "description": "以 FeCl₃·6H₂O 与 K₂C₂O₄·H₂O 直接反应替代传统硫酸亚铁铵-草酸亚铁路线的温和绿色合成：FeCl₃+3K₂C₂O₄·H₂O→K₃[Fe(C₂O₄)₃]·3H₂O+3KCl。用在线红外光谱(ReactIR 15)原位优化，将传统高温条件降至 40-45 ℃，最佳 45 ℃ 产率达 91.6%，并可结合废铁屑回收与离子色谱等绿色分析手段。",
+      "symbolSize": 46, "parent": "analytical", "difficulty": 2,
+      "connectionToExperiment": "相比硫酸亚铁铵法需高温溶解 Fe(OH)₃，本路线以三氯化铁与过量草酸钾在近沸/40-45 ℃ 直接配位，降低能耗与副反应；经在线红外优化证明 45 ℃ 最佳、产率 91.6%(传统法仅约 70%)。晶体为单斜 P21/c(a=0.773、b=1.983、c=1.027nm，β=107.655°)，是综合实验整合绿色化学与美育思政的范例。",
+      "relatedNodes": ["analytical","green-chemistry","yield-optimization","comp-display-crystal","comp-complex-charge","coord"], "subfield": "综合研究",
+      "formulas": ["FeCl_3 + 3K_2C_2O_4 \\cdot H_2O \\rightarrow K_3[Fe(C_2O_4)_3] \\cdot 3H_2O + 3KCl"]
+    },
+    {
+      "id": "comp-display-crystal", "name": "回收废料悬线法培养大单晶", "category": "physical", "level": 3,
+      "description": "将学生实验产生的三草酸合铁(III)酸钾废料回收重结晶，并用悬线法(suspended-thread，尼龙线系晶种)在饱和溶液中缓慢蒸发培养大尺寸翠绿单晶：100g 废料加 200mL 水 45 ℃ 溶解过滤、48h 冷却回收 74.4g 纯品，再溶于 500mL 水培养数周得 38.3g(约 51%)。晶体为单斜 P21/c，a=7.742、b=19.917、c=10.346Å，β=107.85°，Fe-O 键长 1.98-2.03Å，O-Fe-O 螯合角近 80°。",
+      "symbolSize": 34, "parent": "xrd-characterization", "difficulty": 2,
+      "connectionToExperiment": "该法是综合实验的绿色回收与晶体学拓展：学生废料经 45 ℃ 溶解、48h 冷却结晶即可回收大量纯品；用尼龙线(优于棉线)悬吊晶种、缓慢蒸发并定期过滤打磨不规则凸起，即可养出用于 X 射线晶体学与对称性教学的展示单晶，并以指甲油/清漆涂层防潮保护。",
+      "relatedNodes": ["xrd-characterization","comp-green-synthesis","octahedral","tg-dsc-analysis"], "subfield": "结构表征"
+    },
+    {
+      "id": "comp-complex-charge", "name": "配阴离子电荷测定", "category": "analytical", "level": 3,
+      "description": "测定三草酸合铁(III)配阴离子 [Fe(C₂O₄)₃]³⁻ 电荷数的多种经典方法：离子交换法(产物溶液通过强碱性阴离子交换树脂置换出 Cl⁻，用标准碱滴定求电荷)、电导/摩尔电导率法，以及离子色谱法(实验值 2.92，接近理论值 3)。离子交换法相比电导法简便、重现性好、树脂可再生。",
+      "symbolSize": 34, "parent": "complex-concept", "difficulty": 2,
+      "connectionToExperiment": "『草酸合铁酸钾的制备及其离子电荷测定』实验改用离子交换法：草酸钾与三氯化铁近沸反应制得绿色晶体，产物过苯乙烯强碱性阴离子交换柱，用标准碱滴定淋出液求得电荷数≈2.92，与理论值 3 吻合；装柱、淋出液量控制与数据计算是考察要点。",
+      "relatedNodes": ["complex-concept","inner-outer-sphere","comp-green-synthesis","stability-const","coord"], "subfield": "分析测定",
+      "formulas": ["K_3[Fe(C_2O_4)_3] \\rightleftharpoons 3K^+ + [Fe(C_2O_4)_3]^{3-}"]
+    },
+    {
+      "id": "comp-ligand-substitution", "name": "配体置换平衡与颜色循环", "category": "coordination", "level": 3,
+      "description": "以 [Fe(C₂O₄)₃]³⁻ 溶液演示配位、配体置换、沉淀与溶解度的相互关系：加 HCl 分解为 [Fe(H₂O)₆]³⁺、加 KSCN 生成血红色 [Fe(SCN)₃]、加 KF 生成 [FeF₄]⁻、再加 K₂C₂O₄ 复原翠绿色，形成绿→黄橙→红→近无色→绿的颜色循环；碱性介质生成 Fe(OH)₃ 沉淀，Ba²⁺ 生成 Ba₃[Fe(C₂O₄)₃]₂ 沉淀；据此比较不同配体配合物的稳定性与平衡移动。",
+      "symbolSize": 34, "parent": "stability-const", "difficulty": 3,
+      "connectionToExperiment": "按 Yost-Simons 经典法制备 K₃[Fe(C₂O₄)₃]·3H₂O 约 0.1mol/L 后，依次加入 6mol/L HCl、0.5mol/L KSCN、3mol/L KF、2mol/L K₂C₂O₄，观察颜色循环，直观演示 Le Chatelier 原理与稳定常数大小对配位平衡的移动；BaCl₂ 生成 Ba₃[Fe(C₂O₄)₃]₂ 沉淀，可用 CaCl₂ 替代更安全。",
+      "relatedNodes": ["stability-const","chelate","complex-concept","comp-complex-charge","inner-outer-sphere"], "subfield": "草酸配合物",
+      "formulas": ["[Fe(C_2O_4)_3]^{3-} + 6F^- \\xrightarrow{\\text{置换}} [FeF_4]^- + 3C_2O_4^{2-}","Fe^{3+} + 3SCN^- \\rightarrow [Fe(SCN)_3] \\quad (\\text{红})","Ba^{2+} + [Fe(C_2O_4)_3]^{3-} \\rightarrow Ba_3[Fe(C_2O_4)_3]_2 \\downarrow"]
+    },
+    {
+      "id": "photo-actinometer", "name": "化学光量计(草酸铁光量计)", "category": "physical", "level": 3,
+      "description": "利用 K₃[Fe(C₂O₄)₃] 在 UV–可见区光解生成 Fe²⁺、量子产率已知且随波长变化，作为测量光子通量的化学光量计(Hatchard-Parker 光量计)。初级过程为配体到金属电荷转移(LMCT)激发，副反应 C₂O₄·⁻+Fe³⁺→Fe²⁺+CO₂ 使净量子产率>1，254nm 处 Φ(Fe²⁺)≈1.25。可用邻菲啰啉光度法(510nm)定量 Fe²⁺，或在线监测释放 CO₂；其波长相关量子产率已被 IUPAC 标准化。1956 年 Proc. Roy. Soc. 经典文献系统测定其波长依赖，确立光量计地位，并可延伸至纳秒激光闪光光解与液相超快光电子能谱的激发态动力学研究。",
+      "symbolSize": 34, "parent": "photochem", "difficulty": 3,
+      "connectionToExperiment": "产物 K₃[Fe(C₂O₄)₃]·3H₂O 在约 454nm 以下吸收光子即光解，是蓝晒感光与光通量测定的定量基础；单线态氧研究即以它作光量计测量光通量，学生也可用它标定光源强度。",
+      "relatedNodes": ["photochem","photochemical-kinetics","lmct","lmct-quantum-yield","spectrophotometry","cyanotype"], "subfield": "光化学应用",
+      "formulas": ["2[Fe(C_2O_4)_3]^{3-} \\xrightarrow{h\\nu} 2Fe^{2+} + 5C_2O_4^{2-} + 2CO_2","\\Phi = n(Fe^{2+})/n(h\\nu)","\\Phi(254\\ nm)\\approx 1.25"]
+    },
+    {
+      "id": "photo-oxalate-degradation", "name": "草酸铁光催化降解体系", "category": "physical", "level": 3,
+      "description": "Fe(III)-草酸根在紫外-可见光下经 LMCT 光解生成 Fe²⁺、C₂O₄·⁻ 与强氧化性 ·OH 自由基，可非选择性氧化降解染料、垃圾渗滤液等有机污染物；加入 H₂O₂ 构成光分解/芬顿复合体系，pH、H₂O₂ 投加量与光照时间为关键调控参数，并延伸至 Fe(III)-柠檬酸盐光解脱色与大气液相光化学老化。",
+      "symbolSize": 34, "parent": "photochem", "difficulty": 3,
+      "connectionToExperiment": "光照下产物既作感光剂又作光催化剂，可用于染料(如橙黄II)与渗滤液的脱色降解；研究表明 pH 4-6、铁/配体摩尔比<1 时 ·OH 产率最高，脱色符合表观一级动力学，是光化学在环境治理中应用的延伸。",
+      "relatedNodes": ["fenton","hydroxyl-radical","photochem","lmct","redox"], "subfield": "光化学应用",
+      "formulas": ["Fe(III)-C_2O_4 \\xrightarrow{h\\nu} Fe^{2+} + C_2O_4^{\\bullet-}","C_2O_4^{\\bullet-} \\rightarrow CO_2 + \\cdot OH"]
+    },
+    {
+      "id": "photo-actinometer-calibration", "name": "光量计量子产率定标与误差", "category": "physical", "level": 4,
+      "description": "光量计的量子产率定标与误差来源：量子产率随波长变化(深紫外约 205nm 至可见区)，Hatchard-Parker 经典值 Φ(254nm)≈1.25 并因二次还原使净产率略大于 1；可用电定标辐射计绝对标定而不依赖化学标准物；沿用旧推荐值会引入可达约 7% 的系统误差。",
+      "symbolSize": 26, "parent": "photo-actinometer", "difficulty": 3,
+      "connectionToExperiment": "光量计精度直接决定光通量测量，定标须按光源波长选用对应量子产率，并控制 Fe²⁺ 氧化、CO₂ 溶解与二次还原等误差来源，是实验感光性验证定量化的关键。",
+      "relatedNodes": ["photo-actinometer","photochemical-kinetics","lmct-quantum-yield","error-analysis"], "subfield": "光化学应用",
+      "formulas": ["\\Phi(254\\,nm) \\approx 1.25","\\Delta\\Phi \\approx 7\\%"]
+    }
+  ],
+  "addLinks": [
+    { "source": "thermo-dehydration", "target": "tg-dsc-analysis", "type": "solid", "label": "脱水失水", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 2 } },
+    { "source": "thermo-tg-interpretation", "target": "tg-dsc-analysis", "type": "solid", "label": "定量解读", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 2 } },
+    { "source": "thermo-decomposition-products", "target": "tg-dsc-analysis", "type": "solid", "label": "分解产物", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 2 } },
+    { "source": "thermo-thermal-stability", "target": "tg-dsc-analysis", "type": "solid", "label": "稳定性比较", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 2 } },
+    { "source": "thermo-decomposition-kinetics", "target": "tg-dsc-analysis", "type": "solid", "label": "动力学研究", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 2 } },
+    { "source": "thermo-ferrous-intermediate", "target": "thermo-decomposition-products", "type": "solid", "label": "中间体", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "solid", "width": 3 } },
+    { "source": "thermo-ferrous-intermediate", "target": "precipitation-mechanism", "type": "dashed", "label": "FeC₂O₄·2H₂O沉淀", "lineStyle": { "color": "#f59e0b", "opacity": 1, "type": "dashed", "width": 2 } },
+    { "source": "thermo-decomposition-kinetics", "target": "kinetics", "type": "dashed", "label": "动力学关联", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "dashed", "width": 2 } },
+    { "source": "thermo-dehydration", "target": "thermodynamics", "type": "dashed", "label": "热力学关联", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "dashed", "width": 2 } },
+    { "source": "thermo-thermal-stability", "target": "oxalate-comparison", "type": "dashed", "label": "草酸配合物对比", "lineStyle": { "color": "#2dd4bf", "opacity": 1, "type": "dashed", "width": 2 } },
+    { "source": "thermo-thermal-stability", "target": "stability-const", "type": "dashed", "label": "稳定性关联", "lineStyle": { "color": "#2dd4bf", "opacity": 1, "type": "dashed", "width": 2 } },
+    { "source": "thermo-decomposition-products", "target": "xrd-characterization", "type": "dashed", "label": "残余物表征", "lineStyle": { "color": "#a855f7", "opacity": 1, "type": "dashed", "width": 2 } },
+
+    { "source": "mohr-salt-chemistry", "target": "mohr-preparation", "type": "solid", "label": "制备分支", "lineStyle": { "type": "solid", "color": "#f59e0b", "width": 3 } },
+    { "source": "mohr-salt-chemistry", "target": "mohr-air-stability", "type": "solid", "label": "稳定性分支", "lineStyle": { "type": "solid", "color": "#f59e0b", "width": 3 } },
+    { "source": "mohr-salt-chemistry", "target": "mohr-purity-test", "type": "solid", "label": "纯度/标定", "lineStyle": { "type": "solid", "color": "#3b82f6", "width": 3 } },
+    { "source": "mohr-salt-chemistry", "target": "mohr-thermal-decomposition", "type": "solid", "label": "热分解分支", "lineStyle": { "type": "solid", "color": "#a855f7", "width": 3 } },
+    { "source": "mohr-preparation", "target": "mohr-acidity-protection", "type": "solid", "label": "关键条件", "lineStyle": { "type": "solid", "color": "#f59e0b", "width": 2 } },
+    { "source": "mohr-preparation", "target": "mohr-crystallization", "type": "solid", "label": "结晶操作", "lineStyle": { "type": "solid", "color": "#3b82f6", "width": 2 } },
+    { "source": "mohr-air-stability", "target": "nernst-equation", "type": "dashed", "label": "电位差分析", "lineStyle": { "type": "dashed", "color": "#f59e0b", "width": 2 } },
+    { "source": "mohr-air-stability", "target": "redox-potential", "type": "dashed", "label": "O₂/Fe²⁺电位", "lineStyle": { "type": "dashed", "color": "#f59e0b", "width": 2 } },
+    { "source": "mohr-air-stability", "target": "mohr-acidity-protection", "type": "dashed", "label": "同源防氧化", "lineStyle": { "type": "dashed", "color": "#f59e0b", "width": 2 } },
+    { "source": "mohr-purity-test", "target": "redox-titration", "type": "dashed", "label": "滴定标定", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 2 } },
+    { "source": "mohr-purity-test", "target": "standard-solution", "type": "dashed", "label": "基准物", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 2 } },
+    { "source": "mohr-crystallization", "target": "ethanol-crystallization", "type": "dashed", "label": "乙醇促结晶", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 2 } },
+    { "source": "mohr-crystallization", "target": "yield-optimization", "type": "dashed", "label": "产率优化", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 2 } },
+    { "source": "mohr-thermal-decomposition", "target": "tg-dsc-analysis", "type": "dashed", "label": "TG/DTG", "lineStyle": { "type": "dashed", "color": "#a855f7", "width": 2 } },
+    { "source": "mohr-thermal-decomposition", "target": "thermodynamics", "type": "dashed", "label": "分解动力学", "lineStyle": { "type": "dashed", "color": "#a855f7", "width": 2 } },
+
+    { "source": "physical", "target": "cyano-process", "type": "solid", "label": "蓝晒工艺", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "photochem", "target": "cyano-process", "type": "dashed", "label": "光化学基础", "lineStyle": { "type": "dashed", "width": 1, "color": "#a855f7", "opacity": 0.5 } },
+    { "source": "cyano-process", "target": "cyano-sensitizer", "type": "solid", "label": "感光剂", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyano-process", "target": "cyano-exposure", "type": "solid", "label": "曝光", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyano-process", "target": "cyano-prussian-blue", "type": "solid", "label": "成像", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyano-process", "target": "cyano-development", "type": "solid", "label": "显影定影", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyano-process", "target": "cyano-toning", "type": "solid", "label": "调色", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyano-process", "target": "cyano-substrate", "type": "solid", "label": "基材", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "cyanotype", "target": "cyano-process", "type": "dashed", "label": "同属蓝晒工艺", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#a855f7" } },
+    { "source": "lmct", "target": "cyano-exposure", "type": "dashed", "label": "光致还原机理", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#a855f7" } },
+    { "source": "lmct-quantum-yield", "target": "cyano-exposure", "type": "dashed", "label": "量子产率", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#a855f7" } },
+    { "source": "redox", "target": "cyano-prussian-blue", "type": "dashed", "label": "氧化还原沉淀", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#f59e0b" } },
+    { "source": "ferricyanide-test", "target": "cyano-prussian-blue", "type": "dashed", "label": "[Fe(CN)₆]³⁻显色", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#3b82f6" } },
+    { "source": "ferricyanide-test", "target": "cyano-development", "type": "dashed", "label": "Fe(II)显色检验", "lineStyle": { "type": "dashed", "width": 1, "opacity": 0.5, "color": "#3b82f6" } },
+
+    { "source": "analytical", "target": "comp-green-synthesis", "type": "solid", "lineStyle": { "type": "solid", "color": "#3b82f6", "width": 2 } },
+    { "source": "xrd-characterization", "target": "comp-display-crystal", "type": "solid", "lineStyle": { "type": "solid", "color": "#a855f7", "width": 2 } },
+    { "source": "complex-concept", "target": "comp-complex-charge", "type": "solid", "lineStyle": { "type": "solid", "color": "#2dd4bf", "width": 2 } },
+    { "source": "stability-const", "target": "comp-ligand-substitution", "type": "solid", "lineStyle": { "type": "solid", "color": "#2dd4bf", "width": 2 } },
+    { "source": "comp-green-synthesis", "target": "comp-display-crystal", "type": "dashed", "label": "废料回收养晶", "lineStyle": { "type": "dashed", "color": "#a855f7", "width": 1 } },
+    { "source": "comp-green-synthesis", "target": "comp-complex-charge", "type": "dashed", "label": "绿色分析测电荷", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 1 } },
+    { "source": "comp-complex-charge", "target": "comp-ligand-substitution", "type": "dashed", "label": "电荷/配位平衡", "lineStyle": { "type": "dashed", "color": "#2dd4bf", "width": 1 } },
+    { "source": "comp-green-synthesis", "target": "yield-optimization", "type": "dashed", "label": "产率优化", "lineStyle": { "type": "dashed", "color": "#3b82f6", "width": 1 } },
+
+    { "source": "photochem", "target": "photo-actinometer", "type": "solid", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "photochem", "target": "photo-oxalate-degradation", "type": "solid", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "photo-actinometer", "target": "photo-actinometer-calibration", "type": "solid", "lineStyle": { "type": "solid", "width": 2, "color": "#a855f7" } },
+    { "source": "photo-actinometer", "target": "photochemical-kinetics", "type": "dashed", "label": "量子产率", "lineStyle": { "type": "dashed", "width": 1, "color": "#a855f7" } },
+    { "source": "photo-actinometer", "target": "lmct-quantum-yield", "type": "dashed", "label": "光量计", "lineStyle": { "type": "dashed", "width": 1, "color": "#a855f7" } },
+    { "source": "photo-actinometer", "target": "lmct", "type": "dashed", "label": "LMCT光还原", "lineStyle": { "type": "dashed", "width": 1, "color": "#a855f7" } },
+    { "source": "photo-actinometer", "target": "spectrophotometry", "type": "dashed", "label": "邻菲啰啉光度", "lineStyle": { "type": "dashed", "width": 1, "color": "#3b82f6" } },
+    { "source": "photo-oxalate-degradation", "target": "hydroxyl-radical", "type": "dashed", "label": "·OH生成", "lineStyle": { "type": "dashed", "width": 1, "color": "#f59e0b" } },
+    { "source": "photo-oxalate-degradation", "target": "fenton", "type": "dashed", "label": "光芬顿", "lineStyle": { "type": "dashed", "width": 1, "color": "#f59e0b" } },
+    { "source": "photo-oxalate-degradation", "target": "redox", "type": "dashed", "label": "氧化还原", "lineStyle": { "type": "dashed", "width": 1, "color": "#f59e0b" } }
+  ],
+  "enrichNodes": {
+    "precipitation-mechanism": {
+      "description": "FeC₂O₄·2H₂O 黄色沉淀生成遵循经典沉淀机制：先快速成核形成 0.1–1 μm 微晶，再在微沸下经 Ostwald 熟化(溶解–再结晶)长大至 5–20 μm 的易过滤晶体。沉淀粒度由成核与生长速率竞争决定，微沸 4 min 促进晶体发育，便于倾滗与减压过滤分离。",
+      "parent": "precipitation",
+      "connectionToExperiment": "制备第一步向 FeSO₄/硫酸亚铁铵溶液中加 H₂C₂O₄ 即产生 FeC₂O₄·2H₂O 黄色沉淀；控制温度、搅拌与沉淀节奏是后续倾滗洗涤、提高产率与纯度的前提。",
+      "relatedNodes": ["precipitation","ethanol-nucleation","mohr-preparation","thermo-ferrous-intermediate"],
+      "formulas": ["Fe^{2+} + H_2C_2O_4 + 2H_2O \\xrightarrow{\\Delta} FeC_2O_4\\cdot 2H_2O\\downarrow + 2H^+"],
+      "symbolSize": 34
+    },
+    "h2o2-decomposition": {
+      "description": "H₂O₂ 在受热(>60 ℃)及 Fe³⁺/Fe²⁺ 催化下会加速歧化分解为 H₂O 与 O₂，使有效氧流失、氧化效率下降。用 40 ℃ 水浴控温、缓慢滴加 H₂O₂ 并持续搅拌可抑制分解，保证将 Fe²⁺ 完全氧化为 Fe³⁺。",
+      "parent": "fenton",
+      "connectionToExperiment": "合成中 Fe²⁺→Fe³⁺ 的氧化步骤以 H₂O₂ 为氧化剂；控温与滴加速率决定有效氧利用率，若 H₂O₂ 分解过快、氧化不完全会使终产物含 Fe²⁺、晶体颜色偏浅。",
+      "relatedNodes": ["fenton","redox-potential","catalyst","temperature-control"],
+      "formulas": ["2H_2O_2 \\xrightarrow{Fe^{3+},\\Delta} 2H_2O + O_2\\uparrow"],
+      "symbolSize": 34
+    },
+    "oxalate-protonation": {
+      "description": "草酸是二元中强酸：pH<2 时以 H₂C₂O₄ 为主(几乎无配位能力)，pH 3–6 时 HC₂O₄⁻ 与 C₂O₄²⁻ 共存，pH>6 时 C₂O₄²⁻ 占优。配位阶段把 pH 维持在 4–5，可兼顾草酸的溶解与对 Fe³⁺ 的有效螯合。",
+      "parent": "chelate",
+      "connectionToExperiment": "合成、结晶与保存全程都须把体系 pH 控制在 4–5，使 C₂O₄²⁻ 以足够比例存在以稳定配位；pH 过低草酸根质子化降低配位能力，过高则 Fe³⁺ 水解。",
+      "relatedNodes": ["chelate","ferrioxalate-ph","stability-const","chelate-effect"],
+      "formulas": ["H_2C_2O_4 \\rightleftharpoons H^+ + HC_2O_4^- \\rightleftharpoons 2H^+ + C_2O_4^{2-}"],
+      "symbolSize": 34
+    },
+    "ethanol-nucleation": {
+      "description": "乙醇显著降低溶剂介电常数，使产物溶解度骤降、形成高过饱和度，从而驱动爆发成核；棉线提供非均匀成核位点，暗处静置让晶体缓慢生长成大颗粒。",
+      "parent": "ethanol-crystallization",
+      "connectionToExperiment": "浓缩结晶阶段加入乙醇并悬入棉线，利用过饱和度提升成核速率、提供异相成核位点，暗处缓慢降温结晶，得到大而规整的翠绿色晶体。",
+      "relatedNodes": ["ethanol-crystallization","precipitation-mechanism","yield-optimization"],
+      "formulas": ["S = c/c_s \\nearrow \\ (\\text{乙醇降低介电常数})"],
+      "symbolSize": 34
+    },
+    "ferrioxalate-ph": {
+      "description": "[Fe(C₂O₄)₃]³⁻ 在 pH 3–6 最稳定：pH<2 时部分 C₂O₄²⁻ 质子化而解离，pH>7 时 Fe³⁺ 水解为 Fe(OH)₃ 沉淀。该 pH 窗口是合成、结晶、保存全程须维护的关键条件。",
+      "parent": "stability-const",
+      "connectionToExperiment": "产物配合物只有在 pH 3–6 下才稳定；碱性环境下 Fe³⁺ 水解、酸性与过高草酸过量都会造成配合物解离，是晶体性状与产率异常的重要排查方向。",
+      "relatedNodes": ["stability-const","oxalate-protonation","chelate","crystal-color-diagnosis"],
+      "formulas": ["[Fe(C_2O_4)_3]^{3-} \\xrightarrow{pH>7} Fe(OH)_3\\downarrow"],
+      "symbolSize": 34
+    },
+    "cfse-calculation": {
+      "description": "CFSE = Σ(电子数 × 轨道能量)。八面体场 t₂g=−0.4Δ₀、eg=+0.6Δ₀，高自旋 d⁵ 的 CFSE=0Δ₀；只有当 Δ₀>配对能 P 时低自旋才有利——草酸根 Δ₀≈14 300 cm⁻¹<P，故呈高自旋。",
+      "parent": "crystal-field",
+      "connectionToExperiment": "计算三草酸合铁(III)的晶体场稳定化能：d⁵ 高自旋在八面体场中 CFSE 为 0Δ₀，可解释其无额外驱动稳定、颜色来自 d–d 跃迁，并联系有效磁矩 μ≈5.92 B.M.(全自旋)。",
+      "relatedNodes": ["crystal-field","tanabe-sugano","high-spin-d5","spin-only","effective-moment"],
+      "formulas": ["CFSE = n_{t_{2g}}\\times(-0.4\\Delta_0) + n_{eg}\\times(0.6\\Delta_0)","d^5\\ \\text{high-spin}: CFSE=0"],
+      "symbolSize": 26
+    },
+    "tanabe-sugano": {
+      "description": "Tanabe–Sugano 图以 E/B 对 Δ₀/B 作图，把自由离子谱项与晶体场谱项关联起来。d⁵ 高自旋基态为 ⁶A₁g，其 d–d 跃迁自旋禁阻；由此可解析 560 nm 附近弱吸收带的归属与 Δ₀ 大小。",
+      "parent": "crystal-field",
+      "connectionToExperiment": "结合产物的吸收光谱与 Tanabe–Sugano 图，可判断 560 nm 处弱吸收为自旋禁阻 d–d 跃迁，估算配体场分裂能 Δ₀，并解释翠绿色的成因。",
+      "relatedNodes": ["crystal-field","cfse-calculation","absorption-spectrum","dd-transition","spectrochemical-series-detail"],
+      "formulas": ["d^5 \\ (high\\ spin)\\ ^6A_{1g}\\text{ 基态}"],
+      "symbolSize": 26
+    },
+    "pascal-constants": {
+      "description": "实测磁化率须扣除抗磁贡献(Pascal 常数法)：各原子/离子与结构单元有固定的抗磁增量值，如 Fe³⁺ 约 −13×10⁻⁶ c.g.s.。扣除抗磁项后方可用于有效磁矩 μ_eff 的计算。",
+      "parent": "magnetic-susceptibility",
+      "connectionToExperiment": "用古埃法测得磁化率后，按 Pascal 常数扣除配体与中心离子的抗磁贡献，再算 μ_eff，与高自旋 d⁵ 理论值 5.92 B.M. 对照，验证产物电子构型。",
+      "relatedNodes": ["magnetic-susceptibility","gouy-balance","effective-moment","spin-only"],
+      "formulas": ["\\chi_{corr} = \\chi_{meas} - \\sum n_i\\chi_i"],
+      "symbolSize": 26
+    },
+    "magnetic-coupling": {
+      "description": "多核草酸配合物中，桥连 C₂O₄²⁻ 的 O–C–C–O 路径传导磁耦合——反铁磁(J<0)或铁磁(J>0)取决于 M–O–M 角度与 d 电子构型，是分子基磁体设计的核心原理。",
+      "parent": "magnetic-susceptibility",
+      "connectionToExperiment": "单核三草酸合铁(III)中 Fe³⁺ 间被配体隔离而近似无耦合，有效磁矩接近自旋纯值；理解磁耦合可用于对比多核草酸桥连配合物与单核产物的磁性差异。",
+      "relatedNodes": ["magnetic-susceptibility","effective-moment","molecular-orbital-coord","spin-only"],
+      "formulas": ["\\mu_{eff}^2 = \\frac{3k\\chi T}{N_A \\mu_B^2}\\ (\\text{含耦合修正})"],
+      "symbolSize": 26
+    },
+    "lmct-quantum-yield": {
+      "description": "Hatchard-Parker 光量计中，K₃[Fe(C₂O₄)₃] 在 254 nm 下 Φ(Fe²⁺)≈1.25。副反应 C₂O₄·⁻+Fe³⁺→Fe²⁺+CO₂ 使净量子产率>1，精确且易用，常作化学光量计。",
+      "parent": "lmct",
+      "connectionToExperiment": "产物在 254 nm 紫外(Φ≈1.2)比 400 nm(Φ≈0.9)光解更强，说明紫外区 LMCT 更易进行——这是其既可作蓝晒感光单元、又可作化学光量计测量光通量的依据。",
+      "relatedNodes": ["lmct","photo-actinometer","photochemical-kinetics","cyanotype","dd-transition"],
+      "formulas": ["\\Phi(254\\ nm)\\approx 1.25","\\Phi(400\\ nm)\\approx 0.9"],
+      "symbolSize": 26
+    },
+    "filter-paper-selection": {
+      "description": "过滤细晶沉淀用慢速定量滤纸或 G3/G4 玻砂漏斗防穿滤；大颗粒沉淀用中速滤纸加快流速。滤纸直径略小于布氏漏斗内径，先用溶剂润湿并贴紧，减压过滤时防止漏气与穿滤。",
+      "parent": "precipitation",
+      "connectionToExperiment": "制备中 FeC₂O₄·2H₂O 为细晶黄色沉淀，倾滗后需用合适滤纸或玻砂漏斗过滤；滤纸选择与贴合同样影响产物回收率与纯度。",
+      "relatedNodes": ["precipitation","precipitation-mechanism","temperature-control"],
+      "formulas": [],
+      "symbolSize": 34
+    },
+    "ki-starch-test": {
+      "description": "用 KI–淀粉试纸检验 H₂O₂ 是否除尽：H₂O₂+2I⁻+2H⁺→I₂+2H₂O，I₂ 与淀粉形成蓝色包合物。试纸不变蓝说明 H₂O₂ 已除尽，可安全进入配位步骤。",
+      "parent": "redox-titration",
+      "connectionToExperiment": "制备过程中 H₂O₂ 用于氧化 Fe²⁺，氧化完成后须将其残余分解干净，否则会影响后续配位与产物纯度；KI–淀粉试纸是检验 H₂O₂ 残留的简便手段。",
+      "relatedNodes": ["redox-titration","redox-potential","h2o2-decomposition"],
+      "formulas": ["H_2O_2 + 2I^- + 2H^+ \\rightarrow I_2 + 2H_2O"],
+      "symbolSize": 34
+    },
+    "ferricyanide-test": {
+      "description": "K₃[Fe(CN)₆]+Fe²⁺→Fe₃[Fe(CN)₆]₂↓(滕氏蓝)。取一滴反应液于点滴板，加 K₃[Fe(CN)₆]，无蓝色沉淀=Fe²⁺ 已氧化完全；出现蓝色说明需补加 H₂O₂ 继续氧化。",
+      "parent": "redox-titration",
+      "connectionToExperiment": "用于判断 Fe²⁺ 是否被 H₂O₂ 氧化完全：滴加铁氰化钾检验终点，蓝色沉淀(滕氏蓝/普鲁士蓝)提示 Fe²⁺ 残留应继续氧化；与蓝晒成像同属 [Fe(CN)₆]³⁻ 显色。",
+      "relatedNodes": ["redox-titration","cyano-prussian-blue","cyano-development","redox-potential"],
+      "formulas": ["3Fe^{2+} + 2[Fe(CN)_6]^{3-} \\rightarrow Fe_3[Fe(CN)_6]_2\\downarrow"],
+      "symbolSize": 34
+    },
+    "crystal-color-diagnosis": {
+      "description": "晶体颜色异常诊断：变黄绿→光解(避光补救)；变灰绿→含光解产物+杂质(重结晶)；变浅绿→浓度偏低或草酸过量(浓缩重结晶)；表面发白→K₂SO₄ 共结晶(少量冷水快洗)。",
+      "parent": "troubleshooting",
+      "connectionToExperiment": "通过观察产物晶体颜色即可快速诊断制备过程的问题：颜色偏黄绿提示光解、偏灰绿提示杂质、表面发白提示共结晶盐，据此采取相应补救措施。",
+      "relatedNodes": ["troubleshooting","ferrioxalate-ph","ethanol-nucleation","yield-optimization"],
+      "formulas": [],
+      "symbolSize": 34
+    },
+    "yield-calculation-example": {
+      "description": "产率计算实例：5.0 g 莫尔盐(M=392.14)→n=0.01275 mol→理论产量=0.01275×491.25=6.26 g。正常产率 50–75%；若得 3.5 g 则产率 55.9%；>95% 异常，提示未恒重或含杂质。",
+      "parent": "yield-optimization",
+      "connectionToExperiment": "以莫尔盐为基准按 1:1 摩尔比推算产率；实际产率落在 50–75% 属正常，过高说明晶体未恒重或夹带杂质，需结合纯度检验复核。",
+      "relatedNodes": ["yield-optimization","mohr-preparation","reagent-quality","effective-digit"],
+      "formulas": ["n = 5.0/392.14 = 0.01275\\ \\text{mol}","m_{theo} = 0.01275\\times491.25 = 6.26\\ \\text{g}"],
+      "symbolSize": 34
+    }
+  }
+}

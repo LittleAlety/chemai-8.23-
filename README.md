@@ -135,7 +135,7 @@ chemai-8.6-/
 
 - **SPA 落地页内嵌手册为历史快照**：`assets/index-B-pT4Snc.js`（React 落地页构建产物）内嵌旧 12 章版实验手册（含已删除的「实验报告撰写规范」章），与 `main.html` 的动态手册（11 章）分叉。React 源码未随仓库维护，暂不重建；**实验手册以 `main.html` 为准**。
 - **本地视频部署依赖分支构建**：4 部本地视频位于 `三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/`，是否在线可播取决于部署机制（内置「Deploy from a branch」会发布整个仓库根目录；`deploy.yml` 的 `_site` 精简组装不含该文件夹）。
-- **HTTPS 证书未签发**：自定义域名 `fec2o4.apay.eu.cc` 暂以 `http://` 访问（`https://` 证书不匹配）。
+- **自定义域名 HTTPS 证书未生效**：`fec2o4.apay.eu.cc` 的 DNS 已正确指向 GitHub（CNAME→littlealety.github.io），站点也已构建，但 GitHub 未签发有效证书致 `http`/`https` 均无法访问。修复：仓库 Settings→Pages 删除该自定义域名后重新填入 `fec2o4.apay.eu.cc` 并勾选 Enforce HTTPS，等待 GitHub 自动重签 Let's Encrypt（数分钟~24h）后即可用 `https://` 访问。
 - **网页研究员依赖 CORS 网络**：PubChem / 维基百科为 CORS 开放接口可直连；Bing 经第三方代理（实验性，熔断自动停用）；知网/万方/百度学术/ChemicalBook 无浏览器 CORS，仅提供搜索链接兜底。
 
 ---

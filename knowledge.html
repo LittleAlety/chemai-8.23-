@@ -476,11 +476,11 @@ button{font-family:inherit;cursor:pointer}
       <div class="leg-body" id="legBody">
         <div class="leg-section">
           <span class="leg-sec-title">颜色编码</span>
-          <div class="leg-row"><i style="background:#10b981"></i><span>中心实验</span></div>
-          <div class="leg-row"><i style="background:#2dd4bf"></i><span>配位化学</span></div>
-          <div class="leg-row"><i style="background:#f59e0b"></i><span>氧化还原</span></div>
-          <div class="leg-row"><i style="background:#3b82f6"></i><span>分析化学</span></div>
-          <div class="leg-row"><i style="background:#a855f7"></i><span>物理/结构化学</span></div>
+          <div class="leg-row"><i style="background:#34d399"></i><span>中心实验</span></div>
+          <div class="leg-row"><i style="background:#f59e0b"></i><span>配位化学</span></div>
+          <div class="leg-row"><i style="background:#f43f5e"></i><span>氧化还原</span></div>
+          <div class="leg-row"><i style="background:#38bdf8"></i><span>分析化学</span></div>
+          <div class="leg-row"><i style="background:#a78bfa"></i><span>物理/结构化学</span></div>
         </div>
         <div class="leg-section">
           <span class="leg-sec-title">节点大小</span>
@@ -566,11 +566,11 @@ button{font-family:inherit;cursor:pointer}
 /* ==================== 常量与全局状态 ==================== */
 const $ = s => document.querySelector(s);
 const CATS = {
-  center:      {name:'中心实验',     color:'#10b981', glow:'rgba(16,185,129,0.3)'},
-  coordination:{name:'配位化学',     color:'#2dd4bf', glow:'rgba(45,212,191,0.3)'},
-  redox:       {name:'氧化还原',     color:'#f59e0b', glow:'rgba(245,158,11,0.3)'},
-  analytical:  {name:'分析化学',     color:'#3b82f6', glow:'rgba(59,130,246,0.3)'},
-  physical:    {name:'物理结构化学', color:'#a855f7', glow:'rgba(168,85,247,0.3)'},
+  center:      {name:'中心实验',     color:'#34d399', glow:'rgba(52,211,153,.32)'},  // 翡翠绿(品牌色)
+  coordination:{name:'配位化学',     color:'#f59e0b', glow:'rgba(245,158,11,.3)'},   // 琥珀
+  redox:       {name:'氧化还原',     color:'#f43f5e', glow:'rgba(244,63,94,.3)'},    // 玫红
+  analytical:  {name:'分析化学',     color:'#38bdf8', glow:'rgba(56,189,248,.3)'},   // 天蓝
+  physical:    {name:'物理结构化学', color:'#a78bfa', glow:'rgba(167,139,250,.3)'},  // 紫罗兰
 };
 const CAT_FALLBACK = ['#60a5fa','#f87171','#fbbf24','#a78bfa','#34d399','#fb923c'];
 const CAT_FALLBACK_GLOW = ['rgba(96,165,250,0.3)','rgba(248,113,113,0.3)','rgba(251,191,36,0.3)','rgba(167,139,250,0.3)','rgba(52,211,153,0.3)','rgba(251,146,60,0.3)'];

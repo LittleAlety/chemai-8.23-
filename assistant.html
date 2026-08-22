@@ -361,6 +361,12 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   .page-head h1{font-size:21px}
   .chat{max-height:none;min-height:320px}
   .composer{padding:10px 12px 13px}
+  /* 移动端 composer：输入框全宽独占一行，控制项换行到下方，避免正常/集群切换挤压输入框 */
+  .composer{flex-wrap:wrap;align-items:center}
+  .composer textarea{flex:1 1 100%;order:-1}
+  .composer .mode-switch{order:0}
+  .composer #qaUpload{order:1}
+  .composer #qaSend,.composer #asSend{flex:1 1 auto;order:2}
 }
 
 /* ===== 回答排版优化 ===== */
@@ -555,25 +561,25 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
         <details class="side-collapse">
           <summary>📼 本地教学视频（4 部）</summary>
           <div class="side-video-wrap">
-            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <video class="side-video" controls preload="none" onerror="this.closest('.side-video-wrap').style.display='none'">
               <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾制备 王志勇.mp4" type="video/mp4">
             </video>
             <div class="side-video-cap"><b>三草酸合铁酸钾制备（王志勇）</b><span class="sz">47MB</span></div>
           </div>
           <div class="side-video-wrap">
-            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <video class="side-video" controls preload="none" onerror="this.closest('.side-video-wrap').style.display='none'">
               <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾性质与配离子电荷 王志勇.mp4" type="video/mp4">
             </video>
             <div class="side-video-cap"><b>性质与配离子电荷（王志勇）</b><span class="sz">43MB</span></div>
           </div>
           <div class="side-video-wrap">
-            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <video class="side-video" controls preload="none" onerror="this.closest('.side-video-wrap').style.display='none'">
               <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（上） 胡锴.mp4" type="video/mp4">
             </video>
             <div class="side-video-cap"><b>三草酸合铁酸钾制备（上）· 胡锴</b><span class="sz">29MB</span></div>
           </div>
           <div class="side-video-wrap">
-            <video class="side-video" controls preload="metadata" onerror="this.closest('.side-video-wrap').style.display='none'">
+            <video class="side-video" controls preload="none" onerror="this.closest('.side-video-wrap').style.display='none'">
               <source src="三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/三草酸合铁酸钾（下） 胡锴.mp4" type="video/mp4">
             </video>
             <div class="side-video-cap"><b>三草酸合铁酸钾制备（下）· 胡锴</b><span class="sz">50MB</span></div>

@@ -1112,6 +1112,7 @@ function matchFAQ(q){
   var GENERIC_KEYS={'实验':1,'制备':1,'化学':1,'操作':1,'步骤':1,'原理':1,'方法':1,'分析':1,'测定':1,'研究':1,'反应':1,'产物':1,'合成':1,'配合物':1,'氧化':1,'温度':1,'产率':1,'沉淀':1,'结晶':1,'过滤':1,'洗涤':1,'烘干':1,'干燥':1,'避光':1,'加热':1,'冷却':1,'溶解':1,'静置':1,'时间':1,'颜色':1,'现象':1,'安全':1,'影响':1,'原因':1,'过程':1,'条件':1,'用量':1,'浓度':1,'作用':1,'顺序':1,'终点':1,'检验':1,'验证':1,'水浴':1,'搅拌':1,'生成':1,'分解':1,'方程式':1,'反应方程式':1,'化学方程式':1};
   // 化学名词(共享实体词)不作为"显著词"——化学实体靠实体分,不靠显著词(避免共享实体的离题条目利用)
   var CHEM_NOUN={'草酸':1,'莫尔盐':1,'摩尔盐':1,'乙醇':1,'过氧化氢':1,'铁氰化钾':1,'硫酸亚铁':1,'草酸钾':1,'草酸根':1,'三草酸':1,'氢氧化铁':1,'硫酸':1,'氨水':1,'双氧水':1,'配离子':1,'酸根':1,'草酸氢钾':1,'草酸亚铁':1};
+  var FH_THRESH=45; // firehose 降权阈值：keys>FH_THRESH 且标题未印证(tt<5)的漂流 firehose 用 sqrt 阻尼——只靠海量冗余 key 掠走细问的宽条目被削弱；合法广谱条(标题印证 tt=5)不受罚
   function isChemicalKey(k){ return /[a-z0-9]/.test(norm(k)) || !!CHEM_NOUN[k]; }
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
@@ -1142,6 +1143,8 @@ function matchFAQ(q){
     var titleTopical=0, nTitle=norm(f.title||'');
     for(var hi=0;hi<hits.length;hi++){ var _nk=norm(hits[hi]); if(hits[hi].length>=2 && !GENERIC_KEYS[_nk] && nTitle.indexOf(_nk)>=0){ if(_nk.length>=3 && !isChemicalKey(hits[hi])) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
     var score=keyScore+entScore+longKey*0.5+lenBonus+titleTopical+distinctHits*2;
+    // firehose 降权（见 FH_THRESH 注释）
+    if(f.keys.length>FH_THRESH && titleTopical<5) score*=Math.pow(FH_THRESH/f.keys.length,0.5);
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
     if(score>bestScore){bestScore=score;best=f;}

@@ -1,7 +1,7 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://k3fec2o43.clawdbot.ggff.net/)
-[![Version](https://img.shields.io/badge/version-v68-blue)](https://github.com/LittleAlety/chemai-8.6-)
+[![Version](https://img.shields.io/badge/version-v71-blue)](https://github.com/LittleAlety/chemai-8.6-)
 [![FAQ](https://img.shields.io/badge/FAQ-3102条-green)](https://github.com/LittleAlety/chemai-8.6-)
 [![Corpus](https://img.shields.io/badge/语料库-445篇-orange)](https://github.com/LittleAlety/chemai-8.6-)
 [![KG](https://img.shields.io/badge/知识图谱-123节点-blueviolet)](https://github.com/LittleAlety/chemai-8.6-)
@@ -176,12 +176,15 @@ npx serve .                     # Node.js
 
 ## 版本历史
 
-> 版本线 v30 → v68（2026-07 至 2026-08-22）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
+> 版本线 v30 → v71（2026-07 至 2026-08-23）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
 
-### 近期（v56 → v68）
+### 近期（v56 → v71）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v71** | 08-23 | **学术追踪 + 知识星链（闻道④⑤）**：corpus 页新增「📡 学术追踪·领域动态」区——课题前沿·近期文献(按 `e.year` 降序取 8，卡上年份徽章+子领域/文献类型) + 📅 年份趋势 chips(点某年下钻到知识清单、再点取消) + 🔗 知识星链(基于收藏，按子领域+关键词对语料计分取 top3 生成关联节点)；收藏按钮点击即时刷新星链。`state.year` 过滤 + `renderAcademicTrack`/`buildStarChain`/`_tok`；修 `assistant-model.js`(defer 加载)致老用户收藏态/星链首屏空态——`DOMContentLoaded` 补齐 `refreshList()`+`renderAcademicTrack()` |
+| **v70** | 08-23 | **闻道三功能（①②③）**：② 知识库多源枢纽——corpus `#doctypeSel` 来源类型分面 + A 区来源类型分布条形图(点击下钻)；③ 收藏+笔记——`chemai_favorites_v1`(数组)/`chemai_notes_v1`(map) 纯函数挂 `window.AssistantModel`，覆盖 corpus 行(📌/✏️)+knowledge 面板+精通之路汇总区并入学习画像导出；① 多文献横向对比——`AUTHORITY_RULES` 每条加只读 `param`/`lecture` 字段(已核验向后兼容) + 纯函数 `extractParamCompare`/`buildCompareTableHTML`，研究答案尾部自动追加「📊 多文献横向对比·讲义最高权威」卡(⚠=与讲义不符) |
+| **v69** | 08-22/23 | **助手模型化改造**：`assets/assistant-model.js`——6 工作模式(对照 `MODE_RECIPES`) + 🧠 思考链面板 + 打字机流式渲染(`buildStagedBlocks`/`Typewriter`) + 计划/可视化/精通之路仪表盘 + SM-2 间隔复习(`srsSchedule`/`srsMerge`/`srsDueToday`) + 学习画像导出；Phase2 学习闭环(掌握度测评/反馈重排/复习外推)完成；`npm test` 新增该模块纯函数单测 |
 | **v68** | 08-22 | **科普探索页图片防畸变 + 光敏材料/催化剂补图**：画廊 6 卡横幅改为 `width:100%` + 内联 `aspect-ratio:4/3` + `object-fit:cover`（编译 CSS 无 `.object-cover` 规则，原先 `fill` 拉伸致图片被压缩得很怪异，今改为等比覆盖裁切）；生活化学 4 卡全部配图——光敏材料补 docx 蓝晒植物印相、催化剂补 docx Fe-草酸根配位结构。`scripts/v68-inject-explore.js` |
 | **v67** | 08-22 | **科普探索页卡片插图**：实验现象画廊 6 卡配顶部横幅图（黄色沉淀实拍 / 加 H₂O₂ 变色 / 翠绿晶体 / 阳光变色 / 蓝晒浪漫 / 配合物）；生活化学 4 卡描述下方条件缩略图（蓝晒摄影术 / 药物化学，光敏材料 / 催化剂留空）。`assets/images/explore/` 5 张 docx 提取图 + `scripts/v67-inject-explore.js` |
 | **v66** | 08-22 | **AI 助手移动端输入框解放 + 侧栏视频懒加载提速**：composer 在 ≤640px 改为 flex-wrap 换行（正常/集群开关 + 文件 + 发送各自成行，输入框不再被挤到 ~30px）；4 部侧栏视频 `preload="metadata"`→`preload="none"`，慢网下 DOMContentLoaded 20.4s→3.9s、load 45.9s→23.3s。`scripts/v66-inject-*.js`（CSS + 视频注入） |

@@ -533,6 +533,8 @@ button{font-family:inherit;cursor:pointer}
         </div>
       </div>
       <div class="panel-foot">
+        <button class="btn-ai" id="pFav" style="margin-right:6px">📌 收藏</button>
+        <button class="btn-ai" id="pNote" style="margin-right:6px">✏️ 笔记</button>
         <a class="btn-ai" id="pAskAI" href="assistant.html" target="_self">🤖 问 AI 助手</a>
       </div>
     </aside>
@@ -1657,6 +1659,7 @@ function openPanel(n){
     ? list[0].questions[0]
     : '请讲解「'+n.name+'」的核心概念，以及它在三草酸合铁酸钾制备实验中的作用。';
   $('#pAskAI').href = 'assistant.html?mode=qa&q=' + encodeURIComponent(n.name + '：' + coreQ);
+  refreshPfav(n.id);
 
   const p = $('#panel');
   p.classList.add('open');
@@ -1666,7 +1669,31 @@ function openPanel(n){
 /* ==================== 启动 ==================== */
 loadData();
 document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});
+
+/* ==================== 收藏 + 笔记（闻道③ · 图谱详情面板） ==================== */
+var pFav=document.getElementById('pFav'),pNote=document.getElementById('pNote');
+function refreshPfav(id){
+  if(!pFav||id===undefined||id===null)return;
+  const isf=(window.AssistantModel&&window.AssistantModel.isFavorite)?window.AssistantModel.isFavorite(id):false;
+  pFav.textContent=isf?'📌 已收藏':'📌 收藏';
+}
+if(pFav)pFav.addEventListener('click',()=>{
+  if(selectedId==null)return;
+  const nd=nodeById.get(selectedId);if(!nd)return;
+  const item={id:selectedId,title:nd.name,src:'kg',subfield:nd.subfield||''};
+  const isf=(window.AssistantModel&&window.AssistantModel.toggleFavorite)?window.AssistantModel.toggleFavorite(item):false;
+  pFav.textContent=isf?'📌 已收藏':'📌 收藏';
+});
+if(pNote)pNote.addEventListener('click',()=>{
+  if(selectedId==null)return;
+  const nd=nodeById.get(selectedId);if(!nd)return;
+  const cur=(window.AssistantModel&&window.AssistantModel.getNote)?window.AssistantModel.getNote(selectedId):'';
+  const v=prompt('笔记（'+nd.name+'）：',cur);
+  if(v===null)return;
+  if(window.AssistantModel&&window.AssistantModel.saveNote)window.AssistantModel.saveNote(selectedId,v);
+});
 </script>
+<script src="assets/assistant-model.js" defer></script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 <style>
 /* === ChemAI 全局美化 v49：动态效果强化 + 按键边界清晰 + 移动端tab滚动 === */

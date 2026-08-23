@@ -340,6 +340,13 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       </div>
       <div id="barChart"></div>
     </div>
+    <div class="card" style="margin-top:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div style="font-size:15px;font-weight:700">来源类型分布 · 资源枢纽</div>
+        <div style="font-size:12px;color:var(--t3)">按文献类型(doctype)统计，点击某类型可下钻到知识清单</div>
+      </div>
+      <div id="doctypeChart"></div>
+    </div>
   </section>
 
   <!-- B. 知识清单浏览 -->
@@ -349,6 +356,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       <div class="toolbar">
         <div class="search-box"><input id="searchInput" type="text" placeholder="搜索标题 / 子领域 / 关键方法 / 核心对象…"/></div>
         <select class="sel" id="subfieldSel"><option value="">全部子领域</option></select>
+        <select class="sel" id="doctypeSel"><option value="">全部来源类型</option></select>
         <select class="sel" id="langSel">
           <option value="">全部语言</option>
           <option value="中文">中文</option>
@@ -363,7 +371,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
           <thead><tr>
             <th style="width:58px">编号</th><th>标题</th><th style="width:70px">语言</th>
             <th style="width:100px">子领域</th><th style="width:96px">文献类型</th><th style="width:130px">关键方法</th>
-            <th>能回答的问题</th><th style="width:170px">文件路径</th>
+            <th>能回答的问题</th><th style="width:170px">文件路径</th><th style="width:150px">操作</th>
           </tr></thead>
           <tbody id="listBody"></tbody>
         </table>
@@ -375,6 +383,47 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       </div>
     </div>
   </section>
+
+  <!-- F. 学术追踪 · 知识星链（闻道④⑤） -->
+  <section class="section" id="section-academic">
+    <div class="section-title"><div class="st-icon">📡</div>学术追踪 · 知识星链<span class="st-sub">课题前沿动态 · 基于收藏的关联推荐</span></div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div style="font-size:15px;font-weight:700">🧭 课题前沿 · 近期文献</div>
+        <div style="font-size:12px;color:var(--t3)">按发表年份降序，展示最近入库的文献动态</div>
+      </div>
+      <div class="track-grid" id="trackFeed"><div class="empty-tip">加载中…</div></div>
+      <div style="margin-top:16px;font-size:13px;color:var(--t2)">📅 年份趋势</div>
+      <div id="trackYears" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px"></div>
+    </div>
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div style="font-size:15px;font-weight:700">🔗 知识星链 · 基于收藏的关联推荐</div>
+        <div style="font-size:12px;color:var(--t3)">从你收藏的文献出发，按子领域与关键词串联相关知识</div>
+      </div>
+      <div id="starChain"><div class="empty-tip">加载中…</div></div>
+    </div>
+  </section>
+  <style>
+  #section-academic .track-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+  #section-academic .track-item{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid var(--bd2);border-radius:10px;background:var(--bg2);text-decoration:none;color:var(--t1);transition:border-color .2s,background .2s,transform .2s}
+  #section-academic .track-item:hover{border-color:#2dd4bf;background:var(--card);transform:translateY(-2px)}
+  #section-academic .track-year{flex:0 0 auto;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:rgba(45,212,191,.12);color:#2dd4bf;border:1px solid rgba(45,212,191,.25);margin-top:1px}
+  #section-academic .track-body{display:flex;flex-direction:column;gap:3px;min-width:0}
+  #section-academic .track-title{font-size:13px;line-height:1.4}
+  #section-academic .track-meta{font-size:11.5px;color:var(--t3)}
+  #section-academic .yr-chip{font-size:12px;padding:5px 12px;border:1px solid var(--bd2);border-radius:999px;background:var(--bg2);color:var(--t2);cursor:pointer;transition:all .2s}
+  #section-academic .yr-chip:hover{border-color:#2dd4bf;color:#2dd4bf}
+  #section-academic .yr-chip.on{background:#2dd4bf;color:#052a26;border-color:#2dd4bf;font-weight:700}
+  #section-academic .yr-chip .yr-count{opacity:.72;margin-left:3px}
+  #section-academic .star-node{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--bd2);border-radius:12px;background:var(--bg2);margin-bottom:12px}
+  #section-academic .star-hub{flex:0 0 auto;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:rgba(96,165,250,.14);color:#60a5fa;border:1px solid rgba(96,165,250,.28)}
+  #section-academic .star-fav{font-size:13.5px;font-weight:700;color:var(--t1);margin-bottom:8px;line-height:1.4}
+  #section-academic .star-lbl{font-size:11px;color:var(--t3);margin-bottom:6px}
+  #section-academic .star-rel{display:flex;flex-wrap:wrap;gap:8px}
+  #section-academic .star-rel-item{font-size:12.5px;color:var(--t2);background:var(--card);border:1px solid var(--bd2);border-radius:8px;padding:5px 10px;text-decoration:none;transition:all .2s}
+  #section-academic .star-rel-item:hover{border-color:#2dd4bf;color:#2dd4bf}
+  </style>
 
   <!-- C. 上传语料 -->
   <section class="section">
@@ -496,7 +545,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
 /* ================= 数据与存储 ================= */
 const LS_UPLOAD='chemai_corpus_uploaded', LS_GEN='chemai_generation';
 let baseEntries=[], uploadedEntries=[], kgNodes=null;
-const state={search:'',subfield:'',lang:'',page:1,perPage:30,idFocus:null};
+const state={search:'',subfield:'',lang:'',doctype:'',year:'',page:1,perPage:30,idFocus:null};
 
 function loadUploaded(){try{const v=JSON.parse(localStorage.getItem(LS_UPLOAD));return Array.isArray(v)?v:[]}catch(e){return[]}}
 function saveUploaded(){try{localStorage.setItem(LS_UPLOAD,JSON.stringify(uploadedEntries))}catch(e){toast('本地存储写入失败，上传条目可能无法保存','error')}}
@@ -579,9 +628,9 @@ function refreshBarChart(){
     +'<div class="bar-count">'+v+'<span class="bar-pct">'+pct.toFixed(1)+'%</span></div></div>'
   }).join('')||'<div class="empty-tip">暂无数据</div>';
   requestAnimationFrame(()=>setTimeout(()=>{
-    document.querySelectorAll('.bar-fill').forEach(el=>el.style.width=el.dataset.w+'%');
+    document.querySelectorAll('#barChart .bar-fill').forEach(el=>el.style.width=el.dataset.w+'%');
     // 条形图点击跳转到知识清单并筛选对应子领域
-    document.querySelectorAll('.bar-clickable').forEach(el=>{
+    document.querySelectorAll('#barChart .bar-clickable').forEach(el=>{
       el.addEventListener('click',()=>{
         const sf=el.dataset.subfield;
         $('#subfieldSel').value=sf;state.subfield=sf;state.page=1;
@@ -618,10 +667,111 @@ function refreshSubfieldOptions(){
   sel.innerHTML='<option value="">全部子领域</option>'+set.map(s=>'<option value="'+esc(s)+'">'+esc(s)+'</option>').join('');
   if(set.includes(cur))sel.value=cur;
 }
+/* 行操作列：📌收藏 / ✏️笔记（data-act 委托到 #listBody） */
+function opCell(e){
+  const fav=(window.AssistantModel&&window.AssistantModel.isFavorite)?window.AssistantModel.isFavorite(e.id):false;
+  const attrs='data-eid="'+esc(e.id)+'" data-title="'+esc(e.title||'')+'" data-sub="'+esc(e.subfield||'')+'"';
+  return '<div class="op-cell" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">'
+    +'<button class="btn op-fav" data-act="fav" '+attrs+' style="font-size:11px;padding:4px 9px">'+(fav?'📌 已收藏':'📌 收藏')+'</button>'
+    +'<button class="btn op-note" data-act="note" '+attrs+' style="font-size:11px;padding:4px 9px">✏️ 笔记</button>'
+    +'</div>';
+}
+function refreshDoctypeOptions(){
+  const sel=document.getElementById('doctypeSel');
+  const cur=sel.value;
+  const set=[...new Set(mergedEntries().map(e=>e.doctype||'—'))];
+  sel.innerHTML='<option value="">全部来源类型</option>'+set.map(s=>'<option value="'+esc(s)+'">'+esc(s)+'</option>').join('');
+  if(set.includes(cur))sel.value=cur;
+}
+const DOC_COLORS={'实验研究':'#34d399','期刊论文':'#60a5fa','实验教学':'#fbbf24','实验讲义':'#2dd4bf','综述':'#a78bfa','教学研究':'#f472b6','方法改进':'#fb923c','科普':'#22d3ee','学生报告':'#818cf8','习题':'#c084fc','百科条目':'#38bdf8','竞赛试题':'#f87171','教案':'#94a3b8','MSDS':'#fb7185','图片':'#64748b','科普/讲义':'#2dd4bf','其他':'#64748b'};
+function refreshDoctypeChart(){
+  const counts={};
+  mergedEntries().forEach(e=>{const k=e.doctype||'—';counts[k]=(counts[k]||0)+1});
+  const rows=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+  const max=rows.length?rows[0][1]:1;
+  const total=rows.reduce((a,[,v])=>a+v,0)||1;
+  const el=document.getElementById('doctypeChart');
+  el.innerHTML=rows.slice(0,12).map(([k,v])=>{
+    const col=DOC_COLORS[k]||'#2dd4bf';
+    const pct=(v/total*100);
+    return '<div class="bar-row bar-clickable" data-doctype="'+esc(k)+'" title="'+esc(k)+' · '+v+' 条 ('+pct.toFixed(1)+'%) · 点击筛选">'
+    +'<div class="bar-name" style="color:'+col+'">'+esc(k)+'</div>'
+    +'<div class="bar-track"><div class="bar-fill" data-w="'+(v/max*100).toFixed(1)+'" style="background:linear-gradient(90deg,'+col+','+col+'99);box-shadow:0 0 10px '+col+'44"></div></div>'
+    +'<div class="bar-count">'+v+'<span class="bar-pct">'+pct.toFixed(1)+'%</span></div></div>'
+  }).join('')||'<div class="empty-tip">暂无数据</div>';
+  requestAnimationFrame(()=>setTimeout(()=>{
+    document.querySelectorAll('#doctypeChart .bar-fill').forEach(el=>el.style.width=el.dataset.w+'%');
+    document.querySelectorAll('#doctypeChart .bar-clickable').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const dt=el.dataset.doctype;
+        document.getElementById('doctypeSel').value=dt;state.doctype=dt;state.page=1;
+        refreshList();
+        document.getElementById('section-browse').scrollIntoView({behavior:'smooth'});
+      });
+    });
+  },30));
+}
+/* ================= 学术追踪 · 知识星链（闻道④⑤）================= */
+function _tok(s){
+  return new Set(String(s||'').toLowerCase().split(/[\s,，、;；.。()（）\[\]【】\/·:：]+/).filter(x=>x));
+}
+function buildStarChain(m,favs){
+  if(!favs||!favs.length){
+    return '<div class="empty-tip">还没有收藏起点。在知识清单里点任意一条的「📌 收藏」，我会按子领域与关键词为你串联相关知识（星链）。</div>';
+  }
+  const nodes=favs.slice(0,4).map(fv=>{
+    const fsub=fv.subfield||'', fkeys=_tok((fv.title||'')+' '+(fv.id||''));
+    const scored=m.filter(e=>String(e.id)!==String(fv.id)).map(e=>{
+      let sc=0;
+      if(fsub&&(e.subfield||'')===fsub)sc+=3;
+      const ekeys=_tok((e.title||'')+' '+(e.objects||'')+' '+(e.methods||''));
+      fkeys.forEach(k=>{ if(k.length>1&&ekeys.has(k))sc+=1; });
+      return {e,sc};
+    }).filter(x=>x.sc>0).sort((a,b)=>b.sc-a.sc).slice(0,3);
+    if(!scored.length)return '';
+    const rel=scored.map(s=>{
+      const href=s.e.source_url?s.e.source_url:(s.e.doi?('https://doi.org/'+s.e.doi):'');
+      const open=href?' target="_blank" rel="noopener"':'';
+      const meta=((s.e.doctype||'')+' · '+(s.e.subfield||'')).replace(/^ · /,'');
+      const lbl=s.e.title+(s.e.year?(' · '+s.e.year):'');
+      return '<a class="star-rel-item" href="'+esc(href)+'"'+open+' title="'+esc(meta)+'">'+esc(lbl)+'</a>';
+    }).join('');
+    return '<div class="star-node"><span class="star-hub">🔗 起点</span>'
+      +'<div style="flex:1;min-width:0"><div class="star-fav">'+esc(fv.title||fv.id)+'</div>'
+      +'<div class="star-lbl">相关文献（子领域+关键词匹配）</div><div class="star-rel">'+rel+'</div></div></div>';
+  }).join('');
+  return nodes||'<div class="empty-tip">暂无相关推荐。收藏的文献子领域较单一，可再收几篇拓宽星链。</div>';
+}
+function renderAcademicTrack(){
+  if(typeof document==='undefined'||!document.getElementById('trackFeed'))return;
+  const m=mergedEntries();
+  /* 1) 近期文献：按发表年份降序取 8 条 */
+  const dated=m.filter(e=>e.year).slice().sort((a,b)=>String(b.year).localeCompare(String(a.year))).slice(0,8);
+  document.getElementById('trackFeed').innerHTML=dated.map(e=>{
+    const href=e.source_url?e.source_url:(e.doi?('https://doi.org/'+e.doi):'');
+    const open=href?' target="_blank" rel="noopener"':'';
+    return '<a class="track-item" href="'+esc(href)+'"'+open+' title="'+esc((e.doctype||'文献')+(href?' · 点击查看来源':'（已入库，无外链）'))+'">'
+      +'<span class="track-year">'+esc(e.year)+'</span>'
+      +'<span class="track-body"><span class="track-title">'+esc(e.title)+'</span>'
+      +'<span class="track-meta">'+esc(e.subfield||'')+(e.doctype?' · '+esc(e.doctype):'')+'</span></span></a>';
+  }).join('')||'<div class="empty-tip">暂无标注发表年份的文献</div>';
+  /* 2) 年份趋势 chips：点某年下钻到知识清单 */
+  const yc={}; m.forEach(e=>{ if(e.year)yc[e.year]=(yc[e.year]||0)+1 });
+  const yrs=Object.entries(yc).sort((a,b)=>String(b[0]).localeCompare(String(a[0]))).slice(0,8);
+  document.getElementById('trackYears').innerHTML=yrs.map(([y,n])=>{
+    const on=(String(state.year)===String(y));
+    return '<button class="yr-chip'+(on?' on':'')+'" data-year="'+esc(y)+'" title="'+n+' 条 · 点击筛选该年份">'+esc(y)+'<span class="yr-count">· '+n+'</span></button>';
+  }).join('')||'<div class="empty-tip">—</div>';
+  /* 3) 知识星链：基于收藏串联 */
+  const favs=(window.AssistantModel&&window.AssistantModel.getFavorites)?window.AssistantModel.getFavorites():[];
+  document.getElementById('starChain').innerHTML=buildStarChain(m,favs);
+}
 function filteredEntries(){
   const q=state.search.trim().toLowerCase();
   return mergedEntries().filter(e=>{
     if(state.subfield&&(e.subfield||'其他')!==state.subfield)return false;
+    if(state.doctype&&(e.doctype||'—')!==state.doctype)return false;
+    if(state.year&&String(e.year)!==String(state.year))return false;
     if(state.lang&&(e.lang||'未知')!==state.lang)return false;
     if(q){
       const hay=[e.title,e.subfield,e.methods,e.objects].join(' ').toLowerCase();
@@ -653,6 +803,7 @@ function refreshList(){
       '<td>'+esc(e.methods||'—')+'</td>'+
       '<td>'+qHtml+'</td>'+
       '<td><div class="path-cell">'+esc(e.path||'—')+'</div></td>'+
+      '<td>'+opCell(e)+'</td>'+
     '</tr>';
   }).join('');
   document.getElementById('emptyTip').style.display=total?'none':'block';
@@ -678,10 +829,11 @@ function renderPager(pages){
 /* 深度链接聚焦：高亮并滚动到指定 id 条目 */
 function focusEntry(id){
   // 清除所有筛选，确保目标条目可见
-  state.search=''; state.subfield=''; state.lang='';
+  state.search=''; state.subfield=''; state.lang=''; state.doctype=''; state.year='';
   const si=document.getElementById('searchInput'); if(si) si.value='';
   const sf=document.getElementById('subfieldSel'); if(sf) sf.value='';
   const lg=document.getElementById('langSel'); if(lg) lg.value='';
+  const df=document.getElementById('doctypeSel'); if(df) df.value='';
   // 找到目标条目所在页码
   const all=mergedEntries();
   const idx=all.findIndex(e=>String(e.id)===String(id));
@@ -717,7 +869,7 @@ function refreshRecords(){
   document.getElementById('recEmpty').style.display=recs.length?'none':'block';
   document.getElementById('recCount').textContent=recs.length?('共 '+recs.length+' 条，删除将同步移除知识清单中的对应条目'):'';
 }
-function refreshAll(){refreshStats();refreshBarChart();refreshSubfieldOptions();refreshList();refreshRecords();renderLearningCenter()}
+function refreshAll(){refreshStats();refreshBarChart();refreshSubfieldOptions();refreshDoctypeChart();refreshDoctypeOptions();refreshList();refreshRecords();renderLearningCenter();renderAcademicTrack()}
 
 /* ================= 导出 ================= */
 function download(name,content,mime){
@@ -1372,8 +1524,8 @@ function bindEvents(){
   dz.addEventListener('drop',e=>{if(e.dataTransfer.files.length)handleFiles(e.dataTransfer.files)});
 
   $('#viewAllBtn').addEventListener('click',()=>{
-    $('#searchInput').value='';state.search='';state.subfield='';state.lang='';state.page=1;
-    $('#subfieldSel').value='';$('#langSel').value='';refreshList();
+    $('#searchInput').value='';state.search='';state.subfield='';state.lang='';state.doctype='';state.year='';state.page=1;
+    $('#subfieldSel').value='';$('#langSel').value='';$('#doctypeSel').value='';refreshList();renderAcademicTrack();
     $('#section-browse').scrollIntoView({behavior:'smooth'});
   });
 
@@ -1383,7 +1535,15 @@ function bindEvents(){
     searchTm=setTimeout(()=>{state.search=e.target.value;state.page=1;refreshList()},160);
   });
   document.getElementById('subfieldSel').addEventListener('change',e=>{state.subfield=e.target.value;state.page=1;refreshList()});
+  document.getElementById('doctypeSel').addEventListener('change',e=>{state.doctype=e.target.value;state.page=1;refreshList()});
   document.getElementById('langSel').addEventListener('change',e=>{state.lang=e.target.value;state.page=1;refreshList()});
+  document.getElementById('trackYears').addEventListener('click',e=>{
+    const b=e.target.closest('[data-year]');if(!b)return;
+    const y=b.dataset.year;
+    state.year=(String(state.year)===String(y))?'':y;
+    state.page=1;refreshList();renderAcademicTrack();
+    document.getElementById('section-browse').scrollIntoView({behavior:'smooth'});
+  });
   document.getElementById('exportJsonBtn').addEventListener('click',exportJSON);
   document.getElementById('exportMdBtn').addEventListener('click',exportMD);
 
@@ -1397,6 +1557,36 @@ function bindEvents(){
     refreshList();
   });
   document.getElementById('listBody').addEventListener('click',e=>{
+    const fb=e.target.closest('[data-act="fav"]');
+    if(fb){
+      const item={id:fb.dataset.eid,title:fb.dataset.title,src:'corpus',subfield:fb.dataset.sub};
+      const isfav=(window.AssistantModel&&window.AssistantModel.toggleFavorite)?window.AssistantModel.toggleFavorite(item):false;
+      fb.textContent=isfav?'📌 已收藏':'📌 收藏';
+      renderAcademicTrack();
+      return;
+    }
+    const nb=e.target.closest('[data-act="note"]');
+    if(nb){
+      const cell=nb.closest('.op-cell');
+      if(!cell)return;
+      let ed=cell.querySelector('.note-edit');
+      if(ed){ ed.remove(); return; }
+      const id=nb.dataset.eid;
+      const note=(window.AssistantModel&&window.AssistantModel.getNote)?window.AssistantModel.getNote(id):'';
+      ed=document.createElement('div');ed.className='note-edit';
+      ed.style.cssText='margin-top:5px;min-width:150px';
+      ed.innerHTML='<textarea rows="2" style="width:100%;min-height:38px;font:inherit;padding:5px 8px;border:1px solid var(--bd2);border-radius:6px;background:var(--bg2);color:var(--t1)">'+esc(note)+'</textarea>'
+        +'<div style="display:flex;gap:5px;margin-top:4px"><button data-nsave="'+id+'" style="font-size:11px;padding:4px 9px" class="btn">💾 保存</button></div>';
+      cell.appendChild(ed);
+      return;
+    }
+    const ns=e.target.closest('[data-nsave]');
+    if(ns){
+      const ec=ns.closest('.note-edit');const ta=ec&&ec.querySelector('textarea');
+      if(window.AssistantModel&&window.AssistantModel.saveNote)window.AssistantModel.saveNote(ns.dataset.nsave,ta?ta.value:'');
+      if(ec)ec.remove();
+      return;
+    }
     const at=e.target.closest('.abs-toggle');
     if(at){
       const tr=at.closest('tr');tr.classList.toggle('abs-open');
@@ -1424,6 +1614,11 @@ function bindEvents(){
 }
 init();
 document.getElementById("hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});
+/* assistant-model.js 为 defer 加载：init 时 window.AssistantModel 尚未就绪，
+   收藏按钮态与知识星链需在 DOMContentLoaded（defer 之后）补齐一次重渲染，避免老用户收藏不显示 */
+window.addEventListener('DOMContentLoaded',function(){
+  if(window.AssistantModel){ refreshList(); renderAcademicTrack(); }
+});
 </script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
 <style>
@@ -1630,5 +1825,6 @@ document.addEventListener('DOMContentLoaded',function(){
 @media (prefers-reduced-motion:reduce){ .stat:hover{ transform:none; } }
 </style>
 <script src="assets/bg-particles.js" defer></script>
+<script src="assets/assistant-model.js" defer></script>
 </body>
 </html>

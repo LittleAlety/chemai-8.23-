@@ -7,7 +7,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "test": "node --test test/rag-utils.test.js",
+    "test": "node --test test/rag-utils.test.js test/assistant-model.test.js",
     "eval": "node 训练管道/evaluate.js",
     "pipeline": "node 训练管道/run_pipeline.js",
     "pipeline:quick": "node 训练管道/run_pipeline.js --mode quick --cycles 10",

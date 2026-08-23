@@ -5,6 +5,9 @@ _site/
 _sitepreview/
 .pipeline_checkpoint.json
 .pipeline.log
+# 本地测试/临时产物（不入库：Playwright E2E 用临时服务器与探测目录）
+_etmp/
+_explore_extract/
 # 大型参考资料（勿入库，GitHub 100MB 单文件限制；v60 误提交事故后加）
 三草酸合铁酸钾资料/基础书籍/
 三草酸合铁酸钾资料/8 三草酸合铁酸钾.zip

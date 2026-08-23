@@ -364,7 +364,8 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
   .composer{padding:10px 12px 13px}
   /* 移动端 composer：输入框全宽独占一行，控制项换行到下方，避免正常/集群切换挤压输入框 */
   .composer{flex-wrap:wrap;align-items:center}
-  .composer textarea{flex:1 1 100%;order:-1}
+  .composer textarea{flex:1 1 100%;order:-1;font-size:16px}   /* ≥16px 防 iOS 聚焦自动缩放 */
+  .composer .composer-advanced{flex-basis:100%}
   .composer .mode-switch{order:0}
   .composer #qaUpload{order:1}
   .composer #qaSend,.composer #asSend{flex:1 1 auto;order:2}
@@ -390,6 +391,10 @@ footer{border-top:1px solid var(--bd);padding:18px 20px;text-align:center;color:
 .bib-item details[open]>summary::before{content:"\25BE"}
 .bib-item details>summary::-webkit-details-marker{display:none}
 .bib-abs-txt{margin-top:8px;padding:9px 12px;font-size:12.5px;line-height:1.75;color:var(--t2);background:rgba(0,0,0,.18);border-left:2px solid var(--purple);border-radius:0 8px 8px 0}
+.bib-item>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;user-select:none}
+.bib-item>summary::-webkit-details-marker{display:none}
+.bib-item>summary::before{content:"\25B8";font-size:11px;color:var(--t3);flex:none}
+.bib-item[open]>summary::before{content:"\25BE"}
 /* 可折叠文献区 */
 details.ref-fold{margin-top:4px}
 details.ref-fold>summary{cursor:pointer;list-style:none;user-select:none;display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg2);border:1px solid var(--bd2);border-radius:12px;font-size:14px;font-weight:600;color:var(--teal);transition:.2s}
@@ -459,13 +464,7 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
           <button class="btn ghost sm" id="qaClear">🗑 清空对话</button>
           <button class="btn ghost sm" id="qaExport" title="导出对话历史">📥 导出</button>
         </div>
-        <div class="role-bar" id="roleBar">
-          <span class="rb-label">🎭 讲话风格随身份切换</span>
-          <button class="rs-chip" data-role="non-chemistry">🧑‍🎓 通俗</button>
-          <button class="rs-chip" data-role="chemistry">🎓 专业</button>
-          <button class="rs-chip" data-role="teacher">👩‍🏫 教学</button>
-          <span class="rb-hint" id="roleHint"></span>
-        </div>
+        <!-- 身份讲话风格已取消（v65 效果不明显，v71.1 移除） -->
         <div class="chat" id="qaChat"></div>
         <div class="chips" id="qaChips"></div>
         <div class="work-mode" id="workModeBar"></div>
@@ -546,6 +545,7 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
 	          <select id="llmModelSelect" style="flex:1;padding:5px 7px;background:var(--bg2);border:1px solid var(--bd2);border-radius:7px;color:var(--t1);font-size:11px">
 	            <option value="deepseek-chat">DeepSeek V3</option>
 	            <option value="deepseek-reasoner">DeepSeek R1</option>
+            <option value="deepseek-v4-flash-vision">DeepSeek V4 Flash Vision</option>
 	            <option value="gpt-4o">GPT-4o</option>
 	            <option value="gpt-4o-mini">GPT-4o Mini</option>
 	          </select>
@@ -764,16 +764,30 @@ function exportChatHistory(){
 }
 
 async function callLLM(question, context, streamCallback){
-  var systemPrompt='你是 ChemAI 实验助手，专精于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验。\n\n'+
-    '你的知识边界覆盖以下领域（超出范围请明确说明"不确定"）：\n'+
-    '① 实验目的与产物认知 ② 反应原理（沉淀/氧化/配位三步） ③ 试剂与仪器 ④ 操作流程与关键参数 ⑤ 产率计算 ⑥ 误差分析 ⑦ 安全与废液处理 ⑧ 光化学应用与蓝晒 ⑨ 配位化学理论（晶体场/CFSE/磁性） ⑩ 热分析\n\n'+
-    '回答规则：\n'+
-    '- 严格基于提供的参考知识库内容回答，不得编造\n'+
-    '- 如果参考内容不足，请明确说"根据现有知识库，无法确定该问题的答案"，然后给出最相关的已知信息\n'+
-    '- 化学式请使用 Unicode 上下标格式（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻）\n'+
-    '- 用中文回答，专业简洁，分点列出时使用 · 或数字编号\n'+
-    '- 每个答案控制在 300 字以内，保留关键数字和化学式';
-  systemPrompt += rolePersona(chatRole());
+  var systemPrompt='你是 ChemAI 实验助手，专注于三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验的智能教学平台。\n\n'+
+    '【角色】\n'+
+    '你是一位严谨、耐心的大学无机化学实验助教，面向化学专业学生、教师以及非化学专业的科普受众，提供准确、可核查、循序渐进的实验教学解答。\n\n'+
+    '【目标】\n'+
+    '1. 准确回答本实验的原理、试剂、操作、关键参数、产率、误差、安全与废液处理、表征、光化学应用及拓展，帮助学生真正理解并正确完成实验。\n'+
+    '2. 所有数值与机理以武汉大学实验讲义为最高权威，文献与搜索结果仅作补充；与讲义冲突时以讲义为准并予提示。\n'+
+    '3. 讲解深入与通俗兼顾，让不同基础的提问者都能听懂、会用。\n\n'+
+    '【技能1：问题理解与分析】\n'+
+    '1. 先判定问题所属主题（原理/试剂/操作/产率/误差/安全/表征/应用/理论），据此组织答案。\n'+
+    '2. 辨析关键化学实体（配合物、配体、配位数、氧化还原、沉淀溶解平衡等），确保贴合本实验的真实场景。\n'+
+    '3. 若问题超出本实验知识边界，明确说明"根据现有知识库无法确定该问题的答案"，并给出最相关的已知信息，绝不编造。\n\n'+
+    '【技能2：教学讲解】\n'+
+    '1. 由浅入深：先给结论或方程式，再解释机理与依据，最后给出操作要点或注意事项。\n'+
+    '2. 善用分步与对比：如沉淀-氧化-配位三步、溶剂替换法 vs 蒸发法、直接法 vs 先沉淀后氧化间接法。\n'+
+    '3. 必要处补齐关键数据（Ksp、累积稳定常数、电极电位、溶解度、试剂用量）并说明来源。\n\n'+
+    '【输出格式】\n'+
+    '- 用中文，专业简洁；分点用 · 或数字编号，多步流程可分段以清晰呈现。\n'+
+    '- 化学式一律用 Unicode 上下标（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻、FeC₂O₄↓、CO₂↑）。\n'+
+    '- 每个答案控制在 300 字以内，保留关键数字与化学式；如需更深入，可在结尾提示"可继续追问"。\n\n'+
+    '【限制】\n'+
+    '1. 严格基于提供的参考知识库内容回答，不编造事实、数值或文献。\n'+
+    '2. 参考内容不足时如实说明"根据现有知识库，无法确定该问题的答案"，再给出最相关的已知信息。\n'+
+    '3. 数值一律以讲义为准（6% H₂O₂ 8mL、失水 100℃、烘干 50℃、理论产量 6.26g、草酸钾 3.5g 等）；与讲义冲突时以讲义为准并提示。\n'+
+    '4. 不回答与本实验无关或超出平台定位的问题，不提供危险操作建议。';
   var messages=[{role:'system', content: systemPrompt}];
   // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
   var userMsg=question;
@@ -1095,7 +1109,7 @@ function matchFAQ(q){
   // IDF 惩罚表：高频通用词降权
   var IDF_PENALTY={'实验':0.4,'制备':0.5,'化学':0.5,'操作':0.6,'步骤':0.6,'原理':0.5,'方法':0.6,'分析':0.6,'测定':0.6,'研究':0.7,'反应':0.5,'产物':0.6,'合成':0.5,'配合物':0.6};
   // 泛词(操作/概念)不作为"显著词"——仅命中泛词不视为主题命中
-  var GENERIC_KEYS={'实验':1,'制备':1,'化学':1,'操作':1,'步骤':1,'原理':1,'方法':1,'分析':1,'测定':1,'研究':1,'反应':1,'产物':1,'合成':1,'配合物':1,'氧化':1,'温度':1,'产率':1,'沉淀':1,'结晶':1,'过滤':1,'洗涤':1,'烘干':1,'干燥':1,'避光':1,'加热':1,'冷却':1,'溶解':1,'静置':1,'时间':1,'颜色':1,'现象':1,'安全':1,'影响':1,'原因':1,'过程':1,'条件':1,'用量':1,'浓度':1,'作用':1,'顺序':1,'终点':1,'检验':1,'验证':1,'水浴':1,'搅拌':1,'生成':1,'分解':1};
+  var GENERIC_KEYS={'实验':1,'制备':1,'化学':1,'操作':1,'步骤':1,'原理':1,'方法':1,'分析':1,'测定':1,'研究':1,'反应':1,'产物':1,'合成':1,'配合物':1,'氧化':1,'温度':1,'产率':1,'沉淀':1,'结晶':1,'过滤':1,'洗涤':1,'烘干':1,'干燥':1,'避光':1,'加热':1,'冷却':1,'溶解':1,'静置':1,'时间':1,'颜色':1,'现象':1,'安全':1,'影响':1,'原因':1,'过程':1,'条件':1,'用量':1,'浓度':1,'作用':1,'顺序':1,'终点':1,'检验':1,'验证':1,'水浴':1,'搅拌':1,'生成':1,'分解':1,'方程式':1,'反应方程式':1,'化学方程式':1};
   // 化学名词(共享实体词)不作为"显著词"——化学实体靠实体分,不靠显著词(避免共享实体的离题条目利用)
   var CHEM_NOUN={'草酸':1,'莫尔盐':1,'摩尔盐':1,'乙醇':1,'过氧化氢':1,'铁氰化钾':1,'硫酸亚铁':1,'草酸钾':1,'草酸根':1,'三草酸':1,'氢氧化铁':1,'硫酸':1,'氨水':1,'双氧水':1,'配离子':1,'酸根':1,'草酸氢钾':1,'草酸亚铁':1};
   function isChemicalKey(k){ return /[a-z0-9]/.test(norm(k)) || !!CHEM_NOUN[k]; }
@@ -1126,7 +1140,7 @@ function matchFAQ(q){
     var lenBonus=(longKey>0)?Math.min(2,((f.answer||'').length+(f.detail||'').length)/800):0;
     // 标题主题加成：≥3字非化学显著词在标题→+5(强主题信号)；其余命中词在标题→+3；防止共享化学实体的离题条目压过专题条目
     var titleTopical=0, nTitle=norm(f.title||'');
-    for(var hi=0;hi<hits.length;hi++){ if(hits[hi].length>=2 && nTitle.indexOf(norm(hits[hi]))>=0){ if(norm(hits[hi]).length>=3 && !isChemicalKey(hits[hi])) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
+    for(var hi=0;hi<hits.length;hi++){ var _nk=norm(hits[hi]); if(hits[hi].length>=2 && !GENERIC_KEYS[_nk] && nTitle.indexOf(_nk)>=0){ if(_nk.length>=3 && !isChemicalKey(hits[hi])) titleTopical=5; else if(titleTopical<3) titleTopical=3; } }
     var score=keyScore+entScore+longKey*0.5+lenBonus+titleTopical+distinctHits*2;
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
@@ -1495,10 +1509,10 @@ function citationHTML(r){
   s+=' <a href="corpus.html?id='+enc(String(e.id))+'" target="_blank" rel="noopener" style="color:var(--teal);font-size:11px">↗</a>';
   return s+'</li>';
 }
-/* 著录信息卡片（② 原理与细节 用，摘要可折叠） */
+/* 著录信息卡片（② 原理与细节 用，默认折叠仅显标题，点击展开） */
 function bibItemHTML(r){
   var e=r.e;
-  var s='<div class="bib-item"><div class="bib-t">📖 《'+esc(e.title)+'》</div><div class="bib-m">';
+  var s='<details class="bib-item"><summary class="bib-t">📖 《'+esc(e.title)+'》</summary><div class="bib-m">';
   if(e.subfield) s+='<span><b>子领域</b>'+esc(e.subfield)+'</span>';
   if(e.objects) s+='<span><b>研究对象</b>'+esc(e.objects)+'</span>';
   if(e.methods) s+='<span><b>关键方法</b>'+esc(e.methods)+'</span>';
@@ -1508,7 +1522,7 @@ function bibItemHTML(r){
     var abs=String(e.abstract);
     s+='<details><summary>摘要要点</summary><div class="bib-abs-txt">'+esc(abs.slice(0,220))+(abs.length>220?'…':'')+'</div></details>';
   }
-  return s+'</div>';
+  return s+'</div></details>';
 }
 const SEARCH_EXTRA=['配位','配位数','配位平衡','配位化合物','稳定常数','晶体场','分裂能','光谱化学序列','草酸根','氧化还原','沉淀','结晶','溶剂替换','重结晶','抽滤','减压过滤','滴定','标定','磁化率','顺磁','热重','差热','蓝晒','感光','显影','摩尔盐','绿矾','风化','脱水','溶解度','摩尔质量','化学式','电荷','光化学','光还原','量子产率','摩尔电导率','离子交换','误差','纯度','产率','安全','废液','毒性','避光','分解','颜色','温度','干燥','烘干','洗涤','过滤','浓缩','母液','杂质','反应机理','副反应','螯合','配体','中心离子','内界','外界','草酸亚铁','氢氧化铁','铁氰化钾','邻菲啰啉','高锰酸钾','硫氰化钾','氯化钡','离子交换树脂','恒重','检漏','倾滗','水浴','微沸','电子天平','真空干燥','感光剂','印相','曝光','阴离子交换','络合物','复盐','单晶','重结晶'];
 function extractSearchKeywords(q){
@@ -2976,9 +2990,6 @@ async function handleQA(q){
        +'<button class="btn ghost sm" onclick="runSkillsOnLast()">🧰 运行技能</button>'
        +'<button class="btn ghost sm" onclick="toggleAgentState()">🛰 集群状态</button></div>';
   }
-  var _role=chatRole();
-  if(_lastRoleIntro!==_role){ _lastRoleIntro=_role; html = roleIntroHTML(_role) + html; }
-  html += roleOutroHTML(_role);
 
   /* v69 思考链：插入在 .pipe 与 .ans 之间（复用检索轨迹/置信度/自查/来源徽章） */
   if(MODEL_FEATURES.reasoningPanel){
@@ -3817,7 +3828,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </style>
 <style id="model-v1">
 /* v69 模型化：落地页 hero + 6 模式药丸 + 思考链 + 逐字打字机 + 精通之路/计划/可视化 */
-.hero{text-align:center;padding:34px 16px 18px;max-width:920px;margin:0 auto}
+.hero{text-align:center;padding:24px 16px 14px;max-width:920px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--emerald,#10b981);background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.22);padding:5px 14px;border-radius:999px;margin-bottom:14px}
 .hero h1{font-size:clamp(30px,5.2vw,46px);line-height:1.12;margin:0 0 10px;background:linear-gradient(120deg,#f1f5f9 30%,#a78bfa 70%,#2dd4bf);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .hero .sub{font-size:clamp(14px,2.2vw,17px);color:var(--t2,#9aa6bd);margin:0 0 18px;line-height:1.7}
@@ -3830,7 +3841,7 @@ document.addEventListener('DOMContentLoaded',function(){
 .wm-pill{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;line-height:1.5;color:var(--t2,#9aa6bd);background:rgba(148,163,184,.06);border:1px solid rgba(148,163,184,.18);border-radius:999px;padding:5px 12px;cursor:pointer;transition:border-color .18s ease,color .18s ease,background .18s ease}
 .wm-pill:hover{border-color:var(--emerald,#10b981);color:var(--emerald,#10b981)}
 .wm-pill.on{color:#04121a;background:var(--grad,#10b981);border-color:transparent;font-weight:600}
-.composer-advanced{margin:0;font-size:12px;color:var(--t3,#7c879c);flex-basis:100%;padding-bottom:2px}
+.composer-advanced{margin:0;font-size:12px;color:var(--t3,#7c879c);padding-bottom:2px}
 .composer-advanced summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:4px}
 .composer-advanced[open]{margin-top:6px}
 /* 思考链 */

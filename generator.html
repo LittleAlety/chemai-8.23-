@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/mobile-content-guard.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>命题 — 三草酸合铁酸钾制备实验 · ChemAI</title>
+<style>
+:root{
+  --bg:#0a0e1a;--bg2:#111827;--card:#1a2235;--card-hover:#243049;
+  --emerald:#10b981;--teal:#2dd4bf;--purple:#a78bfa;--yellow:#fbbf24;--red:#f87171;--blue:#60a5fa;
+  --t1:#f1f5f9;--t2:#94a3b8;--t3:#64748b;
+  --bd:rgba(148,163,184,.08);--bd2:rgba(148,163,184,.15);
+  --accent:var(--emerald);--accent2:var(--teal);
+  --r:16px;
+}
+[data-theme="light"]{color-scheme:light;--bg:#f5f7fa;--bg2:#eaeef4;--card:#ffffff;--card-hover:#e8ecf2;--t1:#1f2937;--t2:#475569;--t3:#64748b;--bd:rgba(15,23,42,.08);--bd2:rgba(15,23,42,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t1);font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:0;background:radial-gradient(800px 400px at 15% -5%,rgba(16,185,129,.07),transparent 60%),radial-gradient(700px 380px at 85% 0%,rgba(167,139,250,.06),transparent 60%),radial-gradient(900px 500px at 50% 110%,rgba(45,212,191,.05),transparent 60%)}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:rgba(148,163,184,.22);border-radius:8px}
+::-webkit-scrollbar-track{background:transparent}
+/* ===== 导航（与其余手写页一致）===== */
+.navbar{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd2)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer}
+.logo-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(45,212,191,.12));border:1px solid rgba(16,185,129,.35);animation:chemaiPulse 3.5s ease-in-out infinite}
+.logo-text{line-height:1.2}
+.logo-name{font-weight:700;font-size:17px;background:linear-gradient(90deg,var(--emerald),var(--teal),#60a5fa,#a78bfa,var(--teal),var(--emerald));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:chemaiFlow 5s linear infinite;filter:drop-shadow(0 0 5px rgba(45,212,191,.35))}
+.logo-sub{font-size:11px;color:var(--t3);letter-spacing:.2px}
+@keyframes chemaiFlow{0%{background-position:0% 0}100%{background-position:220% 0}}@keyframes chemaiPulse{0%,100%{box-shadow:0 0 6px rgba(16,185,129,.22)}50%{box-shadow:0 0 18px rgba(45,212,191,.5)}}
+.nav-links{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{padding:8px 13px;border-radius:10px;font-size:14px;color:var(--t2);white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.nav-links a:hover{color:var(--t1);background:var(--card-hover)}
+.nav-links a.active{color:var(--emerald)!important;background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.3);font-weight:600}
+.theme-toggle{background:var(--bg2);border:1px solid var(--bd2);color:var(--t2);width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:15px;display:inline-flex;align-items:center;justify-content:center;transition:.25s;flex-shrink:0;line-height:1}
+.theme-toggle:hover{border-color:var(--emerald);color:var(--emerald)}
+/* ===== 页面 ===== */
+.page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:22px 22px 60px}
+.banner{margin-bottom:18px}
+.banner-tag{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#6ee7b7;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.28);border-radius:999px;padding:5px 14px;margin-bottom:12px}
+.page h1{font-size:26px;font-weight:700;margin-bottom:8px}
+.page .sub{font-size:13.5px;color:var(--t2);line-height:1.6}
+.hl{color:var(--emerald)}
+/* ===== 角色门控提示（非教师）===== */
+.gate{max-width:560px;margin:60px auto;text-align:center;background:var(--card);border:1px solid var(--bd2);border-radius:var(--r);padding:48px 34px}
+.gate .gicon{font-size:48px;margin-bottom:14px}
+.gate h2{font-size:20px;margin-bottom:10px}
+.gate p{font-size:13.5px;color:var(--t2);line-height:1.7;margin-bottom:20px}
+.gate .btn{display:inline-block;padding:11px 24px;border-radius:12px;font-size:14.5px;font-weight:600;color:#03130d;background:linear-gradient(135deg,var(--emerald),var(--teal));box-shadow:0 8px 24px rgba(16,185,129,.25)}
+.gate .btn:hover{transform:translateY(-1px)}
+/* ===== Tabs ===== */
+.tabs{display:inline-flex;gap:6px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;padding:5px;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:9px 18px;border-radius:9px;font-size:14px;font-weight:600;color:var(--t2);border:none;background:transparent;transition:.2s}
+.tab:hover{color:var(--t1)}
+.tab.active{color:var(--emerald);background:rgba(16,185,129,.12)}
+/* ===== 面板卡片 ===== */
+.panel{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:18px}
+.panel+.panel{margin-top:14px}
+.panel-title{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--t2);text-transform:uppercase;margin-bottom:14px}
+.panel-title .pd{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12.5px;color:var(--t2);margin-bottom:6px;font-weight:500}
+.field input[type=text],.field input[type=number],.field select{width:100%;background:var(--bg2);border:1px solid var(--bd);border-radius:9px;color:var(--t1);padding:9px 11px;font-size:14px;transition:.2s;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+/* 题型分配行 */
+.qrow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qrow .ql{width:58px;font-size:13px;color:var(--t2);flex-shrink:0}
+.qrow .num{width:64px;text-align:center}
+.qrow .btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--bd2);background:var(--bg2);color:var(--t2);font-size:16px;flex-shrink:0}
+.qrow .btn:hover{color:var(--t1);border-color:var(--accent)}
+.qrow .unit{font-size:12px;color:var(--t3)}
+.hint{font-size:11.5px;color:var(--t3);line-height:1.5;margin:-2px 0 8px}
+/* 难度滑块 */
+.drow{margin-bottom:14px}
+.drow .dhead{display:flex;justify-content:space-between;margin-bottom:6px}
+.drow .dname{font-size:13px;color:var(--t2)}
+.drow .dval{font-size:13px;font-weight:600;color:var(--accent);font-family:monospace}
+.drow input[type=range]{width:100%;accent-color:var(--accent)}
+/* 知识点 */
+.kgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.kgrid label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--t2);padding:8px 10px;border:1px solid var(--bd);border-radius:9px;cursor:pointer;transition:.15s}
+.kgrid label:hover{background:var(--card-hover)}
+.kgrid label.checked{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.08);color:var(--t1)}
+.kgrid input{accent-color:var(--accent)}
+/* 出题来源 */
+.src-row{display:flex;gap:10px}
+.src-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:11px;border-radius:10px;border:1px solid var(--bd2);background:var(--bg2);color:var(--t2);font-size:13.5px;font-weight:600;transition:.2s}
+.src-btn.active{border-color:var(--accent);background:rgba(16,185,129,.1);color:var(--t1)}
+/* 主按钮 */
+.primary{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:none;border-radius:11px;font-size:14.5px;font-weight:700;color:#03130d;background:linear-gradient(135deg,var(--emerald),var(--teal));box-shadow:0 8px 24px rgba(16,185,129,.28);transition:.2s}
+.primary:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(16,185,129,.36)}
+.ghost{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;padding:11px;border:1px solid var(--bd2);background:transparent;border-radius:11px;font-size:13.5px;font-weight:600;color:var(--t2);transition:.2s}
+.ghost:hover{color:var(--t1);border-color:var(--bd2);background:var(--card-hover)}
+/* 智能生成布局 */
+.gen-layout{display:grid;grid-template-columns:360px 1fr;gap:16px;align-items:start}
+.gen-side{position:sticky;top:82px}
+/* ===== 筛选栏（自主选题）===== */
+.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.filters label{font-size:12px;color:var(--t2);display:block;margin-bottom:5px}
+.filters select,.filters input{width:100%;background:var(--bg2);border:1px solid var(--bd);border-radius:9px;color:var(--t1);padding:8px 10px;font-size:13.5px;outline:none}
+.filters select:focus,.filters input:focus{border-color:var(--accent)}
+/* 题目列表 */
+.qlist{max-height:460px;overflow-y:auto;border:1px solid var(--bd);border-radius:12px;background:var(--bg2)}
+.qlist .qitem{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border-bottom:1px solid var(--bd);transition:.1s}
+.qlist .qitem:last-child{border-bottom:none}
+.qlist .qitem:hover{background:var(--card-hover)}
+.qlist .qitem.mine{background:rgba(16,185,129,.07);border-left:3px solid var(--accent)}
+.qlist .qcheck{margin-top:2px;flex-shrink:0}
+.qlist .qcheck input{width:16px;height:16px;accent-color:var(--accent)}
+.qlist .qtext{flex:1;min-width:0}
+.qlist .qt{font-size:13.5px;line-height:1.5;color:var(--t1)}
+.qlist .qt a{color:var(--t1)}
+.qlist .qmeta{font-size:11.5px;color:var(--t3);margin-top:5px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{display:inline-flex;align-items:center;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:999px}
+.tag.type{background:rgba(96,165,250,.15);color:#93c5fd}
+.tag.diff{background:rgba(251,191,36,.13);color:#fcd34d}
+.tag.cat{background:rgba(148,163,184,.14);color:#cbd5e1}
+/* 已选提示 */
+.selbar{position:sticky;top:74px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--bd2);border-radius:12px;padding:11px 15px;margin-bottom:14px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.selbar .n{font-size:14px;font-weight:700;color:var(--accent)}
+.selbar .actions{display:flex;gap:8px;flex-wrap:wrap}
+.mini-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--bd2);background:var(--bg2);color:var(--t2);font-size:13px;font-weight:600;transition:.2s}
+.mini-btn:hover{color:var(--t1);border-color:var(--accent)}
+.mini-btn.primary{color:#03130d;border:none;background:linear-gradient(135deg,var(--emerald),var(--teal))}
+.mini-btn.danger{color:#fca5a5}
+.mini-btn.danger:hover{border-color:var(--red)}
+/* ===== 试卷预览 ===== */
+.preview-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.preview-head .t{font-size:15px;font-weight:700}
+.preview-head .count{font-size:12.5px;color:var(--t3)}
+.preview-head .count b{color:var(--accent)}
+.empty{text-align:center;padding:56px 20px;color:var(--t3)}
+.empty .eicon{font-size:40px;margin-bottom:12px}
+.empty p{font-size:13.5px;line-height:1.7}
+/* 试卷卡 */
+.paper{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:26px}
+.paper .ptitle{text-align:center;font-size:20px;font-weight:700;margin-bottom:6px}
+.paper .psubtitle{text-align:center;font-size:13.5px;color:var(--t2);margin-bottom:4px}
+.paper .pmeta{text-align:center;font-size:12px;color:var(--t3);margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--bd)}
+.paper .pmeta input{background:transparent;border:none;border-bottom:1px solid var(--t3);color:var(--t1);font-size:12px;width:110px;text-align:center;margin:0 6px;outline:none}
+.paper .sec{font-size:14px;font-weight:700;color:var(--accent);margin:18px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
+.paper .q{padding:11px 0;border-bottom:1px dashed var(--bd)}
+.paper .q:last-child{border-bottom:none}
+.paper .qhead{display:flex;gap:8px;align-items:baseline;font-size:14.5px;line-height:1.6}
+.paper .qhead .no{color:var(--accent);font-weight:700;flex-shrink:0}
+.paper .qhead .typ{font-size:11.5px;color:var(--t3);flex-shrink:0;white-space:nowrap}
+.paper .qhead .qtextwrap{flex:1;min-width:0;word-break:break-word}
+.paper .qhead .pts{margin-left:auto;font-size:12px;color:var(--t3);flex-shrink:0;white-space:nowrap}
+.paper .qbody{margin:8px 0 0 26px;font-size:13.5px;color:var(--t2);line-height:1.7}
+.paper .blank{display:inline-block;border-bottom:1px solid var(--t3);min-width:120px;height:18px;vertical-align:bottom}
+.paper .qans{margin:6px 0 0 26px}
+.paper .qans summary{font-size:12.5px;color:var(--t3);cursor:pointer;user-select:none}
+.paper .qans summary:hover{color:var(--accent)}
+.paper .qans .ansbody{font-size:13px;color:var(--t2);line-height:1.7;margin-top:6px;padding:11px 13px;background:var(--bg2);border:1px solid var(--bd);border-radius:9px}
+.paper .qans .ansbody b{color:var(--accent);font-weight:600}
+.paper .qans .ansbody .lbl{font-size:11.5px;color:var(--t3)}
+.paper .score-inp{width:48px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--t1);font-size:12.5px;padding:3px}
+.paper .move{color:var(--t3);cursor:pointer;font-size:12px;padding:2px 5px;border-radius:5px}
+.paper .move:hover{color:var(--t1);background:var(--card-hover)}
+.paper .del{color:var(--red);cursor:pointer;font-size:12px;padding:2px 5px;border-radius:5px;opacity:.75}
+.paper .del:hover{opacity:1;background:rgba(248,113,113,.12)}
+.paper .qc{display:flex;align-items:center;gap:8px;margin:6px 0 0 26px}
+.paper .qc .qlbl{font-size:11px;color:var(--t3)}
+.paper .qc .score-inp{width:52px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:6px;color:var(--t1);font-size:12.5px;padding:3px}
+.paper .qc .move{color:var(--t3);cursor:pointer;font-size:12px;padding:2px 6px;border-radius:5px;border:1px solid transparent}
+.paper .qc .move:hover{color:var(--t1);background:var(--card-hover);border-color:var(--bd2)}
+.paper .qc .del{opacity:.7}
+.export-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+/* loading */
+.loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 20px;color:var(--t3)}
+.spin{width:34px;height:34px;border:3px solid var(--bd);border-top-color:var(--accent);border-radius:50%;animation:sp .9s linear infinite;margin-bottom:14px}
+@keyframes sp{to{transform:rotate(360deg)}}
+/* toast */
+#toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:var(--card);border:1px solid var(--bd2);color:var(--t1);padding:12px 20px;border-radius:11px;font-size:13.5px;opacity:0;pointer-events:none;transition:.25s;z-index:200;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:88vw}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:900px){.gen-layout{grid-template-columns:1fr}.gen-side{position:static}.filters{grid-template-columns:repeat(2,1fr)}.kgrid{grid-template-columns:1fr}.export-row{grid-template-columns:1fr}.nav-inner{padding:0 14px}}
+/* ===== 打印 / PDF ===== */
+#printArea{display:none}
+@media print{
+  body{background:#fff!important;color:#111!important}
+  body::before,.navbar,#page,#toast,.tabs,.filters,.qlist,.selbar,.gen-side,.export-row,.banner,g{display:none!important}
+  #page{display:none!important}
+  #printArea{display:block!important}
+  #printArea .paper{border:none;padding:0;background:#fff;color:#111}
+  #printArea .paper .qhead,#printArea .paper .qbody,#printArea .paper .qans .ansbody,#printArea .paper .ptitle,#printArea .paper .psubtitle,#printArea .paper .sec,#printArea .paper .pmeta{color:#111!important;background:none!important;border-color:#ccc!important}
+  #printArea .paper .qhead .typ,#printArea .paper .qhead .pts,#printArea .paper .psubtitle,#printArea .paper .pmeta,#printArea .paper .qans summary{color:#555!important}
+  #printArea .paper .qans .ansbody{border:1px solid #ccc}
+  #printArea .paper .qans details{display:block}
+  #printArea .paper .qans details>summary{list-style:none}
+  #printArea .paper .qans details[open] .ansbody{display:block}
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" title="返回主页">
+      <div class="logo-icon">⚗️</div>
+      <div class="logo-text">
+        <div class="logo-name">ChemAI</div>
+        <div class="logo-sub">K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="assistant.html">AI助手</a>
+      <a href="knowledge.html">知识图谱</a>
+      <a href="prep.html">课前预习</a>
+      <a href="index.html#/videos">视频资源</a>
+      <a href="index.html#/report" data-role-gate="teacher">报告评估</a>
+      <a href="generator.html" class="active">命题</a>
+      <a href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
+      <a href="corpus.html">语料库</a>
+    </div>
+    <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
+  </div>
+</nav>
+
+<div class="page" id="page">
+  <div id="gateBox" style="display:none">
+    <div class="gate">
+      <div class="gicon">🔐</div>
+      <h2>命题板块 · 仅教师可打开</h2>
+      <p>「命题」用于为三草酸合铁酸钾制备实验组卷（智能生成 + 自主选题 + 下载 Word/PDF）。<br>当前身份不是教师，无法进入。请先到首页选择「教师」身份。</p>
+      <a class="btn" href="index.html#identity">去选择教师身份 →</a>
+    </div>
+  </div>
+
+  <div id="appBox" style="display:none">
+    <div class="banner">
+      <div class="banner-tag">📝 QUESTION &amp; PAPER BUILDER</div>
+      <h1>命题 —— <span class="hl">智能生成 + 自主选题 + 下载 Word/PDF</span></h1>
+      <p class="sub">基于全站 1113 题真实题库（<span id="bankStat"></span>）。可依「试卷信息 / 题型分配 / 难度分布 / 知识点范围」智能组卷，也可逐题浏览筛选、手动挑选组卷，最后预览并下载为 Word（.doc）或导出 PDF。教师专用。</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="smart" id="tabSmart">✨ 智能生成</button>
+      <button class="tab" data-tab="manual" id="tabManual">📚 自主选题</button>
+    </div>
+
+    <div id="tab-smart" class="tabpane">
+      <div class="gen-layout">
+        <div class="gen-side">
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>试卷信息</div>
+            <div class="field"><label>试卷名称</label><input type="text" id="fTitle" value="三草酸合铁(III)酸钾制备与分析练习题"></div>
+            <div class="field"><label>副标题</label><input type="text" id="fSubtitle" value="配位化学与氧化还原滴定综合测试"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>题型分配</div>
+            <div id="typeRows"></div>
+            <div class="hint">· 单选 / 多选：题库仅存题干与答案（未存 A/B/C/D 选项），试卷中按「题干 + 作答空 + 答案与解析」呈现，不臆造选项。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；<b>自主选题</b>含全部 1113 题（含 875 道简答题）。</div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>难度分布</div>
+            <div id="diffRows"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>知识点范围</div>
+            <div class="kgrid" id="catGrid"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>出题来源</div>
+            <div class="src-row">
+              <button class="src-btn active" data-src="builtin" id="srcBuiltin">🗂️ 内置题库</button>
+              <button class="src-btn" data-src="ai" id="srcAi">🤖 AI 生成</button>
+            </div>
+            <div class="hint" style="margin-top:9px" id="srcHint">从真实题库按条件随机抽题（如需 AI 生成请用「AI助手」）。</div>
+          </div>
+
+          <div class="panel">
+            <button class="primary" id="btnGenerate">✨ 智能生成试卷</button>
+            <div style="height:10px"></div>
+            <button class="ghost" id="btnReset">↺ 恢复默认设置</button>
+          </div>
+        </div>
+
+        <div id="previewWrap"></div>
+      </div>
+    </div>
+
+    <div id="tab-manual" class="tabpane" style="display:none">
+      <div class="selbar">
+        <div class="n">已选 <b id="selCount">0</b> 题</div>
+        <div class="actions">
+          <button class="mini-btn" id="btnSelClear">清空已选</button>
+          <button class="mini-btn" id="btnSelPickAll">全选当前筛选</button>
+          <button class="mini-btn primary" id="btnPreview">📄 去预览 / 导出</button>
+        </div>
+      </div>
+      <div class="filters">
+        <div><label>题型</label><select id="fType"></select></div>
+        <div><label>难度</label><select id="fDiff"></select></div>
+        <div><label>知识点</label><select id="fCat"></select></div>
+        <div><label>关键词</label><input type="text" id="fKw" placeholder="搜索题干…"></div>
+      </div>
+      <div class="qlist" id="qlist"></div>
+      <div style="height:16px"></div>
+      <div id="previewWrap2"></div>
+    </div>
+  </div>
+</div>
+
+<div id="printArea"></div>
+<div id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+// ===== 角色契约（与其余页一致：localStorage["chem-user"]={state:{role}}）=====
+function getRole(){try{var raw=localStorage.getItem("chem-user");if(!raw)return null;var o=JSON.parse(raw);return (o&&o.state&&o.state.role)||null;}catch(e){return null;}}
+var role=getRole();
+var isTeacher=(role==="teacher");
+
+var TYPE_LABEL={single:"单选题",multiple:"多选题",truefalse:"判断题",fill:"填空题",short:"简答题",calculation:"计算题"};
+var TYPE_ORDER=["single","multiple","truefalse","fill","short","calculation"];
+var DIFF_LABEL={easy:"基础",medium:"中等",hard:"较难"};
+var DIFF_ORDER=["easy","medium","hard"];
+var DEF_SCORE={single:2,multiple:3,truefalse:1,fill:2,short:6,calculation:10};
+var DEF_COUNT={single:8,multiple:4,truefalse:4,fill:4};
+var DEF_TITLE="三草酸合铁(III)酸钾制备与分析练习题";
+var DEF_SUBTITLE="配位化学与氧化还原滴定综合测试";
+var DEF_DIFF={easy:40,medium:40,hard:20};
+
+var BANK=[];            // all 1113 questions
+var CATS=[];            // category list
+var paper=[];           // [{q, score}]
+var smart={title:DEF_TITLE,subtitle:DEF_SUBTITLE,count:{...DEF_COUNT},score:{single:2,multiple:3,truefalse:1,fill:2},diff:{...DEF_DIFF},cats:[],src:"builtin"};
+var manual={type:"all",diff:"all",cat:"all",kw:""};
+var tab="smart";
+
+if(!isTeacher){
+  document.getElementById("gateBox").style.display="block";
+  return;
+}
+document.getElementById("appBox").style.display="block";
+document.getElementById("gateBox").style.display="none";
+
+// ===== helpers =====
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+// 化学式上下标：Unicode 下标/上标归一 + 常见 ASCII 下标（字母/括]/)后数字）+ 箭头
+function fmt(s){
+  s=esc(s);
+  s=s.replace(/[₀₁₂₃₄₅₆₇₈₉]+/g,function(m){var r="";for(var i=0;i<m.length;i++)r+=String.fromCharCode(m.charCodeAt(i)-0x2080+48);return "<sub>"+r+"</sub>";});
+  s=s.replace(/[⁺⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+/g,function(m){var map="⁺⁻⁰¹²³⁴⁵⁶⁷⁸⁹",r="";for(var i=0;i<m.length;i++){var j=map.indexOf(m[i]);r+=j>=0?"+-0123456789"[j]:m[i];}return "<sup>"+r+"</sup>";});
+  s=s.replace(/([A-Za-z\)\]])(\d+)/g,function(m,p,d){var r="";for(var i=0;i<d.length;i++)r+="<sub>"+d[i]+"</sub>";return p+r;});
+  s=s.replace(/\s*->\s*/g,"→").replace(/→→/g,"→");
+  return s;
+}
+function toast(msg){var t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._tm);t._tm=setTimeout(function(){t.classList.remove("show");},2200);}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function qMeta(q){return '<span class="tag type">'+TYPE_LABEL[q.type]+'</span><span class="tag diff">'+DIFF_LABEL[q.difficulty]+'</span><span class="tag cat">'+esc(q.category)+'</span>';}
+
+// ===== data =====
+function loadBank(){
+  return fetch("data/questions_master.json").then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(function(d){
+    BANK=d.questions||[];
+    var seen={};CATS=[];
+    BANK.forEach(function(q){if(!seen[q.category]){seen[q.category]=1;CATS.push(q.category);}});
+    CATS.sort();
+    $("bankStat").textContent=(BANK.length)+" 题 · "+CATS.length+" 个知识点";
+    buildSmart();
+    buildFilters();
+    renderCats();
+    renderTypeRows();
+    renderDiffRows();
+    renderList();
+    renderPreview();
+  });
+}
+function presentInPaper(q){
+  for(var i=0;i<paper.length;i++)if(paper[i].q===q)return true;
+  return false;
+}
+
+// ===== 智能生成面板 =====
+function buildSmart(){
+  // count default already in smart.count
+  smart.cats=CATS.slice();
+}
+function renderCats(){
+  var g=$("catGrid");g.innerHTML="";
+  CATS.forEach(function(c){
+    var lab=document.createElement("label");
+    var cb=document.createElement("input");cb.type="checkbox";cb.value=c;cb.checked=true;cb.setAttribute("data-cat",c);
+    var span=document.createElement("span");span.textContent=c;
+    lab.appendChild(cb);lab.appendChild(span);lab.classList.add("checked");
+    cb.addEventListener("change",function(){lab.classList.toggle("checked",cb.checked);});
+    g.appendChild(lab);
+  });
+}
+function renderTypeRows(){
+  var r=$("typeRows");r.innerHTML="";
+  ["single","multiple","truefalse","fill"].forEach(function(t){
+    var row=document.createElement("div");row.className="qrow";
+    row.innerHTML='<span class="ql">'+TYPE_LABEL[t]+'</span><button class="btn" data-t="'+t+'" data-d="-1">−</button><input class="num" type="number" min="0" max="80" value="'+smart.count[t]+'" data-t="'+t+'"><button class="btn" data-t="'+t+'" data-d="1">＋</button><span class="unit">题 × </span><input class="score" type="number" min="1" max="100" value="'+smart.score[t]+'" data-t="'+t+'" style="width:52px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:8px;color:var(--t1);font-size:13px;padding:6px"><span class="unit">分</span>';
+    r.appendChild(row);
+  });
+  r.querySelectorAll(".btn").forEach(function(b){
+    b.addEventListener("click",function(){
+      var t=b.getAttribute("data-t"),d=parseInt(b.getAttribute("data-d"),10),inp=r.querySelector('.num[data-t="'+t+'"]');
+      var v=Math.max(0,(parseInt(inp.value,10)||0)+d);inp.value=v;smart.count[t]=v;
+    });
+  });
+  r.querySelectorAll(".score").forEach(function(s){
+    s.addEventListener("change",function(){smart.score[s.getAttribute("data-t")]=Math.max(1,parseInt(s.value,10)||1);});
+  });
+}
+function renderDiffRows(){
+  var r=$("diffRows");r.innerHTML="";
+  DIFF_ORDER.forEach(function(d){
+    var row=document.createElement("div");row.className="drow";
+    row.innerHTML='<div class="dhead"><span class="dname">'+DIFF_LABEL[d]+'</span><span class="dval" id="dv-'+d+'">'+smart.diff[d]+'%</span></div>';
+    var inp=document.createElement("input");inp.type="range";inp.min="0";inp.max="100";inp.step="5";inp.value=smart.diff[d];
+    inp.addEventListener("input",function(){
+      smart.diff[d]=parseInt(inp.value,10);$("dv-"+d).textContent=smart.diff[d]+"%";
+    });
+    row.appendChild(inp);r.appendChild(row);
+  });
+}
+function srcSet(src){smart.src=src;$("srcBuiltin").classList.toggle("active",src==="builtin");$("srcAi").classList.toggle("active",src==="ai");$("srcHint").textContent=src==="builtin"?"从真实题库按条件随机抽题（AI 生成请用「AI助手」）。":"AI 智能生成当前由「AI助手」承担，此处从真实题库随机抽题。"}
+function resetSmart(){
+  smart.title=DEF_TITLE;smart.subtitle=DEF_SUBTITLE;smart.count={...DEF_COUNT};smart.score={single:2,multiple:3,truefalse:1,fill:2};smart.diff={...DEF_DIFF};smart.cats=CATS.slice();smart.src="builtin";
+  $("fTitle").value=smart.title;$("fSubtitle").value=smart.subtitle;
+  renderTypeRows();renderDiffRows();renderCats();srcSet("builtin");
+  toast("已恢复默认设置");
+}
+// ===== 智能生成：按配置抽题 =====
+function genSmart(){
+  smart.title=$("fTitle").value.trim()||"未命名试卷";
+  smart.subtitle=$("fSubtitle").value.trim();
+  var cats=[];document.querySelectorAll("#catGrid input:checked").forEach(function(c){cats.push(c.value);});
+  var DIFF_WEIGHT={easy:smart.diff.easy,medium:smart.diff.medium,hard:smart.diff.hard};
+  var result=[];var used={};
+  function pick(type,count){
+    var pool=BANK.filter(function(q){return q.type===type&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
+    if(!pool.length)return 0;
+    // 按难度滑块比例作为抽题权重（题库难度 easy/medium/hard）
+    var weighted=[];pool.forEach(function(q){var w=DIFF_WEIGHT[q.difficulty]||1;for(var k=0;k<w;k++)weighted.push(q);});
+    var got=0;shuffle(weighted);
+    for(var i=0;i<weighted.length&&got<count;i++){var q=weighted[i];if(used[q.id||q.question])continue;used[q.id||q.question]=1;result.push(q);got++;}
+    return got;
+  }
+  var plan=[["single","single"],["multiple","multiple"],["truefalse","truefalse"],["fill","fill"]];
+  var warnings=[];
+  plan.forEach(function(p){
+    var got=pick(p[0],smart.count[p[0]]);
+    if(got<smart.count[p[0]])warnings.push(TYPE_LABEL[p[0]]+" 需 "+smart.count[p[0]]+" 题，命中 "+got+" 题");
+  });
+  if(!result.length){toast("题库中找不到符合条件的题目，请调整知识点/难度范围");return;}
+  paper=result.map(function(q){return {q:q,score:smart.score[q.type]||DEF_SCORE[q.type]||2};});
+  renderPreview();
+  var msg="已生成试卷 "+paper.length+" 题";if(warnings.length)msg+="（"+warnings.join("；")+"）";toast(msg);
+}
+
+// ===== 自主选题 =====
+function buildFilters(){
+  var t=$("fType"),d=$("fDiff"),c=$("fCat");
+  t.innerHTML='<option value="all">全部题型</option>';TYPE_ORDER.forEach(function(x){t.innerHTML+='<option value="'+x+'">'+TYPE_LABEL[x]+'</option>';});
+  d.innerHTML='<option value="all">全部难度</option>';DIFF_ORDER.forEach(function(x){d.innerHTML+='<option value="'+x+'">'+DIFF_LABEL[x]+'</option>';});
+  c.innerHTML='<option value="all">全部知识点</option>';CATS.forEach(function(x){c.innerHTML+='<option value="'+esc(x)+'">'+esc(x)+'</option>';});
+  t.addEventListener("change",function(){manual.type=t.value;renderList();});
+  d.addEventListener("change",function(){manual.diff=d.value;renderList();});
+  c.addEventListener("change",function(){manual.cat=c.value;renderList();});
+  $("fKw").addEventListener("input",function(){manual.kw=this.value.trim();renderList();});
+}
+function filteredBank(){
+  var bl=BANK;
+  if(manual.type!=="all")bl=bl.filter(function(q){return q.type===manual.type;});
+  if(manual.diff!=="all")bl=bl.filter(function(q){return q.difficulty===manual.diff;});
+  if(manual.cat!=="all")bl=bl.filter(function(q){return q.category===manual.cat;});
+  if(manual.kw)bl=bl.filter(function(q){return (q.question||"").indexOf(manual.kw)>=0;});
+  return bl;
+}
+function renderList(){
+  var bl=filteredBank();var el=$("qlist");el.innerHTML="";
+  $("selCount").textContent=paper.length;
+  if(!bl.length){el.innerHTML='<div class="empty" style="padding:30px"><div class="eicon">🔍</div><p>没有符合筛选条件的题目</p></div>';return;}
+  bl.forEach(function(q){
+    var item=document.createElement("div");item.className="qitem"+(presentInPaper(q)?" mine":"");
+    var cb=document.createElement("input");cb.type="checkbox";cb.className="qcheck";cb.checked=presentInPaper(q);
+    var box=document.createElement("div");box.className="qtext";
+    box.innerHTML='<div class="qt">'+fmt(q.question)+'</div><div class="qmeta">'+qMeta(q)+'</div>';
+    item.appendChild(cb);item.appendChild(box);
+    cb.addEventListener("change",function(){toggleSel(q,item);});
+    el.appendChild(item);
+  });
+  $("selCount").textContent=paper.length;
+}
+function toggleSel(q,item){
+  if(presentInPaper(q)){paper=paper.filter(function(p){return p.q!==q;});item.classList.remove("mine");}
+  else{paper.push({q:q,score:DEF_SCORE[q.type]||2});item.classList.add("mine");}
+  $("selCount").textContent=paper.length;
+  renderPreview();
+}
+function pickAllVisible(){
+  var bl=filteredBank();
+  bl.forEach(function(q){if(!presentInPaper(q))paper.push({q:q,score:DEF_SCORE[q.type]||2});});
+  $("selCount").textContent=paper.length;renderList();renderPreview();
+}
+
+// ===== 纸面渲染（预览 + 导出共用）=====
+function buildPaperDOM(){
+  var title=smart.title||$("fTitle").value||"未命名试卷";
+  var subtitle=smart.subtitle||$("fSubtitle").value;
+  var wrap=document.createElement("div");wrap.className="paper";
+  var meta='<div style="text-align:center;padding-bottom:14px;border-bottom:1px solid var(--bd);margin-bottom:14px"><div class="ptitle">'+fmt(title)+'</div>'+(subtitle?'<div class="psubtitle">'+fmt(subtitle)+'</div>':'')+'<div class="pmeta">满分 <b id="totalScore"></b> 分 · 共 '+paper.length+' 题 · 姓名<span class="blank"></span>班级<span class="blank"></span>得分<span class="blank"></span></div></div>';
+  wrap.innerHTML=meta;
+  var total=0;
+  paper.forEach(function(p,i){
+    total+=p.score;
+    var sec=document.createElement("div");sec.className="q";
+    var qbody="";
+    if(p.q.type==="single"||p.q.type==="multiple"){
+      qbody='<span class="blank" style="min-width:220px"></span><div style="font-size:11.5px;color:var(--t3);margin-top:4px">（题库未存 A/B/C/D 选项——请先作答，再展开「答案与解析」核对）</div>';
+    }else if(p.q.type==="truefalse"){
+      qbody='<span class="blank" style="min-width:220px"></span>';
+    }else if(p.q.type==="fill"){
+      qbody='<span class="blank" style="min-width:240px"></span>';
+    }else{
+      qbody='<div style="min-height:34px"></div>';
+    }
+    sec.innerHTML='<div class="qhead"><span class="no">'+(i+1)+'.</span><span class="typ">'+TYPE_LABEL[p.q.type]+'</span><span class="qtextwrap">'+fmt(p.q.question)+'</span><span class="pts">'+p.score+' 分</span></div>'+
+      '<div class="qbody">'+qbody+'</div>'+
+      '<div class="qans"><details><summary>答案与解析</summary><div class="ansbody"><span class="lbl">答案：</span><b>'+fmt(p.q.answer||p.q.referenceAnswer||"")+'</b>'+(p.q.explanation?'<div style="margin-top:6px"><span class="lbl">解析：</span>'+fmt(p.q.explanation)+'</div>':'')+'</div></details></div>';
+    wrap.appendChild(sec);
+  });
+  var totalEl=wrap.querySelector("#totalScore");if(totalEl)totalEl.textContent=total;
+  return wrap;
+}
+function paperHTMLForExport(){
+  var title=smart.title||$("fTitle").value||"未命名试卷";
+  var subtitle=smart.subtitle||$("fSubtitle").value;
+  var s='<div style="font-family:SimSun,serif;line-height:1.7;color:#000">';
+  s+='<div style="text-align:center;font-size:18px;font-weight:bold">'+title+'</div>';
+  if(subtitle)s+='<div style="text-align:center;font-size:14px;color:#333">'+subtitle+'</div>';
+  var total=0;paper.forEach(function(p){total+=p.score;});
+  s+='<div style="text-align:center;font-size:12px;color:#333;margin:8px 0 16px">（满分 '+total+' 分 · 共 '+paper.length+' 题）　姓名________　班级________　得分________</div>';
+  paper.forEach(function(p,i){
+    s+='<div style="margin-bottom:14px">';
+    s+='<div style="font-size:14px;font-weight:bold">'+(i+1)+'. （'+TYPE_LABEL[p.q.type]+'，'+p.score+'分）　'+p.q.question+'</div>';
+    if(p.q.type==="single"||p.q.type==="multiple"||p.q.type==="truefalse"||p.q.type==="fill"){s+='<div style="font-size:12.5px;color:#555;margin:4px 0 0 12px">（作答：______________________）</div>';}
+    else{s+='<div style="height:60px"></div>';}
+    s+='<div style="font-size:12px;color:#555;margin:6px 0 0 12px"><b>参考答案：</b>'+p.q.answer+'</div>';
+    if(p.q.explanation&&p.q.answer!==p.q.explanation)s+='<div style="font-size:12px;color:#777;margin:3px 0 0 12px"><b>解析：</b>'+p.q.explanation+'</div>';
+    s+='</div>';
+  });
+  s+='<div style="text-align:center;font-size:12px;color:#999;margin-top:20px">— ChemAI 命题 · 三草酸合铁酸钾制备实验 —</div>';
+  return s;
+}
+function renderPreview(){
+  var el=(tab==="manual")?$("previewWrap2"):$("previewWrap");if(!el)return;
+  if(!paper.length){
+    el.innerHTML='<div class="panel"><div class="preview-head"><span class="t">📄 试卷预览</span></div><div class="empty"><div class="eicon">🖤</div><p>尚未生成试卷<br>在左侧设置参数后点击「智能生成试卷」，或在「自主选题」中勾选题目加入组卷。</p></div></div>';
+    return;
+  }
+  var tot=0;paper.forEach(function(p){tot+=p.score;});
+  // 预览时给每题加 分值/上移/下移/删除 控件（仅在线，不进导出）
+  var wrap=buildPaperDOM();
+  var qels=wrap.querySelectorAll(".q");
+  for(var i=0;i<paper.length;i++){
+    if(!qels[i])continue;
+    var bar=document.createElement("div");bar.className="qc";
+    bar.innerHTML='<span class="qlbl">分值</span><input class="score-inp" type="number" value="'+paper[i].score+'" min="1" max="100" data-i="'+i+'">'
+      +'<span class="move" data-i="'+i+'" data-d="-1" title="上移">▲</span>'
+      +'<span class="move" data-i="'+i+'" data-d="1" title="下移">▼</span>'
+      +'<span class="del" data-i="'+i+'" title="移出试卷">✕ 移出试卷</span>';
+    qels[i].appendChild(bar);
+  }
+  var head='<div class="preview-head"><span class="t">📄 试卷预览</span><span class="count">共 <b>'+paper.length+'</b> 题 · <b>'+tot+'</b> 分</span></div>';
+  var html='<div class="panel">'+head+'<div class="paper" style="margin-top:4px">'+wrap.innerHTML+'</div>';
+  html+='<div class="export-row">';
+  html+='<button class="mini-btn primary" id="btnWord">📝 下载 Word(.doc)</button>';
+  html+='<button class="mini-btn primary" id="btnPdf">🖨️ 导出 PDF(打印)</button>';
+  html+='<button class="mini-btn" id="btnTxt">📃 下载 TXT</button>';
+  html+='</div></div>';
+  el.innerHTML=html;
+  el.querySelectorAll(".score-inp").forEach(function(inp){
+    inp.addEventListener("change",function(){var i=parseInt(inp.getAttribute("data-i"),10);if(paper[i]){paper[i].score=Math.max(1,parseInt(inp.value,10)||1);renderPreview();}});
+  });
+  el.querySelectorAll(".move").forEach(function(mv){
+    mv.addEventListener("click",function(){var i=parseInt(mv.getAttribute("data-i"),10),d=parseInt(mv.getAttribute("data-d"),10),j=i+d;if(j<0||j>=paper.length)return;var t=paper[i];paper[i]=paper[j];paper[j]=t;renderPreview();});
+  });
+  el.querySelectorAll(".del").forEach(function(dl){
+    dl.addEventListener("click",function(){var i=parseInt(dl.getAttribute("data-i"),10);if(paper[i]){paper.splice(i,1);renderPreview();if(tab==="manual")renderList();}});
+  });
+  $("btnWord").addEventListener("click",function(){exportWord();});
+  $("btnPdf").addEventListener("click",function(){exportPdf();});
+  $("btnTxt").addEventListener("click",function(){exportTxt();});
+}
+function exportWord(){
+  if(!paper.length){toast("请先生成或选择题目");return;}
+  var title=smart.title||$("fTitle").value||"试卷";
+  var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>'+title+'</title></head><body>'+paperHTMLForExport()+'</body></html>';
+  var blob=new Blob(["﻿"+html],{type:"application/msword"});
+  downloadBlob(blob,(title||"试卷")+".doc");
+  toast("已下载 Word 文档");
+}
+function exportPdf(){
+  if(!paper.length){toast("请先生成或选择题目");return;}
+  $("printArea").innerHTML=buildPaperDOM().outerHTML;
+  window.print();
+}
+function exportTxt(){
+  if(!paper.length){toast("请先生成或选择题目");return;}
+  var title=smart.title||$("fTitle").value||"试卷";
+  var subtitle=smart.subtitle||$("fSubtitle").value;
+  var lines=[];lines.push(title);if(subtitle)lines.push(subtitle);
+  var total=0;paper.forEach(function(p){total+=p.score;});
+  lines.push("满分 "+total+" 分 · 共 "+paper.length+" 题\n");
+  paper.forEach(function(p,i){
+    lines.push((i+1)+". （"+TYPE_LABEL[p.q.type]+"，"+p.score+"分） "+p.q.question);
+    if(p.q.type==="single"||p.q.type==="multiple"||p.q.type==="truefalse"||p.q.type==="fill")lines.push("   作答：____________");
+    lines.push("   参考答案："+(p.q.answer||""));
+    if(p.q.explanation&&p.q.answer!==p.q.explanation)lines.push("   解析："+p.q.explanation);
+    lines.push("");
+  });
+  var blob=new Blob([lines.join("\n")],{type:"text/plain;charset=utf-8"});
+  downloadBlob(blob,(title||"试卷")+".txt");
+  toast("已下载 TXT");
+}
+function downloadBlob(blob,name){
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},400);
+}
+
+// ===== tabs =====
+function showTab(t){
+  tab=t;
+  $("tabSmart").classList.toggle("active",t==="smart");
+  $("tabManual").classList.toggle("active",t==="manual");
+  $("tab-smart").style.display=t==="smart"?"":"none";
+  $("tab-manual").style.display=t==="manual"?"":"none";
+  renderPreview();
+}
+$("tabSmart").addEventListener("click",function(){showTab("smart");});
+$("tabManual").addEventListener("click",function(){showTab("manual");});
+$("btnGenerate").addEventListener("click",genSmart);
+$("btnReset").addEventListener("click",resetSmart);
+$("srcBuiltin").addEventListener("click",function(){srcSet("builtin");});
+$("srcAi").addEventListener("click",function(){srcSet("ai");});
+$("btnSelClear").addEventListener("click",function(){paper=[];$("selCount").textContent="0";renderList();renderPreview();});
+$("btnSelPickAll").addEventListener("click",pickAllVisible);
+$("btnPreview").addEventListener("click",function(){showTab("smart");});
+$("fTitle").addEventListener("input",function(){smart.title=this.value;renderPreview();});
+$("fSubtitle").addEventListener("input",function(){smart.subtitle=this.value;renderPreview();});
+
+// ===== 主题 =====
+window.setThemeIcon=function(){var b=$("themeToggleBtn");if(b)b.textContent=document.documentElement.getAttribute("data-theme")==="light"?"🌙":"☀️";};
+window.toggleTheme=function(){var h=document.documentElement,cur=h.getAttribute("data-theme")==="light"?"dark":"light";h.setAttribute("data-theme",cur);try{localStorage.setItem("chemaiTheme",cur);}catch(e){}setThemeIcon();};
+try{setThemeIcon();}catch(e){}
+
+// ===== init =====
+var loader=document.createElement("div");loader.className="loader";loader.innerHTML='<div class="spin"></div><p>正在加载题库…</p>';
+var ab=$("appBox");ab.insertBefore(loader,ab.firstChild);
+loadBank().then(function(){
+  if(loader.parentNode)loader.parentNode.removeChild(loader);
+}).catch(function(err){
+  if(loader.parentNode)loader.parentNode.removeChild(loader);
+  $("appBox").innerHTML='<div class="panel"><div class="empty"><div class="eicon">⚠️</div><p>无法加载题库（data/questions_master.json）。<br>请通过部署站点访问，或检查数据文件是否存在。<br><span style="font-size:12px;color:var(--t3)">'+(err&&err.message?esc(err.message):"")+'</span></p></div></div>';
+});
+})();
+</script>
+</body>
+</html>

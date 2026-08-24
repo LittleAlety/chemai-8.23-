@@ -151,6 +151,7 @@ a:hover{color:var(--em)}
 .ans-header .ah-badge.conf-high{background:rgba(16,185,129,.18);color:var(--em)}
 .ans-header .ah-badge.conf-med{background:rgba(251,191,36,.15);color:var(--yellow)}
 .ans-header .ah-badge.conf-low{background:rgba(248,113,113,.12);color:var(--red)}
+.ans-header .ah-badge.src-role{background:rgba(45,212,191,.14);color:var(--t1);border:1px solid rgba(45,212,191,.3)}
 .ans-header .ah-sep{width:1px;height:16px;background:var(--bd2)}
 .ans-header .ah-meta{color:var(--t3);margin-left:auto}
 /* 网页搜索紧凑栏 */
@@ -1294,6 +1295,13 @@ function buildHybridAnswerHTML(q, ctx){
   return roleIntroHTML(chatRole())+body+roleOutroHTML(chatRole());
 }
 
+/* ===== 身份化深度门控：非化学折叠技术性小节（看干净简易答案），化学/教师铺开全深度。
+   同一知识底座按身份分层呈现——不臆造内容，只改变默认展开程度与展示顺序。 ===== */
+function roleDepthOpen(){ return chatRole()!=='non-chemistry'; }
+function roleSec(summary, body, forceOpen){
+  var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
+  return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
+}
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
   var methodHits=ctx.methodHits, analogies=ctx.analogies, conf=ctx.conf;
@@ -1322,24 +1330,24 @@ function buildAnalogyBridgedAnswer(q, ctx){
   }
   var allAnalogyRefs=analogyHits.concat(methodHits);
   if(allAnalogyRefs.length>0){
-    s+='<div class="ans-sec"><details class="ref-fold"'+(allAnalogyRefs.length<=2?' open':'')+'><summary>📖 类比来源文献（'+allAnalogyRefs.length+' 篇）<span class="rf-arrow">▸</span></summary>';
-    s+='<div class="ref-fold-body"><p class="muted" style="margin-bottom:6px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
-    s+='<ul class="cite-list" style="font-size:12px">';
+    var _alt=allAnalogyRefs.length;
+    var _abody='<p class="muted" style="margin-bottom:6px">以下文献通过<b>方法学转移/化学实体类比</b>检索到，可提供相关背景实验依据：</p>';
+    _abody+='<ul class="cite-list" style="font-size:12px">';
     var shown={};
-    for(var ri=0;ri<Math.min(allAnalogyRefs.length,5);ri++){
+    for(var ri=0;ri<Math.min(_alt,5);ri++){
       var r=allAnalogyRefs[ri];
       if(shown[r.e.id]) continue; shown[r.e.id]=true;
-      s+='<li><b>《'+esc(r.e.title)+'》</b>'
+      _abody+='<li><b>《'+esc(r.e.title)+'》</b>'
         +'<span class="source-tag analogy" style="margin-left:4px">'+(r.source==='method-transfer'?('方法:'+esc(r.method||'')):('类比:'+esc(r.analogyConcept||'')))+'</span>'
         +(r.e.objects?' —— 研究对象：'+esc(r.e.objects):'')
         +(r.e.methods?'；关键方法：'+esc(r.e.methods):'')
         +'</li>';
     }
-    s+='</ul></div></details></div>';
+    _abody+='</ul>';
+    s+='<div class="ans-sec">'+roleSec('📖 类比来源文献（'+_alt+' 篇）', _abody, _alt<=2?true:undefined)+'</div>';
   }
   if(directHits.length>0){
-    s+='<div class="ans-sec"><details class="ref-fold"><summary>📚 文献支持（'+directHits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
-     +'<div class="ref-fold-body"><ol class="cite-list">'+directHits.map(citationHTML).join('')+'</ol></div></details></div>';
+    s+='<div class="ans-sec">'+roleSec('📚 文献支持（'+directHits.length+' 篇）','<ol class="cite-list">'+directHits.map(citationHTML).join('')+'</ol>')+'</div>';
   }
   s+='<div class="ans-sec"><h4>🌐 网络补充</h4>'+webFallbackHTML(q)+'</div>';
   s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
@@ -1840,6 +1848,8 @@ function answerHeaderHTML(conf, source, refCount, usedLLM){
   var h='<div class="ans-header">';
   h+='<span class="ah-badge '+levelCls+'">📊 '+levelLabel+'</span>';
   h+='<span class="ah-badge '+srcCls+'">'+srcIcon+' '+srcLabel+'</span>';
+  var rmeta=ROLE_META[chatRole()]||ROLE_META.chemistry;
+  h+='<span class="ah-badge src-role">'+rmeta.label+' · '+String(rmeta.hint).split('·')[0].trim()+'</span>';
   if(refCount>0) h+='<span class="ah-sep"></span><span style="color:var(--t2);font-size:12px">📖 '+refCount+' 篇文献</span>';
   h+='</div>';
   return h;
@@ -1920,7 +1930,7 @@ function buildAnswerHTML(q,ctx){
     if(faq){
       s+=answerHeaderHTML({level:'high'},'faq',0,false);
       s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div></div>';
-      if(faq.detail) s+='<div class="ans-sec"><h4>📖 原理与细节</h4><div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div></div>';
+      if(faq.detail) s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）','<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>')+'</div>';
       s+='<div class="ans-sec"><h4>🌐 网络补充</h4><p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,faq,hits);
     }else{
@@ -1935,14 +1945,14 @@ function buildAnswerHTML(q,ctx){
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
   s+=faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
   s+='</div>';
-  s+='<div class="ans-sec"><h4>📖 原理与细节</h4>';
-  if(faq&&faq.detail) s+='<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>';
-  s+='<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><div class="bib-list">'
-   +hits.slice(0,3).map(bibItemHTML).join('')
-   +'</div></div>';
-  s+='<div class="ans-sec"><details class="ref-fold"><summary>📚 依据文献（知识清单命中 '+hits.length+' 篇）<span class="rf-arrow">▸</span></summary>'
-   +'<div class="ref-fold-body"><ol class="cite-list">'+hits.map(citationHTML).join('')+'</ol>'
-   +'<div class="doc-grid">'+hits.map(docCardHTML).join('')+'</div></div></details></div>';
+  s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）',
+    (faq&&faq.detail?'<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>':'')
+    +'<p class="muted" style="margin-top:6px">结合命中文献的著录信息补充：</p><div class="bib-list">'
+    +hits.slice(0,3).map(bibItemHTML).join('')
+    +'</div>')+'</div>';
+  s+='<div class="ans-sec">'+roleSec('📚 依据文献（知识清单命中 '+hits.length+' 篇）',
+    '<ol class="cite-list">'+hits.map(citationHTML).join('')+'</ol>'
+    +'<div class="doc-grid">'+hits.map(docCardHTML).join('')+'</div>')+'</div>';
   s+=extendHTML(q,faq,hits);
   s+=imagesHTML(findImages(q,faq));
   return s;

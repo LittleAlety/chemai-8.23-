@@ -258,7 +258,7 @@ input,select,textarea{font-family:inherit}
           <div class="panel">
             <div class="panel-title"><span class="pd"></span>题型分配</div>
             <div id="typeRows"></div>
-            <div class="hint">· 单选 / 多选：题库仅存题干与答案（未存 A/B/C/D 选项），试卷中按「题干 + 作答空 + 答案与解析」呈现，不臆造选项。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；<b>自主选题</b>含全部 1113 题（含 875 道简答题）。</div>
+            <div class="hint">· 单选 / 多选：题库仅存题干与答案（未存 A/B/C/D 选项），试卷中按「题干 + 作答空 + 答案与解析」呈现，不臆造选项。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；<b>简答/计算</b>会从 8 个步骤/性质知识点（实验操作/合成制备/分析测定/安全与废物处理/结构表征/热分析/反应原理/光化学应用）抽取。<br>· 「内容取向 = 预习为纲」会剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论，突出实验步骤与物质性质；<b>自主选题</b>始终含全部 1113 题。</div>
           </div>
 
           <div class="panel">
@@ -269,6 +269,16 @@ input,select,textarea{font-family:inherit}
           <div class="panel">
             <div class="panel-title"><span class="pd"></span>知识点范围</div>
             <div class="kgrid" id="catGrid"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title"><span class="pd"></span>内容取向</div>
+            <div class="src-row">
+              <button class="src-btn active" data-orient="preview" id="orient-preview">📖 预习为纲</button>
+              <button class="src-btn" data-orient="all" id="orient-all">🗂️ 全部内容</button>
+              <button class="src-btn" data-orient="theory" id="orient-theory">🎓 理论进阶</button>
+            </div>
+            <div class="hint" style="margin-top:9px" id="orientHint">预习为纲：侧重实验步骤与物质性质，自动剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论。</div>
           </div>
 
           <div class="panel">
@@ -329,15 +339,32 @@ var TYPE_ORDER=["single","multiple","truefalse","fill","short","calculation"];
 var DIFF_LABEL={easy:"基础",medium:"中等",hard:"较难"};
 var DIFF_ORDER=["easy","medium","hard"];
 var DEF_SCORE={single:2,multiple:3,truefalse:1,fill:2,short:6,calculation:10};
-var DEF_COUNT={single:8,multiple:4,truefalse:4,fill:4};
+var DEF_COUNT={single:8,multiple:4,truefalse:4,fill:4,short:0,calculation:0};
 var DEF_TITLE="三草酸合铁(III)酸钾制备与分析练习题";
 var DEF_SUBTITLE="配位化学与氧化还原滴定综合测试";
 var DEF_DIFF={easy:40,medium:40,hard:20};
 
+// ===== 内容取向：以预习为纲（步骤/物质性质）=====
+var STEP_CATS=["实验操作","合成制备","分析测定","安全与废物处理"];
+var PROP_CATS=["结构表征","热分析","反应原理","光化学应用"];
+var THEORY_CATS=["配位化学理论","磁性研究"];
+var ORIENT_LABEL={preview:"预习为纲",all:"全部内容",theory:"理论进阶"};
+// 教学/素养/文学史/跨学科 meta 词：这些是非预习的"考核/拓展"题，预习卷剔除
+var META_KW=["教学","教材","教育","素养","高考","历年","文献","经典","地位","价值","哪位","谁在","年发现","教学目标","课程","培养","思维训练","评估","评价","引言","概述","教育意义","维尔纳","晶体场","分裂能","八面体场","四面体场","d轨道","Δo"];
+function isMetaQuestion(q){var s=(q.question||"")+(q.answer||"")+(q.explanation||"");return META_KW.some(function(k){return s.indexOf(k)>=0;});}
+function orientEligible(q){
+  if(smart.orient==="all")return true;
+  var c=q.category;
+  if(smart.orient==="theory")return THEORY_CATS.indexOf(c)>=0||(c==="综合研究"&&isMetaQuestion(q));
+  // preview（默认）：步骤/性质优先，剔 meta + 深理论
+  if(STEP_CATS.indexOf(c)>=0||PROP_CATS.indexOf(c)>=0)return true;
+  return c==="综合研究"&&!isMetaQuestion(q);   // 综合研究的非 meta（保住全部客观题）
+}
+
 var BANK=[];            // all 1113 questions
 var CATS=[];            // category list
 var paper=[];           // [{q, score}]
-var smart={title:DEF_TITLE,subtitle:DEF_SUBTITLE,count:{...DEF_COUNT},score:{single:2,multiple:3,truefalse:1,fill:2},diff:{...DEF_DIFF},cats:[],src:"builtin"};
+var smart={title:DEF_TITLE,subtitle:DEF_SUBTITLE,count:{...DEF_COUNT},score:{...DEF_SCORE},diff:{...DEF_DIFF},cats:[],src:"builtin",orient:"preview"};
 var manual={type:"all",diff:"all",cat:"all",kw:""};
 var tab="smart";
 
@@ -404,7 +431,7 @@ function renderCats(){
 }
 function renderTypeRows(){
   var r=$("typeRows");r.innerHTML="";
-  ["single","multiple","truefalse","fill"].forEach(function(t){
+  ["single","multiple","truefalse","fill","short","calculation"].forEach(function(t){
     var row=document.createElement("div");row.className="qrow";
     row.innerHTML='<span class="ql">'+TYPE_LABEL[t]+'</span><button class="btn" data-t="'+t+'" data-d="-1">−</button><input class="num" type="number" min="0" max="80" value="'+smart.count[t]+'" data-t="'+t+'"><button class="btn" data-t="'+t+'" data-d="1">＋</button><span class="unit">题 × </span><input class="score" type="number" min="1" max="100" value="'+smart.score[t]+'" data-t="'+t+'" style="width:52px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:8px;color:var(--t1);font-size:13px;padding:6px"><span class="unit">分</span>';
     r.appendChild(row);
@@ -432,10 +459,16 @@ function renderDiffRows(){
   });
 }
 function srcSet(src){smart.src=src;$("srcBuiltin").classList.toggle("active",src==="builtin");$("srcAi").classList.toggle("active",src==="ai");$("srcHint").textContent=src==="builtin"?"从真实题库按条件随机抽题，并按难度滑块比例取样（AI 生成请用「AI助手」或切换下方「AI 生成」）。":"调用 LLM（DeepSeek）按当前参数智能生成整卷——需先在「AI助手」页的 🤖 LLM 面板配置 Key，生成后请人工校核数值。";var b=$("btnGenerate");if(b&&!b.disabled)b.textContent=src==="ai"?"🤖 AI 生成试卷":"✨ 智能生成试卷";}
+var ORIENT_HINT={preview:"预习为纲：侧重实验步骤与物质性质，自动剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论。",all:"全部内容：涵盖全部 11 个知识点，含理论/拓展/meta 题。",theory:"理论进阶：侧重配位化学理论、磁性研究及拓展题（课后拔高）。"};
+function orientSet(o){
+  smart.orient=o;
+  ["preview","all","theory"].forEach(function(k){var b=$("orient-"+k);if(b)b.classList.toggle("active",k===o);});
+  var h=$("orientHint");if(h)h.textContent=ORIENT_HINT[o]||"";
+}
 function resetSmart(){
-  smart.title=DEF_TITLE;smart.subtitle=DEF_SUBTITLE;smart.count={...DEF_COUNT};smart.score={single:2,multiple:3,truefalse:1,fill:2};smart.diff={...DEF_DIFF};smart.cats=CATS.slice();smart.src="builtin";
+  smart.title=DEF_TITLE;smart.subtitle=DEF_SUBTITLE;smart.count={...DEF_COUNT};smart.score={...DEF_SCORE};smart.diff={...DEF_DIFF};smart.cats=CATS.slice();smart.src="builtin";smart.orient="preview";
   $("fTitle").value=smart.title;$("fSubtitle").value=smart.subtitle;
-  renderTypeRows();renderDiffRows();renderCats();srcSet("builtin");
+  renderTypeRows();renderDiffRows();renderCats();srcSet("builtin");orientSet("preview");
   toast("已恢复默认设置");
 }
 // ===== 智能生成：按配置抽题 =====
@@ -452,7 +485,7 @@ function genSmart(){
     // ① 按各难度配额精确取样
     DIFF_ORDER.forEach(function(d){
       var need=Math.round(target[d]);if(need<=0)return;
-      var pool=BANK.filter(function(q){return q.type===type&&q.difficulty===d&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
+      var pool=BANK.filter(function(q){return q.type===type&&q.difficulty===d&&cats.indexOf(q.category)>=0&&!used[q.id||q.question]&&orientEligible(q);});
       shuffle(pool);var take=Math.min(need,pool.length);
       for(var k=0;k<take;k++){used[pool[k].id||pool[k].question]=1;result.push(pool[k]);got++;}
       if(take<need)warnings.push(DIFF_LABEL[d]+"·"+TYPE_LABEL[type]+" 需 "+need+" 题，命中 "+take+" 题");
@@ -460,7 +493,7 @@ function genSmart(){
     // ② 配额取整/不足导致的缺口 → 从任意难度补齐
     var fillCount=count-got;
     if(fillCount>0){
-      var rest=BANK.filter(function(q){return q.type===type&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
+      var rest=BANK.filter(function(q){return q.type===type&&cats.indexOf(q.category)>=0&&!used[q.id||q.question]&&orientEligible(q);});
       shuffle(rest);
       for(var k=0;k<rest.length&&fillCount>0;k++){used[rest[k].id||rest[k].question]=1;result.push(rest[k]);got++;fillCount--;}
     }
@@ -468,7 +501,7 @@ function genSmart(){
     while(got>count){var idx=start+Math.floor(Math.random()*(result.length-start));result.splice(idx,1);got--;}
     return got;
   }
-  var plan=[["single","single"],["multiple","multiple"],["truefalse","truefalse"],["fill","fill"]];
+  var plan=[["single","single"],["multiple","multiple"],["truefalse","truefalse"],["fill","fill"],["short","short"],["calculation","calculation"]];
   plan.forEach(function(p){
     var got=pick(p[0],smart.count[p[0]]);
     if(got<smart.count[p[0]])warnings.push(TYPE_LABEL[p[0]]+" 需 "+smart.count[p[0]]+" 题，命中 "+got+" 题");
@@ -505,7 +538,7 @@ function aiGenerate(){
   var key=lsGet2("chemai_llm_key","");
   if(!key){toast("未配置 LLM Key——请先在「AI助手」页的 🤖 LLM 面板粘贴 Key（DeepSeek/OpenAI）");return;}
   var cats=[];document.querySelectorAll("#catGrid input:checked").forEach(function(c){cats.push(c.value);});
-  var typeReq=[];["single","multiple","truefalse","fill"].forEach(function(t){if(smart.count[t]>0)typeReq.push(TYPE_LABEL[t]+smart.count[t]+"题");});
+  var typeReq=[];["single","multiple","truefalse","fill","short","calculation"].forEach(function(t){if(smart.count[t]>0)typeReq.push(TYPE_LABEL[t]+smart.count[t]+"题");});
   var diffReq=DIFF_ORDER.map(function(d){return DIFF_LABEL[d]+smart.diff[d]+"%";}).join("/");
   var catReq=cats.length?cats.join("、"):"不限";
   var prompt="为大学无机化学实验「三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 的制备与分析」命制一套试卷。\n"+
@@ -513,17 +546,18 @@ function aiGenerate(){
     "题型与数量："+typeReq.join("，")+"\n"+
     "难度分布："+diffReq+"\n"+
     "知识点范围："+catReq+"\n"+
+    "内容取向："+(ORIENT_LABEL[smart.orient]||"预习为纲")+"（"+(smart.orient==="all"?"覆盖全部，含理论与拓展":smart.orient==="theory"?"侧重配位理论/磁性/拓展的课后拔高":"侧重实验步骤与物质性质，避免教学/素养/文学史类抽象议题")+"）\n"+
     "要求：\n"+
     "1. 只依据下方讲义事实命制，数值以讲义为准（6% H₂O₂ 8mL、失水约100℃、烘干50℃、草酸钾3.5g、理论产量6.26g、0.5M草酸、莫尔盐为Fe基准、K₃[Fe(C₂O₄)₃]·3H₂O），不编造。\n"+
     "2. 化学式统一 Unicode 上下标（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻）。\n"+
-    "3. 只输出一个 JSON 数组，不写说明或围栏。每项格式：{type,question,answer,explanation,difficulty}。type 只取 single/multiple/truefalse/fill，difficulty 取 easy/medium/hard。\n"+
+    "3. 只输出一个 JSON 数组，不写说明或围栏。每项格式：{type,question,answer,explanation,difficulty}。type 只取 single/multiple/truefalse/fill/short/calculation，difficulty 取 easy/medium/hard。\n"+
     "4. 客观题（single/multiple）只说 1 句题干，不需要 A/B/C/D 选项（题库无选项、无法呈现），正确答案写入 answer。";
   var ctx="讲义关键事实：\n"+
     "- 三草酸合铁(III)酸钾：K₃[Fe(C₂O₄)₃]·3H₂O，内界[Fe(C₂O₄)₃]³⁻，配体 C₂O₄²⁻，配位数 6，中心 Fe³⁺\n"+
     "- 制备三步：莫尔盐+草酸→草酸亚铁沉淀；H₂O₂ 氧化+草酸钾→配合物；乙醇析出结晶\n"+
     "- 关键数值：6% H₂O₂ 加 8mL；烘干约 50℃；失结晶水约 100℃（理论失重 11.0%）；0.5M 草酸；草酸钾 3.5g；理论产量 6.26g\n"+
     "- 组成测定：KMnO₄ 或 Ce⁴⁺ 氧化还原滴定测铁/草酸根；涉及配位化学与氧化还原";
-  var sys="你是严谨的化学实验命题专家，严格依据讲义事实命制中国高校无机化学实验题，数值以讲义为准，绝不编造。只返回 JSON 数组。";
+  var sys="你是严谨的化学实验命题专家，严格依据讲义事实命制中国高校无机化学实验题，数值以讲义为准，绝不编造。只返回 JSON 数组。题目应聚焦核心实验步骤、物质性质与安全规范，而非教学/素养/文学史等抽象议题。";
   var messages=[{role:"system",content:sys},{role:"user",content:prompt+"\n\n"+ctx}];
   setGenBusy(true);
   return callAIApi(key,messages).then(function(text){
@@ -735,6 +769,10 @@ $("btnGenerate").addEventListener("click",function(){if(smart.src==="ai")aiGener
 $("btnReset").addEventListener("click",resetSmart);
 $("srcBuiltin").addEventListener("click",function(){srcSet("builtin");});
 $("srcAi").addEventListener("click",function(){srcSet("ai");});
+$("orient-preview").addEventListener("click",function(){orientSet("preview");});
+$("orient-all").addEventListener("click",function(){orientSet("all");});
+$("orient-theory").addEventListener("click",function(){orientSet("theory");});
+orientSet("preview");
 $("btnSelClear").addEventListener("click",function(){paper=[];$("selCount").textContent="0";renderList();renderPreview();});
 $("btnSelPickAll").addEventListener("click",pickAllVisible);
 $("btnPreview").addEventListener("click",function(){showTab("smart");});

@@ -864,6 +864,13 @@ async function callLLM(question, context, streamCallback){
 }
 function buildLLMContext(q){
   var parts=[];
+  // 角色镜头：让 LLM 按身份调整口吻与深度（本地路径另行用 intro/outro 包裹）
+  var roleLens={
+    'non-chemistry':'（用户身份：非化学专业人士 · 通俗版）请用生活化语言、少堆术语；涉及操作请补一句安全提醒；多用贴近生活的比喻。',
+    'chemistry':'（用户身份：化学专业人士 · 深度版）请保持专业严谨，给出配位化学、晶体场、热力学机理与定量推导依据。',
+    'teacher':'（用户身份：教师 · 教学版）请以教学引导口吻：先明目标、再分步讲、最后小结，并提示可出题巩固的要点。'
+  };
+  parts.push('【身份】'+ (roleLens[chatRole()]||roleLens.chemistry));
   if(CHAT_HISTORY.length>1){
     parts.push('【对话历史】\n'+CHAT_HISTORY.slice(0,-1).slice(-3).map(function(t){return '· '+t;}).join('\n'));
   }
@@ -1277,10 +1284,14 @@ function confidenceBarHTML(label, val, level){
 
 function buildHybridAnswerHTML(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, conf=ctx.conf, chems=ctx.chems, ops=ctx.ops;
+  var body;
   if(conf.level==='high'&&directHits.length>0){
-    return buildAnswerHTML(q, {faq:faq, hits:directHits, chems:chems, ops:ops});
+    body=buildAnswerHTML(q, {faq:faq, hits:directHits, chems:chems, ops:ops});
+  }else{
+    body=buildAnalogyBridgedAnswer(q, ctx);
   }
-  return buildAnalogyBridgedAnswer(q, ctx);
+  // 角色镜头：同一知识底座按身份差异化呈现（开场引导 + 后续追问 chips）
+  return roleIntroHTML(chatRole())+body+roleOutroHTML(chatRole());
 }
 
 function buildAnalogyBridgedAnswer(q, ctx){
@@ -3071,9 +3082,9 @@ qaInput.addEventListener('input',function(){qaInput.style.height='auto';qaInput.
 /* ================= v65 身份化语言风格 ================= */
 var _lastRoleIntro=null;
 var ROLE_META={
-  'non-chemistry':{label:'🧑‍🎓 通俗',hint:'非化学专业 · 通俗讲解',intro:'👋 我尽量用大白话给你讲，遇到化学术语会顺带解释一下。哪里没看懂，随时打断我~',outro:['再讲通俗一点','这一步为什么这么做','换成生活里的例子']},
-  'chemistry':{label:'🎓 专业',hint:'化学专业 · 严谨',intro:'🙂 我按专业口径回答，直接给机理、参数与依据。需要更深的推导或计算，尽管提。',outro:['展开原理推导','给出定量计算','列出参考文献']},
-  'teacher':{label:'👩‍🏫 教学',hint:'教师 · 教学引导',intro:'👩‍🏫 咱们把这个点捋清楚：先看要解决什么，再分步走，最后小结。哪个环节卡住了，咱们再细讲。',outro:['考考我','这步为什么是关键','帮我出个练习题']}
+  'non-chemistry':{label:'🧑‍🎓 通俗',hint:'非化学专业 · 通俗讲解',intro:'👋 我把专业的化学掰开揉碎，用大白话和生活中的例子讲给你听；涉及动手操作的地方会特别提醒安全。哪里没懂，随时打断我~',outro:['再讲通俗一点','有图解或图示吗','这一步安全吗','换成生活里的例子']},
+  'chemistry':{label:'🎓 专业',hint:'化学专业 · 严谨',intro:'🙂 我按专业口径回答，直接给出配位化学、晶体场、热力学与定量推导的依据和参数。需要更深的推导或计算，尽管提。',outro:['展开配位化学推导','晶体场理论怎么解释','给出定量计算','列出参考文献']},
+  'teacher':{label:'👩‍🏫 教学',hint:'教师 · 教学引导',intro:'👩‍🏫 咱们把这一点捋清楚：先看要解决什么、再分步走、最后小结。哪个环节卡住就细讲；也可以让我帮您出题、做教学设计。',outro:['帮我出个练习题','这步为什么是关键','给个教学设计建议','考考我']}
 };
 function _esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 function chatRole(){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'{}'); return (u.state&&u.state.role)||'chemistry'; }catch(e){ return 'chemistry'; } }

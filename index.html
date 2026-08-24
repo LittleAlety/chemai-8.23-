@@ -267,16 +267,23 @@ button{font-family:inherit;cursor:pointer}
 </script>
 
 <script>
-// ===== hash 子路由条件加载：命中 React SPA 路由时接管（防 #/report 等死链）=====
+// ===== hash 子路由：命中命名 React 路由时才接管应用；裸 #/ 或无 hash 一律回到起始界面（landing）=====
 (function(){
-  var m=location.hash.match(/^#\/(report|explore|quiz|generator|videos|agent)(\/|$)/);
-  if(!m)return;
+  var ROUTE=/^#\/(report|explore|quiz|generator|videos|agent)(\/|$)/;
   var land=document.getElementById("landing");
-  if(land)land.style.display="none";
-  var css=document.createElement("link");css.rel="stylesheet";css.href="assets/index-DbDp5JQi.css";
-  document.head.appendChild(css);
-  var js=document.createElement("script");js.type="module";js.src="assets/index-B-pT4Snc.js";
-  document.body.appendChild(js);
+  var root=document.getElementById("root");
+  var cssLoaded=false,jsLoaded=false;
+  function showLanding(){if(land)land.style.display="";if(root)root.style.display="none";}
+  function showApp(){
+    if(land)land.style.display="none";
+    if(root)root.style.display="";
+    if(!cssLoaded){var css=document.createElement("link");css.rel="stylesheet";css.href="assets/index-DbDp5JQi.css";document.head.appendChild(css);cssLoaded=true;}
+    if(!jsLoaded){var js=document.createElement("script");js.type="module";js.src="assets/index-B-pT4Snc.js";document.body.appendChild(js);jsLoaded=true;}
+  }
+  function route(){if(ROUTE.test(location.hash)){showApp();}else{showLanding();}}
+  window.addEventListener("hashchange",route);
+  window.addEventListener("popstate",route);
+  route();
 })();
 </script>
 </body>

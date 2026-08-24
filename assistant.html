@@ -1291,8 +1291,8 @@ function buildHybridAnswerHTML(q, ctx){
   }else{
     body=buildAnalogyBridgedAnswer(q, ctx);
   }
-  // 角色镜头：同一知识底座按身份差异化呈现（开场引导 + 教师工具条 + 正文 + 后续追问 chips）
-  return roleIntroHTML(chatRole())+teacherBarHTML()+body+roleOutroHTML(chatRole());
+  // 角色镜头：同一知识底座按身份差异化呈现（教师工具条 + 正文[内含融进的引导句] + 后续追问 chips）
+  return teacherBarHTML()+body+roleOutroHTML(chatRole());
 }
 
 /* ===== 身份化深度门控：非化学折叠技术性小节（看干净简易答案），化学/教师铺开全深度。
@@ -1302,10 +1302,16 @@ function roleSec(summary, body, forceOpen){
   var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
   return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
 }
-/* 非化学核心解答「白话版」容器：身份差异化呈现（不改写正文、不臆造内容，仅收拢为人话视觉） */
+/* 身份差异化呈现（不改写正文、不臆造内容）：
+   ① 融进「核心解答」的一行引导句（roleLeadHTML，非独立浮框）——承诺与后续内容一致；
+   ② 非化学：核心解答包「白话版」卡 + 淡显公式符号（CSS .role-plain .ans-sub/.ans-sup），深机理折叠——读起来更浅；化学/教师：原样铺开全深度。 */
 function roleCoreHTML(innerHTML){
-  if(chatRole()!=='non-chemistry') return innerHTML;
-  return '<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+innerHTML+'</div>';
+  var role=chatRole();
+  var lead=roleLeadHTML(role);
+  if(role==='non-chemistry'){
+    return lead+'<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+innerHTML+'</div>';
+  }
+  return lead+innerHTML;
 }
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
@@ -3127,15 +3133,15 @@ qaInput.addEventListener('input',function(){qaInput.style.height='auto';qaInput.
 /* ================= v65 身份化语言风格 ================= */
 var _lastRoleIntro=null;
 var ROLE_META={
-  'non-chemistry':{label:'🧑‍🎓 通俗',hint:'非化学专业 · 通俗讲解',intro:'👋 我把专业的化学掰开揉碎，用大白话和生活中的例子讲给你听；涉及动手操作的地方会特别提醒安全。哪里没懂，随时打断我~',outro:['再讲通俗一点','有图解或图示吗','这一步安全吗','换成生活里的例子']},
-  'chemistry':{label:'🎓 专业',hint:'化学专业 · 严谨',intro:'🙂 我按专业口径回答，直接给出配位化学、晶体场、热力学与定量推导的依据和参数。需要更深的推导或计算，尽管提。',outro:['展开配位化学推导','晶体场理论怎么解释','给出定量计算','列出参考文献']},
-  'teacher':{label:'👩‍🏫 教学',hint:'教师 · 教学引导',intro:'👩‍🏫 咱们把这一点捋清楚：先看要解决什么、再分步走、最后小结。哪个环节卡住就细讲；也可以让我帮您出题、做教学设计。',outro:['帮我出个练习题','这步为什么是关键','给个教学设计建议','考考我']}
+  'non-chemistry':{label:'🧑‍🎓 通俗',hint:'非化学专业 · 通俗讲解',lead:'🌱 挑重点说：先看核心结论，公式符号淡显、深入机理折叠；动手安全会单独提醒。',outro:['再讲通俗一点','有图解或图示吗','这一步安全吗','换成生活里的例子']},
+  'chemistry':{label:'🎓 专业',hint:'化学专业 · 严谨',lead:'📐 按专业口径直述：含机理、参数与依据；需要更深推导或计算，尽管提。',outro:['展开配位化学推导','晶体场理论怎么解释','给出定量计算','列出参考文献']},
+  'teacher':{label:'👩‍🏫 教学',hint:'教师 · 教学引导',lead:'👩‍🏫 教学引导：先讲"是什么"、再讲"为什么"、结尾小结；可帮您出题、做教学设计。',outro:['帮我出个练习题','这步为什么是关键','给个教学设计建议','考考我']}
 };
 function _esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 function chatRole(){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'{}'); return (u.state&&u.state.role)||'chemistry'; }catch(e){ return 'chemistry'; } }
 function setRole(r){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'null')||{}; u.state=u.state||{}; u.state.role=r; u.state.isLoggedIn=true; localStorage.setItem('chem-user',JSON.stringify(u)); }catch(e){} _lastRoleIntro=null; refreshRoleSwitch(); }
 function refreshRoleSwitch(){ var r=chatRole(),chips=document.querySelectorAll('#roleBar .rs-chip'),m=ROLE_META[r]||ROLE_META.chemistry; for(var i=0;i<chips.length;i++) chips[i].className='rs-chip'+(chips[i].getAttribute('data-role')===r?' on':''); var h=document.getElementById('roleHint'); if(h) h.textContent='当前：'+m.hint; }
-function roleIntroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-intro"><div class="ri-bubble">'+_esc(m.intro)+'</div></div>'; }
+function roleLeadHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<p class="role-lead"><span class="rl-ic"></span>'+(m.lead?'<span>'+_esc(m.lead)+'</span>':'')+'</p>'; }
 function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro"><div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div></div>'; }
 function askUser(t,mode){ if(mode) setWorkMode(mode); var inp=document.getElementById('qaInput'); if(inp) inp.value=t; qaSubmit(); }
 function rolePersona(role){
@@ -3956,6 +3962,12 @@ document.addEventListener('DOMContentLoaded',function(){
 .teach-bar .tb-lb{font-size:12.5px;font-weight:600;color:var(--t2,#c9d4e6);margin-right:4px}
 .role-plain{position:relative;padding:12px 14px;background:rgba(45,212,191,.06);border:1px solid rgba(45,212,191,.18);border-radius:12px}
 .role-plain .rp-tag{display:inline-block;margin-bottom:6px;padding:2px 9px;border-radius:20px;background:rgba(45,212,191,.15);color:var(--t2,#c9d4e6);font-size:11px;font-weight:600}
+/* 融进核心解答的引导句：左侧细条、无独立浮框，避免割裂感 */
+.role-lead{display:flex;align-items:flex-start;gap:7px;font-size:13px;line-height:1.65;color:var(--t3,#7c879c);margin:0 0 10px;padding:2px 0 2px 10px;border-left:2px solid rgba(45,212,191,.45)}
+.role-lead .rl-ic{flex:0 0 auto;margin-top:2px}
+/* 非化学「白话版」：淡显公式上下标/电荷符号，让白话文字凸显 */
+.role-plain .ans-sub,.role-plain .ans-sup{opacity:.5;color:var(--t3,#7c879c)}
+.role-plain .rich-answer{line-height:1.8}
 @media (prefers-reduced-motion:reduce){ .rs-chip{transition:none} }
 </style>
 <script src="assets/bg-particles.js" defer></script>

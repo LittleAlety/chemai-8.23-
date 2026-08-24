@@ -1291,8 +1291,8 @@ function buildHybridAnswerHTML(q, ctx){
   }else{
     body=buildAnalogyBridgedAnswer(q, ctx);
   }
-  // 角色镜头：同一知识底座按身份差异化呈现（开场引导 + 后续追问 chips）
-  return roleIntroHTML(chatRole())+body+roleOutroHTML(chatRole());
+  // 角色镜头：同一知识底座按身份差异化呈现（开场引导 + 教师工具条 + 正文 + 后续追问 chips）
+  return roleIntroHTML(chatRole())+teacherBarHTML()+body+roleOutroHTML(chatRole());
 }
 
 /* ===== 身份化深度门控：非化学折叠技术性小节（看干净简易答案），化学/教师铺开全深度。
@@ -1599,6 +1599,31 @@ async function manualAuthorityHTML(q, kws, html){
         +conflicts.map(esc).join('<br>')+'</div></div>';
     }
     return out;
+  }catch(e){ return ''; }
+}
+/* 教师教学工具条：仅在 teacher 身份，内联真实路由（测评/精通之路/预习），无需 cluster 技能卡 */
+function teacherBarHTML(){
+  if(chatRole()!=='teacher') return '';
+  return '<div class="ans-sec"><div class="teach-bar">'
+    +'<span class="tb-lb">🧑‍🏫 教学工具</span>'
+    +'<button class="btn ghost sm" onclick="goAssess()">📝 智能出题</button>'
+    +'<button class="btn ghost sm" onclick="goMastery()">🎯 精通之路</button>'
+    +'<a class="btn ghost sm" href="prep.html" target="_blank">📚 预习/备课</a>'
+    +'</div></div>';
+}
+/* 非化学安全提醒：复用 SAFETY_FACTS（危害+防护），异步注入置顶；失败静默 */
+async function roleSafetyHTML(q, chems){
+  if(chatRole()!=='non-chemistry') return '';
+  try{
+    var AC=await ensureAgentCluster();
+    if(!AC||!AC.skills||!AC.skills.safety) return '';
+    var safRes=AC.skills.safety(q, chems||[]);
+    if(!safRes||!(safRes.items&&safRes.items.length)) return '';
+    var items=safRes.items.map(function(it){
+      return '<div class="web-item"><div class="web-top"><span class="web-src">⚠ '+esc(it.chem)+'</span><span class="auth-tag local">安全提醒</span></div>'
+        +'<div class="web-snippet"><b>危害：</b>'+esc(it.hazard)+'<br><b>防护：</b>'+esc(it.advice)+'</div></div>';
+    }).join('');
+    return '<div class="ans-sec" style="margin-top:4px"><div class="link-card warn"><h4>🛡️ 安全提醒（先看这个）</h4>'+items+'</div></div>';
   }catch(e){ return ''; }
 }
 function msdsCardHTML(chems){
@@ -2978,6 +3003,8 @@ async function handleQA(q){
   /* v60 讲义权威进主路径（normal+cluster 均执行；渲染层增强，无头路径已 stub）。
      异步弹入：不阻塞答案渲染，manual.json 就绪后补插「讲义原文/核对」块，保持正常模式"快速本地答案"。 */
   var maPromise = manualAuthorityHTML(q, kws, html);
+  /* 非化学安全提醒：置顶注入（仅非化学，异步，失败静默） */
+  var roleSafPromise = roleSafetyHTML(q, chems);
   if(UPLOADED_FILE && detectReportIntent(rawQ)){ html=reportAnalysisHTML(UPLOADED_FILE.text)+html; }
   if(UPLOADED_FILE){ html+=fileContextHTML(q); }
 
@@ -3062,6 +3089,7 @@ async function handleQA(q){
 
   /* v60 讲义权威异步弹入：答案先渲染，讲义原文/核对块就绪后补插 */
   maPromise.then(function(ma){ if(ma&&ans&&ans.isConnected) ans.insertAdjacentHTML('beforeend', ma); }).catch(function(){});
+  roleSafPromise.then(function(rs){ if(rs&&ans&&ans.isConnected) ans.insertAdjacentHTML('afterbegin', rs); }).catch(function(){});
   if(webTrigger){
     try{ await runWebResearch(rawQ, bub, {kws:kws, chems:chems, enChems:enChems}); }
     catch(e){ setAgentState(bub,'web','warn'); }
@@ -3917,6 +3945,8 @@ document.addEventListener('DOMContentLoaded',function(){
 .role-outro{margin-top:6px}
 .role-outro .ro-txt{font-size:12px;color:var(--t3,#7c879c);margin-bottom:6px}
 .role-outro .ro-chips{display:flex;flex-wrap:wrap;gap:6px}
+.teach-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.2);border-radius:10px}
+.teach-bar .tb-lb{font-size:12.5px;font-weight:600;color:var(--t2,#c9d4e6);margin-right:4px}
 @media (prefers-reduced-motion:reduce){ .rs-chip{transition:none} }
 </style>
 <script src="assets/bg-particles.js" defer></script>

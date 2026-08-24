@@ -545,17 +545,18 @@ function paperHTMLForExport(){
   var title=smart.title||$("fTitle").value||"未命名试卷";
   var subtitle=smart.subtitle||$("fSubtitle").value;
   var s='<div style="font-family:SimSun,serif;line-height:1.7;color:#000">';
-  s+='<div style="text-align:center;font-size:18px;font-weight:bold">'+title+'</div>';
-  if(subtitle)s+='<div style="text-align:center;font-size:14px;color:#333">'+subtitle+'</div>';
+  s+='<div style="text-align:center;font-size:18px;font-weight:bold">'+esc(title)+'</div>';
+  if(subtitle)s+='<div style="text-align:center;font-size:14px;color:#333">'+esc(subtitle)+'</div>';
   var total=0;paper.forEach(function(p){total+=p.score;});
   s+='<div style="text-align:center;font-size:12px;color:#333;margin:8px 0 16px">（满分 '+total+' 分 · 共 '+paper.length+' 题）　姓名________　班级________　得分________</div>';
   paper.forEach(function(p,i){
     s+='<div style="margin-bottom:14px">';
-    s+='<div style="font-size:14px;font-weight:bold">'+(i+1)+'. （'+TYPE_LABEL[p.q.type]+'，'+p.score+'分）　'+p.q.question+'</div>';
-    if(p.q.type==="single"||p.q.type==="multiple"||p.q.type==="truefalse"||p.q.type==="fill"){s+='<div style="font-size:12.5px;color:#555;margin:4px 0 0 12px">（作答：______________________）</div>';}
+    s+='<div style="font-size:14px;font-weight:bold">'+(i+1)+'. （'+TYPE_LABEL[p.q.type]+'，'+p.score+'分）　'+fmt(p.q.question)+'</div>';
+    if(p.q.type==="single"||p.q.type==="multiple"){s+='<div style="font-size:12px;color:#888;margin:4px 0 0 12px">（题库未存 A/B/C/D 选项——请先作答，再对照下方「参考答案」）</div>';}
+    else if(p.q.type==="truefalse"||p.q.type==="fill"){s+='<div style="font-size:12.5px;color:#555;margin:4px 0 0 12px">（作答：______________________）</div>';}
     else{s+='<div style="height:60px"></div>';}
-    s+='<div style="font-size:12px;color:#555;margin:6px 0 0 12px"><b>参考答案：</b>'+p.q.answer+'</div>';
-    if(p.q.explanation&&p.q.answer!==p.q.explanation)s+='<div style="font-size:12px;color:#777;margin:3px 0 0 12px"><b>解析：</b>'+p.q.explanation+'</div>';
+    s+='<div style="font-size:12px;color:#555;margin:6px 0 0 12px"><b>参考答案：</b>'+fmt(p.q.answer||p.q.referenceAnswer||"")+'</div>';
+    if(p.q.explanation&&p.q.answer!==p.q.explanation)s+='<div style="font-size:12px;color:#777;margin:3px 0 0 12px"><b>解析：</b>'+fmt(p.q.explanation)+'</div>';
     s+='</div>';
   });
   s+='<div style="text-align:center;font-size:12px;color:#999;margin-top:20px">— ChemAI 命题 · 三草酸合铁酸钾制备实验 —</div>';
@@ -568,6 +569,7 @@ function renderPreview(){
     return;
   }
   var tot=0;paper.forEach(function(p){tot+=p.score;});
+  function countBadge(){var byType={};paper.forEach(function(p){byType[p.q.type]=(byType[p.q.type]||0)+1;});var tl='';for(var t in byType)if(byType.hasOwnProperty(t))tl+=(tl?' · ':'')+TYPE_LABEL[t]+' '+byType[t];var n=0;paper.forEach(function(p){n+=p.score;});return tl+' · 共 <b>'+paper.length+'</b> 题 · <b>'+n+'</b> 分';}
   // 预览时给每题加 分值/上移/下移/删除 控件（仅在线，不进导出）
   var wrap=buildPaperDOM();
   var qels=wrap.querySelectorAll(".q");
@@ -580,7 +582,7 @@ function renderPreview(){
       +'<span class="del" data-i="'+i+'" title="移出试卷">✕ 移出试卷</span>';
     qels[i].appendChild(bar);
   }
-  var head='<div class="preview-head"><span class="t">📄 试卷预览</span><span class="count">共 <b>'+paper.length+'</b> 题 · <b>'+tot+'</b> 分</span></div>';
+  var head='<div class="preview-head"><span class="t">📄 试卷预览</span><span class="count">'+countBadge()+'</span></div>';
   var html='<div class="panel">'+head+'<div class="paper" style="margin-top:4px">'+wrap.innerHTML+'</div>';
   html+='<div class="export-row">';
   html+='<button class="mini-btn primary" id="btnWord">📝 下载 Word(.doc)</button>';
@@ -589,7 +591,13 @@ function renderPreview(){
   html+='</div></div>';
   el.innerHTML=html;
   el.querySelectorAll(".score-inp").forEach(function(inp){
-    inp.addEventListener("change",function(){var i=parseInt(inp.getAttribute("data-i"),10);if(paper[i]){paper[i].score=Math.max(1,parseInt(inp.value,10)||1);renderPreview();}});
+    inp.addEventListener("change",function(){
+      var i=parseInt(inp.getAttribute("data-i"),10);if(!paper[i])return;
+      paper[i].score=Math.max(1,parseInt(inp.value,10)||1);
+      var pEl=qels[i]&&qels[i].querySelector(".pts");if(pEl)pEl.textContent=paper[i].score+" 分";
+      var cnt=el.querySelector(".count");if(cnt)cnt.innerHTML=countBadge();
+      var ts=el.querySelector("#totalScore");if(ts){var n=0;paper.forEach(function(p){n+=p.score;});ts.textContent=n;}
+    });
   });
   el.querySelectorAll(".move").forEach(function(mv){
     mv.addEventListener("click",function(){var i=parseInt(mv.getAttribute("data-i"),10),d=parseInt(mv.getAttribute("data-d"),10),j=i+d;if(j<0||j>=paper.length)return;var t=paper[i];paper[i]=paper[j];paper[j]=t;renderPreview();});
@@ -623,8 +631,9 @@ function exportTxt(){
   lines.push("满分 "+total+" 分 · 共 "+paper.length+" 题\n");
   paper.forEach(function(p,i){
     lines.push((i+1)+". （"+TYPE_LABEL[p.q.type]+"，"+p.score+"分） "+p.q.question);
-    if(p.q.type==="single"||p.q.type==="multiple"||p.q.type==="truefalse"||p.q.type==="fill")lines.push("   作答：____________");
-    lines.push("   参考答案："+(p.q.answer||""));
+    if(p.q.type==="single"||p.q.type==="multiple")lines.push("   （题库未存 A/B/C/D 选项——请先作答，再对照参考答案）");
+    else if(p.q.type==="truefalse"||p.q.type==="fill")lines.push("   作答：____________");
+    lines.push("   参考答案："+(p.q.answer||p.q.referenceAnswer||""));
     if(p.q.explanation&&p.q.answer!==p.q.explanation)lines.push("   解析："+p.q.explanation);
     lines.push("");
   });

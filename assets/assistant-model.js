@@ -142,9 +142,14 @@
   /* 类型分派：从特异到通用 */
   function detectVizType(q){
     var s=String(q||'');
-    if(/晶体场|八面体|d\s*5|d⁵|t2g|t₂g|能级分裂|CFSE|d轨道/i.test(s)) return 'crystal';
+    if(/异构|手性|对映|旋光|外消旋|镜像|Δ\s*\[|Λ\s*\[/i.test(s)) return 'isomer';
+    if(/晶体场|能级分裂|d\s*5|d⁵|t2g|t₂g|CFSE|d轨道|场分裂/i.test(s)) return 'crystal';
+    if(/配合物|螯合|配位(结构|构型|键|环)|空间构型|立体结构|\[Fe\s*\(|C2O4\)3|八面体(配合|结构|构型)/i.test(s)) return 'complex';
     if(/抽滤|布氏漏斗|真空泵|水流泵|抽滤瓶|过滤装置|装置|仪器/i.test(s)) return 'apparatus';
     if(/tg|dsc|热重|热分析|差热|失重曲线|分解温度|热量量|tga/i.test(s)) return 'thermal';
+    if(/滴定|突跃|计量点|高锰酸钾|kmno4|标定|草酸根含量|含量测定|自指示/i.test(s)) return 'titration';
+    if(/氧化还原|电极(电势|电位)|电位|电势|半反应|latimer|e°|电对/i.test(s)) return 'redox';
+    if(/安全|防护|危化|通风|手套|护目镜|急救|误食|溅|戴手套|注意/i.test(s)) return 'safety';
     if(/知识图谱|图谱|关联图|节点图|关系图|关系网/i.test(s)) return 'kg';
     if(/流程|步骤|反应|机理|制备|合成|生产|怎么做|怎么制|怎么合成/i.test(s)) return 'flow';
     return null;
@@ -153,13 +158,18 @@
   function buildVisualHTML(q, kg){
     var t=detectVizType(q);
     try{
+      if(t==='isomer') return buildIsomerViz(q);
       if(t==='crystal') return buildCrystalFieldViz(q);
+      if(t==='complex') return buildComplexViz(q);
       if(t==='apparatus') return buildApparatusViz(q);
       if(t==='thermal') return buildThermalViz(q);
+      if(t==='titration') return buildTitrationViz(q);
+      if(t==='redox') return buildRedoxViz(q);
+      if(t==='safety') return buildSafetyViz(q);
       if(t==='kg') return buildKnowGraphViz(q, kg);
       if(t==='flow') return buildFlowViz(q);
     }catch(e){}
-    return vizWrap('<div style="font-size:13px;color:var(--t3,#64748b)">想可视化？试试「画出三步反应的流程图」「生成抽滤装置示意图」「画 d⁵ 八面体场能级分裂图」「用知识图谱展示配位组成」「TG/DSC 热分析」。</div>','🖼 可视化');
+    return vizWrap('<div style="font-size:13px;color:var(--t3,#64748b)">想可视化？试试「画出三步反应的流程图」「生成抽滤装置示意图」「画 d⁵ 八面体场能级分裂图」「画配合物的立体结构」「画 Δ/Λ 手性异构体」「画出高锰酸钾滴定草酸根曲线」「画出氧化还原电位图」「用知识图谱展示配位组成」「本实验安全要点」。</div>','🖼 可视化');
   }
 
   /* ---- 流程（默认/制备类）：5 步分支，数值锚定讲义 ---- */
@@ -303,6 +313,121 @@
     return vizWrap(vizsvg(W,H,d),'🔥 '+(escText(q||'TG-DSC 热分析')));
   }
   function markerRect(x,y,color){ return '<rect x="'+(x-4)+'" y="'+(y-4)+'" width="8" height="8" fill="'+color+'"/>'; }
+
+  /* ---- 配合物立体结构：八面体 + 3×双齿草酸根螯合 ---- */
+  function buildComplexViz(q){
+    var W=520,H=316,cx=260,cy=150,R=90,d='',O=[];
+    for(var k=0;k<6;k++){ var a=-90+k*60, x=cx+R*Math.cos(a*Math.PI/180), y=cy+R*Math.sin(a*Math.PI/180); O.push({x:x,y:y}); }
+    for(var i=0;i<6;i++){ d+='<line x1="'+cx+'" y1="'+cy+'" x2="'+O[i].x+'" y2="'+O[i].y+'" stroke="rgba(45,212,191,.5)" stroke-width="2"/>'; }
+    var pairs=[[0,1],[2,3],[4,5]];
+    for(var p=0;p<pairs.length;p++){
+      var A=O[pairs[p][0]], B=O[pairs[p][1]];
+      var mx=(A.x+B.x)/2, my=(A.y+B.y)/2;
+      var dx=B.x-A.x, dy=B.y-A.y, len=Math.hypot(dx,dy)||1;
+      var nx=-dy/len, ny=dx/len;
+      var c1x=mx+nx*34+dx*0.05, c1y=my+ny*34+dy*0.05;
+      /* 两个碳原子沿法向外推，桥接双齿 O（五元螯合环 Fe-O-C-C-O） */
+      var c2x=mx+nx*34-dx*0.05, c2y=my+ny*34-dy*0.05;
+      d+='<path d="M '+A.x+' '+A.y+' L '+c1x+' '+c1y+' L '+c2x+' '+c2y+' L '+B.x+' '+B.y+'" fill="none" stroke="rgba(167,139,250,.75)" stroke-width="2.5"/>';
+      var lx=mx+nx*50, ly=my+ny*50;
+      d+='<text x="'+lx+'" y="'+ly+'" font-size="11" style="fill:var(--purple,#a78bfa)" text-anchor="middle">C₂O₄²⁻</text>';
+    }
+    d+='<circle cx="'+cx+'" cy="'+cy+'" r="22" fill="var(--em,#10b981)" stroke="var(--t1,#f1f5f9)" stroke-width="2"/>'
+      +'<text x="'+cx+'" y="'+(cy+5)+'" font-size="13" style="fill:#0b1020" text-anchor="middle">Fe³⁺</text>';
+    for(var o=0;o<6;o++){ d+='<circle cx="'+O[o].x+'" cy="'+O[o].y+'" r="10" style="fill:rgba(45,212,191,.25);stroke:rgba(45,212,191,.7);stroke-width:1.5"/>'
+      +'<text x="'+O[o].x+'" y="'+(O[o].y+4)+'" font-size="10.5" style="fill:var(--teal,#2dd4bf)" text-anchor="middle">O</text>'; }
+    d+='<text x="'+cx+'" y="28" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">[Fe(C₂O₄)₃]³⁻ · 八面体配位</text>';
+    d+='<text x="'+cx+'" y="296" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">Fe³⁺ 配位数 6 = 3 × 双齿 C₂O₄²⁻（每个提供 2 个 O 配位）· 各成五元螯合环 · 空间呈八面体</text>';
+    d+='<text x="'+cx+'" y="312" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">配体草酸/水为弱场 → 该配合物为高自旋（见晶体场图）· 可拆分出 Δ/Λ 对映体（见手性图）</text>';
+    return vizWrap(vizsvg(W,H,d),'🧬 '+(escText(q||'配合物立体结构')));
+  }
+
+  /* ---- 手性对映：Δ / Λ 互为镜像 ---- */
+  function buildIsomerViz(q){
+    var W=600,H=300,d='';
+    function propeller(cx,cy){
+      var s='';
+      for(var i=0;i<3;i++){
+        var a=(i*120-90)*(Math.PI/180);
+        var ex=cx+108*Math.cos(a), ey=cy+108*Math.sin(a);
+        var px=-Math.sin(a)*15, py=Math.cos(a)*15;
+        s+='<path d="M '+cx+' '+cy+' L '+(ex+px)+' '+(ey+py)+' L '+(ex-px)+' '+(ey-py)+' Z" style="fill:rgba(96,165,250,.22);stroke:rgba(96,165,250,.8);stroke-width:2"/>';
+      }
+      s+='<circle cx="'+cx+'" cy="'+cy+'" r="20" fill="var(--em,#10b981)" stroke="var(--t1,#f1f5f9)" stroke-width="2"/>'
+        +'<text x="'+cx+'" y="'+(cy+5)+'" font-size="12" style="fill:#0b1020" text-anchor="middle">Fe</text>';
+      return s;
+    }
+    d+=propeller(180,160); d+=propeller(420,160);
+    d+='<line x1="300" y1="52" x2="300" y2="250" stroke="rgba(244,113,113,.7)" stroke-width="3" stroke-dasharray="9 6"/>'
+      +'<text x="300" y="44" font-size="11.5" style="fill:var(--red,#f87171)" text-anchor="middle">镜面</text>';
+    /* 螺旋方向指示 */
+    d+='<path d="M 232 110 A 62 62 0 0 1 232 210" fill="none" stroke="var(--yellow,#fbbf24)" stroke-width="2.5"/>'
+      +'<path d="M 232 210 L 224 188 L 240 188 Z" fill="var(--yellow,#fbbf24)"/>';
+    d+='<path d="M 368 210 A 62 62 0 0 1 368 110" fill="none" stroke="var(--yellow,#fbbf24)" stroke-width="2.5"/>'
+      +'<path d="M 368 110 L 360 132 L 376 132 Z" fill="var(--yellow,#fbbf24)"/>';
+    d+='<text x="180" y="52" font-size="15" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">Δ</text><text x="180" y="278" font-size="11" style="fill:var(--t2,#94a3b8)" text-anchor="middle">左旋（螺旋向上）</text>';
+    d+='<text x="420" y="52" font-size="15" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">Λ</text><text x="420" y="278" font-size="11" style="fill:var(--t2,#94a3b8)" text-anchor="middle">右旋（螺旋向上）</text>';
+    d+='<text x="300" y="22" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">Δ- / Λ-[Fe(C₂O₄)₃]³⁻ 手性对映</text>';
+    d+='<text x="300" y="294" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">Δ 与 Λ 互为镜像、不可重叠 → 旋光异构；等量混合为外消旋体（无旋光性）</text>';
+    return vizWrap(vizsvg(W,H,d),'🪞 '+(escText(q||'手性异构')));
+  }
+
+  /* ---- KMnO₄ 滴定草酸根：S 形滴定曲线 ---- */
+  function buildTitrationViz(q){
+    var W=560,H=330,xL=92,xR=512,yT=48,yB=244,d='';
+    function xV(v){ return xL+(xR-xL)*(v/24); }
+    function yE(e){ return yB-(e-0.4)/(1.6-0.4)*(yB-yT); }
+    d+='<line x1="'+xL+'" y1="'+yB+'" x2="'+xR+'" y2="'+yB+'" stroke="rgba(148,163,184,.5)" stroke-width="2"/>';
+    d+='<line x1="'+xL+'" y1="'+yB+'" x2="'+xL+'" y2="'+yT+'" stroke="rgba(148,163,184,.5)" stroke-width="2"/>';
+    d+='<text x="'+(xL-12)+'" y="'+(yT-10)+'" font-size="12" style="fill:var(--t2,#94a3b8)">电极电位 E / mV</text>';
+    d+='<text x="'+((xL+xR)/2)+'" y="'+(yB+26)+'" font-size="12" style="fill:var(--t2,#94a3b8)" text-anchor="middle">滴入 KMnO₄ 体积 V / mL</text>';
+    for(var g=0;g<=3;g++){ var e=0.4+g*0.4, gy=yE(e); d+='<line x1="'+xL+'" y1="'+gy+'" x2="'+xR+'" y2="'+gy+'" stroke="rgba(148,163,184,.12)"/>'; d+='<text x="'+(xL-6)+'" y="'+(gy+4)+'" font-size="10" style="fill:var(--t3,#64748b)" text-anchor="end">'+e.toFixed(1)+'</text>'; }
+    var pts=[]; for(var i=0;i<=48;i++){ var v=i/48*24, e=0.4+1.1/(1+Math.exp(-(v-11)/0.9)); pts.push(xV(v).toFixed(1)+','+yE(e).toFixed(1)); }
+    d+='<polyline points="'+pts.join(' ')+'" fill="none" stroke="var(--em,#10b981)" stroke-width="2.5"/>';
+    var ve=xV(11), ej=yE(1.4);
+    d+='<line x1="'+ve+'" y1="'+yB+'" x2="'+ve+'" y2="'+ej+'" stroke="rgba(244,113,113,.7)" stroke-width="2" stroke-dasharray="4 4"/>'
+      +'<text x="'+(ve+8)+'" y="'+(yB-8)+'" font-size="11" style="fill:var(--red,#f87171)">计量点 Ve（紫红色突跃）</text>';
+    d+='<text x="'+xL+'" y="'+(yT+2)+'" font-size="11.5" style="fill:var(--t2,#94a3b8)">2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂↑ + 8H₂O</text>';
+    d+='<text x="'+xL+'" y="'+(yT+20)+'" font-size="11" style="fill:var(--t2,#94a3b8)">KMnO₄ 自指示：终点后微量过量即显紫红色且不褪</text>';
+    d+='<text x="'+xL+'" y="'+(yB+14)+'" font-size="11" style="fill:var(--t3,#64748b)">滴定体积 0 →（计量点）突跃</text>';
+    d+='<text x="'+xL+'" y="'+(yB+42)+'" font-size="11" style="fill:var(--t3,#64748b)">用于标定铁/草酸根含量，反推配位比 Fe : C₂O₄²⁻ = 1 : 3</text>';
+    return vizWrap(vizsvg(W,H,d),'🧪 '+(escText(q||'滴定曲线')));
+  }
+
+  /* ---- 氧化还原电对：E° 一览 ---- */
+  function buildRedoxViz(q){
+    var W=560,H=286,d='';
+    var rows=[["MnO₄⁻/Mn²⁺","+1.51 V","MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O（很强氧化剂）","var(--purple,#a78bfa)"],["Fe³⁺/Fe²⁺","+0.77 V","Fe³⁺ + e⁻ → Fe²⁺（本实验铁以三价存在）","var(--em,#10b981)"],["C₂O₄²⁻/CO₂","-0.49 V","C₂O₄²⁻ → 2CO₂ + 2H⁺ + 2e⁻（草酸根作还原剂）","var(--red,#f87171)"]];
+    d+='<text x="'+W/2+'" y="24" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">关键氧化还原电对（E° / V，相对标准氢电极）</text>';
+    for(var i=0;i<rows.length;i++){
+      var y0=46+i*64, r=rows[i];
+      d+='<rect x="40" y="'+y0+'" width="480" height="54" rx="10" style="fill:var(--card,#1a2235);stroke:rgba(148,163,184,.25);stroke-width:1"/>';
+      d+='<circle cx="64" cy="'+(y0+27)+'" r="6" fill="'+r[3]+'"/>';
+      d+='<text x="80" y="'+(y0+24)+'" font-size="13" style="fill:var(--t1,#f1f5f9)">'+escText(r[0])+'</text>';
+      d+='<text x="80" y="'+(y0+42)+'" font-size="10.5" style="fill:var(--t3,#64748b)">'+escText(r[2])+'</text>';
+      d+='<text x="500" y="'+(y0+31)+'" font-size="14" style="fill:'+r[3]+'" text-anchor="end" font-weight="bold">'+escText(r[1])+'</text>';
+    }
+    d+='<text x="'+W/2+'" y="'+(H-10)+'" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">ΔE°＞0 → H₂O₂（与 H₂O 电对 E°≈+1.77 V）足以把 Fe²⁺ 氧化为 Fe³⁺</text>';
+    return vizWrap(vizsvg(W,H,d),'⚡ '+(escText(q||'氧化还原电位')));
+  }
+
+  /* ---- 实验安全要点 ---- */
+  function buildSafetyViz(q){
+    var W=560,H=304,d='';
+    var tiles=[["护目镜","戴护目镜 · 通风橱内操作",'⚠'],["手套","防 H₂O₂ / 酸腐蚀，戴手套",'🧤'],["远离火源","析晶用乙醇易挥发易燃",'🔥'],["H₂O₂ 强氧化","勿接触皮肤，溅到即冲水",'🌀'],["加热安全","水浴/石棉网隔热，勿徒手",'♨'],["意外处理","酸 / H₂O₂ 溅淋 → 大量清水冲洗",'💧']];
+    var cols=3, tw=170, th=70, gx=22, gy=62, gap=12;
+    for(var i=0;i<tiles.length;i++){
+      var cx=gx+(i%cols)*(tw+gap), cy=gy+Math.floor(i/cols)*(th+gap);
+      var col=['var(--yellow,#fbbf24)','var(--red,#f87171)','var(--blue,#60a5fa)'][i%3];
+      d+='<rect x="'+cx+'" y="'+cy+'" width="'+tw+'" height="'+th+'" rx="10" style="fill:var(--card,#1a2235);stroke:'+col+';stroke-width:1.5"/>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+24)+'" font-size="15" text-anchor="middle">'+tiles[i][2]+'</text>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+44)+'" font-size="12" style="fill:var(--t1,#f1f5f9)" text-anchor="middle" font-weight="bold">'+escText(tiles[i][0])+'</text>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+60)+'" font-size="10" style="fill:var(--t2,#94a3b8)" text-anchor="middle">'+escText(tiles[i][1])+'</text>';
+    }
+    d+='<text x="'+W/2+'" y="38" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">⚠ 三草酸合铁酸钾制备实验 · 安全要点</text>';
+    d+='<text x="'+W/2+'" y="'+(H-8)+'" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">非化学专业：涉及酸碱、氧化剂与易燃溶剂，请先咨询老师再动手。</text>';
+    return vizWrap(vizsvg(W,H,d),'🛡 '+(escText(q||'实验安全')));
+  }
 
   /* ---- 知识图谱真图（节点-边，按 category 着色） ---- */
   var KG_COLOR={center:'#34d399',coordination:'#fbbf24',redox:'#f43f5e',analytical:'#38bdf8',physical:'#a78bfa'};

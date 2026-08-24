@@ -3077,7 +3077,7 @@ var ROLE_META={
 };
 function _esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 function chatRole(){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'{}'); return (u.state&&u.state.role)||'chemistry'; }catch(e){ return 'chemistry'; } }
-function setRole(r){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'null')||{}; u.state=u.state||{}; u.state.role=r; localStorage.setItem('chem-user',JSON.stringify(u)); }catch(e){} _lastRoleIntro=null; refreshRoleSwitch(); }
+function setRole(r){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'null')||{}; u.state=u.state||{}; u.state.role=r; u.state.isLoggedIn=true; localStorage.setItem('chem-user',JSON.stringify(u)); }catch(e){} _lastRoleIntro=null; refreshRoleSwitch(); }
 function refreshRoleSwitch(){ var r=chatRole(),chips=document.querySelectorAll('#roleBar .rs-chip'),m=ROLE_META[r]||ROLE_META.chemistry; for(var i=0;i<chips.length;i++) chips[i].className='rs-chip'+(chips[i].getAttribute('data-role')===r?' on':''); var h=document.getElementById('roleHint'); if(h) h.textContent='当前：'+m.hint; }
 function roleIntroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-intro"><div class="ri-bubble">'+_esc(m.intro)+'</div></div>'; }
 function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro"><div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div></div>'; }

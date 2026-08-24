@@ -406,8 +406,8 @@ button{font-family:inherit;cursor:pointer}
     <a class="nav-link active" href="knowledge.html">知识图谱</a>
     <a class="nav-link" href="prep.html">课前预习</a>
     <a class="nav-link" href="index.html#/videos">视频资源</a>
-    <a class="nav-link" href="index.html#/report">报告评估</a>
-    <a class="nav-link" href="index.html#/explore">科普探索</a>
+    <a class="nav-link" href="index.html#/report" data-role-gate="teacher">报告评估</a>
+    <a class="nav-link" href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
     <a class="nav-link" href="corpus.html">语料库</a>
   </div>
   <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
@@ -1928,5 +1928,7 @@ document.addEventListener('DOMContentLoaded',function(){
 #panel .doc-card{ border-color:rgba(148,163,184,.18); }
 #panel .doc-card:hover{ border-color:var(--emerald,#10b981); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 35%,transparent),0 12px 30px rgba(0,0,0,.28); transition:box-shadow .25s ease,border-color .25s ease; }
 </style>
+<script>/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
+(function(){var u,r=null;try{u=JSON.parse(localStorage.getItem('chem-user')||'{}');r=(u&&u.state&&u.state.role)||null;}catch(e){}var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}})();</script>
 </body>
 </html>

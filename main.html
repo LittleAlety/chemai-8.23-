@@ -380,8 +380,8 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <a href="knowledge.html">知识图谱</a>
       <a href="prep.html">课前预习</a>
       <a href="index.html#/videos">视频资源</a>
-      <a href="index.html#/report">报告评估</a>
-      <a href="index.html#/explore">科普探索</a>
+      <a href="index.html#/report" data-role-gate="teacher">报告评估</a>
+      <a href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
       <a href="corpus.html">语料库</a>
     </div>
     <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
@@ -439,12 +439,12 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <div class="qcard-desc">实验操作演示与原理讲解视频合集，直观学习每个关键步骤。</div>
       <span class="qcard-go">进入模块 <span class="arr">→</span></span>
     </a>
-    <a class="qcard" style="--accent:var(--purple)" href="index.html#/report" id="reportCard">
+    <a class="qcard" style="--accent:var(--purple)" href="index.html#/report" id="reportCard" data-role-gate="teacher">
       <div class="qcard-head"><div class="qcard-icon">📊</div><div class="qcard-title">实验报告检测评估</div></div>
       <div class="qcard-desc">上传实验报告，AI 智能检测内容质量并给出评估反馈与改进建议。</div>
       <span class="qcard-go">进入模块 <span class="arr">→</span></span>
     </a>
-    <a class="qcard" style="--accent:var(--red)" href="index.html#/explore">
+    <a class="qcard" style="--accent:var(--red)" href="index.html#/explore" data-role-gate="non-chemistry">
       <div class="qcard-head"><div class="qcard-icon">🔭</div><div class="qcard-title">科普探索</div></div>
       <div class="qcard-desc">面向大众的趣味科普内容，发现配合物与光化学之美。</div>
       <span class="qcard-go">进入模块 <span class="arr">→</span></span>
@@ -525,6 +525,8 @@ var role=getRole();
     $("#noRoleNotice").hidden=false;
   }
 })();
+/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
+(function(){var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(role===n)?'':'none';}})();
 $("#switchBtn").addEventListener("click",function(){location.href="index.html";})
 	$("#hamburgerBtn").addEventListener("click",function(){document.querySelector(".nav-links").classList.toggle("open");});;
 

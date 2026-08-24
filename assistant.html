@@ -424,8 +424,8 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
       <a href="knowledge.html">知识图谱</a>
       <a href="prep.html">课前预习</a>
       <a href="index.html#/videos">视频资源</a>
-      <a href="index.html#/report">报告评估</a>
-      <a href="index.html#/explore">科普探索</a>
+      <a href="index.html#/report" data-role-gate="teacher">报告评估</a>
+      <a href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
       <a href="corpus.html">语料库</a>
     </div>
     <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
@@ -610,7 +610,7 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
         <a class="side-link" href="knowledge.html"><b>🧭 知识图谱</b><span>知识点关联网络 · 查漏补缺</span></a>
         <a class="side-link" href="corpus.html"><b>📚 语料库</b><span>365 篇文献知识清单 · 支持上传学习</span></a>
         <a class="side-link" href="prep.html"><b>📝 课前预习</b><span>多轮对话预习 + 习题检测</span></a>
-        <a class="side-link" href="index.html#/explore"><b>🔬 科普探索</b><span>蓝晒 · 光化学 · 配合物拓展</span></a>
+        <a class="side-link" href="index.html#/explore" data-role-gate="non-chemistry"><b>🔬 科普探索</b><span>蓝晒 · 光化学 · 配合物拓展</span></a>
       </div>
     </aside>
   </div>
@@ -2357,6 +2357,7 @@ function initReportRubric(){
 }
 function detectReportIntent(q){ return /报告|优化|改进|评估|建议|写得怎么样|怎么改|评分/.test(q||''); }
 function reportAnalysisHTML(text){
+  if(chatRole()!=='teacher') return '<div class="ans-sec"><h4>📝 实验报告评估</h4><p class="muted">🎓 实验报告检测评估仅对教师身份开放。如需使用，请返回首页选择「教师」身份。</p></div>';
   if(!REPORT_RUBRIC) return '<div class="ans-sec"><h4>📝 实验报告评估</h4><p class="muted">评分细则加载中，请稍后重试…</p></div>';
   var t=String(text||'').trim();
   var tlen=t.length;
@@ -3091,6 +3092,8 @@ document.addEventListener('click',function(e){
   var rbtn=e.target.closest('[data-role]'); if(rbtn){ setRole(rbtn.getAttribute('data-role')); }
 });
 refreshRoleSwitch();
+/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
+(function(){var r=chatRole();var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}})();
 var qaUploadBtn=document.getElementById('qaUpload'), qaFileInput=document.getElementById('qaFileInput');
 if(qaUploadBtn&&qaFileInput){
   qaUploadBtn.addEventListener('click',function(){qaFileInput.value='';qaFileInput.click();});

@@ -142,8 +142,8 @@ button{font-family:inherit;cursor:pointer}
         <a href="knowledge.html">知识图谱</a>
         <a href="prep.html">课前预习</a>
         <a href="index.html#/videos">视频资源</a>
-        <a href="index.html#/report">报告评估</a>
-        <a href="index.html#/explore">科普探索</a>
+        <a href="index.html#/report" data-role-gate="teacher">报告评估</a>
+        <a href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
         <a href="corpus.html">语料库</a>
         <a href="index.html#/generator" data-teacher-link hidden>智能出题</a>
       </div>
@@ -222,6 +222,8 @@ button{font-family:inherit;cursor:pointer}
   (function(){var bn=$("#roleName"),bd=$("#roleBadge");if(role&&bn&&bd){var m=ROLES[role];bn.textContent=m.name;bd.style.color=m.color;bd.style.borderColor=m.color+"66";bd.style.background=m.color+"1a";var dot=bd.querySelector(".rdot");if(dot)dot.style.background=m.color;}}());
   // 教师身份额外显示"智能出题"
   if(role==="teacher"){var tl=document.querySelector('[data-teacher-link]');if(tl)tl.hidden=false;}
+  // 角色门控：科普探索仅非化学专业、报告评估仅教师
+  (function(){var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(role===n)?'':'none';}})();
   // 身份卡点击
   document.querySelectorAll(".role-card").forEach(function(card){
     card.addEventListener("click",function(){

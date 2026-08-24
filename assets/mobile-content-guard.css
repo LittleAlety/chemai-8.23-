@@ -1,0 +1,70 @@
+/* ============================================================================
+   chemai · 移动端富内容兜底（防止"类似问题"全局复发）
+   定位：图 / 表 / 公式 / 代码 / 盒式结构在窄屏上撑破视口的问题。
+   原则：只做"不让内容压坏页面布局"的减法 —— 允许容器内横向滚动、
+   图片缩放、长文本折行。不改算法、不改字号、不破坏 object-fit / 定位布局。
+   冲突解决：本文件用静态 <link> 进 <head>，SPA 的 index-*.css 由 JS 后注入；
+   此处规则一律带 !important，确保兜底在任何注入顺序下生效。
+   ============================================================================ */
+
+@media (max-width: 820px) {
+  /* 1) 图片 / SVG / 视频 / 画布：绝不超出视口（宽撑破的最常见元凶） */
+  img, svg, video, canvas, iframe {
+    max-width: 100% !important;
+  }
+
+  /* 2) 宽表格：容器内滚动，而不是把整个页面撑出横向滚动条 */
+  .table-wrap {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  table, .table {
+    max-width: 100% !important;
+  }
+
+  /* 3) 代码 / 公式：允许折行和断词，避免一字排开溢出 */
+  pre, code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .math, .formula, .katex, .remark, .note {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
+  /* KaTeX 块级公式（$$…$$ 的 .katex-display 外层）是最常见的横向溢出源：
+     公式很宽且不折行，一放开就在手机上把整行/整页撑出滚动条。
+     让它在容器内横向滚动，绝不破坏布局。 */
+  .katex-display {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    max-width: 100% !important;
+    padding: 0.25rem 0 !important;
+  }
+
+  /* 4) 富文本答案 / 消息气泡 / 内容主体：宽内容在容器内滚动，
+        不破坏页面整体；盒子结构允许收缩（修 flex 子项不缩导致的"塌陷"） */
+  .answer, .msg .bubble, .rich-content, .md-body, .content, .article {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
+  .answer [class*="box"],
+  .msg [class*="box"],
+  .rich-content [class*="box"],
+  .content [class*="box"],
+  [class*="orbital"],
+  [class*="cell"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 5) 长 token（化学式、单位串如 14,700×10⁻⁶ cm³/mol、代码）折行断词，
+         避免一个"词"比屏幕还宽把布局撑破 */
+  .answer p, .rich-content p, .content p, .md-body p, .article p,
+  .answer li, .rich-content li, .content li, .md-body li, .article li,
+  .answer td, .rich-content td, .content td, .md-body td, .article td,
+  .answer th, .rich-content th, .content th, .md-body th, .article th {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+}

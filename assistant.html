@@ -3,6 +3,7 @@
 <head>
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/mobile-content-guard.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
@@ -1774,7 +1775,7 @@ function renderLatexBody(body, G){
   var keys=Object.keys(G);
   for(var i=0;i<keys.length;i++){s=s.split(keys[i]).join(G[keys[i]]);}
   s=s.replace(/\\q?quad(?![a-zA-Z])/g,' ');
-  s=s.replace(/(?<![\\\w])quad(?![a-zA-Z])/g,' ');
+  s=s.replace(/(^|[^\\\w])quad(?![a-zA-Z])/g,'$1 ');
   s=s.replace(/\\([a-zA-Z]+)/g,'$1');
   s=s.replace(/\\/g,'');
   s=s.replace(/[{}]/g,'');
@@ -3891,8 +3892,8 @@ document.addEventListener('DOMContentLoaded',function(){
 :root{ --radius:16px; }
 .panel-title{ position:relative; }
 .panel-title::before{ content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:1.05em;border-radius:2px;background:linear-gradient(180deg,#10b981,#2dd4bf); }
-.panel:hover{ border-color:var(--emerald,#10b981); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent),0 18px 44px rgba(0,0,0,.26); transition:box-shadow .25s ease,border-color .25s ease; }
-@media (prefers-reduced-motion:reduce){ .panel:hover{ box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent); } }
+.panel:hover{ border-color:var(--emerald,#10b981); box-shadow:0 18px 44px rgba(0,0,0,.26); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent),0 18px 44px rgba(0,0,0,.26); transition:box-shadow .25s ease,border-color .25s ease; }
+@media (prefers-reduced-motion:reduce){ .panel:hover{ box-shadow:0 0 0 1px rgba(16,185,129,.4); box-shadow:0 0 0 1px color-mix(in srgb,var(--emerald,#10b981) 40%,transparent); } }
 </style>
 <style id="model-v1">
 /* v69 模型化：落地页 hero + 6 模式药丸 + 思考链 + 逐字打字机 + 精通之路/计划/可视化 */

@@ -3,6 +3,7 @@
 <head>
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/mobile-content-guard.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="preload" href="data/manual.json" as="fetch">
@@ -29,7 +30,7 @@ body{
   min-height:100vh;-webkit-font-smoothing:antialiased;
 }
 body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  content:"";position:fixed;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none;z-index:0;
   background:
     radial-gradient(800px 400px at 15% -5%,rgba(16,185,129,.07),transparent 60%),
     radial-gradient(700px 380px at 85% 0%,rgba(167,139,250,.06),transparent 60%),
@@ -140,6 +141,8 @@ code{font-family:"JetBrains Mono",Consolas,monospace;background:rgba(96,165,250,
 .qcard-head{display:flex;align-items:center;gap:13px}
 .qcard-icon{
   width:46px;height:46px;border-radius:13px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:23px;
+  background:rgba(148,163,184,.16);
+  border:1px solid rgba(148,163,184,.34);
   background:color-mix(in srgb,var(--accent,var(--emerald)) 14%,transparent);
   border:1px solid color-mix(in srgb,var(--accent,var(--emerald)) 35%,transparent);
 }
@@ -265,7 +268,7 @@ code{font-family:"JetBrains Mono",Consolas,monospace;background:rgba(96,165,250,
 .sec-figs .fig-big{grid-column:1/-1;max-width:760px;justify-self:center;width:100%}
 .sec-figs .fig-big img{aspect-ratio:auto;object-fit:contain}
 /* 图片灯箱 */
-.lb{position:fixed;inset:0;background:rgba(4,9,20,.93);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:28px}
+.lb{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;background:rgba(4,9,20,.93);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:28px}
 .lb.open{display:flex}
 .lb img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 10px 50px rgba(0,0,0,.6);background:#fff}
 .lb .lb-cap{color:#dbe4f0;font-size:13.5px;line-height:1.7;margin-top:16px;text-align:center;max-width:82vw}

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" role="img" aria-label="八面体场 d⁵ 高自旋能级分裂图（K₃[Fe(C₂O₄)₃]·3H₂O）" font-family="Inter, JetBrains Mono, Microsoft YaHei, system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L5,2 L0,4 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrT" viewBox="0 0 10 10" refX="5" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L5,2 L0,4 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#f1f5f9">八面体场 d⁵ 高自旋能级分裂</text>
+  <text x="360" y="56" text-anchor="middle" font-size="13" fill="#94a3b8">[Fe(C₂O₄)₃]³⁻　·　草酸根为弱场配体（Δ₀ 小）</text>
+
+  <!-- 能量轴 -->
+  <line x1="70" y1="100" x2="70" y2="500" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="52" y="300" text-anchor="middle" font-size="15" fill="#94a3b8" transform="rotate(-90 52 300)">能量 E ↑</text>
+
+  <!-- e_g 高能级组 -->
+  <rect x="160" y="120" width="460" height="120" rx="16" fill="rgba(16,185,129,.10)" stroke="rgba(45,212,191,.5)" stroke-width="1.5"/>
+  <text x="178" y="147" font-size="16" font-weight="700" fill="#2dd4bf">e<tspan baseline-shift="-5" font-size="11">g</tspan>（二重简并，高能级）</text>
+  <text x="178" y="167" font-size="12" fill="#94a3b8">指向配体，受排斥大　+0.6Δ₀</text>
+
+  <!-- e_g 两个轨道盒：高自旋 d⁵ → eg² 每盒 1 个 ↑ -->
+  <g>
+    <rect x="300" y="178" width="64" height="48" rx="9" fill="rgba(15,23,42,.65)" stroke="rgba(45,212,191,.55)" stroke-width="1.3"/>
+    <line x1="332" y1="214" x2="332" y2="188" stroke="#34d399" stroke-width="2.4"/><polygon points="332,182 327,192 337,192" fill="#34d399"/>
+    <text x="332" y="234" text-anchor="middle" font-size="12" fill="#94a3b8">d<tspan baseline-shift="4" font-size="9">z²</tspan></text>
+
+    <rect x="410" y="178" width="64" height="48" rx="9" fill="rgba(15,23,42,.65)" stroke="rgba(45,212,191,.55)" stroke-width="1.3"/>
+    <line x1="442" y1="214" x2="442" y2="188" stroke="#34d399" stroke-width="2.4"/><polygon points="442,182 437,192 447,192" fill="#34d399"/>
+    <text x="442" y="234" text-anchor="middle" font-size="12" fill="#94a3b8">d<tspan baseline-shift="4" font-size="9">x²-y²</tspan></text>
+
+    <text x="556" y="205" text-anchor="end" font-size="12" fill="#34d399">eg²</text>
+  </g>
+
+  <!-- t₂g 低能级组 -->
+  <rect x="160" y="410" width="460" height="120" rx="16" fill="rgba(96,165,250,.10)" stroke="rgba(96,165,250,.5)" stroke-width="1.5"/>
+  <text x="178" y="437" font-size="16" font-weight="700" fill="#60a5fa">t<tspan baseline-shift="-5" font-size="11">2g</tspan>（三重简并，低能级）</text>
+  <text x="178" y="457" font-size="12" fill="#94a3b8">指向配体之间，受排斥小　−0.4Δ₀</text>
+
+  <!-- t₂g 三个轨道盒：高自旋 d⁵ → t₂g³ 每盒 1 个 ↑ -->
+  <g>
+    <rect x="250" y="468" width="56" height="48" rx="9" fill="rgba(15,23,42,.65)" stroke="rgba(96,165,250,.55)" stroke-width="1.3"/>
+    <line x1="278" y1="504" x2="278" y2="478" stroke="#60a5fa" stroke-width="2.4"/><polygon points="278,472 273,482 283,482" fill="#60a5fa"/>
+    <text x="278" y="524" text-anchor="middle" font-size="12" fill="#94a3b8">d<tspan baseline-shift="4" font-size="9">xy</tspan></text>
+
+    <rect x="340" y="468" width="56" height="48" rx="9" fill="rgba(15,23,42,.65)" stroke="rgba(96,165,250,.55)" stroke-width="1.3"/>
+    <line x1="368" y1="504" x2="368" y2="478" stroke="#60a5fa" stroke-width="2.4"/><polygon points="368,472 363,482 373,482" fill="#60a5fa"/>
+    <text x="368" y="524" text-anchor="middle" font-size="12" fill="#94a3b8">d<tspan baseline-shift="4" font-size="9">xz</tspan></text>
+
+    <rect x="430" y="468" width="56" height="48" rx="9" fill="rgba(15,23,42,.65)" stroke="rgba(96,165,250,.55)" stroke-width="1.3"/>
+    <line x1="458" y1="504" x2="458" y2="478" stroke="#60a5fa" stroke-width="2.4"/><polygon points="458,472 453,482 463,482" fill="#60a5fa"/>
+    <text x="458" y="524" text-anchor="middle" font-size="12" fill="#94a3b8">d<tspan baseline-shift="4" font-size="9">yz</tspan></text>
+
+    <text x="556" y="495" text-anchor="end" font-size="12" fill="#60a5fa">t₂g³</text>
+  </g>
+
+  <!-- Δ₀ 分裂能括号 -->
+  <line x1="672" y1="240" x2="672" y2="410" stroke="#fbbf24" stroke-width="2.2" marker-start="url(#arrT)" marker-end="url(#arrT)"/>
+  <text x="690" y="325" font-size="15" font-weight="700" fill="#fbbf24">Δ₀</text>
+  <text x="690" y="344" font-size="12" fill="#fbbf24">= 14100 cm⁻¹</text>
+
+  <!-- 图例 + 自旋结论 -->
+  <text x="360" y="596" text-anchor="middle" font-size="14" font-weight="600" fill="#e5e7eb">高自旋 d⁵：t₂g³ eg²（Δ₀ &lt; 成对能 P）　·　CFSE = 0Δ₀</text>
+  <text x="360" y="618" text-anchor="middle" font-size="12" fill="#94a3b8">↑ 未成对电子　·　d-d 跃迁吸收橙红光（560 nm），故呈翠绿色　·　μ≈5.92 B.M.</text>
+</svg>

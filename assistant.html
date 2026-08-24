@@ -1314,13 +1314,15 @@ function buildAnalogyBridgedAnswer(q, ctx){
   var srcType=faq?'faq':(directHits.length>0?'corpus':'analogy');
   var s=answerHeaderHTML(conf, srcType, totalRefs, false);
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
+  var _coreBody;
   if(faq){
-    s+='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
+    _coreBody='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
   } else if(directHits.length>0){
-    s+=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
+    _coreBody=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
   } else {
-    s+='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
+    _coreBody='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
   }
+  s+=roleCoreHTML(_coreBody);
   if(analogies.length>0){
     s+='<div class="ans-sec"><h4>🔗 类比推理桥接</h4>';
     s+='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
@@ -1973,7 +1975,7 @@ function buildAnswerHTML(q,ctx){
   }
   s+=answerHeaderHTML({level:faq?'high':(hits[0].score>=50?'medium':'low')},faq?'faq':'corpus',hits.length,false);
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
-  s+=faq?roleCoreHTML('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
+  s+=roleCoreHTML(faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops));
   s+='</div>';
   s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）',
     (faq&&faq.detail?'<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>':'')

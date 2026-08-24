@@ -681,7 +681,7 @@ var MODE_CHIPS={
   deep:['分步推导三步反应的电子转移与配位过程','如果 H₂O₂ 过量会怎样？给出机理与后果','为什么加乙醇后必须搅拌？从介电常数解释','设计一个验证产率偏低的排查方案'],
   quiz:['考考我：产物配位数是多少','用判断题考我氧化阶段温度','出个产率计算题'],
   research:['检索 PubChem 上 K₃[Fe(C₂O₄)₃] 的溶解度与光化学数据','跨库比对三草酸合铁酸钾的合成路线','查最新文献中蓝晒工艺的量子产率'],
-  visual:['画出三步反应的流程图','生成抽滤装置示意图','用知识图谱展示配位组成','画 d⁵ 八面体场能级分裂图'],
+  visual:['画出三步反应的流程图','生成抽滤装置示意图','用知识图谱展示配位组成','画 d⁵ 八面体场能级分裂图','TG/DSC 热分析'],
   mastery:['今天有哪些到期的复习卡？','我的薄弱知识点有哪些','导出我的学习画像','开始新测评']
 };
 var WORK_MODE='study', WORK_MODE_KEY='chemai_work_mode';
@@ -2993,8 +2993,25 @@ async function handleQA(q){
     }
     if(llmNote) html=llmNote+html;
     html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
-    /* v69 可视化模式：在答案下追加 SVG 流程图 / 图谱关联 */
-    if(WORK_MODE==='visual' && window.AssistantModel && window.AssistantModel.buildVisualHTML){ try{ html+=window.AssistantModel.buildVisualHTML(rawQ, null); }catch(e){} }
+    /* v69 可视化：非 kg 类型随 html 一起渲染；kg 类下方统一处理 */
+  }
+
+  /* v69 可视化增强：有/无 Key 两条路径（LLM 流式 / 本地）都在答案下追加富图；kg 类异步取真数据 */
+  if(WORK_MODE==='visual' && window.AssistantModel && window.AssistantModel.buildVisualHTML){
+    var _vt=window.AssistantModel.detectVizType?window.AssistantModel.detectVizType(rawQ):null;
+    if(_vt==='kg'&&window.AssistantModel.loadKG){
+      window.AssistantModel.loadKG().then(function(kgData){
+        if(!ans||!ans.isConnected) return;
+        var v=window.AssistantModel.buildVisualHTML(rawQ,kgData);
+        if(v){ ans.insertAdjacentHTML('beforeend',v); scrollChat(qaChat); }
+      }).catch(function(){
+        var v=window.AssistantModel.buildVisualHTML(rawQ,null);
+        if(v&&ans&&ans.isConnected){ ans.insertAdjacentHTML('beforeend',v); scrollChat(qaChat); }
+      });
+    }else{
+      var _v=window.AssistantModel.buildVisualHTML(rawQ,null);
+      if(_v) html+=_v;
+    }
   }
 
   /* ===== 应变：判定是否派发网页研究员（仅集群模式） ===== */
@@ -3937,7 +3954,8 @@ document.addEventListener('DOMContentLoaded',function(){
 .plan-st b{font-size:12.5px;color:var(--t1,#f1f5f9)}
 .plan-st span{font-size:12px;color:var(--t3,#7c879c)}
 /* 可视化 / 精通之路 / 复习卡 */
-.visual{margin-top:6px}
+.visual{margin-top:6px;overflow-x:auto;background:var(--bg2,#0e141f);border:1px solid var(--bd,#1e2636);border-radius:12px;padding:10px}
+.visual svg{display:block;margin:0 auto;width:100%;max-width:680px;height:auto;min-width:280px}
 .mastery-head{display:flex;align-items:center;gap:14px}
 .mh-grade{font-size:34px;font-weight:700;line-height:1;background:linear-gradient(120deg,#10b981,#2dd4bf);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .mh-grade span{font-size:13px;font-weight:400;-webkit-text-fill-color:var(--t3,#7c879c)}

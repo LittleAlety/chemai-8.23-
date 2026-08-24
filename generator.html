@@ -175,6 +175,30 @@ input,select,textarea{font-family:inherit}
 .paper .qc .move:hover{color:var(--t1);background:var(--card-hover);border-color:var(--bd2)}
 .paper .qc .del{opacity:.7}
 .export-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+/* ===== 超星风格分节 / 选项 / 难度系数 / 侧栏 ===== */
+.tag.coef{background:rgba(251,191,36,.13);color:#fcd34d;margin-left:2px}
+.paper .psec{margin-bottom:2px}
+.paper .psechead{display:flex;align-items:baseline;gap:10px;margin:18px 0 4px;padding:8px 0 6px;border-bottom:2px solid var(--emerald)}
+.paper .psechead .secname{font-size:16px;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.paper .psechead .secmeta{font-size:12px;color:var(--t3)}
+.paper .qhead .coef{font-size:10.5px;color:var(--yellow);background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.25);border-radius:6px;padding:1px 6px;flex-shrink:0;white-space:nowrap;line-height:1.6;vertical-align:top}
+.paper .opt{display:flex;align-items:baseline;gap:7px;margin:3px 0;line-height:1.65}
+.paper .opt .optletter{color:var(--t2);flex-shrink:0;font-weight:600;min-width:16px}
+.paper .opt .opttext{flex:1;min-width:0;word-break:break-word}
+.paper .opt.corr .optletter,.paper .opt.corr .opttext{color:var(--accent);font-weight:700}
+.paper .opt .optmark{color:var(--accent);font-weight:700;flex-shrink:0}
+.paper .optnote{font-size:11px;color:var(--t3);margin-top:3px}
+.preview-flex{display:flex;gap:16px;align-items:flex-start;margin-top:4px}
+.paperwrap{min-width:0}
+.pside{flex:0 0 224px;position:sticky;top:82px}
+.pnav{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:14px}
+.pnavhead{font-size:13px;font-weight:700;color:var(--t2);margin-bottom:10px;letter-spacing:.04em}
+.pnavitem{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--t2);padding:7px 2px;border-bottom:1px solid var(--bd)}
+.pnavitem:last-child{border-bottom:none}
+.pnavnum{color:var(--t1);font-weight:600}
+.pnavtotal{font-size:12.5px;color:var(--t3);margin-top:10px;padding-top:10px;border-top:1px solid var(--bd)}
+.pnavtotal b{color:var(--accent)}
+@media (max-width:760px){.preview-flex{flex-direction:column}.pside{position:static;flex:1 1 auto;width:100%}}
 /* loading */
 .loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 20px;color:var(--t3)}
 .spin{width:34px;height:34px;border:3px solid var(--bd);border-top-color:var(--accent);border-radius:50%;animation:sp .9s linear infinite;margin-bottom:14px}
@@ -258,7 +282,7 @@ input,select,textarea{font-family:inherit}
           <div class="panel">
             <div class="panel-title"><span class="pd"></span>题型分配</div>
             <div id="typeRows"></div>
-            <div class="hint">· 单选 / 多选：题库仅存题干与答案（未存 A/B/C/D 选项），试卷中按「题干 + 作答空 + 答案与解析」呈现，不臆造选项。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；<b>简答/计算</b>会从 8 个步骤/性质知识点（实验操作/合成制备/分析测定/安全与废物处理/结构表征/热分析/反应原理/光化学应用）抽取。<br>· 「内容取向 = 预习为纲」会剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论，突出实验步骤与物质性质；<b>自主选题</b>始终含全部 1113 题。</div>
+            <div class="hint">· 单选 / 多选 / 判断均按超星风格分节排版，每题显示「难度系数」；答案以「内容锚定」的字母为准（A/B/C/D 编号可随意改，正确答案由选项文本决定）。<br>· 题库仅存题干与答案字母（未存 A/B/C/D 选项文本）；点击预览右上「🤖 AI 补全选项与难度」可由 AI 生成 A/B/C/D 选项与 1-5 难度系数（答案由正解内容锚定，与 AI 给的字母无关，卷上标注「AI 生成请人工校核」）。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；<b>简答/计算</b>会从 8 个步骤/性质知识点（实验操作/合成制备/分析测定/安全与废物处理/结构表征/热分析/反应原理/光化学应用）抽取。<br>· 「内容取向 = 预习为纲」会剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论，突出实验步骤与物质性质；<b>自主选题</b>始终含全部 1113 题。</div>
           </div>
 
           <div class="panel">
@@ -339,7 +363,7 @@ var TYPE_ORDER=["single","multiple","truefalse","fill","short","calculation"];
 var DIFF_LABEL={easy:"基础",medium:"中等",hard:"较难"};
 var DIFF_ORDER=["easy","medium","hard"];
 var DEF_SCORE={single:2,multiple:3,truefalse:1,fill:2,short:6,calculation:10};
-var DEF_COUNT={single:8,multiple:4,truefalse:4,fill:4,short:0,calculation:0};
+var DEF_COUNT={single:10,multiple:6,truefalse:4,fill:4,short:0,calculation:0};
 var DEF_TITLE="三草酸合铁(III)酸钾制备与分析练习题";
 var DEF_SUBTITLE="配位化学与氧化还原滴定综合测试";
 var DEF_DIFF={easy:40,medium:40,hard:20};
@@ -389,7 +413,7 @@ function fmt(s){
 }
 function toast(msg){var t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(t._tm);t._tm=setTimeout(function(){t.classList.remove("show");},2200);}
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
-function qMeta(q){return '<span class="tag type">'+TYPE_LABEL[q.type]+'</span><span class="tag diff">'+DIFF_LABEL[q.difficulty]+'</span><span class="tag cat">'+esc(q.category)+'</span>';}
+function qMeta(q){return '<span class="tag type">'+TYPE_LABEL[q.type]+'</span><span class="tag diff">'+DIFF_LABEL[q.difficulty]+'</span><span class="tag cat">'+esc(q.category)+'</span><span class="tag coef">难度系数 '+getCoef(q)+'</span>';}
 
 // ===== data =====
 function loadBank(){
@@ -574,6 +598,103 @@ function aiGenerate(){
   });
 }
 
+// ===== AI 补全选项与难度系数（内容优先，答案由内容定，字母可任意改）=====
+var ENRICH_KEY="chemai_qenrich_v1", qEnrich=null;
+function loadEnrich(){if(qEnrich)return qEnrich;try{qEnrich=JSON.parse(localStorage.getItem(ENRICH_KEY))||{};}catch(e){qEnrich={};}return qEnrich;}
+function saveEnrich(){try{localStorage.setItem(ENRICH_KEY,JSON.stringify(qEnrich||{}));}catch(e){}}
+function hashTxt(t){var h=5381;t=String(t||"");for(var i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))>>>0;return "h"+h;}
+function getEnrich(q){return loadEnrich()[hashTxt(q.question)]||null;}
+function setEnrich(q,rec){loadEnrich()[hashTxt(q.question)]=rec;saveEnrich();}
+function getOpts(q){var e=getEnrich(q);if(e&&e.opts&&e.opts.length)return e;return null;}
+function defaultCoef(d){return d==="easy"?1:(d==="hard"?3:2);}   // easy=1, medium=2, hard=3（回退）
+function getCoef(q){var e=getEnrich(q);if(e&&e.coef)return e.coef;return defaultCoef(q.difficulty);}
+function setEnrichBusy(b){var btn=$("btnEnrich");if(btn){btn.disabled=b;btn.textContent=b?"⏳ 补全中…":"🤖 AI 补全选项与难度";}}
+function tfNorm(a){a=String(a||"").trim();if(/^A$/i.test(a))return "正确";if(/^B$/i.test(a))return "错误";if(/错误|不对/.test(a))return "错误";return "正确";}
+function answerLetterList(a){a=String(a||"").toUpperCase().replace(/[^A-F]/g,"");var r=[];for(var i=0;i<a.length;i++)r.push(a[i]);return r;}
+function assignLetters(n){var ls="ABCDEF".split("").slice(0,n||4);shuffle(ls);return ls;}
+function enrichNote(){return '<div class="optnote" style="font-size:11px;color:var(--t3);margin-top:3px">（选项/难度由 AI 生成，请人工校核）</div>';}
+function buildChunkPrompt(chunk,startIdx){
+  var t=q=>TYPE_LABEL[q.type];
+  var lines=[];
+  chunk.forEach(function(j,idx){
+    var id=startIdx+idx,q=j.q;
+    var d="【ID "+id+"】"+q.question+"｜题型："+t(q);
+    if(j.needOpts){
+      var K=Math.max(1,answerLetterList(q.answer).length);
+      var N=q.type==="multiple"?Math.max(K,Math.min(6,K+3)):4;
+      d+="｜正确项数 K="+K+"（答案字母："+(q.answer||"")+"）｜总选项数 N="+N;
+      d+="｜正解依据："+(q.explanation||q.referenceAnswer||"").slice(0,300);
+      d+="｜请输出 N 个选项，前 K 个是正确项、其余为干扰项。";
+    }
+    lines.push(d);
+  });
+  var sys="你是命题助手。依据给定的题干、题型、正确项数与正解依据，为每题生成选项与难度系数。只输出一个 JSON 数组，每项格式 {\"i\":题号,\"o\":[选项文本,前K个为正确,只给内容不给字母],\"c\":难度系数1-5整数}。判断题/填空题无需 options（o 可省略）。不要输出任何文字说明或围栏。";
+  var usr="请为以下题目生成选项与难度系数：\n\n"+lines.join("\n\n");
+  return {sys:sys,usr:usr};
+}
+function parseChunk(text,chunk,startIdx){
+  var arr=null;var raw=String(text||"").trim();
+  var m=raw.match(/\[[\s\S]*\]/);if(m){try{arr=JSON.parse(m[0]);}catch(e){arr=null;}}
+  if(!arr){try{arr=JSON.parse(raw);}catch(e){arr=null;}}
+  if(!Array.isArray(arr))arr=[];
+  arr.forEach(function(it){
+    var i=it&&it.i;if(i==null)return;
+    var job=chunk[i-startIdx];if(!job)return;
+    var q=job.q,rec=getEnrich(q)||{};
+    if(it.c!=null&&it.c!=="")rec.coef=Math.max(1,Math.min(5,Math.round(Number(it.c)||defaultCoef(q.difficulty))));
+    if(job.needOpts&&Array.isArray(it.o)){
+      var K=Math.max(1,answerLetterList(q.answer).length);
+      var opts=it.o.map(function(x){return String(x==null?"":x).trim();}).filter(function(x){return x;});
+      if(opts.length>=K){
+        var corrects=opts.slice(0,K),distractors=opts.slice(K);
+        var total=Math.min(6,corrects.length+distractors.length);
+        var all=corrects.concat(distractors).slice(0,total);
+        var letters=assignLetters(all.length);
+        rec.opts=all;rec.letters=letters;rec.K=corrects.length;
+        rec.answerLetters=letters.slice(0,corrects.length).slice().sort();
+        rec.ai=true;
+      }
+    }
+    setEnrich(q,rec);
+  });
+}
+function enrichObjective(){
+  var key=lsGet2("chemai_llm_key","");
+  if(!key){toast("未配置 LLM Key——请先在「AI助手」页的 🤖 LLM 面板粘贴 Key");return;}
+  var jobs=[];
+  BANK.forEach(function(q){
+    if(q.type==="single"||q.type==="multiple"){var e=getEnrich(q);if(!e||!e.opts)jobs.push({q:q,needOpts:true});}
+    else if(q.type==="truefalse"||q.type==="fill"){if(!getEnrich(q))jobs.push({q:q,needOpts:false});}
+  });
+  if(!jobs.length){toast("本机已全部补全，无需重复调用");return;}
+  setEnrichBusy(true);
+  var prog=$("enrichProg"),done=0,total=jobs.length,startIdx=0;
+  if(prog){prog.style.display="inline-block";prog.textContent="⏳ AI 补全 0/"+total;}
+  var chunks=[];for(var i=0;i<jobs.length;i+=8)chunks.push(jobs.slice(i,i+8));
+  function next(){
+    if(!chunks.length){
+      setEnrichBusy(false);
+      if(prog)prog.textContent="✅ AI 已补全 "+done+" 题（请人工校核选项与难度）";
+      toast("AI 已补全 "+done+" 题，请人工校核");
+      renderPreview();renderList();
+      return;
+    }
+    var chunk=chunks.shift();
+    var s=buildChunkPrompt(chunk,startIdx);
+    callAIApi(key,[{role:"system",content:s.sys},{role:"user",content:s.usr}]).then(function(text){
+      parseChunk(text,chunk,startIdx);
+      startIdx+=chunk.length;done+=chunk.length;
+      if(prog)prog.textContent="⏳ AI 补全 "+done+"/"+total;
+      next();
+    }).catch(function(err){
+      setEnrichBusy(false);
+      if(prog)prog.textContent="⚠ AI 补全中断："+(err&&err.message?err.message:err);
+      toast("AI 补全中断："+(err&&err.message?err.message:err));
+    });
+  }
+  next();
+}
+
 // ===== 自主选题 =====
 function buildFilters(){
   var t=$("fType"),d=$("fDiff"),c=$("fCat");
@@ -621,33 +742,79 @@ function pickAllVisible(){
 }
 
 // ===== 纸面渲染（预览 + 导出共用）=====
-function buildPaperDOM(){
+function secNum(i){return ["一","二","三","四","五","六","七","八"][i]||(i+1);}
+function paperSections(){
+  var out=[];
+  TYPE_ORDER.forEach(function(t){
+    var items=[];
+    paper.forEach(function(p,pi){if(p.q.type===t)items.push({p:p,pi:pi});});
+    if(items.length){var sc=items.reduce(function(a,it){return a+it.p.score;},0);out.push({type:t,items:items,sc:sc});}
+  });
+  return out;
+}
+function answerKey(q){
+  if(q.type==="truefalse")return tfNorm(q.answer);
+  if(q.type==="single"||q.type==="multiple"){
+    var e=getOpts(q);
+    if(e&&e.opts&&e.opts.length){
+      var txt=e.answerLetters.map(function(L){var i=e.letters.indexOf(L);return e.opts[i]||"";}).join("；");
+      return e.answerLetters.join("、")+"（"+txt+"）";
+    }
+    return String(q.answer||q.referenceAnswer||"");
+  }
+  return String(q.answer||q.referenceAnswer||"");
+}
+function optHTML(e,clean){var s="",i;for(i=0;i<e.opts.length;i++){var L=e.letters[i]||"",corr=!clean&&e.answerLetters.indexOf(L)>=0;s+='<div class="opt'+(corr?" corr":"")+'"><span class="optletter">'+L+'.</span><span class="opttext">'+fmt(e.opts[i])+'</span>'+(corr?'<span class="optmark">✓</span>':'')+'</div>';}return s;}
+function bodyHTML(p,clean){
+  var q=p.q;
+  if(q.type==="single"||q.type==="multiple"){
+    var e=getOpts(q);
+    if(e&&e.opts&&e.opts.length)return optHTML(e,clean)+(!clean?enrichNote():"");
+    return '<span class="blank" style="min-width:220px"></span><div style="font-size:11.5px;color:var(--t3);margin-top:4px">（题库未存选项——点击右上「🤖 AI 补全选项」生成 A/B/C/D）</div>';
+  }
+  if(q.type==="truefalse")return '<div class="opt"><span class="optletter">A.</span><span class="opttext">正确</span></div><div class="opt"><span class="optletter">B.</span><span class="opttext">错误</span></div>';
+  if(q.type==="fill")return '<span class="blank" style="min-width:240px"></span>';
+  return '<div style="min-height:36px"></div>';
+}
+function buildQuestion(p,pi,no,clean){
+  var q=p.q,sec=document.createElement("div");sec.className="q";sec.setAttribute("data-pi",pi);
+  var head='<div class="qhead"><span class="no">'+no+'.</span><span class="coef">难度系数 '+getCoef(q)+'</span><span class="typ">'+TYPE_LABEL[q.type]+'</span><span class="qtextwrap">'+fmt(q.question)+'</span><span class="pts">'+p.score+' 分</span></div>';
+  var ans='<div class="qans"><details><summary>参考答案与解析</summary><div class="ansbody"><span class="lbl">答案：</span><b>'+fmt(answerKey(q))+'</b>'+(q.explanation?'<div style="margin-top:6px"><span class="lbl">解析：</span>'+fmt(q.explanation)+'</div>':'')+'</div></details></div>';
+  sec.innerHTML=head+'<div class="qbody">'+bodyHTML(p,clean)+'</div>'+ans;
+  return sec;
+}
+function sideNavHTML(){
+  var secs=paperSections(),total=0,n=0,inner="";
+  paper.forEach(function(p){total+=p.score;n++;});
+  inner+='<div class="pnavhead">题型导航</div>';
+  secs.forEach(function(x){inner+='<div class="pnavitem" data-t="'+x.type+'"><span>'+TYPE_LABEL[x.type]+'</span><span class="pnavnum">'+x.sc+' 分</span></div>';});
+  inner+='<div class="pnavtotal">共 <b>'+n+'</b> 题 · 总分 <b>'+total+'</b> 分</div>';
+  inner+='<button class="mini-btn primary" id="btnEnrich" style="width:100%;margin-top:10px;justify-content:center">🤖 AI 补全选项与难度</button>';
+  inner+='<div id="enrichProg" style="display:none;font-size:11px;color:var(--t3);margin-top:8px;line-height:1.4"></div>';
+  inner+='<div style="font-size:10.5px;color:var(--t3);margin-top:6px;line-height:1.4">题型分节 / 难度系数按超星风格排版；选项与难度由 AI 生成，请人工校核后再印发。</div>';
+  return '<div class="pside"><div class="pnav">'+inner+'</div></div>';
+}
+function buildPaperDOM(clean){
+  clean=!!clean;
   var title=smart.title||$("fTitle").value||"未命名试卷";
   var subtitle=smart.subtitle||$("fSubtitle").value;
   var wrap=document.createElement("div");wrap.className="paper";
   var meta='<div style="text-align:center;padding-bottom:14px;border-bottom:1px solid var(--bd);margin-bottom:14px"><div class="ptitle">'+fmt(title)+'</div>'+(subtitle?'<div class="psubtitle">'+fmt(subtitle)+'</div>':'')+'<div class="pmeta">满分 <b id="totalScore"></b> 分 · 共 '+paper.length+' 题 · 姓名<span class="blank"></span>班级<span class="blank"></span>得分<span class="blank"></span></div></div>';
   wrap.innerHTML=meta;
-  var total=0;
-  paper.forEach(function(p,i){
-    total+=p.score;
-    var sec=document.createElement("div");sec.className="q";
-    var qbody="";
-    if(p.q.type==="single"||p.q.type==="multiple"){
-      qbody='<span class="blank" style="min-width:220px"></span><div style="font-size:11.5px;color:var(--t3);margin-top:4px">（题库未存 A/B/C/D 选项——请先作答，再展开「答案与解析」核对）</div>';
-    }else if(p.q.type==="truefalse"){
-      qbody='<span class="blank" style="min-width:220px"></span>';
-    }else if(p.q.type==="fill"){
-      qbody='<span class="blank" style="min-width:240px"></span>';
-    }else{
-      qbody='<div style="min-height:34px"></div>';
-    }
-    sec.innerHTML='<div class="qhead"><span class="no">'+(i+1)+'.</span><span class="typ">'+TYPE_LABEL[p.q.type]+'</span><span class="qtextwrap">'+fmt(p.q.question)+'</span><span class="pts">'+p.score+' 分</span></div>'+
-      '<div class="qbody">'+qbody+'</div>'+
-      '<div class="qans"><details><summary>答案与解析</summary><div class="ansbody"><span class="lbl">答案：</span><b>'+fmt(p.q.answer||p.q.referenceAnswer||"")+'</b>'+(p.q.explanation?'<div style="margin-top:6px"><span class="lbl">解析：</span>'+fmt(p.q.explanation)+'</div>':'')+'</div></details></div>';
-    wrap.appendChild(sec);
+  paperSections().forEach(function(s,si){
+    var secdiv=document.createElement("div");secdiv.className="psec";
+    secdiv.innerHTML='<div class="psechead"><span class="secname">'+secNum(si)+'、'+TYPE_LABEL[s.type]+'</span><span class="secmeta">（'+s.items.length+' 题，'+s.sc+' 分）</span></div>';
+    var box=document.createElement("div");box.className="secbody";
+    s.items.forEach(function(it,j){box.appendChild(buildQuestion(it.p,it.pi,j+1,clean));});
+    secdiv.appendChild(box);wrap.appendChild(secdiv);
   });
-  var totalEl=wrap.querySelector("#totalScore");if(totalEl)totalEl.textContent=total;
+  var totalEl=wrap.querySelector("#totalScore");if(totalEl)totalEl.textContent=paper.reduce(function(a,p){return a+p.score;},0);
   return wrap;
+}
+function bodyForExport(q){
+  if(q.type==="single"||q.type==="multiple"){var e=getOpts(q);if(e&&e.opts&&e.opts.length)return e.opts.map(function(t,i){return (e.letters[i]||"")+". "+fmt(t);}).join("<br>");return "";}
+  if(q.type==="truefalse")return "A. 正确<br>B. 错误";
+  return "";
 }
 function paperHTMLForExport(){
   var title=smart.title||$("fTitle").value||"未命名试卷";
@@ -657,15 +824,19 @@ function paperHTMLForExport(){
   if(subtitle)s+='<div style="text-align:center;font-size:14px;color:#333">'+esc(subtitle)+'</div>';
   var total=0;paper.forEach(function(p){total+=p.score;});
   s+='<div style="text-align:center;font-size:12px;color:#333;margin:8px 0 16px">（满分 '+total+' 分 · 共 '+paper.length+' 题）　姓名________　班级________　得分________</div>';
-  paper.forEach(function(p,i){
-    s+='<div style="margin-bottom:14px">';
-    s+='<div style="font-size:14px;font-weight:bold">'+(i+1)+'. （'+TYPE_LABEL[p.q.type]+'，'+p.score+'分）　'+fmt(p.q.question)+'</div>';
-    if(p.q.type==="single"||p.q.type==="multiple"){s+='<div style="font-size:12px;color:#888;margin:4px 0 0 12px">（题库未存 A/B/C/D 选项——请先作答，再对照下方「参考答案」）</div>';}
-    else if(p.q.type==="truefalse"||p.q.type==="fill"){s+='<div style="font-size:12.5px;color:#555;margin:4px 0 0 12px">（作答：______________________）</div>';}
-    else{s+='<div style="height:60px"></div>';}
-    s+='<div style="font-size:12px;color:#555;margin:6px 0 0 12px"><b>参考答案：</b>'+fmt(p.q.answer||p.q.referenceAnswer||"")+'</div>';
-    if(p.q.explanation&&p.q.answer!==p.q.explanation)s+='<div style="font-size:12px;color:#777;margin:3px 0 0 12px"><b>解析：</b>'+fmt(p.q.explanation)+'</div>';
-    s+='</div>';
+  paperSections().forEach(function(x,si){
+    s+='<div style="margin:14px 0 4px;font-size:15px;font-weight:bold;border-bottom:2px solid #333;padding-bottom:3px">'+secNum(si)+'、'+TYPE_LABEL[x.type]+'（'+x.items.length+' 题，'+x.sc+' 分）</div>';
+    x.items.forEach(function(it,j){
+      var p=it.p,q=p.q,optText=bodyForExport(q);
+      s+='<div style="margin-bottom:14px">';
+      s+='<div style="font-size:14px;font-weight:bold">'+(j+1)+'. <span style="font-weight:normal;color:#666">[难度系数 '+getCoef(q)+']</span>　'+fmt(q.question)+'</div>';
+      if(q.type==="short"||q.type==="calculation")s+='<div style="height:66px"></div>';
+      else if(optText)s+='<div style="font-size:13px;color:#111;margin:4px 0 0 14px">'+optText+'</div>';
+      else s+='<div style="font-size:13px;color:#111;margin:4px 0 0 14px">____________________</div>';
+      s+='<div style="font-size:12px;color:#555;margin:6px 0 0 14px"><b>参考答案：</b>'+fmt(answerKey(q))+'</div>';
+      if(q.explanation&&q.answer!==q.explanation)s+='<div style="font-size:12px;color:#777;margin:3px 0 0 14px"><b>解析：</b>'+fmt(q.explanation)+'</div>';
+      s+='</div>';
+    });
   });
   s+='<div style="text-align:center;font-size:12px;color:#999;margin-top:20px">— ChemAI 命题 · 三草酸合铁酸钾制备实验 —</div>';
   return s;
@@ -676,22 +847,20 @@ function renderPreview(){
     el.innerHTML='<div class="panel"><div class="preview-head"><span class="t">📄 试卷预览</span></div><div class="empty"><div class="eicon">🖤</div><p>尚未生成试卷<br>在左侧设置参数后点击「智能生成试卷」，或在「自主选题」中勾选题目加入组卷。</p></div></div>';
     return;
   }
-  var tot=0;paper.forEach(function(p){tot+=p.score;});
-  function countBadge(){var byType={};paper.forEach(function(p){byType[p.q.type]=(byType[p.q.type]||0)+1;});var tl='';for(var t in byType)if(byType.hasOwnProperty(t))tl+=(tl?' · ':'')+TYPE_LABEL[t]+' '+byType[t];var n=0;paper.forEach(function(p){n+=p.score;});return tl+' · 共 <b>'+paper.length+'</b> 题 · <b>'+n+'</b> 分';}
+  function countBadge(){var byType={};paper.forEach(function(p){byType[p.q.type]=(byType[p.q.type]||0)+1;});var tl='';TYPE_ORDER.forEach(function(t){if(byType[t])tl+=(tl?' · ':'')+TYPE_LABEL[t]+' '+byType[t];});var n=0;paper.forEach(function(p){n+=p.score;});return tl+' · 共 <b>'+paper.length+'</b> 题 · <b>'+n+'</b> 分';}
   // 预览时给每题加 分值/上移/下移/删除 控件（仅在线，不进导出）
-  var wrap=buildPaperDOM();
-  var qels=wrap.querySelectorAll(".q");
+  var wrap=buildPaperDOM(false);
   for(var i=0;i<paper.length;i++){
-    if(!qels[i])continue;
+    var qel=wrap.querySelector('.q[data-pi="'+i+'"]');if(!qel)continue;
     var bar=document.createElement("div");bar.className="qc";
     bar.innerHTML='<span class="qlbl">分值</span><input class="score-inp" type="number" value="'+paper[i].score+'" min="1" max="100" data-i="'+i+'">'
       +'<span class="move" data-i="'+i+'" data-d="-1" title="上移">▲</span>'
       +'<span class="move" data-i="'+i+'" data-d="1" title="下移">▼</span>'
       +'<span class="del" data-i="'+i+'" title="移出试卷">✕ 移出试卷</span>';
-    qels[i].appendChild(bar);
+    qel.appendChild(bar);
   }
   var head='<div class="preview-head"><span class="t">📄 试卷预览</span><span class="count">'+countBadge()+'</span></div>';
-  var html='<div class="panel">'+head+'<div class="paper" style="margin-top:4px">'+wrap.innerHTML+'</div>';
+  var html='<div class="panel">'+head+'<div class="preview-flex"><div class="paperwrap" style="flex:1 1 auto;min-width:0">'+wrap.outerHTML+'</div>'+sideNavHTML()+'</div>';
   html+='<div class="export-row">';
   html+='<button class="mini-btn primary" id="btnWord">📝 下载 Word(.doc)</button>';
   html+='<button class="mini-btn primary" id="btnPdf">🖨️ 导出 PDF(打印)</button>';
@@ -702,9 +871,14 @@ function renderPreview(){
     inp.addEventListener("change",function(){
       var i=parseInt(inp.getAttribute("data-i"),10);if(!paper[i])return;
       paper[i].score=Math.max(1,parseInt(inp.value,10)||1);
-      var pEl=qels[i]&&qels[i].querySelector(".pts");if(pEl)pEl.textContent=paper[i].score+" 分";
+      var t=paper[i].q.type,tSc=0,tN=0;
+      paper.forEach(function(p){if(p.q.type===t){tSc+=p.score;tN++;}});
+      var qel=el.querySelector('.q[data-pi="'+i+'"]');
+      if(qel){var pEl=qel.querySelector(".pts");if(pEl)pEl.textContent=paper[i].score+" 分";var psec=qel.closest(".psec");if(psec){var sm=psec.querySelector(".secmeta");if(sm)sm.textContent="（"+tN+" 题，"+tSc+" 分）";}}
       var cnt=el.querySelector(".count");if(cnt)cnt.innerHTML=countBadge();
       var ts=el.querySelector("#totalScore");if(ts){var n=0;paper.forEach(function(p){n+=p.score;});ts.textContent=n;}
+      var nav=el.querySelector('.pnavitem[data-t="'+t+'"] .pnavnum');if(nav)nav.textContent=tSc+" 分";
+      var ptot=el.querySelector(".pnavtotal");if(ptot){var nn=0,ss=0;paper.forEach(function(p){nn++;ss+=p.score;});ptot.innerHTML='共 <b>'+nn+'</b> 题 · 总分 <b>'+ss+'</b> 分';}
     });
   });
   el.querySelectorAll(".move").forEach(function(mv){
@@ -716,6 +890,7 @@ function renderPreview(){
   $("btnWord").addEventListener("click",function(){exportWord();});
   $("btnPdf").addEventListener("click",function(){exportPdf();});
   $("btnTxt").addEventListener("click",function(){exportTxt();});
+  $("btnEnrich").addEventListener("click",function(){enrichObjective();});
 }
 function exportWord(){
   if(!paper.length){toast("请先生成或选择题目");return;}
@@ -727,9 +902,15 @@ function exportWord(){
 }
 function exportPdf(){
   if(!paper.length){toast("请先生成或选择题目");return;}
-  $("printArea").innerHTML=buildPaperDOM().outerHTML;
+  $("printArea").innerHTML=buildPaperDOM(true).outerHTML;
   window.print();
 }
+function txtOpts(q){
+  if(q.type==="single"||q.type==="multiple"){var e=getOpts(q);if(e&&e.opts&&e.opts.length)return e.opts.map(function(t,i){return (e.letters[i]||"")+". "+stripHtml(fmt(t));}).join("\n   ");return "";}
+  if(q.type==="truefalse")return "A. 正确\n   B. 错误";
+  return "";
+}
+function stripHtml(s){return String(s||"").replace(/<[^>]*>/g,"");}
 function exportTxt(){
   if(!paper.length){toast("请先生成或选择题目");return;}
   var title=smart.title||$("fTitle").value||"试卷";
@@ -737,13 +918,17 @@ function exportTxt(){
   var lines=[];lines.push(title);if(subtitle)lines.push(subtitle);
   var total=0;paper.forEach(function(p){total+=p.score;});
   lines.push("满分 "+total+" 分 · 共 "+paper.length+" 题\n");
-  paper.forEach(function(p,i){
-    lines.push((i+1)+". （"+TYPE_LABEL[p.q.type]+"，"+p.score+"分） "+p.q.question);
-    if(p.q.type==="single"||p.q.type==="multiple")lines.push("   （题库未存 A/B/C/D 选项——请先作答，再对照参考答案）");
-    else if(p.q.type==="truefalse"||p.q.type==="fill")lines.push("   作答：____________");
-    lines.push("   参考答案："+(p.q.answer||p.q.referenceAnswer||""));
-    if(p.q.explanation&&p.q.answer!==p.q.explanation)lines.push("   解析："+p.q.explanation);
-    lines.push("");
+  paperSections().forEach(function(x,si){
+    lines.push(secNum(si)+"、"+TYPE_LABEL[x.type]+"（"+x.items.length+" 题，"+x.sc+" 分）");
+    x.items.forEach(function(it,j){
+      var p=it.p,q=p.q,ot=txtOpts(q);
+      lines.push((j+1)+". [难度系数 "+getCoef(q)+"] "+stripHtml(fmt(q.question)));
+      if(ot)lines.push("   "+ot);
+      else lines.push("   作答："+(q.type==="short"||q.type==="calculation"?"__________________":"____________"));
+      lines.push("   参考答案："+stripHtml(fmt(answerKey(q))));
+      if(q.explanation&&q.answer!==q.explanation)lines.push("   解析："+stripHtml(fmt(q.explanation)));
+      lines.push("");
+    });
   });
   var blob=new Blob([lines.join("\n")],{type:"text/plain;charset=utf-8"});
   downloadBlob(blob,(title||"试卷")+".txt");

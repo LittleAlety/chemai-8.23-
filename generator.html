@@ -431,7 +431,7 @@ function renderDiffRows(){
     row.appendChild(inp);r.appendChild(row);
   });
 }
-function srcSet(src){smart.src=src;$("srcBuiltin").classList.toggle("active",src==="builtin");$("srcAi").classList.toggle("active",src==="ai");$("srcHint").textContent=src==="builtin"?"从真实题库按条件随机抽题（AI 生成请用「AI助手」）。":"AI 智能生成当前由「AI助手」承担，此处从真实题库随机抽题。"}
+function srcSet(src){smart.src=src;$("srcBuiltin").classList.toggle("active",src==="builtin");$("srcAi").classList.toggle("active",src==="ai");$("srcHint").textContent=src==="builtin"?"从真实题库按条件随机抽题，并按难度滑块比例取样（AI 生成请用「AI助手」或切换下方「AI 生成」）。":"调用 LLM（DeepSeek）按当前参数智能生成整卷——需先在「AI助手」页的 🤖 LLM 面板配置 Key，生成后请人工校核数值。";var b=$("btnGenerate");if(b&&!b.disabled)b.textContent=src==="ai"?"🤖 AI 生成试卷":"✨ 智能生成试卷";}
 function resetSmart(){
   smart.title=DEF_TITLE;smart.subtitle=DEF_SUBTITLE;smart.count={...DEF_COUNT};smart.score={single:2,multiple:3,truefalse:1,fill:2};smart.diff={...DEF_DIFF};smart.cats=CATS.slice();smart.src="builtin";
   $("fTitle").value=smart.title;$("fSubtitle").value=smart.subtitle;
@@ -443,19 +443,32 @@ function genSmart(){
   smart.title=$("fTitle").value.trim()||"未命名试卷";
   smart.subtitle=$("fSubtitle").value.trim();
   var cats=[];document.querySelectorAll("#catGrid input:checked").forEach(function(c){cats.push(c.value);});
-  var DIFF_WEIGHT={easy:smart.diff.easy,medium:smart.diff.medium,hard:smart.diff.hard};
-  var result=[];var used={};
+  var result=[];var used={};var warnings=[];
   function pick(type,count){
-    var pool=BANK.filter(function(q){return q.type===type&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
-    if(!pool.length)return 0;
-    // 按难度滑块比例作为抽题权重（题库难度 easy/medium/hard）
-    var weighted=[];pool.forEach(function(q){var w=DIFF_WEIGHT[q.difficulty]||1;for(var k=0;k<w;k++)weighted.push(q);});
-    var got=0;shuffle(weighted);
-    for(var i=0;i<weighted.length&&got<count;i++){var q=weighted[i];if(used[q.id||q.question])continue;used[q.id||q.question]=1;result.push(q);got++;}
+    // 难度分布滑块 → 每难度目标配额（基础/综合/提高，占 count 的比例）
+    var dTotal=0;DIFF_ORDER.forEach(function(d){dTotal+=smart.diff[d]||0;});
+    var target={};DIFF_ORDER.forEach(function(d){target[d]=count*((smart.diff[d]||0)/Math.max(1,dTotal));});
+    var start=result.length;var got=0;
+    // ① 按各难度配额精确取样
+    DIFF_ORDER.forEach(function(d){
+      var need=Math.round(target[d]);if(need<=0)return;
+      var pool=BANK.filter(function(q){return q.type===type&&q.difficulty===d&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
+      shuffle(pool);var take=Math.min(need,pool.length);
+      for(var k=0;k<take;k++){used[pool[k].id||pool[k].question]=1;result.push(pool[k]);got++;}
+      if(take<need)warnings.push(DIFF_LABEL[d]+"·"+TYPE_LABEL[type]+" 需 "+need+" 题，命中 "+take+" 题");
+    });
+    // ② 配额取整/不足导致的缺口 → 从任意难度补齐
+    var fillCount=count-got;
+    if(fillCount>0){
+      var rest=BANK.filter(function(q){return q.type===type&&cats.indexOf(q.category)>=0&&!used[q.id||q.question];});
+      shuffle(rest);
+      for(var k=0;k<rest.length&&fillCount>0;k++){used[rest[k].id||rest[k].question]=1;result.push(rest[k]);got++;fillCount--;}
+    }
+    // ③ 配额取整可能让该题型超出 count → 只在该题型的区间内随机裁剪
+    while(got>count){var idx=start+Math.floor(Math.random()*(result.length-start));result.splice(idx,1);got--;}
     return got;
   }
   var plan=[["single","single"],["multiple","multiple"],["truefalse","truefalse"],["fill","fill"]];
-  var warnings=[];
   plan.forEach(function(p){
     var got=pick(p[0],smart.count[p[0]]);
     if(got<smart.count[p[0]])warnings.push(TYPE_LABEL[p[0]]+" 需 "+smart.count[p[0]]+" 题，命中 "+got+" 题");
@@ -464,6 +477,67 @@ function genSmart(){
   paper=result.map(function(q){return {q:q,score:smart.score[q.type]||DEF_SCORE[q.type]||2};});
   renderPreview();
   var msg="已生成试卷 "+paper.length+" 题";if(warnings.length)msg+="（"+warnings.join("；")+"）";toast(msg);
+}
+// ===== AI 生成（复用 AI助手 的 DeepSeek Key，localStorage 为 JSON 编码）=====
+function lsGet2(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}
+function setGenBusy(b){var btn=$("btnGenerate");if(!btn)return;btn.disabled=b;btn.textContent=b?"⏳ 生成中…":(smart.src==="ai"?"🤖 AI 生成试卷":"✨ 智能生成试卷");}
+function callAIApi(key,messages){
+  var model=lsGet2("chemai_llm_model","deepseek-chat");
+  var endpoint="https://api.deepseek.com/v1/chat/completions";
+  var body={model:model,messages:messages,max_tokens:4000,temperature:0.3};
+  return fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+key},body:JSON.stringify(body)})
+    .then(function(r){if(!r.ok)return r.text().then(function(t){throw new Error("API "+r.status+": "+(t||"").slice(0,160));});return r.json();})
+    .then(function(j){return (j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content)||"";});
+}
+function parseAIPaper(text){
+  text=String(text||"").replace(/^\s*```(?:json)?/i,"").replace(/```\s*$/,"").trim();
+  var m=text.match(/\[[\s\S]*\]/);var arr=null;
+  if(m){try{arr=JSON.parse(m[0]);}catch(e){arr=null;}}
+  if(!arr){try{var obj=JSON.parse(text);arr=Array.isArray(obj)?obj:(obj&&obj.type)?[obj]:null;}catch(e){arr=null;}}
+  if(!arr||!arr.length)return [];
+  return arr.filter(function(q){return q&&q.type&&q.question&&(q.answer||q.explanation);}).map(function(q){
+    return {type:TYPE_ORDER.indexOf(q.type)>=0?q.type:"short",difficulty:DIFF_ORDER.indexOf(q.difficulty)>=0?q.difficulty:"medium",question:String(q.question),answer:String(q.answer||q.referenceAnswer||""),explanation:String(q.explanation||""),category:q.category||"AI生成"};
+  });
+}
+function aiGenerate(){
+  smart.title=$("fTitle").value.trim()||"未命名试卷";
+  smart.subtitle=$("fSubtitle").value.trim();
+  var key=lsGet2("chemai_llm_key","");
+  if(!key){toast("未配置 LLM Key——请先在「AI助手」页的 🤖 LLM 面板粘贴 Key（DeepSeek/OpenAI）");return;}
+  var cats=[];document.querySelectorAll("#catGrid input:checked").forEach(function(c){cats.push(c.value);});
+  var typeReq=[];["single","multiple","truefalse","fill"].forEach(function(t){if(smart.count[t]>0)typeReq.push(TYPE_LABEL[t]+smart.count[t]+"题");});
+  var diffReq=DIFF_ORDER.map(function(d){return DIFF_LABEL[d]+smart.diff[d]+"%";}).join("/");
+  var catReq=cats.length?cats.join("、"):"不限";
+  var prompt="为大学无机化学实验「三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 的制备与分析」命制一套试卷。\n"+
+    "试卷名称：《"+smart.title+"》"+(smart.subtitle?"（副标题："+smart.subtitle+"）":"")+"\n"+
+    "题型与数量："+typeReq.join("，")+"\n"+
+    "难度分布："+diffReq+"\n"+
+    "知识点范围："+catReq+"\n"+
+    "要求：\n"+
+    "1. 只依据下方讲义事实命制，数值以讲义为准（6% H₂O₂ 8mL、失水约100℃、烘干50℃、草酸钾3.5g、理论产量6.26g、0.5M草酸、莫尔盐为Fe基准、K₃[Fe(C₂O₄)₃]·3H₂O），不编造。\n"+
+    "2. 化学式统一 Unicode 上下标（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻）。\n"+
+    "3. 只输出一个 JSON 数组，不写说明或围栏。每项格式：{type,question,answer,explanation,difficulty}。type 只取 single/multiple/truefalse/fill，difficulty 取 easy/medium/hard。\n"+
+    "4. 客观题（single/multiple）只说 1 句题干，不需要 A/B/C/D 选项（题库无选项、无法呈现），正确答案写入 answer。";
+  var ctx="讲义关键事实：\n"+
+    "- 三草酸合铁(III)酸钾：K₃[Fe(C₂O₄)₃]·3H₂O，内界[Fe(C₂O₄)₃]³⁻，配体 C₂O₄²⁻，配位数 6，中心 Fe³⁺\n"+
+    "- 制备三步：莫尔盐+草酸→草酸亚铁沉淀；H₂O₂ 氧化+草酸钾→配合物；乙醇析出结晶\n"+
+    "- 关键数值：6% H₂O₂ 加 8mL；烘干约 50℃；失结晶水约 100℃（理论失重 11.0%）；0.5M 草酸；草酸钾 3.5g；理论产量 6.26g\n"+
+    "- 组成测定：KMnO₄ 或 Ce⁴⁺ 氧化还原滴定测铁/草酸根；涉及配位化学与氧化还原";
+  var sys="你是严谨的化学实验命题专家，严格依据讲义事实命制中国高校无机化学实验题，数值以讲义为准，绝不编造。只返回 JSON 数组。";
+  var messages=[{role:"system",content:sys},{role:"user",content:prompt+"\n\n"+ctx}];
+  setGenBusy(true);
+  return callAIApi(key,messages).then(function(text){
+    setGenBusy(false);
+    var arr=parseAIPaper(text);
+    if(!arr.length){toast("AI 返回内容无法解析为题目，请重试或改用内置题库");return;}
+    paper=arr.map(function(q){return {q:q,score:smart.score[q.type]||DEF_SCORE[q.type]||2};});
+    renderPreview();
+    toast("AI 已生成试卷 "+paper.length+" 题（请人工校核数值）");
+  }).catch(function(err){
+    setGenBusy(false);
+    toast("AI 生成失败："+(err&&err.message?err.message:err));
+    console.error(err);
+  });
 }
 
 // ===== 自主选题 =====
@@ -657,7 +731,7 @@ function showTab(t){
 }
 $("tabSmart").addEventListener("click",function(){showTab("smart");});
 $("tabManual").addEventListener("click",function(){showTab("manual");});
-$("btnGenerate").addEventListener("click",genSmart);
+$("btnGenerate").addEventListener("click",function(){if(smart.src==="ai")aiGenerate();else genSmart();});
 $("btnReset").addEventListener("click",resetSmart);
 $("srcBuiltin").addEventListener("click",function(){srcSet("builtin");});
 $("srcAi").addEventListener("click",function(){srcSet("ai");});

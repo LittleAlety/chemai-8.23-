@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>命题 — 三草酸合铁酸钾制备实验 · ChemAI</title>
+<title>智能命题 — 三草酸合铁酸钾制备实验 · ChemAI</title>
 <style>
 :root{
   --bg:#0a0e1a;--bg2:#111827;--card:#1a2235;--card-hover:#243049;
@@ -240,7 +240,7 @@ input,select,textarea{font-family:inherit}
       <a href="prep.html">课前预习</a>
       <a href="index.html#/videos">视频资源</a>
       <a href="index.html#/report" data-role-gate="teacher">报告评估</a>
-      <a href="generator.html" class="active">命题</a>
+      <a href="generator.html" class="active">智能命题</a>
       <a href="index.html#/explore" data-role-gate="non-chemistry">科普探索</a>
       <a href="corpus.html">语料库</a>
     </div>
@@ -252,8 +252,8 @@ input,select,textarea{font-family:inherit}
   <div id="gateBox" style="display:none">
     <div class="gate">
       <div class="gicon">🔐</div>
-      <h2>命题板块 · 仅教师可打开</h2>
-      <p>「命题」用于为三草酸合铁酸钾制备实验组卷（智能生成 + 自主选题 + 下载 Word/PDF）。<br>当前身份不是教师，无法进入。请先到首页选择「教师」身份。</p>
+      <h2>智能命题 · 仅教师可打开</h2>
+      <p>「智能命题」用于为三草酸合铁酸钾制备实验组卷（智能生成 + 自主选题 + 下载 Word/PDF）。<br>当前身份不是教师，无法进入。请先到首页选择「教师」身份。</p>
       <a class="btn" href="index.html#identity">去选择教师身份 →</a>
     </div>
   </div>
@@ -261,7 +261,7 @@ input,select,textarea{font-family:inherit}
   <div id="appBox" style="display:none">
     <div class="banner">
       <div class="banner-tag">📝 QUESTION &amp; PAPER BUILDER</div>
-      <h1>命题 —— <span class="hl">智能生成 + 自主选题 + 下载 Word/PDF</span></h1>
+      <h1>智能命题 —— <span class="hl">智能生成 + 自主选题 + 下载 Word/PDF</span></h1>
       <p class="sub">基于全站 1113 题真实题库（<span id="bankStat"></span>）。可依「试卷信息 / 题型分配 / 难度分布 / 知识点范围」智能组卷，也可逐题浏览筛选、手动挑选组卷，最后预览并下载为 Word（.doc）或导出 PDF。教师专用。</p>
     </div>
 
@@ -282,7 +282,7 @@ input,select,textarea{font-family:inherit}
           <div class="panel">
             <div class="panel-title"><span class="pd"></span>题型分配</div>
             <div id="typeRows"></div>
-            <div class="hint">· 单选 / 多选 / 判断均按超星风格分节排版，每题显示「难度系数」；答案以「内容锚定」的字母为准（A/B/C/D 编号可随意改，正确答案由选项文本决定）。<br>· 题库仅存题干与答案字母（未存 A/B/C/D 选项文本）；点击预览右上「🤖 AI 补全选项与难度」可由 AI 生成 A/B/C/D 选项与 1-5 难度系数（答案由正解内容锚定，与 AI 给的字母无关，卷上标注「AI 生成请人工校核」）。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；默认附 <b>2 道简答</b>，从 8 个步骤/性质知识点（实验操作/合成制备/分析测定/安全与废物处理/结构表征/热分析/反应原理/光化学应用）抽取，突出「实验步骤 + 物质性质」。<br>· 「内容取向 = 预习为纲」会剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论；<b>自主选题</b>始终含全部 1113 题。</div>
+            <div class="hint">· 分值以 <b>5 / 10 分</b>为主：单选 / 多选 / 判断 / 填空每题 5 分，简答 / 计算每题 10 分（可改）。<br>· <b>多选题判分：错选 0 分 · 部分选对 3 分 · 全对 5 分</b>；分值输入框限 3 或 5。<br>· 单选 / 多选 / 判断均按超星风格分节排版，每题显示「难度系数」；答案以「内容锚定」的字母为准（A/B/C/D 编号可随意改，正确答案由选项文本决定）。<br>· 题库仅存题干与答案字母（未存 A/B/C/D 选项文本）；点击预览右上「🤖 AI 补全选项与难度」可由 AI 生成 A/B/C/D 选项与 1-5 难度系数（答案由正解内容锚定，与 AI 给的字母无关，卷上标注「AI 生成请人工校核」）。<br>· 客观题（单选/多选/判断/填空）均属「综合研究」知识点，智能生成时请勾选该项；默认附 <b>2 道简答</b>，从 8 个步骤/性质知识点（实验操作/合成制备/分析测定/安全与废物处理/结构表征/热分析/反应原理/光化学应用）抽取，突出「实验步骤 + 物质性质」。<br>· 「内容取向 = 预习为纲」会剔除教学/素养/文学史类 meta 题与晶体场/磁矩等深理论；<b>自主选题</b>始终含全部 1113 题。</div>
           </div>
 
           <div class="panel">
@@ -362,7 +362,8 @@ var TYPE_LABEL={single:"单选题",multiple:"多选题",truefalse:"判断题",fi
 var TYPE_ORDER=["single","multiple","truefalse","fill","short","calculation"];
 var DIFF_LABEL={easy:"基础",medium:"中等",hard:"较难"};
 var DIFF_ORDER=["easy","medium","hard"];
-var DEF_SCORE={single:2,multiple:3,truefalse:1,fill:2,short:6,calculation:10};
+var DEF_SCORE={single:5,multiple:5,truefalse:5,fill:5,short:10,calculation:10};   // 以 5 / 10 分为主；多选判分为 0 / 3 / 5（错选 0、部分选对 3、全对 5）
+function secMetaSuffix(t){return t==="multiple"?"，判分 0/3/5":"";}   // 多选分节标注判分档（预览/Word/TXT）
 var DEF_COUNT={single:10,multiple:6,truefalse:4,fill:4,short:2,calculation:0};
 var DEF_TITLE="三草酸合铁(III)酸钾制备与分析练习题";
 var DEF_SUBTITLE="配位化学与氧化还原滴定综合测试";
@@ -458,7 +459,8 @@ function renderTypeRows(){
   var r=$("typeRows");r.innerHTML="";
   ["single","multiple","truefalse","fill","short","calculation"].forEach(function(t){
     var row=document.createElement("div");row.className="qrow";
-    row.innerHTML='<span class="ql">'+TYPE_LABEL[t]+'</span><button class="btn" data-t="'+t+'" data-d="-1">−</button><input class="num" type="number" min="0" max="80" value="'+smart.count[t]+'" data-t="'+t+'"><button class="btn" data-t="'+t+'" data-d="1">＋</button><span class="unit">题 × </span><input class="score" type="number" min="1" max="100" value="'+smart.score[t]+'" data-t="'+t+'" style="width:52px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:8px;color:var(--t1);font-size:13px;padding:6px"><span class="unit">分</span>';
+    var sa=(t==="multiple")?'min="3" max="5" step="2"':'min="1" max="100"';
+    row.innerHTML='<span class="ql">'+TYPE_LABEL[t]+'</span><button class="btn" data-t="'+t+'" data-d="-1">−</button><input class="num" type="number" min="0" max="80" value="'+smart.count[t]+'" data-t="'+t+'"><button class="btn" data-t="'+t+'" data-d="1">＋</button><span class="unit">题 × </span><input class="score" type="number" '+sa+' value="'+smart.score[t]+'" data-t="'+t+'" style="width:52px;text-align:center;background:var(--bg2);border:1px solid var(--bd);border-radius:8px;color:var(--t1);font-size:13px;padding:6px"><span class="unit">分</span>';
     r.appendChild(row);
   });
   r.querySelectorAll(".btn").forEach(function(b){
@@ -468,7 +470,11 @@ function renderTypeRows(){
     });
   });
   r.querySelectorAll(".score").forEach(function(s){
-    s.addEventListener("change",function(){smart.score[s.getAttribute("data-t")]=Math.max(1,parseInt(s.value,10)||1);});
+    s.addEventListener("change",function(){
+      var t=s.getAttribute("data-t"),raw=parseInt(s.value,10)||1;
+      smart.score[t]=(t==="multiple")?(raw>=4?5:3):Math.max(1,raw);
+      s.value=smart.score[t];
+    });
   });
 }
 function renderDiffRows(){
@@ -814,7 +820,7 @@ function buildPaperDOM(o){
   wrap.innerHTML=meta;
   paperSections().forEach(function(s,si){
     var secdiv=document.createElement("div");secdiv.className="psec";
-    secdiv.innerHTML='<div class="psechead"><span class="secname">'+secNum(si)+'、'+TYPE_LABEL[s.type]+'</span><span class="secmeta">（'+s.items.length+' 题，'+s.sc+' 分）</span></div>';
+    secdiv.innerHTML='<div class="psechead"><span class="secname">'+secNum(si)+'、'+TYPE_LABEL[s.type]+'</span><span class="secmeta">（'+s.items.length+' 题，'+s.sc+' 分'+secMetaSuffix(s.type)+'）</span></div>';
     var box=document.createElement("div");box.className="secbody";
     s.items.forEach(function(it,j){box.appendChild(buildQuestion(it.p,it.pi,j+1,o));});
     secdiv.appendChild(box);wrap.appendChild(secdiv);
@@ -836,7 +842,7 @@ function paperHTMLForExport(){
   var total=0;paper.forEach(function(p){total+=p.score;});
   s+='<div style="text-align:center;font-size:12px;color:#333;margin:8px 0 16px">（满分 '+total+' 分 · 共 '+paper.length+' 题）　姓名________　班级________　得分________</div>';
   paperSections().forEach(function(x,si){
-    s+='<div style="margin:14px 0 4px;font-size:15px;font-weight:bold;border-bottom:2px solid #333;padding-bottom:3px">'+secNum(si)+'、'+TYPE_LABEL[x.type]+'（'+x.items.length+' 题，'+x.sc+' 分）</div>';
+    s+='<div style="margin:14px 0 4px;font-size:15px;font-weight:bold;border-bottom:2px solid #333;padding-bottom:3px">'+secNum(si)+'、'+TYPE_LABEL[x.type]+'（'+x.items.length+' 题，'+x.sc+' 分'+secMetaSuffix(x.type)+'）</div>';
     x.items.forEach(function(it,j){
       var p=it.p,q=p.q,optText=bodyForExport(q);
       s+='<div style="margin-bottom:14px">';
@@ -849,7 +855,7 @@ function paperHTMLForExport(){
       s+='</div>';
     });
   });
-  s+='<div style="text-align:center;font-size:12px;color:#999;margin-top:20px">— ChemAI 命题 · 三草酸合铁酸钾制备实验 —</div>';
+  s+='<div style="text-align:center;font-size:12px;color:#999;margin-top:20px">— ChemAI 智能命题 · 三草酸合铁酸钾制备实验 —</div>';
   return s;
 }
 function renderPreview(){
@@ -865,7 +871,8 @@ function renderPreview(){
   for(var i=0;i<paper.length;i++){
     var qel=wrap.querySelector('.q[data-pi="'+i+'"]');if(!qel)continue;
     var bar=document.createElement("div");bar.className="qc";
-    bar.innerHTML='<span class="qlbl">分值</span><input class="score-inp" type="number" value="'+paper[i].score+'" min="1" max="100" data-i="'+i+'">'
+    var sct=paper[i].q.type,sca=(sct==="multiple")?'min="3" max="5" step="2"':'min="1" max="100"';
+    bar.innerHTML='<span class="qlbl">分值</span><input class="score-inp" type="number" value="'+paper[i].score+'" '+sca+' data-i="'+i+'">'
       +'<span class="move" data-i="'+i+'" data-d="-1" title="上移">▲</span>'
       +'<span class="move" data-i="'+i+'" data-d="1" title="下移">▼</span>'
       +'<span class="del" data-i="'+i+'" title="移出试卷">✕ 移出试卷</span>';
@@ -882,11 +889,13 @@ function renderPreview(){
   el.querySelectorAll(".score-inp").forEach(function(inp){
     inp.addEventListener("change",function(){
       var i=parseInt(inp.getAttribute("data-i"),10);if(!paper[i])return;
-      paper[i].score=Math.max(1,parseInt(inp.value,10)||1);
+      var raw=parseInt(inp.value,10)||1;
+      paper[i].score=(paper[i].q.type==="multiple")?(raw>=4?5:3):Math.max(1,raw);
+      inp.value=paper[i].score;
       var t=paper[i].q.type,tSc=0,tN=0;
       paper.forEach(function(p){if(p.q.type===t){tSc+=p.score;tN++;}});
       var qel=el.querySelector('.q[data-pi="'+i+'"]');
-      if(qel){var pEl=qel.querySelector(".pts");if(pEl)pEl.textContent=paper[i].score+" 分";var psec=qel.closest(".psec");if(psec){var sm=psec.querySelector(".secmeta");if(sm)sm.textContent="（"+tN+" 题，"+tSc+" 分）";}}
+      if(qel){var pEl=qel.querySelector(".pts");if(pEl)pEl.textContent=paper[i].score+" 分";var psec=qel.closest(".psec");if(psec){var sm=psec.querySelector(".secmeta");if(sm)sm.textContent="（"+tN+" 题，"+tSc+" 分"+secMetaSuffix(t)+"）";}}
       var cnt=el.querySelector(".count");if(cnt)cnt.innerHTML=countBadge();
       var ts=el.querySelector("#totalScore");if(ts){var n=0;paper.forEach(function(p){n+=p.score;});ts.textContent=n;}
       var nav=el.querySelector('.pnavitem[data-t="'+t+'"] .pnavnum');if(nav)nav.textContent=tSc+" 分";
@@ -915,7 +924,7 @@ function exportWord(){
 }
 function exportPdf(){
   if(!paper.length){toast("请先生成或选择题目");return;}
-  $("printArea").innerHTML=buildPaperDOM({mark:false,note:false,ans:true}).outerHTML;
+  $("printArea").innerHTML=buildPaperDOM({mark:false,note:false,ans:false}).outerHTML;
   window.print();
 }
 function txtOpts(q){
@@ -932,7 +941,7 @@ function exportTxt(){
   var total=0;paper.forEach(function(p){total+=p.score;});
   lines.push("满分 "+total+" 分 · 共 "+paper.length+" 题\n");
   paperSections().forEach(function(x,si){
-    lines.push(secNum(si)+"、"+TYPE_LABEL[x.type]+"（"+x.items.length+" 题，"+x.sc+" 分）");
+    lines.push(secNum(si)+"、"+TYPE_LABEL[x.type]+"（"+x.items.length+" 题，"+x.sc+" 分"+secMetaSuffix(x.type)+"）");
     x.items.forEach(function(it,j){
       var p=it.p,q=p.q,ot=txtOpts(q);
       lines.push((j+1)+". [难度系数 "+getCoef(q)+"] "+stripHtml(fmt(q.question)));

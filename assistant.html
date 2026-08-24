@@ -867,9 +867,9 @@ function buildLLMContext(q){
   var parts=[];
   // 角色镜头：让 LLM 按身份调整口吻与深度（本地路径另行用 intro/outro 包裹）
   var roleLens={
-    'non-chemistry':'（用户身份：非化学专业人士 · 通俗版）请用生活化语言、少堆术语；涉及操作请补一句安全提醒；多用贴近生活的比喻。',
-    'chemistry':'（用户身份：化学专业人士 · 深度版）请保持专业严谨，给出配位化学、晶体场、热力学机理与定量推导依据。',
-    'teacher':'（用户身份：教师 · 教学版）请以教学引导口吻：先明目标、再分步讲、最后小结，并提示可出题巩固的要点。'
+    'non-chemistry':'你的用户是非化学专业人士：请用生活化、口语化的中文，避免术语堆砌和公式轰炸；必要时用生活类比帮助理解；凡涉及操作，讲完请补一句安全提醒；去掉浓重的学术腔。',
+    'chemistry':'你的用户是化学专业人士：请保持专业严谨的学术风格，直接给出配位化学、晶体场理论、热力学机理与定量推导的依据和参数；术语与化学式务必准确；无需做通俗化铺垫。',
+    'teacher':'你的用户是化学教师：请以教学引导的口吻组织内容——先点出本节学习目标，再分步讲解，最后做小结；主动指出学生易犯的常见误区，并提示这个知识点适合出题检查的要点；必要时给出教学设计思路。'
   };
   parts.push('【身份】'+ (roleLens[chatRole()]||roleLens.chemistry));
   if(CHAT_HISTORY.length>1){
@@ -1301,6 +1301,11 @@ function roleDepthOpen(){ return chatRole()!=='non-chemistry'; }
 function roleSec(summary, body, forceOpen){
   var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
   return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
+}
+/* 非化学核心解答「白话版」容器：身份差异化呈现（不改写正文、不臆造内容，仅收拢为人话视觉） */
+function roleCoreHTML(innerHTML){
+  if(chatRole()!=='non-chemistry') return innerHTML;
+  return '<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+innerHTML+'</div>';
 }
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
@@ -1954,7 +1959,7 @@ function buildAnswerHTML(q,ctx){
   if(!hits.length){
     if(faq){
       s+=answerHeaderHTML({level:'high'},'faq',0,false);
-      s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div></div>';
+      s+='<div class="ans-sec"><h4>📌 核心解答</h4>'+roleCoreHTML('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>')+'</div>';
       if(faq.detail) s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）','<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>')+'</div>';
       s+='<div class="ans-sec"><h4>🌐 网络补充</h4><p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q)+'</div>';
       s+=extendHTML(q,faq,hits);
@@ -1968,7 +1973,7 @@ function buildAnswerHTML(q,ctx){
   }
   s+=answerHeaderHTML({level:faq?'high':(hits[0].score>=50?'medium':'low')},faq?'faq':'corpus',hits.length,false);
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
-  s+=faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
+  s+=faq?roleCoreHTML('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops);
   s+='</div>';
   s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）',
     (faq&&faq.detail?'<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>':'')
@@ -3947,6 +3952,8 @@ document.addEventListener('DOMContentLoaded',function(){
 .role-outro .ro-chips{display:flex;flex-wrap:wrap;gap:6px}
 .teach-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.2);border-radius:10px}
 .teach-bar .tb-lb{font-size:12.5px;font-weight:600;color:var(--t2,#c9d4e6);margin-right:4px}
+.role-plain{position:relative;padding:12px 14px;background:rgba(45,212,191,.06);border:1px solid rgba(45,212,191,.18);border-radius:12px}
+.role-plain .rp-tag{display:inline-block;margin-bottom:6px;padding:2px 9px;border-radius:20px;background:rgba(45,212,191,.15);color:var(--t2,#c9d4e6);font-size:11px;font-weight:600}
 @media (prefers-reduced-motion:reduce){ .rs-chip{transition:none} }
 </style>
 <script src="assets/bg-particles.js" defer></script>

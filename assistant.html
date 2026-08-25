@@ -185,6 +185,7 @@ a:hover{color:var(--em)}
 .selfcheck-ok::before{content:"✓";font-weight:700;font-size:13px}
 .analogy-banner{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.25);border-radius:10px;padding:8px 12px;margin:6px 0;font-size:12px}
 .analogy-banner .bridge-icon{display:inline-block;margin-right:4px;font-size:14px}
+.ref-quote{background:var(--bg2,#0e141f);border-left:3px solid var(--em,#10b981);border-radius:6px;padding:8px 10px;font-size:13px;line-height:1.7}
 .source-tag{display:inline-block;font-size:10px;padding:1px 7px;border-radius:10px;font-weight:600}
 .source-tag.faq{background:rgba(16,185,129,.15);color:var(--em);border:1px solid rgba(16,185,129,.3)}
 .source-tag.corpus{background:rgba(96,165,250,.15);color:var(--blue);border:1px solid rgba(96,165,250,.3)}
@@ -1317,18 +1318,29 @@ function roleCoreHTML(innerHTML){
 }
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
-  var methodHits=ctx.methodHits, analogies=ctx.analogies, conf=ctx.conf;
+  var methodHits=ctx.methodHits, analogies=ctx.analogies, conf=ctx.conf, onTopic=ctx.onTopic;
+  var _altFAQ=faq?null:bestOnTopicFAQ(q);   // 贴题标准问答兜底（同时用于源标签与主答）
   var totalRefs=directHits.length+analogyHits.length+methodHits.length;
-  var srcType=faq?'faq':(directHits.length>0?'corpus':'analogy');
+  var srcType=faq?'faq':(_altFAQ?'faq':(directHits.length>0?'corpus':'analogy'));
   var s=answerHeaderHTML(conf, srcType, totalRefs, false);
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
   var _coreBody;
   if(faq){
     _coreBody='<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>';
-  } else if(directHits.length>0){
-    _coreBody=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
   } else {
-    _coreBody='<div class="rich-answer"><p>该问题超出了本实验知识库的<b>精确匹配范围</b>，但可以通过<b>类比推理</b>从已知化学原理中推导相关答案。</p></div>';
+    /* 「答非所问」修复：只要检索到真实内容(贴题标准问答/文献命中)就说明是本实验主题，直接回答问题；
+       彻底无内容(无 domain/无 FAQ/无文献)才声明与实验无关。绝不用「该问题属于X方向」或「超出精确匹配范围」作开场。 */
+    if(_altFAQ){
+      _coreBody='<div class="rich-answer"><p>知识库未找到「'+esc(q)+'」的<b>精确</b>匹配，以下是与该问题最相关的标准问答：</p>'
+        +'<div class="ref-quote" style="margin:6px 0"><b>Q：'+esc(_altFAQ.q)+'</b></div>'
+        +renderRichAnswer(_altFAQ.answer)+'</div>';
+    } else if(directHits.length>0){
+      _coreBody=coreFromMeta(q, directHits, ctx.chems, ctx.ops);
+    } else if(onTopic!==false){
+      _coreBody='<div class="rich-answer"><p>知识库暂未收录这个问题的答案，且没有足够贴近的标准问答可引用。可尝试<b>换一种问法</b>（例如直接包含「三草酸合铁酸钾」「乙醇」「抽滤」等关键词），或用下方网络搜索进一步查找。</p></div>';
+    } else {
+      _coreBody='<div class="rich-answer"><p>这个问题与<b>三草酸合铁酸钾（K₃[Fe(C₂O₄)₃]·3H₂O）制备与性质实验</b>无关。可换个方向提问，例如本实验的<b>制备流程、反应原理、现象、安全、测定</b>等。</p></div>';
+    }
   }
   s+=roleCoreHTML(_coreBody);
   if(analogies.length>0){
@@ -1462,6 +1474,21 @@ function relatedFAQs(q,exclude,n){
     }
     return out;
   } catch(e) { return []; }
+}
+/* 「答非所问」修复：matchFAQ 触发严格(trig)可能漏掉贴题问答，这里用宽松评分找一条
+   「确实相关内容」的标准问答作主答。规则：实体只记 ≥2 字的中文/词(排除 "P"/"水" 等单字误中 python/天气)，
+   总分 ≥3 才采纳——0~1 分是噪声(「你喜欢什么颜色」经"颜色"仅1分)，3 分是贴题下限。 */
+function bestOnTopicFAQ(q){
+  try{
+    var nq=norm(q), best=null, bestScore=0;
+    for(var i=0;i<FAQ.length;i++){
+      var f=FAQ[i], s=0;
+      for(var j=0;j<(f.ents||[]).length;j++){ var ne=norm(f.ents[j]); if(ne.length>=2 && nq.indexOf(ne)>=0) s+=3; }
+      for(var k=0;k<f.keys.length;k++){ var nk=norm(f.keys[k]); if(nk.length>=2 && nq.indexOf(nk)>=0) s+=1; }
+      if(s>bestScore){ bestScore=s; best=f; }
+    }
+    return bestScore>=3 ? best : null;
+  }catch(e){ return null; }
 }
 
 /* ================= 问答 Tab ================= */
@@ -1727,16 +1754,22 @@ const ENT_TIPS={
 const OP_TIP='操作关键点回顾：40℃ 水浴控温、试剂逐滴加入并搅拌、热水洗涤沉淀、加乙醇后暗处冷却结晶、抽滤"先拔管后关泵"、产物避光干燥。';
 function coreFromMeta(q,hits,chems,ops){
   const t=hits[0].e;
-  let s='<p>根据知识清单《'+esc(t.title)+'》等 '+hits.length+' 篇文献的著录信息，该问题属于「'+esc(t.subfield||'相关')+'」方向';
-  if(t.objects) s+='，相关研究对象为 '+esc(t.objects);
-  if(t.methods) s+='，常用方法为 '+esc(t.methods);
-  s+='。结合本实验（三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 的制备与性质），可给出以下要点：</p><ul style="margin-left:18px">';
+  /* 「答非所问」修复：不再用「该问题属于X方向」的著录元数据作开场——先置答成事实（未收录现成答案），
+     再拿命中文献的真实内容(摘要/预设问题)给线索，最后把命中的化学实体/操作事实作为「相关知识点」。 */
+  let s='<div class="rich-answer">';
+  s+='<p>知识库暂未收录这个具体问法的<b>现成答案</b>。以下是检索到的最相关文献的<b>实际内容</b>，可从中找到线索：</p>';
+  if(t.abstract) s+='<div class="ref-quote" style="margin:6px 0">「'+esc(t.abstract)+'」</div>';
+  if(t.questions&&t.questions.length){
+    s+='<p style="margin:6px 0 2px;font-size:13px;color:var(--t2)">《'+esc(t.title)+'》围绕以下问题展开：</p><ul style="margin-left:18px">';
+    for(var qi=0;qi<Math.min(t.questions.length,3);qi++) s+='<li>'+esc(t.questions[qi])+'</li>';
+    s+='</ul>';
+  }
+  if(t.objects||t.methods) s+='<p style="margin:6px 0 0;font-size:12px;color:var(--t3)">该文献研究对象：'+esc(t.objects||'')+(t.methods?'；关键方法：'+esc(t.methods):'')+'</p>';
   const tips=[];
-  chems.forEach(c=>{if(ENT_TIPS[c.name]&&tips.length<2)tips.push(ENT_TIPS[c.name]);});
+  chems.forEach(c=>{if(ENT_TIPS[c.name]&&tips.length<3)tips.push(ENT_TIPS[c.name]);});
   if(!tips.length&&ops.length) tips.push(OP_TIP);
-  if(!tips.length) tips.push('该问题可在下列文献的研究对象、方法与预设问题中找到答案线索，建议先阅读"依据文献"部分，再到语料库按「'+esc(t.subfield||'相关')+'」子领域浏览原文。');
-  tips.forEach(x=>{s+='<li>'+x+'</li>';});
-  return s+'</ul>';
+  if(tips.length) s+='<div class="ans-sec" style="margin:8px 0 0"><h4 style="font-size:13px;margin:0 0 4px">🔍 相关知识点</h4><ul style="margin-left:18px;margin-bottom:0">'+tips.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>';
+  return s+'</div>';
 }
 function extendHTML(q,faq,hits){
   const knode=(faq&&faq.knode)||'与本问题相关的知识点';
@@ -2997,7 +3030,7 @@ async function handleQA(q){
   }
 
   if(!usedLLM){
-    var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops};
+    var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops, onTopic:domain};
     html=buildHybridAnswerHTML(q, hybridCtx);
     if(chems.length) html+=msdsCardHTML(chems);
     /* v61.1 视频默认折叠，点击展开（避免每条回答内嵌播放器占版面） */
@@ -3971,7 +4004,7 @@ document.addEventListener('DOMContentLoaded',function(){
 .plan-st span{font-size:12px;color:var(--t3,#7c879c)}
 /* 可视化 / 精通之路 / 复习卡 */
 .visual{margin-top:6px;overflow-x:auto;background:var(--bg2,#0e141f);border:1px solid var(--bd,#1e2636);border-radius:12px;padding:10px}
-.visual svg{display:block;margin:0 auto;width:100%;max-width:680px;height:auto;min-width:280px}
+.visual svg{display:block;margin:0 auto;width:100%;max-width:560px;max-height:420px;height:auto;min-width:200px}
 .mastery-head{display:flex;align-items:center;gap:14px}
 .mh-grade{font-size:34px;font-weight:700;line-height:1;background:linear-gradient(120deg,#10b981,#2dd4bf);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .mh-grade span{font-size:13px;font-weight:400;-webkit-text-fill-color:var(--t3,#7c879c)}

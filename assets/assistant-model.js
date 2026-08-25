@@ -172,7 +172,7 @@
     return vizWrap('<div style="font-size:13px;color:var(--t3,#64748b)">想可视化？试试「画出三步反应的流程图」「生成抽滤装置示意图」「画 d⁵ 八面体场能级分裂图」「画配合物的立体结构」「画 Δ/Λ 手性异构体」「画出高锰酸钾滴定草酸根曲线」「画出氧化还原电位图」「用知识图谱展示配位组成」「本实验安全要点」。</div>','🖼 可视化');
   }
 
-  /* ---- 流程（默认/制备类）：5 步分支，数值锚定讲义 ---- */
+  /* ---- 流程（默认/制备类）：紧凑蛇形（3上+2下），数值锚定讲义 ---- */
   function buildFlowViz(q){
     var steps;
     if(/沉淀/.test(q||'')){
@@ -180,17 +180,28 @@
     }else{
       steps=[['原料溶解','0.5mol/L 草酸 + 草酸亚铁，温热搅拌','溶解'],['氧化络合','40℃ 水浴逐滴加 H₂O₂(8mL)，过量煮沸除去','氧化'],['析晶','加乙醇降低溶解度，冰水冷却结晶','结晶'],['抽滤','布氏漏斗减压抽滤，少量多次乙醇洗涤','过滤'],['干燥','100℃ 失水，翠绿晶体，避光保存','干燥']];
     }
-    var bw=280,bh=62,gap=46,y0=50,x0=20;
-    var rows=[];
-    for(var i=0;i<steps.length;i++){
-      var st=steps[i];
-      rows.push(buildFlowBoxEx(x0,y0+i*(bh+gap),bw,bh,i+1,st[0],st[1],st[2],i<steps.length-1,gap,(i===1)));
+    var bw=150,bh=62,rowY=48,rowGap=70,x0=24,xgap=40;
+    function box(x,y,i,hl){ return buildFlowBoxEx(x,y,bw,bh,i+1,steps[i][0],steps[i][1],steps[i][2],false,0,hl); }
+    function hArrow(x1,x2,y){ return '<line x1="'+x1+'" y1="'+y+'" x2="'+x2+'" y2="'+y+'" stroke="rgba(96,165,250,.5)" stroke-width="2" stroke-dasharray="4 4"/><path d="M '+x2+' '+y+' L '+(x2-6)+' '+(y-5)+' L '+(x2-6)+' '+(y+5)+' Z" fill="rgba(96,165,250,.6)"/>'; }
+    function vArrow(x,y1,y2){ return '<line x1="'+x+'" y1="'+y1+'" x2="'+x+'" y2="'+y2+'" stroke="rgba(96,165,250,.5)" stroke-width="2" stroke-dasharray="4 4"/><path d="M '+x+' '+y2+' L '+(x-5)+' '+(y2-6)+' L '+(x+5)+' '+(y2-6)+' Z" fill="rgba(96,165,250,.6)"/>'; }
+    var d='',W,H,rightX=x0+2*(bw+xgap);
+    if(steps.length<=3){
+      for(var a=0;a<steps.length;a++){ var xa=x0+a*(bw+xgap); d+=box(xa,rowY,a, a===1); if(a<steps.length-1) d+=hArrow(xa+bw, xa+bw+xgap, rowY+bh/2); }
+      W=rightX+bw+x0;
+      H=rowY+bh+84;
+    }else{
+      var y2=rowY+bh+rowGap;
+      for(var i=0;i<3;i++){ var xi=x0+i*(bw+xgap); d+=box(xi,rowY,i, i===1); if(i<2) d+=hArrow(xi+bw, xi+bw+xgap, rowY+bh/2); }
+      d+=vArrow(rightX+bw/2, rowY+bh, y2);
+      d+=box(rightX, y2, 3, false);
+      d+=hArrow(rightX, x0+bw+xgap, y2+bh/2);
+      d+=box(x0+bw+xgap, y2, 4, false);
+      W=rightX+bw+x0;
+      H=y2+bh+84;
     }
-    var W=bw+44, H=bh*steps.length+gap*(steps.length-1)+100;
-    var d='<text x="'+x0+'" y="30" font-size="13.5" style="fill:var(--t1,#f1f5f9)" font-weight="600">反应流程（'+steps.length+' 步）</text>'
-      +rows.join('')
-      +'<text x="'+x0+'" y="'+(H-38)+'" font-size="11" style="fill:var(--t2,#94a3b8)">备注：① 先沉淀 FeC₂O₄ 初步除杂 → ② 氧化调至 +3 价 → ③ 与草酸根配位成产物；产物 K₃[Fe(C₂O₄)₃]·3H₂O，翠绿色。</text>'
-      +'<text x="'+x0+'" y="'+(H-20)+'" font-size="11" style="fill:var(--t3,#64748b)">含 3 分子结晶水（约 11% 质量，见 TG-DSC）；见光易分解，应避光保存。</text>';
+    d='<text x="'+x0+'" y="24" font-size="13.5" style="fill:var(--t1,#f1f5f9)" font-weight="600">反应流程（'+steps.length+' 步）</text>'+d
+      +'<text x="'+x0+'" y="'+(H-30)+'" font-size="11" style="fill:var(--t2,#94a3b8)">备注：① 先沉淀 FeC₂O₄ 除杂 → ② 氧化调至 +3 价 → ③ 配位成产物；产物 K₃[Fe(C₂O₄)₃]·3H₂O 翠绿色。</text>'
+      +'<text x="'+x0+'" y="'+(H-12)+'" font-size="11" style="fill:var(--t3,#64748b)">含 3 分子结晶水（约 11%，见 TG-DSC）；见光易分解，应避光保存。</text>';
     return vizWrap(vizsvg(W,H,d),'🖼 '+(escText(q||'反应流程')));
   }
   function buildFlowBox(x,y,w,h,n,label,arrow,gap){

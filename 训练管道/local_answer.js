@@ -50,6 +50,8 @@ const STOP_TERMS=['什么','怎么','如何','为什么','为何','哪些','多�
 const CHEM_DB=[
  {name:'三草酸合铁酸钾',alias:['三草酸合铁酸钾','三草酸合铁','草酸铁钾','k3[fe(c2o4)3]','ferrioxalate','铁草酸钾'],pubchem:'potassium ferrioxalate'},
  {name:'草酸',alias:['草酸','乙二酸','h2c2o4','oxalic'],pubchem:'oxalic acid'},
+ {name:'草酸钾',alias:['草酸钾','草酸二钾','k2c2o4','potassium oxalate'],pubchem:'potassium oxalate'},
+ {name:'草酸亚铁',alias:['草酸亚铁','fec2o4','ferrous oxalate'],pubchem:'ferrous oxalate'},
  {name:'过氧化氢',alias:['过氧化氢','双氧水','h2o2','hydrogen peroxide'],pubchem:'hydrogen peroxide'},
  {name:'硫酸亚铁铵(莫尔盐)',alias:['莫尔盐','摩尔盐','硫酸亚铁铵','mohr'],pubchem:'ammonium iron(II) sulfate'},
  {name:'乙醇',alias:['乙醇','酒精','c2h5oh','ethanol'],pubchem:'ethanol'},
@@ -81,7 +83,16 @@ function extractTerms(q){
   return {all:filt(Array.from(terms)),strong:new Set(filt(Array.from(strong)))};
 }
 // 来源 assistant.html:895
-function detectChems(q){const nq=norm(q);return CHEM_DB.filter(c=>c.alias.some(a=>nq.includes(norm(a))));}
+function detectChems(q){
+  const nq=norm(q);
+  const hits=CHEM_DB.filter(c=>c.alias.some(a=>nq.includes(norm(a))));
+  if(hits.length<2)return hits;
+  // 特异性优先：若某命中的别名只是另一命中的真子串且未独立出现，剔除泛化项（防「草酸钾」误报为「草酸」）
+  const matAl={};hits.forEach(h=>matAl[h.name]=h.alias.map(norm).filter(a=>a&&nq.includes(a)));
+  const strip=s=>hits.reduce((acc,h)=>matAl[h.name].reduce((a2,mo)=>(mo&&mo!==s&&acc.includes(mo)?a2.replace(mo,''):a2),acc),nq);
+  return hits.filter(h=>!matAl[h.name].some(ma=>
+    hits.some(o=>o!==h&&matAl[o.name].some(mo=>mo!==ma&&mo.includes(ma)&&ma.length>1))&&!strip(ma).includes(ma)));
+}
 // 来源 assistant.html:896
 function detectOps(q){const nq=norm(q);return OP_TERMS.filter(o=>nq.includes(norm(o)));}
 

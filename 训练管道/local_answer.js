@@ -345,12 +345,15 @@ function analogicalReasoning(q, directHits, analogyHits, methodHits){
 }
 
 // 来源 assistant.html:2193-2204
+function faqConfidence(matchScore){
+  return Math.min(0.95, Math.max(0.5, 0.5 + matchScore*0.01));
+}
 function confidenceScore(directHits, analogyHits, methodHits, faq, analogies){
   var scores={};
   var maxDirectScore=0;
   for(var i=0;i<directHits.length;i++){maxDirectScore=Math.max(maxDirectScore,directHits[i].score);}
   scores.corpus=Math.min(1, maxDirectScore/60);
-  scores.faq=faq?0.9:0;
+  scores.faq=faq?faqConfidence(maxDirectScore):0;
   var analogyCount=analogies.length+analogyHits.length+methodHits.length;
   scores.analogy=Math.min(1, analogyCount*0.15);
   scores.overall=Math.max(scores.corpus, scores.faq, scores.analogy*0.6);

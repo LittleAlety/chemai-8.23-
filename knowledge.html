@@ -581,6 +581,15 @@ const CAT_FALLBACK_GLOW = ['rgba(96,165,250,0.3)','rgba(248,113,113,0.3)','rgba(
 const LEVEL_NAMES = {0:'中心节点', 1:'方向节点', 2:'知识点', 3:'细分点'};
 let LAYER_R = {1:215, 2:470, 3:725};        // 分层环形布局半径（initGraph 中会按画布尺寸响应式缩放）
 const CAT_ORDER = ['coordination','redox','analytical','physical'];  // 扇区排布顺序
+// FAQ 子领域 → KG 节点 id 兜底映射（6 个子领域在 FAQ/语料中有而在 KG 的 subfield 字段中不存在，落到 KG 已有节点）
+const SUBFIELD_ALIAS = {
+  '配位化学理论':'coord',
+  '实验操作':'center-exp',
+  '反应原理':'redox',
+  '安全与废物处理':'safety-direction',
+  '高等理论':'physical',
+  '化学史':'tassaert-discovery',
+};
 
 // 知识树（由 kg 节点的 parent 字段构建，缺失时回退推导）
 const parentOf = new Map();     // id -> parentId
@@ -598,6 +607,7 @@ const view = {x:0, y:0, k:1};
 let W = 0, H = 0, DPR = 1;
 let dragState = null;
 let viewTween = null;
+let deepLinkTargetId = null;                 // 深链定位目标节点 id（命中后跳过整图自动取景，保留聚焦视角）
 
 function catOf(c){
   if(!CATS[c]){
@@ -656,6 +666,7 @@ async function loadData(){
 
   initGraph(kg);
   $('#loadingOv').hidden = true;
+  resolveDeepLink();
 }
 function showError(err){
   $('#loadingOv').hidden = true;
@@ -947,8 +958,10 @@ function frame(){
     temp *= 0.982;              // 初始布局动画：迭代过程平滑呈现
     if(temp <= 0.5 && !settleFitted){
       settleFitted = true;      // 布局稳定后自动取景，避免边缘节点被裁切
-      const t = fitTarget();
-      animateView(t.x, t.y, t.k, 700);
+      if(!deepLinkTargetId){
+        const t = fitTarget();
+        animateView(t.x, t.y, t.k, 700);
+      }
     }
   }
   stepTween();
@@ -1666,6 +1679,50 @@ function openPanel(n){
   const p = $('#panel');
   p.classList.add('open');
   p.setAttribute('aria-hidden','false');
+}
+
+/* ==================== 深链定位（接收 assistant 生成的 ?node=<值>） ==================== */
+/* 按 id → 节点名 → 子领域 顺序把 URL 参数解析到具体节点；未命中时返回 null，保持默认视图。 */
+function resolveNodeTarget(val){
+  // 1) 直接 id 命中
+  if(nodeById.has(val)) return nodeById.get(val);
+  // 2) 节点名精确命中（去除首尾空白；再兜底归一化比较）
+  const v = String(val).trim();
+  let byName = nodes.find(n=>String(n.name).trim() === v);
+  if(!byName){
+    const nv = norm(v);
+    if(nv) byName = nodes.find(n=>norm(n.name) === nv);
+  }
+  if(byName) return byName;
+  // 3) 子领域：先用 SUBFIELD_ALIAS 兜底到 KG 已有节点；再在 KG 同 subfield 节点中选「层级最浅 + 连接最多」的中心节点
+  const aliasId = SUBFIELD_ALIAS[v];
+  if(aliasId && nodeById.has(aliasId)) return nodeById.get(aliasId);
+  const same = nodes.filter(n=>String(n.subfield||'').trim() === v);
+  if(same.length){
+    let best = same[0], bestLevel = Infinity, bestDeg = -1;
+    for(const n of same){
+      const deg = (adj.get(n.id)||new Set()).size;
+      if(n.level < bestLevel || (n.level === bestLevel && deg > bestDeg)){
+        best = n; bestLevel = n.level; bestDeg = deg;
+      }
+    }
+    return best;
+  }
+  return null;
+}
+/* 读取 ?node=；命中后在首帧（双 requestAnimationFrame）后聚焦/高亮/居中该节点；缺省不改变正常打开行为。 */
+function resolveDeepLink(){
+  try{
+    const params = new URLSearchParams(location.search);
+    const val = (params.get('node')||'').trim();
+    if(!val) return;
+    const target = resolveNodeTarget(val);
+    if(!target) return;
+    deepLinkTargetId = target.id;
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      try{ selectNode(target.id); }catch(e){}
+    }));
+  }catch(e){}
 }
 
 /* ==================== 启动 ==================== */

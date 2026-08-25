@@ -632,7 +632,15 @@
       });
       scored.sort(function (a, b) { return b.sc - a.sc; });
       var top = scored.slice(0, 3).map(function (x) {
-        return { name: x.n.name, category: x.n.category, description: String(x.n.description || '').slice(0, 150), url: 'knowledge.html' };
+        var n = x.n;
+        return {
+          id: n.id,
+          name: n.name,
+          category: n.category,
+          description: String(n.description || '').slice(0, 150),
+          subfield: n.subfield || '',
+          url: 'knowledge.html?node=' + encodeURIComponent(n.id)
+        };
       });
       return { matched: top.length > 0, items: top };
     });

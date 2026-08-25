@@ -2965,8 +2965,14 @@ async function handleQA(q){
           try{
             var live=ans.querySelector('.stream-live');
             if(!live){
+              var _role=chatRole(), _wrap=_role==='non-chemistry';
               var sec=document.createElement('div'); sec.className='ans-sec stream-sec';
-              sec.innerHTML='<h4 style="font-size:13px;color:var(--t2);margin:0 0 6px">🤖 LLM 生成</h4><div class="rich-answer stream-live"></div>';
+              sec.innerHTML='<h4 style="font-size:13px;color:var(--t2);margin:0 0 6px">🤖 LLM 生成</h4>'
+                +(_wrap?'<div class="role-plain"><span class="rp-tag">💬 白话版</span>':'')
+                +'<div class="rich-answer stream-live"></div>'
+                +(_wrap?'</div>':'');
+              /* 身份镜头统一（与本地路径一致，修复「3身份风格未融入对话」）：教师工具条 + 引导句置顶 */
+              ans.insertAdjacentHTML('beforeend', teacherBarHTML()+roleLeadHTML(_role));
               ans.appendChild(sec); live=sec.querySelector('.stream-live');
             }
             live.innerHTML=renderRichAnswer(full);
@@ -2975,7 +2981,15 @@ async function handleQA(q){
         };
         var llmAnswer=await callLLM(q, llmCtx, streamCb);
         if(llmAnswer){
-          if(!ans.querySelector('.stream-live')) ans.insertAdjacentHTML('beforeend','<div class="ans-sec"><div class="rich-answer">'+renderRichAnswer(llmAnswer)+'</div></div>');
+          if(!ans.querySelector('.stream-live')){
+            var _fallRole=chatRole(), _fwrap=_fallRole==='non-chemistry';
+            ans.insertAdjacentHTML('beforeend', teacherBarHTML()+roleLeadHTML(_fallRole)
+              +'<div class="ans-sec"><div class="rich-answer">'
+              +(_fwrap?'<div class="role-plain"><span class="rp-tag">💬 白话版</span>':'')
+              +renderRichAnswer(llmAnswer)
+              +(_fwrap?'</div>':'')
+              +'</div></div>');
+          }
           usedLLM=true; streamedLive=true; html=''; // 已流式写入 ans，避免尾部 innerHTML 覆盖
         }
       }catch(e){ /* LLM unavailable, fall back to local reasoning */ }
@@ -3099,6 +3113,8 @@ async function handleQA(q){
   /* v69 答案注入：LLM 流式 / 本地逐字打字机（无 Key 模拟） / 直渲回退 */
   var doStream = MODEL_FEATURES.streamTypewriter && !usedLLM && recipe.stream!=='off';
   if(streamedLive){
+    /* 身份镜头统一：LLM 流式末尾补「还想接着聊」chips（本地路径已由 buildHybridAnswerHTML 内嵌） */
+    if(usedLLM) html+=roleOutroHTML(chatRole());
     ans.insertAdjacentHTML('beforeend', html);
     scrollChat(qaChat); saveAIBubble(bub); qaBusy=false; qaSend.disabled=false;
   } else if(doStream){

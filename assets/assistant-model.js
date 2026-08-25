@@ -176,36 +176,40 @@
   function buildFlowViz(q){
     var steps;
     if(/沉淀/.test(q||'')){
-      steps=[['沉淀反应','草酸亚铁 FeC₂O₄ · 0.5mol/L 草酸','沉淀'],['氧化反应','加 H₂O₂（8mL）','氧化'],['配位反应','K₃[Fe(C₂O₄)₃] 络合生成','配位']];
+      steps=[['沉淀反应','草酸 + 草酸亚铁 → FeC₂O₄↓（黄色）','沉淀'],['氧化反应','40℃ 水浴逐滴加 H₂O₂(8mL)','氧化'],['配位反应','与草酸根配位 → [Fe(C₂O₄)₃]³⁻','配位']];
     }else{
-      steps=[['原料溶解','0.5 mol/L 草酸 + 草酸亚铁 FeC₂O₄','溶解'],['氧化络合','加 H₂O₂（8mL）氧化 → K₃[Fe(C₂O₄)₃]','氧化'],['析晶','加乙醇降低溶解度','结晶'],['抽滤','布氏漏斗收集晶体','过滤'],['干燥','100℃ 失水 → 产物','干燥']];
+      steps=[['原料溶解','0.5mol/L 草酸 + 草酸亚铁，温热搅拌','溶解'],['氧化络合','40℃ 水浴逐滴加 H₂O₂(8mL)，过量煮沸除去','氧化'],['析晶','加乙醇降低溶解度，冰水冷却结晶','结晶'],['抽滤','布氏漏斗减压抽滤，少量多次乙醇洗涤','过滤'],['干燥','100℃ 失水，翠绿晶体，避光保存','干燥']];
     }
-    var bw=250,bh=56,gap=44,y0=16,x0=18;
+    var bw=280,bh=62,gap=46,y0=50,x0=20;
     var rows=[];
     for(var i=0;i<steps.length;i++){
       var st=steps[i];
-      var hl=(i===(steps.length>4?1:(steps.length-1)));
-      rows.push(buildFlowBoxEx(x0,y0+i*(bh+gap),bw,bh,i+1,st[0],st[1],st[2],i<steps.length-1,gap,hl));
+      rows.push(buildFlowBoxEx(x0,y0+i*(bh+gap),bw,bh,i+1,st[0],st[1],st[2],i<steps.length-1,gap,(i===1)));
     }
-    var W=bw+44, H=bh*steps.length+gap*(steps.length-1)+26;
-    return vizWrap(vizsvg(W,H,rows.join('')),'🖼 '+(escText(q||'反应流程')));
+    var W=bw+44, H=bh*steps.length+gap*(steps.length-1)+100;
+    var d='<text x="'+x0+'" y="30" font-size="13.5" style="fill:var(--t1,#f1f5f9)" font-weight="600">反应流程（'+steps.length+' 步）</text>'
+      +rows.join('')
+      +'<text x="'+x0+'" y="'+(H-38)+'" font-size="11" style="fill:var(--t2,#94a3b8)">备注：① 先沉淀 FeC₂O₄ 初步除杂 → ② 氧化调至 +3 价 → ③ 与草酸根配位成产物；产物 K₃[Fe(C₂O₄)₃]·3H₂O，翠绿色。</text>'
+      +'<text x="'+x0+'" y="'+(H-20)+'" font-size="11" style="fill:var(--t3,#64748b)">含 3 分子结晶水（约 11% 质量，见 TG-DSC）；见光易分解，应避光保存。</text>';
+    return vizWrap(vizsvg(W,H,d),'🖼 '+(escText(q||'反应流程')));
   }
   function buildFlowBox(x,y,w,h,n,label,arrow,gap){
-    return buildFlowBoxEx(x,y,w,h,n,label,'',arrow,gap,false);
+    return buildFlowBoxEx(x,y,w,h,n,label,'',label,arrow,gap,false);
   }
-  function buildFlowBoxEx(x,y,w,h,n,label,tag,arrow,gap,hl){
+  function buildFlowBoxEx(x,y,w,h,n,title,desc,tag,arrow,gap,hl){
     var grad=hl?'var(--em,#10b981)':'var(--card,#1a2235)';
     var stroke=hl?'rgba(16,185,129,.9)':'rgba(45,212,191,.35)';
     var s='<g>';
-    if(tag){ s+='<rect x="'+(x+w-74)+'" y="'+(y-10)+'" width="64" height="18" rx="9" fill="rgba(16,185,129,.16)"/>'
-      +'<text x="'+(x+w-42)+'" y="'+(y+3)+'" font-size="10.5" style="fill:var(--em,#10b981)" text-anchor="middle">'+escText(tag)+'</text>'; }
+    if(tag&&tag!==title){ s+='<rect x="'+(x+w-74)+'" y="'+(y-11)+'" width="64" height="18" rx="9" fill="rgba(16,185,129,.16)"/>'
+      +'<text x="'+(x+w-42)+'" y="'+(y+2)+'" font-size="10.5" style="fill:var(--em,#10b981)" text-anchor="middle">'+escText(tag)+'</text>'; }
     s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" style="fill:'+grad+';stroke:'+stroke+';stroke-width:1.5"/>'
-      +'<circle cx="'+(x+22)+'" cy="'+(y+h/2)+'" r="13" style="fill:rgba(45,212,191,.2);stroke:rgba(45,212,191,.5)"/>'
-      +'<text x="'+(x+22)+'" y="'+(y+h/2+5)+'" font-size="13" style="fill:#2dd4bf" text-anchor="middle">'+n+'</text>'
-      +'<text x="'+(x+44)+'" y="'+(y+h/2+2)+'" font-size="13" style="fill:var(--t1,#f1f5f9)">'+escText(label)+'</text>'
+      +'<circle cx="'+(x+26)+'" cy="'+(y+26)+'" r="14" style="fill:rgba(45,212,191,.2);stroke:rgba(45,212,191,.5)"/>'
+      +'<text x="'+(x+26)+'" y="'+(y+31)+'" font-size="13.5" style="fill:#2dd4bf" text-anchor="middle">'+n+'</text>'
+      +'<text x="'+(x+50)+'" y="'+(y+24)+'" font-size="13" font-weight="600" style="fill:var(--t1,#f1f5f9)">'+escText(title)+'</text>'
+      +'<text x="'+(x+50)+'" y="'+(y+47)+'" font-size="11" style="fill:var(--t2,#94a3b8)">'+escText(desc)+'</text>'
       +'</g>';
-    if(arrow){ s+='<line x1="'+(x+w/2)+'" y1="'+(y+h)+'" x2="'+(x+w/2)+'" y2="'+(y+h+gap)+'" stroke="rgba(96,165,250,.5)" stroke-width="2" stroke-dasharray="4 4"/>'
-      +'<path d="M '+(x+w/2-5)+' '+(y+h+gap-6)+' L '+(x+w/2)+' '+(y+h+gap)+' L '+(x+w/2+5)+' '+(y+h+gap-6)+'" fill="none" stroke="rgba(96,165,250,.6)" stroke-width="2"/>'; }
+    if(arrow){ s+='<line x1="'+(x+w/2)+'" y1="'+(y+h+4)+'" x2="'+(x+w/2)+'" y2="'+(y+h+gap-2)+'" stroke="rgba(96,165,250,.5)" stroke-width="2" stroke-dasharray="4 4"/>'
+      +'<path d="M '+(x+w/2-5)+' '+(y+h+gap-8)+' L '+(x+w/2)+' '+(y+h+gap-2)+' L '+(x+w/2+5)+' '+(y+h+gap-8)+'" fill="none" stroke="rgba(96,165,250,.6)" stroke-width="2"/>'; }
     return s;
   }
 
@@ -213,69 +217,87 @@
   function orbitalLine(x1,x2,y){ return '<line x1="'+x1+'" y1="'+y+'" x2="'+x2+'" y2="'+y+'" stroke="rgba(45,212,191,.55)" stroke-width="2" stroke-linecap="round"/>'; }
   function electronUp(x,y){ return '<text x="'+x+'" y="'+(y+5)+'" font-size="14" style="fill:var(--em,#10b981)" text-anchor="middle">↑</text>'; }
   function buildCrystalFieldViz(q){
-    var d='',W=600,H=252;
+    var d='',W=620,H=300;
     /* 左：自由离子 3d⁵ 简并 */
-    d+='<text x="135" y="64" font-size="13" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">自由离子 Fe³⁺（3d⁵）</text>';
-    d+='<line x1="55" y1="150" x2="215" y2="150" stroke="rgba(148,163,184,.7)" stroke-width="3" stroke-linecap="round"/>';
-    for(var i=0;i<5;i++){ var tx=68+i*31; d+='<line x1="'+tx+'" y1="144" x2="'+tx+'" y2="156" stroke="rgba(148,163,184,.5)" stroke-width="2"/>'; }
-    d+='<text x="135" y="176" font-size="12" style="fill:var(--t3,#64748b)" text-anchor="middle">5 × d（简并）</text>';
+    d+='<text x="120" y="56" font-size="13" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">自由离子 Fe³⁺（3d⁵）</text>';
+    d+='<line x1="48" y1="140" x2="196" y2="140" stroke="rgba(148,163,184,.7)" stroke-width="3" stroke-linecap="round"/>';
+    for(var i=0;i<5;i++){ var tx=60+i*30; d+='<line x1="'+tx+'" y1="134" x2="'+tx+'" y2="146" stroke="rgba(148,163,184,.5)" stroke-width="2"/>'; }
+    d+='<text x="120" y="166" font-size="12" style="fill:var(--t3,#64748b)" text-anchor="middle">5 × d 轨道（能量简并）</text>';
     /* 中：引入八面体场 */
-    d+='<line x1="228" y1="150" x2="316" y2="150" stroke="rgba(96,165,250,.7)" stroke-width="2"/>'
-      +'<path d="M 316 150 L 306 144 L 306 156 Z" fill="rgba(96,165,250,.8)"/>'
-      +'<text x="272" y="136" font-size="12" style="fill:var(--blue,#60a5fa)" text-anchor="middle">加入八面体场</text>';
+    d+='<line x1="206" y1="140" x2="300" y2="140" stroke="rgba(96,165,250,.7)" stroke-width="2"/>'
+      +'<path d="M 300 140 L 290 134 L 290 146 Z" fill="rgba(96,165,250,.8)"/>'
+      +'<text x="252" y="126" font-size="12" style="fill:var(--blue,#60a5fa)" text-anchor="middle">加入八面体场</text>';
     /* 右：eg（上2）+ t₂g（下3） */
-    d+='<text x="420" y="64" font-size="13" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">八面体场（草酸 / H₂O 弱场）</text>';
-    var egY=[92,116], tgY=[150,174,198];
-    for(var j=0;j<egY.length;j++){ d+=orbitalLine(350,470,egY[j]); }
-    for(var k=0;k<tgY.length;k++){ d+=orbitalLine(350,470,tgY[k]); }
-    d+='<text x="482" y="104" font-size="12" style="fill:var(--teal,#2dd4bf)">eg</text>';
-    d+='<text x="482" y="178" font-size="12" style="fill:var(--teal,#2dd4bf)">t₂g</text>';
+    d+='<text x="430" y="56" font-size="13" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">八面体场（草酸 / H₂O 弱场）</text>';
+    var egY=[94,118], tgY=[150,174,198];
+    for(var j=0;j<egY.length;j++){ d+=orbitalLine(352,478,egY[j]); }
+    for(var k=0;k<tgY.length;k++){ d+=orbitalLine(352,478,tgY[k]); }
+    d+='<text x="488" y="96" font-size="12.5" style="fill:var(--teal,#2dd4bf)">eg</text>'
+      +'<text x="488" y="182" font-size="12.5" style="fill:var(--teal,#2dd4bf)">t₂g</text>';
+    d+='<text x="488" y="118" font-size="10" style="fill:var(--t3,#64748b)">d_{x²−y²} / d_{z²}</text>'
+      +'<text x="488" y="204" font-size="10" style="fill:var(--t3,#64748b)">d_{xy} / d_{yz} / d_{xz}</text>';
     /* Δo 双向箭头 */
-    d+='<line x1="332" y1="120" x2="332" y2="148" stroke="var(--yellow,#fbbf24)" stroke-width="2"/>'
-      +'<path d="M 332 120 L 327 130 L 337 130 Z" fill="var(--yellow,#fbbf24)"/>'
-      +'<path d="M 332 148 L 327 138 L 337 138 Z" fill="var(--yellow,#fbbf24)"/>'
-      +'<text x="322" y="137" font-size="13" style="fill:var(--yellow,#fbbf24)" text-anchor="end">Δo</text>';
+    d+='<line x1="330" y1="122" x2="330" y2="148" stroke="var(--yellow,#fbbf24)" stroke-width="2"/>'
+      +'<path d="M 330 122 L 325 132 L 335 132 Z" fill="var(--yellow,#fbbf24)"/>'
+      +'<path d="M 330 148 L 325 138 L 335 138 Z" fill="var(--yellow,#fbbf24)"/>'
+      +'<text x="322" y="137" font-size="13" style="fill:var(--yellow,#fbbf24)" text-anchor="end">Δo = 10Dq</text>';
     /* 高自旋排布：t₂g³ eg²（5 单电子） */
-    electronUp(410,92); electronUp(410,116); electronUp(410,150); electronUp(410,174); electronUp(410,198);
-    d+='<text x="300" y="236" font-size="12" style="fill:var(--t2,#94a3b8)" text-anchor="middle">高自旋 d⁵：t₂g³ eg²（5 个单电子，磁矩≈5.92 BM）· 草酸/水为弱场，Δo 小 · CFSE=0</text>';
+    electronUp(404,94); electronUp(404,118); electronUp(404,150); electronUp(404,174); electronUp(404,198);
+    d+='<text x="120" y="216" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">Δo（弱场）&lt; P（成对能）→ 高自旋</text>'
+      +'<text x="120" y="234" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">排布 t₂g³ eg² · 未成对电子 = 5 · 无配位场稳定化能 CFSE = 0</text>';
+    d+='<text x="120" y="252" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">磁性：μ = √(5·7) ≈ 5.92 BM（顺磁）· 因为 Δo 小、电子难以成对</text>';
+    /* 光谱化学序列注记 */
+    d+='<rect x="308" y="242" width="298" height="44" rx="8" style="fill:var(--card,#1a2235);stroke:rgba(167,139,250,.35);stroke-width:1"/>'
+      +'<text x="318" y="258" font-size="11" style="fill:var(--purple,#a78bfa)">光谱化学序列（弱 → 强）：H₂O ≤ C₂O₄²⁻ &lt; NH₃ &lt; en &lt; CN⁻</text>'
+      +'<text x="318" y="275" font-size="10.5" style="fill:var(--t3,#64748b)">草酸/水处弱场端 → Δo 小于成对能 P → 低自旋轨道分裂但电子不配对 → 高自旋 d⁵</text>';
     return vizWrap(vizsvg(W,H,d),'🖼 '+(escText(q||'晶体场能级分裂')));
   }
 
   /* ---- 抽滤装置示意 ---- */
   function buildApparatusViz(q){
-    var d='',W=480,H=318;
+    var d='',W=520,H=360;
     /* 台面 */
-    d+='<line x1="16" y1="252" x2="464" y2="252" stroke="rgba(148,163,184,.45)" stroke-width="3"/>';
+    d+='<line x1="16" y1="286" x2="504" y2="286" stroke="rgba(148,163,184,.45)" stroke-width="3"/>';
+    /* 铁架台（竖杆 + 铁圈夹持漏斗，标注清晰） */
+    d+='<line x1="60" y1="286" x2="60" y2="46" stroke="rgba(148,163,184,.75)" stroke-width="6"/>'
+      +'<line x1="60" y1="52" x2="150" y2="52" stroke="rgba(148,163,184,.7)" stroke-width="5"/>'
+      +'<circle cx="60" cy="286" r="13" fill="rgba(148,163,184,.2)" stroke="rgba(148,163,184,.7)" stroke-width="2"/>';
+    d+='<text x="60" y="308" font-size="11" style="fill:var(--t2,#94a3b8)" text-anchor="middle">铁架台</text>';
     /* 布氏漏斗 + 滤纸 */
-    d+='<path d="M 92 34 L 208 34 L 192 92 L 108 92 Z" fill="rgba(96,165,250,.12)" stroke="rgba(96,165,250,.7)" stroke-width="2"/>';
-    d+='<line x1="108" y1="92" x2="192" y2="92" stroke="rgba(45,212,191,.7)" stroke-width="2"/>';
-    d+='<path d="M 116 92 L 184 92 L 172 150 L 128 150 Z" fill="rgba(96,165,250,.08)" stroke="rgba(96,165,250,.7)" stroke-width="2"/>';
-    d+='<text x="150" y="24" font-size="12" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">布氏漏斗</text>';
-    d+='<text x="150" y="106" font-size="10.5" style="fill:var(--teal,#2dd4bf)" text-anchor="middle">滤纸</text>';
+    d+='<path d="M 104 46 L 220 46 L 204 104 L 120 104 Z" fill="rgba(96,165,250,.12)" stroke="rgba(96,165,250,.7)" stroke-width="2"/>';
+    d+='<line x1="120" y1="104" x2="204" y2="104" stroke="rgba(45,212,191,.7)" stroke-width="2"/>';
+    d+='<path d="M 128 104 L 196 104 L 184 162 L 140 162 Z" fill="rgba(96,165,250,.08)" stroke="rgba(96,165,250,.7)" stroke-width="2"/>';
+    d+='<text x="162" y="36" font-size="12" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">布氏漏斗</text>';
+    d+='<text x="150" y="118" font-size="10.5" style="fill:var(--teal,#2dd4bf)" text-anchor="middle">滤纸</text>';
     /* 抽滤瓶 */
-    d+='<path d="M 150 150 L 84 250 L 216 250 Z" fill="rgba(45,212,191,.1)" stroke="rgba(45,212,191,.65)" stroke-width="2"/>';
-    d+='<rect x="204" y="188" width="46" height="18" rx="4" fill="rgba(45,212,191,.1)" stroke="rgba(45,212,191,.65)" stroke-width="2"/>';
-    d+='<text x="150" y="270" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">抽滤瓶（承接滤液）</text>';
+    d+='<path d="M 162 162 L 96 262 L 228 262 Z" fill="rgba(45,212,191,.1)" stroke="rgba(45,212,191,.65)" stroke-width="2"/>';
+    d+='<rect x="216" y="200" width="48" height="18" rx="4" fill="rgba(45,212,191,.1)" stroke="rgba(45,212,191,.65)" stroke-width="2"/>';
+    d+='<text x="162" y="282" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">抽滤瓶（滤液承接）</text>';
     /* 胶管 */
-    d+='<path d="M 250 197 q 14 -10 28 0 q 14 10 28 0 q 14 -10 28 0" fill="none" stroke="rgba(167,139,250,.75)" stroke-width="3"/>';
-    d+='<text x="296" y="180" font-size="11.5" style="fill:var(--purple,#a78bfa)" text-anchor="middle">胶管</text>';
+    d+='<path d="M 264 209 q 12 -9 24 0 q 12 9 24 0 q 12 -9 24 0" fill="none" stroke="rgba(167,139,250,.75)" stroke-width="3"/>';
+    d+='<text x="304" y="192" font-size="11.5" style="fill:var(--purple,#a78bfa)" text-anchor="middle">胶管</text>';
     /* 真空泵 */
-    d+='<rect x="348" y="168" width="92" height="66" rx="10" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.7)" stroke-width="2"/>';
-    d+='<circle cx="394" cy="200" r="12" fill="rgba(167,139,250,.25)" stroke="rgba(167,139,250,.8)" stroke-width="2"/>';
-    d+='<text x="394" y="158" font-size="11.5" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">真空泵/水流泵</text>';
+    d+='<rect x="360" y="180" width="96" height="70" rx="10" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.7)" stroke-width="2"/>';
+    d+='<circle cx="408" cy="212" r="12" fill="rgba(167,139,250,.25)" stroke="rgba(167,139,250,.8)" stroke-width="2"/>';
+    d+='<text x="408" y="168" font-size="11.5" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">真空泵/水流泵</text>';
     /* 抽真空方向 */
-    d+='<line x1="330" y1="197" x2="348" y2="197" stroke="rgba(244,113,113,.8)" stroke-width="2" stroke-dasharray="5 4"/>'
-      +'<path d="M 348 197 L 339 191 L 339 203 Z" fill="rgba(244,113,113,.85)"/>';
-    d+='<text x="288" y="222" font-size="11" style="fill:var(--red,#f87171)" text-anchor="middle">抽真空</text>';
-    /* 说明 */
-    d+='<text x="240" y="290" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">装置：布氏漏斗 + 抽滤瓶 + 胶管 + 真空泵（减压抽滤）</text>';
-    d+='<text x="240" y="308" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">⚠ 抽滤瓶用铁架固定；先停泵、再拔开胶管放气，防倒吸。</text>';
+    d+='<line x1="340" y1="209" x2="360" y2="209" stroke="rgba(244,113,113,.8)" stroke-width="2" stroke-dasharray="5 4"/>'
+      +'<path d="M 360 209 L 351 203 L 351 215 Z" fill="rgba(244,113,113,.85)"/>';
+    d+='<text x="348" y="236" font-size="11" style="fill:var(--red,#f87171)" text-anchor="middle">抽真空</text>';
+    /* 操作与安全要点卡 */
+    d+='<rect x="340" y="304" width="166" height="50" rx="8" style="fill:var(--card,#1a2235);stroke:rgba(244,113,113,.35);stroke-width:1"/>'
+      +'<text x="350" y="320" font-size="10.5" style="fill:var(--red,#f87171)">⚠ 操作要点</text>'
+      +'<text x="350" y="336" font-size="10" style="fill:var(--t2,#94a3b8)">① 滤纸叠菊花形/圆锥并润湿贴合</text>'
+      +'<text x="350" y="349" font-size="10" style="fill:var(--t2,#94a3b8)">② 抽滤瓶铁架固定 · 先停泵、再拔管防倒吸</text>';
+    /* 底部说明 */
+    d+='<text x="20" y="326" font-size="11.5" style="fill:var(--t2,#94a3b8)">装置：铁架台 + 布氏漏斗（滤纸）+ 抽滤瓶 + 胶管 + 真空泵</text>';
+    d+='<text x="20" y="342" font-size="11" style="fill:var(--t3,#64748b)">真空度要稳：先开泵、再倒料；勿中途关泵倒吸，应从漏斗口离开并拔胶管放气。</text>';
     return vizWrap(vizsvg(W,H,d),'🧪 '+(escText(q||'抽滤装置示意')));
   }
 
   /* ---- TG-DSC 组合热分析（示意曲线，非双轴混标） ---- */
   function buildThermalViz(q){
-    var d='',W=560,H=300;
+    var d='',W=560,H=376;
     var xL=80,xR=520, tgTop=38,tgBot=128, dscTop=168,dscBot=252;
     function tX(T){ return xL+(xR-xL)*(T/400); }
     function yTg(m){ return tgTop+(100-m)/100*(tgBot-tgTop); }
@@ -307,16 +329,22 @@
     d+='<text x="'+(xL-6)+'" y="'+(dscBot+18)+'" font-size="10.5" style="fill:var(--t3,#64748b)" text-anchor="middle">0</text>';
     d+='<text x="'+(xL+(xR-xL)/2)+'" y="'+(dscBot+34)+'" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">温度 / ℃</text>';
     /* 图例 */
-    d+='<text x="'+xL+'" y="'+(H-6)+'" font-size="11" style="fill:var(--t2,#94a3b8)">—— 绿：TG 质量保留率</text>';
-    d+='<circle cx="'+(xL+200)+'" cy="'+(H-11)+'" r="4" fill="var(--red,#f87171)"/><text x="'+(xL+210)+'" y="'+(H-6)+'" font-size="11" style="fill:var(--t2,#94a3b8)">吸热峰</text>';
-    d+='<circle cx="'+(xL+300)+'" cy="'+(H-11)+'" r="4" fill="var(--yellow,#fbbf24)"/><text x="'+(xL+310)+'" y="'+(H-6)+'" font-size="11" style="fill:var(--t2,#94a3b8)">放热峰</text>';
+    d+='<text x="'+xL+'" y="'+(H-86)+'" font-size="11" style="fill:var(--t2,#94a3b8)">—— 绿：TG 质量保留率</text>';
+    d+='<circle cx="'+(xL+200)+'" cy="'+(H-91)+'" r="4" fill="var(--red,#f87171)"/><text x="'+(xL+210)+'" y="'+(H-86)+'" font-size="11" style="fill:var(--t2,#94a3b8)">吸热峰</text>';
+    d+='<circle cx="'+(xL+300)+'" cy="'+(H-91)+'" r="4" fill="var(--yellow,#fbbf24)"/><text x="'+(xL+310)+'" y="'+(H-86)+'" font-size="11" style="fill:var(--t2,#94a3b8)">放热峰</text>';
+    /* 分步反应注解 */
+    d+='<rect x="'+xL+'" y="'+(H-76)+'" width="'+(xR-xL)+'" height="26" rx="6" style="fill:rgba(45,212,191,.06);stroke:rgba(45,212,191,.3);stroke-width:1"/>'
+      +'<text x="'+(xL+10)+'" y="'+(H-59)+'" font-size="10.5" style="fill:var(--em,#10b981)">① ~100℃　K₃[Fe(C₂O₄)₃]·3H₂O → K₃[Fe(C₂O₄)₃] + 3H₂O↑（Δm≈54/491≈11%，吸热）</text>';
+    d+='<rect x="'+xL+'" y="'+(H-46)+'" width="'+(xR-xL)+'" height="26" rx="6" style="fill:rgba(244,113,113,.06);stroke:rgba(244,113,113,.3);stroke-width:1"/>'
+      +'<text x="'+(xL+10)+'" y="'+(H-29)+'" font-size="10.5" style="fill:var(--red,#f87171)">② ~300℃　草酸根分解放出 CO/CO₂↑，残余 Fe₂O₃ + K₂CO₃（放热）</text>';
+    d+='<text x="'+xL+'" y="'+(H-10)+'" font-size="10.5" style="fill:var(--t3,#64748b)">气氛：N₂ 保护或静态空气 · 升温约 10℃/min · 用失重量可反推结晶水个数（3 个）</text>';
     return vizWrap(vizsvg(W,H,d),'🔥 '+(escText(q||'TG-DSC 热分析')));
   }
   function markerRect(x,y,color){ return '<rect x="'+(x-4)+'" y="'+(y-4)+'" width="8" height="8" fill="'+color+'"/>'; }
 
   /* ---- 配合物立体结构：八面体 + 3×双齿草酸根螯合 ---- */
   function buildComplexViz(q){
-    var W=520,H=316,cx=260,cy=150,R=90,d='',O=[];
+    var W=520,H=344,cx=260,cy=150,R=90,d='',O=[];
     for(var k=0;k<6;k++){ var a=-90+k*60, x=cx+R*Math.cos(a*Math.PI/180), y=cy+R*Math.sin(a*Math.PI/180); O.push({x:x,y:y}); }
     for(var i=0;i<6;i++){ d+='<line x1="'+cx+'" y1="'+cy+'" x2="'+O[i].x+'" y2="'+O[i].y+'" stroke="rgba(45,212,191,.5)" stroke-width="2"/>'; }
     var pairs=[[0,1],[2,3],[4,5]];
@@ -329,7 +357,7 @@
       /* 两个碳原子沿法向外推，桥接双齿 O（五元螯合环 Fe-O-C-C-O） */
       var c2x=mx+nx*34-dx*0.05, c2y=my+ny*34-dy*0.05;
       d+='<path d="M '+A.x+' '+A.y+' L '+c1x+' '+c1y+' L '+c2x+' '+c2y+' L '+B.x+' '+B.y+'" fill="none" stroke="rgba(167,139,250,.75)" stroke-width="2.5"/>';
-      var lx=mx+nx*50, ly=my+ny*50;
+      var lx=mx+nx*54, ly=my+ny*54;
       d+='<text x="'+lx+'" y="'+ly+'" font-size="11" style="fill:var(--purple,#a78bfa)" text-anchor="middle">C₂O₄²⁻</text>';
     }
     d+='<circle cx="'+cx+'" cy="'+cy+'" r="22" fill="var(--em,#10b981)" stroke="var(--t1,#f1f5f9)" stroke-width="2"/>'
@@ -337,8 +365,9 @@
     for(var o=0;o<6;o++){ d+='<circle cx="'+O[o].x+'" cy="'+O[o].y+'" r="10" style="fill:rgba(45,212,191,.25);stroke:rgba(45,212,191,.7);stroke-width:1.5"/>'
       +'<text x="'+O[o].x+'" y="'+(O[o].y+4)+'" font-size="10.5" style="fill:var(--teal,#2dd4bf)" text-anchor="middle">O</text>'; }
     d+='<text x="'+cx+'" y="28" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">[Fe(C₂O₄)₃]³⁻ · 八面体配位</text>';
-    d+='<text x="'+cx+'" y="296" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">Fe³⁺ 配位数 6 = 3 × 双齿 C₂O₄²⁻（每个提供 2 个 O 配位）· 各成五元螯合环 · 空间呈八面体</text>';
-    d+='<text x="'+cx+'" y="312" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">配体草酸/水为弱场 → 该配合物为高自旋（见晶体场图）· 可拆分出 Δ/Λ 对映体（见手性图）</text>';
+    d+='<text x="'+cx+'" y="302" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">配位数 6 = 3 × 双齿 C₂O₄²⁻（每个配体贡献 2 个 O 配位原子）· 各成五元螯合环</text>';
+    d+='<text x="'+cx+'" y="318" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">正八面体：相邻 O-Fe-O 约 90°、对位 180° · 草酸/水弱场 → 高自旋 d⁵ → 磁矩≈5.92 BM</text>';
+    d+='<text x="'+cx+'" y="334" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">可拆分 Δ / Λ 手性对映体（见手性图）· 产物 K₃[Fe(C₂O₄)₃]·3H₂O 翠绿、见光易分解</text>';
     return vizWrap(vizsvg(W,H,d),'🧬 '+(escText(q||'配合物立体结构')));
   }
 
@@ -374,7 +403,7 @@
 
   /* ---- KMnO₄ 滴定草酸根：S 形滴定曲线 ---- */
   function buildTitrationViz(q){
-    var W=560,H=330,xL=92,xR=512,yT=48,yB=244,d='';
+    var W=560,H=352,xL=92,xR=512,yT=48,yB=244,d='';
     function xV(v){ return xL+(xR-xL)*(v/24); }
     function yE(e){ return yB-(e-0.4)/(1.6-0.4)*(yB-yT); }
     d+='<line x1="'+xL+'" y1="'+yB+'" x2="'+xR+'" y2="'+yB+'" stroke="rgba(148,163,184,.5)" stroke-width="2"/>';
@@ -389,43 +418,52 @@
       +'<text x="'+(ve+8)+'" y="'+(yB-8)+'" font-size="11" style="fill:var(--red,#f87171)">计量点 Ve（紫红色突跃）</text>';
     d+='<text x="'+xL+'" y="'+(yT+2)+'" font-size="11.5" style="fill:var(--t2,#94a3b8)">2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂↑ + 8H₂O</text>';
     d+='<text x="'+xL+'" y="'+(yT+20)+'" font-size="11" style="fill:var(--t2,#94a3b8)">KMnO₄ 自指示：终点后微量过量即显紫红色且不褪</text>';
-    d+='<text x="'+xL+'" y="'+(yB+14)+'" font-size="11" style="fill:var(--t3,#64748b)">滴定体积 0 →（计量点）突跃</text>';
+    d+='<text x="'+xL+'" y="'+(yB+14)+'" font-size="11" style="fill:var(--t3,#64748b)">滴定体积 0 →（计量点）紫红突跃</text>';
     d+='<text x="'+xL+'" y="'+(yB+42)+'" font-size="11" style="fill:var(--t3,#64748b)">用于标定铁/草酸根含量，反推配位比 Fe : C₂O₄²⁻ = 1 : 3</text>';
+    /* 计量关系卡 */
+    d+='<rect x="'+xL+'" y="'+(yB+54)+'" width="'+(xR-xL)+'" height="24" rx="6" style="fill:rgba(16,185,129,.06);stroke:rgba(16,185,129,.3);stroke-width:1"/>'
+      +'<text x="'+(xL+10)+'" y="'+(yB+70)+'" font-size="10.5" style="fill:var(--em,#10b981)">计量关系　n(C₂O₄²⁻) : n(MnO₄⁻) = 5 : 2　（由 2MnO₄⁻+5C₂O₄²⁻+16H⁺ 反应式）</text>';
+    /* 条件卡 */
+    d+='<rect x="'+xL+'" y="'+(yB+82)+'" width="'+(xR-xL)+'" height="24" rx="6" style="fill:rgba(96,165,250,.06);stroke:rgba(96,165,250,.3);stroke-width:1"/>'
+      +'<text x="'+(xL+10)+'" y="'+(yB+98)+'" font-size="10.5" style="fill:var(--blue,#60a5fa)">条件　75~85℃ 强酸（H₂SO₄）介质 · KMnO₄ 自指示 · 无色 Mn²⁺ → 微过量显紫红</text>';
     return vizWrap(vizsvg(W,H,d),'🧪 '+(escText(q||'滴定曲线')));
   }
 
   /* ---- 氧化还原电对：E° 一览 ---- */
   function buildRedoxViz(q){
-    var W=560,H=286,d='';
-    var rows=[["MnO₄⁻/Mn²⁺","+1.51 V","MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O（很强氧化剂）","var(--purple,#a78bfa)"],["Fe³⁺/Fe²⁺","+0.77 V","Fe³⁺ + e⁻ → Fe²⁺（本实验铁以三价存在）","var(--em,#10b981)"],["C₂O₄²⁻/CO₂","-0.49 V","C₂O₄²⁻ → 2CO₂ + 2H⁺ + 2e⁻（草酸根作还原剂）","var(--red,#f87171)"]];
+    var W=560,H=336,d='';
+    var rows=[["H₂O₂/H₂O","+1.77 V","H₂O₂ + 2H⁺ + 2e⁻ → 2H₂O（本实验氧化剂，绿色）","var(--purple,#a78bfa)"],["MnO₄⁻/Mn²⁺","+1.51 V","MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O（很强氧化剂）","var(--teal,#2dd4bf)"],["Fe³⁺/Fe²⁺","+0.77 V","Fe³⁺ + e⁻ → Fe²⁺（本实验铁以 +3 价存在）","var(--em,#10b981)"],["C₂O₄²⁻/CO₂","-0.49 V","C₂O₄²⁻ → 2CO₂ + 2H⁺ + 2e⁻（草酸根作还原剂）","var(--red,#f87171)"]];
     d+='<text x="'+W/2+'" y="24" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">关键氧化还原电对（E° / V，相对标准氢电极）</text>';
     for(var i=0;i<rows.length;i++){
-      var y0=46+i*64, r=rows[i];
-      d+='<rect x="40" y="'+y0+'" width="480" height="54" rx="10" style="fill:var(--card,#1a2235);stroke:rgba(148,163,184,.25);stroke-width:1"/>';
-      d+='<circle cx="64" cy="'+(y0+27)+'" r="6" fill="'+r[3]+'"/>';
-      d+='<text x="80" y="'+(y0+24)+'" font-size="13" style="fill:var(--t1,#f1f5f9)">'+escText(r[0])+'</text>';
-      d+='<text x="80" y="'+(y0+42)+'" font-size="10.5" style="fill:var(--t3,#64748b)">'+escText(r[2])+'</text>';
-      d+='<text x="500" y="'+(y0+31)+'" font-size="14" style="fill:'+r[3]+'" text-anchor="end" font-weight="bold">'+escText(r[1])+'</text>';
+      var y0=44+i*60, r=rows[i];
+      d+='<rect x="40" y="'+y0+'" width="480" height="50" rx="10" style="fill:var(--card,#1a2235);stroke:rgba(148,163,184,.25);stroke-width:1"/>';
+      d+='<circle cx="64" cy="'+(y0+25)+'" r="6" fill="'+r[3]+'"/>';
+      d+='<text x="80" y="'+(y0+22)+'" font-size="13" style="fill:var(--t1,#f1f5f9)">'+escText(r[0])+'</text>';
+      d+='<text x="80" y="'+(y0+40)+'" font-size="10.5" style="fill:var(--t3,#64748b)">'+escText(r[2])+'</text>';
+      d+='<text x="500" y="'+(y0+29)+'" font-size="14" style="fill:'+r[3]+'" text-anchor="end" font-weight="bold">'+escText(r[1])+'</text>';
     }
-    d+='<text x="'+W/2+'" y="'+(H-10)+'" font-size="11.5" style="fill:var(--t2,#94a3b8)" text-anchor="middle">ΔE°＞0 → H₂O₂（与 H₂O 电对 E°≈+1.77 V）足以把 Fe²⁺ 氧化为 Fe³⁺</text>';
+    /* ΔE° 自发判定 */
+    d+='<rect x="40" y="'+(44+4*60+8)+'" width="480" height="44" rx="8" style="fill:rgba(16,185,129,.06);stroke:rgba(16,185,129,.35);stroke-width:1"/>'
+      +'<text x="52" y="'+(44+4*60+24)+'" font-size="11.5" style="fill:var(--em,#10b981)">自发判定：E°(H₂O₂/H₂O) − E°(Fe³⁺/Fe²⁺) = 1.77 − 0.77 = <b>+1.00 V</b> ＞ 0</text>'
+      +'<text x="52" y="'+(44+4*60+41)+'" font-size="10.5" style="fill:var(--t2,#94a3b8)">→ H₂O₂ 足以把 Fe²⁺ 氧化为 Fe³⁺；草酸根（-0.49 V）作还原剂，与高锰酸钾之间 ΔE°≈2.0 V 也易于反应</text>';
     return vizWrap(vizsvg(W,H,d),'⚡ '+(escText(q||'氧化还原电位')));
   }
 
   /* ---- 实验安全要点 ---- */
   function buildSafetyViz(q){
-    var W=560,H=304,d='';
-    var tiles=[["护目镜","戴护目镜 · 通风橱内操作",'⚠'],["手套","防 H₂O₂ / 酸腐蚀，戴手套",'🧤'],["远离火源","析晶用乙醇易挥发易燃",'🔥'],["H₂O₂ 强氧化","勿接触皮肤，溅到即冲水",'🌀'],["加热安全","水浴/石棉网隔热，勿徒手",'♨'],["意外处理","酸 / H₂O₂ 溅淋 → 大量清水冲洗",'💧']];
-    var cols=3, tw=170, th=70, gx=22, gy=62, gap=12;
+    var W=560,H=232,d='';
+    var tiles=[["护目镜","戴护目镜 · 通风橱内操作","⚠"],["手套","防 H₂O₂ / 酸腐蚀，戴手套","🧤"],["远离火源","乙醇易挥发易燃，禁明火","🔥"],["H₂O₂ 强氧化","勿接触皮肤，溅到即冲水","🌀"],["加热安全","水浴/石棉网隔热，勿徒手","♨"],["意外处理","酸 / H₂O₂ 溅淋 → 清水冲洗","💧"],["废液回收","含草酸/铁废液分类回收","🗑"],["避光保存","产物见光易分解，密封避光","🌑"]];
+    var cols=4, tw=126, th=64, gx=20, gy=52, gap=10;
     for(var i=0;i<tiles.length;i++){
       var cx=gx+(i%cols)*(tw+gap), cy=gy+Math.floor(i/cols)*(th+gap);
       var col=['var(--yellow,#fbbf24)','var(--red,#f87171)','var(--blue,#60a5fa)'][i%3];
       d+='<rect x="'+cx+'" y="'+cy+'" width="'+tw+'" height="'+th+'" rx="10" style="fill:var(--card,#1a2235);stroke:'+col+';stroke-width:1.5"/>';
-      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+24)+'" font-size="15" text-anchor="middle">'+tiles[i][2]+'</text>';
-      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+44)+'" font-size="12" style="fill:var(--t1,#f1f5f9)" text-anchor="middle" font-weight="bold">'+escText(tiles[i][0])+'</text>';
-      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+60)+'" font-size="10" style="fill:var(--t2,#94a3b8)" text-anchor="middle">'+escText(tiles[i][1])+'</text>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+22)+'" font-size="15" text-anchor="middle">'+tiles[i][2]+'</text>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+40)+'" font-size="12" style="fill:var(--t1,#f1f5f9)" text-anchor="middle" font-weight="bold">'+escText(tiles[i][0])+'</text>';
+      d+='<text x="'+(cx+tw/2)+'" y="'+(cy+56)+'" font-size="10" style="fill:var(--t2,#94a3b8)" text-anchor="middle">'+escText(tiles[i][1])+'</text>';
     }
-    d+='<text x="'+W/2+'" y="38" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">⚠ 三草酸合铁酸钾制备实验 · 安全要点</text>';
-    d+='<text x="'+W/2+'" y="'+(H-8)+'" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">非化学专业：涉及酸碱、氧化剂与易燃溶剂，请先咨询老师再动手。</text>';
+    d+='<text x="'+W/2+'" y="34" font-size="14" style="fill:var(--t1,#f1f5f9)" text-anchor="middle">⚠ 三草酸合铁酸钾制备实验 · 安全要点</text>';
+    d+='<text x="'+W/2+'" y="'+((H-14))+'" font-size="11" style="fill:var(--t3,#64748b)" text-anchor="middle">涉及酸碱、强氧化剂与易燃溶剂，请先咨询老师再动手 · 实验台整洁、废液妥善分类回收</text>';
     return vizWrap(vizsvg(W,H,d),'🛡 '+(escText(q||'实验安全')));
   }
 

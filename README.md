@@ -1,7 +1,7 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://k3fec2o43.clawdbot.ggff.net/)
-[![Version](https://img.shields.io/badge/version-v72.1-blue)](https://github.com/LittleAlety/chemai-8.23-)
+[![Version](https://img.shields.io/badge/version-v73-blue)](https://github.com/LittleAlety/chemai-8.23-)
 [![FAQ](https://img.shields.io/badge/FAQ-3102条-green)](https://github.com/LittleAlety/chemai-8.23-)
 [![Corpus](https://img.shields.io/badge/语料库-445篇-orange)](https://github.com/LittleAlety/chemai-8.23-)
 [![KG](https://img.shields.io/badge/知识图谱-123节点-blueviolet)](https://github.com/LittleAlety/chemai-8.23-)
@@ -181,12 +181,13 @@ npx serve .                     # Node.js
 
 ## 版本历史
 
-> 版本线 v30 → v72.1（2026-07 至 2026-08-25）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
+> 版本线 v30 → v73（2026-07 至 2026-08-25）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
 
-### 近期（v56 → v72.1）
+### 近期（v56 → v73）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v73** | 08-25 | **FAQ 答非所问内容轮**（纯 `data/faq_runtime.js` 数据修复，多 agent-loop 两轮 21 对抗题→真实 `matchFAQ`→判分→修数据，**21 题全命中**；代码零改、不涉 matchFAQ 两副本同步）：① **数值/错记纠偏**——莫尔盐称 **5.0g**(笔记误记 1.5)→本实验称取莫尔盐的质量、H₂O₂ **8mL**(误记 12)→6%H2O2 8mL具体用量、双氧水 **6%**(当 30%)→过氧化氢浓度规格、草酸 **0.5mol/L**(当 0.05)→配位用草酸浓度；② **跨实验/机理-vs-操作**——制备摩尔盐保持酸性+铁屑过量→制备硫酸亚铁铵时为什么要保持溶液酸性(先前被「稳A对比」掠走)、加双氧水为什么逐滴+搅拌→为何逐滴加入过氧化氢(先前被「草酸为何逐滴加入」掠走)；③ **错配合物**——三草酸合锰酸钾草酸根含量测定→三草酸合锰(III)酸钾(先前被铁 KMnO₄ 滴定掠走)；④ **trim 裸键治 title-topical 磁吸**——删「草酸为何逐滴加入」裸动词键(全倒进去/一口气/倒进去)、删「自催化化学发光/经典动力学」裸`高锰酸钾`键→`能换成高锰酸钾吗加多少`恢复→用H2O2不用KMnO4；⑤ **答案补句**——莫尔盐摩尔质量补「含6个结晶水(·6H₂O)」。✅ 23 题关键回归 0 劫持(「双氧水多少毫升」→8mL、critical「为什么用100度烘干」仍→100℃失水)、check-all 全绿(3102 条 0 问题段)、verify-lecture-facts 权威层干净(110℃/30% 均以讲义为准)；⚠ 遗留「X带几个结晶水」含多词时被 理论产量6.26g(标题topical+5) 压过——score 层标题优势，未动 |
 | **v72.1** | 08-25 | **assistant 可视化再扩展 + 答非所问根治 + MSDS 查询网 + 化学实体特异性**：① 可视化扩至 **10 类富模板**（`detectVizType` 从特异到通用分派 isomer→crystal→complex→apparatus→thermal→titration→redox→safety→kg→flow）+ **双路径出图**（调用点从 `!usedLLM` 块内移到 if/else 后共享区，配 DeepSeek Key 的 LLM 流式与本地打字机**都出图**）；修复流程图 `H` 未声明回归（生产里一直是"想可视化？"兜底文案而非真图）；② **答非所问根治**：`matchFAQ` `norm` **温度归一化**（`℃/摄氏度/°c`→`度`，修复「110度」错配「d5构型CFSE」）+ **疑问词泛词化**（为什么/如何/怎么…入 GENERIC_KEYS，离线误中 5→2）+ `bestOnTopicFAQ` 宽松兜底 + `onTopic` 域内门控（彻底无内容→明确"与实验无关"拒答）；③ **MSDS 查询网**：ChemicalBook 检索不到过氧化氢，`msdsCardHTML` 前置 **somsds.com**「MSDS查询网」链接；④ **detectChems 特异性**：CHEM_DB 补草酸钾/草酸亚铁独立条目，消「草酸钾」误报为「草酸」、`K2C2O4` 漏检；⑤ pipeline(`local_answer.js`) 同步。**核心内容 64/64 命中、离线误中 5→2** |
 | **v72** | 08-25 | **assistant 可视化增强**：5 类富模板（分支流程图 / 八面体晶体场 d⁵ / 抽滤装置 / TG-DSC / 知识图谱）+ 双路径出图 + `.visual` 响应式（overflow-x + svg width:100%）；**LLM 路径身份镜头统一**（teacherBar + role 前缀注入流式回答，非化学包白话版） |
 | **v71.1** | 08-23 | **assistant 体验打磨 + FAQ 鉴别力路由修复**：鉴别力路由修复 **R2–R10** + 复杂/难题鉴别力修复 **R11–R15（86 题 100%）** |

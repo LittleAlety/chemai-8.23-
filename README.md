@@ -1,7 +1,7 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://k3fec2o43.clawdbot.ggff.net/)
-[![Version](https://img.shields.io/badge/version-v71-blue)](https://github.com/LittleAlety/chemai-8.23-)
+[![Version](https://img.shields.io/badge/version-v72.1-blue)](https://github.com/LittleAlety/chemai-8.23-)
 [![FAQ](https://img.shields.io/badge/FAQ-3102条-green)](https://github.com/LittleAlety/chemai-8.23-)
 [![Corpus](https://img.shields.io/badge/语料库-445篇-orange)](https://github.com/LittleAlety/chemai-8.23-)
 [![KG](https://img.shields.io/badge/知识图谱-123节点-blueviolet)](https://github.com/LittleAlety/chemai-8.23-)
@@ -9,7 +9,7 @@
 
 **ChemAI** 是面向大学化学实验教学的 AI 智能平台，以 **三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O** 制备实验为核心，集成 **LLM-RAG 智能问答、智能体集群、知识图谱可视化、语料库文献检索、掌握度自适应测评、科普探索、本地教学视频、深度问题自学习迭代**等功能。
 
-自 v56 起，AI 助手支持 **「💬 正常 / 🧠 集群」双模式**：正常模式为快速本地答案；集群模式由 5 个智能体（检索官 / 推理官 / 网页研究员 / 编辑官 / 质检官）协作，可在站内题库、PubChem、维基百科、Bing 等来源间**按需联网检索**，并对网页资料与实验讲义做**权威冲突校验**。平台内置 **4 部本地录制教学视频**（制备 / 性质 / 配离子电荷）、**白天 / 夜晚双主题**（导航栏 🌓 一键切换，自动记忆偏好）与面向非化学专业的 **科普探索页**，构建"图文 + 视频 + AI 问答"三位一体的学习闭环。
+自 v69 起，AI 助手完成**模型化改造**，输入框上方以 **6 个工作模式 chips** 自由切换：💬 **学习问答**（快速本地答案）/ 🧠 **深度求解**（计划+集群联网）/ 📝 **智能测验**（掌握度测评）/ 🌐 **深度研究**（强制联网检索，多源权威校验）/ 📊 **可视化**（10 类富模板图）/ 🎯 **精通之路**（SM-2 间隔复习 + 学习画像）。集群模式由 5 个智能体（检索官 / 推理官 / 网页研究员 / 编辑官 / 质检官）协作，可在站内题库、PubChem、维基百科、Bing 等来源间**按需联网检索**，并对网页资料与实验讲义做**权威冲突校验**。平台内置 **4 部本地录制教学视频**（制备 / 性质 / 配离子电荷）、**白天 / 夜晚双主题**（导航栏 🌓 一键切换，自动记忆偏好）、面向非化学专业的 **科普探索页** 与 **教师命题大板块**，构建"图文 + 视频 + AI 问答 + 测评"四位一体的学习闭环。FAQ 检索历经 **R2–R15 鉴别力路由修复**（复杂/难题 86 题 100%）与**答非所问根治**，搭配 **MSDS 查询网** 与化学实体特异性识别，确保重要内容不答非所问。
 
 ---
 
@@ -17,9 +17,10 @@
 
 | 页面 | 文件 | 说明 |
 |------|------|------|
-| **首页入口** | `index.html` | React SPA 首页，身份选择（非化学专业 / 化学专业 / 教师），含 LLM 配置面板；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
-| **AI 助手** | `assistant.html` | **正常/集群双模式**；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3102 条 FAQ**（运行时 `data/faq_runtime.js`）；**5-agent 集群工作台**（集群模式：检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；对话**按身份切换语言风格**（v65）；10 KP 掌握度自适应测评；三维度雷达图 + 学习建议；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
-| **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染 |
+| **首页入口** | `index.html` | React SPA 首页，**命名路由**（`#/assistant`、`#/videos`…）才接管、裸 `#/` 回落地页；身份选择（非化学专业 / 化学专业 / **教师**），含 LLM 配置面板；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
+| **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3102 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
+| **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染；教师快捷入口已加 **genCard（智能命题·教师门控）**，模块计数 6→7 |
+| **教师命题** | `generator.html` | **教师门控命题大板块**：智能生成 + 自主选题 + Word/PDF 导出 + 超星风格分节渲染 + 化学式上下标；答案契约（`referenceAnswer`）＋字母分配，AI 补全选项/难度系数 |
 | **知识图谱** | `knowledge.html` | 123 节点 / 195 关联的交互式配位化学知识网络，**高区分 5 色分区配色**（祖母绿/暖橙/玫红/靛蓝/深紫） |
 | **语料库** | `corpus.html` | **445 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链 |
 | **课前预习** | `prep.html` | 多轮对话预习 + 自适应习题检测 + 错题本 |
@@ -85,9 +86,9 @@
 阶段 5：网页研究员（集群模式 · 站内→PubChem→维基→Bing 多源，熔断降级）
 ```
 
-支持 **「💬 正常 / 🧠 集群」双模式**（输入框内切换，localStorage 记忆，默认正常）：
-- **正常模式**：改造前行为——快速本地答案（RAG + 类比 + 可选 LLM），4 步流水线；
-- **集群模式**：5-agent 集群工作台 + 按置信度自适应联网检索（低置信度自动触发；含"搜索/查一下/pubchem"等词手动触发），支持 重新生成 / 加强网页检索 / LLM重答 / 集群状态 操作；对话按用户身份（学生/教师等）切换语言风格；
+由 **6 个工作模式 chips** 驱动（输入框上方切换，localStorage 记忆，默认学习问答），每个模式经 `MODE_RECIPES` 声明 `cluster/web/llm/plan/stream/route` 参数，自动派生「正常 / 集群」行为（`cluster:true` 即进入 5-agent 集群工作台）：
+- **集群模式**（深度学习 / 深度研究触发）：5-agent 集群工作台 + 按置信度自适应联网检索（低置信度自动触发；含"搜索/查一下/pubchem"等词手动触发），支持 重新生成 / 加强网页检索 / LLM重答 / 集群状态 操作；对话按用户身份（学生/教师等）切换语言风格。
+- **非集群模式**（学习问答 / 智能测验 / 可视化 / 精通之路）：快速本地答案（RAG + 类比 + 可选 LLM）+ 各自路由（智能测验→assessment、精通之路→mastery、可视化→10 类富模板）。
 - **权威层级**：实验讲义 > 文献 > 搜索；网页研究员对站内语料标「站内语料」、对外部网络标「网络资料」，与讲义冲突时黄字警示、以讲义为准。
 
 ### 三页深度链接闭环
@@ -104,15 +105,18 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 
 ```
 chemai-8.23-/
-├── index.html                 # 首页入口（React SPA，含视频资源库页 + 科普探索页）
-├── assistant.html             # AI 助手（3102 FAQ + 智能体集群 + 双模式 + 本地视频 + 测评）
-├── main.html                  # 实验手册（11 章）
+├── index.html                 # 首页入口（React SPA，命名路由，含视频资源库页 + 科普探索页）
+├── assistant.html             # AI 助手（3102 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评）
+├── main.html                  # 实验手册（11 章，教师快捷入口 genCard）
+├── generator.html             # 教师命题大板块（教师门控，智能生成 + 自主选题 + Word/PDF 导出）
 ├── knowledge.html             # 知识图谱（123 节点 / 195 关联，5 色分区）
 ├── corpus.html                # 语料库（445 篇）
 ├── prep.html                  # 课前预习
 ├── assets/
+│   ├── assistant-model.js    # v69/v72 助手模型（IIFE：6 工作模式 MODE_RECIPES + 10 类可视化构建器 + SM-2 复习 + loadKG）
 │   ├── agent-cluster.js      # 网页研究员模块（v56，自包含 IIFE：站内/PubChem/维基/Bing 多源+熔断+冲突校验）
 │   ├── index-B-pT4Snc.js     # SPA 编译产物（已注入本地视频 / 科普探索页插图）
+│   ├── mobile-content-guard.css # 移动端富内容兜底（KaTeX 块级公式/长 token 撑破视口）
 │   ├── images/              # 实验实拍图 + 科普探索页插图（assets/images/explore/）
 │   └── ...                   # CSS / JS
 ├── data/
@@ -139,7 +143,8 @@ chemai-8.23-/
 - **SPA 落地页内嵌手册为历史快照**：`assets/index-B-pT4Snc.js`（React 落地页构建产物）内嵌旧 12 章版实验手册（含已删除的「实验报告撰写规范」章），与 `main.html` 的动态手册（11 章）分叉。React 源码未随仓库维护，暂不重建；**实验手册以 `main.html` 为准**。
 - **本地视频部署依赖分支构建**：4 部本地视频位于 `三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/`，是否在线可播取决于部署机制（内置「Deploy from a branch」会发布整个仓库根目录；`deploy.yml` 的 `_site` 精简组装不含该文件夹）。
 - **自定义域名已迁移**：旧 `fec2o4.apay.eu.cc` 因被网络按主机名拦截（同一 GitHub IP 下 `github.io` 可访问、唯该域名握手被 reset）而弃用，站点现用专属子域名 **`k3fec2o43.clawdbot.ggff.net`**（`ggff.net` 后缀实测无代理可握手）。DNS 已在 Cloudflare 配置为 DNS-only（灰云）CNAME → `littlealety.github.io`，仓库 Pages 已设自定义域名并启用 Enforce HTTPS。
-- **网页研究员依赖 CORS 网络**：PubChem / 维基百科为 CORS 开放接口可直连；Bing 经第三方代理（实验性，熔断自动停用）；知网/万方/百度学术/ChemicalBook 无浏览器 CORS，仅提供搜索链接兜底。
+- **网页研究员依赖 CORS 网络**：PubChem / 维基百科为 CORS 开放接口可直连；Bing 经第三方代理（实验性，熔断自动停用）；知网/万方/百度学术/ChemicalBook 无浏览器 CORS，仅提供搜索链接兜底；**MSDS 查询网 / ChemicalBook / PubChem 为外链跳转**（`msdsCardHTML` 前置 somds.com）。
+- **教师命题依赖题库数据**：`generator.html` 的智能生成/自主选题基于 `questions_master.json`（题库池），为 **dev-only 未部署**；且 `.github/workflows/deploy.yml` 的精简 `_site` 组装清单不含生成器与题库——实际上线依赖「从 master 分支构建」发布整仓（`data/` 已含题库则可用，否则生成器功能依赖线上题库存在）。
 
 ---
 
@@ -161,7 +166,7 @@ npx serve .                     # Node.js
 
 ### 体验集群模式
 
-在 AI 助手输入框左侧切换到 **🧠 集群**，然后提问（如"蓝晒的剂量计原理查一下"）——观察 5 个智能体依次工作、网页研究员联网返回站内/网络资料、质检官校验权威冲突。
+在 AI 助手输入框上方切换到 **🧠 深度求解**（或 🌐 深度研究），然后提问（如"蓝晒的剂量计原理查一下"）——观察 5 个智能体依次工作、网页研究员联网返回站内/网络资料、质检官校验权威冲突；切到 **📊 可视化** 可看到 10 类富模板图（流程图 / 晶体场 / 抽滤装置 / TG-DSC / 知识图谱等）。
 
 ---
 
@@ -176,12 +181,15 @@ npx serve .                     # Node.js
 
 ## 版本历史
 
-> 版本线 v30 → v71（2026-07 至 2026-08-23）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
+> 版本线 v30 → v72.1（2026-07 至 2026-08-25）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
 
-### 近期（v56 → v71）
+### 近期（v56 → v72.1）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v72.1** | 08-25 | **assistant 可视化再扩展 + 答非所问根治 + MSDS 查询网 + 化学实体特异性**：① 可视化扩至 **10 类富模板**（`detectVizType` 从特异到通用分派 isomer→crystal→complex→apparatus→thermal→titration→redox→safety→kg→flow）+ **双路径出图**（调用点从 `!usedLLM` 块内移到 if/else 后共享区，配 DeepSeek Key 的 LLM 流式与本地打字机**都出图**）；修复流程图 `H` 未声明回归（生产里一直是"想可视化？"兜底文案而非真图）；② **答非所问根治**：`matchFAQ` `norm` **温度归一化**（`℃/摄氏度/°c`→`度`，修复「110度」错配「d5构型CFSE」）+ **疑问词泛词化**（为什么/如何/怎么…入 GENERIC_KEYS，离线误中 5→2）+ `bestOnTopicFAQ` 宽松兜底 + `onTopic` 域内门控（彻底无内容→明确"与实验无关"拒答）；③ **MSDS 查询网**：ChemicalBook 检索不到过氧化氢，`msdsCardHTML` 前置 **somsds.com**「MSDS查询网」链接；④ **detectChems 特异性**：CHEM_DB 补草酸钾/草酸亚铁独立条目，消「草酸钾」误报为「草酸」、`K2C2O4` 漏检；⑤ pipeline(`local_answer.js`) 同步。**核心内容 64/64 命中、离线误中 5→2** |
+| **v72** | 08-25 | **assistant 可视化增强**：5 类富模板（分支流程图 / 八面体晶体场 d⁵ / 抽滤装置 / TG-DSC / 知识图谱）+ 双路径出图 + `.visual` 响应式（overflow-x + svg width:100%）；**LLM 路径身份镜头统一**（teacherBar + role 前缀注入流式回答，非化学包白话版） |
+| **v71.1** | 08-23 | **assistant 体验打磨 + FAQ 鉴别力路由修复**：鉴别力路由修复 **R2–R10** + 复杂/难题鉴别力修复 **R11–R15（86 题 100%）** |
 | **v71** | 08-23 | **学术追踪 + 知识星链（闻道④⑤）**：corpus 页新增「📡 学术追踪·领域动态」区——课题前沿·近期文献(按 `e.year` 降序取 8，卡上年份徽章+子领域/文献类型) + 📅 年份趋势 chips(点某年下钻到知识清单、再点取消) + 🔗 知识星链(基于收藏，按子领域+关键词对语料计分取 top3 生成关联节点)；收藏按钮点击即时刷新星链。`state.year` 过滤 + `renderAcademicTrack`/`buildStarChain`/`_tok`；修 `assistant-model.js`(defer 加载)致老用户收藏态/星链首屏空态——`DOMContentLoaded` 补齐 `refreshList()`+`renderAcademicTrack()` |
 | **v70** | 08-23 | **闻道三功能（①②③）**：② 知识库多源枢纽——corpus `#doctypeSel` 来源类型分面 + A 区来源类型分布条形图(点击下钻)；③ 收藏+笔记——`chemai_favorites_v1`(数组)/`chemai_notes_v1`(map) 纯函数挂 `window.AssistantModel`，覆盖 corpus 行(📌/✏️)+knowledge 面板+精通之路汇总区并入学习画像导出；① 多文献横向对比——`AUTHORITY_RULES` 每条加只读 `param`/`lecture` 字段(已核验向后兼容) + 纯函数 `extractParamCompare`/`buildCompareTableHTML`，研究答案尾部自动追加「📊 多文献横向对比·讲义最高权威」卡(⚠=与讲义不符) |
 | **v69** | 08-22/23 | **助手模型化改造**：`assets/assistant-model.js`——6 工作模式(对照 `MODE_RECIPES`) + 🧠 思考链面板 + 打字机流式渲染(`buildStagedBlocks`/`Typewriter`) + 计划/可视化/精通之路仪表盘 + SM-2 间隔复习(`srsSchedule`/`srsMerge`/`srsDueToday`) + 学习画像导出；Phase2 学习闭环(掌握度测评/反馈重排/复习外推)完成；`npm test` 新增该模块纯函数单测 |

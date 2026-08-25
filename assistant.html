@@ -1302,7 +1302,7 @@ function buildHybridAnswerHTML(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, conf=ctx.conf, chems=ctx.chems, ops=ctx.ops;
   var body;
   if(conf.level==='high'&&directHits.length>0){
-    body=buildAnswerHTML(q, {faq:faq, hits:directHits, chems:chems, ops:ops});
+    body=buildAnswerHTML(q, {faq:faq, hits:directHits, chems:chems, ops:ops, level:conf.level});
   }else{
     body=buildAnalogyBridgedAnswer(q, ctx);
   }
@@ -2010,7 +2010,7 @@ function imagesHTML(imgs){
 
 
 function buildAnswerHTML(q,ctx){
-  var faq=ctx.faq, hits=ctx.hits, chems=ctx.chems, ops=ctx.ops;
+  var faq=ctx.faq, hits=ctx.hits, chems=ctx.chems, ops=ctx.ops, level=ctx.level;
   var s='';
   if(!hits.length){
     if(faq){
@@ -2027,7 +2027,8 @@ function buildAnswerHTML(q,ctx){
     s+=imagesHTML(findImages(q,faq));
     return s;
   }
-  s+=answerHeaderHTML({level:faq?'high':(hits[0].score>=50?'medium':'low')},faq?'faq':'corpus',hits.length,false);
+  /* 置信度口径统一：头徽章与置信度条同源 conf.level（不再用原始 score>=50 的独立阈值） */
+  s+=answerHeaderHTML({level:level||(faq?'high':(hits[0].score>=50?'medium':'low'))},faq?'faq':'corpus',hits.length,false);
   s+='<div class="ans-sec"><h4>📌 核心解答</h4>';
   s+=roleCoreHTML(faq?('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>'):coreFromMeta(q,hits,chems,ops));
   s+='</div>';
@@ -2392,12 +2393,6 @@ switchCalcCat(0);
 
 /* ================= 多轮对话记忆 ================= */
 var CHAT_HISTORY=[];
-function historyContextHTML(){
-  if(!CHAT_HISTORY.length) return '';
-  var prev=CHAT_HISTORY.slice(-3);
-  return '<div class="ans-sec"><h4>🔁 对话上下文</h4><p style="font-size:12.5px;color:var(--t2)">已记住最近对话：</p>'+
-    prev.map(function(t){return '<div class="muted" style="font-size:12px;margin-top:3px">· '+esc(t.slice(0,50))+(t.length>50?'…':'')+'</div>';}).join('')+'</div>';
-}
 
 /* ================= 错题本 ================= */
 var WRONG_KEY='chemaiWrongBook', LAST_QA=null, QUESTION_BANK=[];
@@ -3225,11 +3220,6 @@ function refreshRoleSwitch(){ var r=chatRole(),chips=document.querySelectorAll('
 function roleLeadHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<p class="role-lead"><span class="rl-ic"></span>'+(m.lead?'<span>'+_esc(m.lead)+'</span>':'')+'</p>'; }
 function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro"><div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div></div>'; }
 function askUser(t,mode){ if(mode) setWorkMode(mode); var inp=document.getElementById('qaInput'); if(inp) inp.value=t; qaSubmit(); }
-function rolePersona(role){
-  if(role==='teacher') return '\n\n【讲话风格 · 教学引导】像一位耐心的化学老师：先点明这一问要解决什么，再一步步引导思考，善用设问（如"你有没有想过这一步为什么要…"）与生活类比；多用「咱们/我们」拉近距离；答完给一句小结，并预估学生可能卡住的地方主动补充。循序渐进、严谨但不堆砌术语。';
-  if(role==='non-chemistry') return '\n\n【讲话风格 · 通俗科普】面对几乎无化学基础的提问者：多用生活化类比与大白话解释，尽量少用专业术语；非用不可时先用一句话解释其含义；多强调"这一步为什么做、有什么意义"；语气亲切、鼓励，像给朋友把知识点讲清楚。';
-  return '\n\n【讲话风格 · 专业严谨】面对化学专业提问者：可直接使用化学术语（如配位、CFSE、沉淀溶解平衡、热分析等）而不必科普；直接给出机理、参数、方程式与依据；语气专业、简洁、精确，层层递进；无需铺垫或重复基础知识。';
-}
 document.addEventListener('click',function(e){
   var qbtn=e.target.closest('[data-q]'); if(qbtn){ askUser(qbtn.getAttribute('data-q')); return; }
   var rbtn=e.target.closest('[data-role]'); if(rbtn){ setRole(rbtn.getAttribute('data-role')); }

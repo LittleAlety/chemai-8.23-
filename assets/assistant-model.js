@@ -204,9 +204,6 @@
       +'<text x="'+x0+'" y="'+(H-12)+'" font-size="11" style="fill:var(--t3,#64748b)">含 3 分子结晶水（约 11%，见 TG-DSC）；见光易分解，应避光保存。</text>';
     return vizWrap(vizsvg(W,H,d),'🖼 '+(escText(q||'反应流程')));
   }
-  function buildFlowBox(x,y,w,h,n,label,arrow,gap){
-    return buildFlowBoxEx(x,y,w,h,n,label,'',label,arrow,gap,false);
-  }
   function buildFlowBoxEx(x,y,w,h,n,title,desc,tag,arrow,gap,hl){
     var grad=hl?'var(--em,#10b981)':'var(--card,#1a2235)';
     var stroke=hl?'rgba(16,185,129,.9)':'rgba(45,212,191,.35)';

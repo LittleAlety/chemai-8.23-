@@ -15,16 +15,32 @@ function fail(msg) { console.log('  ❌ ' + msg); ok = false; }
 
 console.log('========== ChemAI 全量检查 ==========\n');
 
-// 1. 乱码扫描
+// 1. 乱码扫描（真正的"全站"：遍历 data/ + 顶层 html 全部内容文件，检测 �/BOM/孤代理/C0 控制符；
+//    合法 Latin-1 —— Å(埃)/ö(ö)/×÷·µ±°/洋人名/单位/库映射表 —— 一律不误判）
 console.log('【1. 全站乱码扫描】');
-const files = ['assistant.html','main.html','corpus.html','prep.html','knowledge.html','index.html',
-  'data/corpus.json','data/academic_lexicon.json','data/questions_bank.json','data/report_rubric.json','data/manual.json','data/kg.json'];
-let badTotal = 0;
-for (const f of files) {
-  const s = fs.readFileSync(path.join(ROOT, f), 'utf8');
-  badTotal += (s.match(/�/g) || []).length;
+const SKIP_DIRS = new Set(['_archive','node_modules','.git','.claude','assets','scripts','训练管道','试题迭代记录','Agent工作区','test']);
+// U+FEFF 不判为垃圾：源文件里可能是"故意给 Word 导出的 BOM 前缀"（如 generator.html 的 Blob），只有文件首字符 BOM 才判
+const isGarbageCp = cp => cp === 0xFFFD || cp === 0x7F || (cp < 0x20 && cp !== 9 && cp !== 10 && cp !== 13) || (cp >= 0xD800 && cp <= 0xDFFF);
+function* walk(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) { if (SKIP_DIRS.has(e.name)) continue; yield* walk(path.join(dir, e.name)); continue; }
+    const ext = path.extname(e.name).toLowerCase();
+    if (ext === '.json' || ext === '.js' || ext === '.html') yield path.join(dir, e.name);
+  }
 }
-badTotal === 0 ? pass('全部 ' + files.length + ' 文件无 �') : fail('发现 ' + badTotal + ' 处 �');
+const targets = [];
+for (const pf of walk(path.join(ROOT, 'data'))) targets.push(path.relative(ROOT, pf).replace(/\\/g, '/'));
+for (const e of fs.readdirSync(ROOT, { withFileTypes: true })) { if (!e.isDirectory() && /\.html$/.test(e.name)) targets.push(e.name); }
+targets.sort();
+let badFiles = 0, garbledChars = 0, bomFiles = 0; const garbled = [];
+for (const rel of targets) {
+  let s; try { s = fs.readFileSync(path.join(ROOT, rel), 'utf8'); } catch (e) { continue; }
+  let n = 0; for (const ch of s) { if (isGarbageCp(ch.codePointAt(0))) n++; }
+  if (n) { badFiles++; garbledChars += n; garbled.push(rel + '(' + n + ')'); }
+  if (s.charCodeAt(0) === 0xFEFF) { bomFiles++; garbled.push(rel + '(BOM首字符)'); }
+}
+if (garbledChars === 0 && bomFiles === 0) pass('全站 ' + targets.length + ' 个内容文件（data/ + 顶层 html）零 �/孤代理/C0 乱码、零首字符 BOM');
+else fail('发现 ' + garbledChars + ' 处乱码 / ' + bomFiles + ' 个首字符 BOM @ ' + garbled.join(', '));
 
 // 2. FAQ 渲染审计
 console.log('\n【2. FAQ 渲染审计】');

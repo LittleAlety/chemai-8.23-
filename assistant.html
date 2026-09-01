@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN" data-theme="dark">
 <head>
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark light">
 <link rel="preconnect" href="https://api.deepseek.com">
 <link rel="preload" href="data/faq_runtime.js" as="script">
@@ -1988,29 +1988,71 @@ function renderLatexToUnicode(text){
 /* 方程式字符集：供 splitEqFromProse 连续扫描一段「化学反应式」（含 sub/sup 下标、系数、运算符、状态小箭头）。
    不含中文/全角标点——遇到那些即视为「叙述」边界，从而把夹在中文叙述里的方程式独立出来。 */
 var _EQCHAR=/[A-Za-z0-9·×\[\]()₀-₉²³⁰ⁱ⁴-⁼ⁿ→←⇌⟶⟵↑↓+\-<>=="'&;.#~ 　]/;
+/* 平衡半角括号组：line[q] 为 ( 或 [，返回配对的右括号后一位下标；不平衡/非半角返回 0。
+   用于把 FeC₂O₄↓(黄色)、[Fe(C₂O₄)₃]³⁻ 里的括号组当作原子单元整体吞入，避免被中文/下标拦腰截断。 */
+function groupEnd(line, q, n){
+  var op=line[q], cl = op==='(' ? ')' : (op==='[' ? ']' : null);
+  if(!cl) return 0;
+  var depth=0;
+  for(var k=q;k<n;k++){ if(line[k]===op) depth++; else if(line[k]===cl){ depth--; if(depth===0) return k+1; } }
+  return 0;
+}
+/* 平衡半角括号组反向：line[q] 为 ) 或 ]，返回配对的左括号下标；不平衡返回 -1 */
+function groupOpen(line, q){
+  var cl=line[q], op = cl===')' ? '(' : '['; var depth=0;
+  for(var k=q;k>=0;k--){ if(line[k]===cl) depth++; else if(line[k]===op){ depth--; if(depth===0) return k; } }
+  return -1;
+}
 /* 拆「叙述+方程式」混排行（如「反应：Fe³⁺ + e⁻ → Fe²⁺（酸性）」）为 {lead, eq, tail}。
-   拆不出（无箭头 / 纯方程式行 / 无中文叙述）时返回 null，由调用方退回整行 .ans-eq。 */
+   拆不出（无箭头 / 纯方程式行 / 无中文叙述 / 叙述过长）时返回 null，由调用方退回原行。
+   叙述过长（>50 字，如长段落里夹一个 → 芯片）会拆碎句子，不拆，避免假·方程式孤立。 */
 function splitEqFromProse(line){
   if(/ans-eq-block|ans-inline-math/.test(line)) return null;   // LaTeX 显示/内联公式已由 CSS 强制独立成行，拆开会破坏 <span>
   var ai=line.search(/[→←⇌⟶⟵]/);
   if(ai<0) return null;
   var n=line.length, left=ai, right=ai;
-  while(left>0 && _EQCHAR.test(line[left-1])) left--;   // 向左吃到第一个非方程式字符（中文/全角标点即停）
-  while(right<n && _EQCHAR.test(line[right])) right++;   // 向右同样
+  // 向左：吸收「括号组(可含中文状态标签) + 方程式字符」，遇中文/全角叙述即停
+  while(left>0){
+    var c=line[left-1];
+    if(c===')'||c===']'){
+      var gs=groupOpen(line,left-1), gop=gs>=0?line[gs]:'';
+      if(gs>=0 && (gop==='[' || (left-gs)<=14)){ left=gs; continue; }  // 方括号组(配位/物种)不限长；半角括号组只吸收短的(状态标签/酸根)
+    }
+    if(_EQCHAR.test(c)){ left--; continue; }
+    break;
+  }
+  // 向右：同样吸收括号组（如 FeC₂O₄↓(黄色) 的 (黄色) 不再截断）
+  while(right<n){
+    var c2=line[right];
+    if(c2==='('||c2==='['){
+      var ge=groupEnd(line,right,n);
+      if(ge && (c2==='[' || (ge-right)<=14)){ right=ge; continue; }
+    }
+    if(_EQCHAR.test(c2)){ right++; continue; }
+    break;
+  }
   var lead=line.slice(0,left).replace(/[ 　]+$/,'');
   var eq=line.slice(left,right).replace(/^[ 　]+|[ 　]+$/g,'');
   var tail=line.slice(right);
-  if(eq.length<2) return null;   // 箭头独占/过短（如「温度→应变」）不拆，退回整行
+  if(eq.length<2) return null;   // 箭头独占（如「温度→应变」）不拆，退回整行
+  if(eq.length<8) return null;   // 过短的箭头串（如 KSCN→、→CO₂、→31、→Fe²⁺）多为叙述箭头/短记法，不孤立成 .ans-eq
   if(!(lead||tail)) return null; // 纯方程式行：保持整行成 .ans-eq（不拆）
   // 拆出的两侧必须含中文/全角，才可能是「叙述」；否则退回，避免把长方程式拦腰截断（如 (aq) 状态/下标英文）
   if(!/[一-鿿　-〿＀-￯]/.test((lead||'')+' '+(tail||''))) return null;
+  // 叙述过长（长段落）不拆，避免把句子拆碎成假·方程式；只在叙述是短标签(≤50字)时拆
+  if((lead||'').length + (tail||'').length > 50) return null;
   return {lead:lead, eq:eq, tail:tail};
 }
 function linePiece(line){
   var heading=/^(?:【|#{1,4}\s)/.test(line)||/^\*\*[^*]+\*\*$/.test(line);
-  var eq=/[→←⇌⟶⟵↓↑]/.test(line);
+  // 化学方程式行判定：必须含反应箭头，且方程式字符占多数(≥60%)、中文占比低(≤25%)。
+  // 避免把【作用…】标题行 / 长段落里夹一个 → 的叙述行整行压成 .ans-eq（mono 块）。
+  var hasArrow=/[→←⇌⟶⟵↓↑]/.test(line);
+  var eqChars=0, cjk=0, L=line.length;
+  for(var k=0;k<L;k++){ var ch=line[k]; if(_EQCHAR.test(ch)) eqChars++; if(/[一-鿿]/.test(ch)) cjk++; }
+  var isEq=hasArrow&&L>0&&(eqChars/L)>=0.6&&(cjk/L)<=0.25;
   var clean=line.replace(/^#{1,4}\s+/,'');
-  return {cls:(heading?'ans-head':(eq?'ans-eq':'ans-line')), text:clean};
+  return {cls:(heading?'ans-head':(isEq?'ans-eq':'ans-line')), text:clean};
 }
 function eqLeadPiece(part){
   var heading=/^(?:【|#{1,4}\s)/.test(part)||/^\*\*[^*]+\*\*$/.test(part);

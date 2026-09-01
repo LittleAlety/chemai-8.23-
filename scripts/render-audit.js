@@ -16,7 +16,7 @@ function grabVar(name) {   // 抓单行 var（如 var _EQCHAR=/[...]/;），贪�
 }
 const code = 'const esc=s=>String(s==null?\'\':s).replace(/[&<>"\']/g,c=>({\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\',"\'":\'&#39;\'}[c]));' +
   grabVar('_EQCHAR') + grab('renderLatexToUnicode') + grab('renderLatexBody') + grab('inlineRich') +
-  grab('splitEqFromProse') + grab('linePiece') + grab('eqLeadPiece') + grab('renderRichAnswer');
+  grab('groupEnd') + grab('groupOpen') + grab('splitEqFromProse') + grab('linePiece') + grab('eqLeadPiece') + grab('renderRichAnswer');
 const fn = new Function('return (function(){' + code + ';return {renderRichAnswer:renderRichAnswer};})();')();
 const faq = readFAQRuntime();
 let bad = 0, total = 0;
@@ -25,7 +25,14 @@ for (const f of faq) {
     if (!f[k]) continue;
     total++;
     const out = fn.renderRichAnswer(f[k]);
-    if (out.includes('�') || out.includes('&lt;sub') || out.includes('&lt;sup') || /<p><div/.test(out)) {
+    // 额外检查 .ans-eq 块：过短(假芯片) 或 以未闭合的 ( [ 结尾(被截断的方程式)。
+    // 注意不能把结尾的 + / - 当截断——离子式如「…+ H+」合法以离子结尾。
+    const eqs = out.match(/<div class="ans-eq">[\s\S]*?<\/div>/g) || [];
+    const badEq = eqs.some(function (m) {
+      const p = m.replace(/<[^>]+>/g, '');
+      return p.length < 6 || /\($|\[$/.test(p);
+    });
+    if (out.includes('�') || out.includes('&lt;sub') || out.includes('&lt;sup') || /<p><div/.test(out) || badEq) {
       bad++;
       if (bad <= 5) console.log('❌ ' + (f.title || '?') + ' [' + k + '] ' + JSON.stringify(f[k].slice(0, 50)));
     }

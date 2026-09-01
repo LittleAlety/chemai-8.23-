@@ -2,12 +2,25 @@
 <html lang="zh-CN" data-theme="dark">
 <head>
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<script>/* 主题桥接：统一 chemaiTheme（静态页）与 chem-theme（React SPA 的 Zustand persist）两键，
+   消除"经 SPA 切主题回静态页断链"。①加载时把权威键 chemaiTheme 灌进 chem-theme（保留 version 与其余 state 字段）；
+   ②运行时监听 <html data-theme> 变化写回 chemaiTheme（SPA 切主题即被捕获）。 */
+function writeChemai(v){ if(v==='light'||v==='dark'){ try{ localStorage.setItem('chemaiTheme', v); }catch(e){} } }
+(function(){ var t=localStorage.getItem('chemaiTheme'); if(t!=='light'&&t!=='dark') return;
+  try{ var obj=null; try{ obj=JSON.parse(localStorage.getItem('chem-theme')); }catch(e){ obj=null; }
+    if(!obj||typeof obj!=='object') obj={state:{theme:'dark'},version:0};
+    if(!obj.state||typeof obj.state!=='object') obj.state={};
+    obj.state.theme=t; localStorage.setItem('chem-theme', JSON.stringify(obj)); }catch(e){} })();
+if(window.MutationObserver){ new MutationObserver(function(){ var v=document.documentElement.getAttribute('data-theme'); if(v==='light'||v==='dark') writeChemai(v); })
+  .observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']}); }
+</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>ChemAI 化学实验教学智能体</title>
+<meta name="color-scheme" content="dark light"/>
 <link rel="preconnect" href="https://fonts.loli.net"/>
 <link rel="preconnect" href="https://gstatic.loli.net" crossorigin=""/>
 <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
@@ -224,6 +237,7 @@ button{font-family:inherit;cursor:pointer}
   };
   function getRole(){try{var raw=localStorage.getItem("chem-user");if(!raw)return null;var o=JSON.parse(raw);var r=o&&o.state?o.state.role:null;return ROLES[r]?r:null;}catch(e){return null;}}
   var role=getRole();
+  window.getChemRole=getRole;  // 供 hash 路由块做"已识别身份"判断（B2 自动跳 main.html）
   // 右上角身份徽章
   (function(){var bn=$("#roleName"),bd=$("#roleBadge");if(role&&bn&&bd){var m=ROLES[role];bn.textContent=m.name;bd.style.color=m.color;bd.style.borderColor=m.color+"66";bd.style.background=m.color+"1a";var dot=bd.querySelector(".rdot");if(dot)dot.style.background=m.color;}}());
   // 角色门控：科普探索仅非化学专业、报告评估仅教师
@@ -273,6 +287,8 @@ button{font-family:inherit;cursor:pointer}
 
 <script>
 // ===== hash 子路由：命中命名 React 路由时才接管应用；裸 #/ 或无 hash 一律回到起始界面（landing）=====
+// 注：若已识别身份（chem-user 角色有效）且命中 landing（无命名路由 hash），
+//     直接进 main.html，不再重复身份选择（对应 demo 的"身份识别一次、之后继承"）。
 (function(){
   var ROUTE=/^#\/(report|explore|quiz|generator|videos|agent)(\/|$)/;
   var land=document.getElementById("landing");
@@ -285,7 +301,11 @@ button{font-family:inherit;cursor:pointer}
     if(!cssLoaded){var css=document.createElement("link");css.rel="stylesheet";css.href="assets/index-DbDp5JQi.css";document.head.appendChild(css);cssLoaded=true;}
     if(!jsLoaded){var js=document.createElement("script");js.type="module";js.src="assets/index-B-pT4Snc.js";document.body.appendChild(js);jsLoaded=true;}
   }
-  function route(){if(ROUTE.test(location.hash)){showApp();}else{showLanding();}}
+  function route(){
+    if(ROUTE.test(location.hash)){showApp();return;}
+    if(!location.hash && typeof window.getChemRole==="function" && window.getChemRole()){location.replace("main.html");return;}
+    showLanding();
+  }
   window.addEventListener("hashchange",route);
   window.addEventListener("popstate",route);
   route();

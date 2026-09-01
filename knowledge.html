@@ -1,13 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN" data-theme="dark">
 <head>
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <link rel="stylesheet" href="assets/nav-guide.css">
+<script src="data/faq_runtime.js" defer></script>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>知识图谱 · ChemAI 三草酸合铁酸钾制备实验</title>
+<meta name="color-scheme" content="dark light"/>
 <!-- KaTeX 改为按需加载（见下方 loadKatex()），仅在首次打开含公式节点时注入，避免阻塞首屏渲染 -->
 <style>
 :root{
@@ -298,6 +300,25 @@ button{font-family:inherit;cursor:pointer}
   text-align:center;color:var(--txt3);font-size:12.5px;padding:22px 10px;
   border:1px dashed rgba(148,163,184,.2);border-radius:12px;line-height:1.8;
 }
+/* —— 详情面板细化：要点速览 / 权威数值 / 关联问答 —— */
+.p-sub{font-size:11px;color:var(--txt3);margin:11px 0 2px;display:flex;align-items:center;gap:6px}
+.p-sub::before{content:"";width:3px;height:10px;border-radius:2px;background:linear-gradient(180deg,var(--purple),var(--yellow))}
+.p-points{margin:0;padding-left:2px;list-style:none}
+.p-points li{font-size:12.5px;line-height:1.75;color:#cbd5e1;display:flex;gap:7px;margin-top:5px}
+.p-points li::before{content:"▸";color:var(--teal);flex-shrink:0;font-size:11px;margin-top:2px;opacity:.85}
+.fact-list{display:flex;flex-direction:column;gap:8px}
+.fact-item{border-radius:12px;padding:9px 12px;background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.16)}
+.fact-q{font-size:12.5px;font-weight:700;color:#6ee7b7;line-height:1.5}
+.fact-a{font-size:12.5px;line-height:1.7;color:#cbd5e1;margin-top:4px}
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:8px;background:var(--bg2);overflow:hidden}
+.faq-h{width:100%;text-align:left;background:none;border:none;padding:10px 12px;font-size:13px;color:#e2e8f0;font-weight:600;display:flex;align-items:center;gap:7px;cursor:pointer;line-height:1.5}
+.faq-h .faq-q{flex:1}
+.faq-h .faq-ar{color:var(--txt3);font-size:11px;transition:transform .18s}
+.faq-item.open .faq-ar{transform:rotate(90deg)}
+.faq-a{display:none;padding:0 12px 11px;font-size:12px;line-height:1.7;color:#cbd5e1;border-top:1px dashed rgba(148,163,184,.14)}
+.faq-item.open .faq-a{display:block}
+.faq-a .ans-wrap{white-space:pre-line}
+.faq-none{text-align:center;color:var(--txt3);font-size:12px;padding:14px 8px;border:1px dashed rgba(148,163,184,.2);border-radius:12px;line-height:1.8}
 .panel-foot{
   flex-shrink:0;padding:12px 18px;border-top:1px solid var(--border);
   background:rgba(17,24,39,.6);display:flex;gap:9px;
@@ -517,6 +538,8 @@ button{font-family:inherit;cursor:pointer}
         <div class="p-sec">
           <div class="p-sec-title">知识点描述</div>
           <div class="p-text" id="pDesc">–</div>
+          <div class="p-sub" id="pPointTitle" hidden>要点速览</div>
+          <ul class="p-points" id="pPoints" hidden></ul>
         </div>
         <div class="p-sec">
           <div class="p-sec-title">与本实验的联系</div>
@@ -533,6 +556,14 @@ button{font-family:inherit;cursor:pointer}
         <div class="p-sec">
           <div class="p-sec-title">关联语料文献（Top 5）</div>
           <div id="pDocs"></div>
+        </div>
+        <div class="p-sec">
+          <div class="p-sec-title">权威数值</div>
+          <div class="fact-list" id="pFacts"></div>
+        </div>
+        <div class="p-sec">
+          <div class="p-sec-title">关联问答（AI 助手库）</div>
+          <div id="pFaq"></div>
         </div>
       </div>
       <div class="panel-foot">
@@ -599,6 +630,7 @@ let centerId = null;
 
 let nodes = [], links = [], nodeById = new Map(), adj = new Map();
 let corpus = [], corpusFailed = false;
+let FACTS = [];                                     // 权威事实（corpus_authoritative_facts.json，加载失败不阻塞）
 const visibleCat = new Set();
 const visibleLvl = new Set([0,1,2,3,4]);
 let searchQ = '';
@@ -664,6 +696,14 @@ async function loadData(){
       }
     }
   }catch(err){ /* localStorage 不可用或数据损坏时忽略 */ }
+  // 权威数值事实（可选，加载失败不阻塞图谱）
+  try{
+    const res = await fetch('data/corpus_authoritative_facts.json');
+    if(res.ok){
+      const fj = await res.json();
+      FACTS = Array.isArray(fj.facts) ? fj.facts.slice() : [];
+    }
+  }catch(err){ /* 权威事实加载失败时留空 */ }
 
   initGraph(kg);
   $('#loadingOv').hidden = true;
@@ -709,7 +749,7 @@ function initGraph(kg){
 
   buildTree();      // 基于 parent 字段构建知识树
   resizeCanvas();  // 先测量画布，以便 LAYER_R 按尺寸响应式缩放
-  const scale = Math.min(W, H) / 1400;
+  const scale = Math.max(0.45, Math.min(W, H) / 1400);  // 手机端设下限，防图谱被过度缩小
   LAYER_R = {1: 215*scale, 2: 470*scale, 3: 725*scale, 4: 920*scale};
   assignLayout();   // 分层环形 + 类目扇区布局（计算目标位置）
   // 初始位置 = 目标位置 + 微抖动（中心节点严格居中）→ 默认即呈现清晰层次
@@ -1231,6 +1271,7 @@ function draw(){
     }
 
     // ---- 标签（中心/一级常显，2-3级渐变淡入避免视觉跳变） ----
+    const fsScale = Math.min(1, Math.max(0.75, W/700));   // 标签字号随视口宽等比缩小（手机端）
     let show = false, fs = 12;   // fs = 期望的屏幕字号
     let labelAlpha = 1;
     if(n.level === 0){ show = true; fs = 16; }
@@ -1246,7 +1287,7 @@ function draw(){
     if(isSel || isHov || isMatch || (focusSet && focusSet.has(n.id) && view.k > 0.32)){ show = true; labelAlpha = 1; }
     if(show){
       // 世界字号 = 屏幕字号/k，并限制极端缩放下的过大/过小
-      const wf = Math.min(Math.max(fs/view.k, fs/1.25), fs/0.32);
+      const wf = Math.min(Math.max(fs*fsScale/view.k, fs*fsScale/1.25), fs*fsScale/0.32);
       ctx.globalAlpha = Math.max(alpha * labelAlpha, 0.02);
       ctx.font = (n.level<=1 ? '700 ' : '500 ') + wf + 'px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.lineWidth = wf*0.28; ctx.strokeStyle = kgVar('--kg-stroke') || 'rgba(10,14,26,.92)';
@@ -1612,6 +1653,98 @@ function closePanel(){
   p.classList.remove('open');
   p.setAttribute('aria-hidden','true');
 }
+/* ==================== 详情面板细化：要点速览 / 权威数值 / 关联问答 ==================== */
+/* 答案里的 LaTeX 轻转 HTML（FAQ 已多用 Unicode 下标，这里只处理常见箭头/命令，避免散文被误伤） */
+function friendlyTex(s){
+  return esc(s)
+    .replace(/\\xrightarrow\{([^}]*)\}/g, '⟶$1')
+    .replace(/\\rightleftharpoons/g, '⇌')
+    .replace(/\\rightarrow/g, '→')
+    .replace(/\\left|\\right|\\bigl|\\bigr|\\Bigl|\\Bigr|\\big|\\Big/g, '');
+}
+/* 要点速览：仅当节点带 desc 富字段时展示（描述已含 ①② 的直接看描述，避免重复） */
+function renderPoints(n){
+  const pt = $('#pPoints'), tt = $('#pPointTitle');
+  const d = (n.desc||'').trim();
+  if(!d){ tt.hidden = true; pt.hidden = true; return; }
+  let pts = d.split(/[；。]/).map(s=>s.trim()).filter(s=>s.length>4);
+  if(pts.length < 2 && d.length > 24){
+    const byN = d.split(/[①②③④⑤⑥⑦⑧⑨⑩]/).map(s=>s.trim()).filter(Boolean);
+    if(byN.length > 1) pts = byN.map(s=>s.replace(/[、.；;:：]$/, ''));
+  }
+  pts = pts.slice(0, 6);
+  tt.hidden = false; pt.hidden = false;
+  pt.innerHTML = pts.map(p=>`<li>${esc(p)}</li>`).join('');
+}
+/* 权威数值：按 subfield / 标题关键词 匹配 corpus_authoritative_facts.json，取前 3 */
+function renderFacts(n){
+  const box = $('#pFacts');
+  if(!FACTS.length){
+    box.innerHTML = '<div class="fact-item" style="background:transparent;border-style:dashed;color:var(--txt3)">暂无关联权威数值</div>'; return;
+  }
+  const nameN = norm(n.name);
+  const cand = [];
+  for(const f of FACTS){
+    let s = 0;
+    if(f.subfield && f.subfield === n.subfield) s += 20;
+    if(f.title && norm(f.title).includes(nameN)) s += 15;
+    const kw = (f.keys||[]).map(k=>norm(k)).filter(Boolean);
+    for(const k of kw){ if(nameN && nameN.includes(k)){ s += 6; break; } }
+    if(s >= 16) cand.push({f, s});
+  }
+  cand.sort((a,b)=>b.s - a.s);
+  const top = cand.slice(0,3).map(c=>c.f);
+  if(!top.length){
+    box.innerHTML = '<div class="fact-item" style="background:transparent;border-style:dashed;color:var(--txt3)">暂无与该点直接相关的权威数值</div>'; return;
+  }
+  box.innerHTML = top.map(f=>`<div class="fact-item"><div class="fact-q">${esc(f.q)}</div><div class="fact-a">${esc(f.answer)}</div></div>`).join('');
+}
+/* 关联问答：复用 nodeKeywords 提取节点关键词，在 window.FAQ 里打分，去重同名后取前 4 */
+function faqForNode(n){
+  if(!window.FAQ || !window.FAQ.length) return null;
+  const kws = nodeKeywords(n);
+  const nameN = norm(n.name);
+  const scored = [];
+  for(let i=0;i<window.FAQ.length;i++){
+    const e = window.FAQ[i];
+    if(typeof e !== 'object' || !e) continue;
+    let s = 0, hits = 0;
+    const fields = [norm(e.title||''), norm(e.q||''), norm((e.keys||[]).join(' ')), norm(e.detail||'')];
+    for(const k of kws){
+      if(!k) continue;
+      for(const f of fields){ if(f && f.includes(k)){ s += 3; hits++; break; } }
+    }
+    if(e.subfield && subfieldMatch(n, e.subfield)) s += 25;
+    if(nameN && norm(e.title||'').includes(nameN)) s += 10;
+    if(hits >= 2 && s >= 12) scored.push({e, s});
+  }
+  scored.sort((a,b)=>b.s - a.s);
+  const seen = new Set(), out = [];
+  for(const c of scored){
+    const t = c.e.title || c.e.q;
+    if(seen.has(t)) continue; seen.add(t);
+    out.push(c.e); if(out.length >= 4) break;
+  }
+  return out;
+}
+function renderFaq(n){
+  const box = $('#pFaq');
+  const list = faqForNode(n);
+  if(list === null){
+    box.innerHTML = '<div class="faq-none">AI 助手指南加载中…</div>'; return;
+  }
+  if(!list.length){
+    box.innerHTML = '<div class="faq-none">暂无直接匹配的常见问答<br><a href="assistant.html" target="_self" style="color:var(--accent)">↗ 去 AI 助手提问</a></div>'; return;
+  }
+  box.innerHTML = list.map((e,i)=>`<div class="faq-item">
+    <button class="faq-h" data-fq="${i}"><span class="faq-q">${esc(e.q || e.title || '问答')}</span><span class="faq-ar">▸</span></button>
+    <div class="faq-a"><div class="ans-wrap">${friendlyTex(e.answer || '')}</div></div>
+  </div>`).join('');
+  box.querySelectorAll('.faq-h').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ btn.parentElement.classList.toggle('open'); });
+  });
+}
+
 function openPanel(n){
   const meta = catOf(n.category);
   $('#pName').textContent = n.name;
@@ -1625,6 +1758,7 @@ function openPanel(n){
 
   // 公式渲染（kg.json formulas 字段）— KaTeX 按需加载
   renderFormulas(n);
+  renderPoints(n);
 
   // 知识路径（中心 → … → 当前节点，可点击跳转）
   const pathBox = $('#pPath');
@@ -1688,6 +1822,10 @@ function openPanel(n){
     }).join('')
     + '<a class="doc-more" href="'+corpusHref+'" target="_blank" style="display:block;margin-top:8px;font-size:12px;color:var(--accent)">📚 查看「'+esc(n.subfield||n.name)+'」全部文献 ↗</a>';
   }
+
+  // 权威数值 + 关联问答（详情面板细化）
+  renderFacts(n);
+  renderFaq(n);
 
   // 问 AI 助手（携带 节点名+核心问题）
   const coreQ = list.length && (list[0].questions||[])[0]

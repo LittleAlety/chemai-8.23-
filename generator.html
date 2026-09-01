@@ -4,6 +4,7 @@
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
+<link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>智能命题 — 三草酸合铁酸钾制备实验 · ChemAI</title>
@@ -231,7 +232,7 @@ input,select,textarea{font-family:inherit}
       <div class="logo-icon">⚗️</div>
       <div class="logo-text">
         <div class="logo-name">ChemAI</div>
-        <div class="logo-sub">K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</div>
+        <div class="logo-sub">返回主页</div>
       </div>
     </a>
     <div class="nav-links">
@@ -245,8 +246,11 @@ input,select,textarea{font-family:inherit}
       <a href="corpus.html">语料库</a>
     </div>
     <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
+    <button class="path-btn" data-href="main.html#learnPath" title="还不知道怎么用？按学习路径走">🧭 怎么用</button>
+    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
   </div>
 </nav>
+<script>document.getElementById("hamburgerBtn").addEventListener("click",function(){this.closest(".navbar").querySelector(".nav-links").classList.toggle("open")});</script>
 
 <div class="page" id="page">
   <div id="gateBox" style="display:none">
@@ -1002,5 +1006,6 @@ loadBank().then(function(){
 });
 })();
 </script>
+<script src="assets/nav-guide.js" defer></script>
 </body>
 </html>

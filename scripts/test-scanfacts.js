@@ -73,3 +73,6 @@ try {
 
 console.log('\n===== 汇总 =====');
 console.log(`正确表述误报: ${fp}  错误表述命中: ${totalHit}/${wrong.length}  FAQ 命中: ${faqFp.length}/${faq.length}`);
+/* 回归门禁：仅对「正确表述被误报」设硬失败（这是会破坏正确内容的真实回归风险）。
+ * 错误表述命中不足（如 5/6）为已知容差（规则覆盖缺口，如乙醇量无对应规则），只报告不拦。 */
+if (fp > 0) { console.error('\n✖ 存在正确表述被误报，请修复规则或数据后重跑'); process.exit(1); }

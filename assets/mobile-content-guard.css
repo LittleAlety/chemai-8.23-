@@ -7,14 +7,29 @@
    此处规则一律带 !important，确保兜底在任何注入顺序下生效。
    ============================================================================ */
 
+/* ============================================================================
+   全站（含桌面）公式兜底 —— 宽 KaTeX 显示公式不折行，在封顶列
+   （助手 1360 / 手册 1280 / 图谱 / 聊天 85%）里一旦放开就横向撑破。
+   原只靠下方 ≤820 块，桌面 821~1440 的封顶列无兜底；这里让它在容器内
+   横向滚动，任何宽度都安全。
+   ============================================================================ */
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+.math, .formula {
+  overflow-x: auto !important;
+}
+
 @media (max-width: 820px) {
   /* 1) 图片 / SVG / 视频 / 画布：绝不超出视口（宽撑破的最常见元凶） */
   img, svg, video, canvas, iframe {
     max-width: 100% !important;
   }
 
-  /* 2) 宽表格：容器内滚动，而不是把整个页面撑出横向滚动条 */
-  .table-wrap {
+  /* 2) 宽表格：容器内滚动，而不是把整个页面撑出横向滚动条
+        （main 手册用 .tbl-wrap、corpus 用 .rec-table——守卫原先只盖 .table-wrap，漏掉二者） */
+  .table-wrap, .tbl-wrap, .rec-table {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
   }
@@ -66,6 +81,29 @@
   .answer th, .rich-content th, .content th, .md-body th, .article th {
     overflow-wrap: break-word !important;
     word-break: break-word !important;
+  }
+
+  /* 6) 模式/tab chips：inline-flex 不换行会把一行撑到 >1000px（assistant .tabs），
+        允许换行/收缩，勿横向撑破。 */
+  .tabs {
+    flex-wrap: wrap !important;
+    max-width: 100% !important;
+  }
+
+  /* 7) 长 token 折行补漏：手动章节 / 卡片 / 面板 等容器（守卫原先只盖
+        .answer/.content/.article/.md-body，漏掉这些）。只做折行，不碰 max-width 尺寸，
+        避免影响 knowledge 固定宽面板与其余精确面板。 */
+  .chapter, .sec, .sec-body, .manual-body, .prose,
+  .chapter p, .chapter li, .chapter td, .chapter th,
+  .sec p, .sec li, .sec td, .sec th,
+  .sec-body p, .sec-body li, .sec-body td, .sec-body th,
+  .manual-body p, .manual-body li, .manual-body td, .manual-body th,
+  .prose p, .prose li, .prose td, .prose th {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  .card, .panel {
+    overflow-wrap: break-word !important;
   }
 }
 

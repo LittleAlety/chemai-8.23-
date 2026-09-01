@@ -4,6 +4,7 @@
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
+<link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>语料库管理 — 三草酸合铁酸钾制备实验 · ChemAI</title>
@@ -282,7 +283,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       <div class="logo-icon">⚗️</div>
       <div class="logo-text">
         <div class="logo-name">ChemAI</div>
-        <div class="logo-sub">K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</div>
+        <div class="logo-sub">返回主页</div>
       </div>
     </a>
     <div class="nav-links">
@@ -296,6 +297,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
       <a href="corpus.html" class="active">语料库</a>
     </div>
     <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
+    <button class="path-btn" data-href="main.html#learnPath" title="还不知道怎么用？按学习路径走">🧭 怎么用</button>
     <button class="hamburger-corpus" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
   </div>
 </nav>
@@ -407,7 +409,7 @@ footer{text-align:center;color:var(--t3);font-size:12.5px;line-height:1.8;margin
     </div>
   </section>
   <style>
-  #section-academic .track-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+  #section-academic .track-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:10px}
   #section-academic .track-item{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid var(--bd2);border-radius:10px;background:var(--bg2);text-decoration:none;color:var(--t1);transition:border-color .2s,background .2s,transform .2s}
   #section-academic .track-item:hover{border-color:#2dd4bf;background:var(--card);transform:translateY(-2px)}
   #section-academic .track-year{flex:0 0 auto;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:rgba(45,212,191,.12);color:#2dd4bf;border:1px solid rgba(45,212,191,.25);margin-top:1px}
@@ -1830,5 +1832,6 @@ document.addEventListener('DOMContentLoaded',function(){
 <script src="assets/assistant-model.js" defer></script>
 <script>/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
 (function(){var u,r=null;try{u=JSON.parse(localStorage.getItem('chem-user')||'{}');r=(u&&u.state&&u.state.role)||null;}catch(e){}var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}})();</script>
+<script src="assets/nav-guide.js" defer></script>
 </body>
 </html>

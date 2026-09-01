@@ -20,6 +20,7 @@
     "faq:inject-authoritative": "node 训练管道/inject_authoritative_facts.js",
     "faq:merge": "node 训练管道/faq_tools.js merge",
     "faq:apply-fixes": "node 训练管道/faq_tools.js apply-fixes",
+    "verify:facts": "node scripts/verify-lecture-facts.js && node scripts/test-scanfacts.js",
     "corpus:weights": "node 训练管道/corpus_weight_analysis.js",
     "self-train": "node 训练管道/self_train_loop.js",
     "outer-loop": "node 训练管道/outer_loop.js",

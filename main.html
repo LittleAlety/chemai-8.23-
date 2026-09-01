@@ -4,6 +4,7 @@
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
+<link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="preload" href="data/manual.json" as="fetch">
@@ -374,7 +375,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <div class="logo-icon">⚗️</div>
       <div class="logo-text">
         <div class="logo-name">ChemAI</div>
-        <div class="logo-sub">K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</div>
+        <div class="logo-sub">返回主页</div>
       </div>
     </a>
     <div class="nav-links">
@@ -389,6 +390,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       <a href="corpus.html">语料库</a>
     </div>
     <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
+    <button class="path-btn" data-href="#learnPath" title="还不知道怎么用？按学习路径走">🧭 怎么用</button>
     <div class="nav-user">
       <span class="role-badge" id="roleBadge"><span class="rdot"></span><span class="rname" id="roleName">未选择身份</span></span>
       <button class="switch-btn" id="switchBtn" type="button">切换身份</button>
@@ -412,52 +414,122 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
     <div class="banner-stats">
       <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b id="statCh">11</b>&nbsp;章节</div>
       <div class="bstat"><span class="dot" style="background:var(--teal)"></span><b id="statSec">42</b>&nbsp;小节</div>
-      <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>7</b>&nbsp;快捷功能模块</div>
+      <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>9</b>&nbsp;快捷功能模块</div>
       <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>AI</b>&nbsp;智能辅助学习</div>
     </div>
   </section>
 
-  <!-- 快捷入口 -->
+  <!-- 新用户一次性引导：不知道从哪开始？按学习路径走 -->
+  <aside class="path-banner" id="pathBanner" hidden>
+    <div class="pb-ico">🧭</div>
+    <div class="pb-body">
+      <b>不知道从哪开始？按「学习路径」走。</b>
+      <span>从选身份 → 课前预习 → 看视频 → 读原理 → 进实验室 → 课后深化，一路带你完成制备实验。点下方按钮，看每步去到哪个模块。</span>
+    </div>
+    <button class="pb-cta" id="pbCta" type="button">查看路径 →</button>
+    <button class="pb-x" id="pbX" type="button" aria-label="关闭" title="不再提示">✕</button>
+  </aside>
+
+  <!-- 快速找：模块 或 手册章节 -->
+  <div class="quickfind" id="quickFind">
+    <input id="quickFindInput" type="search" placeholder="🔍 快速找：模块 或 手册章节（如「操作步骤」「视频」「报告」「产率」）" autocomplete="off" aria-label="快捷查找"/>
+    <div class="qf-results" id="quickFindResults" hidden></div>
+  </div>
+
+  <!-- 快捷入口（按课前/课中/课后分组） -->
   <div class="sec-title">
     <h2>⚡ 快捷入口</h2>
-    <span class="st-sub">七大功能模块，覆盖课前、课中、课后全流程</span>
+    <span class="st-sub">九大功能模块 · 按「课前 / 课中 / 课后」分组，先想「我处于哪一步」</span>
   </div>
-  <section class="qgrid">
-    <a class="qcard" style="--accent:var(--emerald)" href="assistant.html">
-      <div class="qcard-head"><div class="qcard-icon">🤖</div><div class="qcard-title">AI助手</div></div>
-      <div class="qcard-desc">智能问答与多轮对话测评，围绕实验原理、操作与注意事项随时答疑解惑。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:var(--teal)" href="knowledge.html">
-      <div class="qcard-head"><div class="qcard-icon">🌐</div><div class="qcard-title">知识图谱</div></div>
-      <div class="qcard-desc">可视化探索实验知识点之间的关联，构建系统化知识网络。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:var(--blue)" href="prep.html">
-      <div class="qcard-head"><div class="qcard-icon">📚</div><div class="qcard-title">课前预习</div></div>
-      <div class="qcard-desc">对话测评 + 习题检测 + 错题本，进实验室前打牢基础。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:var(--yellow)" href="index.html#/videos">
-      <div class="qcard-head"><div class="qcard-icon">🎬</div><div class="qcard-title">视频资源</div></div>
-      <div class="qcard-desc">实验操作演示与原理讲解视频合集，直观学习每个关键步骤。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:var(--purple)" href="index.html#/report" id="reportCard" data-role-gate="teacher">
-      <div class="qcard-head"><div class="qcard-icon">📊</div><div class="qcard-title">实验报告检测评估</div></div>
-      <div class="qcard-desc">上传实验报告，AI 智能检测内容质量并给出评估反馈与改进建议。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:#f472b6" id="genCard" href="generator.html" data-role-gate="teacher">
-      <div class="qcard-head"><div class="qcard-icon">📝</div><div class="qcard-title">智能命题</div></div>
-      <div class="qcard-desc">智能生成 + 自主选题组卷，一键导出 Word/PDF 试卷；多选判分 0/3/5，分值以 5/10 为主。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
-    <a class="qcard" style="--accent:var(--red)" href="index.html#/explore" data-role-gate="non-chemistry">
-      <div class="qcard-head"><div class="qcard-icon">🔭</div><div class="qcard-title">科普探索</div></div>
-      <div class="qcard-desc">面向大众的趣味科普内容，发现配合物与光化学之美。</div>
-      <span class="qcard-go">进入模块 <span class="arr">→</span></span>
-    </a>
+
+  <div class="qgroup">
+    <div class="qgroup-head"><span class="qgroup-tag" data-ph="pre">课前 · 进实验室前</span><span class="qgroup-note">先预习、看视频，建立整体印象</span></div>
+    <section class="qgrid">
+      <a class="qcard" style="--accent:var(--blue)" href="prep.html">
+        <div class="qcard-head"><div class="qcard-icon">📚</div><div class="qcard-title">课前预习</div></div>
+        <div class="qcard-desc">对话测评 + 习题检测 + 错题本，进实验室前打牢基础。</div>
+        <span class="qcard-ph" data-ph="pre">何时用：课前</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:var(--yellow)" href="index.html#/videos">
+        <div class="qcard-head"><div class="qcard-icon">🎬</div><div class="qcard-title">视频资源</div></div>
+        <div class="qcard-desc">实验操作演示与原理讲解视频合集，课前建立整体印象，课中可回看关键步骤。</div>
+        <span class="qcard-ph" data-ph="pre">何时用：课前 · 可课中回看</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:#f472b6" id="genCard" href="generator.html" data-role-gate="teacher">
+        <div class="qcard-head"><div class="qcard-icon">📝</div><div class="qcard-title">智能命题</div></div>
+        <div class="qcard-desc">课前教师组卷：智能生成 + 自主选题组卷，一键导出 Word/PDF 试卷；多选判分 0/3/5，分值以 5/10 为主。</div>
+        <span class="qcard-ph" data-ph="pre">何时用：课前 · 教师组卷</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:var(--red)" href="index.html#/explore" data-role-gate="non-chemistry">
+        <div class="qcard-head"><div class="qcard-icon">🔭</div><div class="qcard-title">科普探索</div></div>
+        <div class="qcard-desc">面向大众的趣味科普，课前发现配合物与光化学之美，激发探索欲。</div>
+        <span class="qcard-ph" data-ph="pre">何时用：课前 · 非化学专业</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+    </section>
+  </div>
+
+  <div class="qgroup">
+    <div class="qgroup-head"><span class="qgroup-tag" data-ph="mid">课中 · 实验室里</span><span class="qgroup-note">照手册操作，遇到问题随时问 AI</span></div>
+    <section class="qgrid">
+      <a class="qcard" style="--accent:var(--emerald)" href="#ch4">
+        <div class="qcard-head"><div class="qcard-icon">🧪</div><div class="qcard-title">实验手册 · 操作步骤</div></div>
+        <div class="qcard-desc">第 4 章操作步骤、关键操作、常见错误与产率计算——进实验室照着做。</div>
+        <span class="qcard-ph" data-ph="mid">何时用：课中（本页，跳到第 4 章）</span>
+        <span class="qcard-go">打开操作步骤 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:#10b981" href="assistant.html">
+        <div class="qcard-head"><div class="qcard-icon">🤖</div><div class="qcard-title">AI助手</div></div>
+        <div class="qcard-desc">智能问答 + 多轮测评，实验课上随问随答；经讲义校准，附安全信息与操作视频。</div>
+        <span class="qcard-ph" data-ph="mid">何时用：课中 · 课后可追问</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+    </section>
+  </div>
+
+  <div class="qgroup">
+    <div class="qgroup-head"><span class="qgroup-tag" data-ph="post">课后 · 深化与评估</span><span class="qgroup-note">查漏补缺、写报告、深挖文献</span></div>
+    <section class="qgrid">
+      <a class="qcard" style="--accent:var(--purple)" href="index.html#/report" id="reportCard" data-role-gate="teacher">
+        <div class="qcard-head"><div class="qcard-icon">📊</div><div class="qcard-title">实验报告检测评估</div></div>
+        <div class="qcard-desc">上传实验报告，AI 智能检测内容质量并给出评估反馈与改进建议。</div>
+        <span class="qcard-ph" data-ph="post">何时用：课后（教师）</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:#60a5fa" href="corpus.html">
+        <div class="qcard-head"><div class="qcard-icon">📖</div><div class="qcard-title">语料库</div></div>
+        <div class="qcard-desc">445 篇中英文文献知识清单，课后深挖文献、拓展眼界。</div>
+        <span class="qcard-ph" data-ph="post">何时用：课后</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+      <a class="qcard" style="--accent:var(--teal)" href="knowledge.html">
+        <div class="qcard-head"><div class="qcard-icon">🌐</div><div class="qcard-title">知识图谱</div></div>
+        <div class="qcard-desc">把零散知识点连成网，薄弱环节可视定位、一键追问 AI。</div>
+        <span class="qcard-ph" data-ph="post">何时用：课后 · 查漏补缺</span>
+        <span class="qcard-go">进入模块 <span class="arr">→</span></span>
+      </a>
+    </section>
+  </div>
+
+  <!-- 学习路径：一条路径走完（参考学习通任务引擎） -->
+  <section class="learnpath" id="learnPath">
+    <div class="sec-title">
+      <h2>🧭 学习路径</h2>
+      <span class="st-sub">新手不知道从哪开始？按这条路径走，每步去哪都标好了</span>
+    </div>
+    <ol class="lp-steps">
+      <li><a href="index.html#identity"><span class="lp-dot" data-ph="all"></span>选身份</a><span class="lp-tag" data-ph="all">全流程</span></li>
+      <li><a href="prep.html"><span class="lp-dot" data-ph="pre"></span>课前预习</a><span class="lp-tag" data-ph="pre">课前</span></li>
+      <li><a href="index.html#/videos"><span class="lp-dot" data-ph="pre"></span>看视频</a><span class="lp-tag" data-ph="pre">课前</span></li>
+      <li><a href="#ch1"><span class="lp-dot" data-ph="pre"></span>读原理（手册 1-3 章）</a><span class="lp-tag" data-ph="pre">课前</span></li>
+      <li><a href="#ch4"><span class="lp-dot" data-ph="mid"></span>进实验室操作（第 4 章）</a><span class="lp-tag" data-ph="mid">课中</span></li>
+      <li><a href="#ch5"><span class="lp-dot" data-ph="post"></span>课后深化（第 5-11 章）</a><span class="lp-tag" data-ph="post">课后</span></li>
+      <li><a href="knowledge.html"><span class="lp-dot" data-ph="post"></span>查漏补缺（知识图谱）</a><span class="lp-tag" data-ph="post">课后</span></li>
+      <li><a href="index.html#/report"><span class="lp-dot" data-ph="post"></span>写报告 / 评估 / 测验</a><span class="lp-tag" data-ph="post">课后</span></li>
+    </ol>
   </section>
 
   <!-- 实验手册 -->
@@ -638,6 +710,10 @@ function renderMd(md){
   return out.join("");
 }
 var CONF_COLOR={"权威文献":"#10b981","实验讲义":"#60a5fa","理论推导":"#a78bfa","经验总结":"#fbbf24"};
+/* 章节 → 阶段映射（静态，不改 manual.json）；ch8 兼课中、ch11 兼课后 */
+var PH_LABEL={pre:"课前",mid:"课中",post:"课后",all:"全流程"};
+var CH_PHASE={ch1:"pre",ch2:"pre",ch3:"pre",ch4:"mid",ch5:"mid",ch6:"post",ch7:"post",ch8:"pre",ch9:"post",ch10:"post",ch11:"mid"};
+function phOf(id){return CH_PHASE[id]||"all";}
 
 /* ================= 手册渲染 ================= */
 function renderManual(data){
@@ -647,10 +723,10 @@ function renderManual(data){
   chapters.forEach(function(ch){
     var secs=ch.sections||[];secTotal+=secs.length;
     var num=("0"+ch.number).slice(-2);
-    tocHtml+='<a href="#'+esc(ch.id)+'"><span class="tnum">'+num+"</span><span>"+esc(ch.title)+"</span></a>";
+    tocHtml+='<a href="#'+esc(ch.id)+'"><span class="tnum">'+num+'</span><span class="toc-ph" data-ph="'+phOf(ch.id)+'"></span><span>'+esc(ch.title)+"</span></a>";
     var op=document.createElement("option");op.value=ch.id;op.textContent="第 "+ch.number+" 章 · "+ch.title;sel.appendChild(op);
     var h='<section class="chapter" id="'+esc(ch.id)+'">';
-    h+='<div class="ch-head"><span class="ch-num">第 '+ch.number+' 章</span><h2>'+esc(ch.title)+"</h2></div>";
+    h+='<div class="ch-head"><span class="ch-num">第 '+ch.number+' 章</span><h2>'+esc(ch.title)+'</h2><span class="ch-ph" data-ph="'+phOf(ch.id)+'">'+PH_LABEL[phOf(ch.id)]+"</span></div>";
     if(ch.summary)h+='<div class="ch-summary"><b>本章导读</b>'+esc(ch.summary)+"</div>";
     secs.forEach(function(s){
       h+='<div class="sec" id="'+esc(s.id)+'">';
@@ -750,6 +826,84 @@ fetch("data/manual.json",{cache:'no-store'}).then(function(r){
   if(!r.ok)throw new Error("HTTP "+r.status);
   return r.json();
 }).then(renderManual).catch(showError);
+
+/* ================= 新用户导航：学习路径 / 快速找 / 首访横幅 / 阶段跳转 ================= */
+function jumpToChapter(id){
+  var el=document.getElementById(id);if(!el)return;
+  el.scrollIntoView({behavior:"smooth",block:"start"});
+  if(history.replaceState)history.replaceState(null,"","#"+id);
+  var sel=$("#tocSelect");if(sel&&sel.value!==id)sel.value=id;
+  var links=document.querySelectorAll("#tocNav a");
+  for(var i=0;i<links.length;i++){var a=links[i];a.classList.toggle("active",a.getAttribute("href")==="#"+id);}
+}
+/* 各类 `#chX` 链接（学习路径 / 课中卡片）→ 平滑跳转；tocNav 交给 initSpy 处理 */
+document.addEventListener("click",function(e){
+  var a=e.target&&e.target.closest?e.target.closest('a[href^="#ch"]'):null;
+  if(!a)return;
+  if(a.closest("#tocNav"))return;
+  e.preventDefault();jumpToChapter(a.getAttribute("href").slice(1));
+});
+/* —— 首访路径横幅（localStorage 关闭即不再提示）—— */
+(function(){
+  var ban=document.getElementById("pathBanner");if(!ban)return;
+  var seen=false;try{seen=!!localStorage.getItem("chemaiPathSeen");}catch(e){}
+  if(!seen)ban.hidden=false;
+  var x=document.getElementById("pbX"),cta=document.getElementById("pbCta");
+  if(x)x.addEventListener("click",function(){ban.hidden=true;try{localStorage.setItem("chemaiPathSeen","1");}catch(e){}});
+  if(cta)cta.addEventListener("click",function(){
+    var lp=document.getElementById("learnPath");
+    if(lp)lp.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+})();
+/* —— 快速找（模块 + 手册章节）—— */
+(function(){
+  var MODULES=[
+    {k:"课前预习",h:"prep.html",d:"对话测评 + 习题检测 + 错题本",ph:"pre",i:"📚"},
+    {k:"视频资源",h:"index.html#/videos",d:"实验操作演示与原理讲解合集",ph:"pre",i:"🎬"},
+    {k:"知识图谱",h:"knowledge.html",d:"把知识点连成网，课后查漏补缺",ph:"post",i:"🌐"},
+    {k:"实验手册 · 操作步骤",h:"#ch4",d:"第 4 章操作步骤与产率计算",ph:"mid",i:"🧪"},
+    {k:"AI助手",h:"assistant.html",d:"智能问答 + 多轮测评",ph:"mid",i:"🤖"},
+    {k:"实验报告检测评估",h:"index.html#/report",d:"上传报告，AI 智能评估",ph:"post",i:"📊"},
+    {k:"智能命题",h:"generator.html",d:"课前教师组卷：智能生成 + 自主选题组卷",ph:"pre",i:"📝"},
+    {k:"语料库",h:"corpus.html",d:"445 篇中英文文献知识清单",ph:"post",i:"📖"},
+    {k:"科普探索",h:"index.html#/explore",d:"面向大众的趣味科普，课前发现之美",ph:"pre",i:"🔭"}
+  ];
+  var input=document.getElementById("quickFindInput"),box=document.getElementById("quickFindResults");
+  if(!input||!box)return;
+  function chapters(){
+    var out=[],cs=document.querySelectorAll("#manualBox .chapter");
+    for(var i=0;i<cs.length;i++){
+      var c=cs[i],id=c.id||"",t=c.querySelector(".ch-head h2"),n=c.querySelector(".ch-num");
+      if(id&&t)out.push({k:n.textContent+" · "+t.textContent,h:"#"+id,d:"手册章节",ph:phOf(id),i:"📖"});
+    }
+    return out;
+  }
+  function show(list){
+    if(!list.length){box.innerHTML='<div class="qf-none">没有匹配项，试试「操作」「视频」「报告」「产率」</div>';box.hidden=false;return;}
+    var h="";
+    for(var i=0;i<list.length;i++){var m=list[i];
+      h+='<div class="qf-item" data-h="'+m.h.replace(/"/g,"&quot;")+'"><span class="qf-ico">'+m.i+'</span><span class="qf-main"><span class="qf-k">'+m.k+'</span><span class="qf-d">'+m.d+'</span></span><span class="qf-ph" data-ph="'+m.ph+'">'+PH_LABEL[m.ph]+"</span></div>";
+    }
+    box.innerHTML=h;box.hidden=false;
+  }
+  function find(q){
+    var hits=[];
+    for(var i=0;i<MODULES.length;i++){var m=MODULES[i];if(m.k.toLowerCase().indexOf(q)>-1||m.d.toLowerCase().indexOf(q)>-1)hits.push(m);}
+    var cs=chapters();for(var j=0;j<cs.length;j++){var c=cs[j];if(c.k.toLowerCase().indexOf(q)>-1)hits.push(c);}
+    return hits.slice(0,12);
+  }
+  input.addEventListener("input",function(){
+    var q=input.value.trim().toLowerCase();
+    if(!q){box.hidden=true;box.innerHTML="";return;}
+    show(find(q));
+  });
+  box.addEventListener("click",function(e){
+    var it=e.target&&e.target.closest?e.target.closest(".qf-item"):null;if(!it)return;
+    var h=it.getAttribute("data-h");
+    box.hidden=true;input.value="";
+    if(h.charAt(0)==="#")jumpToChapter(h.slice(1));else location.href=h;
+  });
+})();
 })();
 </script>
 <script>function setThemeIcon(){var b=document.getElementById('themeToggleBtn');if(b)b.textContent=document.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️';}function toggleTheme(){var h=document.documentElement,cur=h.getAttribute('data-theme')==='light'?'dark':'light';h.setAttribute('data-theme',cur);try{localStorage.setItem('chemaiTheme',cur);}catch(e){}setThemeIcon();}try{setThemeIcon();}catch(e){}</script>
@@ -951,6 +1105,92 @@ document.addEventListener('DOMContentLoaded',function(){
 .banner h1{ filter:drop-shadow(0 4px 22px rgba(45,212,191,.28)); }
 @media (prefers-reduced-motion:reduce){ .manual-head h2,.ch-head h2,.sec-head h3{ text-shadow:none; } }
 </style>
+<style id="ux-path">
+/* ============ 阶段分组快捷入口 ============ */
+.qgroup{margin-bottom:26px}
+.qgroup-head{display:flex;align-items:center;gap:10px;margin:0 0 12px;flex-wrap:wrap}
+.qgroup-tag{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;line-height:1;padding:4px 10px;border-radius:999px;border:1px solid;letter-spacing:.02em;white-space:nowrap}
+.qgroup-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0}
+.qgroup-tag[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 40%,transparent); background:color-mix(in srgb,var(--ph-pre) 12%,transparent)}
+.qgroup-tag[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 40%,transparent); background:color-mix(in srgb,var(--ph-mid) 12%,transparent)}
+.qgroup-tag[data-ph=post]{color:var(--ph-post);border-color:color-mix(in srgb,var(--ph-post) 40%,transparent);background:color-mix(in srgb,var(--ph-post) 12%,transparent)}
+.qgroup-tag[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 40%,transparent); background:color-mix(in srgb,var(--ph-all) 12%,transparent)}
+.qgroup-note{font-size:12.5px;color:var(--t3,#94a3b8)}
+.qgroup .qgrid{margin-bottom:0}
+.qcard-ph{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:600;line-height:1;padding:3px 8px;border-radius:999px;border:1px solid;margin-top:8px;white-space:nowrap;align-self:flex-start}
+.qcard-ph::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+.qcard-ph[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 35%,transparent); background:color-mix(in srgb,var(--ph-pre) 10%,transparent)}
+.qcard-ph[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 35%,transparent); background:color-mix(in srgb,var(--ph-mid) 10%,transparent)}
+.qcard-ph[data-ph=post]{color:var(--ph-post);border-color:color-mix(in srgb,var(--ph-post) 35%,transparent);background:color-mix(in srgb,var(--ph-post) 10%,transparent)}
+.qcard-ph[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 35%,transparent); background:color-mix(in srgb,var(--ph-all) 10%,transparent)}
+/* ============ 手册章节阶段徽章 ============ */
+.toc-ph{display:inline-flex;width:7px;height:7px;border-radius:50%;background:var(--t3,#94a3b8);margin:0 4px;flex-shrink:0;vertical-align:middle}
+.toc a.active .toc-ph{background:var(--emerald)}
+.toc-ph[data-ph=pre] {background:var(--ph-pre)}
+.toc-ph[data-ph=mid] {background:var(--ph-mid)}
+.toc-ph[data-ph=post]{background:var(--ph-post)}
+.toc-ph[data-ph=all] {background:var(--ph-all)}
+.ch-ph{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;line-height:1;padding:3px 9px;border-radius:999px;border:1px solid;white-space:nowrap;align-self:center;margin-left:2px}
+.ch-ph::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+.ch-ph[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 40%,transparent); background:color-mix(in srgb,var(--ph-pre) 12%,transparent)}
+.ch-ph[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 40%,transparent); background:color-mix(in srgb,var(--ph-mid) 12%,transparent)}
+.ch-ph[data-ph=post]{color:var(--ph-post);border-color:color-mix(in srgb,var(--ph-post) 40%,transparent);background:color-mix(in srgb,var(--ph-post) 12%,transparent)}
+.ch-ph[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 40%,transparent); background:color-mix(in srgb,var(--ph-all) 12%,transparent)}
+/* ============ 学习路径 stepper ============ */
+.learnpath{scroll-margin-top:84px;margin:6px 0 34px;padding:26px 22px;border-radius:16px;border:1px solid var(--bd2,rgba(148,163,184,.15));background:linear-gradient(180deg,var(--bg2,#111827),transparent)}
+.learnpath .sec-title{margin-bottom:20px}
+.lp-steps{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:lp}
+.lp-steps li{display:flex;align-items:center;gap:12px;padding:9px 8px;border-radius:10px;transition:background .2s;counter-increment:lp}
+.lp-steps li::before{content:counter(lp);width:22px;height:22px;border-radius:50%;background:var(--bg2,#111827);border:1px solid var(--bd2,rgba(148,163,184,.15));color:var(--t3,#94a3b8);font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.lp-steps li:hover{background:color-mix(in srgb,var(--emerald) 8%,transparent)}
+.lp-steps a{display:inline-flex;align-items:center;gap:8px;color:var(--t1,#e5e7eb);font-size:14px;flex:1;min-width:0;text-decoration:none}
+.lp-steps a:hover{color:var(--emerald)}
+.lp-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px color-mix(in srgb,currentColor 18%,transparent)}
+.lp-dot[data-ph=pre] {background:var(--ph-pre)}
+.lp-dot[data-ph=mid] {background:var(--ph-mid)}
+.lp-dot[data-ph=post]{background:var(--ph-post)}
+.lp-dot[data-ph=all] {background:var(--ph-all)}
+.lp-tag{font-size:10px;font-weight:700;line-height:1;padding:3px 8px;border-radius:999px;border:1px solid;white-space:nowrap;flex-shrink:0}
+.lp-tag[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 40%,transparent); background:color-mix(in srgb,var(--ph-pre) 12%,transparent)}
+.lp-tag[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 40%,transparent); background:color-mix(in srgb,var(--ph-mid) 12%,transparent)}
+.lp-tag[data-ph=post]{color:var(--ph-post);border-color:color-mix(in srgb,var(--ph-post) 40%,transparent);background:color-mix(in srgb,var(--ph-post) 12%,transparent)}
+.lp-tag[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 40%,transparent); background:color-mix(in srgb,var(--ph-all) 12%,transparent)}
+@media (max-width:560px){.lp-steps li{flex-wrap:wrap;gap:6px}.lp-steps a{width:calc(100% - 8px)}.lp-tag{order:2}}
+/* ============ 快速找 ============ */
+.quickfind{margin:0 0 24px}
+#quickFindInput{width:100%;height:46px;padding:0 16px;border-radius:12px;border:1px solid var(--bd2,rgba(148,163,184,.15));background:var(--bg2,#111827);color:var(--t1,#e5e7eb);font-size:14px;font-family:inherit}
+#quickFindInput::placeholder{color:var(--t3,#94a3b8)}
+#quickFindInput:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(16,185,129,.15)}
+.qf-results{margin-top:8px;border-radius:12px;border:1px solid var(--bd2,rgba(148,163,184,.15));background:var(--bg2,#111827);overflow:hidden}
+.qf-results[hidden]{display:none}
+.qf-item{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;font-size:13.5px;color:var(--t1,#e5e7eb);border-bottom:1px solid var(--bd2,rgba(148,163,184,.1))}
+.qf-item:last-child{border-bottom:none}
+.qf-item:hover{background:color-mix(in srgb,var(--emerald) 8%,transparent);color:var(--emerald)}
+.qf-item .qf-ico{flex-shrink:0}
+.qf-item .qf-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.qf-item .qf-k{font-weight:600}
+.qf-item .qf-d{font-size:12px;color:var(--t3,#94a3b8)}
+.qf-item .qf-ph{font-size:10px;font-weight:700;line-height:1;padding:2px 7px;border-radius:999px;border:1px solid;flex-shrink:0}
+.qf-item .qf-ph[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 40%,transparent)}
+.qf-item .qf-ph[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 40%,transparent)}
+.qf-item .qf-ph[data-ph=post]{color:var(--ph-post);border-color:color-mix(in srgb,var(--ph-post) 40%,transparent)}
+.qf-item .qf-ph[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 40%,transparent)}
+.qf-none{padding:12px 14px;font-size:13px;color:var(--t3,#94a3b8)}
+/* ============ 首访路径横幅 ============ */
+.path-banner{display:flex;align-items:center;gap:14px;padding:15px 18px;border-radius:14px;border:1px solid color-mix(in srgb,var(--emerald) 30%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--emerald) 14%,transparent),color-mix(in srgb,var(--teal) 8%,transparent));margin-bottom:22px}
+.path-banner[hidden]{display:none}
+.pb-ico{font-size:26px;flex-shrink:0}
+.pb-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.pb-body b{font-size:14px;color:var(--t1,#e5e7eb)}
+.pb-body span{font-size:12.5px;color:var(--t3,#94a3b8);line-height:1.5}
+.pb-cta{height:34px;padding:0 14px;border-radius:9px;border:1px solid var(--ph-mid);background:color-mix(in srgb,var(--ph-mid) 16%,transparent);color:var(--ph-mid);font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:.2s}
+.pb-cta:hover{background:color-mix(in srgb,var(--ph-mid) 28%,transparent);transform:translateY(-1px)}
+.pb-x{width:30px;height:30px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--t3,#94a3b8);font-size:14px;cursor:pointer;flex-shrink:0;transition:.2s}
+.pb-x:hover{color:var(--t1,#e5e7eb);border-color:var(--bd2,rgba(148,163,184,.15))}
+@media (max-width:640px){.path-banner{flex-wrap:wrap}.pb-cta{order:3;width:100%}.qgroup-head .qgroup-note{display:none}.learnpath{padding:20px 16px}}
+@media (prefers-reduced-motion:reduce){.lp-steps li,.qcard-ph,.pb-cta,.qf-item{transition:none}.learnpath{scroll-behavior:auto}}
+</style>
 <script src="assets/bg-particles.js" defer></script>
+<script src="assets/nav-guide.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+/* ============================================================
+   nav-guide.css —— 全站「课前/课中/课后」阶段语言 + logo 小字（返回主页）
+   由各静态页 <link rel="stylesheet"> 共享加载（与 mobile-content-guard.css 并列）。
+   颜色沿用主题 CSS 变量；色板：pre 蓝 / mid 翠绿 / post 紫 / all 黄。
+   ============================================================ */
+:root{
+  --ph-pre:#60a5fa;
+  --ph-mid:#10b981;
+  --ph-post:#a78bfa;
+  --ph-all:#fbbf24;
+}
+[data-theme="light"]{
+  --ph-pre:#2563eb;
+  --ph-mid:#059669;
+  --ph-post:#7c3aed;
+  --ph-all:#d97706;
+}
+
+/* —— 导航链接阶段胶囊 —— */
+.nav-links a{position:relative}
+.nav-ph{display:inline-flex;align-items:center;gap:3px;margin-left:6px;font-size:10px;
+  font-weight:700;line-height:1;padding:2px 7px;border-radius:999px;
+  border:1px solid;vertical-align:middle;letter-spacing:.02em;white-space:nowrap}
+.nav-ph i{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+.nav-ph[data-ph=pre] {color:var(--ph-pre); border-color:color-mix(in srgb,var(--ph-pre) 40%,transparent); background:color-mix(in srgb,var(--ph-pre) 12%,transparent)}
+.nav-ph[data-ph=mid] {color:var(--ph-mid); border-color:color-mix(in srgb,var(--ph-mid) 40%,transparent); background:color-mix(in srgb,var(--ph-mid) 12%,transparent)}
+.nav-ph[data-ph=post]{color:var(--ph-post); border-color:color-mix(in srgb,var(--ph-post) 40%,transparent); background:color-mix(in srgb,var(--ph-post) 12%,transparent)}
+.nav-ph[data-ph=all] {color:var(--ph-all); border-color:color-mix(in srgb,var(--ph-all) 40%,transparent); background:color-mix(in srgb,var(--ph-all) 12%,transparent)}
+@media (max-width:640px){
+  .nav-ph{display:none}
+  /* 窄屏：收起「🧭怎么用」与「身份徽章」，只留 logo+主题切换+汉堡，避免导航条被挤爆 */
+  .navbar .path-btn,.navbar .nav-user{display:none}
+}
+
+/* —— 「🧭 怎么用」按钮（与主题切换并列的次级按钮） —— */
+.path-btn{background:var(--bg2);border:1px solid var(--bd2);color:var(--t2);height:34px;padding:0 12px;
+  border-radius:10px;cursor:pointer;font-size:13px;display:inline-flex;align-items:center;gap:5px;
+  transition:.25s;flex-shrink:0;line-height:1;white-space:nowrap}
+.path-btn:hover{border-color:var(--emerald);color:var(--emerald);transform:translateY(-1px)}
+
+/* —— 汉堡钮（窄屏塌缩用；5 个页面各自带等同样式，此处兜底 generator/index 尚无定义） —— */
+.hamburger{display:none;background:var(--bg2,#0f172a);border:1px solid var(--bd2,rgba(148,163,184,.2));
+  color:var(--t2,#94a3b8);border-radius:9px;padding:8px 12px;font-size:20px;cursor:pointer;
+  min-width:44px;min-height:44px;align-items:center;justify-content:center;flex-shrink:0;line-height:1}
+
+@media (prefers-reduced-motion:reduce){
+  .nav-links a,.path-btn{transition:none!important}
+}
+
+/* ============================================================
+   导航宽度收敛 + 窄屏塌缩为汉堡下拉
+   根因：`.nav-links` 内容超宽（非化学身份 7 个链接带阶段胶囊 ≈838px），
+   而 navbar 任意宽度都放不下（logo 288 + 右侧组 342 + 链接 ≥838）。
+   `.nav-links{overflow-x:auto}` 会把右侧链接藏进无滚动条的横向滚动里
+   （科普探索等常被“挤占”）。修复：
+   ① 桌面(≥1280px)收紧链接与阶段胶囊，装下全部链接→科普探索可见；
+   ② <1280px 用 `:has(#hamburgerBtn)` 塌缩成汉堡下拉（全部 7 页均可塌缩，
+      其中 index/generator 的导航钮已由页面各自补上），链接全部落入下拉，不再被裁。
+   ============================================================ */
+@media (min-width:1280px){
+  .navbar .nav-links{gap:1px}
+  .navbar .nav-links a{padding:7px 8px;font-size:12px}
+  .navbar .nav-ph{margin-left:4px;padding:2px 4px;font-size:9px}
+}
+@media (max-width:1279px){
+  .navbar:has(#hamburgerBtn) #hamburgerBtn{display:flex}
+  .navbar:has(#hamburgerBtn) .nav-links{display:none;position:absolute;top:64px;left:0;right:0;
+    background:var(--bg2,#0a0e1a);border-bottom:1px solid var(--bd2);flex-direction:column;
+    align-items:stretch;padding:4px 10px 10px;gap:2px;z-index:99}
+  .navbar:has(#hamburgerBtn) .nav-links.open{display:flex}
+  .navbar:has(#hamburgerBtn) .nav-links a{padding:11px 14px;font-size:14px;border-radius:10px}
+  .navbar:has(#hamburgerBtn) .nav-ph{display:none}
+}

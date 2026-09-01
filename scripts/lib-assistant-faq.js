@@ -176,7 +176,7 @@ function findScalarField(src, start, end, field) {
 /**
  * 应用清洗清单：把指定条目 index 的 keys/ents 数组 或 answer/detail 字符串替换为新内容。
  * @param {string} html
- * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string}>} changes
+ * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string, new_title?:string}>} changes
  * @returns {string} 新 html
  */
 function applyManifest(html, changes) {
@@ -213,6 +213,10 @@ function applyManifest(html, changes) {
         const asp = findScalarField(src, e.entryStart, e.entryEnd, 'answer');
         if (asp) edits.push([asp.end - e.entryStart, asp.end - e.entryStart, ', detail:' + JSON.stringify(ch.new_detail)]);
       }
+    }
+    if (ch.new_title !== undefined) {
+      const sp = findScalarField(src, e.entryStart, e.entryEnd, 'title');
+      if (sp) edits.push([sp.start - e.entryStart, sp.end - e.entryStart, JSON.stringify(ch.new_title)]);
     }
     edits.sort((a, b) => b[0] - a[0]);
     let newEntry = entrySrc;
@@ -273,7 +277,7 @@ function writeFAQRuntime(arr, fp) {
  * 对 FAQ 对象数组应用清洗清单（与 applyManifest 的语义一致，但直接作用于数组对象，
  * 无需字符串手术）。返回新数组，不改动入参。
  * @param {Array} arr
- * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string}>} changes
+ * @param {Array<{index:number, new_keys?:string[], new_ents?:string[], new_answer?:string, new_detail?:string, new_title?:string}>} changes
  */
 function applyManifestToArray(arr, changes) {
   const out = arr.map(e => Object.assign({}, e));
@@ -284,6 +288,7 @@ function applyManifestToArray(arr, changes) {
     if (ch.new_ents !== undefined) e.ents = ch.new_ents;
     if (ch.new_answer !== undefined) e.answer = ch.new_answer;
     if (ch.new_detail !== undefined) e.detail = ch.new_detail;
+    if (ch.new_title !== undefined) e.title = ch.new_title;
   }
   return out;
 }

@@ -2,7 +2,7 @@
 /**
  * ChemAI 一键全量检查（更便捷的渠道）
  * 用法: node scripts/check-all.js
- * 覆盖: ①全站乱码 ②FAQ 渲染 ③语料健康 ④assistant 语法/函数 ⑤题库/细则
+ * 覆盖: ①全站乱码 ②FAQ 渲染 ③语料健康 ④assistant 语法/函数 ⑤讲义事实守门 ⑥scanFacts 回归
  */
 const fs = require('fs');
 const path = require('path');
@@ -58,6 +58,32 @@ const a = fs.readFileSync(path.join(ROOT, 'assistant.html'), 'utf8');
 const needFns = ['handleQA','matchFAQ','renderRichAnswer','reportAnalysisHTML','calcMolar','recordLastQA','renderWrongBook','handleFileUpload','extractSearchKeywords','switchTab'];
 const missingFns = needFns.filter(f => !a.includes('function ' + f + '('));
 missingFns.length ? fail('缺函数: ' + missingFns.join(',')) : pass('核心函数齐全');
+
+// 5. 讲义事实守门（verify-lecture-facts.scanFacts，唯一的数据正确性 oracle 封装）
+console.log('\n【5. 讲义事实守门】');
+try {
+  const out = execSync('node "' + path.join(__dirname, 'verify-lecture-facts.js') + '"', { encoding: 'utf8' });
+  const auth = (out.match(/✔ 权威层[^\n]*/) || [])[0];
+  const warn = (out.match(/⚠ 文献层[^\n]*/) || [])[0];
+  if (auth) pass(auth.replace(/^✔\s*/, '')); else pass('权威层（FAQ/测评/讲义/题库）无讲义数值冲突');
+  if (warn) console.log('    ' + warn);
+} catch (e) {
+  const o = (e.stdout || '').toString();
+  const conflict = (o.match(/权威层讲义冲突 (\d+) 处/) || [])[0];
+  fail('讲义事实冲突: ' + (conflict || (e.message.split('\n')[0])));
+}
+
+// 6. scanFacts 回归（正确表述不误报；错误表述命中仅报告）
+console.log('\n【6. scanFacts 回归】');
+try {
+  const out = execSync('node "' + path.join(__dirname, 'test-scanfacts.js') + '"', { encoding: 'utf8' });
+  const fp = (out.match(/正确表述误报: (\d+)/) || [])[1];
+  const hit = (out.match(/错误表述命中: (\d+)/) || [])[1];
+  if (fp === '0') pass('正确表述误报 0，错误表述命中 ' + hit); else fail('正确表述误报 ' + fp);
+} catch (e) {
+  const fp = ((e.stdout || '').toString().match(/正确表述误报: (\d+)/) || [])[1];
+  fail('scanFacts 回归失败: ' + (fp ? '正确表述误报 ' + fp : e.message.split('\n')[0]));
+}
 
 console.log('\n========== 检查完成：' + (ok ? '全部通过 ✅' : '存在问题 ❌') + ' ==========');
 process.exit(ok ? 0 : 1);

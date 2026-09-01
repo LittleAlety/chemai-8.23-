@@ -4,6 +4,7 @@
 <script>(function(){try{var t=localStorage.getItem('chemaiTheme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
+<link rel="stylesheet" href="assets/nav-guide.css">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>知识图谱 · ChemAI 三草酸合铁酸钾制备实验</title>
@@ -363,7 +364,6 @@ button{font-family:inherit;cursor:pointer}
   .badge{padding:3px 8px;font-size:10px}
   #searchInput{width:100px;font-size:12px;padding:6px 26px 6px 28px}
   #searchInput:focus{width:120px}
-  .stage{height:calc(100vh - 280px)}
   .panel{top:4px;right:4px;bottom:4px;left:4px;width:auto;max-width:none;border-radius:12px;font-size:12px}
   .panel-head{padding:12px 14px 10px}
   .panel-title{font-size:15px}
@@ -399,7 +399,7 @@ button{font-family:inherit;cursor:pointer}
     <span class="logo-icon">⚗</span>
     <span class="logo-text">
       <span class="logo-name">ChemAI</span>
-      <span class="logo-sub">K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</span>
+      <span class="logo-sub">返回主页</span>
     </span>
   </a>
   <div class="nav-links">
@@ -413,6 +413,7 @@ button{font-family:inherit;cursor:pointer}
     <a class="nav-link" href="corpus.html">语料库</a>
   </div>
   <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="切换白天/夜晚" aria-label="切换主题"></button>
+  <button class="path-btn" data-href="main.html#learnPath" title="还不知道怎么用？按学习路径走">🧭 怎么用</button>
   <button class="hamburger" id="hamburgerBtn" type="button" aria-label="导航菜单">☰</button>
 </nav>
 <div class="page">
@@ -1991,5 +1992,6 @@ document.addEventListener('DOMContentLoaded',function(){
 </style>
 <script>/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
 (function(){var u,r=null;try{u=JSON.parse(localStorage.getItem('chem-user')||'{}');r=(u&&u.state&&u.state.role)||null;}catch(e){}var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}})();</script>
+<script src="assets/nav-guide.js" defer></script>
 </body>
 </html>

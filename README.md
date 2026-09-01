@@ -14,7 +14,7 @@
 
 **关于"AI 神经网络模式"的诚实说明**（详见 [`docs/AI模型架构.md`](./docs/AI模型架构.md)）：本平台作答所用的**检索排序不是神经网络**——`searchCorpus` / `matchFAQ` 是一张**手工设定的、无梯度、跨轮次稳定**的权重打分表（语料字段 10/6/6/4/4/3、CONCEPT_BOOST +8、HIT_THRESHOLD=6；FAQ 按 keyScore+entScore+longKey·0.5+lenBonus+titleTopical+distinctHits·2）。全系统**唯一含神经网络**的是 **DeepSeek Transformer 大语言模型**（生成层 + 评分层，托管 API、权重冻结、ChemAI 侧零微调）。v85 起新增**语料权威度权重**：由离线作业 [`训练管道/corpus_weight_analysis.js`](./训练管道/corpus_weight_analysis.js) 读透全部 445 篇文献后，计算每条语料 `A(id)`、子域覆盖度/反挤占 boost，以及"语料子域→权威 FAQ 子域"映射，**加法式/门禁级**注入运行时（不进 `matchFAQ` 基础公式），详见 [`docs/语料权重分析报告.md`](./docs/语料权重分析报告.md)。
 
-**关于 v86 "对齐 demo 精华"**：本版把 `emblulol/Chemai-demo` 里**留而未用**的移动端与主题体验取回本地——① **主题跨页桥接**（SPA 的 `chem-theme` 与静态页的 `chemaiTheme` 两键互通，切主题全站一致）；② **移动端安全区 / 触控目标 / 文字缩放锁定**（`viewport-fit=cover` + `safe-area-inset-*` + 44px 触控 + `text-size-adjust:100%`）；③ **知识图谱手机端字号自适应 + 缩放下限**；④ `color-scheme` meta 全站统一；⑤ **已识别身份自动继承**（选过身份的用户回落地页直接进手册）；⑥ 干净化——`kg.json` 删 15 个死字段 `cat`、语料难度 15 条裸 `中` 归一为 `进阶级`。
+**关于 v86 "对齐 demo 精华"**：本版把 `emblulol/Chemai-demo` 里**留而未用**的移动端与主题体验取回本地——① **主题跨页桥接**（SPA 的 `chem-theme` 与静态页的 `chemaiTheme` 两键互通，切主题全站一致）；② **移动端安全区 / 触控目标 / 文字缩放锁定**（`viewport-fit=cover` + `safe-area-inset-*` + 44px 触控 + `text-size-adjust:100%`）；③ **知识图谱手机端字号自适应 + 缩放下限**；④ `color-scheme` meta 全站统一；⑤ **身份切换停留 index**（身份卡点击后原地刷新徽章/门控，不搬 demo 的"自动进手册"跳转）；⑥ 干净化——`kg.json` 删 15 个死字段 `cat`、语料难度 15 条裸 `中` 归一为 `进阶级`。
 
 ---
 
@@ -22,7 +22,7 @@
 
 | 页面 | 文件 | 说明 |
 |------|------|------|
-| **首页入口** | `index.html` | React SPA 首页，**命名路由**（`#/report`、`#/explore`…）才接管、裸 `#/` 回落地页；身份选择（非化学专业 / 化学专业 / **教师**），含 LLM 配置面板；**v86 身份自动继承**——已选过身份的用户再访无 hash 落地页时直接 `location.replace("main.html")`，不再重复选身份；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
+| **首页入口** | `index.html` | React SPA 首页，**命名路由**（`#/report`、`#/explore`…）才接管、裸 `#/` 回落地页；身份选择（非化学专业 / 化学专业 / **教师**），含 LLM 配置面板；**v86 身份切换停留 index**——选身份/切换身份后原地刷新右上角徽章与角色门控，不自动跳 main（`main.html` 手册由「查看实验手册」等导航进入）；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
 | **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**4211 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**v85 语料权威度 hook**（`loadCorpus` 摄取 `corpus_weights.json` → `searchCorpus` 加法权威 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，全部不进 `matchFAQ` 基础公式）；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
 | **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染；教师快捷入口已加 **genCard（智能命题·教师门控）**，模块计数 6→7 |
 | **教师命题** | `generator.html` | **教师门控命题大板块**：智能生成 + 自主选题 + Word/PDF 导出 + 超星风格分节渲染 + 化学式上下标；答案契约（`referenceAnswer`）＋字母分配，AI 补全选项/难度系数 |
@@ -112,7 +112,7 @@
 - **主题跨页桥接**：静态页读 `localStorage.chemaiTheme`（裸 `'dark'/'light'`），React SPA 用 Zustand persist 键 `chem-theme`（`{"state":{"theme":…},"version":0}`）。`index.html` 内的桥接脚本在加载时把权威键 `chemaiTheme` 灌进 `chem-theme.state.theme`（保留 `version` 与其余 state 字段），并用 `MutationObserver` 监听 `<html data-theme>` 变化回写——用户在 SPA（`#/videos` 等）或任一静态页切主题，全站保持一致，不再断链。
 - **移动端显示优化**（`assets/mobile-content-guard.css` 追加块）：`text-size-adjust:100%` 锁定文字缩放；`padding-bottom:env(safe-area-inset-bottom)` / `.navbar` `padding-top:env(safe-area-inset-top)`（配合 7 页 `viewport-fit=cover`）；≤820px 下导航/发送钮 **≥44px**、图例折叠/缩放钮 **≥40px**、中文 11→12/13px。
 - **知识图谱手机端**（`knowledge.html`）：`fsScale = min(1, max(0.75, W/700))` 标签字号随视口宽等比缩小；`scale = max(0.45, ·/1400)` 缩放下限防窄屏图谱过度缩小。
-- **身份自动继承**（`index.html`）：`chem-user` 角色有效且无命名路由 hash 时 `location.replace("main.html")`，已识别用户不再重复选身份；`#/report` 等命名路由不受影响。
+- **身份切换停留 index**（`index.html`）：身份卡点击后写入 `chem-user` 并原地 `applyRole` 刷新右上角徽章与 `[data-role-gate]` 门控，停留在 index（不自动跳 `main.html`）；`#/report` 等命名路由不受影响。
 
 ### 三页深度链接闭环
 
@@ -128,7 +128,7 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 
 ```
 chemai-8.23-/
-├── index.html                 # 首页入口（React SPA，命名路由 + v86 身份自动继承 + 主题桥接，含视频资源库页 + 科普探索页）
+├── index.html                 # 首页入口（React SPA，命名路由 + v86 身份切换停留 index + 主题桥接，含视频资源库页 + 科普探索页）
 ├── assistant.html             # AI 助手（4211 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
 ├── main.html                  # 实验手册（11 章，教师快捷入口 genCard）
 ├── generator.html             # 教师命题大板块（教师门控，智能生成 + 自主选题 + Word/PDF 导出）
@@ -183,7 +183,7 @@ chemai-8.23-/
 - **自定义域名已迁移**：旧 `fec2o4.apay.eu.cc` 因被网络按主机名拦截（同一 GitHub IP 下 `github.io` 可访问、唯该域名握手被 reset）而弃用，站点现用专属子域名 **`k3fec2o43.clawdbot.ggff.net`**（`ggff.net` 后缀实测无代理可握手）。DNS 已在 Cloudflare 配置为 DNS-only（灰云）CNAME → `littlealety.github.io`，仓库 Pages 已设自定义域名并启用 Enforce HTTPS。
 - **网页研究员依赖 CORS 网络**：PubChem / 维基百科为 CORS 开放接口可直连；Bing 经第三方代理（实验性，熔断自动停用）；知网/万方/百度学术/ChemicalBook 无浏览器 CORS，仅提供搜索链接兜底；**MSDS 查询网 / ChemicalBook / PubChem 为外链跳转**（`msdsCardHTML` 前置 somds.com）。
 - **教师命题依赖题库数据**：`generator.html` 的智能生成/自主选题基于 `questions_master.json`（题库池），为 **dev-only 未部署**；且 `.github/workflows/deploy.yml` 的精简 `_site` 组装清单不含生成器与题库——实际上线依赖「从 master 分支构建」发布整仓（`data/` 已含题库则可用，否则生成器功能依赖线上题库存在）。
-- **身份自动继承的取舍**（v86）：已选过身份（`chem-user`）的用户再访问无 hash 的 `index.html` 会被自动跳往 `main.html`，无法回到身份选择卡；如需重新选身份，清除浏览器 `chem-user` 键。
+- **身份切换停留 index**（v86）：身份卡点击后停留 index 原地刷新身份（徽章 + 角色门控），不再自动跳 main；`main.html` 手册通过导航「查看实验手册」进入。`chem-user` 身份跨页共享（index 与 main 读同一键）。
 
 ---
 
@@ -227,7 +227,7 @@ npx serve .                     # Node.js
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
-| **v86** | 09-01 | **对齐 demo 精华（本交付）**：取回 `emblulol/Chemai-demo` 留而未用的体验功能，本地与线上已成并行分叉、互有取舍，此版专搬"本地回退/未做而 demo 保留"的部分，**不搬**会回归本地的 v73 身份/引导/管理员架构、hallmark 样式覆盖层、level4→level3 归并。① **主题跨页桥接**——`index.html` 加桥接脚本：加载时把权威键 `chemaiTheme` 灌进 SPA 的 `chem-theme`（Zustand persist，保留 `version` 与其余 state，只覆写 `state.theme`），并用 `MutationObserver` 监听 `<html data-theme>` 回写，静态页与 SPA（`#/report|explore|quiz|generator|videos|agent`）切主题全站一致，消除"经 SPA 切主题回静态页断链"；② **移动端安全区/触控/文字缩放**——`assets/mobile-content-guard.css` **合并补回** demo 手机端块（`text-size-adjust:100%`、`body padding-bottom:env(safe-area-inset-bottom)`、`.navbar padding-top:env(safe-area-inset-top)`、≤820px 导航/发送钮≥44px、图例/缩放钮≥40px、中文 11→12/13px），**保留本地已有的全宽 overflow-wrap 规则**（合并非覆盖），7 页 viewport meta 补 `viewport-fit=cover`；③ **知识图谱手机端**——`knowledge.html` 加 `fsScale=min(1,max(0.75,W/700))` 标签字号随视口宽等比缩小 + `scale=max(0.45,·/1400)` 缩放下限，`wf` 三处乘 `fsScale`，窄屏图谱不被过度缩小；④ **color-scheme meta 全站统一**——6 页 `<meta name="color-scheme" content="dark light">`；⑤ **已识别身份自动继承**——`chem-user` 角色有效且无命名路由 hash 时 `location.replace("main.html")`（暴露 `window.getChemRole` 供路由块复用同一套角色校验）；⑥ **干净化**——`kg.json` 删 15 个死字段 `cat`（全项目无代码读 `node.cat`，行级删除保留多行数组格式）、`corpus.json` 15 条裸 `中` 难度归一为 `进阶级`（400 进阶级/7 入门/32 基础/6 提高；前端不显示语料难度，`gap-analysis` 对其优先级由 3 升 0）。✅ 6 改动页内联脚本全解析 0 失败、kg/corpus JSON 校验通过、level4 9 节点未归并 |
+| **v86** | 09-01 | **对齐 demo 精华（本交付）**：取回 `emblulol/Chemai-demo` 留而未用的体验功能，本地与线上已成并行分叉、互有取舍，此版专搬"本地回退/未做而 demo 保留"的部分，**不搬**会回归本地的 v73 身份/引导/管理员架构、hallmark 样式覆盖层、level4→level3 归并。① **主题跨页桥接**——`index.html` 加桥接脚本：加载时把权威键 `chemaiTheme` 灌进 SPA 的 `chem-theme`（Zustand persist，保留 `version` 与其余 state，只覆写 `state.theme`），并用 `MutationObserver` 监听 `<html data-theme>` 回写，静态页与 SPA（`#/report|explore|quiz|generator|videos|agent`）切主题全站一致，消除"经 SPA 切主题回静态页断链"；② **移动端安全区/触控/文字缩放**——`assets/mobile-content-guard.css` **合并补回** demo 手机端块（`text-size-adjust:100%`、`body padding-bottom:env(safe-area-inset-bottom)`、`.navbar padding-top:env(safe-area-inset-top)`、≤820px 导航/发送钮≥44px、图例/缩放钮≥40px、中文 11→12/13px），**保留本地已有的全宽 overflow-wrap 规则**（合并非覆盖），7 页 viewport meta 补 `viewport-fit=cover`；③ **知识图谱手机端**——`knowledge.html` 加 `fsScale=min(1,max(0.75,W/700))` 标签字号随视口宽等比缩小 + `scale=max(0.45,·/1400)` 缩放下限，`wf` 三处乘 `fsScale`，窄屏图谱不被过度缩小；④ **color-scheme meta 全站统一**——6 页 `<meta name="color-scheme" content="dark light">`；⑤ **身份切换停留 index**——身份卡点击后写入 `chem-user` 并原地 `applyRole` 刷新右上角徽章与角色门控，停留 index 不跳 main（采纳用户意见：切换身份应落在 index，撤 demo 的"身份识别一次自动进手册"重定向与 `getChemRole` 全局）；⑥ **干净化**——`kg.json` 删 15 个死字段 `cat`（全项目无代码读 `node.cat`，行级删除保留多行数组格式）、`corpus.json` 15 条裸 `中` 难度归一为 `进阶级`（400 进阶级/7 入门/32 基础/6 提高；前端不显示语料难度，`gap-analysis` 对其优先级由 3 升 0）。✅ 6 改动页内联脚本全解析 0 失败、kg/corpus JSON 校验通过、level4 9 节点未归并 |
 | **v85** | 09-01 | **全局优化 + 语料权威度 + AI 模型文档 + 部署补齐**：① **读透全部 445 篇语料**——离线确定性作业 `训练管道/corpus_weight_analysis.js`（`npm run corpus:weights`）计算权威度 `A(id)` + 子域反挤占 boost，产出 `data/corpus_weights.json` + `docs/语料权重分析报告.md`；② **加法式/门禁级运行时 hook**——`loadCorpus`→`searchCorpus` 加法 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，不进 `matchFAQ` 基础公式；③ **AI 模型文档** `docs/AI模型架构.md` 诚实说明检索排序非神经网络、唯一神经网络是 DeepSeek；④ **README 重写**；⑤ **部署补齐**——`deploy.yml` 补 `generator.html`/`data/categories.json`/`data/corpus_weights.json`/`scripts/lib-calc.js`，`package.json` repository.url 修正 |
 | **v74** | 08-25 | **assistant 助手重构落地（v72/v72.1 全部项）**：① **LLM 质检兜底**——`llmAnswerText` 记录 LLM 全文，`selfCheck`/讲义核对运行对象改 `usedLLM?llmAnswerText:html`；② **async 管道**——答案注入包装 `injectDone` Promise，`Promise.all([injectDone,webP,skillP])` 消除竞态；③ **置信度口径**——`faqConfidence()`(0.5~0.95) 替换「命中即0.9」；④ **知识图谱深链**——`SUBFIELD_ALIAS`+`resolveNodeTarget`+`resolveDeepLink`，图谱官返回 `?node=<id>` 深链；⑤ **安全**——上传包裹 `<user-file name>`+system prompt 防提示词注入、PDF 解析改本地 vendor；⑥ **代码清理**——删死代码、合并 DOMAIN_RE |
 

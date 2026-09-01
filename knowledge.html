@@ -2001,21 +2001,21 @@ if(pNote)pNote.addEventListener('click',()=>{
   background:linear-gradient(90deg,#34d399,#2dd4bf,#60a5fa,#a78bfa,#f472b6,#2dd4bf,#34d399);
   background-size:300% 100%;
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  animation:chemaiShine 7s linear infinite;
-  filter:drop-shadow(0 2px 16px rgba(45,212,191,.3));
+  animation:chemaiShine 40s linear infinite;
+  filter:drop-shadow(0 2px 10px rgba(45,212,191,.15));
 }
 @keyframes chemaiShine{0%{background-position:0% 0}100%{background-position:300% 0}}
 /* 统计数字: 霓虹光晕 */
-.stat-num{filter:drop-shadow(0 0 12px rgba(45,212,191,.45))}
+.stat-num{filter:drop-shadow(0 0 8px rgba(45,212,191,.2))}
 /* 等级徽章 / 徽标数字: 发光 */
-.g-tag{text-shadow:0 0 10px currentColor}
-.badge b{filter:drop-shadow(0 0 6px rgba(45,212,191,.4))}
+.g-tag{text-shadow:0 0 4px currentColor}
+.badge b{filter:drop-shadow(0 0 4px rgba(45,212,191,.2))}
 /* 面板/分区标题: 柔和光晕 */
-.panel-title,.section-title,.sec-title{text-shadow:0 0 16px rgba(45,212,191,.22)}
+.panel-title,.section-title,.sec-title{text-shadow:0 0 10px rgba(45,212,191,.12)}
 /* 主按钮文字: 轻微立体光 */
 .btn.primary{text-shadow:0 1px 5px rgba(4,18,27,.4)}
 /* 关键词高亮 */
-.hl{text-shadow:0 0 14px rgba(45,212,191,.35)}
+.hl{text-shadow:0 0 8px rgba(45,212,191,.18)}
 
 /* === ChemAI 全局显示 v52 === */
 /* 环境光斑(固定层, 不挡交互) */
@@ -2024,7 +2024,7 @@ body::after{content:"";position:fixed;inset:auto;width:560px;height:560px;left:-
 /* 导航: 更透毛玻璃 + 激活/悬浮下划线动画 */
 .navbar{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid rgba(45,212,191,.14)}
 .nav-links a{position:relative;isolation:isolate}
-.nav-links a::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--em,var(--emerald,#10b981)),var(--teal,#2dd4bf));transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.3,1);box-shadow:0 0 10px rgba(45,212,191,.55)}
+.nav-links a::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--em,var(--emerald,#10b981)),var(--teal,#2dd4bf));transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.3,1);box-shadow:0 0 5px rgba(45,212,191,.3)}
 .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
 
 /* 滚动条: 渐变滑块 */
@@ -2036,7 +2036,7 @@ body::after{content:"";position:fixed;inset:auto;width:560px;height:560px;left:-
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid rgba(45,212,191,.7);outline-offset:2px;border-radius:6px}
 
 /* 卡片悬浮: 彩色光晕边框 */
-.card:hover,.side-card:hover,.stat-card:hover,.calc-card:hover,.doc-card:hover,.qcard:hover{box-shadow:0 12px 34px rgba(2,6,23,.4),0 0 0 1px rgba(45,212,191,.18),0 0 26px rgba(16,185,129,.13)}
+.card:hover,.side-card:hover,.stat-card:hover,.calc-card:hover,.doc-card:hover,.qcard:hover{box-shadow:0 12px 34px rgba(2,6,23,.4),0 0 0 1px rgba(45,212,191,.18),0 0 14px rgba(16,185,129,.06)}
 
 /* 版面节奏: 标题字距 + 容器一致性 */
 .page-head h1,.banner h1,.page-title,section h2{letter-spacing:.02em}
@@ -2090,8 +2090,8 @@ footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180d
   background:linear-gradient(90deg,#34d399,#2dd4bf,#60a5fa,#2dd4bf,#34d399);
   background-size:300% 100%;
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  animation:chemaiShine 8s linear infinite;
-  filter:drop-shadow(0 2px 14px rgba(45,212,191,.22));
+  animation:chemaiShine 40s linear infinite;
+  filter:drop-shadow(0 2px 10px rgba(45,212,191,.12));
 }
 /* D) 卡片悬浮: 去掉 scale 抖动, 优雅抬升 + 光晕收敛 */
 .card:hover,.side-card:hover,.calc-card:hover,.wrong-item:hover,.doc-card:hover,.qcard:hover,.learn-card:hover,.stat-card:hover{

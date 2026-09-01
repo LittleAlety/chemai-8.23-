@@ -1911,7 +1911,9 @@ function renderLatexBody(body, G){
   s=s.replace(/\\hat\{([^{}]*)\}/g,'$1̂');
   // 分隔符命令：\left \right \bigl \bigr \big \Big 等，去掉命令保留定界符；\left. \right. 完全删除
   s=s.replace(/\\left\.|\\right\./g,'');
-  s=s.replace(/\\left|\\right|\\bigl|\\bigr|\\Bigl|\\Bigr|\\big|\\Big/g,'');
+  // 剥除定界符命令 \left( \right) \bigl[ 等；但不可吃掉箭头命令 \leftarrow/\rightarrow/\leftrightharpoons 里的 \left/\right 前缀。
+  // 负向前瞻：\left/\right/\big/\Big 后必须是定界符(非字母)——箭头命令后是字母，故保留给下方箭头/符号映射。
+  s=s.replace(/\\left(?![a-zA-Z])|\\right(?![a-zA-Z])|\\bigl(?![a-zA-Z])|\\bigr(?![a-zA-Z])|\\Bigl(?![a-zA-Z])|\\Bigr(?![a-zA-Z])|\\big(?![a-zA-Z])|\\Big(?![a-zA-Z])/g,'');
   var keys=Object.keys(G);
   for(var i=0;i<keys.length;i++){s=s.split(keys[i]).join(G[keys[i]]);}
   // 常用箭头/数目/文本命令：避免被下方 \\([a-zA-Z]+) 剥成英文单词（如 \downarrow -> downarrow、\text{..} -> text..）
@@ -1983,6 +1985,38 @@ function renderLatexToUnicode(text){
   return t;
 }
 
+/* 方程式字符集：供 splitEqFromProse 连续扫描一段「化学反应式」（含 sub/sup 下标、系数、运算符、状态小箭头）。
+   不含中文/全角标点——遇到那些即视为「叙述」边界，从而把夹在中文叙述里的方程式独立出来。 */
+var _EQCHAR=/[A-Za-z0-9·×\[\]()₀-₉²³⁰ⁱ⁴-⁼ⁿ→←⇌⟶⟵↑↓+\-<>=="'&;.#~ 　]/;
+/* 拆「叙述+方程式」混排行（如「反应：Fe³⁺ + e⁻ → Fe²⁺（酸性）」）为 {lead, eq, tail}。
+   拆不出（无箭头 / 纯方程式行 / 无中文叙述）时返回 null，由调用方退回整行 .ans-eq。 */
+function splitEqFromProse(line){
+  if(/ans-eq-block|ans-inline-math/.test(line)) return null;   // LaTeX 显示/内联公式已由 CSS 强制独立成行，拆开会破坏 <span>
+  var ai=line.search(/[→←⇌⟶⟵]/);
+  if(ai<0) return null;
+  var n=line.length, left=ai, right=ai;
+  while(left>0 && _EQCHAR.test(line[left-1])) left--;   // 向左吃到第一个非方程式字符（中文/全角标点即停）
+  while(right<n && _EQCHAR.test(line[right])) right++;   // 向右同样
+  var lead=line.slice(0,left).replace(/[ 　]+$/,'');
+  var eq=line.slice(left,right).replace(/^[ 　]+|[ 　]+$/g,'');
+  var tail=line.slice(right);
+  if(eq.length<2) return null;   // 箭头独占/过短（如「温度→应变」）不拆，退回整行
+  if(!(lead||tail)) return null; // 纯方程式行：保持整行成 .ans-eq（不拆）
+  // 拆出的两侧必须含中文/全角，才可能是「叙述」；否则退回，避免把长方程式拦腰截断（如 (aq) 状态/下标英文）
+  if(!/[一-鿿　-〿＀-￯]/.test((lead||'')+' '+(tail||''))) return null;
+  return {lead:lead, eq:eq, tail:tail};
+}
+function linePiece(line){
+  var heading=/^(?:【|#{1,4}\s)/.test(line)||/^\*\*[^*]+\*\*$/.test(line);
+  var eq=/[→←⇌⟶⟵↓↑]/.test(line);
+  var clean=line.replace(/^#{1,4}\s+/,'');
+  return {cls:(heading?'ans-head':(eq?'ans-eq':'ans-line')), text:clean};
+}
+function eqLeadPiece(part){
+  var heading=/^(?:【|#{1,4}\s)/.test(part)||/^\*\*[^*]+\*\*$/.test(part);
+  return {cls:(heading?'ans-head':'ans-line'), text:part};
+}
+
 function renderRichAnswer(text){
   var raw=String(text==null?'':text).replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim();
   if(!raw) return '';
@@ -2002,27 +2036,31 @@ function renderRichAnswer(text){
         return '<li>'+inlineRich(clean)+'</li>';
       }).join('')+'</'+tag+'>';
     }
-    var expanded=[];
-    lines.forEach(function(line){
-      // 多步反应式（含箭头且含≥2个①②…编号）：按编号拆成独立方程式行
-      if(/[→←⇌⟶⟵]/.test(line)){
-        var circled=line.match(/[①②③④⑤⑥⑦⑧⑨⑩]/g);
-        if(circled&&circled.length>=2){
-          line.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).forEach(function(p){
-            p=p.replace(/[；;]\s*$/,'').trim();
-            if(p) expanded.push(p);
-          });
-          return;
-        }
+    var pieces=[];
+    function pushLine(line){
+      var sp=splitEqFromProse(line);
+      if(sp && (sp.lead||sp.tail)){
+        if(sp.lead) pieces.push(eqLeadPiece(sp.lead));
+        pieces.push({cls:'ans-eq', text:sp.eq});
+        if(sp.tail) pieces.push(eqLeadPiece(sp.tail));
+        return;
       }
-      expanded.push(line);
+      pieces.push(linePiece(line));
+    }
+    lines.forEach(function(line){
+      // 步骤类（≥2个①②…编号，或含箭头的多步反应）：按编号拆成独立行，避免「①…②…③…」挤在一行
+      var circled=line.match(/[①②③④⑤⑥⑦⑧⑨⑩]/g);
+      if(circled&&circled.length>=2){
+        line.split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/).forEach(function(p){
+          p=p.replace(/[；;]\s*$/,'').trim();
+          if(p) pushLine(p);
+        });
+        return;
+      }
+      pushLine(line);
     });
-    var html=expanded.map(function(line){
-      var heading=/^(?:【|#{1,4}\s)/.test(line)||/^\*\*[^*]+\*\*$/.test(line);
-      var eq=/(?:→|←|⇌|⟶|⟵|↓|↑)/.test(line);
-      var clean=line.replace(/^#{1,4}\s+/,'');
-      var h=inlineRich(clean);
-      return '<div class="'+(heading?'ans-head':(eq?'ans-eq':'ans-line'))+'">'+h+'</div>';
+    var html=pieces.map(function(p){
+      return '<div class="'+p.cls+'">'+inlineRich(p.text)+'</div>';
     }).join('');
     return '<div class="ans-block">'+html+'</div>';
   }).join('');

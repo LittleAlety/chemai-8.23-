@@ -8,8 +8,15 @@ function grab(name) {
   if (!m) throw new Error('未找到 ' + name);
   return m[0];
 }
+function grabVar(name) {   // 抓单行 var（如 var _EQCHAR=/[...]/;），贪婪到该行最后一个 ; 以容纳字符类里的 ;
+  const re = new RegExp('^var ' + name + '=[^\\n]*;\\r?$', 'm');
+  const m = html.match(re);
+  if (!m) throw new Error('未找到 var ' + name);
+  return m[0];
+}
 const code = 'const esc=s=>String(s==null?\'\':s).replace(/[&<>"\']/g,c=>({\'&\':\'&amp;\',\'<\':\'&lt;\',\'>\':\'&gt;\',\'"\':\'&quot;\',"\'":\'&#39;\'}[c]));' +
-  grab('renderLatexToUnicode') + grab('renderLatexBody') + grab('inlineRich') + grab('renderRichAnswer');
+  grabVar('_EQCHAR') + grab('renderLatexToUnicode') + grab('renderLatexBody') + grab('inlineRich') +
+  grab('splitEqFromProse') + grab('linePiece') + grab('eqLeadPiece') + grab('renderRichAnswer');
 const fn = new Function('return (function(){' + code + ';return {renderRichAnswer:renderRichAnswer};})();')();
 const faq = readFAQRuntime();
 let bad = 0, total = 0;

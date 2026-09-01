@@ -1,0 +1,3892 @@
+{
+  "generatedAt": "2026-09-01T02:10:03.722Z",
+  "total": 445,
+  "numericSentenceTotal": 540,
+  "numericSentenceBySub": {
+    "光化学应用": [
+      {
+        "id": 1,
+        "sub": "光化学应用",
+        "title": "Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究",
+        "kind": "abstract",
+        "text": "研究Fe3+-草酸盐络合物/H2O2/日光体系处理垃圾渗滤液：利用草酸铁(Ⅲ)络合物的光化学活性产生强氧化性物种降解有机物，考察了pH、H2O2投加量、光照时间等因素对渗滤液COD去除率的影响，确定优化工艺条件"
+      },
+      {
+        "id": 1,
+        "sub": "光化学应用",
+        "title": "Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究",
+        "kind": "question",
+        "text": "pH和H2O2用量对Fe(III)-草酸盐络合物体系处理废水有何影响"
+      },
+      {
+        "id": 1,
+        "sub": "光化学应用",
+        "title": "Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处理研究",
+        "kind": "question",
+        "text": "如何控制H2O2的投加量以优化光催化效果"
+      },
+      {
+        "id": 2,
+        "sub": "光化学应用",
+        "title": "Photochemistry",
+        "kind": "abstract",
+        "text": "文末习题以K₃[Fe(C₂O₄)₃]作化学光量计定量计算：0.006 mol/L溶液置于1 mm比色皿、400 nm光照下Fe(Ⅲ)被还原为Fe(Ⅱ)，该波长摩尔吸收系数为258 dm³·mol⁻¹·cm⁻¹、Fe(Ⅱ)生成量子产率为1.13，可据此计算入射光强，阐释化学光量计原理"
+      },
+      {
+        "id": 7,
+        "sub": "光化学应用",
+        "title": "三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证",
+        "kind": "abstract",
+        "text": "或以三氯化铁(或硫酸铁)与草酸钾直接合成FeCl₃+3K₂C₂O₄=K₃[Fe(C₂O₄)₃]+3KCl"
+      },
+      {
+        "id": 8,
+        "sub": "光化学应用",
+        "title": "三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证",
+        "kind": "abstract",
+        "text": "文中归纳了三条主要合成路线：以硫酸亚铁铵(摩尔盐)与草酸反应制得草酸亚铁，再在草酸钾存在下经双氧水氧化(6FeC2O4+3H2O2+6K2C2O4→4K3[Fe(C2O4)3]+2Fe(OH)3)，副产氢氧化铁加入适量草酸转化为产物"
+      },
+      {
+        "id": 8,
+        "sub": "光化学应用",
+        "title": "三草酸根合铁(Ⅲ)酸钾结晶方法 比较和光致还原性验证",
+        "kind": "abstract",
+        "text": "也可由三氯化铁或硫酸铁与草酸钾直接合成(FeCl3+3K2C2O4→K3[Fe(C2O4)3]+3KCl)，或以亚铁盐为原料加双氧水氧化"
+      },
+      {
+        "id": 277,
+        "sub": "光化学应用",
+        "title": "A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate",
+        "kind": "abstract",
+        "text": "Parker 1953年开创性系列的第一篇：以酸化草酸铁(III)酸钾光解产生Fe(II)，用邻菲啰啉光度法测定生成的Fe(II)从而定量光通量，确立了草酸铁作为灵敏化学光量计的基础，是光化学定量测量的奠基文献"
+      },
+      {
+        "id": 277,
+        "sub": "光化学应用",
+        "title": "A new sensitive chemical actinometer. I. Some trials with potassium ferrioxalate",
+        "kind": "question",
+        "text": "Parker 1953年的实验是如何用光度法测定光解生成的Fe(II)的"
+      },
+      {
+        "id": 279,
+        "sub": "光化学应用",
+        "title": "Practical Chemical Actinometry—A Review",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色来简化草酸铁光量计"
+      },
+      {
+        "id": 280,
+        "sub": "光化学应用",
+        "title": "The ferrioxalate and iodide-iodate actinometers in the UV region",
+        "kind": "abstract",
+        "text": "在深紫外区(低至205 nm)重新考察草酸铁与碘-碘酸盐两种光量计，重新测定波长相关的量子产率并与文献值比较，给出深紫外光量测定的准确操作建议，弥补可见区数据在UV应用的不足"
+      },
+      {
+        "id": 282,
+        "sub": "光化学应用",
+        "title": "Determination of the quantum yield of the ferrioxalate actinometer with electrically calibrated radiometers",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色来简化草酸铁光量计"
+      },
+      {
+        "id": 283,
+        "sub": "光化学应用",
+        "title": "Determination of the quantum yields of the potassium ferrioxalate and potassium iodide-iodate actinometers and a method for the calibration of radiometer detectors",
+        "kind": "question",
+        "text": "2011年重新标定的草酸铁光量计量子产率是多少"
+      },
+      {
+        "id": 285,
+        "sub": "光化学应用",
+        "title": "Practical ferrioxalate actinometry for the determination of photon fluxes in production-oriented photoflow reactors",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色来简化草酸铁光量计"
+      },
+      {
+        "id": 291,
+        "sub": "光化学应用",
+        "title": "Ultrafast photoelectron spectroscopy of photoexcited aqueous ferrioxalate",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色来简化草酸铁光量计"
+      },
+      {
+        "id": 321,
+        "sub": "光化学应用",
+        "title": "Kinetic analysis of nitroxide radical formation under oxygenated photolysis",
+        "kind": "abstract",
+        "text": "Zigler等对两种空间位阻仲胺（TMPD、N-TMPCl）与单线态氧的反应动力学进行定量研究：以水溶性TPPS卟啉为光敏剂，用稳态EPR检测生成的氮氧自由基，结合三草酸铁(III)酸钾化学光量计精确测定光通量，得到氮氧自由基生成速率常数kR2NO，并建立单线态氧拓扑学定量方法"
+      },
+      {
+        "id": 325,
+        "sub": "光化学应用",
+        "title": "不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展",
+        "kind": "abstract",
+        "text": "周丹娜、吴峰、邓南圣综述近40年文献：低分子量Fe(III)-OH络合物（主要Fe(OH)2+）在紫外光下光还原生成Fe(II)与·OH自由基（·OH几乎无选择地氧化降解有机物），以及Fe2O3/FeOOH多相光催化（配体到金属电荷转移LMCT）对有机物的光降解"
+      },
+      {
+        "id": 325,
+        "sub": "光化学应用",
+        "title": "不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展",
+        "kind": "question",
+        "text": "Fe(OH)2+的最大吸收波长和摩尔吸光系数是多少"
+      },
+      {
+        "id": 325,
+        "sub": "光化学应用",
+        "title": "不同形态Fe(Ⅲ)盐水解产物的光化学性质及其对有机物光降解作用的研究进展",
+        "kind": "objects",
+        "text": "Fe2O3"
+      },
+      {
+        "id": 336,
+        "sub": "光化学应用",
+        "title": "铁(Ⅲ)-柠檬酸的光化学反应及其应用",
+        "kind": "abstract",
+        "text": "莫蔚民等在pH 1.5硝酸介质中，铁(III)-柠檬酸配合物经紫外光照生成红紫色配合物（λmax=400 nm，摩尔吸光系数1.36×10^2 L/(mol·cm)），柠檬酸0.5-80 mg/L与吸光度成线性，建立选择性好、灵敏快速的光化学分析法并用于实际样品"
+      },
+      {
+        "id": 337,
+        "sub": "光化学应用",
+        "title": "铁(Ⅲ)-柠檬酸盐配合物光解引发橙黄Ⅱ的脱色",
+        "kind": "abstract",
+        "text": "吴峰等以苯为捕获剂确证铁(III)-柠檬酸盐配合物光解产生羟基自由基（光解160min产生56.4 μmol/L·OH，约为Fe(III)-OH体系的3倍），并研究其对偶氮染料橙黄II的光化学脱色：8 mg/L橙黄II光照1h脱色60-70%，pH 4-6效果最佳，符合表观一级动力学，铁(III)/柠檬酸盐摩尔比<1时脱色率随柠檬酸盐浓度增加而提高"
+      }
+    ],
+    "综合研究": [
+      {
+        "id": 140,
+        "sub": "综合研究",
+        "title": "SciPPTalk5,6,7",
+        "kind": "abstract",
+        "text": "科学PPT讲义(SciPPTalk 5/6/7)：讲解草酸盐配合物的实验原理、性质与应用，用于课堂教学演示，是实验教学的辅助材料"
+      },
+      {
+        "id": 141,
+        "sub": "综合研究",
+        "title": "[Cu2(μ-C2O4)(Him2-py)2(H2O)2] (NO3)2-from K3[Fe(C2O4)3]",
+        "kind": "abstract",
+        "text": "报道由三草酸合铁(III)酸钾衍生的双核铜-草酸桥联配合物[Cu2(μ-C2O4)(Him2-py)2(H2O)2](NO3)2的合成与结构，展示草酸根作为桥联配体的配位模式，是草酸配位化学的结构实例"
+      },
+      {
+        "id": 142,
+        "sub": "综合研究",
+        "title": "cm3c00063 si 001",
+        "kind": "abstract",
+        "text": "Supporting information (cm3c00063_si_001) for 'K2Fe(C2O4)2: An Oxalate Cathode for Li/Na-Ion Batteries Exhibiting a Combination of Multielectron Cation and Anion Redox', Chem. Mater. 2023, 35(6), 2600-2611."
+      },
+      {
+        "id": 143,
+        "sub": "综合研究",
+        "title": "ed047p702",
+        "kind": "abstract",
+        "text": "Describes a convenient, reliable undergraduate procedure for preparing potassium trioxalatoferrate(III), K3[Fe(C2O4)3]·3H2O, from iron(II) ammonium sulfate via oxidation with H2O2 in the presence of oxalate, giving good yields of well-formed green crystals suitable for further analysis experiments."
+      },
+      {
+        "id": 145,
+        "sub": "综合研究",
+        "title": "ed064p955-Mohr's salt as a wide coverage testing material for analytical chemistry",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 146,
+        "sub": "综合研究",
+        "title": "ed065p918",
+        "kind": "abstract",
+        "text": "An experiment that offers an interesting introductory exercise well within the capability of students with no Schlenk-line technique: the convenient Schlenk-line synthesis of the chromium(II) acetate dimer Cr2(OAc)4·2H2O, a classic quadruply metal-metal-bonded coordination compound."
+      },
+      {
+        "id": 148,
+        "sub": "综合研究",
+        "title": "ed081p1193-Potassium Tris(oxalato)ferrate(III) A Versatile",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 149,
+        "sub": "综合研究",
+        "title": "ed1c00776 si 001",
+        "kind": "abstract",
+        "text": "Supporting information (ed1c00776_si) for 'Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate', J. Chem. Educ. 2021, 98(10), 3400-3404."
+      },
+      {
+        "id": 150,
+        "sub": "综合研究",
+        "title": "ed1c00776 si 002",
+        "kind": "abstract",
+        "text": "Supporting information (ed1c00776_si) for 'Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate', J. Chem. Educ. 2021, 98(10), 3400-3404."
+      },
+      {
+        "id": 151,
+        "sub": "综合研究",
+        "title": "ed500809n si 001",
+        "kind": "abstract",
+        "text": "Supporting information (ed500809n_si_001) for 'A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment', J. Chem. Educ. 2015, 92(10), 1721-1724."
+      },
+      {
+        "id": 152,
+        "sub": "综合研究",
+        "title": "ed500809n si 002",
+        "kind": "abstract",
+        "text": "Supporting information (ed500809n_si_001) for 'A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment', J. Chem. Educ. 2015, 92(10), 1721-1724."
+      },
+      {
+        "id": 153,
+        "sub": "综合研究",
+        "title": "ed5c01101 si 002",
+        "kind": "abstract",
+        "text": "Supporting information (ed5c01101_si_002) for 'Bridging Chemistry and Creativity: A Cyanotype Photography, Toning and UV Shielding for First-Year Undergraduate Students', J. Chem. Educ. (ASAP, 2026)."
+      },
+      {
+        "id": 155,
+        "sub": "综合研究",
+        "title": "ic061494psi20060808 022446",
+        "kind": "abstract",
+        "text": "Supporting information (ic061494p_si) for 'Radical Salts of Bis(ethylenediseleno)tetrathiafulvalene with Paramagnetic Tris(oxalato)metalate Anions', Inorg. Chem. 2006, 45(26), 10815-10824."
+      },
+      {
+        "id": 156,
+        "sub": "综合研究",
+        "title": "ic2301",
+        "kind": "abstract",
+        "text": "该文档为美国化学会Inorganic Chemistry期刊1997年论文的电子补充材料（SI），包含配合物晶体结构的氢原子坐标及各向同性位移参数等数据，可用于配合物晶体结构解析"
+      },
+      {
+        "id": 158,
+        "sub": "综合研究",
+        "title": "intercalation-of-cr(c2o4)3-3-complex-in-mg-al-layered-double",
+        "kind": "abstract",
+        "text": "报道[Cr(C2O4)3]3-配合物插层进入Mg-Al层状双氢氧化物(LDH)的研究：通过XRD等表征插层结构与草酸铬的配位状态，属插层化学与配位化学交叉"
+      },
+      {
+        "id": 159,
+        "sub": "综合研究",
+        "title": "ja5037397 si 003",
+        "kind": "abstract",
+        "text": "Supporting information (ja5037397_si_003) for 'Influence of Electronic Spin and Spin-Orbit Coupling on Decoherence in Mononuclear Transition Metal Complexes', J. Am. Chem. Soc. 2014, 136(21), 7623-7626."
+      },
+      {
+        "id": 160,
+        "sub": "综合研究",
+        "title": "jce2004p1193w",
+        "kind": "abstract",
+        "text": "该JCE实验配套材料给出学生操作说明：按Yost-Simons经典方法制备K₃[Fe(C₂O₄)₃]·3H₂O并配成约0.1mol·L⁻¹溶液，依次加入HCl、KSCN、KF和K₂C₂O₄，观察溶液颜色由绿变黄橙、红、近无色再恢复绿色的循环，直观演示[Fe(C₂O₄)₃]³⁻的配体取代平衡"
+      },
+      {
+        "id": 161,
+        "sub": "综合研究",
+        "title": "jce2004p1193w (1)",
+        "kind": "abstract",
+        "text": "该JCE（2004）实验文档指导学生按Yost-Simons经典方法制备K₃[Fe(C₂O₄)₃]·3H₂O并配成约0.1mol·L⁻¹溶液，通过依次加入6mol·L⁻¹ HCl、0.5mol·L⁻¹ KSCN、3mol·L⁻¹ KF和2mol·L⁻¹ K₂C₂O₄，观察溶液颜色的循环变化，演示配体取代平衡的建立与移动"
+      },
+      {
+        "id": 162,
+        "sub": "综合研究",
+        "title": "jce2004p1193w-Potassium Tris(oxalato)ferrate(III) A Versatile Compound To Illustrate the Principles of Chemical",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 164,
+        "sub": "综合研究",
+        "title": "k2fe(c2o4)2-an-oxalate-cathode-for-li-na-ion-batteries-exhibiting-a-combination-of-multielectron-cation-and-anion",
+        "kind": "abstract",
+        "text": "研究草酸根铁配合物K2Fe(C2O4)2作为锂/钠离子电池负极材料的电化学性能，将草酸配位化学与能源材料应用结合，探讨其作为电极材料的优缺点"
+      },
+      {
+        "id": 165,
+        "sub": "综合研究",
+        "title": "potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of-chemical-equilibria (1)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 166,
+        "sub": "综合研究",
+        "title": "rspa.1956.0102",
+        "kind": "abstract",
+        "text": "经典文献(rspa.1956.0102)：系统研究三草酸合铁(III)酸钾的光化学——测定光照下Fe(II)的生成、量子产率及其波长依赖，确立草酸铁作为化学光量计的基础，是光化学与光量学里程碑文献"
+      },
+      {
+        "id": 167,
+        "sub": "综合研究",
+        "title": "sc3c05944 si 001",
+        "kind": "abstract",
+        "text": "该补充材料为\"从湿法磷酸中回收铁资源并制备高纯草酸亚铁：溶剂萃取与光化学反应\"一文的SI，给出连续光化学反应装置、电能消耗及生产FeC₂O₄·2H₂O的物料与能耗数据，说明以H₂C₂O₄与Fe(III)光化学反应制备高纯草酸亚铁的工艺成本构成"
+      },
+      {
+        "id": 169,
+        "sub": "综合研究",
+        "title": "the-mechanism-of-the-permanganate-oxalate",
+        "kind": "abstract",
+        "text": "研究高锰酸钾-草酸反应的机理：通过动力学与中间体分析阐明KMnO4氧化草酸盐(酸性条件下Mn(II)催化)的反应路径与速率方程，是氧化还原动力学教学的经典案例"
+      },
+      {
+        "id": 170,
+        "sub": "综合研究",
+        "title": "三草酸合铁 酸钾测定方法的探讨",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 171,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾",
+        "kind": "abstract",
+        "text": "三草酸合铁(Ⅲ)酸钾制备实验：以硫酸亚铁铵与草酸沉淀得FeC₂O₄·2H₂O，经H₂O₂氧化和草酸配位生成[Fe(C₂O₄)₃]³⁻，再用溶剂替换法析出翠绿色晶体"
+      },
+      {
+        "id": 171,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 172,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾 II-30号会议",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 173,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾-综合实验",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 178,
+        "sub": "综合研究",
+        "title": "实验 三草酸合铁(Ⅲ)酸钾",
+        "kind": "abstract",
+        "text": "三草酸合铁(Ⅲ)酸钾制备实验：由FeSO₄与草酸先生成FeC₂O₄·2H₂O沉淀，经H₂O₂氧化Fe(Ⅱ)后加入K₂C₂O₄与H₂C₂O₄配位制得K₃[Fe(C₂O₄)₃]，结晶得翠绿色三水合物，并涉及C₂O₄²⁻含量及Fe(Ⅲ)的测定方法"
+      },
+      {
+        "id": 178,
+        "sub": "综合研究",
+        "title": "实验 三草酸合铁(Ⅲ)酸钾",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 179,
+        "sub": "综合研究",
+        "title": "硫酸亚铁铵和硫酸亚铁稳定性的对比研究",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 179,
+        "sub": "综合研究",
+        "title": "硫酸亚铁铵和硫酸亚铁稳定性的对比研究",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 301,
+        "sub": "综合研究",
+        "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+        "kind": "abstract",
+        "text": "通过在线红外光谱对氯化铁与草酸钾合成三草酸合铁(III)酸钾的反应温度进行优化，打破传统高温条件，建立40-45°C绿色温和合成方法（最佳45°C、产率91.6%）"
+      },
+      {
+        "id": 301,
+        "sub": "综合研究",
+        "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+        "kind": "abstract",
+        "text": "用X射线单晶衍射测定其单斜晶系P21/c结构与晶胞参数"
+      },
+      {
+        "id": 301,
+        "sub": "综合研究",
+        "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+        "kind": "abstract",
+        "text": "用离子色谱法代替传统滴定测定配阴离子电荷数（实验值2.92，接近理论值3），并设计综合性教学实验融入绿色化学与美育思政元素"
+      },
+      {
+        "id": 301,
+        "sub": "综合研究",
+        "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+        "kind": "methods",
+        "text": "在线红外光谱(ReactIR 15)条件优化"
+      },
+      {
+        "id": 301,
+        "sub": "综合研究",
+        "title": "综合化学实验：三草酸合铁(Ⅲ)酸钾的合成研究及其配阴离子电荷数的测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 311,
+        "sub": "综合研究",
+        "title": "Potassium ferrioxalate (Wikipedia)",
+        "kind": "abstract",
+        "text": "维基百科条目：三草酸合铁酸钾（铁(III)草酸钾）K3[Fe(C2O4)3]为八面体过渡金属配合物，三个双齿草酸根配位于铁(III)中心，钾离子平衡-3电荷"
+      },
+      {
+        "id": 311,
+        "sub": "综合研究",
+        "title": "Potassium ferrioxalate (Wikipedia)",
+        "kind": "abstract",
+        "text": "条目介绍其由硫酸铁+草酸钡+草酸钾的制备、Λ/Δ光学异构、光照下光还原为Fe(C2O4)2 2-并放出CO2的机理，并指出其常用于化学光量计"
+      },
+      {
+        "id": 311,
+        "sub": "综合研究",
+        "title": "Potassium ferrioxalate (Wikipedia)",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "abstract",
+        "text": "González与Seco（巴塞罗那大学）利用合成的三草酸合铁(III)酸钾设计一系列试管实验，展示配位、配体置换、沉淀、溶解度和光化学平衡的相互关系：酸性介质分解为[Fe(H2O)6]3+、加KSCN生成[Fe(SCN)3]、加KF生成[FeF4]-、加草酸根复原"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "abstract",
+        "text": "碱性介质生成Fe(OH)3"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "abstract",
+        "text": "Ba2+生成Ba3[Fe(C2O4)3]2沉淀"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "question",
+        "text": "如何用[Fe(C2O4)3]3-演示配位平衡的移动"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "question",
+        "text": "[Fe(SCN)3]、[FeF4]-与[Fe(C2O4)3]3-的稳定性顺序如何"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "question",
+        "text": "[Fe(C2O4)3]3-光照下生成什么产物"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "question",
+        "text": "为什么Ba3[Fe(C2O4)3]2颜色比K3[Fe(C2O4)3]·3H2O浅"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "objects",
+        "text": "[Fe(C2O4)3]3-"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "objects",
+        "text": "[Fe(SCN)3]"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "objects",
+        "text": "[FeF4]-"
+      },
+      {
+        "id": 319,
+        "sub": "综合研究",
+        "title": "Potassium Tris(oxalato)ferrate(III): A Versatile Compound To Illustrate the Principles of Chemical Equilibria",
+        "kind": "objects",
+        "text": "Ba3[Fe(C2O4)3]2"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "abstract",
+        "text": "González & Seco“化学平衡”实验（J. Chem. Educ. 2004, 81, 1193）的实验室文档（Supplementary Material）：按Yost-Simons经典法制备K3[Fe(C2O4)3]，通过HCl/KSCN/KF/K2C2O4逐级置换观察颜色变化，用NaOH生成Fe(OH)3沉淀、BaCl2生成Ba3[Fe(C2O4)3]2沉淀并复原，光照检验Fe2+与CO2生成"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "abstract",
+        "text": "附试剂浓度表、CAS编号及BaCl2→CaCl2等安全替代建议"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "question",
+        "text": "用[Fe(C2O4)3]3-溶液演示配体置换的具体步骤是什么"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "question",
+        "text": "如何用BaCl2沉淀并复原[Fe(C2O4)3]3-"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "question",
+        "text": "光照下如何检验Fe2+的生成"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "question",
+        "text": "危险试剂BaCl2和KF可用什么替代"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "objects",
+        "text": "[Fe(C2O4)3]3-"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "objects",
+        "text": "[Fe(SCN)3]"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "objects",
+        "text": "[FeF4]-"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "objects",
+        "text": "Fe(OH)3"
+      },
+      {
+        "id": 323,
+        "sub": "综合研究",
+        "title": "Supplementary Material: Lab Documentation (Chemical Equilibria with [Fe(C2O4)3]3-)",
+        "kind": "objects",
+        "text": "Ba3[Fe(C2O4)3]2"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "武汉大学讲义对三草酸合铁酸钾制备实验各步机理的权威说明：①草酸略过量作沉淀剂/配位剂保证Fe³⁺配位完全并抑制水解，但过量太多残留C₂O₄²⁻难以洗净、与产品共析出降低纯度，并通过共同离子效应影响FeC₂O₄沉淀完全度（Ksp=3.2×10⁻⁷）"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "②H₂O₂在40℃水浴逐滴（每秒1-2滴）加入兼顾速率与稳定性，过高（>60℃）快速分解失效，滴毕煮沸2分钟除尽过量H₂O₂防氧化草酸根配体"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "③溶剂替换法结晶：产物水溶醇不溶，加乙醇（母液25-30mL时10mL 95%）降低溶剂极性（介电常数78.5→24.3）形成过饱和析晶，缓慢加入防爆发成核得细粉，悬棉线提供异相成核"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "④沉淀用热水洗涤除去(NH₄)₂SO₄等杂质至BaCl₂检验无SO₄²⁻（区分BaSO₄ Ksp≈1.1×10⁻¹⁰与BaC₂O₄ Ksp≈1.6×10⁻⁷）"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "⑤草酸三重作用：沉淀剂+配位剂（双齿螯合Fe³⁺形成[Fe(C₂O₄)₃]³⁻，Kf≈1.6×10²⁰）+溶解剂（溶Fe(OH)₃），微沸逐滴加至透明翠绿，酸度影响配位平衡"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "⑦产物磁矩约5.92BM对应Fe³⁺高自旋d⁵（草酸根为中等偏弱场，Δo<P），稳定性来自配位键与螯合效应"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "配位稳定化机理：C₂O₄²⁻双齿螯合Fe³⁺形成三个五元螯合环，螯合效应显著增大稳定常数（Kf≈1.6×10²⁰，lgKf≈20.2）"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "配位场角度Fe³⁺为d⁵高自旋（Δo≈12000 cm⁻¹<P成对能），CFSE=0，稳定性主要来自配位键与螯合环熵增"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "关键反应方程式：第一步(NH₄)₂Fe(SO₄)₂+H₂C₂O₄→FeC₂O₄·2H₂O↓+…（黄色沉淀）"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "第二步6FeC₂O₄·2H₂O+3H₂O₂+6K₂C₂O₄→4K₃[Fe(C₂O₄)₃]+2Fe(OH)₃↓+…"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "配位Fe(OH)₃+3H₂C₂O₄→H₃[Fe(C₂O₄)₃]+3H₂O"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "H₂O₂氧化动力学：40℃时氧化速率适中，>60℃分解速率显著增大（2H₂O₂→2H₂O+O₂↑），逐滴（每秒1-2滴）保证局部H₂O₂浓度不致过高引发分解与暴沸，一次快速加入导致氧化不完全（Fe²⁺残留，K₃Fe(CN)₆检验显蓝）"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "结晶溶剂选择：乙醇介电常数24.3远低于水78.5，加乙醇使溶剂极性骤降、产物溶解度大幅下降（水溶醇不溶）而过饱和析晶"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "abstract",
+        "text": "光分解：2[Fe(C₂O₄)₃]³⁻+hν→2Fe²⁺+5C₂O₄²⁻+2CO₂↑（LMCT，翠绿变黄），Fe²⁺用K₃Fe(CN)₆检验显蓝，CO₂用澄清石灰水检验变浑浊，产物须棕色瓶避光保存"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "question",
+        "text": "H₂O₂为什么要40℃逐滴加入"
+      },
+      {
+        "id": 366,
+        "sub": "综合研究",
+        "title": "三草酸合铁酸钾制备实验机理精要（讲义）",
+        "kind": "question",
+        "text": "产物磁矩为何约5.92BM"
+      }
+    ],
+    "分析测定": [
+      {
+        "id": 12,
+        "sub": "分析测定",
+        "title": "OxalateTitration",
+        "kind": "abstract",
+        "text": "草酸盐滴定分析实验：通过氧化还原滴定(KMnO4法)测定草酸盐配合物中草酸根含量，并延伸测定金属离子含量，训练定量分析技能"
+      },
+      {
+        "id": 14,
+        "sub": "分析测定",
+        "title": "思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《无机化学实验》思政教学",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 281,
+        "sub": "分析测定",
+        "title": "Errors in ferrioxalate actinometry",
+        "kind": "abstract",
+        "text": "指出草酸铁光量测定中的误差来源：实验表明沿用当时推荐的量子产率值会给光通量测定带来可观的系统误差(可达约7%)，文中给出修正的波长依赖量子产率并讨论减少误差的实验要点"
+      },
+      {
+        "id": 294,
+        "sub": "分析测定",
+        "title": "草酸合铁酸钾的制备及其离子电荷的测定",
+        "kind": "abstract",
+        "text": "实验改用离子交换法代替电导法测定络离子[Fe(C2O4)3]3-的电荷：产物溶液通过苯乙烯强碱性阴离子交换柱置换出Cl-，用标准碱滴定求出电荷数，方法简便、重现性好、数据接近理论值且树脂可再生"
+      },
+      {
+        "id": 294,
+        "sub": "分析测定",
+        "title": "草酸合铁酸钾的制备及其离子电荷的测定",
+        "kind": "objects",
+        "text": "草酸合铁酸钾 [Fe(C2O4)3]3-"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "abstract",
+        "text": "加州大学圣迭戈分校化学6BL实验报告：合成铁(III)草酸盐络合物并测定组成"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "abstract",
+        "text": "4A合成（产率约74%），4B用0.0100M KMnO4氧化还原滴定测草酸根（平均53.9±0.5 wt%），4C用联吡啶分光光度法（520nm）测铁（平均13.09±2.58 wt%），结合数据推导经验式K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "question",
+        "text": "为什么选择520 nm测定铁-联吡啶络合物"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "question",
+        "text": "如何用KMnO4滴定测定草酸根含量"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "question",
+        "text": "用CaCl2沉淀草酸根后再测铁的原理是什么"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "question",
+        "text": "该实验中如何判断产物是K3[Fe(C2O4)3]·3H2O还是K[Fe(C2O4)2]·2H2O"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "methods",
+        "text": "分光光度法(520nm)测铁"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "objects",
+        "text": "Kw[Fex(C2O4)y]·zH2O"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "objects",
+        "text": "KMnO4"
+      },
+      {
+        "id": 308,
+        "sub": "分析测定",
+        "title": "Synthesis and Component Analysis of an Iron (III) Oxalate Complex",
+        "kind": "objects",
+        "text": "2,2'-联吡啶"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "abstract",
+        "text": "英文实验讲义（三周完成）：由FeCl3·6H2O与过量K2C2O4·H2O合成含铁配位盐KxFey(C2O4)z·3H2O，用Na2C2O4标定KMnO4后分别滴定草酸根与铁（锌粉将Fe3+还原为Fe2+），由百分组成推导经验式并计算理论与百分产率"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "question",
+        "text": "如何由FeCl3·6H2O合成铁草酸盐络合物"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "question",
+        "text": "如何用KMnO4滴定测定草酸根和铁含量"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "methods",
+        "text": "FeCl3与草酸钾合成"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "methods",
+        "text": "KMnO4标定与草酸根/铁含量滴定"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "objects",
+        "text": "KxFey(C2O4)z·3H2O"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "objects",
+        "text": "FeCl3·6H2O"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "objects",
+        "text": "K2C2O4·H2O"
+      },
+      {
+        "id": 309,
+        "sub": "分析测定",
+        "title": "Synthesis of a Coordination Compound Containing Iron and Analysis Using Redox Methods",
+        "kind": "objects",
+        "text": "KMnO4"
+      },
+      {
+        "id": 326,
+        "sub": "分析测定",
+        "title": "光化学动力学分光光度法测定柠檬酸",
+        "kind": "abstract",
+        "text": "王占玲等基于柠檬酸可加速铁(III)-邻菲啰啉光化学还原为铁(II)-邻菲啰啉的原理，建立光化学动力学分光光度法测定柠檬酸：在pH 4.5 HAc-NaAc介质中，420-450nm光源照射，510nm测定"
+      },
+      {
+        "id": 326,
+        "sub": "分析测定",
+        "title": "光化学动力学分光光度法测定柠檬酸",
+        "kind": "abstract",
+        "text": "柠檬酸0-15 mg/L线性，检出限0.32 mg/L，用于汽水中柠檬酸测定"
+      },
+      {
+        "id": 326,
+        "sub": "分析测定",
+        "title": "光化学动力学分光光度法测定柠檬酸",
+        "kind": "question",
+        "text": "为什么选择510 nm测定"
+      },
+      {
+        "id": 330,
+        "sub": "分析测定",
+        "title": "邻菲啰啉分光光度法测定食用盐中柠檬酸铁铵的实际运用",
+        "kind": "abstract",
+        "text": "熊其碧等以邻菲啰啉分光光度法检测食用盐中铁离子（抗坏血酸将Fe3+还原为Fe2+，与邻菲啰啉生成橙红色络合物，510nm测定），再减去原盐本底铁、按当批柠檬酸铁铵铁百分比间接计算食用盐中柠檬酸铁铵含量"
+      },
+      {
+        "id": 330,
+        "sub": "分析测定",
+        "title": "邻菲啰啉分光光度法测定食用盐中柠檬酸铁铵的实际运用",
+        "kind": "abstract",
+        "text": "经小试(15/20/25 mg/kg)、中试与正式生产验证，测定值与理论添加值吻合（波动1-3 mg/kg），为制盐企业提供参考"
+      },
+      {
+        "id": 330,
+        "sub": "分析测定",
+        "title": "邻菲啰啉分光光度法测定食用盐中柠檬酸铁铵的实际运用",
+        "kind": "methods",
+        "text": "510nm测定"
+      },
+      {
+        "id": 332,
+        "sub": "分析测定",
+        "title": "柠檬酸铁(Ⅲ)络合物的光致变色现象与柠檬酸的测定",
+        "kind": "abstract",
+        "text": "王孝镕报道柠檬酸铁(III)络合物的光致变色现象并用于微量柠檬酸测定：在pH 1.8-2.5酸性介质中，柠檬酸与Fe3+生成的黄色络合物光照发生光致变色生成紫色络合物（λmax=490 nm，表观摩尔吸光系数805 L/(mol·cm)），络合物组成比1:1，线性范围0-250 mg/L，用于饮料中柠檬酸测定"
+      },
+      {
+        "id": 359,
+        "sub": "分析测定",
+        "title": "三草酸合铁酸钾性质和配离子电荷测定（王志勇）",
+        "kind": "question",
+        "text": "配离子[Fe(C₂O₄)₃]³⁻的电荷为什么是-3"
+      },
+      {
+        "id": 360,
+        "sub": "分析测定",
+        "title": "摩尔电导率测定估算配离子电荷数",
+        "kind": "abstract",
+        "text": "与 DOC 版（corpus 361）同内容"
+      },
+      {
+        "id": 361,
+        "sub": "分析测定",
+        "title": "摩尔电导率的测定估算离子电荷数",
+        "kind": "abstract",
+        "text": "实验讲义（DOC版）《摩尔电导率的测定估算离子电荷数》，与 PDF 版（corpus 360）同内容，讲解用电导法测定配离子电荷数"
+      },
+      {
+        "id": 362,
+        "sub": "分析测定",
+        "title": "讲义·三草酸合铁（Ⅲ）配离子的电荷测定",
+        "kind": "abstract",
+        "text": "与 DOCX 版（corpus 363）同内容"
+      },
+      {
+        "id": 363,
+        "sub": "分析测定",
+        "title": "讲义·实验：三草酸合铁（Ⅲ）配离子的电荷测定",
+        "kind": "abstract",
+        "text": "实验讲义（DOCX版）《三草酸合铁（Ⅲ）配离子的电荷测定》，与 PDF 版（corpus 362）同内容，含实验原理、步骤与数据处理"
+      },
+      {
+        "id": 441,
+        "sub": "分析测定",
+        "title": "A DC, AC and demodulation study of the tris-oxalato Fe(III)/tris-oxalato Fe(II) redox couple in 1 M aqueous oxalate solution at the dropping mercury electrode",
+        "kind": "abstract",
+        "text": "（替代文献）用直流/交流/解调极谱法系统研究1 mol/L草酸盐溶液中三草酸合铁(III/II)电对在滴汞电极上的氧化还原行为，是该电对基础电化学的经典数据源"
+      }
+    ],
+    "合成制备": [
+      {
+        "id": 15,
+        "sub": "合成制备",
+        "title": "1970-convenient-procedure-for-the-preparation-of-potassium-trioxalatoferrate(iii)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "abstract",
+        "text": "实验共安排五个3小时时段：一次合成、一次测定结晶水、三次同时测定铁与草酸根"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "abstract",
+        "text": "产物最后用两份冷甲醇淋洗以除去多余水分并摊开空气干燥，30人班级平均产率82%(标准偏差14%)，产物干燥不彻底会使表观产率偏高，重结晶所用蒸馏水量过大会使产率偏低"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "abstract",
+        "text": "分析中结晶水用重量法、草酸根用标准KMnO4滴定、铁经光照还原为亚铁后以草酸亚铁形式沉淀，钾含量由差减法求得"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "abstract",
+        "text": "样品先磨碎称量后在110℃烘干至恒重(约1小时即可)，分取约0.5g做精确重量分析、其余烘干1.5-2小时"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "abstract",
+        "text": "测铁时将约1g无水盐溶于15mL 10%(v/v)醋酸进行滴定"
+      },
+      {
+        "id": 16,
+        "sub": "合成制备",
+        "title": "1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 17,
+        "sub": "合成制备",
+        "title": "1995-synthesis-and-characterization-of-potassium-tris(oxalato)ferrate(iii)-trihydrate-a-spectrophotometric-method",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 20,
+        "sub": "合成制备",
+        "title": "Fe OH 3溶胶制备及其纯化新方法",
+        "kind": "abstract",
+        "text": "针对电泳法测ζ-电势所需的Fe(OH)₃溶胶，采用快速水解法制备，以1:1强酸强碱混合离子交换树脂替代传统半透膜渗析进行纯化，并选用等电导率的KCl溶液作辅助液，改善了半透膜易失败、耗时长、ζ-电势测定不准等实验问题"
+      },
+      {
+        "id": 22,
+        "sub": "合成制备",
+        "title": "Prep and Analysis of a Coordination",
+        "kind": "abstract",
+        "text": "手册给出了系统的理论产量/产率/纯度计算示例：以5.000g硫酸亚铁铵(NH4)2[Fe(H2O)2(SO4)2]•4H2O(392.14g/mol)为原料，经黄色中间体草酸亚铁FeC2O4•2H2O按2:2摩尔比转化为绿色晶体K3[Fe(C2O4)3]•3H2O(491.26g/mol)，理论产量6.2638g"
+      },
+      {
+        "id": 22,
+        "sub": "合成制备",
+        "title": "Prep and Analysis of a Coordination",
+        "kind": "abstract",
+        "text": "实验实际收集5.9801g时产率为95.47%"
+      },
+      {
+        "id": 22,
+        "sub": "合成制备",
+        "title": "Prep and Analysis of a Coordination",
+        "kind": "abstract",
+        "text": "含量测定采用KMnO4滴定，滴定前按[KMnO4]=0.0200M估算样品量，使终点所需滴定剂体积约20mL(小于50mL滴定管容量)"
+      },
+      {
+        "id": 27,
+        "sub": "合成制备",
+        "title": "The Synthesis, Chemistry and Magnetic Properties of Potassium Trioxalatoferrate(III)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 28,
+        "sub": "合成制备",
+        "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+        "kind": "abstract",
+        "text": "该配合物是高自旋Fe(III)配合物、配体呈D3h构型，草酸根以螯合双齿方式配位"
+      },
+      {
+        "id": 28,
+        "sub": "合成制备",
+        "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+        "kind": "abstract",
+        "text": "固体绿色、稀酸溶液黄色源于草酸根→Fe(III)的电荷转移跃迁(高自旋d5体系d-d跃迁很弱)，室温Gouy法测定的磁矩接近d5体系的自旋-only值"
+      },
+      {
+        "id": 28,
+        "sub": "合成制备",
+        "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+        "kind": "abstract",
+        "text": "热稳定性与光化学稳定性对比明显：黑暗中约2N H2SO4酸性溶液在100℃仍稳定"
+      },
+      {
+        "id": 28,
+        "sub": "合成制备",
+        "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+        "kind": "abstract",
+        "text": "而同一溶液置于强阳光下5-10分钟或400W汞灯辐照15-20分钟即发生定量光还原(2Fe(C2O4)3^3-→2Fe^2++5C2O4^2-+2CO2)，黄色消失指示光还原完成，生成的Fe(II)以钒酸钠(V)标准溶液滴定、二苯胺作指示剂测定"
+      },
+      {
+        "id": 28,
+        "sub": "合成制备",
+        "title": "ed051p129-Preparation and properties of potassium trioxalatoferrate(III)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 29,
+        "sub": "合成制备",
+        "title": "ed061p1098-Preparation and analysis of potassium tris(oxalato)ferrate(III)trihydrate A general chemistry",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 30,
+        "sub": "合成制备",
+        "title": "ed072p936-Synthesis and Characterization of Potassium Tris(oxalato)ferrate(III) Trihydrate A Spectrophotometric Method of Iron",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 33,
+        "sub": "合成制备",
+        "title": "preparation-and-characterization-of-intercalation-compounds-of-layered-double-hydroxides-with-metallic-oxalato",
+        "kind": "abstract",
+        "text": "层状双氢氧化物(LDH)MII1-xMIIIx(OH)₂(M=Zn、Cu; MIII=Al、Cr、Ga)与草酸根插层化合物的制备与表征，研究草酸根的配位模式(双齿/单齿/桥联)与晶体结构，属于插层化学与配位化学交叉内容"
+      },
+      {
+        "id": 36,
+        "sub": "合成制备",
+        "title": "三草酸合铁 (III)酸钾的合成",
+        "kind": "abstract",
+        "text": "介绍三草酸合铁(Ⅲ)酸钾的合成方法：以硫酸亚铁铵为铁源与草酸生成FeC₂O₄·2H₂O沉淀，在草酸钾存在下用H₂O₂将Fe(Ⅱ)氧化为Fe(Ⅲ)，再经草酸配位形成K₃[Fe(C₂O₄)₃]·3H₂O，加乙醇使晶体析出，制得翠绿色产物"
+      },
+      {
+        "id": 36,
+        "sub": "合成制备",
+        "title": "三草酸合铁 (III)酸钾的合成",
+        "kind": "abstract",
+        "text": "具体步骤：20 g硫酸亚铁铵溶于60 mL蒸馏水(加20滴3.0 mol/L H₂SO₄酸化)，加100 mL 1.0 mol/L H₂C₂O₄加热至沸并搅拌生成黄色FeC₂O₄·2H₂O沉淀，倾析后用蒸馏水洗涤"
+      },
+      {
+        "id": 36,
+        "sub": "合成制备",
+        "title": "三草酸合铁 (III)酸钾的合成",
+        "kind": "abstract",
+        "text": "加40 mL饱和K₂C₂O₄，水浴约40℃慢慢滴加3% H₂O₂(不断搅拌保温约40℃，此时有氢氧化铁沉淀)，加热至沸后分次加入32 mL 1.0 mol/L H₂C₂O₄(前20 mL一次加入、后12 mL慢加并保持近沸)，趁热过滤后加40 mL 95%乙醇，悬挂棉线并用表面皿盖住静置过夜使晶体析出"
+      },
+      {
+        "id": 36,
+        "sub": "合成制备",
+        "title": "三草酸合铁 (III)酸钾的合成",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 37,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备实验探索",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 38,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备实验的探究",
+        "kind": "abstract",
+        "text": "探究以5.0 g硫酸亚铁铵与25 mL饱和草酸先生成FeC₂O₄，第二步在其它条件不变下加入不同体积饱和K₂C₂O₄，根据产率及产品性状确定投料比，并因H₂O₂高温下不稳定而考察氧化制氢氧化铁的温度、再探究酸溶后溶液pH"
+      },
+      {
+        "id": 38,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备实验的探究",
+        "kind": "abstract",
+        "text": "该配合物为翠绿色单斜晶体，易溶于水、难溶于乙醇等有机溶剂，110℃失去全部结晶水、230℃分解、550℃分解产物为Fe₂O₃和K₂CO₃，遇强光即按2K₃[Fe(C₂O₄)₃]=3K₂C₂O₄+2FeC₂O₄+2CO₂分解，故具光敏性、常用作化学光量计，也是制备负载型活性铁催化剂的原料"
+      },
+      {
+        "id": 38,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备实验的探究",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 39,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "针对三草酸合铁(Ⅲ)酸钾制备实验中操作条件笼统、晶体析出慢且颗粒小的问题优化条件：以热水(40℃)洗涤FeC₂O₄、40℃逐滴加入H₂O₂并煮沸30s、浓缩后挂棉线结晶，可得到粒度较大的翠绿色晶体，显著改善重现性并提高产率与纯度"
+      },
+      {
+        "id": 39,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "优化后步骤为：5 g硫酸亚铁铵溶于20 mL经5滴6 mol/L H₂SO₄酸化的水中，加25 mL饱和H₂C₂O₄加热至沸生成FeC₂O₄沉淀，热水(40℃)洗涤3次至中性"
+      },
+      {
+        "id": 39,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "加10 mL饱和K₂C₂O₄，水浴40℃缓慢滴加12 mL H₂O₂(氧化配位并生成Fe(OH)₃)，煮沸约30s分解过量H₂O₂，再于75～80℃水浴逐滴加饱和H₂C₂O₄至沉淀消失、浓缩至约15 mL(不可沸腾)，暗处挂棉线自然冷却结晶约30min，抽滤后丙酮淋洗、避光干燥"
+      },
+      {
+        "id": 39,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "机理上FeC₂O₄在热水中溶解度(0.026 g/100 g)远低于冷水(0.22 g/100 g)故宜热水洗涤以减少损失"
+      },
+      {
+        "id": 39,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾制备条件的优化",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 40,
+        "sub": "合成制备",
+        "title": "三草酸合铁 酸钾的合成及结构组成测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 41,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "针对三草酸合铁(Ⅲ)酸钾制备实验中操作条件笼统、晶体析出慢且颗粒小的问题优化条件：以5 g硫酸亚铁铵溶于20 mL酸化水(6 mol/L H₂SO₄酸化)、加25 mL饱和H₂C₂O₄生成FeC₂O₄沉淀，用热水(40℃)洗涤3次(每次约25 mL)至中性——因FeC₂O₄在热水中溶解度(0.026 g/100 g)低于冷水(0.22 g/100 g)可减少损失"
+      },
+      {
+        "id": 41,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾制备条件的优化",
+        "kind": "abstract",
+        "text": "于40℃水浴中缓慢滴加12 mL H₂O₂(0.05 w/w)氧化配位生成Fe(OH)₃，煮沸30 s除去过量H₂O₂，再于75~80℃水浴逐滴加入饱和H₂C₂O₄使沉淀溶解至溶液呈透明亮绿色，浓缩至15 mL后挂棉线避光自然冷却结晶(约30 min)，抽滤、丙酮淋洗、避光干燥，可得粒度较大的翠绿色晶体"
+      },
+      {
+        "id": 41,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾制备条件的优化",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 43,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征",
+        "kind": "abstract",
+        "text": "晶体结构属单斜晶系P2(1)/n空间群"
+      },
+      {
+        "id": 43,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾的室温固相合成与晶体结构表征",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 44,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾绿色合成与结构表征",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 45,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸碱的制备及测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 46,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾改进制备及其光致还原性探究",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 47,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及性质",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 48,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及性质—完整",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 49,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及组成确定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 50,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备实验的思考",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 51,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的合成及磁化率的测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 52,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备及组成测定",
+        "kind": "abstract",
+        "text": "介绍三草酸合铁(Ⅲ)酸钾的制备及组成测定：以硫酸亚铁铵与草酸反应生成FeC₂O₄·2H₂O(黄色沉淀)，在草酸钾存在下经H₂O₂氧化配位生成Fe(OH)₃，再加适量草酸使Fe(OH)₃转化为配合物，加入乙醇放置即可析出翠绿色单斜晶体(0℃、100℃水中溶解度分别约4.7与117.7 g/100 g，难溶于乙醇)"
+      },
+      {
+        "id": 52,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备及组成测定",
+        "kind": "abstract",
+        "text": "产品具光敏性，遇光照射分解变黄，110℃失结晶水、230℃分解"
+      },
+      {
+        "id": 52,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备及组成测定",
+        "kind": "abstract",
+        "text": "组成测定中草酸根在酸性介质中被KMnO₄定量氧化(5C₂O₄²⁻+2MnO₄⁻+16H⁺→10CO₂+2Mn²⁺+8H₂O)，测草酸根后的剩余溶液用锌粉将Fe³⁺还原为Fe²⁺后再以KMnO₄滴定(Zn+2Fe³⁺→2Fe²⁺+Zn²⁺)，按n(Fe³⁺)∶n(C₂O₄²⁻)=(Fe³⁺%/55.8)∶(C₂O₄²⁻%/88.0)确定配位比"
+      },
+      {
+        "id": 52,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备及组成测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 53,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备和组成测定",
+        "kind": "abstract",
+        "text": "本课件围绕三草酸合铁(Ⅲ)酸钾的制备和组成测定实验展开，教学目标为掌握K₃[Fe(C₂O₄)₃]·3H₂O的制备原理与方法，并通过实验加深对Fe(Ⅱ)与Fe(Ⅲ)性质的理解，适用于配合物综合实验教学"
+      },
+      {
+        "id": 53,
+        "sub": "合成制备",
+        "title": "三草酸合铁（Ⅲ）酸钾的制备和组成测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 54,
+        "sub": "合成制备",
+        "title": "三草酸＆铁酸钾的制备及表征",
+        "kind": "abstract",
+        "text": "以自制硫酸亚铁铵与草酸反应生成FeC₂O₄·2H₂O黄色沉淀(倾析法洗去杂质)，在过量草酸根存在下用H₂O₂氧化配位(10 mL饱和K₂C₂O₄中40℃水浴、缓慢滴加10 mL 3% H₂O₂)生成棕红色Fe(OH)₃，加热近沸除过量H₂O₂后逐滴加8 mL饱和H₂C₂O₄使沉淀溶解，趁热过滤，滤液加10 mL 95%乙醇于暗处冷却结晶得翠绿色K₃[Fe(C₂O₄)₃]·3H₂O(0℃、100℃水中溶解度分别为4.7与117.7 g/100 g，难溶于有机溶剂)"
+      },
+      {
+        "id": 54,
+        "sub": "合成制备",
+        "title": "三草酸＆铁酸钾的制备及表征",
+        "kind": "abstract",
+        "text": "产物具光敏性，室温光照变黄、见光分解生成草酸亚铁并放出CO₂，遇铁氰化钾显滕氏蓝，可作感光纸及化学光量计，110℃失结晶水、230℃分解"
+      },
+      {
+        "id": 54,
+        "sub": "合成制备",
+        "title": "三草酸＆铁酸钾的制备及表征",
+        "kind": "abstract",
+        "text": "组成以重量法(110℃恒重)测结晶水、KMnO₄滴定测C₂O₄²⁻(酸性介质5C₂O₄²⁻+2MnO₄⁻+16H⁺→2Mn²⁺+10CO₂+8H₂O)、锌粉还原Fe³⁺后以KMnO₄回滴测铁、钾按差减法求得，按K⁺∶C₂O₄²⁻∶H₂O∶Fe³⁺摩尔比确定化学式"
+      },
+      {
+        "id": 55,
+        "sub": "合成制备",
+        "title": "二水合二草酸合铜 酸钾的制备和组成测定",
+        "kind": "abstract",
+        "text": "以K₂C₂O₄·H₂O与CuSO₄·5H₂O在90℃反应制得二水合二草酸合铜(Ⅱ)酸钾，冰水冷却析晶、50℃干燥，并用化学分析、电荷测定、红外光谱及磁化率等手段确定配合物组成与结构，方法快速简单，适合配合物综合实训"
+      },
+      {
+        "id": 56,
+        "sub": "合成制备",
+        "title": "二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征",
+        "kind": "abstract",
+        "text": "以乙酸铜和草酸钾为原料，通过室温固相反应合成二草酸合铜(Ⅱ)酸钾K2[Cu(C2O4)2]·2H2O，用元素分析、红外光谱、X射线单晶衍射等手段表征其晶体结构，并研究了热分解行为"
+      },
+      {
+        "id": 56,
+        "sub": "合成制备",
+        "title": "二草酸合铜(Ⅱ)酸钾的固相合成、晶体结构与表征",
+        "kind": "abstract",
+        "text": "(据文章编号1000-2537(2017)06-0049-06确定为2017年第6期49-54页)"
+      },
+      {
+        "id": 58,
+        "sub": "合成制备",
+        "title": "以硫酸亚铁铵的制备实验为例...用基础化学实验教学中的探索",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 58,
+        "sub": "合成制备",
+        "title": "以硫酸亚铁铵的制备实验为例...用基础化学实验教学中的探索",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 59,
+        "sub": "合成制备",
+        "title": "合成及组成分析",
+        "kind": "abstract",
+        "text": "以自制硫酸亚铁铵与草酸反应生成FeC₂O₄·2H₂O，在过量草酸根存在下用H₂O₂氧化配位得翠绿色K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 60,
+        "sub": "合成制备",
+        "title": "同铁不同性：FeSO 4·...—硫酸亚铁铵制备的改进实验",
+        "kind": "abstract",
+        "text": "将经典的硫酸亚铁铵制备实验改进为综合开放性实验：引入FeSO₄·7H₂O与(NH₄)₂Fe(SO₄)₂·6H₂O单晶结构及二者晶态空气稳定性对比，设计“晶体雪”“透明奶皮”“绿宝石”等趣味实验并辅以显微镜观察，在对比中加深对复盐性质的理解，培养创新与综合能力"
+      },
+      {
+        "id": 60,
+        "sub": "合成制备",
+        "title": "同铁不同性：FeSO 4·...—硫酸亚铁铵制备的改进实验",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 60,
+        "sub": "合成制备",
+        "title": "同铁不同性：FeSO 4·...—硫酸亚铁铵制备的改进实验",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O、铁(III)配合物"
+      },
+      {
+        "id": 63,
+        "sub": "合成制备",
+        "title": "大学化学综合实验 三草酸合铁(Ⅲ)酸钾的制备和结构表征",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 64,
+        "sub": "合成制备",
+        "title": "实验十 三草酸合铁(III)酸钾的制备及组",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 65,
+        "sub": "合成制备",
+        "title": "实验四十一 三草酸合铁(Ⅲ)酸钾的合成及组成测定",
+        "kind": "abstract",
+        "text": "按“沉淀—氧化—配位”路线合成三草酸合铁(Ⅲ)酸钾（K₃[Fe(C₂O₄)₃]·3H₂O）：FeSO₄与草酸钾生成草酸亚铁，H₂O₂氧化后配位结晶得翠绿色产品"
+      },
+      {
+        "id": 65,
+        "sub": "合成制备",
+        "title": "实验四十一 三草酸合铁(Ⅲ)酸钾的合成及组成测定",
+        "kind": "abstract",
+        "text": "产物对光敏感，110℃失结晶水、230℃分解"
+      },
+      {
+        "id": 65,
+        "sub": "合成制备",
+        "title": "实验四十一 三草酸合铁(Ⅲ)酸钾的合成及组成测定",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 66,
+        "sub": "合成制备",
+        "title": "对 三草酸合铁 酸钾的制备",
+        "kind": "abstract",
+        "text": "针对三草酸合铁(Ⅲ)酸钾合成中酸溶条件难控、草酸还原Fe³⁺副反应导致产品发黄晶小的缺陷，通过改进草酸加入方式（滴管慢滴）与控制酸溶终了pH抑制副反应，提高产物质量，并给出FeC₂O₄·2H₂O淡黄微晶、[Fe(C₂O₄)₃]³⁻鲜翠绿等过程色彩现象"
+      },
+      {
+        "id": 66,
+        "sub": "合成制备",
+        "title": "对 三草酸合铁 酸钾的制备",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 68,
+        "sub": "合成制备",
+        "title": "废铁屑制备三草酸合铁酸钾虚实结合的综合化学实验设计",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 70,
+        "sub": "合成制备",
+        "title": "无机化学实验教学中对三草酸...Ⅲ) 酸钾制备的实验改进",
+        "kind": "abstract",
+        "text": "以学生自制的硫酸亚铁铵为铁源，经草酸亚铁—H₂O₂氧化路线制备三草酸合铁(Ⅲ)酸钾，通过优化剩余H₂O₂去除时间、酸溶温度与结晶方式，获得晶粒大、晶型均匀的翠绿色菱形晶体，产率可达65%"
+      },
+      {
+        "id": 71,
+        "sub": "合成制备",
+        "title": "无机化学实验教学中对三草酸合铁 酸钾制备的实验改进",
+        "kind": "abstract",
+        "text": "对三草酸合铁(Ⅲ)酸钾制备实验进行条件优化：以硫酸亚铁铵为原料，控制剩余H₂O₂去除时间、酸溶温度与结晶方式，使产品成为结晶颗粒大、色泽鲜艳的翠绿色菱形晶体，产率可达65%，利于激发学生实验兴趣"
+      },
+      {
+        "id": 71,
+        "sub": "合成制备",
+        "title": "无机化学实验教学中对三草酸合铁 酸钾制备的实验改进",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 72,
+        "sub": "合成制备",
+        "title": "硫酸亚铁铵制备三草酸合铁(Ⅲ)酸钾的实验探索",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻、硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 73,
+        "sub": "合成制备",
+        "title": "硫酸亚铁铵制备三草酸合铁酸钾的思考",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻、硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "abstract",
+        "text": "改进条件：氧化步骤用6% H2O2、40°C水浴，充分氧化后微沸2分钟"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "abstract",
+        "text": "酸溶步骤草酸稍过量、草酸钾过量10%"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "abstract",
+        "text": "实验室平均产率达87%，教学平均产率超过70%"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "question",
+        "text": "氧化步骤中H2O2浓度和温度如何优化"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 292,
+        "sub": "合成制备",
+        "title": "三草酸合铁(Ⅲ)酸钾合成方法的改进",
+        "kind": "objects",
+        "text": "草酸亚铁 FeC2O4·2H2O"
+      },
+      {
+        "id": 295,
+        "sub": "合成制备",
+        "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+        "kind": "abstract",
+        "text": "改进：驱除H2O2不宜久沸"
+      },
+      {
+        "id": 295,
+        "sub": "合成制备",
+        "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+        "kind": "abstract",
+        "text": "酸溶控制在pH 3-3.5"
+      },
+      {
+        "id": 295,
+        "sub": "合成制备",
+        "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+        "kind": "question",
+        "text": "煮沸驱除过量H2O2时间过长有何后果"
+      },
+      {
+        "id": 295,
+        "sub": "合成制备",
+        "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 295,
+        "sub": "合成制备",
+        "title": "对“三草酸合铁(Ⅲ)酸钾的制备”的改进",
+        "kind": "objects",
+        "text": "草酸亚铁 FeC2O4·2H2O"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "abstract",
+        "text": "英文实验讲义（Experiment #2）：分两步制备三草酸合铁(III)酸钾三水合物——先由硫酸亚铁铵与草酸制草酸亚铁，再在K2C2O4存在下用30%H2O2氧化并加草酸溶解Fe(OH)3，乙醇结晶"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "abstract",
+        "text": "随后用KMnO4标准溶液（Na2C2O4标定）测定草酸根与铁含量，110°C烘干测定结晶水"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "abstract",
+        "text": "含预实验16道题"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "question",
+        "text": "制备K3[Fe(C2O4)3]·3H2O分几步进行"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "question",
+        "text": "如何用KMnO4滴定测定晶体中草酸根和铁的含量"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "question",
+        "text": "为什么KMnO4标定要在80-90°C进行"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "methods",
+        "text": "草酸亚铁制备→H2O2氧化→结晶"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "methods",
+        "text": "KMnO4标定与草酸根/铁含量滴定"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "objects",
+        "text": "草酸亚铁 FeC2O4·2H2O"
+      },
+      {
+        "id": 302,
+        "sub": "合成制备",
+        "title": "Preparation and Analysis of Potassium trioxalato ferrate (III) trihydrate",
+        "kind": "objects",
+        "text": "KMnO4"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "abstract",
+        "text": "英文实验讲义：通过 FeCl3(aq) + 3K2C2O4·H2O(aq) → K3Fe(C2O4)3·3H2O(s) + 3KCl(aq) 直接合成三草酸合铁(III)酸钾"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "abstract",
+        "text": "称取2-3g FeCl3溶于20mL去离子水、3-4g K2C2O4·H2O溶于10mL热水，混合后于0°C冰浴结晶，再用约50°C温水重结晶，布氏漏斗过滤、冷甲醇洗涤，计算限量试剂、理论产率与平均百分产率"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "question",
+        "text": "FeCl3与K2C2O4·H2O合成K3Fe(C2O4)3·3H2O的方程式是什么"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "question",
+        "text": "为什么要在约0°C冰浴中结晶"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "methods",
+        "text": "FeCl3与K2C2O4直接反应合成"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "objects",
+        "text": "K3Fe(C2O4)3·3H2O"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "objects",
+        "text": "FeCl3"
+      },
+      {
+        "id": 303,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate",
+        "kind": "objects",
+        "text": "K2C2O4·H2O"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "abstract",
+        "text": "Chemistry 111 实验室讲义（2008年8月）：以硫酸亚铁铵为原料经草酸亚铁中间体制备K3[Fe(C2O4)3]·3H2O并培养晶体"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "abstract",
+        "text": "步骤：硫酸亚铁铵溶于稀硫酸，加草酸得黄色草酸亚铁沉淀，倾析洗涤后加饱和K2C2O4和3%H2O2（40°C），煮沸并加草酸溶解Fe(OH)3，趁热过滤、加乙醇，用线悬挂法在抽屉中缓慢结晶"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "question",
+        "text": "本实验中[Fe(C2O4)3]3-络离子的结构与电荷如何"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "question",
+        "text": "加入H2O2时观察到的现象是什么"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "methods",
+        "text": "硫酸亚铁铵+草酸制草酸亚铁→K2C2O4+H2O2氧化→悬挂结晶法"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 304,
+        "sub": "合成制备",
+        "title": "The Synthesis of Potassium Trisoxalatoferrate(III) Trihydrate (Chemistry 111)",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 Fe(NH4)2(SO4)2·6H2O"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "abstract",
+        "text": "伍斯特理工学院(WPI)普通化学实验：以草酸(6.5mmol)、KOH(12mmol)与FeCl3·6H2O(2mmol)反应合成三草酸合铁酸钾，经重结晶纯化，可用红外与紫外-可见光谱表征，并观察产物对光的响应（光敏分解）"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "question",
+        "text": "本实验合成K3[Fe(C2O4)3]的反应是什么"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "question",
+        "text": "草酸、KOH和FeCl3·6H2O的投料摩尔比是多少"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "methods",
+        "text": "Fe3+与草酸根配位合成"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]"
+      },
+      {
+        "id": 305,
+        "sub": "合成制备",
+        "title": "Synthesis of Potassium tris(oxalato)ferrate",
+        "kind": "objects",
+        "text": "FeCl3·6H2O"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "abstract",
+        "text": "北亚利桑那大学CHM 152A实验A：由FeCl3与K2C2O4·H2O合成经验式为KxFe(C2O4)y·zH2O的铁盐，经结晶、倾析、重结晶、真空抽滤、丙酮洗涤干燥纯化"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "abstract",
+        "text": "后续实验D/E/F分别测定H2O、K与Fe、草酸根含量以确定经验式"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "question",
+        "text": "如何由FeCl3和K2C2O4合成并纯化铁盐晶体"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "question",
+        "text": "如何由百分组成确定经验式KxFe(C2O4)y·zH2O"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "methods",
+        "text": "FeCl3+草酸钾合成"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "objects",
+        "text": "KxFe(C2O4)y·zH2O"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "objects",
+        "text": "FeCl3"
+      },
+      {
+        "id": 314,
+        "sub": "合成制备",
+        "title": "The Synthesis of an Iron Salt (KxFe(C2O4)y·zH2O)",
+        "kind": "objects",
+        "text": "K2C2O4·H2O"
+      },
+      {
+        "id": 334,
+        "sub": "合成制备",
+        "title": "柠檬酸铁铵的制备",
+        "kind": "abstract",
+        "text": "以硫酸亚铁为原料、氯酸钠为氧化剂制备柠檬酸铁铵（中南工业大学化学系）：25g结晶硫酸亚铁加浓硫酸与2.0g氯酸钠50°C氧化0.5h，加NaOH得Fe(OH)3沉淀，洗涤后与20g柠檬酸90°C反应1h，冷至45°C加浓氨水，浓缩烘干即得产品"
+      },
+      {
+        "id": 334,
+        "sub": "合成制备",
+        "title": "柠檬酸铁铵的制备",
+        "kind": "abstract",
+        "text": "较适宜条件为硫酸亚铁:氯酸钠=9:2、50°C、0.5h"
+      },
+      {
+        "id": 335,
+        "sub": "合成制备",
+        "title": "柠檬酸铁铵的制备方法",
+        "kind": "abstract",
+        "text": "张太平、万如锴研究以硫酸亚铁为原料、氯酸钠氧化制氢氧化铁，再与柠檬酸、氨水反应制备柠檬酸铁铵：16.7g七水硫酸亚铁加硫酸与2g氯酸钠氧化，加10g NaOH得Fe(OH)3，洗涤后与柠檬酸95°C以上保温1h，冷至50°C加40mL氨水，静置48h以上过滤浓缩干燥"
+      },
+      {
+        "id": 356,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及其性质（课件2）",
+        "kind": "abstract",
+        "text": "教学课件（编号2），讲解三草酸合铁酸钾的制备路线（先沉淀后氧化、溶剂替换结晶）与产物的特征性质"
+      },
+      {
+        "id": 356,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及其性质（课件2）",
+        "kind": "abstract",
+        "text": "与 corpus 47 同主题的另一版本课件"
+      },
+      {
+        "id": 356,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾的制备及其性质（课件2）",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 357,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾制备（王志勇）",
+        "kind": "abstract",
+        "text": "与 PPTX 版（corpus 358）同内容"
+      },
+      {
+        "id": 357,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾制备（王志勇）",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 358,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾制备（王志勇·PPTX）",
+        "kind": "abstract",
+        "text": "王志勇教学课件（PPTX版）《三草酸合铁酸钾制备》，与 PDF 版（corpus 357）同内容，演示四步制备流程与操作要点"
+      },
+      {
+        "id": 358,
+        "sub": "合成制备",
+        "title": "三草酸合铁酸钾制备（王志勇·PPTX）",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      }
+    ],
+    "实验教学": [
+      {
+        "id": 77,
+        "sub": "实验教学",
+        "title": "1973-an-experiment-sequence-involving-potassium-trioxalatoferrate(iii)",
+        "kind": "abstract",
+        "text": "1973年教学文献：围绕三草酸合铁(III)酸钾设计系列实验，涵盖制备、组成分析、无水物与三水合物结构比较、废铁屑回收等环节，是配位化学综合实验的经典设计"
+      },
+      {
+        "id": 77,
+        "sub": "实验教学",
+        "title": "1973-an-experiment-sequence-involving-potassium-trioxalatoferrate(iii)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O"
+      },
+      {
+        "id": 78,
+        "sub": "实验教学",
+        "title": "Experiment 30-REDOX",
+        "kind": "abstract",
+        "text": "实验讲义(Experiment 30)：草酸盐配合物的氧化还原实验，训练相关基本操作技能与实验教学目标，可用于配合物氧化还原性质教学"
+      },
+      {
+        "id": 80,
+        "sub": "实验教学",
+        "title": "ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid",
+        "kind": "abstract",
+        "text": "教学文献(学生自主设计型实验)：让学生以过氧一硫酸(Caro's acid，H₂SO₅)为滴定剂、通过电位滴定定量测定铁(Ⅱ)(用莫尔盐Fe(NH₄)₂(SO₄)₂·6H₂O标定并测未知样)，需自行设计终点检测方法，并考察滴定剂的保质期稳定性、准确度与相对精密度及实验不确定度、常见阴阳离子干扰"
+      },
+      {
+        "id": 80,
+        "sub": "实验教学",
+        "title": "ed073p984-A Student-Designed Potentiometric Titration Quantitative Determination of Iron(II) by Caro's Acid",
+        "kind": "abstract",
+        "text": "滴定剂由25 mL过氧二硫酸(PDSA)缓慢加入225 mL浓H₂SO₄(250 mL，1:10 PDSA/H₂SO₄)经水解制得，标定时约0.25 g莫尔盐溶于100 mL水、加10 mL浓H₂SO₄与15 mL浓H₃PO₄，加10滴0.2%钡-二苯胺磺酸钠指示剂后缓慢滴定并逐次记录电位"
+      },
+      {
+        "id": 284,
+        "sub": "实验教学",
+        "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+        "kind": "abstract",
+        "text": "提出一种简化草酸铁光量计的新策略：以在线监测光解过程中释放的CO2代替传统的Fe(II)-邻菲啰啉显色光度分析，使光通量测定更快捷、可连续读数，适用于光化学教学与研究中的常规光量测定"
+      },
+      {
+        "id": 284,
+        "sub": "实验教学",
+        "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色分析来简化草酸铁光量计"
+      },
+      {
+        "id": 284,
+        "sub": "实验教学",
+        "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+        "kind": "methods",
+        "text": "在线CO2监测替代Fe(II)显色分析"
+      },
+      {
+        "id": 284,
+        "sub": "实验教学",
+        "title": "Simplification of the potassium ferrioxalate actinometer through carbon dioxide monitoring",
+        "kind": "objects",
+        "text": "CO2释放监测"
+      },
+      {
+        "id": 289,
+        "sub": "实验教学",
+        "title": "Determination of molecular formula of potassium tris(oxalato)ferrate(III) trihydrate",
+        "kind": "abstract",
+        "text": "面向学生的教学短文，演示如何通过滴定(测定草酸根与铁含量)与热重/灼烧(测定结晶水)等经典分析手段，由实验数据推导出K3[Fe(C2O4)3]·3H2O的分子式，是化学计量学与配合物组成分析的教学范例"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "abstract",
+        "text": "三草酸合铁酸钾制备实验的课堂测验（副本），共10题40+30+20+10分：单选题4题、多选题3题、填空题2题、简答题1题，覆盖晶体颜色、双氧水浓度选择、暗处结晶原因、涉及的化学平衡与反应类型、固液分离方式及反应方程式书写"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "question",
+        "text": "K3[Fe(C2O4)3]·3H2O是什么颜色"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "question",
+        "text": "实验中为什么推荐使用6%的H2O2而非3%"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "question",
+        "text": "K3[Fe(C2O4)3]·3H2O为什么要在暗处冷却结晶"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "question",
+        "text": "用FeC2O4·2H2O制备K3[Fe(C2O4)3]涉及哪些化学平衡"
+      },
+      {
+        "id": 293,
+        "sub": "实验教学",
+        "title": "三草酸合铁酸钾的制备及其性质（周二）",
+        "kind": "objects",
+        "text": "三草酸合铁酸钾 K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 296,
+        "sub": "实验教学",
+        "title": "教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）",
+        "kind": "abstract",
+        "text": "电子科技大学中山学院化学与生物系《综合实验》教案（黄增芳，2008-2009学年第1学期，32学时）"
+      },
+      {
+        "id": 296,
+        "sub": "实验教学",
+        "title": "教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）",
+        "kind": "abstract",
+        "text": "项目为三草酸合铁(III)酸钾感光剂的合成、组成测定及性质，含硫酸亚铁铵制备、K3[Fe(C2O4)3]·3H2O制备提纯、结晶水/C2O42-/铁含量测定、感光纸与感光液制作、红外/紫外-可见/荧光光谱测试，另含彩色固体酒精与固体文具胶设计实验"
+      },
+      {
+        "id": 296,
+        "sub": "实验教学",
+        "title": "教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）",
+        "kind": "question",
+        "text": "如何用重量法和滴定法测定K3[Fe(C2O4)3]·3H2O的组成"
+      },
+      {
+        "id": 296,
+        "sub": "实验教学",
+        "title": "教师备课教案本-K3[Fe(C2O4)3]·3H2O（综合实验）",
+        "kind": "question",
+        "text": "用KMnO4滴定C2O42-和Fe3+的原理是什么"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "abstract",
+        "text": "吉林大学化学教学网站实验讲义（实验四十一）：以FeSO4·7H2O为原料经草酸沉淀、双氧水氧化、配位制得三草酸合铁(III)酸钾"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "abstract",
+        "text": "用KMnO4标准溶液测定C2O42-，用SnCl2-TiCl3联合还原法测定Fe3+，确定配位比"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "question",
+        "text": "氧化FeC2O4·2H2O时为什么要保持40°C并不断搅拌"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "question",
+        "text": "用SnCl2-TiCl3联合还原法测定Fe3+的原理是什么"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "question",
+        "text": "MnSO4滴定液的作用是什么，如何配制"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "question",
+        "text": "KMnO4滴定C2O42-时为何温度不能超过85°C"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "methods",
+        "text": "FeSO4+H2C2O4沉淀→H2O2氧化→配位"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "methods",
+        "text": "SnCl2-TiCl3联合还原法测Fe3+"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "objects",
+        "text": "FeSO4·7H2O"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "objects",
+        "text": "KMnO4标准溶液"
+      },
+      {
+        "id": 297,
+        "sub": "实验教学",
+        "title": "实验四十一 三草酸合铁（Ⅲ）酸钾的合成及组成测定",
+        "kind": "objects",
+        "text": "MnSO4滴定液"
+      },
+      {
+        "id": 298,
+        "sub": "实验教学",
+        "title": "《实验化学》的实施总结（执信中学）",
+        "kind": "abstract",
+        "text": "执信中学林玩花对《实验化学》课程的实施总结，梳理08、09届高三年级各版本教材实验开设情况，并以莫尔盐（硫酸亚铁铵）制备为例给出实验目的、原理、用品、步骤（铁屑除油污→FeSO4制备→复盐结晶）及教师思考题"
+      },
+      {
+        "id": 298,
+        "sub": "实验教学",
+        "title": "《实验化学》的实施总结（执信中学）",
+        "kind": "question",
+        "text": "浓缩(NH4)2SO4·FeSO4·6H2O时能否浓缩至干，为什么"
+      },
+      {
+        "id": 299,
+        "sub": "实验教学",
+        "title": "三草酸合铁（III）酸钾制备——思考题",
+        "kind": "abstract",
+        "text": "归纳C2O42-用KMnO4滴定、Fe3+用SnCl2-TiCl3联合还原法/磺基水杨酸光度法/Zn粉还原法测定"
+      },
+      {
+        "id": 299,
+        "sub": "实验教学",
+        "title": "三草酸合铁（III）酸钾制备——思考题",
+        "kind": "question",
+        "text": "三草酸合铁酸钾中C2O42-和Fe3+各可用哪些方法测定"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "abstract",
+        "text": "英文实验9（铁草酸盐的制备与分析）教学笔记（2001-03-09），重量法部分源自 Olmsted, J. Chem. Educ. 1984, 61, 1098，分光光度法源自 Dallinger, J. Chem. Educ. 1995, 72, 936"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "abstract",
+        "text": "含预实验与在室作业题目及标准答案：分子量/理论产率计算、脱水比、Q检验、草酸根-高锰酸钾滴定、Fe(bipy)3 2+分光光度法"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "question",
+        "text": "K3[Fe(C2O4)3]·3H2O和K3[Fe(C2O4)3]的分子量各是多少"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "question",
+        "text": "铁(III)草酸盐光解实验中选择522 nm的原因是什么"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "question",
+        "text": "抗坏血酸在Fe(bipy)3 2+显色中起什么作用"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "methods",
+        "text": "重量法、分光光度法（522 nm）、Q检验、氧化还原滴定"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "objects",
+        "text": "FeC2O4·2H2O"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "objects",
+        "text": "KMnO4"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "objects",
+        "text": "(NH4)2Fe(SO4)2·6H2O"
+      },
+      {
+        "id": 300,
+        "sub": "实验教学",
+        "title": "Teaching Notes for Experiment 9 (Iron Oxalate 习题)",
+        "kind": "objects",
+        "text": "2,2'-联吡啶"
+      },
+      {
+        "id": 306,
+        "sub": "实验教学",
+        "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+        "kind": "abstract",
+        "text": "CHEM 165 实验室手册（Spring 2000）实验2“铁草酸盐络合物的制备”：先由硫酸亚铁铵与草酸制备草酸亚铁，再在草酸与草酸钾存在下用H2O2氧化生成[Fe(C2O4)3]3-并以钾盐结晶"
+      },
+      {
+        "id": 306,
+        "sub": "实验教学",
+        "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+        "kind": "abstract",
+        "text": "随后进行水、乙醇、50/50混合液中的溶解度测试与产率计算"
+      },
+      {
+        "id": 306,
+        "sub": "实验教学",
+        "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+        "kind": "objects",
+        "text": "草酸亚铁 FeC2O4·2H2O"
+      },
+      {
+        "id": 306,
+        "sub": "实验教学",
+        "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+        "kind": "objects",
+        "text": "K3Fe(C2O4)3·3H2O"
+      },
+      {
+        "id": 306,
+        "sub": "实验教学",
+        "title": "CHEM 165 Lab Manual: Preparation of an Iron Oxalate Complex",
+        "kind": "objects",
+        "text": "H2O2"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "abstract",
+        "text": "学生实验报告（Eric Hanken，Experiment 26）：先由硫酸亚铁铵与草酸合成草酸亚铁，再经K2C2O4、H2O2氧化与草酸溶解制得三草酸合铁酸钾"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "abstract",
+        "text": "用KMnO4滴定测草酸根、用1,10-邻菲啰啉分光光度法测铁含量（测得约38.7%）"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "question",
+        "text": "如何用1,10-邻菲啰啉分光光度法测定铁含量"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "question",
+        "text": "KMnO4滴定草酸根的原理是什么"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "methods",
+        "text": "KMnO4滴定测草酸根"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "objects",
+        "text": "KMnO4"
+      },
+      {
+        "id": 307,
+        "sub": "实验教学",
+        "title": "Lab Report: Synthesis of Potassium Ferric Oxalate",
+        "kind": "objects",
+        "text": "1,10-邻菲啰啉"
+      },
+      {
+        "id": 310,
+        "sub": "实验教学",
+        "title": "Transition Metal Transformations",
+        "kind": "abstract",
+        "text": "实验1观察CuCl2加Cl-后由八面体[Cu(H2O)6]2+转变为四面体[CuCl4]2-的颜色变化"
+      },
+      {
+        "id": 310,
+        "sub": "实验教学",
+        "title": "Transition Metal Transformations",
+        "kind": "abstract",
+        "text": "实验2比较Fe(II)与Fe(III)铵硫酸盐与铁氰化钾、BaCl2、NaHSO3、KSCN反应的不同颜色，说明氧化态与配体场对颜色的影响"
+      },
+      {
+        "id": 310,
+        "sub": "实验教学",
+        "title": "Transition Metal Transformations",
+        "kind": "question",
+        "text": "[Cu(H2O)6]2+与[CuCl4]2-的几何构型有何不同"
+      },
+      {
+        "id": 312,
+        "sub": "实验教学",
+        "title": "Pre-lab Report Guidelines for Iron Oxalate Experiment",
+        "kind": "abstract",
+        "text": "UCLA CHEM 30AL（2009夏）实验11“铁草酸盐的合成与分析”预习/实验后报告指南：规定预习报告须含标题、ACS格式参考文献、引言（合成/分析/纯化技术目标）、第一周流程图、草酸与硫酸亚铁铵的MSDS信息及研究题"
+      },
+      {
+        "id": 312,
+        "sub": "实验教学",
+        "title": "Pre-lab Report Guidelines for Iron Oxalate Experiment",
+        "kind": "abstract",
+        "text": "实验后报告须含摘要、数据与观察、FeC2O4粗产率计算与结论"
+      },
+      {
+        "id": 312,
+        "sub": "实验教学",
+        "title": "Pre-lab Report Guidelines for Iron Oxalate Experiment",
+        "kind": "question",
+        "text": "如何计算FeC2O4的粗产率"
+      },
+      {
+        "id": 322,
+        "sub": "实验教学",
+        "title": "Instructions for Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate (SI)",
+        "kind": "abstract",
+        "text": "Junk等论文（J. Chem. Educ. 2021, 98, 3400）的支持信息：100g学生三草酸合铁(III)酸钾废料加200mL水45°C溶解过滤，48h冷却回收74.4g纯品"
+      },
+      {
+        "id": 322,
+        "sub": "实验教学",
+        "title": "Instructions for Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate (SI)",
+        "kind": "abstract",
+        "text": "再溶于500mL水，悬线法（尼龙线系晶种）缓慢蒸发培养数周得38.3g大晶体（约51%），并介绍打磨不规则凸起、透明指甲油/清漆涂层保护等操作"
+      },
+      {
+        "id": 322,
+        "sub": "实验教学",
+        "title": "Instructions for Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate (SI)",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O晶体培养"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "abstract",
+        "text": "中学生研究论文：以易拉罐铝箔为原料经酸法、碱法成功制取明矾，检验出铝箔杂质含铁盐与铜单质（KSCN显血红色、稀硝酸溶出Cu2+使溶液变蓝）"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "abstract",
+        "text": "控制变量实验发现Fe3+在碱法中显著加速铝箔溶解（60°C催化效果最佳），Cu影响不明显，并推测为碱性介质中金属腐蚀电池机理"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "question",
+        "text": "Fe3+对碱法溶解铝箔的速率有何影响"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "methods",
+        "text": "控制变量法探究Fe3+、Cu对溶解速率影响"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "objects",
+        "text": "明矾 KAl(SO4)2·12H2O"
+      },
+      {
+        "id": 331,
+        "sub": "实验教学",
+        "title": "浅谈实验室酸碱法制取明矾实验中铝箔中杂质的成分探究",
+        "kind": "objects",
+        "text": "铝箔杂质 Fe3+、Cu"
+      },
+      {
+        "id": 338,
+        "sub": "实验教学",
+        "title": "铜循环（基础化学实验01）",
+        "kind": "abstract",
+        "text": "武汉大学化学与分子科学学院基础化学实验01“铜循环”：从Cu片出发经浓硝酸溶解→NaOH沉淀→加热分解→H2SO4溶解→Zn粉置换五步循环得到Cu粉，熟悉四类基本化学反应与氧化还原分类，练习倾滗法、通风橱使用、样品干燥等基本操作，含10道实验探究设计题"
+      },
+      {
+        "id": 338,
+        "sub": "实验教学",
+        "title": "铜循环（基础化学实验01）",
+        "kind": "question",
+        "text": "Cu(OH)2受热分解为CuO的现象是什么"
+      },
+      {
+        "id": 338,
+        "sub": "实验教学",
+        "title": "铜循环（基础化学实验01）",
+        "kind": "question",
+        "text": "Zn粉还原CuSO4时为什么会产生刺激性气体"
+      },
+      {
+        "id": 338,
+        "sub": "实验教学",
+        "title": "铜循环（基础化学实验01）",
+        "kind": "question",
+        "text": "本实验产率为何常超过100%"
+      },
+      {
+        "id": 338,
+        "sub": "实验教学",
+        "title": "铜循环（基础化学实验01）",
+        "kind": "objects",
+        "text": "铜 Cu→Cu(NO3)2→Cu(OH)2→CuO→CuSO4→Cu"
+      },
+      {
+        "id": 348,
+        "sub": "实验教学",
+        "title": "IChO32 Practical Examination: Laboratory Introduction",
+        "kind": "abstract",
+        "text": "第32届国际化学奥林匹克（哥本哈根，2000年7月4日）实验考试说明：5小时完成实验任务，佩戴护目镜、禁用口吸移液，说明废液分类处置（无机合成残液、滴定残液、有机废液等）"
+      },
+      {
+        "id": 348,
+        "sub": "实验教学",
+        "title": "IChO32 Practical Examination: Laboratory Introduction",
+        "kind": "abstract",
+        "text": "列出丙酮、甲醇、草酸、KMnO4、硫酰氯等试剂的欧洲/丹麦R与S短语"
+      },
+      {
+        "id": 348,
+        "sub": "实验教学",
+        "title": "IChO32 Practical Examination: Laboratory Introduction",
+        "kind": "question",
+        "text": "第32届国际化学奥林匹克实验考试有何规则"
+      },
+      {
+        "id": 348,
+        "sub": "实验教学",
+        "title": "IChO32 Practical Examination: Laboratory Introduction",
+        "kind": "objects",
+        "text": "第32届国际化学奥林匹克（哥本哈根2000）实验考试"
+      }
+    ],
+    "摩尔盐相关": [
+      {
+        "id": 84,
+        "sub": "摩尔盐相关",
+        "title": "1",
+        "kind": "abstract",
+        "text": "用单晶X射线衍射精修确定了siderotil（水铁矾，(Fe,Cu)SO₄·5H₂O）的原子结构：空间群P1̄、与胆矾CuSO₄·5H₂O同构，Cu仅占据M1金属位点，Fe在八面体位点占主导使长轴向键明显缩短"
+      },
+      {
+        "id": 85,
+        "sub": "摩尔盐相关",
+        "title": "10",
+        "kind": "abstract",
+        "text": "介绍硫酸亚铁铵（摩尔盐，(NH₄)₂SO₄·FeSO₄·6H₂O）的制备及纯度检验：铁屑溶于稀硫酸制FeSO₄，加等摩尔硫酸铵蒸发浓缩、冷却结晶得复盐，并用Fe³⁺与KSCN生成红色配合物的目视比色法确定产品纯度等级"
+      },
+      {
+        "id": 85,
+        "sub": "摩尔盐相关",
+        "title": "10",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 86,
+        "sub": "摩尔盐相关",
+        "title": "18",
+        "kind": "abstract",
+        "text": "介绍硫酸亚铁铵（摩尔盐）的制备实验：铁屑与稀硫酸反应制得FeSO₄，加入硫酸铵经蒸发浓缩、冷却结晶、吸滤得到(NH₄)₂SO₄·FeSO₄·6H₂O晶体，并强调保持溶液强酸性、缓慢冷却结晶等关键操作与目视比色检验"
+      },
+      {
+        "id": 86,
+        "sub": "摩尔盐相关",
+        "title": "18",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 87,
+        "sub": "摩尔盐相关",
+        "title": "Fe2SO4",
+        "kind": "abstract",
+        "text": "关于硫酸亚铁(FeSO4)系化合物的资料：用于理解硫酸亚铁铵(摩尔盐)与硫酸亚铁的稳定性差异及其制备条件优化"
+      },
+      {
+        "id": 87,
+        "sub": "摩尔盐相关",
+        "title": "Fe2SO4",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 88,
+        "sub": "摩尔盐相关",
+        "title": "FeSO4",
+        "kind": "abstract",
+        "text": "硫酸亚铁(FeSO4)资料：说明制备硫酸亚铁铵时保持酸性条件的原因(防止Fe²⁺水解氧化)及摩尔盐晶体结构，是理解铁盐化学的基础"
+      },
+      {
+        "id": 89,
+        "sub": "摩尔盐相关",
+        "title": "Ferrous Ammonium",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 89,
+        "sub": "摩尔盐相关",
+        "title": "Ferrous Ammonium",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O、铁(III)配合物"
+      },
+      {
+        "id": 90,
+        "sub": "摩尔盐相关",
+        "title": "SULFATE MINERAL PHASE EQUILIBRIA AS A FUNCTION OF RELATIVE HUMIDITY.",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 92,
+        "sub": "摩尔盐相关",
+        "title": "melanterite-绿矾",
+        "kind": "abstract",
+        "text": "报道绿矾（melanterite，FeSO₄·7H₂O）的矿物学数据：单斜晶系、空间群P2₁/c，晶胞参数a=14.072 Å等，呈浅绿至绿色、玻璃光泽、易溶于水，并给出X射线粉末衍射特征峰与化学组成"
+      },
+      {
+        "id": 93,
+        "sub": "摩尔盐相关",
+        "title": "《硫酸亚铁铵的制备》简介",
+        "kind": "abstract",
+        "text": "概述硫酸亚铁铵（摩尔盐，(NH₄)₂SO₄·FeSO₄·6H₂O）的制备原理：铁屑与稀硫酸反应得FeSO₄，加等物质量硫酸铵调pH 1～2，蒸发浓缩、冷却结晶即得复盐"
+      },
+      {
+        "id": 93,
+        "sub": "摩尔盐相关",
+        "title": "《硫酸亚铁铵的制备》简介",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 93,
+        "sub": "摩尔盐相关",
+        "title": "《硫酸亚铁铵的制备》简介",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 94,
+        "sub": "摩尔盐相关",
+        "title": "七水合硫酸亚铁热分解及脱水非等温动力学研究",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 94,
+        "sub": "摩尔盐相关",
+        "title": "七水合硫酸亚铁热分解及脱水非等温动力学研究",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 95,
+        "sub": "摩尔盐相关",
+        "title": "七水硫酸亚铁的热分解动力学研究",
+        "kind": "abstract",
+        "text": "以钛白粉副产七水硫酸亚铁为对象，用微机差热天平测定TG/DTA数据，对45个机理函数进行优选，确定第一步、第二步失水分别符合一维扩散模型与三维扩散球对称模型，并计算热分解动力学参数，为工业应用提供基础数据"
+      },
+      {
+        "id": 95,
+        "sub": "摩尔盐相关",
+        "title": "七水硫酸亚铁的热分解动力学研究",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 96,
+        "sub": "摩尔盐相关",
+        "title": "七水硫酸锌脱水机理热力学初探",
+        "kind": "abstract",
+        "text": "用DTA/TGA测定ZnSO₄·7H₂O的脱水过程：低温下先失去液态水，由ZnSO₄·7H₂O依次脱去1分子、5分子水生成ZnSO₄·H₂O，高温下再脱去气态水得ZnSO₄，并从热力学角度解释各步脱水机理"
+      },
+      {
+        "id": 97,
+        "sub": "摩尔盐相关",
+        "title": "三、硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 98,
+        "sub": "摩尔盐相关",
+        "title": "五水硫酸铜脱水机理的热力学求算",
+        "kind": "abstract",
+        "text": "用DTA/TGA联机研究五水硫酸铜CuSO₄·5H₂O的脱水过程，探讨不同条件下失水机理的可能类型，结果表明低温（100 ℃以下）时直接脱去气态水，并从热力学角度解释脱水过程的原因"
+      },
+      {
+        "id": 100,
+        "sub": "摩尔盐相关",
+        "title": "利用七水硫酸亚铁生产一水硫酸亚铁及聚合硫酸铁",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 100,
+        "sub": "摩尔盐相关",
+        "title": "利用七水硫酸亚铁生产一水硫酸亚铁及聚合硫酸铁",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 101,
+        "sub": "摩尔盐相关",
+        "title": "制备硫酸亚铁铵单晶的实验研究",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 102,
+        "sub": "摩尔盐相关",
+        "title": "南大-硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 103,
+        "sub": "摩尔盐相关",
+        "title": "实验 硫酸亚铁铵的制备",
+        "kind": "abstract",
+        "text": "以“设计实验”形式引导学生自主设计并制备硫酸亚铁铵（摩尔盐）：铁屑与稀硫酸反应制FeSO₄，加等物质量硫酸铵、控制pH 1～2后蒸发浓缩、冷却结晶"
+      },
+      {
+        "id": 103,
+        "sub": "摩尔盐相关",
+        "title": "实验 硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 104,
+        "sub": "摩尔盐相关",
+        "title": "实验56 硫酸亚铁铵的制备",
+        "kind": "abstract",
+        "text": "本课件为“实验56 硫酸亚铁铵的制备”教学材料，涉及摩尔盐的制备原理、温度与pH控制等关键操作以及产品纯度检验方法"
+      },
+      {
+        "id": 104,
+        "sub": "摩尔盐相关",
+        "title": "实验56 硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 105,
+        "sub": "摩尔盐相关",
+        "title": "实验一 硫酸亚铁铵的制备",
+        "kind": "abstract",
+        "text": "按“铁粉＋稀硫酸→FeSO₄，再加硫酸铵饱和溶液调pH 1～2”的路线制备硫酸亚铁铵，水浴蒸发浓缩至出现晶膜后冷却结晶，得产率85%的一级产品"
+      },
+      {
+        "id": 105,
+        "sub": "摩尔盐相关",
+        "title": "实验一 硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 106,
+        "sub": "摩尔盐相关",
+        "title": "实验十六 硫酸亚铁铵的制备",
+        "kind": "abstract",
+        "text": "设计性实验：铁屑与稀硫酸反应制得硫酸亚铁，加入等物质的量(NH₄)₂SO₄后加热浓缩、冷却结晶，利用复盐溶解度小于各组分的特性析出硫酸亚铁铵FeSO₄·(NH₄)₂SO₄·6H₂O"
+      },
+      {
+        "id": 106,
+        "sub": "摩尔盐相关",
+        "title": "实验十六 硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 107,
+        "sub": "摩尔盐相关",
+        "title": "巧制硫酸亚铁铵晶体",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 107,
+        "sub": "摩尔盐相关",
+        "title": "巧制硫酸亚铁铵晶体",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 110,
+        "sub": "摩尔盐相关",
+        "title": "气相色谱法测定五水硫酸铜的脱水机理",
+        "kind": "abstract",
+        "text": "结合CuSO₄·5H₂O中四个配位水与一个氢键结合水环境不同的结构特点，讨论升温速率、颗粒大小对脱水机理的影响并计算各步脱水量"
+      },
+      {
+        "id": 110,
+        "sub": "摩尔盐相关",
+        "title": "气相色谱法测定五水硫酸铜的脱水机理",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 111,
+        "sub": "摩尔盐相关",
+        "title": "由废白铁制备硫酸亚铁铵-完结",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 113,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁",
+        "kind": "abstract",
+        "text": "介绍硫酸亚铁（FeSO₄）的组成与物理性质，列出其多种水合物FeSO₄·H₂O、FeSO₄·4H₂O、FeSO₄·5H₂O、FeSO₄·7H₂O及熔点64℃、沸点90℃等数据，并涉及溶解度等相关物性"
+      },
+      {
+        "id": 113,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 114,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵",
+        "kind": "abstract",
+        "text": "介绍硫酸亚铁铵（莫尔盐，化学式(NH₄)₂Fe(SO₄)₂·6H₂O）的组成与命名来历——以德国化学家莫尔（Mohr）命名，并涉及其溶于水等基本性质"
+      },
+      {
+        "id": 114,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 114,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 115,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵制备",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 115,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 116,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵制备实验的改进",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 117,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵制备实验的改进探索",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 118,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 118,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 119,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 119,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 120,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备1",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 121,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度分析",
+        "kind": "abstract",
+        "text": "以制备高纯复盐并掌握产品鉴定方法为目标：铁屑与稀硫酸反应制硫酸亚铁，与(NH₄)₂SO₄等物质的量混合结晶制得(NH₄)₂SO₄·FeSO₄·6H₂O"
+      },
+      {
+        "id": 121,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度分析",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 121,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度分析",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 123,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及质量鉴定",
+        "kind": "question",
+        "text": "硫酸亚铁铵中Fe2+含量如何标定"
+      },
+      {
+        "id": 123,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及质量鉴定",
+        "kind": "objects",
+        "text": "硫酸亚铁铵 (NH₄)₂Fe(SO₄)₂·6H₂O"
+      },
+      {
+        "id": 124,
+        "sub": "摩尔盐相关",
+        "title": "莫尔盐的空气稳定性",
+        "kind": "abstract",
+        "text": "探讨硫酸亚铁铵((NH₄)₂SO₄·FeSO₄·6H₂O)比硫酸亚铁(FeSO₄·7H₂O)在空气中稳定得多的原因：从溶液与晶体两种状态比较二者的稳定性，结合电极电位与能斯特方程分析Fe²⁺被氧化的难易，并类比拓展到金属钝化原理"
+      },
+      {
+        "id": 126,
+        "sub": "摩尔盐相关",
+        "title": "马口铁与白铁区别",
+        "kind": "abstract",
+        "text": "辨析马口铁与白铁的区别：马口铁即镀锡铁皮，因历史上从马来西亚进口而得名，我国1973年将其正式定名为\"镀锡铁皮\"，其防锈性好、常用于食品罐头等包装，使用中需注意防潮防热"
+      },
+      {
+        "id": 313,
+        "sub": "摩尔盐相关",
+        "title": "MSDS: Ammonium Iron(II) Sulfate Hexahydrate",
+        "kind": "abstract",
+        "text": "硫酸亚铁铵六水合物（莫尔盐，(NH4)2Fe(SO4)2·6H2O）安全数据表（MSDS，Dr. B. Dunlevy 2001-01-12）：CAS 7783-85-9，浅绿色结晶粉末，密度1.864，熔点100°C(分解)，刺激眼睛/呼吸系统/皮肤，对空气与光敏感，大鼠口服LD50 3250 mg/kg"
+      },
+      {
+        "id": 313,
+        "sub": "摩尔盐相关",
+        "title": "MSDS: Ammonium Iron(II) Sulfate Hexahydrate",
+        "kind": "objects",
+        "text": "(NH4)2Fe(SO4)2·6H2O（莫尔盐）"
+      },
+      {
+        "id": 342,
+        "sub": "摩尔盐相关",
+        "title": "Iron(II) sulfate (Wikipedia)",
+        "kind": "abstract",
+        "text": "介绍其多种水合物（FeSO4·H2O szomolnokite、·4H2O rozenite、·7H2O melanterite等）、钢铁酸洗与钛白硫酸法副产物的来源、加热失水与480°C分解为Fe2O3/SO2/SO3，以及作营养补铁剂、墨水与媒染剂、混凝剂等用途"
+      },
+      {
+        "id": 342,
+        "sub": "摩尔盐相关",
+        "title": "Iron(II) sulfate (Wikipedia)",
+        "kind": "objects",
+        "text": "FeSO4·7H2O（绿矾）"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "abstract",
+        "text": "本文批判性讨论摩尔盐（硫酸亚铁铵）比硫酸亚铁稳定的原因：否定“空隙说”（晶胞示意图比例失当、O2无法穿过晶体表面）与“氢键说”（NH4+只成较弱的N-H···O氢键）"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "abstract",
+        "text": "提出用盐类水合物结构理论解释——摩尔盐6个结晶水均与Fe2+配位而稳定，FeSO4·7H2O有一个仅靠氢键维系的水分子易风化失水暴露Fe2+"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "abstract",
+        "text": "并从Φ-pH图、离子强度等讨论Fe2+溶液稳定性"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "question",
+        "text": "为什么控制pH不能阻止Fe2+被氧化"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "objects",
+        "text": "(NH4)2Fe(SO4)2·6H2O"
+      },
+      {
+        "id": 343,
+        "sub": "摩尔盐相关",
+        "title": "关于硫酸亚铁铵稳定性的讨论",
+        "kind": "objects",
+        "text": "FeSO4·7H2O"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "abstract",
+        "text": "实验33“硫酸亚铁铵的制备”：以铁屑与稀硫酸制FeSO4，再加等摩尔(NH4)2SO4利用复盐溶解度较小的特点冷却结晶得(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "abstract",
+        "text": "用目视比色法检验产品Fe3+杂质（Fe3++nSCN-=[Fe(SCN)n]3-n血红色），并说明保持酸性、使用无氧水、晶膜控制等注意事项"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "question",
+        "text": "目视比色法检验Fe3+的显色原理是什么"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "methods",
+        "text": "铁屑制FeSO4→加硫酸铵结晶"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "methods",
+        "text": "目测比色法检验Fe3+"
+      },
+      {
+        "id": 344,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（实验33）",
+        "kind": "objects",
+        "text": "(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 345,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（课件）",
+        "kind": "abstract",
+        "text": "硫酸亚铁铵制备实验PPT课件（12页）：介绍复盐硫酸亚铁铵（摩尔盐）的制备原理（Fe+H2SO4→FeSO4，再与(NH4)2SO4结晶得复盐）、水浴加热/过滤/蒸发/结晶/干燥等基本操作、目测比色法检验产品等级，含仪器药品、步骤与4道思考题"
+      },
+      {
+        "id": 345,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（课件）",
+        "kind": "question",
+        "text": "检验Fe2+时为什么要用不含氧的蒸馏水"
+      },
+      {
+        "id": 345,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备（课件）",
+        "kind": "objects",
+        "text": "(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "abstract",
+        "text": "硫酸亚铁铵制备及纯度检验实验讲义：以铁屑与稀硫酸制FeSO4，加(NH4)2SO4利用复盐溶解度较小制得(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "abstract",
+        "text": "用Fe3+与SCN-显红色的目测比色法做产品限量分析确定等级"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "abstract",
+        "text": "用直接法配制的K2Cr2O7标准溶液（二苯胺磺酸钠指示剂）滴定测定产品含量，含7道思考题与8道测试题及答案"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "question",
+        "text": "如何用目测比色法检验产品Fe3+杂质限量"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "question",
+        "text": "如何用K2Cr2O7滴定测定硫酸亚铁铵含量"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "question",
+        "text": "Fe屑加H2SO4后为什么要趁热减压过滤"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "question",
+        "text": "洗涤晶体为什么用95%乙醇而不用水"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "methods",
+        "text": "K2Cr2O7滴定测含量"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "objects",
+        "text": "(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 346,
+        "sub": "摩尔盐相关",
+        "title": "硫酸亚铁铵的制备及纯度检验",
+        "kind": "objects",
+        "text": "K2Cr2O7"
+      },
+      {
+        "id": 347,
+        "sub": "摩尔盐相关",
+        "title": "摩尔盐的空气稳定性",
+        "kind": "abstract",
+        "text": "冯博等探讨摩尔盐（(NH4)2SO4·FeSO4·6H2O）比FeSO4·7H2O稳定的原因：由Nernst方程分析两溶液电势相近（稳定性差别不大）"
+      },
+      {
+        "id": 347,
+        "sub": "摩尔盐相关",
+        "title": "摩尔盐的空气稳定性",
+        "kind": "abstract",
+        "text": "由晶体结构与原子间距计算指出FeSO4·7H2O易风化失水、晶格空隙大而氧气可进入，而摩尔盐(Mohrite)原子排列紧密、氧气不能进入故不被氧化"
+      },
+      {
+        "id": 347,
+        "sub": "摩尔盐相关",
+        "title": "摩尔盐的空气稳定性",
+        "kind": "question",
+        "text": "O2氧化Fe2+的电位差是多少"
+      },
+      {
+        "id": 347,
+        "sub": "摩尔盐相关",
+        "title": "摩尔盐的空气稳定性",
+        "kind": "objects",
+        "text": "(NH4)2SO4·FeSO4·6H2O"
+      },
+      {
+        "id": 347,
+        "sub": "摩尔盐相关",
+        "title": "摩尔盐的空气稳定性",
+        "kind": "objects",
+        "text": "FeSO4·7H2O"
+      }
+    ],
+    "热分析": [
+      {
+        "id": 127,
+        "sub": "热分析",
+        "title": "Cr Fe Al Cu 草酸配合物热分析研究",
+        "kind": "abstract",
+        "text": "对K₃[Fe(C₂O₄)₃]·3H₂O、K₃[Cr(C₂O₄)₃]·3H₂O、K₃[Al(C₂O₄)₃]·3H₂O及K₂[Cu(C₂O₄)₂]·2H₂O四种草酸配合物进行TG-DSC热分析，用三种动力学方法计算各步分解活化能与指前因子"
+      },
+      {
+        "id": 128,
+        "sub": "热分析",
+        "title": "Cr(111)，Fe(Ⅲ)，Al(Ⅲ)，Cu(Ⅱ)草酸配合物热分析研究",
+        "kind": "abstract",
+        "text": "(卷期页码据西北大学期刊网记录为2004年第2期，页码未核实)"
+      },
+      {
+        "id": 129,
+        "sub": "热分析",
+        "title": "复盐K 3Fe C 2O 4 3 3H 2O的热分析研究",
+        "kind": "abstract",
+        "text": "用热重-差热(TG-DTA)方法研究复盐K3Fe(C2O4)3·3H2O在程序升温过程中的热分解行为，确定其脱水及草酸根分解各步骤的温度区间，并讨论其热分解机理"
+      },
+      {
+        "id": 394,
+        "sub": "热分析",
+        "title": "Mössbauer study on the thermal decomposition of potassium tris(oxalato)ferrate(III) trihydrate and bis(oxalato)ferrate(II) dihydrate",
+        "kind": "abstract",
+        "text": "K₃[Fe(C₂O₄)₃]·3H₂O热分解"
+      }
+    ],
+    "磁性研究": [
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "abstract",
+        "text": "选用易纯制、具有自旋自由d5组态的K3[Fe(C2O4)3]·3H2O，直接法测得μeff=5.93±0.07 B.M.、相对法（HgCo(CNS)4校准）测得5.85±0.03 B.M.，与纯自旋理论值5.92 B.M.吻合"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "abstract",
+        "text": "并说明其670 nm处低摩尔吸光系数源于自旋禁阻跃迁"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "question",
+        "text": "K3[Fe(C2O4)3]·3H2O的有效磁矩实测值是多少"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "question",
+        "text": "为什么d5高自旋配合物的磁矩接近纯自旋值"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "question",
+        "text": "Gouy法中为什么要用HgCo(CNS)4作校准物"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "question",
+        "text": "该配合物670 nm处吸收弱说明了什么"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 317,
+        "sub": "磁性研究",
+        "title": "Magnetic Moment Measurement of a Coordination Complex",
+        "kind": "objects",
+        "text": "HgCo(CNS)4"
+      },
+      {
+        "id": 409,
+        "sub": "磁性研究",
+        "title": "Magnetic susceptibility and crystal structure analysis of potassium iron oxalate trihydrate",
+        "kind": "abstract",
+        "text": "（替代文献）实测了 K₃[Fe(C₂O₄)₃]·3H₂O 的磁化率并解析其晶体结构，为三草酸合铁酸钾的变温磁行为提供实验数据"
+      },
+      {
+        "id": 413,
+        "sub": "磁性研究",
+        "title": "Synthesis and Characterization of a Soluble Bimetallic Oxalate-Based Bidimensional Magnet: [K(18-crown-6)]3[Mn3(H2O)4{Cr(ox)3}3]",
+        "kind": "abstract",
+        "text": "（替代文献）报道了可溶性 K(18-crown-6) 模板化的二维草酸桥联双金属磁体 [K(18-crown-6)]₃[Mn₃(H₂O)₄{Cr(ox)₃}₃]，兼具溶液加工性与磁有序"
+      },
+      {
+        "id": 418,
+        "sub": "磁性研究",
+        "title": "Magnetic susceptibility: A physical chemistry laboratory experiment",
+        "kind": "abstract",
+        "text": "（替代文献）物理化学实验课程中测定过渡金属配合物磁化率的经典教学设计（Gouy 法），可延伸用于测定 K₃[Fe(C₂O₄)₃]·3H₂O 等配合物的磁矩"
+      },
+      {
+        "id": 422,
+        "sub": "磁性研究",
+        "title": "Inexpensive gouy balance for magnetic susceptibility determination",
+        "kind": "abstract",
+        "text": "（替代文献）介绍自制 Gouy 磁天平测定磁化率的方法，是教学中测定配合物磁矩（如 K₃[Fe(C₂O₄)₃]·3H₂O）的经典手段"
+      }
+    ],
+    "结构表征": [
+      {
+        "id": 134,
+        "sub": "结构表征",
+        "title": "growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸铬配合物、铁(III)配合物"
+      },
+      {
+        "id": 135,
+        "sub": "结构表征",
+        "title": "“我”——“三草酸合铁(Ⅲ)酸钾晶体”的生长及影响因素",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸根 C₂O₄²⁻"
+      },
+      {
+        "id": 136,
+        "sub": "结构表征",
+        "title": "草酸分子结构与性质的量子化学计算研究",
+        "kind": "abstract",
+        "text": "采用MP2、B3LYP和HF方法在6-311++G**水平上对草酸(乙二酸)分子进行构型优化，得到8种稳定构型和5种过渡态，分析各构型的相对能量与相互转化途径，并用自然键轨道(NBO)方法讨论其电子结构与性质"
+      },
+      {
+        "id": 288,
+        "sub": "结构表征",
+        "title": "Synthesis, crystal structure and characterization of chiral, three-dimensional anhydrous potassium tris(oxalato)ferrate(III)",
+        "kind": "abstract",
+        "text": "结合红外、热分析与磁性等手段进行表征，与常见的三水合物K3[Fe(C2O4)3]·3H2O形成对照"
+      },
+      {
+        "id": 288,
+        "sub": "结构表征",
+        "title": "Synthesis, crystal structure and characterization of chiral, three-dimensional anhydrous potassium tris(oxalato)ferrate(III)",
+        "kind": "question",
+        "text": "无水K3[Fe(C2O4)3]与三水合物在晶体结构上有何差异"
+      },
+      {
+        "id": 324,
+        "sub": "结构表征",
+        "title": "Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate",
+        "kind": "abstract",
+        "text": "晶体为单斜晶系P21/c（a=7.742, b=19.917, c=10.346 Å, β=107.85°），[Fe(C2O4)3]3-中草酸螯合使O-Fe-O角接近80°、Fe-O键长1.98-2.03 Å"
+      },
+      {
+        "id": 324,
+        "sub": "结构表征",
+        "title": "Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O大单晶"
+      },
+      {
+        "id": 423,
+        "sub": "结构表征",
+        "title": "Supramolecular interactions in the X-ray crystal structure of potassium tris(oxalato)ferrate(III) trihydrate",
+        "kind": "abstract",
+        "text": "K₃[Fe(C₂O₄)₃]·3H₂O晶体结构"
+      }
+    ],
+    "草酸配合物": [
+      {
+        "id": 186,
+        "sub": "草酸配合物",
+        "title": "K2CuC2O4 1-s2.0-S0020169301004662",
+        "kind": "abstract",
+        "text": "报道二草酸合铜(II)酸钾(K2Cu(C2O4)2)的合成：给出以铜源与草酸钾为原料的制备原理、原料配比与结晶条件，用于理解草酸铜配合物的形成与配位化学"
+      },
+      {
+        "id": 200,
+        "sub": "草酸配合物",
+        "title": "一个新的Cd(Ⅱ)草酸配合物的合成和结构研究",
+        "kind": "abstract",
+        "text": "在溶剂热条件下，以Cd(NO₃)₂·4H₂O、K₂C₂O₄·H₂O、四氮唑-1-乙酸和2,2'-联吡啶在乙腈中反应，合成一维Cd(Ⅱ)草酸配合物[Cd₃C₂O₄(NO₃)₄(2,2'-bipy)₄]，草酸根与硝酸根桥连形成一维链状超分子结构并完成单晶解析"
+      },
+      {
+        "id": 201,
+        "sub": "草酸配合物",
+        "title": "一种确定固相反应机理函数的...合物脱水过程的非等温动力学",
+        "kind": "abstract",
+        "text": "提出用双外推法确定固相反应机理函数：将升温速率外推为零求热平衡态活化能，将转化率外推为零求晶核形成时活化能，结合TG-DTA与Coats-Redfern积分法，应用于NiC₂O₄·2H₂O脱水过程的非等温动力学机理分析"
+      },
+      {
+        "id": 202,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜",
+        "kind": "abstract",
+        "text": "以草酸钾和乙酸铜为原料经室温固相反应制备二草酸合铜(Ⅱ)酸钾，用容量分析、X射线单晶/粉末衍射、红外光谱及热分析表征，确定组成为K₂[Cu(C₂O₄)₂]·2H₂O，Cu(Ⅱ)呈六配位变形八面体，热分解依次失水、脱CO₂与CO，残余物为Cu和K₂CO₃"
+      },
+      {
+        "id": 206,
+        "sub": "草酸配合物",
+        "title": "指向深度学习的高中化学制备类实验专题复习——以二草酸合铜(Ⅱ)酸钾的制备为例 唐苏 (1)",
+        "kind": "abstract",
+        "text": "以2022年高考全国乙卷第27题二草酸合铜(Ⅱ)酸钾的合成为主题开展高中化学制备类实验专题复习，通过具体实验操作引导学生深入分析制备原理与晶体析出操作，建构制备类实验的思维模型，培养动手能力与解决问题的高阶思维"
+      },
+      {
+        "id": 209,
+        "sub": "草酸配合物",
+        "title": "铁与铬的草酸配合物的热分析动力学研究",
+        "kind": "abstract",
+        "text": "用TG-DSC研究K₃[Fe(C₂O₄)₃]·3H₂O与K₃[Cr(C₂O₄)₃]·3H₂O的热分解，以Friedman等动力学方法求峰温活化能与指前因子，用Achar法拟合机理函数"
+      },
+      {
+        "id": 333,
+        "sub": "草酸配合物",
+        "title": "柠檬酸铁铵的合成及应用进展",
+        "kind": "objects",
+        "text": "柠檬酸铁铵 FeC6H5O7·(NH4)3C6H5O7"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "abstract",
+        "text": "第32届国际化学奥林匹克实验任务11：制备三草酸合锰(III)酸钾水合物K3[Mn(C2O4)3]·xH2O——草酸将KMnO4还原为Mn2+，加K2CO3提供K+，再在冰浴（<2°C）下加KMnO4氧化成Mn(III)，乙醇结晶得樱桃红晶体"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "abstract",
+        "text": "随后分别用碘量法测氧化性（Mn3+氧化I-，Na2S2O3滴定I3-）与高锰酸钾法测还原性（草酸根），由两法计算x值与产率"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "question",
+        "text": "K3[Mn(C2O4)3]·xH2O的合成路线是什么"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "question",
+        "text": "如何用KMnO4滴定测定其还原能力并计算x"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "question",
+        "text": "[Mn(C2O4)3]3-为什么对光和热敏感"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "methods",
+        "text": "KMnO4还原成Mn(II)再氧化成Mn(III)"
+      },
+      {
+        "id": 349,
+        "sub": "草酸配合物",
+        "title": "Preparation of Potassium Tris(oxalato)manganate(III) Hydrate (IChO32 Task 11)",
+        "kind": "objects",
+        "text": "K3[Mn(C2O4)3]·xH2O"
+      },
+      {
+        "id": 350,
+        "sub": "草酸配合物",
+        "title": "Transition Metal Complexes: Synthesis and Characterization (JCE 2005 SI)",
+        "kind": "abstract",
+        "text": "JCE 2005p1667W 论文的补充信息：介绍A组（Schiff碱配合物）与B组（乙二胺、氨、草酸配合物）过渡金属配合物的制备及表征流程——红外光谱、紫外-可见光谱、Gouy磁化率、Kjeldahl定氮、Leco定碳、火焰原子吸收(FAAS)测金属、电导滴定测卤离子"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "abstract",
+        "text": "崔爱莉、寇会忠等（清华大学）设计的本科实验：由新制CuO与KHC2O4（H2C2O4+K2CO3制得）反应，通过控制K2[Cu(C2O4)2]溶液浓度选择性结晶——稀溶液冷却得深蓝色针状K2[Cu(C2O4)2]·4H2O（动力学产物），浓溶液得浅蓝色片状K2[Cu(C2O4)2]·2H2O（热力学产物）"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "abstract",
+        "text": "针状晶体浸于母液>1.5h可转化为片状，直观演示动力学/热力学产物概念"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "question",
+        "text": "如何选择性制备K2[Cu(C2O4)2]·2H2O和·4H2O"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "methods",
+        "text": "CuO与KHC2O4反应"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·2H2O"
+      },
+      {
+        "id": 351,
+        "sub": "草酸配合物",
+        "title": "Controlled Synthesis of Two Copper Oxalate Hydrate Complexes: Kinetic versus Thermodynamic Factors",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·4H2O"
+      },
+      {
+        "id": 352,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜酸钾的绿色制备和形貌控制",
+        "kind": "abstract",
+        "text": "吴朝军、尹明彩、张嘉恒改进经典二草酸合铜酸钾实验：创新使用前期回收的氢氧化铜代替氧化铜与草酸氢钾反应（Cu(OH)2+2KHC2O4→K2[Cu(C2O4)2]+2H2O），并通过反应液体积和冷却条件（自来水快冷得针状四水合物、热水浴缓冷得片状二水合物）实现产物形貌控制，引入显微镜观察形貌，提升绿色合成理念与科研素养"
+      },
+      {
+        "id": 352,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜酸钾的绿色制备和形貌控制",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·4H2O"
+      },
+      {
+        "id": 352,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜酸钾的绿色制备和形貌控制",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·2H2O"
+      },
+      {
+        "id": 353,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜酸钾制备中的疑难问题",
+        "kind": "abstract",
+        "text": "两种晶型源于浓缩程度（结晶水数量）不同，针状为K2[Cu(C2O4)2]·4H2O、片状为K2[Cu(C2O4)2]·2H2O，并结合单晶X射线衍射纠正传统化学式写法"
+      },
+      {
+        "id": 353,
+        "sub": "草酸配合物",
+        "title": "二草酸合铜酸钾制备中的疑难问题",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·4H2O与·2H2O"
+      },
+      {
+        "id": 354,
+        "sub": "草酸配合物",
+        "title": "探究两种水合草酸合铜(II)酸钾晶体的合成",
+        "kind": "abstract",
+        "text": "袁秋萍、张丽霞用控制变量法探究两种水合草酸合铜(II)酸钾晶体的合成：将浓缩液分别于室温（27°C，约0.3°C/min）与冰水混合物（0°C，约13°C/min）冷却，发现晶型取决于冷却速度而与浓度无关——冰水急冷得蓝紫色K2[Cu(C2O4)2]·4H2O针状晶体，室温缓冷得天蓝色K2[Cu(C2O4)2]·2H2O片状晶体"
+      },
+      {
+        "id": 354,
+        "sub": "草酸配合物",
+        "title": "探究两种水合草酸合铜(II)酸钾晶体的合成",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·4H2O"
+      },
+      {
+        "id": 354,
+        "sub": "草酸配合物",
+        "title": "探究两种水合草酸合铜(II)酸钾晶体的合成",
+        "kind": "objects",
+        "text": "K2[Cu(C2O4)2]·2H2O"
+      }
+    ],
+    "蓝晒工艺": [
+      {
+        "id": 212,
+        "sub": "蓝晒工艺",
+        "title": "arenson-1941-demonstrations-involving",
+        "kind": "abstract",
+        "text": "1941年教学演示文献：介绍三草酸合铁(III)酸钾相关演示实验，通过UV-Vis光谱解读与自旋态(高自旋d⁵)分析，是早期配位化学演示教学记录"
+      },
+      {
+        "id": 216,
+        "sub": "蓝晒工艺",
+        "title": "dean-2011-the-oxalate-dianion-c2o42-planar-or",
+        "kind": "abstract",
+        "text": "研究草酸根(C2O4²⁻)的结构与配位模式：探讨其平面性、作为双齿配体的配位方式，并联系草酸盐在电池电极与蓝晒中的应用，是草酸根配位化学的结构解析文献"
+      },
+      {
+        "id": 221,
+        "sub": "蓝晒工艺",
+        "title": "ed1c00776 si 001 (1)",
+        "kind": "abstract",
+        "text": "Supporting information (ed1c00776_si) for 'Growing a Display Crystal of Recycled Potassium Tris(oxalato)ferrate(III) Trihydrate', J. Chem. Educ. 2021, 98(10), 3400-3404."
+      },
+      {
+        "id": 223,
+        "sub": "蓝晒工艺",
+        "title": "ed2c01089 si 001",
+        "kind": "abstract",
+        "text": "Supporting information (ed2c01089_si) for 'The Cyanotype Process and Its Potential in Chemistry Education', J. Chem. Educ. 2023, 100(6), 2367-2372. All ed2c01089_si_* files (corpus ids 223-232) belong to this parent article."
+      },
+      {
+        "id": 247,
+        "sub": "蓝晒工艺",
+        "title": "es2c07897 si 001",
+        "kind": "abstract",
+        "text": "该文为铁-柠檬酸光化学中微液滴内Fe(Ⅱ)/Fe(Ⅲ)快速氧化还原循环研究的补充材料，包含微液滴光反应装置、HPLC分析、1,10-邻菲罗啉法测铁及反应中溶解氧浓度测定等实验细节"
+      },
+      {
+        "id": 248,
+        "sub": "蓝晒工艺",
+        "title": "gonzález-seco-2004-potassium-tris(oxalato)ferrate(iii)-a-versatile-compound-to-illustrate-the-principles-of",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 250,
+        "sub": "蓝晒工艺",
+        "title": "junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)",
+        "kind": "abstract",
+        "text": "J. Chem. Educ. 2021教学文献：回收废料并悬线法培养三草酸合铁(III)酸钾大晶体，讲解合成路线、晶体绿色成因与养晶操作，是晶体培养综合实验"
+      },
+      {
+        "id": 250,
+        "sub": "蓝晒工艺",
+        "title": "junk-et-al-2021-growing-a-display-crystal-of-recycled-potassium-tris(oxalato)ferrate(iii)-trihydrate (1)",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、草酸铬配合物、铁(III)配合物"
+      },
+      {
+        "id": 255,
+        "sub": "蓝晒工艺",
+        "title": "maclean-1937-a-project-for-general-chemistry-students-color-toning-of-photographic",
+        "kind": "abstract",
+        "text": "1937年普通化学项目教学文献：以过渡金属配合物颜色与配体场理论、光强与波长对蓝晒光反应的影响为题，是化学史与教学结合的早期案例"
+      },
+      {
+        "id": 259,
+        "sub": "蓝晒工艺",
+        "title": "olmsted-1984-preparation-and-analysis-of-potassium-tris(oxalato)ferrate(iii)trihydrate-a-general-chemistry",
+        "kind": "objects",
+        "text": "三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O、铁(III)配合物"
+      },
+      {
+        "id": 262,
+        "sub": "蓝晒工艺",
+        "title": "phillips-1971-a-quantitative-photochemical-experiment-for",
+        "kind": "abstract",
+        "text": "1971年定量光化学实验：用草酸铁光量计测定光源光子通量，探讨曝光时间、紫外与可见光波长对光解的影响，是光量学教学早期文献"
+      },
+      {
+        "id": 264,
+        "sub": "蓝晒工艺",
+        "title": "s10562-005-6500-z",
+        "kind": "abstract",
+        "text": "以草酸铁(Ⅲ)为铁前驱体，通过好氧水相交换法制备低铁含量Fe-ZSM-5分子筛催化剂，用NO吸附红外光谱考察孔道内铁物种的分散状态，结果显示铁分散良好，并与氯化亚铁升华法等制备的样品进行对比"
+      },
+      {
+        "id": 270,
+        "sub": "蓝晒工艺",
+        "title": "vitz-1981-the-ferrioxalate-actinometer-a-lecture",
+        "kind": "question",
+        "text": "如何用CO2释放量替代Fe(II)显色来简化草酸铁光量计"
+      },
+      {
+        "id": 274,
+        "sub": "蓝晒工艺",
+        "title": "ware-2008-prussian-blue-artists-pigment-and-chemists",
+        "kind": "abstract",
+        "text": "综述普鲁士蓝从艺术家颜料到化学的应用史：介绍其结构(FeIII4[FeII(CN)6]3)、合成与性质，并联系蓝晒工艺中普鲁士蓝(滕氏蓝)的形成，是颜料化学与配位化学结合的经典案例"
+      },
+      {
+        "id": 315,
+        "sub": "蓝晒工艺",
+        "title": "All About Ferric Oxalate (Bostick & Sullivan)",
+        "kind": "abstract",
+        "text": "Bostick & Sullivan（Dick Sullivan）文章：介绍摄影用草酸铁（传统式 Fe2(C2O4)3·5H2O）的性质、游离草酸的银盐检测法、草酸亚铁的雾斑(fog)测试，以及由硫酸铁铵+氨水制氢氧化铁凝胶再以草酸溶解的制备工艺，并给出草酸铁钠、草酸铁锂、草酸铁铵等双草酸盐的配制配方与用途（铂钯印相、Ziatype）"
+      },
+      {
+        "id": 315,
+        "sub": "蓝晒工艺",
+        "title": "All About Ferric Oxalate (Bostick & Sullivan)",
+        "kind": "objects",
+        "text": "草酸铁 Fe2(C2O4)3·5H2O"
+      },
+      {
+        "id": 318,
+        "sub": "蓝晒工艺",
+        "title": "A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment",
+        "kind": "abstract",
+        "text": "Fiorito与Polo设计的整合实验（巴西UFABC）：学生先由FeCl3·6H2O与草酸钾合成并表征三草酸合铁(III)酸钾（产率50-60%），研究其光化学（释放Fe2+，用2,2'-联吡啶检测），再将其用作感光剂与铁氰化钾涂布水彩纸进行蓝晒印相，讨论普鲁士蓝(FeII-NC-FeIII)价间电荷转移吸收带与H2O2再氧化增强对比度的机理"
+      },
+      {
+        "id": 318,
+        "sub": "蓝晒工艺",
+        "title": "A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment",
+        "kind": "question",
+        "text": "为什么曝光后要用H2O2溶液处理照片"
+      },
+      {
+        "id": 318,
+        "sub": "蓝晒工艺",
+        "title": "A New Approach toward Cyanotype Photography Using Tris-(oxalato)ferrate(III): An Integrated Experiment",
+        "kind": "objects",
+        "text": "K3[Fe(C2O4)3]·3H2O"
+      },
+      {
+        "id": 327,
+        "sub": "蓝晒工艺",
+        "title": "基于纺织品的浸轧-蓝晒工艺优化及性能评价",
+        "kind": "abstract",
+        "text": "魏云航等以K/S值评价棉、亚麻、蚕丝织物蓝晒效果，通过感光剂扩散实验分析润湿性影响，优化浸轧-蓝晒工艺（感光剂140 g/L、VA:VB=1:1、曝光20 min最佳）"
+      },
+      {
+        "id": 327,
+        "sub": "蓝晒工艺",
+        "title": "基于纺织品的浸轧-蓝晒工艺优化及性能评价",
+        "kind": "abstract",
+        "text": "SEM显示棉织物表面均匀沉积直径约0.42 μm普鲁士蓝颗粒，热重残渣率由1.61%升至14.22%"
+      },
+      {
+        "id": 327,
+        "sub": "蓝晒工艺",
+        "title": "基于纺织品的浸轧-蓝晒工艺优化及性能评价",
+        "kind": "abstract",
+        "text": "蓝晒棉织物强力损失约24.5%，耐水洗牢度4级"
+      },
+      {
+        "id": 329,
+        "sub": "蓝晒工艺",
+        "title": "蓝晒工艺研究与实践",
+        "kind": "abstract",
+        "text": "王慧（南京工业职业技术学院）总结蓝晒工艺（铁氰酸盐印相法）的原理、配方与制作步骤：A液100g柠檬酸铁铵/500mL、B液40g铁氰化钾/500mL，静置24h后1:1混合涂布，接触印相曝光、水洗显影"
+      },
+      {
+        "id": 340,
+        "sub": "蓝晒工艺",
+        "title": "借光执笔的“蓝色精灵”——蓝晒中奇妙的光化学反应",
+        "kind": "abstract",
+        "text": "吕小兰等设计基于蓝晒光化学反应的科普实验：柠檬酸铁铵在紫外光下被还原为Fe2+，与铁氰化钾反应生成普鲁士蓝实现蓝色印相"
+      },
+      {
+        "id": 340,
+        "sub": "蓝晒工艺",
+        "title": "借光执笔的“蓝色精灵”——蓝晒中奇妙的光化学反应",
+        "kind": "abstract",
+        "text": "优化感光液配比（0.30 g/mL A液与0.25 g/mL B液等体积）与曝光时间（10 min），用智能手机RGB拾色器量化蓝色，并创新设计“蓝晒与紫外线”实验直观展示防晒霜防晒原理与效果，面向小学/中学/成人分层次科普"
+      },
+      {
+        "id": 341,
+        "sub": "蓝晒工艺",
+        "title": "蓝色颜料之蓝晒奇旅（蓝晒资料）",
+        "kind": "abstract",
+        "text": "《蓝色颜料之蓝晒奇旅》（何绮婷、张皓帆，大学化学 2021, 36(10), 2107107）在“蓝晒资料”目录下的另一副本：梳理蓝色颜料发展史，详述蓝晒感光剂配制（40g柠檬酸铁铵/200mL水 + 16g铁氰化钾/200mL水）、曝光潜影、显影定影、酸浴/双氧水调色等步骤的化学原理，阐述普鲁士黄/蓝/白电化学转化"
+      }
+    ],
+    "配位化学理论": [
+      {
+        "id": 367,
+        "sub": "配位化学理论",
+        "title": "Alfred Werner and Coordination Chemistry",
+        "kind": "abstract",
+        "text": "维尔纳配位理论百年回顾——Kauffman系统梳理维尔纳配位理论创立史：前维尔纳时代理论、与Jørgensen链式理论的论争、1913年诺贝尔化学奖的授予及理论遗产"
+      },
+      {
+        "id": 374,
+        "sub": "配位化学理论",
+        "title": "Hard and soft acids and bases—the evolution of a chemical concept",
+        "kind": "abstract",
+        "text": "（替代文献）HSAB原理60年回顾——Pearson本人回顾软硬酸碱(HSAB)原理自提出以来的发展演变，系统阐释“硬亲硬、软亲软”经验规律及其在配位化学与有机化学中的广泛应用，是HSAB最权威的回顾文献"
+      },
+      {
+        "id": 376,
+        "sub": "配位化学理论",
+        "title": "Understanding the eighteen-electron rule",
+        "kind": "abstract",
+        "text": "（替代文献）EAN规则及其例外——Pyykkö从电子结构与相对论效应层面剖析18电子规则（即EAN规则）的本质并讨论其大量例外，是理解配位/有机金属配合物电子计数规则及其局限性的权威文献"
+      },
+      {
+        "id": 377,
+        "sub": "配位化学理论",
+        "title": "Jahn-Teller effect in high spin d4 and d9 octahedral metal-complexes",
+        "kind": "abstract",
+        "text": "（替代文献）姜-泰勒效应综述——Conradie系统考察高自旋d4与d9八面体金属配合物中的姜-泰勒畸变，讨论其对键长、配体场分裂及电子光谱的影响，为理解八面体配合物的结构-光谱关系提供具体实例"
+      },
+      {
+        "id": 378,
+        "sub": "配位化学理论",
+        "title": "Early Experimental Studies of Cobalt-Ammines",
+        "kind": "abstract",
+        "text": "（替代文献）首个配位化合物发现史——Kauffman系统考证19世纪钴氨配合物（含1798年Tassaert首次报道的CoCl₃·6NH₃）的早期实验研究，复原了维尔纳配位理论诞生前配合物化学的探索历程，是配位化学史的经典文献"
+      },
+      {
+        "id": 379,
+        "sub": "配位化学理论",
+        "title": "Celebrating the 100th Anniversary of the Nobel Prize in Chemistry awarded to Alfred Werner",
+        "kind": "abstract",
+        "text": "（替代文献）维尔纳诺贝尔奖专题——Constable在维尔纳获诺贝尔化学奖100周年之际撰文回顾其配位理论的创立与1913年诺奖的历史意义，阐明配位理论如何彻底变革无机化学的结构观，是诺奖百年的权威纪念文章"
+      }
+    ],
+    "安全与废物处理": []
+  },
+  "subInfoDensity": [
+    {
+      "sub": "实验教学",
+      "count": 83,
+      "entries": 23,
+      "density": 3.61
+    },
+    {
+      "sub": "摩尔盐相关",
+      "count": 94,
+      "entries": 48,
+      "density": 1.96
+    },
+    {
+      "sub": "合成制备",
+      "count": 140,
+      "entries": 74,
+      "density": 1.89
+    },
+    {
+      "sub": "综合研究",
+      "count": 79,
+      "entries": 55,
+      "density": 1.44
+    },
+    {
+      "sub": "分析测定",
+      "count": 38,
+      "entries": 29,
+      "density": 1.31
+    },
+    {
+      "sub": "草酸配合物",
+      "count": 29,
+      "entries": 33,
+      "density": 0.88
+    },
+    {
+      "sub": "磁性研究",
+      "count": 12,
+      "entries": 19,
+      "density": 0.63
+    },
+    {
+      "sub": "光化学应用",
+      "count": 21,
+      "entries": 34,
+      "density": 0.62
+    },
+    {
+      "sub": "结构表征",
+      "count": 8,
+      "entries": 17,
+      "density": 0.47
+    },
+    {
+      "sub": "配位化学理论",
+      "count": 6,
+      "entries": 15,
+      "density": 0.4
+    },
+    {
+      "sub": "蓝晒工艺",
+      "count": 26,
+      "entries": 75,
+      "density": 0.35
+    },
+    {
+      "sub": "热分析",
+      "count": 4,
+      "entries": 18,
+      "density": 0.22
+    },
+    {
+      "sub": "安全与废物处理",
+      "count": 0,
+      "entries": 5,
+      "density": 0
+    }
+  ]
+}

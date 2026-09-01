@@ -1,0 +1,5852 @@
+{
+  "generated_at": "2026-08-23",
+  "total": 3102,
+  "p0": [],
+  "p1": [
+    {
+      "index": 94,
+      "title": "H2O2泄漏处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 46,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂泄漏：戴防护手套眼镜，用沙土或蛭石吸附，收集入废液桶，大量水冲洗泄漏区域，保持通风。",
+      "keysLead": [
+        "泄漏",
+        "双氧水泄漏",
+        "过氧化氢"
+      ]
+    },
+    {
+      "index": 201,
+      "title": "配位化学发展简史",
+      "subfield": "配位化学理论",
+      "ansLen": 52,
+      "hasDetail": true,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【实验概述与背景·配位化学简史】配位化学的发展经历了从经验积累到理论完善的漫长历程，主要可分为四个阶段：",
+      "keysLead": [
+        "配位化学简史",
+        "配位化学发展简史",
+        "配位化学"
+      ]
+    },
+    {
+      "index": 207,
+      "title": "第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析",
+      "subfield": "分析测定",
+      "ansLen": 45,
+      "hasDetail": true,
+      "keys": 85,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【制备原理深度解析·第一步】第一步反应是草酸亚铁二水合物的沉淀生成，是整个合成路线的基础。",
+      "keysLead": [
+        "第一步",
+        "第一步：FeC₂O₄·2H₂O沉淀的热力学与动力学分析",
+        "草酸亚铁"
+      ]
+    },
+    {
+      "index": 208,
+      "title": "第二步：H₂O₂氧化的氧化电位与反应机理",
+      "subfield": "合成制备",
+      "ansLen": 54,
+      "hasDetail": true,
+      "keys": 88,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【制备原理深度解析·第二步】第二步是整个制备过程的核心步骤，涉及Fe²⁺到Fe³⁺的氧化以及初步的配位反应。",
+      "keysLead": [
+        "第二步",
+        "第二步：H₂O₂氧化的氧化电位与反应机理",
+        "H₂O₂"
+      ]
+    },
+    {
+      "index": 209,
+      "title": "第三步：配位反应原理",
+      "subfield": "合成制备",
+      "ansLen": 58,
+      "hasDetail": true,
+      "keys": 88,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "【制备原理深度解析·第三步】第三步是将第二步生成的Fe(OH)₃沉淀转化为目标配合物，是整个合成路线的关键转化步骤。",
+      "keysLead": [
+        "第三步",
+        "第三步：配位反应原理",
+        "配位反应"
+      ]
+    },
+    {
+      "index": 210,
+      "title": "第四步：溶剂替换法结晶的热力学原理",
+      "subfield": "合成制备",
+      "ansLen": 50,
+      "hasDetail": true,
+      "keys": 87,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【制备原理深度解析·第四步】第四步是将配离子从溶液中以晶体形式析出，采用溶剂替换法而非传统的蒸发法。",
+      "keysLead": [
+        "第四步",
+        "第四步：溶剂替换法结晶的热力学原理",
+        "结晶"
+      ]
+    },
+    {
+      "index": 212,
+      "title": "关键操作要点与技巧",
+      "subfield": "合成制备",
+      "ansLen": 48,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【操作步骤完全指南·关键操作】实验中有多个关键操作点，掌握这些技巧是获得高产率和优质产品的保证。",
+      "keysLead": [
+        "关键操作",
+        "关键操作要点与技巧",
+        "技巧"
+      ]
+    },
+    {
+      "index": 215,
+      "title": "稳定性比较实验",
+      "subfield": "配位化学理论",
+      "ansLen": 54,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【配合物性质实验·稳定性比较】通过竞争实验可以比较不同配体与Fe³⁺的配位能力，从而理解配合物的相对稳定性。",
+      "keysLead": [
+        "稳定性比较",
+        "稳定性比较实验",
+        "竞争实验"
+      ]
+    },
+    {
+      "index": 216,
+      "title": "酸度对配位平衡的影响实验",
+      "subfield": "综合研究",
+      "ansLen": 58,
+      "hasDetail": true,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【配合物性质实验·酸度影响】酸度是影响配位平衡最重要的因素之一，通过实验可以直观观察到酸度变化对配合物稳定性的影响。",
+      "keysLead": [
+        "酸度影响",
+        "酸度对配位平衡的影响实验",
+        "酸度"
+      ]
+    },
+    {
+      "index": 221,
+      "title": "d轨道分裂与晶体场分裂能",
+      "subfield": "配位化学理论",
+      "ansLen": 49,
+      "hasDetail": true,
+      "keys": 12,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "【晶体场理论·d轨道分裂】在配体的静电场中，五重简并的d轨道分裂为能量不同的组，这就是晶体场分裂。",
+      "keysLead": [
+        "d轨道分裂",
+        "d轨道分裂与晶体场分裂能",
+        "分裂能"
+      ]
+    },
+    {
+      "index": 222,
+      "title": "高自旋 vs 低自旋",
+      "subfield": "磁性研究",
+      "ansLen": 52,
+      "hasDetail": true,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【晶体场理论·高自旋低自旋】在八面体场中，d电子的排布方式取决于两个竞争因素：晶体场分裂能和电子成对能。",
+      "keysLead": [
+        "高自旋低自旋",
+        "高自旋 vs 低自旋",
+        "高自旋"
+      ]
+    },
+    {
+      "index": 223,
+      "title": "颜色解释（d-d跃迁）",
+      "subfield": "配位化学理论",
+      "ansLen": 46,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【晶体场理论·颜色解释】配合物颜色的产生是d-d跃迁的结果，这是晶体场理论最成功的应用之一。",
+      "keysLead": [
+        "颜色解释",
+        "d-d跃迁",
+        "颜色"
+      ]
+    },
+    {
+      "index": 230,
+      "title": "配合物在工业中的应用",
+      "subfield": "配位化学理论",
+      "ansLen": 46,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【扩展知识·工业应用】配位化学在现代工业中扮演着至关重要的角色，以下介绍几个重要的应用领域。",
+      "keysLead": [
+        "工业应用",
+        "配合物在工业中的应用",
+        "催化"
+      ]
+    },
+    {
+      "index": 232,
+      "title": "数据记录规范（有效数字、单位、表格格式）",
+      "subfield": "实验教学",
+      "ansLen": 49,
+      "hasDetail": true,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【实验报告撰写规范·数据记录】科学数据的准确记录是化学实验的基本要求，直接关系到实验结果的可靠性。",
+      "keysLead": [
+        "数据记录",
+        "数据记录规范",
+        "有效数字"
+      ]
+    },
+    {
+      "index": 233,
+      "title": "误差分析方法（绝对误差、相对误差、标准偏差）",
+      "subfield": "分析测定",
+      "ansLen": 46,
+      "hasDetail": true,
+      "keys": 6,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "【实验报告撰写规范·误差分析】误差分析是评价实验数据质量的重要手段，也是科学研究的基本素养。",
+      "keysLead": [
+        "误差分析",
+        "误差分析方法",
+        "绝对误差"
+      ]
+    },
+    {
+      "index": 234,
+      "title": "产率异常的12种原因及对策",
+      "subfield": "合成制备",
+      "ansLen": 52,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【常见实验故障排查·产率异常】产率是评价实验成败的核心指标。产率异常（过低或过高）往往反映操作中的问题。",
+      "keysLead": [
+        "产率异常",
+        "产率异常的12种原因及对策",
+        "产率低"
+      ]
+    },
+    {
+      "index": 236,
+      "title": "颜色异常的诊断流程",
+      "subfield": "合成制备",
+      "ansLen": 56,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【常见实验故障排查·颜色诊断】产物颜色是判断实验成功与否的直观指标。翠绿色是正常的产物颜色，其他颜色均提示异常。",
+      "keysLead": [
+        "颜色诊断",
+        "颜色异常的诊断流程",
+        "黄绿色"
+      ]
+    },
+    {
+      "index": 238,
+      "title": "试剂问题的识别与解决",
+      "subfield": "实验操作",
+      "ansLen": 55,
+      "hasDetail": true,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "【常见实验故障排查·试剂问题】试剂的质量直接影响实验结果。学会识别试剂问题并及时解决是实验技能的重要组成部分。",
+      "keysLead": [
+        "试剂问题",
+        "试剂问题的识别与解决",
+        "摩尔盐"
+      ]
+    },
+    {
+      "index": 266,
+      "title": "搅拌速度要求",
+      "subfield": "实验操作",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加H₂O₂与草酸时以中速持续搅拌为宜：过快易溅出、引入气泡；过慢混合不均。以溶液形成平缓漩涡、无飞溅为度。",
+      "keysLead": [
+        "搅拌速度",
+        "搅拌多快",
+        "搅拌"
+      ]
+    },
+    {
+      "index": 295,
+      "title": "密度数值",
+      "subfield": "综合研究",
+      "ansLen": 39,
+      "hasDetail": true,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "K₃[Fe(C₂O₄)₃]·3H₂O的密度约为2.13 g/cm³（20℃）。",
+      "keysLead": [
+        "密度",
+        "密度是多少",
+        "多少克每立方厘米"
+      ]
+    },
+    {
+      "index": 296,
+      "title": "失水（脱水）温度",
+      "subfield": "热分析",
+      "ansLen": 58,
+      "hasDetail": true,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "约100℃失去3分子结晶水（讲义：100℃失去3分子结晶水，230℃分解），转变为无水盐K₃[Fe(C₂O₄)₃]。",
+      "keysLead": [
+        "失水温度",
+        "脱水温度",
+        "失去结晶水的温度"
+      ]
+    },
+    {
+      "index": 297,
+      "title": "分解温度",
+      "subfield": "热分析",
+      "ansLen": 53,
+      "hasDetail": true,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根约230-250℃开始氧化分解并剧烈放出CO和CO₂气体；最终残留Fe₂O₃（红棕色）和K₂CO₃。",
+      "keysLead": [
+        "分解温度",
+        "多少度分解",
+        "剧烈分解"
+      ]
+    },
+    {
+      "index": 299,
+      "title": "保存容器",
+      "subfield": "光化学应用",
+      "ansLen": 55,
+      "hasDetail": true,
+      "keys": 6,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "应装在棕色瓶中保存（棕色瓶、避光保存），也可用黑纸包裹容器；密封后置于放干燥剂的干燥器内，低温（可4℃）存放。",
+      "keysLead": [
+        "保存容器",
+        "什么容器",
+        "用什么瓶"
+      ]
+    },
+    {
+      "index": 304,
+      "title": "提供晶核的物品",
+      "subfield": "综合研究",
+      "ansLen": 42,
+      "hasDetail": true,
+      "keys": 11,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "悬挂一根棉线于溶液中央提供晶核（成核位点），也可用玻璃棒轻擦杯壁或投入晶种诱导析晶。",
+      "keysLead": [
+        "晶核",
+        "提供晶核",
+        "用什么提供晶核"
+      ]
+    },
+    {
+      "index": 307,
+      "title": "硫酸浓度",
+      "subfield": "分析测定",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "使用3 mol/L的稀硫酸，只需数滴，用于溶解莫尔盐时抑制Fe²⁺水解（Fe²⁺+H₂O⇌Fe(OH)⁺+H⁺左移）。",
+      "keysLead": [
+        "硫酸浓度",
+        "稀硫酸浓度",
+        "3mol"
+      ]
+    },
+    {
+      "index": 309,
+      "title": "乙醇浓度用量",
+      "subfield": "分析测定",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "使用95%乙醇，结晶时加约10 mL；洗涤晶体每次用少量（刚浸没晶体）、洗2—3次。",
+      "keysLead": [
+        "乙醇浓度",
+        "乙醇用量",
+        "95%"
+      ]
+    },
+    {
+      "index": 313,
+      "title": "教学采用历史",
+      "subfield": "合成制备",
+      "ansLen": 54,
+      "hasDetail": true,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "三草酸合铁酸钾制备实验自20世纪中期起被全球多所知名大学采用为教学实验，武汉大学等高校开设已有六十余年历史。",
+      "keysLead": [
+        "历史沿革",
+        "教学历史",
+        "多少年"
+      ]
+    },
+    {
+      "index": 318,
+      "title": "H2O2的CAS",
+      "subfield": "安全与废物处理",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过氧化氢CAS号7722-84-1，无色液体，氧化性；>30%为强氧化剂，实验用6%相对安全；分解产物为H₂O和O₂。",
+      "keysLead": [
+        "过氧化氢cas",
+        "7722",
+        "双氧水cas"
+      ]
+    },
+    {
+      "index": 319,
+      "title": "乙醇CAS与爆炸极限",
+      "subfield": "安全与废物处理",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇CAS号64-17-5，无色液体，易燃；闪点约13℃，爆炸极限3.3—19%（体积分数）；远离明火、保持通风。",
+      "keysLead": [
+        "乙醇cas",
+        "64-17-5",
+        "爆炸极限"
+      ]
+    },
+    {
+      "index": 321,
+      "title": "废液桶容量上限",
+      "subfield": "安全与废物处理",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "废液桶盛装不能超过容量的80%，桶盖盖紧防挥发，置于通风良好处远离热源，定期交有资质环保公司处理并记录台账。",
+      "keysLead": [
+        "废液桶",
+        "容量",
+        "80%"
+      ]
+    },
+    {
+      "index": 324,
+      "title": "酞菁产量",
+      "subfield": "综合研究",
+      "ansLen": 45,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "酞菁类配合物颜料（酞菁铜蓝、氯代酞菁绿）年产量超过10万吨，用于印刷油墨、涂料和塑料着色。",
+      "keysLead": [
+        "酞菁",
+        "年产量",
+        "酞菁铜产量"
+      ]
+    },
+    {
+      "index": 332,
+      "title": "恒重判据",
+      "subfield": "合成制备",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "干燥至恒重的判据：两次称量之差≤0.002 g。未恒重会使称量值含残留水分/乙醇，导致产率虚高甚至超过100%。",
+      "keysLead": [
+        "恒重",
+        "0.002",
+        "干燥判据"
+      ]
+    },
+    {
+      "index": 337,
+      "title": "滴加速度数值",
+      "subfield": "实验操作",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂滴加速度为每秒1—2滴，滴管尖端距液面1—2 cm，边加边用玻璃棒搅拌；加完后40℃继续搅拌5分钟。",
+      "keysLead": [
+        "滴加速度",
+        "每秒几滴",
+        "1-2滴"
+      ]
+    },
+    {
+      "index": 338,
+      "title": "微沸温度数值",
+      "subfield": "合成制备",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "沉淀步骤加热至微沸（约95—100℃）并保持约4分钟，使FeC₂O₄细小晶核长大为大颗粒，便于倾滗与洗涤。",
+      "keysLead": [
+        "微沸温度",
+        "微沸多少度",
+        "95"
+      ]
+    },
+    {
+      "index": 347,
+      "title": "第一步莫尔盐用量",
+      "subfield": "实验操作",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步称取莫尔盐（硫酸亚铁铵）5.0 g，置于100 mL烧杯中，加数滴3 mol/L稀硫酸和约15 mL蒸馏水溶解。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "莫尔盐用量"
+      ]
+    },
+    {
+      "index": 348,
+      "title": "第一步硫酸用量浓度",
+      "subfield": "分析测定",
+      "ansLen": 43,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步加数滴3 mol/L稀硫酸（H₂SO₄），目的是抑制Fe²⁺水解，保持溶液澄清。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "硫酸用量"
+      ]
+    },
+    {
+      "index": 349,
+      "title": "第一步加水量",
+      "subfield": "实验操作",
+      "ansLen": 55,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步溶解莫尔盐加约15 mL蒸馏水；草酸（1.7 g）另加约10 mL蒸馏水溶解，两液分别加热至近沸后混合。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "加多少水"
+      ]
+    },
+    {
+      "index": 357,
+      "title": "第一步温度时间",
+      "subfield": "实验操作",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步混合后加热至微沸（约95—100℃）并保持约4分钟，使FeC₂O₄沉淀颗粒长大，便于倾滗分离与洗涤。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "微沸"
+      ]
+    },
+    {
+      "index": 358,
+      "title": "第二步反应时间",
+      "subfield": "实验操作",
+      "ansLen": 50,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第二步加完H₂O₂后继续在40℃水浴中搅拌5分钟使氧化完全，然后加热至沸保持2分钟除去过量H₂O₂。",
+      "keysLead": [
+        "第二步",
+        "第2步",
+        "搅拌时间"
+      ]
+    },
+    {
+      "index": 380,
+      "title": "Fe(OH)3的颜色",
+      "subfield": "实验操作",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe(OH)₃（氢氧化铁）为红棕色（红褐色）沉淀。氧化阶段生成红褐色沉淀即Fe(OH)₃，第三步加草酸将其溶解。",
+      "keysLead": [
+        "氢氧化铁颜色",
+        "fe(oh)3颜色",
+        "fe(oh)3什么颜色"
+      ]
+    },
+    {
+      "index": 382,
+      "title": "FeC2O4的颜色",
+      "subfield": "实验操作",
+      "ansLen": 48,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "FeC₂O₄·2H₂O（草酸亚铁二水合物）为黄色沉淀，是第一步的特征产物；黄色消失说明氧化完全。",
+      "keysLead": [
+        "草酸亚铁颜色",
+        "fec2o4颜色",
+        "fec2o4什么颜色"
+      ]
+    },
+    {
+      "index": 383,
+      "title": "水合Fe2+的颜色",
+      "subfield": "结构表征",
+      "ansLen": 50,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水合Fe²⁺为浅绿色（淡绿色），莫尔盐晶体及其溶液均呈浅绿色；若发黄说明Fe²⁺已被氧化为Fe³⁺。",
+      "keysLead": [
+        "亚铁离子颜色",
+        "fe2+颜色",
+        "二价铁颜色"
+      ]
+    },
+    {
+      "index": 384,
+      "title": "铁氰化钾的颜色",
+      "subfield": "实验操作",
+      "ansLen": 39,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "铁氰化钾K₃[Fe(CN)₆]（赤血盐）为红色（暗红色）结晶，其溶液显黄红色。",
+      "keysLead": [
+        "铁氰化钾颜色",
+        "赤血盐颜色",
+        "k3fecn6颜色"
+      ]
+    },
+    {
+      "index": 385,
+      "title": "黄血盐的颜色",
+      "subfield": "实验操作",
+      "ansLen": 38,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "黄血盐（亚铁氰化钾K₄[Fe(CN)₆]·3H₂O）为黄色结晶，故名黄血盐。",
+      "keysLead": [
+        "黄血盐颜色",
+        "亚铁氰化钾颜色",
+        "黄血盐"
+      ]
+    },
+    {
+      "index": 387,
+      "title": "FeF6的颜色",
+      "subfield": "结构表征",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[FeF₆]³⁻（六氟合铁(III)酸根）为无色，故F⁻可使Fe(SCN)₃的血红色褪去（掩蔽Fe³⁺）。",
+      "keysLead": [
+        "fef6颜色",
+        "氟合铁颜色",
+        "fef6"
+      ]
+    },
+    {
+      "index": 388,
+      "title": "Fe2O3的颜色",
+      "subfield": "热分析",
+      "ansLen": 39,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe₂O₃（三氧化二铁）为红棕色（红褐色）固体，是产物热分解的最终残留物之一。",
+      "keysLead": [
+        "氧化铁颜色",
+        "fe2o3颜色",
+        "氧化铁"
+      ]
+    },
+    {
+      "index": 392,
+      "title": "滴管尖端距液面距离",
+      "subfield": "实验操作",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加H₂O₂时滴管尖端距液面1—2 cm，滴加速度每秒1—2滴，边加边用玻璃棒搅拌。",
+      "keysLead": [
+        "滴管距液面",
+        "距液面",
+        "滴管距离"
+      ]
+    },
+    {
+      "index": 395,
+      "title": "配位温度的数值",
+      "subfield": "合成制备",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配位（第三步）在微沸状态进行，温度约95—100℃，保持微沸至Fe(OH)₃沉淀完全溶解、溶液透明翠绿。",
+      "keysLead": [
+        "配位温度",
+        "配位多少度",
+        "第三步温度"
+      ]
+    },
+    {
+      "index": 401,
+      "title": "微波辅助氧化时间",
+      "subfield": "综合研究",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Zhang等（2021）报道的文献改进方案：采用微波辅助氧化，氧化时间缩短至2分钟（因设备限制尚未普及）。",
+      "keysLead": [
+        "微波",
+        "微波辅助",
+        "氧化时间缩短"
+      ]
+    },
+    {
+      "index": 402,
+      "title": "Tween-80的作用",
+      "subfield": "结构表征",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Li等（2022）报道：加入少量表面活性剂Tween-80（吐温-80）可改善晶体形貌，是文献报道的晶形改进方案。",
+      "keysLead": [
+        "tween",
+        "吐温",
+        "表面活性剂"
+      ]
+    },
+    {
+      "index": 414,
+      "title": "形貌差：机械扰动",
+      "subfield": "实验操作",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体形貌不完整原因之机械扰动：频繁移动或观察导致晶体断裂、生长受阻。对策：结晶容器一次放置好后不再移动，静置过夜。",
+      "keysLead": [
+        "机械扰动",
+        "频繁移动",
+        "结晶"
+      ]
+    },
+    {
+      "index": 419,
+      "title": "晶体浅绿色的诊断",
+      "subfield": "分析测定",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产物呈浅绿色（比正常淡）：原因是产物浓度低或稀释过度。对策：浓缩溶液（≤40℃）或减少溶剂用量后再结晶。",
+      "keysLead": [
+        "浅绿色",
+        "颜色偏淡",
+        "比正常淡"
+      ]
+    },
+    {
+      "index": 420,
+      "title": "晶体暗绿色的诊断",
+      "subfield": "光化学应用",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体呈暗绿色（灰绿色）：原因是混入杂质或光照分解产物（FeC₂O₄）。对策：检查试剂纯度，全程避光操作。",
+      "keysLead": [
+        "暗绿色",
+        "灰绿色",
+        "颜色"
+      ]
+    },
+    {
+      "index": 421,
+      "title": "晶体发白的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体表面发白：原因是乙醇洗涤后表面残留K₂SO₄白色晶体。对策：用少量冷蒸馏水快速冲洗一次（勿久洗防溶解损失）。",
+      "keysLead": [
+        "发白",
+        "表面发白",
+        "白色"
+      ]
+    },
+    {
+      "index": 423,
+      "title": "水浴锅漏水的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 43,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水浴锅漏水：立即关闭电源，用吸水材料清理积水，移开附近电器设备防止短路，然后报告教师。",
+      "keysLead": [
+        "水浴锅漏水",
+        "漏水",
+        "水浴锅"
+      ]
+    },
+    {
+      "index": 424,
+      "title": "天平无法归零的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "天平无法归零：清理秤盘、检查是否有物体接触秤盘、重启天平；仍异常则报修换用备用天平。",
+      "keysLead": [
+        "无法归零",
+        "不归零",
+        "天平归零"
+      ]
+    },
+    {
+      "index": 425,
+      "title": "水泵吸力不足的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 41,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水泵（循环水真空泵）吸力不足：检查水源和水压、检查连接管是否漏气、清理水泵过滤网。",
+      "keysLead": [
+        "水泵吸力",
+        "吸力不足",
+        "真空泵"
+      ]
+    },
+    {
+      "index": 426,
+      "title": "草酸发黄的解决",
+      "subfield": "实验操作",
+      "ansLen": 51,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸发黄说明含微量铁离子等杂质或被氧化，可能引入有色杂质。解决：更换试剂，或用活性炭脱色后重结晶提纯。",
+      "keysLead": [
+        "草酸发黄",
+        "草酸变黄",
+        "草酸"
+      ]
+    },
+    {
+      "index": 427,
+      "title": "草酸风化浓度不准",
+      "subfield": "分析测定",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸（H₂C₂O₄·2H₂O）易风化失水导致浓度不准、实际用量偏离理论值。解决：使用前标定浓度，密封保存。",
+      "keysLead": [
+        "草酸风化",
+        "风化",
+        "浓度不准"
+      ]
+    },
+    {
+      "index": 428,
+      "title": "H2O2为何不能用金属容器",
+      "subfield": "光化学应用",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂不能用金属容器长期存放：金属离子催化其分解（2H₂O₂→2H₂O+O₂↑）。应避光、低温保存于塑料或玻璃瓶中。",
+      "keysLead": [
+        "金属容器",
+        "h2o2存放",
+        "储存容器"
+      ]
+    },
+    {
+      "index": 429,
+      "title": "乙醇浓度不足",
+      "subfield": "分析测定",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "95%乙醇应密封保存，久放吸水导致浓度不足、影响结晶效果（溶解度降不下来、析晶不完全）。解决：使用新开瓶的95%乙醇。",
+      "keysLead": [
+        "乙醇吸水",
+        "乙醇浓度不足",
+        "乙醇"
+      ]
+    },
+    {
+      "index": 432,
+      "title": "辨析：草酸根是单齿配体",
+      "subfield": "配位化学理论",
+      "ansLen": 51,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。草酸根C₂O₄²⁻是双齿配体：两个羧基各提供一个氧原子与同一中心离子配位，形成五元螯合环。",
+      "keysLead": [
+        "草酸根是单齿",
+        "单齿配体",
+        "草酸根"
+      ]
+    }
+  ],
+  "p1_noDetail": [
+    {
+      "index": 94,
+      "title": "H2O2泄漏处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 46,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂泄漏：戴防护手套眼镜，用沙土或蛭石吸附，收集入废液桶，大量水冲洗泄漏区域，保持通风。",
+      "keysLead": [
+        "泄漏",
+        "双氧水泄漏",
+        "过氧化氢"
+      ]
+    },
+    {
+      "index": 266,
+      "title": "搅拌速度要求",
+      "subfield": "实验操作",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加H₂O₂与草酸时以中速持续搅拌为宜：过快易溅出、引入气泡；过慢混合不均。以溶液形成平缓漩涡、无飞溅为度。",
+      "keysLead": [
+        "搅拌速度",
+        "搅拌多快",
+        "搅拌"
+      ]
+    },
+    {
+      "index": 307,
+      "title": "硫酸浓度",
+      "subfield": "分析测定",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "使用3 mol/L的稀硫酸，只需数滴，用于溶解莫尔盐时抑制Fe²⁺水解（Fe²⁺+H₂O⇌Fe(OH)⁺+H⁺左移）。",
+      "keysLead": [
+        "硫酸浓度",
+        "稀硫酸浓度",
+        "3mol"
+      ]
+    },
+    {
+      "index": 309,
+      "title": "乙醇浓度用量",
+      "subfield": "分析测定",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "使用95%乙醇，结晶时加约10 mL；洗涤晶体每次用少量（刚浸没晶体）、洗2—3次。",
+      "keysLead": [
+        "乙醇浓度",
+        "乙醇用量",
+        "95%"
+      ]
+    },
+    {
+      "index": 318,
+      "title": "H2O2的CAS",
+      "subfield": "安全与废物处理",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过氧化氢CAS号7722-84-1，无色液体，氧化性；>30%为强氧化剂，实验用6%相对安全；分解产物为H₂O和O₂。",
+      "keysLead": [
+        "过氧化氢cas",
+        "7722",
+        "双氧水cas"
+      ]
+    },
+    {
+      "index": 319,
+      "title": "乙醇CAS与爆炸极限",
+      "subfield": "安全与废物处理",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇CAS号64-17-5，无色液体，易燃；闪点约13℃，爆炸极限3.3—19%（体积分数）；远离明火、保持通风。",
+      "keysLead": [
+        "乙醇cas",
+        "64-17-5",
+        "爆炸极限"
+      ]
+    },
+    {
+      "index": 321,
+      "title": "废液桶容量上限",
+      "subfield": "安全与废物处理",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "废液桶盛装不能超过容量的80%，桶盖盖紧防挥发，置于通风良好处远离热源，定期交有资质环保公司处理并记录台账。",
+      "keysLead": [
+        "废液桶",
+        "容量",
+        "80%"
+      ]
+    },
+    {
+      "index": 324,
+      "title": "酞菁产量",
+      "subfield": "综合研究",
+      "ansLen": 45,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "酞菁类配合物颜料（酞菁铜蓝、氯代酞菁绿）年产量超过10万吨，用于印刷油墨、涂料和塑料着色。",
+      "keysLead": [
+        "酞菁",
+        "年产量",
+        "酞菁铜产量"
+      ]
+    },
+    {
+      "index": 332,
+      "title": "恒重判据",
+      "subfield": "合成制备",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "干燥至恒重的判据：两次称量之差≤0.002 g。未恒重会使称量值含残留水分/乙醇，导致产率虚高甚至超过100%。",
+      "keysLead": [
+        "恒重",
+        "0.002",
+        "干燥判据"
+      ]
+    },
+    {
+      "index": 337,
+      "title": "滴加速度数值",
+      "subfield": "实验操作",
+      "ansLen": 54,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂滴加速度为每秒1—2滴，滴管尖端距液面1—2 cm，边加边用玻璃棒搅拌；加完后40℃继续搅拌5分钟。",
+      "keysLead": [
+        "滴加速度",
+        "每秒几滴",
+        "1-2滴"
+      ]
+    },
+    {
+      "index": 338,
+      "title": "微沸温度数值",
+      "subfield": "合成制备",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "沉淀步骤加热至微沸（约95—100℃）并保持约4分钟，使FeC₂O₄细小晶核长大为大颗粒，便于倾滗与洗涤。",
+      "keysLead": [
+        "微沸温度",
+        "微沸多少度",
+        "95"
+      ]
+    },
+    {
+      "index": 347,
+      "title": "第一步莫尔盐用量",
+      "subfield": "实验操作",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步称取莫尔盐（硫酸亚铁铵）5.0 g，置于100 mL烧杯中，加数滴3 mol/L稀硫酸和约15 mL蒸馏水溶解。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "莫尔盐用量"
+      ]
+    },
+    {
+      "index": 348,
+      "title": "第一步硫酸用量浓度",
+      "subfield": "分析测定",
+      "ansLen": 43,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步加数滴3 mol/L稀硫酸（H₂SO₄），目的是抑制Fe²⁺水解，保持溶液澄清。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "硫酸用量"
+      ]
+    },
+    {
+      "index": 349,
+      "title": "第一步加水量",
+      "subfield": "实验操作",
+      "ansLen": 55,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步溶解莫尔盐加约15 mL蒸馏水；草酸（1.7 g）另加约10 mL蒸馏水溶解，两液分别加热至近沸后混合。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "加多少水"
+      ]
+    },
+    {
+      "index": 357,
+      "title": "第一步温度时间",
+      "subfield": "实验操作",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步混合后加热至微沸（约95—100℃）并保持约4分钟，使FeC₂O₄沉淀颗粒长大，便于倾滗分离与洗涤。",
+      "keysLead": [
+        "第一步",
+        "第1步",
+        "微沸"
+      ]
+    },
+    {
+      "index": 358,
+      "title": "第二步反应时间",
+      "subfield": "实验操作",
+      "ansLen": 50,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第二步加完H₂O₂后继续在40℃水浴中搅拌5分钟使氧化完全，然后加热至沸保持2分钟除去过量H₂O₂。",
+      "keysLead": [
+        "第二步",
+        "第2步",
+        "搅拌时间"
+      ]
+    },
+    {
+      "index": 380,
+      "title": "Fe(OH)3的颜色",
+      "subfield": "实验操作",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe(OH)₃（氢氧化铁）为红棕色（红褐色）沉淀。氧化阶段生成红褐色沉淀即Fe(OH)₃，第三步加草酸将其溶解。",
+      "keysLead": [
+        "氢氧化铁颜色",
+        "fe(oh)3颜色",
+        "fe(oh)3什么颜色"
+      ]
+    },
+    {
+      "index": 382,
+      "title": "FeC2O4的颜色",
+      "subfield": "实验操作",
+      "ansLen": 48,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "FeC₂O₄·2H₂O（草酸亚铁二水合物）为黄色沉淀，是第一步的特征产物；黄色消失说明氧化完全。",
+      "keysLead": [
+        "草酸亚铁颜色",
+        "fec2o4颜色",
+        "fec2o4什么颜色"
+      ]
+    },
+    {
+      "index": 383,
+      "title": "水合Fe2+的颜色",
+      "subfield": "结构表征",
+      "ansLen": 50,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水合Fe²⁺为浅绿色（淡绿色），莫尔盐晶体及其溶液均呈浅绿色；若发黄说明Fe²⁺已被氧化为Fe³⁺。",
+      "keysLead": [
+        "亚铁离子颜色",
+        "fe2+颜色",
+        "二价铁颜色"
+      ]
+    },
+    {
+      "index": 384,
+      "title": "铁氰化钾的颜色",
+      "subfield": "实验操作",
+      "ansLen": 39,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "铁氰化钾K₃[Fe(CN)₆]（赤血盐）为红色（暗红色）结晶，其溶液显黄红色。",
+      "keysLead": [
+        "铁氰化钾颜色",
+        "赤血盐颜色",
+        "k3fecn6颜色"
+      ]
+    },
+    {
+      "index": 385,
+      "title": "黄血盐的颜色",
+      "subfield": "实验操作",
+      "ansLen": 38,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "黄血盐（亚铁氰化钾K₄[Fe(CN)₆]·3H₂O）为黄色结晶，故名黄血盐。",
+      "keysLead": [
+        "黄血盐颜色",
+        "亚铁氰化钾颜色",
+        "黄血盐"
+      ]
+    },
+    {
+      "index": 387,
+      "title": "FeF6的颜色",
+      "subfield": "结构表征",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[FeF₆]³⁻（六氟合铁(III)酸根）为无色，故F⁻可使Fe(SCN)₃的血红色褪去（掩蔽Fe³⁺）。",
+      "keysLead": [
+        "fef6颜色",
+        "氟合铁颜色",
+        "fef6"
+      ]
+    },
+    {
+      "index": 388,
+      "title": "Fe2O3的颜色",
+      "subfield": "热分析",
+      "ansLen": 39,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe₂O₃（三氧化二铁）为红棕色（红褐色）固体，是产物热分解的最终残留物之一。",
+      "keysLead": [
+        "氧化铁颜色",
+        "fe2o3颜色",
+        "氧化铁"
+      ]
+    },
+    {
+      "index": 392,
+      "title": "滴管尖端距液面距离",
+      "subfield": "实验操作",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加H₂O₂时滴管尖端距液面1—2 cm，滴加速度每秒1—2滴，边加边用玻璃棒搅拌。",
+      "keysLead": [
+        "滴管距液面",
+        "距液面",
+        "滴管距离"
+      ]
+    },
+    {
+      "index": 395,
+      "title": "配位温度的数值",
+      "subfield": "合成制备",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配位（第三步）在微沸状态进行，温度约95—100℃，保持微沸至Fe(OH)₃沉淀完全溶解、溶液透明翠绿。",
+      "keysLead": [
+        "配位温度",
+        "配位多少度",
+        "第三步温度"
+      ]
+    },
+    {
+      "index": 401,
+      "title": "微波辅助氧化时间",
+      "subfield": "综合研究",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Zhang等（2021）报道的文献改进方案：采用微波辅助氧化，氧化时间缩短至2分钟（因设备限制尚未普及）。",
+      "keysLead": [
+        "微波",
+        "微波辅助",
+        "氧化时间缩短"
+      ]
+    },
+    {
+      "index": 402,
+      "title": "Tween-80的作用",
+      "subfield": "结构表征",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Li等（2022）报道：加入少量表面活性剂Tween-80（吐温-80）可改善晶体形貌，是文献报道的晶形改进方案。",
+      "keysLead": [
+        "tween",
+        "吐温",
+        "表面活性剂"
+      ]
+    },
+    {
+      "index": 414,
+      "title": "形貌差：机械扰动",
+      "subfield": "实验操作",
+      "ansLen": 57,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体形貌不完整原因之机械扰动：频繁移动或观察导致晶体断裂、生长受阻。对策：结晶容器一次放置好后不再移动，静置过夜。",
+      "keysLead": [
+        "机械扰动",
+        "频繁移动",
+        "结晶"
+      ]
+    },
+    {
+      "index": 419,
+      "title": "晶体浅绿色的诊断",
+      "subfield": "分析测定",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产物呈浅绿色（比正常淡）：原因是产物浓度低或稀释过度。对策：浓缩溶液（≤40℃）或减少溶剂用量后再结晶。",
+      "keysLead": [
+        "浅绿色",
+        "颜色偏淡",
+        "比正常淡"
+      ]
+    },
+    {
+      "index": 420,
+      "title": "晶体暗绿色的诊断",
+      "subfield": "光化学应用",
+      "ansLen": 52,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体呈暗绿色（灰绿色）：原因是混入杂质或光照分解产物（FeC₂O₄）。对策：检查试剂纯度，全程避光操作。",
+      "keysLead": [
+        "暗绿色",
+        "灰绿色",
+        "颜色"
+      ]
+    },
+    {
+      "index": 421,
+      "title": "晶体发白的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 56,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体表面发白：原因是乙醇洗涤后表面残留K₂SO₄白色晶体。对策：用少量冷蒸馏水快速冲洗一次（勿久洗防溶解损失）。",
+      "keysLead": [
+        "发白",
+        "表面发白",
+        "白色"
+      ]
+    },
+    {
+      "index": 423,
+      "title": "水浴锅漏水的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 43,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水浴锅漏水：立即关闭电源，用吸水材料清理积水，移开附近电器设备防止短路，然后报告教师。",
+      "keysLead": [
+        "水浴锅漏水",
+        "漏水",
+        "水浴锅"
+      ]
+    },
+    {
+      "index": 424,
+      "title": "天平无法归零的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 42,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "天平无法归零：清理秤盘、检查是否有物体接触秤盘、重启天平；仍异常则报修换用备用天平。",
+      "keysLead": [
+        "无法归零",
+        "不归零",
+        "天平归零"
+      ]
+    },
+    {
+      "index": 425,
+      "title": "水泵吸力不足的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 41,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水泵（循环水真空泵）吸力不足：检查水源和水压、检查连接管是否漏气、清理水泵过滤网。",
+      "keysLead": [
+        "水泵吸力",
+        "吸力不足",
+        "真空泵"
+      ]
+    },
+    {
+      "index": 426,
+      "title": "草酸发黄的解决",
+      "subfield": "实验操作",
+      "ansLen": 51,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸发黄说明含微量铁离子等杂质或被氧化，可能引入有色杂质。解决：更换试剂，或用活性炭脱色后重结晶提纯。",
+      "keysLead": [
+        "草酸发黄",
+        "草酸变黄",
+        "草酸"
+      ]
+    },
+    {
+      "index": 427,
+      "title": "草酸风化浓度不准",
+      "subfield": "分析测定",
+      "ansLen": 53,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸（H₂C₂O₄·2H₂O）易风化失水导致浓度不准、实际用量偏离理论值。解决：使用前标定浓度，密封保存。",
+      "keysLead": [
+        "草酸风化",
+        "风化",
+        "浓度不准"
+      ]
+    },
+    {
+      "index": 428,
+      "title": "H2O2为何不能用金属容器",
+      "subfield": "光化学应用",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂不能用金属容器长期存放：金属离子催化其分解（2H₂O₂→2H₂O+O₂↑）。应避光、低温保存于塑料或玻璃瓶中。",
+      "keysLead": [
+        "金属容器",
+        "h2o2存放",
+        "储存容器"
+      ]
+    },
+    {
+      "index": 429,
+      "title": "乙醇浓度不足",
+      "subfield": "分析测定",
+      "ansLen": 59,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "95%乙醇应密封保存，久放吸水导致浓度不足、影响结晶效果（溶解度降不下来、析晶不完全）。解决：使用新开瓶的95%乙醇。",
+      "keysLead": [
+        "乙醇吸水",
+        "乙醇浓度不足",
+        "乙醇"
+      ]
+    },
+    {
+      "index": 432,
+      "title": "辨析：草酸根是单齿配体",
+      "subfield": "配位化学理论",
+      "ansLen": 51,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。草酸根C₂O₄²⁻是双齿配体：两个羧基各提供一个氧原子与同一中心离子配位，形成五元螯合环。",
+      "keysLead": [
+        "草酸根是单齿",
+        "单齿配体",
+        "草酸根"
+      ]
+    }
+  ],
+  "p2": [
+    {
+      "index": 10,
+      "title": "磁学性质",
+      "subfield": "磁性研究",
+      "ansLen": 87,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe³⁺为3d⁵高自旋构型，[Fe(C₂O₄)₃]³⁻含5个未成对电子，呈顺磁性，实测磁矩约5.9 BM，与仅自旋公式理",
+      "keysLead": [
+        "磁矩",
+        "顺磁",
+        "磁性"
+      ]
+    },
+    {
+      "index": 13,
+      "title": "水溶液酸碱性",
+      "subfield": "实验操作",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "其水溶液呈弱酸性（pH约4—5），源于配离子的微弱解离平衡 [Fe(C₂O₄)₃]³⁻ ⇌ Fe³⁺ + 3C₂O₄²⁻",
+      "keysLead": [
+        "酸碱性",
+        "ph多少",
+        "溶液呈什么性"
+      ]
+    },
+    {
+      "index": 41,
+      "title": "第三步配位操作细节",
+      "subfield": "分析测定",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第三步（配位）：用0.5 mol/L H₂C₂O₄溶液，先加6 mL，再逐滴滴加到热的第二步产物中，边滴边搅并保持微沸，",
+      "keysLead": [
+        "配位步骤",
+        "第三步怎么做",
+        "溶解氢氧化铁"
+      ]
+    },
+    {
+      "index": 45,
+      "title": "倾滗法技巧",
+      "subfield": "实验操作",
+      "ansLen": 75,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "倾滗法：静置待沉淀完全沉降后，将烧杯倾斜，沿玻璃棒缓慢倒出上层清液，勿搅动沉淀。它比过滤更快且避免穿滤损失，适合颗粒较大",
+      "keysLead": [
+        "倾滗法",
+        "倾析",
+        "怎么分离沉淀"
+      ]
+    },
+    {
+      "index": 49,
+      "title": "莫尔盐摩尔质量",
+      "subfield": "合成制备",
+      "ansLen": 107,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "莫尔盐(NH₄)₂Fe(SO₄)₂·6H₂O的摩尔质量为392.14 g/mol（手册值；按原子量精确计算约392.14",
+      "keysLead": [
+        "莫尔盐摩尔质量",
+        "莫尔盐分子量",
+        "硫酸亚铁铵分子量"
+      ]
+    },
+    {
+      "index": 57,
+      "title": "钾离子鉴定实验",
+      "subfield": "实验操作",
+      "ansLen": 99,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "K⁺鉴定：取产品溶液加饱和酒石酸氢钠NaHC₄H₄O₆溶液，生成白色结晶性沉淀酒石酸氢钾：K⁺ + HC₄H₄O₆⁻ →",
+      "keysLead": [
+        "钾离子",
+        "酒石酸氢钠",
+        "鉴定k"
+      ]
+    },
+    {
+      "index": 67,
+      "title": "光照实验现象",
+      "subfield": "光化学应用",
+      "ansLen": 87,
+      "hasDetail": false,
+      "keys": 6,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "验证光化学的对照实验：产物溶液分装两管，光照组翠绿色逐渐变黄（生成FeC₂O₄），暗处组颜色不变。可通过测定CO₂生成量",
+      "keysLead": [
+        "光照实验",
+        "光照变色",
+        "光照组"
+      ]
+    },
+    {
+      "index": 73,
+      "title": "光催化降解应用",
+      "subfield": "光化学应用",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "现代应用：①光催化降解有机污染物——[Fe(C₂O₄)₃]³⁻光照产生CO₂·⁻、·OH等强氧化性自由基，可降解染料、农",
+      "keysLead": [
+        "光催化",
+        "降解污染物",
+        "光敏材料应用"
+      ]
+    },
+    {
+      "index": 80,
+      "title": "CFSE计算",
+      "subfield": "配位化学理论",
+      "ansLen": 116,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "CFSE=(-0.4·n(t₂g)+0.6·n(eg))Δo。高自旋d⁵（t₂g³eg²）：CFSE=(-1.2+1.2",
+      "keysLead": [
+        "cfse",
+        "晶体场稳定化能",
+        "稳定化能"
+      ]
+    },
+    {
+      "index": 84,
+      "title": "H2O2安全",
+      "subfield": "光化学应用",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 9,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂（CAS 7722-84-1）：氧化性，>30%为强氧化剂，6%相对安全；分解产物为H₂O和O₂。注意：避免与有",
+      "keysLead": [
+        "过氧化氢安全",
+        "双氧水危险",
+        "h2o2 msds"
+      ]
+    },
+    {
+      "index": 86,
+      "title": "乙醇安全",
+      "subfield": "安全与废物处理",
+      "ansLen": 72,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇（CAS 64-17-5，95%）：易燃，闪点约13℃，爆炸极限3.3—19%（体积）。远离明火和热源、保持通风；严",
+      "keysLead": [
+        "乙醇安全",
+        "乙醇危险",
+        "酒精闪点"
+      ]
+    },
+    {
+      "index": 87,
+      "title": "铁氰化钾安全",
+      "subfield": "安全与废物处理",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "铁氰化钾K₃[Fe(CN)₆]（CAS 13746-66-2）：红色结晶、低毒，但与酸反应放出剧毒HCN气体，受热也分解",
+      "keysLead": [
+        "铁氰化钾安全",
+        "赤血盐",
+        "hcn"
+      ]
+    },
+    {
+      "index": 92,
+      "title": "火灾应急",
+      "subfield": "安全与废物处理",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "初期小火：切断电源，用CO₂或干粉灭火器对准火焰根部喷射。大面积火灾：停止实验、关闭电源气源、按疏散路线撤离、拨打119",
+      "keysLead": [
+        "火灾",
+        "灭火",
+        "着火"
+      ]
+    },
+    {
+      "index": 93,
+      "title": "误食中毒处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 76,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "化学品误食：立即停止进食，不要催吐（腐蚀品催吐加重损伤），喝大量清水或牛奶稀释，拨打120，携带化学品标签就医。任何事故",
+      "keysLead": [
+        "误食",
+        "中毒",
+        "吞入"
+      ]
+    },
+    {
+      "index": 98,
+      "title": "教学方法改进",
+      "subfield": "光化学应用",
+      "ansLen": 96,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "教学方法改进：①课前虚拟仿真实验熟悉流程；②设计对比实验（快滴vs慢滴H₂O₂、避光vs光照结晶、溶剂替换vs蒸发法）；",
+      "keysLead": [
+        "教学方法",
+        "虚拟仿真",
+        "对比实验"
+      ]
+    },
+    {
+      "index": 101,
+      "title": "草酸根配位模式",
+      "subfield": "配位化学理论",
+      "ansLen": 94,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根配位模式三种：①螯合双齿（最常见）——与同一金属两个位点配位成五元环；②桥连双齿——一个草酸根连接两个金属；③单齿",
+      "keysLead": [
+        "配位模式",
+        "桥连",
+        "双齿"
+      ]
+    },
+    {
+      "index": 102,
+      "title": "普鲁士蓝历史",
+      "subfield": "合成制备",
+      "ansLen": 110,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "普鲁士蓝约1706年由柏林颜料商狄斯巴赫（Diesbach）偶然发现（制胭脂红时用了被钾污染的碱，意外得到深蓝沉淀），因",
+      "keysLead": [
+        "普鲁士蓝发现",
+        "狄斯巴赫",
+        "1706"
+      ]
+    },
+    {
+      "index": 104,
+      "title": "普鲁士蓝应用",
+      "subfield": "安全与废物处理",
+      "ansLen": 82,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "普鲁士蓝现代应用：①医药——铊和放射性铯中毒解毒剂（离子交换吸附Tl⁺/Cs⁺）；②电化学——电池、传感器、电致变色器件",
+      "keysLead": [
+        "普鲁士蓝用途",
+        "解毒剂",
+        "铊中毒"
+      ]
+    },
+    {
+      "index": 106,
+      "title": "顺铂与医用配合物",
+      "subfield": "配位化学理论",
+      "ansLen": 86,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "顺铂 cis-[Pt(NH₃)₂Cl₂]是第一种铂类抗癌药；Gd³⁺配合物（如Gd-DTPA）用作MRI造影剂；⁹⁹ᵐT",
+      "keysLead": [
+        "顺铂",
+        "抗癌",
+        "造影剂"
+      ]
+    },
+    {
+      "index": 111,
+      "title": "误差分析实例",
+      "subfield": "分析测定",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "手册实例：理论产量6.26 g，三次实测4.52、4.58、4.55 g，平均值4.55 g，s=√(0.0018/2)",
+      "keysLead": [
+        "误差分析例子",
+        "4.55",
+        "精密度"
+      ]
+    },
+    {
+      "index": 124,
+      "title": "抽滤操作要点",
+      "subfield": "安全与废物处理",
+      "ansLen": 95,
+      "hasDetail": false,
+      "keys": 15,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "抽滤要点：①滤纸略小于布氏漏斗内径，先用溶剂润湿贴紧；②先开泵后倒液，沿玻璃棒引流，用少量母液荡洗烧杯；③抽干后先拔吸滤",
+      "keysLead": [
+        "抽滤",
+        "减压过滤",
+        "布氏漏斗"
+      ]
+    },
+    {
+      "index": 133,
+      "title": "配位数定义",
+      "subfield": "配位化学理论",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配位数是直接与中心离子键合的配位原子总数。C₂O₄²⁻是双齿配体（2个配位O），3个草酸根共提供6个配位原子，故Fe³⁺",
+      "keysLead": [
+        "配位数",
+        "什么是配位数",
+        "配位数是几"
+      ]
+    },
+    {
+      "index": 137,
+      "title": "光照下颜色变化",
+      "subfield": "光化学应用",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 3,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "光照下翠绿色晶体/溶液逐渐变黄：发生光化学还原，Fe由+3价被还原为+2价，生成黄色的FeC₂O₄（并放出CO₂），是光",
+      "keysLead": [
+        "见光变黄",
+        "光照后颜色",
+        "光解现象"
+      ]
+    },
+    {
+      "index": 138,
+      "title": "氧化时为什么有气泡",
+      "subfield": "实验操作",
+      "ansLen": 106,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加H₂O₂时冒气泡有两方面来源：①H₂O₂在Fe³⁺催化下部分自分解 2H₂O₂→2H₂O+O₂↑（放热放气，滴加过快",
+      "keysLead": [
+        "气泡",
+        "冒泡",
+        "氧化时气泡"
+      ]
+    },
+    {
+      "index": 140,
+      "title": "Fe(OH)3的Ksp",
+      "subfield": "分析测定",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe(OH)₃的溶度积Ksp=2.79×10⁻³⁹，极小，故近中性条件下Fe³⁺几乎完全水解为Fe(OH)₃沉淀——这是",
+      "keysLead": [
+        "氢氧化铁溶度积",
+        "feoh3 ksp",
+        "2.79"
+      ]
+    },
+    {
+      "index": 146,
+      "title": "四面体与八面体分裂",
+      "subfield": "配位化学理论",
+      "ansLen": 99,
+      "hasDetail": false,
+      "keys": 9,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "四面体场分裂能约为八面体的4/9（Δt≈4/9Δo），且轨道能级次序反转（e低、t₂高）；四面体配合物几乎总是高自旋。J",
+      "keysLead": [
+        "四面体",
+        "δt",
+        "几何构型影响"
+      ]
+    },
+    {
+      "index": 147,
+      "title": "配合物研究历史节点",
+      "subfield": "磁性研究",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "20世纪初化学家已系统研究该配合物的晶体结构、磁性与光化学；20世纪50年代X射线衍射技术成熟后精确测定了[Fe(C₂O",
+      "keysLead": [
+        "x射线",
+        "结构测定",
+        "历史"
+      ]
+    },
+    {
+      "index": 148,
+      "title": "晶种与棉线",
+      "subfield": "实验操作",
+      "ansLen": 83,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶时悬挂棉线或用玻璃棒轻擦杯壁、投入晶种，都是为了提供成核位点、降低成核能垒，诱导有序析晶、获得大而完整的晶体；不加诱",
+      "keysLead": [
+        "棉线",
+        "晶种",
+        "诱导结晶"
+      ]
+    },
+    {
+      "index": 153,
+      "title": "加热操作安全",
+      "subfield": "安全与废物处理",
+      "ansLen": 72,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "加热安全规范：用水浴加热、严禁明火直接加热有机溶剂（乙醇闪点13℃）；加热时不断搅拌防暴沸、可加沸石；烧杯液体不超过容积",
+      "keysLead": [
+        "加热安全",
+        "水浴加热",
+        "明火"
+      ]
+    },
+    {
+      "index": 154,
+      "title": "沉淀的纯化作用",
+      "subfield": "分析测定",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步沉淀兼有纯化作用：Fe²⁺以FeC₂O₄·2H₂O形式定量沉淀，而NH₄⁺、SO₄²⁻等留在母液中被倾滗/洗涤除去",
+      "keysLead": [
+        "沉淀除杂",
+        "为什么先沉淀",
+        "纯化"
+      ]
+    },
+    {
+      "index": 157,
+      "title": "朗伯比尔定律",
+      "subfield": "分析测定",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "朗伯-比尔定律 A=εbc：A吸光度、ε摩尔吸光系数、b光程、c浓度。分光光度法测产物浓度需绘制标准曲线（A对c线性，R",
+      "keysLead": [
+        "朗伯比尔",
+        "吸光度",
+        "分光光度"
+      ]
+    },
+    {
+      "index": 162,
+      "title": "氧化终点判断",
+      "subfield": "分析测定",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "氧化完全标志：黄色FeC₂O₄沉淀完全消失、体系呈红褐色（Fe(OH)₃）且冒泡减弱；化学检验：取反应液加K₃[Fe(C",
+      "keysLead": [
+        "氧化终点",
+        "黄色消失",
+        "氧化完全的标志"
+      ]
+    },
+    {
+      "index": 164,
+      "title": "介电常数与溶解度",
+      "subfield": "实验操作",
+      "ansLen": 116,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水介电常数ε=78.5（25℃），乙醇仅24.3。Born方程表明离子溶剂化自由能随ε降低而减小，故加乙醇后混合溶剂对离",
+      "keysLead": [
+        "介电常数",
+        "born方程",
+        "极性"
+      ]
+    },
+    {
+      "index": 166,
+      "title": "结晶水与配位水区别",
+      "subfield": "配位化学理论",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "本产物中3个H₂O是结晶水（晶格水）：不在配离子内界（配位层6个位置全被3个双齿草酸根的O占据），而是以氢键结合于晶格空",
+      "keysLead": [
+        "结晶水和配位水",
+        "晶格水",
+        "水的位置"
+      ]
+    },
+    {
+      "index": 172,
+      "title": "试剂取用规范",
+      "subfield": "安全与废物处理",
+      "ansLen": 63,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "试剂取用规范：固体用洁净药匙；液体倾倒时标签朝向手心；用完立即盖好瓶盖；取出的试剂禁止倒回原瓶；禁止品尝任何试剂；称量后",
+      "keysLead": [
+        "取用试剂",
+        "试剂瓶",
+        "标签"
+      ]
+    },
+    {
+      "index": 177,
+      "title": "稀释对配位平衡影响",
+      "subfield": "分析测定",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "稀释时各离子浓度同比降低，配离子解离度增大（类似弱电解质稀释效应，平衡向粒子数多方向移动）；但因Kf=1.6×10²⁰极",
+      "keysLead": [
+        "稀释",
+        "加水影响",
+        "解离度"
+      ]
+    },
+    {
+      "index": 179,
+      "title": "产率数据记录规范",
+      "subfield": "分析测定",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "数据记录规范：原始数据直接记录在实验记录本上、真实不得涂改（写错划单线修改并签名）；称量数据记至0.01 g（与天平精度",
+      "keysLead": [
+        "数据记录",
+        "怎么记录",
+        "原始数据"
+      ]
+    },
+    {
+      "index": 180,
+      "title": "为何草酸略过量",
+      "subfield": "实验操作",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第一步草酸略过量（约10%）是为了保证Fe²⁺沉淀完全（同离子效应降低FeC₂O₄溶解度）；但过量太多会使母液残留大量草",
+      "keysLead": [
+        "草酸过量10",
+        "过量10%",
+        "沉淀剂用量"
+      ]
+    },
+    {
+      "index": 182,
+      "title": "提高产率的量化效果",
+      "subfield": "合成制备",
+      "ansLen": 85,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "手册给出的产率提升量化：减少洗涤损失+5~8%、确保氧化完全+3~5%、优化结晶条件+3~5%、草酸钾过量10%+3~4",
+      "keysLead": [
+        "提升多少",
+        "优化效果",
+        "92%"
+      ]
+    },
+    {
+      "index": 183,
+      "title": "摩尔盐发黄怎么办",
+      "subfield": "光化学应用",
+      "ansLen": 107,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "莫尔盐正常为浅绿色结晶；发黄说明Fe²⁺已被空气氧化为Fe³⁺，Fe³⁺在第一步不形成沉淀会进入滤液损失、降低产率。处理",
+      "keysLead": [
+        "摩尔盐发黄",
+        "原料变黄",
+        "莫尔盐"
+      ]
+    },
+    {
+      "index": 184,
+      "title": "为何用95乙醇",
+      "subfield": "分析测定",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶与洗涤用95%乙醇（约10 mL）即可：目的是降低体系极性促析晶；浓度过低（含水多）降溶解度效果差，无水乙醇效果略好",
+      "keysLead": [
+        "95%乙醇",
+        "无水乙醇",
+        "乙醇浓度"
+      ]
+    },
+    {
+      "index": 187,
+      "title": "废液桶使用规则",
+      "subfield": "安全与废物处理",
+      "ansLen": 79,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "废液桶使用规则：置于通风良好处远离热源；不同废液不混倒（尤其含氰废液单独收集）；不超过容量80%；桶盖盖紧防挥发；定期交",
+      "keysLead": [
+        "废液桶",
+        "混倒",
+        "容量"
+      ]
+    },
+    {
+      "index": 189,
+      "title": "过氧化氢浓度规格",
+      "subfield": "光化学应用",
+      "ansLen": 94,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实验用6% H₂O₂溶液约8 mL（缓慢滴加）。浓度较低的6%规格安全性好、反应温和易控制；>30%为强氧化剂、危险性大",
+      "keysLead": [
+        "双氧水浓度",
+        "6%",
+        "h2o2规格"
+      ]
+    },
+    {
+      "index": 190,
+      "title": "实验的地位",
+      "subfield": "光化学应用",
+      "ansLen": 95,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "本实验是基础化学实验核心内容：同时涵盖沉淀、氧化还原、配位三大反应类型与溶剂替换结晶、抽滤、光化学观察等多种技能，被公认",
+      "keysLead": [
+        "实验价值",
+        "为什么经典",
+        "教学地位"
+      ]
+    },
+    {
+      "index": 191,
+      "title": "eg与t2g能量",
+      "subfield": "配位化学理论",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "以球形场为零点：eg组（d(x²-y²)、d(z²)）能量升高+0.6Δo（即+3/5Δo），t₂g组（d(xy)、d(",
+      "keysLead": [
+        "eg能量",
+        "t2g能量",
+        "0.6"
+      ]
+    },
+    {
+      "index": 192,
+      "title": "Ksp数据汇总",
+      "subfield": "实验操作",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "相关Ksp（25℃）：FeC₂O₄=3.2×10⁻⁷；CaC₂O₄=2.32×10⁻⁹；Fe(OH)₃=2.79×10⁻",
+      "keysLead": [
+        "溶度积",
+        "ksp数据",
+        "草酸亚铁"
+      ]
+    },
+    {
+      "index": 194,
+      "title": "倾滗时热水洗涤",
+      "subfield": "实验操作",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "用热水洗涤FeC₂O₄沉淀的原因：①温度高时可溶性杂质（(NH₄)₂SO₄等）溶解快、洗得净；②防止沉淀胶溶（冷水中沉淀",
+      "keysLead": [
+        "热水洗涤",
+        "为什么用热水洗",
+        "沉淀后"
+      ]
+    },
+    {
+      "index": 195,
+      "title": "摘要怎么写",
+      "subfield": "合成制备",
+      "ansLen": 72,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "摘要100—200字，概括实验目的、方法、主要结果（含产率数据）与结论；具有独立性和自含性，不读全文也能获得关键信息；不",
+      "keysLead": [
+        "摘要",
+        "abstract",
+        "摘要多长"
+      ]
+    },
+    {
+      "index": 196,
+      "title": "结果与讨论写什么",
+      "subfield": "分析测定",
+      "ansLen": 90,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结果与讨论是报告最重要部分：①数据处理过程与计算结果（理论产量、产率）；②误差分析（绝对/相对误差、标准偏差，逐条对应操",
+      "keysLead": [
+        "结果讨论",
+        "讨论部分",
+        "讨论怎么写"
+      ]
+    },
+    {
+      "index": 197,
+      "title": "光解产物是什么",
+      "subfield": "光化学应用",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "光解产物：FeC₂O₄（黄色草酸亚铁）、游离C₂O₄²⁻和CO₂气体，Fe由+3被还原为+2。若体系中有[Fe(CN)₆",
+      "keysLead": [
+        "光解产物",
+        "光照生成什么",
+        "fec2o4"
+      ]
+    },
+    {
+      "index": 198,
+      "title": "产物称量注意事项",
+      "subfield": "合成制备",
+      "ansLen": 96,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "称量注意：产物须干燥至恒重（两次称量差≤0.002 g）；烘干后冷却至室温再称（热样品对流导致读数不稳且不准）；用洁净干",
+      "keysLead": [
+        "称量",
+        "恒重",
+        "冷却后称量"
+      ]
+    },
+    {
+      "index": 199,
+      "title": "玻璃仪器清洗",
+      "subfield": "安全与废物处理",
+      "ansLen": 72,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实验结束玻璃仪器及时清洗；器壁上的草酸盐/铁盐黄斑可用稀盐酸或草酸-KMnO₄法洗去；洗净倒置晾干、仪器归位、台面擦净，",
+      "keysLead": [
+        "仪器清洗",
+        "黄斑",
+        "草酸残留"
+      ]
+    },
+    {
+      "index": 239,
+      "title": "配合物定义",
+      "subfield": "配位化学理论",
+      "ansLen": 95,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配合物（配位化合物）是由中心原子/离子与围绕它的配体通过配位键结合形成的化合物。K₃[Fe(C₂O₄)₃]·3H₂O中，",
+      "keysLead": [
+        "什么是配合物",
+        "配合物定义",
+        "配位化合物"
+      ]
+    },
+    {
+      "index": 240,
+      "title": "配体定义",
+      "subfield": "配位化学理论",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配体是能提供孤对电子与中心离子形成配位键的离子或分子。本实验配体为草酸根C₂O₄²⁻（双齿配体，含2个配位氧原子）。按齿",
+      "keysLead": [
+        "什么是配体",
+        "配体定义",
+        "配体是什么"
+      ]
+    },
+    {
+      "index": 241,
+      "title": "中心离子定义",
+      "subfield": "配位化学理论",
+      "ansLen": 69,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "中心离子是配合物中接受配体孤对电子的金属离子。本实验为Fe³⁺（[Ar]3d⁵，+3氧化态）。中心离子电荷越高、半径越合",
+      "keysLead": [
+        "中心离子",
+        "什么是中心离子",
+        "配体"
+      ]
+    },
+    {
+      "index": 242,
+      "title": "双齿配体",
+      "subfield": "配位化学理论",
+      "ansLen": 76,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "双齿配体含两个配位原子，可同时与同一中心离子配位形成螯合环。C₂O₄²⁻的两个羧基各出一个氧与Fe³⁺配位，形成稳定的五",
+      "keysLead": [
+        "双齿",
+        "什么是双齿配体",
+        "双齿配体"
+      ]
+    },
+    {
+      "index": 244,
+      "title": "为何要搅拌",
+      "subfield": "分析测定",
+      "ansLen": 74,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滴加试剂时持续搅拌：①使反应均匀，避免局部过浓（防H₂O₂局部自分解、防草酸局部过量）；②散热防局部过热暴沸；③促进传质",
+      "keysLead": [
+        "搅拌",
+        "边加边搅",
+        "为什么搅拌"
+      ]
+    },
+    {
+      "index": 245,
+      "title": "为何冰水浴",
+      "subfield": "合成制备",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶时冷却（冰水浴更佳）是因为产物溶解度随温度降低显著下降（0℃仅4.7 g/100 g水 vs 40℃约25 g），低",
+      "keysLead": [
+        "冰水浴",
+        "冷却结晶",
+        "低温结晶"
+      ]
+    },
+    {
+      "index": 246,
+      "title": "无水盐与三水盐",
+      "subfield": "实验操作",
+      "ansLen": 111,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "K₃[Fe(C₂O₄)₃]·3H₂O在约100℃失去3分子结晶水得无水盐K₃[Fe(C₂O₄)₃]；无水盐继续加热到23",
+      "keysLead": [
+        "无水盐",
+        "三水合物",
+        "水合物"
+      ]
+    },
+    {
+      "index": 247,
+      "title": "氨水能否溶解氢氧化铁",
+      "subfield": "实验操作",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe(OH)₃不溶于过量氨水（Fe³⁺与NH₃的配位能力弱，不能形成稳定氨配合物）——这是它与Cu(OH)₂、Zn(OH",
+      "keysLead": [
+        "过量氨水",
+        "氢氧化铁溶于氨水吗",
+        "氨水"
+      ]
+    },
+    {
+      "index": 250,
+      "title": "实验前准备",
+      "subfield": "光化学应用",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实验前准备：预习实验原理与流程；检查试剂（莫尔盐浅绿、草酸无色、H₂O₂无气泡）；穿戴护目镜、实验服、手套；检查水浴锅、",
+      "keysLead": [
+        "实验前",
+        "预习",
+        "准备工作"
+      ]
+    },
+    {
+      "index": 252,
+      "title": "酸效应",
+      "subfield": "分析测定",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 9,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "酸效应：配体为弱酸根时，H⁺与配体质子化降低游离配体浓度，使配位平衡左移、条件稳定常数下降。C₂O₄²⁻是草酸（pKa2",
+      "keysLead": [
+        "酸效应",
+        "质子化",
+        "配位滴定"
+      ]
+    },
+    {
+      "index": 254,
+      "title": "反应级数与速率",
+      "subfield": "合成制备",
+      "ansLen": 85,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "沉淀与配位反应均较快；速率控制步骤是H₂O₂的氧化过程——故要控制滴加速度与温度。加热（微沸）加快FeC₂O₄陈化；40",
+      "keysLead": [
+        "反应速率",
+        "动力学",
+        "反应级数"
+      ]
+    },
+    {
+      "index": 256,
+      "title": "实验失败重做",
+      "subfield": "光化学应用",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率<45%属不合格，多因重大操作失误（氧化完全失败、沉淀损失、严重光解），建议分析原因后重做；45—60%合格但需针对",
+      "keysLead": [
+        "失败",
+        "重做",
+        "实验失败"
+      ]
+    },
+    {
+      "index": 257,
+      "title": "单位规范",
+      "subfield": "分析测定",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "报告用SI单位：质量g/mg、体积mL/L、浓度mol/L、温度℃或K、压力Pa/kPa。换算：1 atm=101.32",
+      "keysLead": [
+        "单位",
+        "si单位",
+        "量纲"
+      ]
+    },
+    {
+      "index": 258,
+      "title": "Q检验",
+      "subfield": "分析测定",
+      "ansLen": 78,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Q检验判断可疑数据取舍：Q=|x可疑-x邻近|/(x最大-x最小)，与对应测定次数的临界值比较，Q>Q临界则舍弃该数据；",
+      "keysLead": [
+        "q检验",
+        "可疑数据",
+        "舍弃"
+      ]
+    },
+    {
+      "index": 259,
+      "title": "实验安全总原则",
+      "subfield": "光化学应用",
+      "ansLen": 77,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "安全总原则：佩戴护目镜手套实验服；水浴加热禁明火；H₂O₂防溅、草酸防接触；乙醇远离火源；全程避光保护产物；废液分类回收",
+      "keysLead": [
+        "安全原则",
+        "总注意事项",
+        "个人防护"
+      ]
+    },
+    {
+      "index": 260,
+      "title": "草酸根结构",
+      "subfield": "结构表征",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根C₂O₄²⁻为平面型离子，两个羧基通过C-C键相连，4个氧等价（共振离域）；配位时用相邻两个羧基氧与金属螯合成五元",
+      "keysLead": [
+        "草酸根结构",
+        "c2o4结构",
+        "草酸根"
+      ]
+    },
+    {
+      "index": 261,
+      "title": "加乙醇量",
+      "subfield": "实验操作",
+      "ansLen": 98,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶时向25—30 mL翠绿色母液加入约10 mL 95%乙醇（母液:乙醇约1:0.3—0.4，乙醇约占30% v/v）",
+      "keysLead": [
+        "乙醇加多少",
+        "10ml乙醇",
+        "乙醇"
+      ]
+    },
+    {
+      "index": 263,
+      "title": "配离子电荷",
+      "subfield": "实验操作",
+      "ansLen": 97,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[Fe(C₂O₄)₃]³⁻的电荷：Fe³⁺(+3)+3×C₂O₄²⁻(-6)=-3；外界3个K⁺正好电荷平衡。该配离子电",
+      "keysLead": [
+        "配离子电荷",
+        "3-",
+        "电荷计算"
+      ]
+    },
+    {
+      "index": 264,
+      "title": "MOF简介",
+      "subfield": "配位化学理论",
+      "ansLen": 78,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "金属有机框架（MOFs）是由金属离子/簇与有机配体配位形成的多孔晶态材料，用于气体存储、分离与催化，是配位化学现代发展的",
+      "keysLead": [
+        "mof",
+        "金属有机框架",
+        "配位聚合物"
+      ]
+    },
+    {
+      "index": 267,
+      "title": "溶液发黄处理",
+      "subfield": "光化学应用",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "溶液/晶体发黄：①若因Fe²⁺未氧化完全——补加适量H₂O₂继续40℃搅拌；②若因Fe(OH)₃未溶——补加草酸微沸；③",
+      "keysLead": [
+        "溶液发黄",
+        "发黄怎么办",
+        "莫尔盐发黄"
+      ]
+    },
+    {
+      "index": 268,
+      "title": "蓝晒避光原因",
+      "subfield": "光化学应用",
+      "ansLen": 68,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "蓝晒涂布与阴干必须避光：感光液见光即开始光化学还原生成Fe²⁺，未曝光区也会产生灰雾、降低影像反差；曝光前任何杂散光都会",
+      "keysLead": [
+        "蓝晒为什么避光",
+        "涂布避光",
+        "蓝晒"
+      ]
+    },
+    {
+      "index": 269,
+      "title": "实验失败常见原因",
+      "subfield": "光化学应用",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "常见失败原因：①H₂O₂滴加过快或未搅匀导致氧化不均；②H₂O₂失效（久置分解）氧化不完全；③草酸过量或不足；④结晶体积",
+      "keysLead": [
+        "实验失败",
+        "失败原因",
+        "故障排查"
+      ]
+    },
+    {
+      "index": 272,
+      "title": "实验全程多长时间",
+      "subfield": "实验操作",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实际操作约3—4小时：沉淀与陈化约40 min、氧化约40 min、配位约30 min、结晶静置数小时至过夜（通常过夜）",
+      "keysLead": [
+        "实验时间",
+        "多久",
+        "实验时长"
+      ]
+    },
+    {
+      "index": 273,
+      "title": "灼伤处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 97,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "热烫伤：立即冷水冲洗15分钟，不要弄破水泡，涂烫伤膏并包扎，严重者就医；化学灼伤：立即用大量流动清水冲洗至少15分钟，脱",
+      "keysLead": [
+        "烫伤",
+        "灼伤",
+        "急救"
+      ]
+    },
+    {
+      "index": 274,
+      "title": "稳定常数表达式",
+      "subfield": "配位化学理论",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "累积稳定常数表达式：β₃=[[Fe(C₂O₄)₃]³⁻]/([Fe³⁺][C₂O₄²⁻]³)=1.6×10²⁰。逐级常数",
+      "keysLead": [
+        "稳定常数表达式",
+        "kf表达式",
+        "稳定常数"
+      ]
+    },
+    {
+      "index": 275,
+      "title": "d5构型CFSE",
+      "subfield": "配位化学理论",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "高自旋d⁵的t₂g³eg²排布中，3个电子在-0.4Δo、2个在+0.6Δo，-1.2+1.2=0，CFSE=0。故[F",
+      "keysLead": [
+        "d5 cfse",
+        "为什么cfse为零",
+        "CFSE"
+      ]
+    },
+    {
+      "index": 276,
+      "title": "顺磁性",
+      "subfield": "磁性研究",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "含未成对电子的物质被磁场吸引，称顺磁性；全部电子成对的物质被微弱排斥，称抗磁性。[Fe(C₂O₄)₃]³⁻含5个未成对电",
+      "keysLead": [
+        "顺磁",
+        "抗磁",
+        "什么是顺磁性"
+      ]
+    },
+    {
+      "index": 279,
+      "title": "水浴锅温度控制",
+      "subfield": "实验操作",
+      "ansLen": 68,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水浴锅使用：水位没过加热管且没过烧杯内液面；预设40℃后放入烧杯再开始滴加H₂O₂；温度上冲可提出烧杯片刻；温控失灵时用",
+      "keysLead": [
+        "水浴锅",
+        "控温不准",
+        "水位"
+      ]
+    },
+    {
+      "index": 281,
+      "title": "pH纸使用",
+      "subfield": "分析测定",
+      "ansLen": 78,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "用pH试纸监测：氧化后体系约pH7—8（含Fe(OH)₃），配位终点约pH4—5（产物溶液天然弱酸性）。取液时用洁净玻璃",
+      "keysLead": [
+        "ph试纸",
+        "测ph",
+        "pH"
+      ]
+    },
+    {
+      "index": 283,
+      "title": "紧急联系电话",
+      "subfield": "安全与废物处理",
+      "ansLen": 77,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "紧急电话：医疗急救120、火警119；另应牢记校医院急救电话与实验室安全负责人电话。任何事故（即使轻微）都应及时报告指导",
+      "keysLead": [
+        "急救电话",
+        "120",
+        "119"
+      ]
+    },
+    {
+      "index": 284,
+      "title": "先加草酸钾的原因",
+      "subfield": "实验操作",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "氧化前先加K₂C₂O₄溶解，是为了让氧化生成的Fe³⁺立即被C₂O₄²⁻捕获配位（减少其水解为Fe(OH)₃的比例），同",
+      "keysLead": [
+        "先加草酸钾",
+        "k2c2o4先加",
+        "草酸钾"
+      ]
+    },
+    {
+      "index": 286,
+      "title": "称量方法",
+      "subfield": "实验操作",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "称量：电子天平去皮后用称量纸/小烧杯称取固体试剂，读数至0.01 g；莫尔盐称5.0 g、草酸1.7 g、K₂C₂O₄ ",
+      "keysLead": [
+        "怎么称量",
+        "称量纸",
+        "减量法"
+      ]
+    },
+    {
+      "index": 288,
+      "title": "晒图工程应用",
+      "subfield": "光化学应用",
+      "ansLen": 90,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "工程\"蓝图\"（blueprint）即蓝晒法的大规模应用：用涂有感光液的晒图纸覆盖底图曝光，曝光区生成普鲁士蓝、线条处留白",
+      "keysLead": [
+        "蓝图",
+        "工程图纸",
+        "blueprint"
+      ]
+    },
+    {
+      "index": 289,
+      "title": "铁元素守恒",
+      "subfield": "合成制备",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "整条路线铁元素守恒：莫尔盐中1 mol Fe²⁺→FeC₂O₄中1 mol Fe²⁺→产物中1 mol Fe³⁺，故以莫",
+      "keysLead": [
+        "铁守恒",
+        "fe守恒",
+        "1:1"
+      ]
+    },
+    {
+      "index": 290,
+      "title": "实验评分标准",
+      "subfield": "光化学应用",
+      "ansLen": 85,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实验考核通常包括：预习报告、操作规范（控温、滴速、避光）、产率与产品质量（颜色、晶形）、数据记录与误差分析、安全与废液处",
+      "keysLead": [
+        "评分",
+        "考核",
+        "评分标准"
+      ]
+    },
+    {
+      "index": 298,
+      "title": "吸收波段",
+      "subfield": "光化学应用",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "吸收波段为~530 nm的紫红色光（LMCT跃迁：草酸根π电子→Fe³⁺ d轨道），反射其互补色绿光，故呈翠绿色。d-d",
+      "keysLead": [
+        "吸收波段",
+        "吸收波长",
+        "吸收什么光"
+      ]
+    },
+    {
+      "index": 302,
+      "title": "实测磁矩数值",
+      "subfield": "磁性研究",
+      "ansLen": 67,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实测磁矩约5.9 BM（玻尔磁子），与仅自旋理论值√(5×7)=5.92 BM吻合，证实Fe³⁺为3d⁵高自旋构型（5个",
+      "keysLead": [
+        "实测磁矩",
+        "磁矩是多少",
+        "5.9"
+      ]
+    },
+    {
+      "index": 310,
+      "title": "各试剂称取量",
+      "subfield": "反应原理",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "称取量：莫尔盐5.0 g；草酸（第一步）1.7 g；草酸钾3.5 g；6% H₂O₂约8 mL；草酸（第三步配位）用0.",
+      "keysLead": [
+        "称取",
+        "各称多少",
+        "试剂用量"
+      ]
+    },
+    {
+      "index": 312,
+      "title": "各阶段时间一览",
+      "subfield": "光化学应用",
+      "ansLen": 70,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "时间控制一览：沉淀微沸保持约4分钟；加完H₂O₂后继续搅拌5分钟；煮沸除H₂O₂保持2分钟；烘干50℃×20分钟；结晶暗",
+      "keysLead": [
+        "时间",
+        "各步时间",
+        "几分钟"
+      ]
+    },
+    {
+      "index": 315,
+      "title": "草酸LD50与CAS",
+      "subfield": "安全与废物处理",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸二水合物（H₂C₂O₄·2H₂O）的LD₅₀（大鼠经口）为375 mg/kg，CAS号6153-56-6（无水草酸为",
+      "keysLead": [
+        "ld50",
+        "cas号",
+        "草酸cas"
+      ]
+    },
+    {
+      "index": 316,
+      "title": "铁氰化钾CAS与性质",
+      "subfield": "安全与废物处理",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "铁氰化钾K₃[Fe(CN)₆]：CAS号13746-66-2，红色结晶，低毒；危险在于与酸反应放出剧毒HCN气体、受热分",
+      "keysLead": [
+        "铁氰化钾cas",
+        "13746",
+        "铁氰化钾性质"
+      ]
+    },
+    {
+      "index": 317,
+      "title": "莫尔盐CAS",
+      "subfield": "安全与废物处理",
+      "ansLen": 69,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "莫尔盐（硫酸亚铁铵）CAS号7783-85-9，浅绿色结晶，低毒；水溶液呈酸性，暴露空气逐渐氧化，需加稀H₂SO₄抑制水",
+      "keysLead": [
+        "莫尔盐cas",
+        "硫酸亚铁铵cas",
+        "7783"
+      ]
+    },
+    {
+      "index": 320,
+      "title": "应急冲洗时间",
+      "subfield": "安全与废物处理",
+      "ansLen": 70,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "化学品接触皮肤或溅入眼睛，均须用大量流动清水（眼睛用洗眼器）冲洗至少15分钟，然后就医；不在皮肤上中和（酸/碱），因中和",
+      "keysLead": [
+        "冲洗多久",
+        "冲洗时间",
+        "15分钟"
+      ]
+    },
+    {
+      "index": 322,
+      "title": "含氰废液排放标准",
+      "subfield": "分析测定",
+      "ansLen": 95,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "含氰废液经碱性氯化法处理后，检测氰化物浓度<0.5 mg/L方可排放；处理反应：CN⁻+ClO⁻→CNO⁻+Cl⁻，再2",
+      "keysLead": [
+        "氰化物标准",
+        "0.5",
+        "排放浓度"
+      ]
+    },
+    {
+      "index": 323,
+      "title": "Ziegler-Natta产量规模",
+      "subfield": "配位化学理论",
+      "ansLen": 74,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Ziegler-Natta催化剂（TiCl₄/Al(C₂H₅)₃）用于烯烃聚合生产聚乙烯和聚丙烯，全球年产量超过亿吨，是",
+      "keysLead": [
+        "齐格勒",
+        "ziegler",
+        "聚乙烯"
+      ]
+    },
+    {
+      "index": 325,
+      "title": "不对称催化诺贝尔奖",
+      "subfield": "合成制备",
+      "ansLen": 60,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "2001年诺贝尔化学奖授予Knowles、Noyori和Sharpless，表彰手性配体配合物在不对称催化合成中的贡献。",
+      "keysLead": [
+        "2001",
+        "不对称催化",
+        "诺奖得主"
+      ]
+    },
+    {
+      "index": 326,
+      "title": "溶液pH数值",
+      "subfield": "反应原理",
+      "ansLen": 60,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "三草酸合铁酸钾水溶液呈弱酸性，pH约4—5（源于配离子微弱解离 [Fe(C₂O₄)₃]³⁻⇌Fe³⁺+3C₂O₄²⁻）。",
+      "keysLead": [
+        "ph",
+        "ph值",
+        "酸碱性数值"
+      ]
+    },
+    {
+      "index": 327,
+      "title": "氧化阶段体系pH",
+      "subfield": "实验操作",
+      "ansLen": 79,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "氧化阶段FeC₂O₄悬浮液接近中性，pH约5—6；此pH下Fe(OH)₃溶解度极低（Ksp=2.79×10⁻³⁹），故部",
+      "keysLead": [
+        "氧化时ph",
+        "悬浮液ph",
+        "pH"
+      ]
+    },
+    {
+      "index": 328,
+      "title": "结晶水质量分数",
+      "subfield": "分析测定",
+      "ansLen": 74,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶水质量分数约为11%：3×18.02/491.25=11.0%。TGA在约100℃出现对应失重台阶（100-120℃",
+      "keysLead": [
+        "结晶水含量",
+        "质量分数",
+        "水的百分含量"
+      ]
+    },
+    {
+      "index": 329,
+      "title": "蓝晒曝光时间",
+      "subfield": "光化学应用",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "蓝晒曝光时间：晴日直射5—10分钟、阴天20—30分钟、365nm紫外灯5—15分钟（绿色感光层转为灰蓝色即充分）；之后",
+      "keysLead": [
+        "曝光时间",
+        "晒多久",
+        "曝光多久"
+      ]
+    },
+    {
+      "index": 330,
+      "title": "感光液浓度",
+      "subfield": "光化学应用",
+      "ansLen": 69,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "感光液浓度：A液为10% K₃[Fe(C₂O₄)₃]溶液，B液为10% K₃[Fe(CN)₆]溶液，使用前等体积混合；涂",
+      "keysLead": [
+        "感光液浓度",
+        "a液浓度",
+        "b液浓度"
+      ]
+    },
+    {
+      "index": 331,
+      "title": "理论产量数值",
+      "subfield": "实验操作",
+      "ansLen": 98,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "理论产量为6.26 g：以5.0 g莫尔盐（M=392.14，n=0.01275 mol）为基准，Fe守恒1:1，0.0",
+      "keysLead": [
+        "理论产量",
+        "6.26",
+        "理论产量是多少"
+      ]
+    },
+    {
+      "index": 333,
+      "title": "产率实例数值",
+      "subfield": "分析测定",
+      "ansLen": 88,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "手册实例：理论产量6.26 g，三次实测4.52、4.58、4.55 g，平均值4.55 g，标准偏差s=0.030 g",
+      "keysLead": [
+        "72.7",
+        "产率实例",
+        "误差分析实例"
+      ]
+    },
+    {
+      "index": 335,
+      "title": "Fe3+氧化草酸根电动势",
+      "subfield": "分析测定",
+      "ansLen": 107,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe³⁺氧化C₂O₄²⁻的标准电动势E°cell=0.771-(-0.49)=1.261 V>0，副反应2Fe³⁺+C₂",
+      "keysLead": [
+        "1.261",
+        "直接法电动势",
+        "fe3+氧化草酸根电位"
+      ]
+    },
+    {
+      "index": 336,
+      "title": "Fe2+配合物稳定常数",
+      "subfield": "配位化学理论",
+      "ansLen": 86,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[Fe(C₂O₄)₃]⁴⁻（Fe²⁺）的稳定常数约10⁸量级，远小于[Fe(C₂O₄)₃]³⁻（Fe³⁺）的1.6×10",
+      "keysLead": [
+        "二价铁稳定常数",
+        "fec2o4 4-",
+        "10^8"
+      ]
+    },
+    {
+      "index": 339,
+      "title": "逐级稳定常数数值",
+      "subfield": "配位化学理论",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "逐级稳定常数：K₁=7.08×10⁷，K₂=3.55×10⁶，K₃=6.31×10⁵；累积β₃=K₁K₂K₃=1.6×1",
+      "keysLead": [
+        "k1",
+        "k2",
+        "k3"
+      ]
+    },
+    {
+      "index": 340,
+      "title": "烧杯规格",
+      "subfield": "实验操作",
+      "ansLen": 83,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "仪器规格：烧杯100 mL×2、250 mL×1；量筒25 mL和10 mL；另需电子天平、玻璃棒、水浴锅、抽滤装置（布",
+      "keysLead": [
+        "烧杯",
+        "仪器规格",
+        "100ml"
+      ]
+    },
+    {
+      "index": 341,
+      "title": "铬配合物磁矩",
+      "subfield": "磁性研究",
+      "ansLen": 87,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "K₃[Cr(C₂O₄)₃]·3H₂O中Cr³⁺为3d³构型，3个未成对电子，磁矩约3.9 BM（理论√(3×5)=3.8",
+      "keysLead": [
+        "铬配合物磁矩",
+        "3.9",
+        "cr磁矩"
+      ]
+    },
+    {
+      "index": 342,
+      "title": "CO2阴离子自由基",
+      "subfield": "光化学应用",
+      "ansLen": 80,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "光化学机理步骤三：草酸根自由基极不稳定迅速分解 C₂O₄·⁻→CO₂+CO₂·⁻；生成的CO₂·⁻（二氧化碳阴离子自由基",
+      "keysLead": [
+        "co2自由基",
+        "自由基分解",
+        "链式反应"
+      ]
+    },
+    {
+      "index": 343,
+      "title": "X射线测定构型年代",
+      "subfield": "光化学应用",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "20世纪50年代，随着X射线衍射技术成熟，研究者精确测定了[Fe(C₂O₄)₃]³⁻配离子的八面体构型，证实了维尔纳配位",
+      "keysLead": [
+        "x射线",
+        "50年代",
+        "什么时候测定结构"
+      ]
+    },
+    {
+      "index": 345,
+      "title": "滕氏蓝与相关物的颜色",
+      "subfield": "实验操作",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "滕氏蓝为深蓝色沉淀，与普鲁士蓝颜色相同（现代研究表明二者本质是同一种混合价态化合物）。相关物：普鲁士蓝深蓝色、柏林绿Fe",
+      "keysLead": [
+        "滕氏蓝",
+        "颜色",
+        "柏林绿"
+      ]
+    },
+    {
+      "index": 346,
+      "title": "盖表面皿的目的",
+      "subfield": "光化学应用",
+      "ansLen": 76,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶时盖表面皿的目的：①防尘——防止灰尘杂质落入污染晶体；②挡光——减少光照、配合暗处放置抑制产物光解；③减缓溶剂挥发，",
+      "keysLead": [
+        "表面皿",
+        "盖表面皿",
+        "为什么盖"
+      ]
+    },
+    {
+      "index": 352,
+      "title": "第二步过氧化氢用量浓度",
+      "subfield": "分析测定",
+      "ansLen": 68,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第二步用6%过氧化氢溶液约8 mL，40℃水浴中以每秒1—2滴缓慢滴加，边加边搅拌；加完后继续搅拌5分钟，再煮沸2分钟除",
+      "keysLead": [
+        "第二步",
+        "第2步",
+        "过氧化氢用量"
+      ]
+    },
+    {
+      "index": 353,
+      "title": "第二步反应温度",
+      "subfield": "实验操作",
+      "ansLen": 61,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第二步（氧化）在40℃水浴中进行：温度过低氧化慢、过高（>60℃）H₂O₂快速分解；除过量H₂O₂时加热至沸腾保持2分钟",
+      "keysLead": [
+        "第二步",
+        "第2步",
+        "第二步温度"
+      ]
+    },
+    {
+      "index": 354,
+      "title": "第三步草酸用量浓度",
+      "subfield": "分析测定",
+      "ansLen": 60,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第三步采用0.5 mol/L H₂C₂O₄溶液：先加6 mL，再逐滴滴加至Fe(OH)₃恰好溶解、溶液呈透明翠绿色即停。",
+      "keysLead": [
+        "第三步",
+        "第3步",
+        "草酸用量"
+      ]
+    },
+    {
+      "index": 355,
+      "title": "第四步乙醇用量浓度",
+      "subfield": "光化学应用",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第四步加95%乙醇：母液约25—30 mL时加入约10 mL 95%乙醇（讲义规定，乙醇过量会使晶体细小、包夹杂质），搅",
+      "keysLead": [
+        "第四步",
+        "第4步",
+        "乙醇用量"
+      ]
+    },
+    {
+      "index": 356,
+      "title": "第四步烘干条件",
+      "subfield": "实验操作",
+      "ansLen": 86,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第四步收集：抽滤分离，少量乙醇洗涤2次，晶体置表面皿上50℃烘箱烘干20分钟，冷却至室温后称量。失结晶水温度为100℃，",
+      "keysLead": [
+        "第四步",
+        "第4步",
+        "烘干温度"
+      ]
+    },
+    {
+      "index": 359,
+      "title": "知识目标",
+      "subfield": "光化学应用",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "知识目标：①深入理解配合物基本概念（中心离子、配体、配位数、内界、外界）；②掌握配合物命名规则与化学式书写；③理解配位平",
+      "keysLead": [
+        "知识目标",
+        "教学目标",
+        "配位化学"
+      ]
+    },
+    {
+      "index": 360,
+      "title": "能力目标",
+      "subfield": "分析测定",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "能力目标：①熟练掌握加热、搅拌、沉淀、过滤、结晶、干燥等无机合成基本操作；②学会溶剂替换法结晶技术并能与蒸发法比较优劣；",
+      "keysLead": [
+        "能力目标",
+        "教学目标",
+        "操作技能"
+      ]
+    },
+    {
+      "index": 361,
+      "title": "素养目标",
+      "subfield": "安全与废物处理",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "素养目标：①树立绿色化学理念，理解废液分类处理的环境保护意义；②培养严谨求实的科学态度，理解每步操作的科学依据；③增强安",
+      "keysLead": [
+        "素养目标",
+        "素质目标",
+        "严谨求实"
+      ]
+    },
+    {
+      "index": 365,
+      "title": "有效数字记录规则",
+      "subfield": "反应原理",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "数据记录规则：记录位数与仪器精度一致（电子天平记至0.01 g，量筒估读到0.1 mL）；原始数据直接记在记录本上、真实",
+      "keysLead": [
+        "记录规则",
+        "记录有效数字",
+        "怎么记录数据"
+      ]
+    },
+    {
+      "index": 366,
+      "title": "K+鉴定（试剂现象沉淀）",
+      "subfield": "实验操作",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "K⁺鉴定三件套——试剂：饱和酒石酸氢钠（NaHC₄H₄O₆）溶液；现象：出现白色结晶性沉淀；沉淀名称：酒石酸氢钾（KHC",
+      "keysLead": [
+        "鉴定钾离子",
+        "k+鉴定",
+        "钾离子鉴定"
+      ]
+    },
+    {
+      "index": 367,
+      "title": "草酸根鉴定（试剂现象沉淀）",
+      "subfield": "配位化学理论",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "C₂O₄²⁻鉴定三件套——试剂：CaCl₂溶液；现象：生成白色沉淀；沉淀名称：草酸钙（CaC₂O₄，Ksp=2.32×1",
+      "keysLead": [
+        "鉴定草酸根",
+        "草酸根鉴定",
+        "怎么检验草酸根"
+      ]
+    },
+    {
+      "index": 368,
+      "title": "Fe3+鉴定（试剂现象）",
+      "subfield": "分析测定",
+      "ansLen": 111,
+      "hasDetail": false,
+      "keys": 8,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "Fe³⁺鉴定三件套——试剂：KSCN（硫氰化钾）溶液；现象：不显血红色（或仅极浅粉红），对照实验加酸破坏配离子后再加KS",
+      "keysLead": [
+        "鉴定铁离子",
+        "fe3+鉴定",
+        "铁离子鉴定"
+      ]
+    },
+    {
+      "index": 371,
+      "title": "双氧水安全处置",
+      "subfield": "光化学应用",
+      "ansLen": 85,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂具氧化性：皮肤接触立即用大量清水冲洗至少15分钟；避免与有机物混合（可能燃烧）；避光保存、久置分解失效；泄漏时用",
+      "keysLead": [
+        "双氧水溅到",
+        "过氧化氢接触",
+        "双氧水安全处置"
+      ]
+    },
+    {
+      "index": 377,
+      "title": "空白试验与对照试验",
+      "subfield": "分析测定",
+      "ansLen": 106,
+      "hasDetail": false,
+      "keys": 4,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "空白试验：不加试样、按相同步骤和试剂做平行实验，用于扣除试剂与器皿引入的系统误差；对照试验：用标准物质按相同方法测定，检",
+      "keysLead": [
+        "空白试验",
+        "空白",
+        "对照试验"
+      ]
+    },
+    {
+      "index": 378,
+      "title": "铁氰根配离子的结构",
+      "subfield": "配位化学理论",
+      "ansLen": 107,
+      "hasDetail": false,
+      "keys": 10,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[Fe(CN)₆]³⁻（赤血盐/铁氰化钾配离子）：中心Fe³⁺（3d⁵）配位数为6，CN⁻为强场配体，采取低自旋排布t₂",
+      "keysLead": [
+        "fecn6配位数",
+        "赤血盐配位数",
+        "铁氰根杂化"
+      ]
+    },
+    {
+      "index": 381,
+      "title": "水合Fe3+的颜色",
+      "subfield": "结构表征",
+      "ansLen": 71,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水合Fe³⁺（[Fe(H₂O)₆]³⁺）为淡紫色，因水解通常显淡黄（棕黄）色。产物配位液加酸解离后由翠绿色变为淡黄色，就",
+      "keysLead": [
+        "水合铁离子颜色",
+        "fe3+颜色",
+        "游离铁离子颜色"
+      ]
+    },
+    {
+      "index": 386,
+      "title": "Fe(SCN)3的颜色",
+      "subfield": "结构表征",
+      "ansLen": 85,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "[Fe(H₂O)₅(SCN)]²⁺（1:1配位，SCN⁻以N端配位，俗称硫氰化铁）呈血红色，是检验游离Fe³⁺的特征颜色",
+      "keysLead": [
+        "硫氰化铁颜色",
+        "fescn颜色",
+        "血红色"
+      ]
+    },
+    {
+      "index": 389,
+      "title": "抽滤装置的组成",
+      "subfield": "实验操作",
+      "ansLen": 83,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "抽滤装置主要由两件仪器组成：①布氏漏斗（放滤纸、盛晶体）；②吸滤瓶/抽滤瓶（接滤液、连真空）；配套循环水真空泵提供负压。",
+      "keysLead": [
+        "抽滤装置",
+        "装置组成",
+        "由哪两件"
+      ]
+    },
+    {
+      "index": 390,
+      "title": "蓝晒感光液的组成",
+      "subfield": "光化学应用",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "蓝晒感光液由两种溶液组成：①A液——10%三草酸合铁酸钾K₃[Fe(C₂O₄)₃]溶液（感光剂）；②B液——10%铁氰化",
+      "keysLead": [
+        "感光液组成",
+        "感光液由",
+        "a液b液组成"
+      ]
+    },
+    {
+      "index": 394,
+      "title": "氧化后溶液的pH",
+      "subfield": "分析测定",
+      "ansLen": 73,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "氧化步骤后溶液pH约为7—8（体系含Fe(OH)₃）；草酸亚铁悬浮液氧化前接近中性（pH约5—6）；配位步骤终点pH约为",
+      "keysLead": [
+        "氧化后ph",
+        "悬浊液ph",
+        "悬浮液ph"
+      ]
+    },
+    {
+      "index": 396,
+      "title": "结晶能否放冰箱",
+      "subfield": "光化学应用",
+      "ansLen": 60,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶应在室温静置，避免放冰箱——冰箱温差过大会导致晶体细小。正确做法：室温暗处静置过夜，晶体生长最充分（过夜效果最佳）。",
+      "keysLead": [
+        "冰箱",
+        "放冰箱",
+        "低温结晶"
+      ]
+    },
+    {
+      "index": 397,
+      "title": "草酸钾潮解后的烘干温度",
+      "subfield": "实验操作",
+      "ansLen": 99,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸钾K₂C₂O₄·H₂O潮解（结晶表面湿润、称量值偏高含水）后，应在110℃烘干后再使用——注意此处110℃仅适用于草",
+      "keysLead": [
+        "潮解后烘干",
+        "草酸钾潮解",
+        "多少度烘干"
+      ]
+    },
+    {
+      "index": 398,
+      "title": "改进方案草酸钾用量",
+      "subfield": "实验操作",
+      "ansLen": 110,
+      "hasDetail": false,
+      "keys": 8,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "改进（正交优化）方案中草酸钾用量为3.8 g（原3.5 g，过量增加10%以提高配位效率）；同时第三步0.5 mol/L",
+      "keysLead": [
+        "改进后草酸钾",
+        "优化后草酸钾",
+        "3.8"
+      ]
+    },
+    {
+      "index": 400,
+      "title": "草酸经验用量",
+      "subfield": "实验操作",
+      "ansLen": 81,
+      "hasDetail": false,
+      "keys": 5,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "第三步草酸经验用量约为6—8 mL 0.5 mol/L草酸溶液，逐滴加至Fe(OH)₃刚好溶解、溶液呈翠绿色即停（不足则",
+      "keysLead": [
+        "经验用量",
+        "6-8",
+        "草酸需要多少"
+      ]
+    },
+    {
+      "index": 403,
+      "title": "性质实验氨水浓度",
+      "subfield": "分析测定",
+      "ansLen": 69,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "配合物性质实验中使用2 mol/L NH₃·H₂O（氨水）和2 mol/L NaOH，逐滴加入产品溶液，观察生成红棕色F",
+      "keysLead": [
+        "氨水浓度",
+        "2mol",
+        "nh3浓度"
+      ]
+    },
+    {
+      "index": 404,
+      "title": "产率低：沉淀洗涤过度",
+      "subfield": "合成制备",
+      "ansLen": 88,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过低原因之洗涤过度：FeC₂O₄在热水中仍有少量溶解（Ksp=3.2×10⁻⁷），过度洗涤造成累积溶解损失。对策：热",
+      "keysLead": [
+        "洗涤过度",
+        "过度洗涤",
+        "洗太多"
+      ]
+    },
+    {
+      "index": 405,
+      "title": "产率低：H2O2加入过快",
+      "subfield": "合成制备",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过低原因之H₂O₂加入过快：局部温度升高促进Fe³⁺水解（Fe³⁺+3H₂O⇌Fe(OH)₃+3H⁺），且加剧H₂O",
+      "keysLead": [
+        "加入过快",
+        "滴加过快",
+        "局部过热"
+      ]
+    },
+    {
+      "index": 407,
+      "title": "产率低：草酸用量不足",
+      "subfield": "合成制备",
+      "ansLen": 71,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过低原因之草酸用量不足：Fe(OH)₃沉淀未完全溶解，铁转化率下降。对策：继续逐滴加入0.5 mol/L草酸至沉淀完",
+      "keysLead": [
+        "草酸不足",
+        "草酸用量不足",
+        "产率"
+      ]
+    },
+    {
+      "index": 408,
+      "title": "产率低：结晶条件不当",
+      "subfield": "光化学应用",
+      "ansLen": 75,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过低原因之结晶条件不当：溶液体积过大、乙醇不足、温度波动都会降低析晶率。对策：控制体积25—30 mL、95%乙醇约",
+      "keysLead": [
+        "结晶条件不当",
+        "结晶条件",
+        "产率"
+      ]
+    },
+    {
+      "index": 409,
+      "title": "产率低：产物光分解",
+      "subfield": "光化学应用",
+      "ansLen": 87,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过低原因之产物光分解：结晶过程暴露在光下发生2[Fe(C₂O₄)₃]³⁻→(hν)2FeC₂O₄+3C₂O₄²⁻+2",
+      "keysLead": [
+        "光分解",
+        "光照分解",
+        "结晶见光"
+      ]
+    },
+    {
+      "index": 411,
+      "title": "产率高：含无机盐杂质",
+      "subfield": "合成制备",
+      "ansLen": 76,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产率过高原因之含无机盐杂质：可能混入K₂SO₄、(NH₄)₂SO₄或过量K₂C₂O₄共结晶。对策：控制乙醇用量与结晶速度",
+      "keysLead": [
+        "无机盐杂质",
+        "含杂质",
+        "硫酸钾混入"
+      ]
+    },
+    {
+      "index": 412,
+      "title": "晶体细小：结晶过快",
+      "subfield": "实验操作",
+      "ansLen": 63,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体细小原因之结晶过快：乙醇加入过快或溶液过浓导致爆发性成核、晶粒多而小。对策：缓慢加入乙醇、充分混匀后静置，必要时稀释",
+      "keysLead": [
+        "结晶过快",
+        "爆发成核",
+        "结晶"
+      ]
+    },
+    {
+      "index": 415,
+      "title": "形貌差：杂质干扰",
+      "subfield": "实验操作",
+      "ansLen": 75,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体形貌不完整原因之杂质干扰：Fe(OH)₃胶体、K₂SO₄微晶等杂质破坏晶体生长。对策：确保Fe(OH)₃完全溶解（补",
+      "keysLead": [
+        "杂质干扰",
+        "胶体",
+        "微晶"
+      ]
+    },
+    {
+      "index": 416,
+      "title": "晶体黄绿色的诊断",
+      "subfield": "实验操作",
+      "ansLen": 84,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体呈黄绿色：原因是Fe²⁺氧化不完全、残留FeC₂O₄。确认方法：K₃[Fe(CN)₆]检验出现蓝色沉淀（滕氏蓝）即证",
+      "keysLead": [
+        "晶体黄绿色",
+        "黄绿色",
+        "变黄"
+      ]
+    },
+    {
+      "index": 417,
+      "title": "晶体棕黄色的诊断",
+      "subfield": "实验操作",
+      "ansLen": 70,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "晶体呈棕黄色（褐色）：原因是Fe(OH)₃未完全溶解、混入产物。确认方法：观察溶液是否澄清透明。对策：保持微沸、逐滴补加",
+      "keysLead": [
+        "晶体棕黄色",
+        "棕黄色",
+        "褐色"
+      ]
+    },
+    {
+      "index": 418,
+      "title": "晶体淡黄色的诊断",
+      "subfield": "光化学应用",
+      "ansLen": 71,
+      "hasDetail": false,
+      "keys": 7,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "产物呈淡黄色：原因是草酸过量，过量草酸使配位平衡左移、配离子部分解离（也可能为光照分解）。对策：减少草酸用量，滴加至刚好",
+      "keysLead": [
+        "淡黄色",
+        "颜色偏黄",
+        "颜色"
+      ]
+    },
+    {
+      "index": 422,
+      "title": "水浴锅不加热的处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 69,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "水浴锅不加热的排查：①检查电源是否接通；②检查温控器设置是否正确；③检查水位是否足够（应淹没加热管）。应急：用烧杯盛水直",
+      "keysLead": [
+        "水浴锅不加热",
+        "不加热",
+        "水浴锅"
+      ]
+    },
+    {
+      "index": 430,
+      "title": "辨析：结晶水是配位水",
+      "subfield": "配位化学理论",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。本产物中的3个结晶水是晶格水，不在配离子内界（内界6个配位位置全被3个双齿草酸根的氧占据）；结晶水通过氢键填",
+      "keysLead": [
+        "结晶水是配位水",
+        "结晶水属于配位水",
+        "结晶水"
+      ]
+    },
+    {
+      "index": 431,
+      "title": "辨析：配位数等于配体数",
+      "subfield": "配位化学理论",
+      "ansLen": 78,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。配位数是直接与中心离子键合的配位原子总数；C₂O₄²⁻是双齿配体，3个配体提供6个配位原子，故配体数为3而配",
+      "keysLead": [
+        "配位数等于配体数",
+        "配位数就是配体数",
+        "配位数"
+      ]
+    },
+    {
+      "index": 433,
+      "title": "辨析：Fe(OH)3溶于过量氨水",
+      "subfield": "实验操作",
+      "ansLen": 101,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。Fe(OH)₃不溶于过量氨水（Fe³⁺不能与NH₃形成稳定配合物）；能溶于过量氨水的是Cu(OH)₂、Zn(",
+      "keysLead": [
+        "氢氧化铁溶于氨水",
+        "过量氨水溶解",
+        "溶于过量氨水"
+      ]
+    },
+    {
+      "index": 434,
+      "title": "辨析：滕氏蓝与普鲁士蓝是同一种物质",
+      "subfield": "合成制备",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法正确（现代观点）。现代结构研究表明滕氏蓝与普鲁士蓝本质上是同一种混合价态铁氰化物，只是历史合成路径不同（滕氏蓝由F",
+      "keysLead": [
+        "滕氏蓝和普鲁士蓝是同一种",
+        "同一种物质",
+        "滕氏蓝"
+      ]
+    },
+    {
+      "index": 435,
+      "title": "辨析：蒸干溶液可得产物晶体",
+      "subfield": "实验操作",
+      "ansLen": 86,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。产物热敏（100℃失结晶水、230-250℃草酸根分解）且光敏，蒸发耗时受热见光会破坏产物；且蒸发法杂质易共",
+      "keysLead": [
+        "蒸干",
+        "蒸发结晶可以吗",
+        "蒸干溶液"
+      ]
+    },
+    {
+      "index": 436,
+      "title": "辨析：KSCN能检出产物中的铁离子",
+      "subfield": "分析测定",
+      "ansLen": 94,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。产物中Fe³⁺被牢固束缚在[Fe(C₂O₄)₃]³⁻内界（Kf=1.6×10²⁰），游离Fe³⁺浓度极低，直",
+      "keysLead": [
+        "kscn能检验产物",
+        "硫氰化钾检验产物中铁",
+        "直接检出"
+      ]
+    },
+    {
+      "index": 437,
+      "title": "辨析：配合物在水中完全电离",
+      "subfield": "配位化学理论",
+      "ansLen": 90,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。配合物溶于水时外界离子完全电离（如3个K⁺），但内界配离子（[Fe(C₂O₄)₃]³⁻）作为整体存在、仅微弱",
+      "keysLead": [
+        "完全电离",
+        "配合物电离",
+        "配合物"
+      ]
+    },
+    {
+      "index": 438,
+      "title": "辨析：草酸根是强场配体",
+      "subfield": "结构表征",
+      "ansLen": 106,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。在光谱化学序列中C₂O₄²⁻位于中等场位置（I⁻<Br⁻<Cl⁻<F⁻<OH⁻<H₂O<C₂O₄²⁻<NH₃",
+      "keysLead": [
+        "草酸根是强场",
+        "强场配体",
+        "草酸根"
+      ]
+    },
+    {
+      "index": 439,
+      "title": "辨析：产率越高越好",
+      "subfield": "合成制备",
+      "ansLen": 77,
+      "hasDetail": false,
+      "keys": 7,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "该说法错误。产率过高（>95%甚至>100%）属异常，提示产物未干燥恒重或含K₂SO₄等杂质共结晶；正常优秀范围为75—",
+      "keysLead": [
+        "产率越高越好",
+        "产率高就是好",
+        "产率"
+      ]
+    },
+    {
+      "index": 440,
+      "title": "微沸时间不足的后果",
+      "subfield": "合成制备",
+      "ansLen": 88,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "如果第一步微沸保持时间不足（<4分钟）：FeC₂O₄沉淀颗粒细小、陈化不充分，后续倾滗洗涤困难、抽滤易穿滤，产率与纯度下",
+      "keysLead": [
+        "微沸时间不足",
+        "只做了一半",
+        "微沸不够"
+      ]
+    },
+    {
+      "index": 441,
+      "title": "未煮沸除H2O2的后果",
+      "subfield": "合成制备",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "如果氧化后未煮沸除尽过量H₂O₂：残留H₂O₂会在配位、结晶及存放过程中继续氧化C₂O₄²⁻配体（放出CO₂），使配离子",
+      "keysLead": [
+        "没煮沸",
+        "未除双氧水",
+        "忘了煮沸"
+      ]
+    },
+    {
+      "index": 442,
+      "title": "检验产物中K2SO4杂质",
+      "subfield": "实验操作",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 4,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "检验产物中是否混入K₂SO₄杂质：取少量产物溶于蒸馏水，滴加BaCl₂溶液，若出现白色BaSO₄沉淀（不溶于稀酸）则含S",
+      "keysLead": [
+        "检验k2so4",
+        "硫酸钾杂质",
+        "怎么检验杂质"
+      ]
+    },
+    {
+      "index": 443,
+      "title": "检验产物中FeC2O4残留",
+      "subfield": "实验操作",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 6,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "检验产物中是否残留FeC₂O₄（Fe²⁺杂质）：取少量产物溶液，滴加K₃[Fe(CN)₆]（铁氰化钾）溶液，若出现蓝色沉",
+      "keysLead": [
+        "检验fec2o4",
+        "草酸亚铁残留",
+        "检验二价铁杂质"
+      ]
+    },
+    {
+      "index": 444,
+      "title": "检验产物中游离草酸根",
+      "subfield": "实验操作",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "检验产物中是否含过量游离草酸根杂质：取产物溶液滴加CaCl₂溶液，若立即出现大量白色CaC₂O₄沉淀（正常产物因解离平衡",
+      "keysLead": [
+        "检验游离草酸根",
+        "游离草酸根",
+        "草酸根杂质"
+      ]
+    },
+    {
+      "index": 446,
+      "title": "停电应急处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "实验中突然停电：立即停止滴加试剂、盖好试剂瓶；若水浴/搅拌中断，改用手动搅拌并记录中断时间；来电后检查体系温度再恢复实验",
+      "keysLead": [
+        "停电",
+        "断电",
+        "突然停电"
+      ]
+    },
+    {
+      "index": 447,
+      "title": "停水应急处理",
+      "subfield": "安全与废物处理",
+      "ansLen": 60,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "停水影响抽滤（循环水真空泵失压）：暂停抽滤、晶体用表面皿盖住保持湿润；可改用重力过滤应急或待来水后抽滤；切勿让水泵干转。",
+      "keysLead": [
+        "停水",
+        "断水",
+        "水泵没水"
+      ]
+    },
+    {
+      "index": 449,
+      "title": "静置时间不足的后果",
+      "subfield": "光化学应用",
+      "ansLen": 91,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "结晶静置时间不足（<数小时）：晶体生长不充分、颗粒小、产量低。对策：室温暗处静置过夜效果最佳；静置主要影响晶体大小与收率",
+      "keysLead": [
+        "静置时间不足",
+        "静置不够",
+        "没静置过夜"
+      ]
+    },
+    {
+      "index": 450,
+      "title": "氧化温度过高的后果",
+      "subfield": "热分析",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "如果氧化阶段温度超过60℃：H₂O₂快速分解失效（2H₂O₂→2H₂O+O₂↑）、Fe³⁺水解加剧生成过多Fe(OH)₃",
+      "keysLead": [
+        "氧化温度过高",
+        "水浴温度太高",
+        "超过60度"
+      ]
+    },
+    {
+      "index": 451,
+      "title": "氧化温度过低的后果",
+      "subfield": "实验操作",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "如果氧化阶段温度远低于40℃：H₂O₂氧化Fe²⁺速率慢、FeC₂O₄转化不完全，残留Fe²⁺使产物发黄绿色。对策：延长",
+      "keysLead": [
+        "氧化温度过低",
+        "温度太低",
+        "水浴不热"
+      ]
+    },
+    {
+      "index": 453,
+      "title": "未避光的后果",
+      "subfield": "光化学应用",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "如果实验全程未避光：[Fe(C₂O₄)₃]³⁻发生光化学还原（2[Fe(C₂O₄)₃]³⁻→(hν)2FeC₂O₄+3C",
+      "keysLead": [
+        "没有避光",
+        "忘了避光",
+        "见光操作"
+      ]
+    },
+    {
+      "index": 455,
+      "title": "校准曲线的制作",
+      "subfield": "分析测定",
+      "ansLen": 106,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "校准曲线制作：配制5个以上梯度浓度的标准溶液，在选定波长下测吸光度A，以A对浓度c作图并用最小二乘法线性拟合（A=εbc",
+      "keysLead": [
+        "校准曲线",
+        "标准曲线",
+        "怎么做校准曲线"
+      ]
+    },
+    {
+      "index": 456,
+      "title": "平行测定与√n规律",
+      "subfield": "分析测定",
+      "ansLen": 101,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "平行测定n次：平均值的标准偏差（标准误）s(x̄)=s/√n，即增加测定次数可使随机误差按1/√n规律减小——测4次平均",
+      "keysLead": [
+        "平行测定",
+        "√n",
+        "根号n"
+      ]
+    },
+    {
+      "index": 457,
+      "title": "超分子化学延伸",
+      "subfield": "配位化学理论",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 4,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "超分子化学是配位化学的现代延伸（1980年至今第四阶段）：研究分子间非共价相互作用（配位键、氢键、π-π堆积）驱动的主客",
+      "keysLead": [
+        "超分子",
+        "主客体",
+        "自组装"
+      ]
+    },
+    {
+      "index": 458,
+      "title": "乙醇量与静置时间哪个影响更大",
+      "subfield": "光化学应用",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇量影响更大。因为乙醇量直接决定混合溶剂的极性/介电常数，从而决定产物溶解度与过饱和度——乙醇不足时即使静置再久也难以",
+      "keysLead": [
+        "乙醇量和静置时间",
+        "哪个影响更大",
+        "影响更大"
+      ]
+    },
+    {
+      "index": 459,
+      "title": "温度与避光哪个更关键",
+      "subfield": "光化学应用",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 3,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "对产物保存而言避光更关键：光照下LMCT光化学还原在室温即可快速进行使产物变黄失效；温度只要不超100℃（失结晶水温度）",
+      "keysLead": [
+        "温度和避光",
+        "哪个更重要",
+        "更关键"
+      ]
+    },
+    {
+      "index": 1430,
+      "title": "如何用磁矩实验区分产物K₃[Fe(C₂O₄)…",
+      "subfield": "配位化学理论",
+      "ansLen": 107,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "高自旋d⁵Fe³⁺有5个未成对电子，μ=√[n(n+2)]=√35≈5.92BM；草酸根为弱场配体，Δo<P，故Fe³⁺",
+      "keysLead": [
+        "磁矩实验区分产",
+        "矩实验区分产物",
+        "实验区分产物k"
+      ]
+    },
+    {
+      "index": 1432,
+      "title": "第四步结晶中，加入95%乙醇后仅静置2小时就…",
+      "subfield": "分析测定",
+      "ansLen": 100,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇降低溶解度使体系进入过饱和区，但成核与晶体长大需足够时间跨越介稳区；仅2小时可能未达充分结晶，产率偏低（母液中溶质残",
+      "keysLead": [
+        "第四步结晶中加",
+        "四步结晶中加入",
+        "步结晶中加入9"
+      ]
+    },
+    {
+      "index": 1451,
+      "title": "第一步沉淀FeC₂O₄·2H₂O前，讲义要求…",
+      "subfield": "分析测定",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "室温混合时FeC₂O₄过饱和度低，成核速率慢，易生成细小晶体或胶体，过滤洗涤困难且夹杂母液离子（如SO₄²⁻），降低纯度",
+      "keysLead": [
+        "第一步沉淀fe",
+        "一步沉淀fec",
+        "步沉淀feco"
+      ]
+    },
+    {
+      "index": 1454,
+      "title": "第一步沉淀FeC₂O₄·2H₂O后，需用热水…",
+      "subfield": "分析测定",
+      "ansLen": 105,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "FeC₂O₄·2H₂O的Ksp=3.2×10⁻⁷，大量热水长时间洗涤会因溶解损失导致产率降低；但洗涤不彻底会残留SO₄²",
+      "keysLead": [
+        "第一步沉淀fe",
+        "一步沉淀fec",
+        "步沉淀feco"
+      ]
+    },
+    {
+      "index": 1456,
+      "title": "第三步配位时，讲义要求草酸溶液“约0.5mo…",
+      "subfield": "合成制备",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "浓草酸一次性加入造成局部酸度过高，促使草酸根质子化，降低配位能力，Fe(OH)₃溶解过快、反应不均匀，可能导致产物中夹杂",
+      "keysLead": [
+        "第三步配位时讲",
+        "三步配位时讲义",
+        "求草酸溶液约0"
+      ]
+    },
+    {
+      "index": 1457,
+      "title": "K₃[Fe(C₂O₄)₃]见光发生LMCT光…",
+      "subfield": "光化学应用",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "将K₃[Fe(C₂O₄)₃]溶液涂布于纸张，经光照LMCT产生Fe²⁺，随后用铁氰化钾K₃[Fe(CN)₆]处理，Fe²",
+      "keysLead": [
+        "kfeco见光",
+        "结合蓝晒法原理",
+        "合蓝晒法原理说"
+      ]
+    },
+    {
+      "index": 1458,
+      "title": "K₃[Fe(C₂O₄)₃]溶液呈翠绿色，而F…",
+      "subfield": "光化学应用",
+      "ansLen": 101,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根为弱场配体，Fe³⁺高自旋d⁵，d-d跃迁自旋禁阻且强度低，颜色弱。但草酸根→Fe³⁺的LMCT跃迁在可见区有强吸",
+      "keysLead": [
+        "kfeco溶液",
+        "feco溶液呈",
+        "eco溶液呈翠"
+      ]
+    },
+    {
+      "index": 1637,
+      "title": "第一步溶解5.0g摩尔盐时，讲义要求加“数滴…",
+      "subfield": "分析测定",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "省酸后Fe²⁺易水解生成Fe(OH)₂并缓慢被氧化为Fe³⁺，使沉淀混入氢氧化物杂质、降低产率。加酸可抑制水解和氧化，但",
+      "keysLead": [
+        "第一步溶解50",
+        "一步溶解50g",
+        "步溶解50g摩"
+      ]
+    },
+    {
+      "index": 1655,
+      "title": "第四步结晶时若未避光（在日光或普通灯光下静置…",
+      "subfield": "光化学应用",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产物见光发生LMCT光解生成Fe²⁺和CO₂，使产物混有Fe²⁺杂质，颜色可能变暗或呈黄绿色，纯度下降。检验方法：取少量",
+      "keysLead": [
+        "简单化学方法检",
+        "单化学方法检验",
+        "化学方法检验产"
+      ]
+    },
+    {
+      "index": 1796,
+      "title": "昼夜温差对三草酸合铁(III)酸钾结晶产率和粒径的影响及暗处理原因",
+      "subfield": "合成制备",
+      "ansLen": 101,
+      "hasDetail": false,
+      "keys": 19,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "温度降低使溶解度下降，夜间过饱和度增大，利于成核，晶体细小；白天气温回升可能溶解小晶粒，导致晶体大小不均。恒温可避免，但",
+      "keysLead": [
+        "昼夜温差",
+        "过饱和度",
+        "晶粒大小"
+      ]
+    },
+    {
+      "index": 1811,
+      "title": "第二步氧化后需加热至沸保持2分钟以除去过量H…",
+      "subfield": "分析测定",
+      "ansLen": 105,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "长时间煮沸使草酸分解（生成CO和CO₂），溶液变黄；Fe³⁺水解加剧，可能析出Fe(OH)₃沉淀，导致后续配位不完全。溶",
+      "keysLead": [
+        "加热至沸保持2",
+        "热至沸保持2分",
+        "至沸保持2分钟"
+      ]
+    },
+    {
+      "index": 1812,
+      "title": "第四步结晶时，向透明翠绿溶液中加入约10mL…",
+      "subfield": "分析测定",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇极性低于水，介电常数小，削弱水对K⁺和[Fe(C₂O₄)₃]³⁻的溶剂化作用，降低配合物溶解度，使溶液达到过饱和而结",
+      "keysLead": [
+        "透明翠绿溶液中",
+        "明翠绿溶液中加",
+        "翠绿溶液中加入"
+      ]
+    },
+    {
+      "index": 1813,
+      "title": "第三步配位反应中，要求草酸溶液逐滴滴加至Fe…",
+      "subfield": "分析测定",
+      "ansLen": 110,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量草酸使溶液酸性增强，H⁺与C₂O₄²⁻结合生成HC₂O₄⁻，降低配体有效浓度，部分配离子可能分解；结晶时过量草酸与产",
+      "keysLead": [
+        "求草酸溶液逐滴",
+        "草酸溶液逐滴滴",
+        "酸溶液逐滴滴加"
+      ]
+    },
+    {
+      "index": 1816,
+      "title": "K₃[Fe(C₂O₄)₃]溶液呈翠绿色，但F…",
+      "subfield": "光化学应用",
+      "ansLen": 114,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "翠绿色主要来自草酸根→Fe³⁺的配体到金属电荷转移（LMCT）吸收，属自旋允许的强跃迁，而非d-d跃迁。产物见光光解生成",
+      "keysLead": [
+        "kfeco溶液",
+        "feco溶液呈",
+        "eco溶液呈翠"
+      ]
+    },
+    {
+      "index": 1817,
+      "title": "第三步配位反应时，讲义要求草酸溶液浓度约0.…",
+      "subfield": "合成制备",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "一次性加入高浓度草酸会使局部酸度骤增，降低草酸根浓度，配位能力下降，Fe(OH)₃溶解缓慢；过量草酸可能以H₂C₂O₄·",
+      "keysLead": [
+        "求草酸溶液浓度",
+        "草酸溶液浓度约",
+        "酸溶液浓度约0"
+      ]
+    },
+    {
+      "index": 1835,
+      "title": "第二步氧化完成后，需加热至沸保持2分钟以除去…",
+      "subfield": "合成制备",
+      "ansLen": 81,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "长时间煮沸使Fe(OH)₃老化脱水，变成更难溶的FeO(OH)或Fe₂O₃，第三步草酸配位溶解困难、耗时增加；同时水分蒸",
+      "keysLead": [
+        "第二步氧化完成",
+        "二步氧化完成后",
+        "加热至沸保持2"
+      ]
+    },
+    {
+      "index": 1841,
+      "title": "第二步氧化中，权威用量为6%H₂O₂ 8mL…",
+      "subfield": "合成制备",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量H₂O₂未除尽时，后续加热或光照下会氧化草酸根，破坏配合物结构，生成Fe³⁺氧化物或草酸分解产物，使产品颜色发黄、纯",
+      "keysLead": [
+        "第二步氧化中权",
+        "二步氧化中权威",
+        "6ho8ml旧"
+      ]
+    },
+    {
+      "index": 1842,
+      "title": "第二步氧化中，滴加完6% H₂O₂后，讲义要…",
+      "subfield": "合成制备",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "省略搅拌会使H₂O₂与Fe²⁺混合不均匀，氧化不彻底，有Fe²⁺残留；加热至沸时H₂O₂迅速分解，来不及充分氧化，Fe²",
+      "keysLead": [
+        "第二步氧化中滴",
+        "二步氧化中滴加",
+        "步氧化中滴加完"
+      ]
+    },
+    {
+      "index": 1843,
+      "title": "已知K₃[Fe(C₂O₄)₃]中Fe³⁺为高…",
+      "subfield": "光化学应用",
+      "ansLen": 88,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "高自旋d⁵在八面体弱场中排布为t₂g³e_g²，因d-d跃迁自旋禁阻，颜色主要来自配体到金属的电荷转移（LMCT），吸收",
+      "keysLead": [
+        "已知kfeco",
+        "知kfeco中",
+        "kfeco中f"
+      ]
+    },
+    {
+      "index": 1848,
+      "title": "已知K₃[Fe(C₂O₄)₃]磁矩约5.92…",
+      "subfield": "反应原理",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "C₂O₄²⁻分裂能Δo较小，d⁵高自旋，电子构型t₂g³eg²，d-d跃迁吸收黄红区（约570nm），互补色为翠绿。CN",
+      "keysLead": [
+        "已知kfeco",
+        "知kfeco磁",
+        "kfeco磁矩"
+      ]
+    },
+    {
+      "index": 1947,
+      "title": "第四步结晶要求暗处静置过夜。若学生为赶时间，…",
+      "subfield": "分析测定",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "加乙醇后过饱和度骤增，但成核存在诱导期，2小时可能尚未大量成核或仅生成细小微晶，抽滤时微晶穿滤损失，母液中溶质未充分结晶",
+      "keysLead": [
+        "赶时间加乙醇后",
+        "时间加乙醇后仅",
+        "间加乙醇后仅静"
+      ]
+    },
+    {
+      "index": 1964,
+      "title": "第一步沉淀反应中，为什么必须用BaCl₂检验…",
+      "subfield": "合成制备",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "BaCl₂与SO₄²⁻生成白色BaSO₄沉淀，灵敏且专一；忽略洗涤会残留(NH₄)₂SO₄，后续结晶时可能混入铵盐复盐，",
+      "keysLead": [
+        "bacl检验洗",
+        "acl检验洗涤",
+        "cl检验洗涤液"
+      ]
+    },
+    {
+      "index": 1965,
+      "title": "第一步微沸4分钟时，若学生用强火使溶液剧烈沸…",
+      "subfield": "分析测定",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "剧烈沸腾使溶液剧烈扰动，虽溶氧量下降但飞溅接触空气更多，Fe²⁺易被氧化为Fe³⁺，生成Fe(OH)₃杂质；同时局部过饱",
+      "keysLead": [
+        "第一步微沸4分",
+        "一步微沸4分钟",
+        "步微沸4分钟时"
+      ]
+    },
+    {
+      "index": 1968,
+      "title": "第二步氧化中，H₂O₂需在40℃水浴中缓滴以…",
+      "subfield": "反应原理",
+      "ansLen": 114,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂氧化Fe²⁺为快反应（扩散控制），而氧化草酸在室温动力学上极慢，无催化剂下几乎不反应。温度升至近沸会加速草酸氧化",
+      "keysLead": [
+        "第二步氧化中h",
+        "二步氧化中ho",
+        "40水浴中缓滴"
+      ]
+    },
+    {
+      "index": 1984,
+      "title": "第一步制备FeC₂O₄·2H₂O时，讲义规定…",
+      "subfield": "合成制备",
+      "ansLen": 110,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "长时间微沸使草酸缓慢分解（H₂C₂O₄→CO₂+CO+H₂O），沉淀可能被空气中O₂部分氧化为Fe³⁺，引入杂质；同时长",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    },
+    {
+      "index": 1985,
+      "title": "第一步洗涤FeC₂O₄沉淀时，讲义要求用热水…",
+      "subfield": "合成制备",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残留SO₄²⁻易与第二步引入的K⁺形成K₂SO₄混入产物，降低纯度；残留FeSO₄中的Fe²⁺在H₂O₂氧化时生成Fe(",
+      "keysLead": [
+        "第一步洗涤fe",
+        "一步洗涤fec",
+        "步洗涤feco"
+      ]
+    },
+    {
+      "index": 1987,
+      "title": "蓝晒法利用K₃[Fe(C₂O₄)₃]见光还原…",
+      "subfield": "光化学应用",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "曝光过长时配合物持续光解，Fe²⁺大量生成，蓝色不断加深；但草酸根被消耗并放出CO₂，涂层内出现气泡，图案边缘模糊。草酸",
+      "keysLead": [
+        "kfeco见光",
+        "强烈日光下曝晒",
+        "烈日光下曝晒1"
+      ]
+    },
+    {
+      "index": 1996,
+      "title": "第一步中，草酸亚铁沉淀形成后，讲义要求“微沸…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "微沸4分钟促进Ostwald熟化，使细小晶粒溶解、粗大晶粒长大，降低比表面积，减少表面吸附杂质（如(NH₄)₂SO₄）。",
+      "keysLead": [
+        "第一步中草酸亚",
+        "一步中草酸亚铁",
+        "步中草酸亚铁沉"
+      ]
+    },
+    {
+      "index": 2004,
+      "title": "第四步结晶要求静置过夜。若学生为赶时间将溶液…",
+      "subfield": "分析测定",
+      "ansLen": 116,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "快速冷却使过饱和度骤然升高，瞬间大量成核，晶体细小、比表面积大，易吸附母液杂质；同时晶格生长不完整，包藏溶剂和杂质增多，",
+      "keysLead": [
+        "赶时间将溶液置",
+        "冰水浴中快速冷",
+        "水浴中快速冷却"
+      ]
+    },
+    {
+      "index": 2006,
+      "title": "三个草酸根双齿配位Fe³⁺形成的[Fe(C₂…",
+      "subfield": "光化学应用",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "具有手性。三个双齿C₂O₄²⁻在八面体顶点螯合形成D₃对称性，分子缺少对称面和对称中心，存在Δ和Λ两种不可重合的旋光异构",
+      "keysLead": [
+        "双齿配位fe形",
+        "齿配位fe形成",
+        "feco八面体"
+      ]
+    },
+    {
+      "index": 2032,
+      "title": "第四步结晶中，讲义要求加入约10mL 95%…",
+      "subfield": "分析测定",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "快速加入乙醇使局部过饱和度骤增，大量均相成核产生细碎微晶；剧烈搅拌加速碰撞，晶体大小不均、易包藏母液杂质，纯度下降。静置",
+      "keysLead": [
+        "第四步结晶中讲",
+        "四步结晶中讲义",
+        "求加入约10m"
+      ]
+    },
+    {
+      "index": 2111,
+      "title": "制备FeC₂O₄·2H₂O时，讲义选用摩尔盐…",
+      "subfield": "配位化学理论",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "摩尔盐是复盐，晶格含NH₄⁺与SO₄²⁻，比FeSO₄·7H₂O更稳定，不易风化失效；NH₄⁺水解微酸性可抑制Fe²⁺水",
+      "keysLead": [
+        "制备feco2",
+        "备feco2h",
+        "eco2ho时"
+      ]
+    },
+    {
+      "index": 2112,
+      "title": "第一步获得FeC₂O₄·2H₂O细晶沉淀后，…",
+      "subfield": "合成制备",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "FeC₂O₄·2H₂O为细小晶形，直接抽滤易堵塞滤纸且细晶漏滤损失；倾滗法自然沉降后倾倒上清液，加热水搅洗再沉降反复，既",
+      "keysLead": [
+        "第一步获得fe",
+        "一步获得fec",
+        "步获得feco"
+      ]
+    },
+    {
+      "index": 2113,
+      "title": "第二步氧化完成后，讲义要求加热至沸保持2分钟…",
+      "subfield": "反应原理",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残留H₂O₂在加热条件下与C₂O₄²⁻反应生成CO₂与H₂O，消耗配位所需草酸根，使Fe(OH)₃溶解不完全；同时O₂气",
+      "keysLead": [
+        "第二步氧化完成",
+        "二步氧化完成后",
+        "步氧化完成后讲"
+      ]
+    },
+    {
+      "index": 2140,
+      "title": "第二步氧化中，讲义规定6% H₂O₂用量为8…",
+      "subfield": "分析测定",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量H₂O₂具有较强的氧化性，可能氧化草酸根生成CO₂，消耗配体导致后续配位产率下降；同时还可能使已生成的Fe(III)",
+      "keysLead": [
+        "第二步氧化中讲",
+        "二步氧化中讲义",
+        "步氧化中讲义规"
+      ]
+    },
+    {
+      "index": 2142,
+      "title": "第三步配位反应中，约1.5g草酸溶于30mL…",
+      "subfield": "合成制备",
+      "ansLen": 92,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "高浓度草酸局部过量会导致局部pH骤降，可能使已生成的配合物分解或产生草酸晶体析出，终点“透明翠绿”难以准确判断，容易过滴",
+      "keysLead": [
+        "中约15g草酸",
+        "约15g草酸溶",
+        "30ml水配成"
+      ]
+    },
+    {
+      "index": 2143,
+      "title": "实验结束后，含K₃[Fe(C₂O₄)₃]、F…",
+      "subfield": "光化学应用",
+      "ansLen": 105,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "先加适量H₂O₂将Fe²⁺氧化为Fe³⁺，再加碱（NaOH）调至碱性使Fe³⁺生成Fe(OH)₃沉淀，过滤后滤液稀释排放",
+      "keysLead": [
+        "实验结束后含k",
+        "验结束后含kf",
+        "结束后含kfe"
+      ]
+    },
+    {
+      "index": 2162,
+      "title": "Fe(OH)₃的Ksp=2.79×10⁻³⁹…",
+      "subfield": "配位化学理论",
+      "ansLen": 98,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根与Fe³⁺形成稳定配合物Kf=1.6×10²⁰，强络合消耗游离Fe³⁺，使沉淀溶解平衡右移，远大于Ksp限制；升温",
+      "keysLead": [
+        "ksp2791",
+        "sp27910",
+        "p27910理"
+      ]
+    },
+    {
+      "index": 2249,
+      "title": "第四步结晶体烘干时，讲义严禁温度超过50℃。…",
+      "subfield": "合成制备",
+      "ansLen": 116,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "超过50℃可能失去部分结晶水（100℃才完全失水，但80℃可致部分水脱去），产物化学式改变，称量产率偏高或偏低；若继续升",
+      "keysLead": [
+        "第四步结晶体烘",
+        "四步结晶体烘干",
+        "步结晶体烘干时"
+      ]
+    },
+    {
+      "index": 2250,
+      "title": "第一步沉淀反应中，草酸溶液浓度偏高或一次性快…",
+      "subfield": "分析测定",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸浓度过高或快速加入造成局部过饱和，成核速率远大于生长，生成细小胶状沉淀，比表面积大，吸附SO₄²⁻、NH₄⁺等杂质，",
+      "keysLead": [
+        "中草酸溶液浓度",
+        "草酸溶液浓度偏",
+        "酸溶液浓度偏高"
+      ]
+    },
+    {
+      "index": 2366,
+      "title": "第四步结晶时，讲义要求加入约10mL 95%…",
+      "subfield": "分析测定",
+      "ansLen": 104,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "先冷却再加乙醇会使配合物溶解度降低，乙醇加入后过饱和度突增，晶体成核过多、粒径细小，吸附杂质多，产率虽可能略高但纯度差。",
+      "keysLead": [
+        "第四步结晶时讲",
+        "四步结晶时讲义",
+        "求加入约10m"
+      ]
+    },
+    {
+      "index": 2403,
+      "title": "第四步结晶中，讲义要求加入约10mL 95%…",
+      "subfield": "分析测定",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇量增加降低产物溶解度，提高产率，但过快过饱和使成核速率远大于晶核生长，晶体细小、易聚结，纯度下降（母液包裹杂质）。未",
+      "keysLead": [
+        "第四步结晶中讲",
+        "四步结晶中讲义",
+        "求加入约10m"
+      ]
+    },
+    {
+      "index": 2421,
+      "title": "第四步结晶时，讲义要求“悬棉线提供晶核，盖表…",
+      "subfield": "合成制备",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "2小时内结晶体系过饱和度仍高，成核多但生长时间不足，产物呈细粉状、晶形差，比表面积大而吸附杂质；大量产品仍留在母液中未析",
+      "keysLead": [
+        "第四步结晶时讲",
+        "四步结晶时讲义",
+        "求悬棉线提供晶"
+      ]
+    },
+    {
+      "index": 2423,
+      "title": "第四步抽滤完成后，讲义要求用95%乙醇洗涤晶…",
+      "subfield": "分析测定",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产物K₃[Fe(C₂O₄)₃]·3H₂O极易溶于水，水洗会溶解大量晶体，产率骤降；水对草酸钾等醇溶性杂质的溶解能力弱，杂",
+      "keysLead": [
+        "第四步抽滤完成",
+        "四步抽滤完成后",
+        "步抽滤完成后讲"
+      ]
+    },
+    {
+      "index": 2447,
+      "title": "第二步氧化反应中，K₃Fe(CN)₆检验Fe…",
+      "subfield": "分析测定",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "强酸下滕氏蓝溶解度增大，少量Fe²⁺可能不产生可见蓝色沉淀，造成假阴性。因此阴性结果不能完全确认Fe²⁺已氧化完全。应先",
+      "keysLead": [
+        "中kfecn检",
+        "kfecn检验",
+        "fecn检验f"
+      ]
+    },
+    {
+      "index": 2481,
+      "title": "第三步配位反应中，讲义要求滴加约0.5mol…",
+      "subfield": "分析测定",
+      "ansLen": 111,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量草酸使母液中C₂O₄²⁻浓度过高，体系pH下降，C₂O₄²⁻部分质子化，反而降低配位能力；同时过量草酸在乙醇反溶剂存",
+      "keysLead": [
+        "求滴加约05m",
+        "滴加约05mo",
+        "加约05mol"
+      ]
+    },
+    {
+      "index": 2535,
+      "title": "第三步配位反应中，讲义要求草酸溶液逐滴滴加至…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量草酸使溶液H⁺浓度升高，C₂O₄²⁻大量质子化为HC₂O₄⁻甚至H₂C₂O₄，有效配体浓度下降，配位平衡左移，不利于",
+      "keysLead": [
+        "求草酸溶液逐滴",
+        "草酸溶液逐滴滴",
+        "酸溶液逐滴滴加"
+      ]
+    },
+    {
+      "index": 2546,
+      "title": "第一步沉淀反应中，要求微沸保持4分钟。若加热…",
+      "subfield": "分析测定",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "加热不足，FeC₂O₄·2H₂O沉淀反应不完全，产率偏低，且细小晶粒吸附杂质难以洗涤；加热过久，Fe²⁺易被空气中O₂氧",
+      "keysLead": [
+        "求微沸保持4分",
+        "微沸保持4分钟",
+        "加热仅1分钟即"
+      ]
+    },
+    {
+      "index": 2548,
+      "title": "若学生误用10mL 6%H₂O₂（讲义权威为…",
+      "subfield": "分析测定",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量H₂O₂煮沸不彻底会残留在溶液中，H₂O₂具有还原性，可将Fe³⁺还原为Fe²⁺，使产物中混有Fe²⁺杂质，颜色偏浅",
+      "keysLead": [
+        "10ml6ho",
+        "0ml6ho讲",
+        "ml6ho讲义"
+      ]
+    },
+    {
+      "index": 2571,
+      "title": "第二步煮沸2分钟除H₂O₂后，讲义未要求检验…",
+      "subfield": "合成制备",
+      "ansLen": 105,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "取少量反应液，滴加Ti(SO₄)₂溶液，若有H₂O₂则生成黄色过氧钛酸；或加KI溶液并用淀粉检验（I₂使淀粉变蓝）。残留",
+      "keysLead": [
+        "第二步煮沸2分",
+        "二步煮沸2分钟",
+        "步煮沸2分钟除"
+      ]
+    },
+    {
+      "index": 2572,
+      "title": "K₃[Fe(C₂O₄)₃]·3H₂O中草酸根…",
+      "subfield": "光化学应用",
+      "ansLen": 96,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "三(双齿)螯合物仅有一种几何构型（fac，无顺反异构），但存在Δ和Λ两种旋光异构体（对映体），互为镜像但不能重叠。二者吸",
+      "keysLead": [
+        "eco3ho中",
+        "co3ho中草",
+        "o3ho中草酸"
+      ]
+    },
+    {
+      "index": 2583,
+      "title": "第四步结晶中，产物K₃[Fe(C₂O₄)₃]…",
+      "subfield": "光化学应用",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "光解产生Fe²⁺和CO₂气体，晶体表面可能变黄或出现棕色斑点（Fe(OH)₃或氧化产物）；K₃Fe(CN)₆检验滤液会因",
+      "keysLead": [
+        "第四步结晶中产",
+        "四步结晶中产物",
+        "步结晶中产物k"
+      ]
+    },
+    {
+      "index": 2584,
+      "title": "第四步结晶中，体系加入10mL 95%乙醇后…",
+      "subfield": "分析测定",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "完全密封防止乙醇挥发，溶剂组成恒定，但乙醇浓度始终较低，过饱和度不足，析晶速率慢、晶体细小且产率降低；盖表面皿允许乙醇缓",
+      "keysLead": [
+        "第四步结晶中体",
+        "四步结晶中体系",
+        "步结晶中体系加"
+      ]
+    },
+    {
+      "index": 2591,
+      "title": "利用三草酸合铁(III)酸钾的LMCT光解性…",
+      "subfield": "光化学应用",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "曝光过长时，表面Fe²⁺浓度达饱和，显影后蓝色物质在表面已充分生成；同时深层光解产生的Fe²⁺向外扩散并被氧化，造成背景",
+      "keysLead": [
+        "三草酸合铁ii",
+        "草酸合铁iii",
+        "酸合铁iii酸"
+      ]
+    },
+    {
+      "index": 2618,
+      "title": "第三步配位中，向含Fe(OH)₃的热体系逐滴…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量H⁺使C₂O₄²⁻质子化为HC₂O₄⁻，有效配体浓度下降，已配位的[Fe(C₂O₄)₃]³⁻部分解离，体系重新浑浊；",
+      "keysLead": [
+        "热体系逐滴滴加",
+        "体系逐滴滴加0",
+        "系逐滴滴加05"
+      ]
+    },
+    {
+      "index": 2656,
+      "title": "第二步氧化中，滴加完H₂O₂后需加热至沸保持…",
+      "subfield": "分析测定",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "长时间煮沸会加速H₂O₂热分解产生·OH等活性氧，攻击草酸根配体（C₂O₄²⁻→CO₂），导致配体分解、配离子结构破坏，",
+      "keysLead": [
+        "第二步氧化中滴",
+        "二步氧化中滴加",
+        "步氧化中滴加完"
+      ]
+    },
+    {
+      "index": 2674,
+      "title": "第四步抽滤后，讲义要求用约10mL 95%乙…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "产物易溶于水而难溶于乙醇，用水洗涤会溶解部分产物造成产率损失。乙醇介电常数低，削弱晶体表面水化层，降低配合物在洗涤液中的",
+      "keysLead": [
+        "第四步抽滤后讲",
+        "四步抽滤后讲义",
+        "约10ml95"
+      ]
+    },
+    {
+      "index": 2676,
+      "title": "第四步结晶时悬一根棉线于溶液中提供晶核。若学…",
+      "subfield": "光化学应用",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "无棉线时，体系只能依靠均相成核，需更高过饱和度才能自发成核，过夜后可能得到大量细碎晶体，甚至仍无晶体析出。棉线表面作为异",
+      "keysLead": [
+        "第四步结晶时悬",
+        "四步结晶时悬一",
+        "溶液中提供晶核"
+      ]
+    },
+    {
+      "index": 2693,
+      "title": "第四步结晶中，讲义将95%乙醇在室温下加入产…",
+      "subfield": "合成制备",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇温度升高降低了介电常数降低的程度减弱，使配离子溶解度下降幅度变小，过饱和度降低，成核速率减慢，可能形成较大晶体但产率",
+      "keysLead": [
+        "第四步结晶中讲",
+        "四步结晶中讲义",
+        "步结晶中讲义将"
+      ]
+    },
+    {
+      "index": 2695,
+      "title": "第四步结晶中，讲义加入约10mL 95%乙醇…",
+      "subfield": "分析测定",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "乙醇用量加倍（20mL）使溶液极性更低，过饱和度骤增，成核过快，晶体细小，可能包裹杂质，但产率可能略增，结晶过快不利于纯",
+      "keysLead": [
+        "第四步结晶中讲",
+        "四步结晶中讲义",
+        "步结晶中讲义加"
+      ]
+    },
+    {
+      "index": 2817,
+      "title": "第一步沉淀FeC₂O₄·2H₂O时，讲义规定…",
+      "subfield": "合成制备",
+      "ansLen": 101,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe²⁺残留会随母液损失，导致最终产率降低；若少量FeC₂O₄沉淀不完全，它们在第二步氧化时也会被H₂O₂氧化为Fe³⁺",
+      "keysLead": [
+        "第一步沉淀fe",
+        "一步沉淀fec",
+        "步沉淀feco"
+      ]
+    },
+    {
+      "index": 2826,
+      "title": "第一步沉淀洗涤时，讲义要求用热水洗至无SO₄…",
+      "subfield": "分析测定",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "不宜用冷水。FeC₂O₄溶解度随温度升高而增大，冷水虽可减少溶解损失，但冷洗易使沉淀分散形成胶体（胶溶），导致过滤困难与",
+      "keysLead": [
+        "第一步沉淀洗涤",
+        "一步沉淀洗涤时",
+        "步沉淀洗涤时讲"
+      ]
+    },
+    {
+      "index": 2827,
+      "title": "第一步微沸4分钟时，草酸溶液与摩尔盐（含数滴…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "碱性下Fe²⁺极易被空气中O₂氧化为Fe³⁺，生成Fe(OH)₃胶体混入沉淀，污染FeC₂O₄；同时碱性促进草酸根水解，",
+      "keysLead": [
+        "第一步微沸4分",
+        "一步微沸4分钟",
+        "步微沸4分钟时"
+      ]
+    },
+    {
+      "index": 2829,
+      "title": "第一步倾滗法洗涤沉淀时，讲义要求洗至BaCl…",
+      "subfield": "配位化学理论",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残余SO₄²⁻较少时与Fe³⁺配位能力远弱于C₂O₄²⁻，一般不影响配位反应；但SO₄²⁻可与K⁺形成K₂SO₄，在结晶",
+      "keysLead": [
+        "第一步倾滗法洗",
+        "一步倾滗法洗涤",
+        "步倾滗法洗涤沉"
+      ]
+    },
+    {
+      "index": 2834,
+      "title": "第四步加入95%乙醇后，若学生立即剧烈搅拌溶…",
+      "subfield": "合成制备",
+      "ansLen": 114,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "剧烈搅拌使过饱和度快速均匀消耗，产生大量微小晶核，但生长时间不足，晶体细小甚至粉末状；同时夹带溶剂杂质，晶体纯度下降。反",
+      "keysLead": [
+        "第四步加入95",
+        "四步加入95乙",
+        "步加入95乙醇"
+      ]
+    },
+    {
+      "index": 2851,
+      "title": "蓝晒法利用K₃[Fe(C₂O₄)₃]的光敏性…",
+      "subfield": "光化学应用",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残留的H₂O₂是强氧化剂，能将光解产生的Fe²⁺重新氧化为Fe³⁺，抑制普鲁士蓝的生成，导致图像蓝色变浅、对比度下降。同",
+      "keysLead": [
+        "第二步ho未除",
+        "二步ho未除净",
+        "步ho未除净煮"
+      ]
+    },
+    {
+      "index": 2854,
+      "title": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+      "subfield": "分析测定",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "室温直接混合时反应速率慢，过饱和度低，易形成细小晶核且晶粒长大缓慢，沉淀可能呈胶状，过滤困难且损失大；加热近沸再加入则瞬",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    },
+    {
+      "index": 2857,
+      "title": "产物K₃[Fe(C₂O₄)₃]·3H₂O在2…",
+      "subfield": "光化学应用",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "80℃虽低于230℃分解温度和100℃失结晶水温度，但已超过讲义规定的50℃烘干温度，长时间烘干可能导致表面部分氧化或晶",
+      "keysLead": [
+        "产物kfeco",
+        "物kfeco3",
+        "光敏原理推断既"
+      ]
+    },
+    {
+      "index": 2871,
+      "title": "第四步结晶要求“暗处静置过夜”。若学生将产物…",
+      "subfield": "光化学应用",
+      "ansLen": 114,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "光解释放的游离C₂O₄²⁻水解呈碱性，且CO₂逸出减少酸性溶解，溶液pH略升。光解本身产生Fe²⁺，使K₃[Fe(CN)",
+      "keysLead": [
+        "阳光直射处光解",
+        "光直射处光解反",
+        "2feco2f"
+      ]
+    },
+    {
+      "index": 2896,
+      "title": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+      "subfield": "合成制备",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "顺序颠倒后，摩尔盐滴入草酸溶液中，Fe²⁺局部浓度高，草酸根相对过量，会快速生成大量细小晶核，导致沉淀颗粒细小、易吸附杂",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    },
+    {
+      "index": 2897,
+      "title": "第二步氧化后，讲义要求“加热至沸保持2分钟”…",
+      "subfield": "分析测定",
+      "ansLen": 117,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残余H₂O₂可还原Fe³⁺为Fe²⁺，使产物含K₃[Fe(C₂O₄)₃]中混入Fe²⁺杂质；同时H₂O₂氧化草酸根生成C",
+      "keysLead": [
+        "第二步氧化后讲",
+        "二步氧化后讲义",
+        "求加热至沸保持"
+      ]
+    },
+    {
+      "index": 2898,
+      "title": "在第一步沉淀FeC₂O₄·2H₂O时，若学生…",
+      "subfield": "分析测定",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "室温下沉淀反应速率慢，FeC₂O₄·2H₂O析出不充分，产率偏低；且沉淀颗粒细小，容易穿滤或随倾滗流失。微沸促进晶体长大",
+      "keysLead": [
+        "第一步沉淀fe",
+        "一步沉淀fec",
+        "步沉淀feco"
+      ]
+    },
+    {
+      "index": 2899,
+      "title": "第三步配位中，向Fe(OH)₃浆液中逐滴滴加…",
+      "subfield": "分析测定",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "一次性加入草酸会使局部pH骤降，可能溶解部分Fe(OH)₃但配位不完全，或因酸度过高促使Fe³⁺水解重新沉淀；剧烈搅拌使",
+      "keysLead": [
+        "feoh浆液中",
+        "eoh浆液中逐",
+        "oh浆液中逐滴"
+      ]
+    },
+    {
+      "index": 2900,
+      "title": "第二步氧化反应中，40℃水浴滴加H₂O₂后需…",
+      "subfield": "合成制备",
+      "ansLen": 102,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "省略搅拌会使H₂O₂未充分与FeC₂O₄接触，氧化不完全，部分Fe²⁺残留；直接煮沸使H₂O₂迅速分解，氧化能力下降，且",
+      "keysLead": [
+        "中40水浴滴加",
+        "40水浴滴加h",
+        "0水浴滴加ho"
+      ]
+    },
+    {
+      "index": 2901,
+      "title": "在第二步氧化前，FeC₂O₄·2H₂O沉淀需…",
+      "subfield": "分析测定",
+      "ansLen": 103,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "残留SO₄²⁻可能以K₂SO₄或(NH₄)₂SO₄形式混入最终结晶，降低产物纯度；SO₄²⁻还可能影响配位平衡或与K⁺形",
+      "keysLead": [
+        "第二步氧化前f",
+        "二步氧化前fe",
+        "步氧化前fec"
+      ]
+    },
+    {
+      "index": 2924,
+      "title": "第三步配位反应中，向Fe(OH)₃浆液中逐滴…",
+      "subfield": "合成制备",
+      "ansLen": 119,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸过量会使溶液酸性过强，H⁺浓度升高可能使[Fe(C₂O₄)₃]³⁻部分转化为低配位物种如H[Fe(C₂O₄)₂]，稳",
+      "keysLead": [
+        "feoh浆液中",
+        "eoh浆液中逐",
+        "oh浆液中逐滴"
+      ]
+    },
+    {
+      "index": 2958,
+      "title": "第三步配位反应中，讲义要求将约1.5g草酸配…",
+      "subfield": "分析测定",
+      "ansLen": 95,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "浓草酸局部过大会使体系pH骤降，草酸根质子化，配位能力减弱，已溶解的Fe³⁺可能再次水解生成Fe(OH)₃或析出草酸结晶",
+      "keysLead": [
+        "求将约15g草",
+        "将约15g草酸",
+        "约15g草酸配"
+      ]
+    },
+    {
+      "index": 2972,
+      "title": "取出产物晶体后，某学生向K₃[Fe(C₂O₄…",
+      "subfield": "配位化学理论",
+      "ansLen": 108,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "草酸根处于配离子内界，以螯合键与Fe³⁺强配位，游离C₂O₄²⁻浓度极低且内界不电离，Ag₂C₂O₄无法达到Ksp故不沉",
+      "keysLead": [
+        "产物晶体后某学",
+        "kfeco水溶",
+        "feco水溶液"
+      ]
+    },
+    {
+      "index": 2974,
+      "title": "第二步要求在40℃水浴完成H₂O₂氧化后，加…",
+      "subfield": "分析测定",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "H₂O₂在沸腾时分解已足够，延长至10min持续释放O₂引起剧烈冒泡，部分沉淀被冲溅裹带损失；同时Fe(OH)₃胶体老化",
+      "keysLead": [
+        "40水浴完成h",
+        "0水浴完成ho",
+        "水浴完成ho氧"
+      ]
+    },
+    {
+      "index": 3003,
+      "title": "第一步制备FeC₂O₄·2H₂O时，1.7g…",
+      "subfield": "分析测定",
+      "ansLen": 113,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "过量草酸会使初始沉淀阶段体系酸度升高，FeC₂O₄溶解度增大（Ksp=3.2×10⁻⁷），且可能生成可溶性[Fe(C₂O",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    },
+    {
+      "index": 3005,
+      "title": "第四步结晶采用95%乙醇作为反溶剂。若实验室…",
+      "subfield": "分析测定",
+      "ansLen": 93,
+      "hasDetail": false,
+      "keys": 11,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "丙酮也可作反溶剂，但毒性较大且沸点低，易挥发需加强通风；异丙醇溶解性较强，可能降低反溶剂效果，且沸点较高不利于低温干燥。",
+      "keysLead": [
+        "实验室仅有丙酮",
+        "干燥难易角度分",
+        "燥难易角度分析"
+      ]
+    },
+    {
+      "index": 3006,
+      "title": "第四步结晶要求“盖表面皿暗处静置过夜”。若学…",
+      "subfield": "光化学应用",
+      "ansLen": 89,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "不盖表面皿时乙醇和水蒸发过快，溶液过饱和度骤增，产生大量细小晶核，晶体颗粒小且易夹杂杂质；同时空气尘埃可能进入，且无法完",
+      "keysLead": [
+        "求盖表面皿暗处",
+        "盖表面皿暗处静",
+        "表面皿暗处静置"
+      ]
+    },
+    {
+      "index": 3018,
+      "title": "第二步中滴加完H₂O₂后，讲义要求\"继续在4…",
+      "subfield": "分析测定",
+      "ansLen": 106,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "继续搅拌5分钟使尚未反应的H₂O₂在温和温度下与FeC₂O₄充分接触，使氧化反应完全。若直接煮沸，H₂O₂在高温下迅速分",
+      "keysLead": [
+        "第二步中滴加完",
+        "二步中滴加完h",
+        "步中滴加完ho"
+      ]
+    },
+    {
+      "index": 3026,
+      "title": "第一步洗涤FeC₂O₄·2H₂O沉淀时，用B…",
+      "subfield": "配位化学理论",
+      "ansLen": 112,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "Fe³⁺在近中性条件水解生成Fe(OH)₃胶体，使溶液浑浊，易被误判为BaSO₄沉淀，导致过度洗涤和产物损失。用稀盐酸酸",
+      "keysLead": [
+        "第一步洗涤fe",
+        "一步洗涤fec",
+        "步洗涤feco"
+      ]
+    },
+    {
+      "index": 3028,
+      "title": "第四步结晶时，讲义要求加入95%乙醇后“悬棉…",
+      "subfield": "反应原理",
+      "ansLen": 118,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "棉线提供了异相成核位点，显著降低成核活化能，使晶体在较低过饱和度下即可析出；均相成核需更高过饱和度，成核慢且晶核少。无棉",
+      "keysLead": [
+        "第四步结晶时讲",
+        "四步结晶时讲义",
+        "求加入95乙醇"
+      ]
+    },
+    {
+      "index": 3031,
+      "title": "第一步制备FeC₂O₄·2H₂O时，讲义要求…",
+      "subfield": "分析测定",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "缩短至1分钟：晶体细小，易穿滤，包藏母液杂质，洗涤困难；延长至10分钟：晶体粗大，但Fe²⁺在加热下易被空气氧化为Fe³",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    },
+    {
+      "index": 3033,
+      "title": "产物K₃[Fe(C₂O₄)₃]·3H₂O中草…",
+      "subfield": "配位化学理论",
+      "ansLen": 115,
+      "hasDetail": false,
+      "keys": 11,
+      "style": true,
+      "conflicts": 0,
+      "ansLead": "取少量产物溶于蒸馏水，滴加CaCl₂溶液。若草酸根全为内界，则无白色CaC₂O₄沉淀生成，溶液保持翠绿色；若混有游离草酸",
+      "keysLead": [
+        "产物kfeco",
+        "物kfeco3",
+        "eco3ho中"
+      ]
+    },
+    {
+      "index": 3075,
+      "title": "第一步制备FeC₂O₄·2H₂O时，若学生将…",
+      "subfield": "分析测定",
+      "ansLen": 109,
+      "hasDetail": false,
+      "keys": 11,
+      "style": false,
+      "conflicts": 0,
+      "ansLead": "混合顺序颠倒使Fe²⁺进入过量草酸环境，瞬间产生高局部过饱和，形成大量细小晶核，沉淀粒度细、吸附杂质多，洗涤困难，SO₄",
+      "keysLead": [
+        "第一步制备fe",
+        "一步制备fec",
+        "步制备feco"
+      ]
+    }
+  ],
+  "p3_count": 2776
+}

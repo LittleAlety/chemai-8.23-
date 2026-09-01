@@ -1,0 +1,1262 @@
+[
+  {
+    "q": "为什么用100度烘干而不是110度",
+    "expected_topic": null,
+    "winner": "100℃烘干导致失水分解",
+    "top": [
+      {
+        "title": "100℃烘干导致失水分解",
+        "score": 7.71875,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.21875,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 7.71875
+      },
+      {
+        "title": "烘干温度时间",
+        "score": 7.233642332556181,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 2,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 7.233642332556181
+      },
+      {
+        "title": "三草酸合铁(Ⅲ)酸钾120℃烘干失水与变色及Fe²⁺检验",
+        "score": 4.90125,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.40125,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.90125
+      },
+      {
+        "title": "溶解度各温度数值",
+        "score": 4.62,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.12,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.62
+      },
+      {
+        "title": "烘干温度超标导致失结晶水及验证方法",
+        "score": 3.88375,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.38375,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 3.88375
+      }
+    ]
+  },
+  {
+    "q": "浓度怎么算",
+    "expected_topic": null,
+    "winner": "",
+    "top": []
+  },
+  {
+    "q": "草酸应该加多少",
+    "expected_topic": null,
+    "winner": "草酸溶液配制",
+    "top": [
+      {
+        "title": "草酸溶液配制",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "产率低：草酸用量不足",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸发黄的解决",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸过量或不足的量化后果",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "第三步配位中草酸过量及滴加过快的影响与判断",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      }
+    ]
+  },
+  {
+    "q": "双氧水应该加多少",
+    "expected_topic": null,
+    "winner": "为何逐滴加入过氧化氢",
+    "top": [
+      {
+        "title": "为何逐滴加入过氧化氢",
+        "score": 8.18,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.18,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 8.18
+      },
+      {
+        "title": "6% H2O2 8mL具体用量",
+        "score": 5.99875,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.49875,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 5.99875
+      },
+      {
+        "title": "H2O2泄漏处理",
+        "score": 5.305,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.305,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 5.305
+      },
+      {
+        "title": "制备反应方程式",
+        "score": 4.855,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.355,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.855
+      },
+      {
+        "title": "H₂O₂过量12mL对配位反应及产物纯度的影响分析",
+        "score": 4.397235504808193,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 1.535,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.397235504808193
+      }
+    ]
+  },
+  {
+    "q": "为什么要逐滴加入过氧化氢",
+    "expected_topic": null,
+    "winner": "为何逐滴加入过氧化氢",
+    "top": [
+      {
+        "title": "为何逐滴加入过氧化氢",
+        "score": 22.68,
+        "keyScore": 10,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.18,
+        "titleTopical": 5,
+        "distinctHits": 3,
+        "total": 22.68
+      },
+      {
+        "title": "草酸为何逐滴加入",
+        "score": 18.995,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.995,
+        "titleTopical": 5,
+        "distinctHits": 3,
+        "total": 18.995
+      },
+      {
+        "title": "第三步配位中草酸过量及滴加过快的影响与判断",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "H₂O₂滴加温度控制及一次倒入的后果",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "H2O2泄漏处理",
+        "score": 5.305,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.305,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 5.305
+      }
+    ]
+  },
+  {
+    "q": "植物是绿色的原因",
+    "expected_topic": null,
+    "winner": "植物与光合作用的化学教学",
+    "top": [
+      {
+        "title": "植物与光合作用的化学教学",
+        "score": 16.21625,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.21625,
+        "titleTopical": 3,
+        "distinctHits": 3,
+        "total": 16.21625
+      },
+      {
+        "title": "翠绿色来源",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "配位反应终点判断：翠绿与黄绿色差异的配位平衡解释",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "氧化终点判定的客观化",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      }
+    ]
+  },
+  {
+    "q": "绿色化学体现",
+    "expected_topic": null,
+    "winner": "绿色化学体现",
+    "top": [
+      {
+        "title": "绿色化学体现",
+        "score": 212.0925,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.5925,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 212.0925
+      },
+      {
+        "title": "三草酸合铁(III)酸钾的制备与表征体现哪些绿色化学原则？",
+        "score": 12.13625,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.13625
+      },
+      {
+        "title": "翠绿色来源",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "配位反应终点判断：翠绿与黄绿色差异的配位平衡解释",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "铜循环实验",
+        "score": 4.74375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.24375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.74375
+      }
+    ]
+  },
+  {
+    "q": "6%的盐酸",
+    "expected_topic": null,
+    "winner": "用盐酸替代草酸溶解Fe(OH)₃能否得到目标产物",
+    "top": [
+      {
+        "title": "用盐酸替代草酸溶解Fe(OH)₃能否得到目标产物",
+        "score": 9,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 9
+      },
+      {
+        "title": "第三步配位反应中为何用草酸溶解Fe(OH)₃而不用盐酸或硫酸",
+        "score": 9,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 9
+      },
+      {
+        "title": "为何用草酸而不用盐酸溶解",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "第三步配位反应中草酸溶解Fe(OH)₃的优势及盐酸替代的弊端",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "第一步酸化用酸的选择及误用盐酸硝酸的影响",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      }
+    ]
+  },
+  {
+    "q": "草酸加多少毫升",
+    "expected_topic": null,
+    "winner": "配位用草酸浓度",
+    "top": [
+      {
+        "title": "配位用草酸浓度",
+        "score": 10.28875,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.28875,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.28875
+      },
+      {
+        "title": "草酸溶液配制",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "产率低：草酸用量不足",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸发黄的解决",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸过量或不足的量化后果",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      }
+    ]
+  },
+  {
+    "q": "高锰酸钾滴定草酸根",
+    "expected_topic": null,
+    "winner": "KMnO4滴定方程式",
+    "top": [
+      {
+        "title": "KMnO4滴定方程式",
+        "score": 14.1225,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.6225,
+        "titleTopical": 3,
+        "distinctHits": 2,
+        "total": 14.1225
+      },
+      {
+        "title": "草酸根的氧化还原滴定",
+        "score": 10.46875,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.46875,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 10.46875
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 7.36375,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 7.36375
+      },
+      {
+        "title": "光谱化学序列中草酸根位于什么位置？为什么说它是弱场配体？",
+        "score": 7.13375,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.63375,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 7.13375
+      },
+      {
+        "title": "KMnO4滴定自催化与温度条件",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      }
+    ]
+  },
+  {
+    "q": "用高锰酸钾氧化行不行",
+    "expected_topic": null,
+    "winner": "为什么用H2O2而不用KMnO4",
+    "top": [
+      {
+        "title": "为什么用H2O2而不用KMnO4",
+        "score": 14.24625,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.74625,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 14.24625
+      },
+      {
+        "title": "产物草酸根含量与纯度的滴定",
+        "score": 10.4525,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 1.4525,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.4525
+      },
+      {
+        "title": "摩尔盐纯度检验方法",
+        "score": 6.83375,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.33375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 6.83375
+      },
+      {
+        "title": "KMnO4滴定不能用的酸",
+        "score": 4.93125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.43125,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.93125
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 4.86375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.86375
+      }
+    ]
+  },
+  {
+    "q": "三草酸合铝酸钾是什么",
+    "expected_topic": null,
+    "winner": "产物名称与化学式",
+    "top": [
+      {
+        "title": "产物名称与化学式",
+        "score": 13.88875,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.38875,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 13.88875
+      },
+      {
+        "title": "草酸溶液配制",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "产率低：草酸用量不足",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸发黄的解决",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸过量或不足的量化后果",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      }
+    ]
+  },
+  {
+    "q": "三草酸合铝酸钾按一样比例配吗",
+    "expected_topic": null,
+    "winner": "产物名称与化学式",
+    "top": [
+      {
+        "title": "产物名称与化学式",
+        "score": 13.88875,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.38875,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 13.88875
+      },
+      {
+        "title": "草酸溶液配制",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "产率低：草酸用量不足",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸发黄的解决",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "草酸过量或不足的量化后果",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      }
+    ]
+  },
+  {
+    "q": "硫酸加多少滴",
+    "expected_topic": null,
+    "winner": "第一步加硫酸的作用及不加酸的影响",
+    "top": [
+      {
+        "title": "第一步加硫酸的作用及不加酸的影响",
+        "score": 9.29625,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.29625,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 9.29625
+      },
+      {
+        "title": "第三步配位反应中为何用草酸溶解Fe(OH)₃而不用盐酸或硫酸",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      },
+      {
+        "title": "铁氰化钾检验废液和酸混合的致命后果",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4
+      }
+    ]
+  },
+  {
+    "q": "双氧水多少毫升",
+    "expected_topic": null,
+    "winner": "6% H2O2 8mL具体用量",
+    "top": [
+      {
+        "title": "6% H2O2 8mL具体用量",
+        "score": 10.498750000000001,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.49875,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.498750000000001
+      },
+      {
+        "title": "为何逐滴加入过氧化氢",
+        "score": 8.18,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.18,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 8.18
+      },
+      {
+        "title": "H2O2泄漏处理",
+        "score": 5.305,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.305,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 5.305
+      },
+      {
+        "title": "制备反应方程式",
+        "score": 4.855,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.355,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.855
+      },
+      {
+        "title": "第二步过氧化氢用量浓度",
+        "score": 4.83625,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.33625,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.83625
+      }
+    ]
+  },
+  {
+    "q": "草酸二水合物的摩尔质量",
+    "expected_topic": null,
+    "winner": "关键摩尔质量",
+    "top": [
+      {
+        "title": "关键摩尔质量",
+        "score": 12.2375,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.7375,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.2375
+      },
+      {
+        "title": "密度与摩尔质量",
+        "score": 10.14125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.64125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 10.14125
+      },
+      {
+        "title": "莫尔盐摩尔质量",
+        "score": 9.87125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.37125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 9.87125
+      },
+      {
+        "title": "草酸溶液配制",
+        "score": 8,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 8
+      },
+      {
+        "title": "K2[Cu(C2O4)2]两种水合物",
+        "score": 6.9725,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.4725,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 6.9725
+      }
+    ]
+  },
+  {
+    "q": "为什么加乙醇",
+    "expected_topic": null,
+    "winner": "乙醇在本实验中的完整作用",
+    "top": [
+      {
+        "title": "乙醇在本实验中的完整作用",
+        "score": 15.5475,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.5475,
+        "titleTopical": 3,
+        "distinctHits": 2,
+        "total": 15.5475
+      },
+      {
+        "title": "乙醇的作用",
+        "score": 15.5325,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.5325,
+        "titleTopical": 3,
+        "distinctHits": 2,
+        "total": 15.5325
+      },
+      {
+        "title": "溶剂替换法结晶原理",
+        "score": 10.77875,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.77875,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.77875
+      },
+      {
+        "title": "蒸发浓缩法vs溶剂替换法结晶对比",
+        "score": 6.2212499999999995,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.72125,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 6.2212499999999995
+      },
+      {
+        "title": "加乙醇量",
+        "score": 6,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6
+      }
+    ]
+  },
+  {
+    "q": "产物为什么变黄",
+    "expected_topic": null,
+    "winner": "摩尔盐为何遇空气变黄及防止氧化的方法",
+    "top": [
+      {
+        "title": "摩尔盐为何遇空气变黄及防止氧化的方法",
+        "score": 5.2425,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.7425,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 5.2425
+      },
+      {
+        "title": "光照实验现象",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      },
+      {
+        "title": "光照下颜色变化",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      },
+      {
+        "title": "摩尔盐发黄怎么办",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      },
+      {
+        "title": "晶体黄绿色的诊断",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      }
+    ]
+  },
+  {
+    "q": "废液怎么倒",
+    "expected_topic": null,
+    "winner": "废液分类处理",
+    "top": [
+      {
+        "title": "废液分类处理",
+        "score": 9,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 9
+      },
+      {
+        "title": "三草酸合铁(III)酸钾制备废液的分类处理与H₂O₂隐患",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      }
+    ]
+  },
+  {
+    "q": "产率怎么算",
+    "expected_topic": null,
+    "winner": "产率计算方法（含公式推导）",
+    "top": [
+      {
+        "title": "产率计算方法（含公式推导）",
+        "score": 6.914658342969665,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 2,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 6.914658342969665
+      },
+      {
+        "title": "K₂C₂O₄用量减半对氧化及配位步骤的影响",
+        "score": 2.4586126411866887,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 2.4586126411866887
+      }
+    ]
+  },
+  {
+    "q": "铁氰化钾和酸混合",
+    "expected_topic": null,
+    "winner": "铁氰化钾(赤血盐)与亚铁氰化钾(黄血盐)有何区别，如何用于Fe²⁺/Fe³⁺检验？",
+    "top": [
+      {
+        "title": "铁氰化钾(赤血盐)与亚铁氰化钾(黄血盐)有何区别，如何用于Fe²⁺/Fe³⁺检验？",
+        "score": 7.20125,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.70125,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 7.20125
+      },
+      {
+        "title": "铁氰化钾与普鲁士蓝在蓝晒之外还有哪些应用？",
+        "score": 7.1375,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.6375,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 7.1375
+      },
+      {
+        "title": "铁氰化钾安全",
+        "score": 6.86125,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.36125,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.86125
+      },
+      {
+        "title": "铁氰化钾的颜色",
+        "score": 6.84375,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.34375,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.84375
+      },
+      {
+        "title": "铁氰化钾在蓝晒中的作用",
+        "score": 6.8325,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3325,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8325
+      }
+    ]
+  },
+  {
+    "q": "反应溶液变黄怎么回事",
+    "expected_topic": null,
+    "winner": "硫酸亚铁铵制备中蒸发浓缩时溶液变黄是什么原因，如何处理？",
+    "top": [
+      {
+        "title": "硫酸亚铁铵制备中蒸发浓缩时溶液变黄是什么原因，如何处理？",
+        "score": 12.045,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.545,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.045
+      },
+      {
+        "title": "晶体黄绿色的诊断",
+        "score": 8.855,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.355,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 8.855
+      },
+      {
+        "title": "草酸溶液配制",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "硫酸亚铁铵溶液的酸碱性",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      },
+      {
+        "title": "光照实验现象",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4
+      }
+    ]
+  },
+  {
+    "q": "能换成高锰酸钾吗加多少",
+    "expected_topic": null,
+    "winner": "为什么用H2O2而不用KMnO4",
+    "top": [
+      {
+        "title": "为什么用H2O2而不用KMnO4",
+        "score": 9.74625,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.74625,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 9.74625
+      },
+      {
+        "title": "产物草酸根含量与纯度的滴定",
+        "score": 5.9525,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 1.4525,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 5.9525
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 4.86375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.86375
+      },
+      {
+        "title": "铁氰化钾检验废液和酸混合的致命后果",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4
+      }
+    ]
+  }
+]

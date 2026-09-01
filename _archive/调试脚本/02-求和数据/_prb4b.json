@@ -1,0 +1,684 @@
+[
+  {
+    "q": "产物三草酸合铁酸钾带几个结晶水",
+    "expected_topic": null,
+    "winner": "结晶水数目成因",
+    "top": [
+      {
+        "title": "结晶水数目成因",
+        "score": 13.88125,
+        "keyScore": 2,
+        "entScore": 4,
+        "longKey": 1,
+        "lenBonus": 0.38125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.88125
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 13.86375,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 13.86375
+      },
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 12.09625,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.09625
+      },
+      {
+        "title": "95%乙醇作为沉淀剂对结晶速率和结晶水含量的影响",
+        "score": 12.0875,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.5875,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.0875
+      },
+      {
+        "title": "辨析：结晶水是配位水",
+        "score": 11.89125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.39125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.89125
+      }
+    ]
+  },
+  {
+    "q": "产物有几个结晶水",
+    "expected_topic": null,
+    "winner": "理论产量6.26g推导及额外结晶水对产率的影响",
+    "top": [
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 12.09625,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.09625
+      },
+      {
+        "title": "95%乙醇作为沉淀剂对结晶速率和结晶水含量的影响",
+        "score": 12.0875,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.5875,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.0875
+      },
+      {
+        "title": "辨析：结晶水是配位水",
+        "score": 11.89125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.39125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.89125
+      },
+      {
+        "title": "结晶水数目成因",
+        "score": 11.88125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.38125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.88125
+      },
+      {
+        "title": "烘干温度误用80℃的影响及结晶水判断",
+        "score": 11.817499999999999,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3175,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.817499999999999
+      }
+    ]
+  },
+  {
+    "q": "三草酸合铁酸钾含几个水",
+    "expected_topic": null,
+    "winner": "三草酸合铁(III)酸钾的发现历史",
+    "top": [
+      {
+        "title": "三草酸合铁(III)酸钾的发现历史",
+        "score": 10.67,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 1.17,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 10.67
+      },
+      {
+        "title": "三草酸合铁酸钾制备第三步配位终点绿色判断与草酸过量影响",
+        "score": 9.90375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.40375,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 9.90375
+      },
+      {
+        "title": "三草酸合铁(Ⅲ)酸钾内外界离子的化学确证方法",
+        "score": 9.870000000000001,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.37,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 9.870000000000001
+      },
+      {
+        "title": "从三草酸合铁酸钾出发的蓝晒整合实验",
+        "score": 9.785,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.285,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 9.785
+      },
+      {
+        "title": "三草酸合铁酸钾的八面体结构",
+        "score": 9.77,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.27,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 9.77
+      }
+    ]
+  },
+  {
+    "q": "莫尔盐带几个结晶水",
+    "expected_topic": null,
+    "winner": "莫尔盐摩尔质量",
+    "top": [
+      {
+        "title": "莫尔盐摩尔质量",
+        "score": 14.87125,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 3,
+        "lenBonus": 0.37125,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 14.87125
+      },
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 12.09625,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.09625
+      },
+      {
+        "title": "95%乙醇作为沉淀剂对结晶速率和结晶水含量的影响",
+        "score": 12.0875,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.5875,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.0875
+      },
+      {
+        "title": "辨析：结晶水是配位水",
+        "score": 11.89125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.39125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.89125
+      },
+      {
+        "title": "结晶水数目成因",
+        "score": 11.88125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.38125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.88125
+      }
+    ]
+  },
+  {
+    "q": "硫酸亚铁铵几个结晶水",
+    "expected_topic": null,
+    "winner": "理论产量6.26g推导及额外结晶水对产率的影响",
+    "top": [
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 16.596249999999998,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 2,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 2,
+        "total": 16.596249999999998
+      },
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 15.42,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 2,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 15.42
+      },
+      {
+        "title": "选用硫酸亚铁铵（摩尔盐）作为Fe²⁺源的根本原因",
+        "score": 14.13625,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 1.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.13625
+      },
+      {
+        "title": "巧制硫酸亚铁铵晶体的结晶技术",
+        "score": 13.872499999999999,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3725,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.872499999999999
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 13.6975,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.6975
+      }
+    ]
+  },
+  {
+    "q": "能不能用碘量法代替高锰酸钾滴定草酸根",
+    "expected_topic": null,
+    "winner": "KMnO4滴定方程式",
+    "top": [
+      {
+        "title": "KMnO4滴定方程式",
+        "score": 14.1225,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.6225,
+        "titleTopical": 3,
+        "distinctHits": 2,
+        "total": 14.1225
+      },
+      {
+        "title": "草酸根的氧化还原滴定",
+        "score": 10.46875,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.46875,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 10.46875
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 7.36375,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 7.36375
+      },
+      {
+        "title": "光谱化学序列中草酸根位于什么位置？为什么说它是弱场配体？",
+        "score": 7.13375,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.63375,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 7.13375
+      },
+      {
+        "title": "KMnO4滴定自催化与温度条件",
+        "score": 7,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 7
+      }
+    ]
+  },
+  {
+    "q": "产物用高锰酸钾还是碘量法测定",
+    "expected_topic": null,
+    "winner": "产物草酸根含量与纯度的滴定",
+    "top": [
+      {
+        "title": "产物草酸根含量与纯度的滴定",
+        "score": 5.9525,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 1.4525,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 5.9525
+      },
+      {
+        "title": "K₃[Mn(C₂O₄)₃]·xH₂O的组成、制备与性质如何？",
+        "score": 5.2125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.7125,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 5.2125
+      },
+      {
+        "title": "KMnO₄氧化还原滴定测定产物化学式方案",
+        "score": 4.86375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.36375,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.86375
+      },
+      {
+        "title": "三草酸合铁(Ⅲ)酸钾光解程度的定量评估方法",
+        "score": 4.86125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.36125,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.86125
+      },
+      {
+        "title": "铁氰化钾检验废液和酸混合的致命后果",
+        "score": 4,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 0,
+        "lenBonus": 0,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4
+      }
+    ]
+  },
+  {
+    "q": "制草酸浓度是0.5还是0.05",
+    "expected_topic": null,
+    "winner": "配位用草酸浓度",
+    "top": [
+      {
+        "title": "配位用草酸浓度",
+        "score": 13.28875,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.28875,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.28875
+      },
+      {
+        "title": "配位步草酸浓度的选择",
+        "score": 11.19625,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.69625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.19625
+      },
+      {
+        "title": "第三步草酸滴加温度对配位反应的影响及最佳温度范围",
+        "score": 11.13625,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.63625,
+        "titleTopical": 3,
+        "distinctHits": 1,
+        "total": 11.13625
+      },
+      {
+        "title": "配位步骤草酸浓度过稀对结晶和产率的影响",
+        "score": 10.75625,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.25625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 10.75625
+      },
+      {
+        "title": "草酸浓度与加料方式对配位反应产率的影响",
+        "score": 10.2375,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.7375,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 10.2375
+      }
+    ]
+  },
+  {
+    "q": "过氧化氢是百分之几浓度",
+    "expected_topic": null,
+    "winner": "过氧化氢浓度规格",
+    "top": [
+      {
+        "title": "过氧化氢浓度规格",
+        "score": 13.91375,
+        "keyScore": 6,
+        "entScore": 0,
+        "longKey": 3,
+        "lenBonus": 0.41375,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 13.91375
+      },
+      {
+        "title": "6% H2O2 8mL具体用量",
+        "score": 10.498750000000001,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.49875,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.498750000000001
+      },
+      {
+        "title": "为何逐滴加入过氧化氢",
+        "score": 8.18,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.18,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 8.18
+      },
+      {
+        "title": "H2O2泄漏处理",
+        "score": 5.305,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.305,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 5.305
+      },
+      {
+        "title": "制备反应方程式",
+        "score": 4.855,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.355,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.855
+      }
+    ]
+  },
+  {
+    "q": "莫尔盐称多少克",
+    "expected_topic": null,
+    "winner": "本实验称取莫尔盐的质量",
+    "top": [
+      {
+        "title": "本实验称取莫尔盐的质量",
+        "score": 15.955,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 3,
+        "lenBonus": 0.455,
+        "titleTopical": 3,
+        "distinctHits": 2,
+        "total": 15.955
+      },
+      {
+        "title": "试剂用量一览",
+        "score": 10.2675,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 1.2675,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.2675
+      },
+      {
+        "title": "莫尔盐安全",
+        "score": 6.8774999999999995,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3775,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8774999999999995
+      },
+      {
+        "title": "莫尔盐作为分析化学测试材料",
+        "score": 6.8475,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3475,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8475
+      },
+      {
+        "title": "莫尔盐是什么",
+        "score": 6.79875,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.29875,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.79875
+      }
+    ]
+  },
+  {
+    "q": "双氧水加多少毫升",
+    "expected_topic": null,
+    "winner": "6% H2O2 8mL具体用量",
+    "top": [
+      {
+        "title": "6% H2O2 8mL具体用量",
+        "score": 10.498750000000001,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.49875,
+        "titleTopical": 0,
+        "distinctHits": 2,
+        "total": 10.498750000000001
+      },
+      {
+        "title": "为何逐滴加入过氧化氢",
+        "score": 8.18,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.18,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 8.18
+      },
+      {
+        "title": "H2O2泄漏处理",
+        "score": 5.305,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 2,
+        "lenBonus": 0.305,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 5.305
+      },
+      {
+        "title": "制备反应方程式",
+        "score": 4.855,
+        "keyScore": 4,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.355,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 4.855
+      },
+      {
+        "title": "结晶溶液体积",
+        "score": 4.626250000000001,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.12625,
+        "titleTopical": 0,
+        "distinctHits": 1,
+        "total": 4.626250000000001
+      }
+    ]
+  }
+]

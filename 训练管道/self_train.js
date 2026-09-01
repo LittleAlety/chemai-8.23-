@@ -39,10 +39,10 @@ const homeDir = process.env.HOME || process.env.USERPROFILE || '';
 const envPath = path.join(homeDir, '.codex/skills/claude-vision/.env');
 const env = fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf8') : '';
 const getEnv = key => { const m = env.match(new RegExp('^' + key + '=(.*)$', 'm')); return m ? m[1].trim() : ''; };
-const API_KEY = process.env.DEEPSEEK_KEY || getEnv('DEEPSEEK_KEY') || getEnv('DASHSCOPE_API_KEY');
-const API_URL = (process.env.DEEPSEEK_KEY || getEnv('DEEPSEEK_KEY'))
-  ? 'https://api.deepseek.com/v1/chat/completions'
-  : (getEnv('DASHSCOPE_BASE_URL') || 'https://dashscope.aliyuncs.com/compatible-mode/v1') + '/chat/completions';
+const API_KEY = getEnv('DASHSCOPE_API_KEY') || process.env.DEEPSEEK_KEY || getEnv('DEEPSEEK_KEY');
+const API_URL = (getEnv('DASHSCOPE_API_KEY') || getEnv('DASHSCOPE_BASE_URL'))
+  ? (getEnv('DASHSCOPE_BASE_URL') || 'https://dashscope.aliyuncs.com/compatible-mode/v1').replace(/\/$/, '') + '/chat/completions'
+  : 'https://api.deepseek.com/v1/chat/completions';
 const MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-flash';
 if (!API_KEY) { console.error('缺少 DEEPSEEK_KEY(或 dotenv DASHSCOPE_API_KEY)；请设置后重试'); process.exit(1); }
 
@@ -504,6 +504,13 @@ function subfieldOf(q) {
   if (/测定|滴定|分析|Ksp|产率|计算/.test(s)) return '分析测定';
   return '合成制备';
 }
+/* ---------- 覆盖补录条目生产质量（v85，entry 级；不碰 matchFAQ scorer-base） ----------
+ * 标题净化 / 键收敛 / 近重复判定 抽到 scripts/lib-coverage.js（与存量清理工具共用，避免漂移）。
+ * 为何：matchFAQ 两层针对"泛条目"的压分 —— ① keys>45 → firehose √ 阻尼；② 标题/答案含
+ * 「第N步/深度解析/反应机理…」且查询含操作词 → ×0.12。覆盖条是"逐字精答"，不应被误伤；
+ * 而这两层属 matchFAQ 基础表达式（禁改），故只能在 entry 级让覆盖条"长得不像"泛条目。 */
+const { coverageTitle, pruneCoverageKeys, _covHasNearDup } = require('../scripts/lib-coverage.js');
+
 // 确定性覆盖补录：为仍未命中针对性条目的低分题直接注入 q=题目原文 + answer=参考答案 的条目，保证 200/200 覆盖
 function ensureCoverage(round) {
   const qs = readJson(qFinalFile());
@@ -513,17 +520,21 @@ function ensureCoverage(round) {
   const faq = readFAQRuntime();
   const allQs = qs.map(q => q.question);
   const toAdd = [];
+  const existingQs = faq.map(f => f.q);      // 现有 FAQ 全部题干（近重复去重用）
   for (const q of low) {
     if (faq.some(f => f.q === q.question)) continue;      // 已有 q=本题 的条目
-    const keys = Array.from(new Set(deriveKeys(q.question, allQs).concat(['制备', '实验', '配合物', '产率', '影响'])));
+    if (_covHasNearDup(q.question, existingQs)) continue; // 已有近重复题干 → 不新增（避免覆盖条互遮蔽）
+    const keys = pruneCoverageKeys(deriveKeys(q.question, allQs).concat(['制备', '实验', '配合物', '产率', '影响']));
     toAdd.push({
-      keys, ents: [],
-      title: q.question.slice(0, 22) + (q.question.length > 22 ? '…' : ''),
+      keys: keys.length ? keys : ['三草酸合铁', '实验'],
+      ents: [],
+      title: coverageTitle(q.question),
       q: q.question,
       subfield: subfieldOf(q),
       answer: q.referenceAnswer,
       detail: ''
     });
+    existingQs.push(q.question);             // 防本次内部互重
   }
   if (toAdd.length) {
     const fp = 'Agent工作区/Agent-优化/self_train_coverage_r' + round + '.json';

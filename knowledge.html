@@ -441,7 +441,7 @@ button{font-family:inherit;cursor:pointer}
       <div class="seg" id="lvlSeg">
         <button data-max="1" type="button">到方向层</button>
         <button data-max="2" type="button">到知识点层</button>
-        <button data-max="3" type="button" class="on">全部层级</button>
+        <button data-max="4" type="button" class="on">全部层级</button>
       </div>
     </div>
     <div class="tb-sep"></div>
@@ -578,7 +578,7 @@ const CATS = {
 };
 const CAT_FALLBACK = ['#60a5fa','#f87171','#fbbf24','#a78bfa','#34d399','#fb923c'];
 const CAT_FALLBACK_GLOW = ['rgba(96,165,250,0.3)','rgba(248,113,113,0.3)','rgba(251,191,36,0.3)','rgba(167,139,250,0.3)','rgba(52,211,153,0.3)','rgba(251,146,60,0.3)'];
-const LEVEL_NAMES = {0:'中心节点', 1:'方向节点', 2:'知识点', 3:'细分点'};
+const LEVEL_NAMES = {0:'中心节点', 1:'方向节点', 2:'知识点', 3:'细分点', 4:'专题点'};
 let LAYER_R = {1:215, 2:470, 3:725};        // 分层环形布局半径（initGraph 中会按画布尺寸响应式缩放）
 const CAT_ORDER = ['coordination','redox','analytical','physical'];  // 扇区排布顺序
 // FAQ 子领域 → KG 节点 id 兜底映射（6 个子领域在 FAQ/语料中有而在 KG 的 subfield 字段中不存在，落到 KG 已有节点）
@@ -599,7 +599,7 @@ let centerId = null;
 let nodes = [], links = [], nodeById = new Map(), adj = new Map();
 let corpus = [], corpusFailed = false;
 const visibleCat = new Set();
-const visibleLvl = new Set([0,1,2,3]);
+const visibleLvl = new Set([0,1,2,3,4]);
 let searchQ = '';
 let hoverId = null, selectedId = null;
 let temp = 55;                                // 布局温度（初始动画用）
@@ -823,8 +823,10 @@ function updateStats(){
   const lvlC = {};
   const catC = {};
   nodes.forEach(n=>{ lvlC[n.level]=(lvlC[n.level]||0)+1; catC[n.category]=(catC[n.category]||0)+1; });
-  const lvlHtml = [0,1,2,3].map(lv=>
-    `<span class="st-item">${LEVEL_NAMES[lv].replace('节点','')} <b>${lvlC[lv]||0}</b></span>`).join('<span class="st-sep">·</span>');
+  // 遍历实际存在的所有层级（勿硬编码 [0,1,2,3]——kg.json 可能含 level 4，导致层级合计<节点总数、与类别/总数不一致）
+  const lvlKeys = Object.keys(lvlC).map(Number).sort((a,b)=>a-b);
+  const lvlHtml = lvlKeys.map(lv=>
+    `<span class="st-item">${(LEVEL_NAMES[lv]||('层级'+lv)).replace('节点','')} <b>${lvlC[lv]||0}</b></span>`).join('<span class="st-sep">·</span>');
   const catHtml = Object.keys(catC).map(c=>{
     const m = catOf(c);
     return `<span class="st-item"><i style="background:${m.color}"></i>${esc(m.name)} <b>${catC[c]}</b></span>`;
@@ -855,7 +857,7 @@ function buildToolbar(){
     lg.addEventListener('click', ()=>setCat(c, !visibleCat.has(c)));
     legBox.appendChild(lg);
   });
-  [0,1,2,3].forEach(lv=>{
+  [0,1,2,3,4].forEach(lv=>{
     const lab = document.createElement('label');
     lab.className = 'fchip on';
     lab.dataset.lvl = lv;
@@ -901,8 +903,8 @@ function setMaxLevel(max){
 /* 手动勾选层级 chip 后同步分段控件高亮 */
 function syncSeg(){
   let max = 0;
-  for(let i=0;i<=3;i++) if(visibleLvl.has(i)) max = i;
-  const contiguous = [0,1,2,3].every(i=> visibleLvl.has(i) === (i<=max));
+  for(let i=0;i<=4;i++) if(visibleLvl.has(i)) max = i;
+  const contiguous = [0,1,2,3,4].every(i=> visibleLvl.has(i) === (i<=max));
   document.querySelectorAll('#lvlSeg button').forEach(b=>
     b.classList.toggle('on', contiguous && +b.dataset.max === max));
 }

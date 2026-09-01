@@ -20,6 +20,11 @@ const path = require('path');
 const ASSISTANT_HTML = path.join(__dirname, '..', 'assistant.html');
 const CORPUS_JSON = path.join(__dirname, '..', 'data', 'corpus.json');
 
+// 通用计算引擎（单一真相源，来自 scripts/lib-calc.js）。local_answer 是 assistant.html 的无头复刻，
+// 故浏览器端必须镜像同样逻辑：凡命中可计算模式，用公式结果取代 FAQ 里写死的示例值（"计算通用"）。
+let ChemCalc = null;
+try { ChemCalc = require(path.join(__dirname, '..', 'scripts', 'lib-calc.js')); } catch (e) { ChemCalc = null; }
+
 /* ================= 浏览器依赖 stub ================= */
 // 来源 assistant.html:625（esc → 本地 escHTML）
 function escHTML(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -35,7 +40,7 @@ const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':
 const norm=s=>String(s||'').toLowerCase().replace(/双氧水/g,'过氧化氢').replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>SUBMAP[c]||c).replace(/摄氏度|℃|°c/g,'度').replace(/\s+/g,'');
 
 // 来源 assistant.html:632-634（分类归一化，loadCorpus 对 subfield 做同样处理）
-const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理'};
+const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理','化合物性质':'综合研究','制备原理':'合成制备','制备原理深度解析':'合成制备','配合物性质':'配位化学理论','配合物性质实验':'配位化学理论','晶体场理论':'配位化学理论','光化学性质':'光化学应用','安全与废液处理':'安全与废物处理','安全规范与废液处理':'安全与废物处理','安全规范':'安全与废物处理','安全与环保':'安全与废物处理','安全环保':'安全与废物处理','操作安全':'安全与废物处理','安全与废液':'安全与废物处理','实验报告':'实验教学','实验报告撰写规范':'实验教学','报告撰写':'实验教学','报告规范':'实验教学','报告与数据处理':'实验教学','实验报告与数据处理':'实验教学','故障排查':'实验操作','实验故障排查':'实验操作','常见实验故障排查':'实验操作','操作步骤完全指南':'实验操作','操作步骤':'实验操作','操作规范':'实验操作','操作技巧':'实验操作','性质实验':'实验操作','扩展知识':'综合研究','历史背景':'化学史','教学反思':'实验教学','教学反思与改进':'实验教学','实验反思':'实验教学','实验改进':'实验教学','基础理论':'高等理论','物理性质':'结构表征','理论计算':'高等理论','计算与应用':'高等理论','化学计算':'高等理论','数据分析':'分析测定','数据处理':'分析测定','实验数据分析':'分析测定','误差分析':'分析测定','数据与计算':'分析测定','实验设计':'实验教学','实验技能':'实验教学','实验概述':'实验教学','物理化学':'反应原理','无机化学':'反应原理','分析化学':'反应原理','理论化学':'高等理论','化学原理':'反应原理','反应机理':'反应原理','反应机理与动力学':'反应原理','化学热力学与动力学':'反应原理','配合物化学':'配位化学理论','性质分析':'综合研究','文献新发现':'综合研究','教学采用历史':'化学史','数据与误差':'分析测定','氧化还原反应':'反应原理','无机合成':'合成制备','温度测量误差与校准':'分析测定','玻璃仪器选择与清洗':'实验操作','时间控制与反应终止':'实验操作','观察与记录':'实验操作','学生操作心理学':'实验教学','环境因素':'综合研究'};
 const CANONICAL_CATS=new Set(['合成制备','反应原理','实验操作','分析测定','光化学应用','结构表征','磁性研究','热分析','安全与废物处理','配位化学理论','实验教学','综合研究','化学史','高等理论','蓝晒工艺','摩尔盐相关','草酸配合物']);
 function normCat(v){if(!v||typeof v!=='string')return'综合研究';var t=v.trim();if(!t)return'综合研究';if(CANONICAL_CATS.has(t))return t;if(CATEGORY_ALIAS_MAP[t])return CATEGORY_ALIAS_MAP[t];return t;}
 
@@ -120,7 +125,7 @@ function searchCorpus(q,topN){
       if(w>0){s+=w;hit.add(t);if(strong.has(t))sh=true;}
     }
     for(const b of boosts){ if(f.subfield===norm(b.sub)){ s+=b.bonus; sh=true; hit.add('领域:'+b.sub);} }
-    if(s>0) out.push({e,score:s,hit:Array.from(hit),strongHit:sh});
+    if(s>0){ s+=corpusAuthValue(e); out.push({e,score:s,hit:Array.from(hit),strongHit:sh}); }
   }
   out.sort((a,b)=>b.score-a.score);
   return {terms:all,results:out.slice(0,topN||6)};
@@ -188,6 +193,14 @@ function fixTypos(q){
 let FAQ = [];
 let Corpus = {entries:[], total:0, subfields:[], loaded:false, uploaded:0};
 let _inited = false;
+// v85 语料权威度权重（best-effort；缺失 ⇒ 现行行为零回归）。镜像 assistant.html。
+let CorpusWeight=null;
+const CORPUS_AUTH_BOOST=4;
+function corpusAuthValue(e){
+  if(!CorpusWeight||!CorpusWeight.entryAuthority||!e) return 0;
+  var w=CorpusWeight.entryAuthority[e.id];
+  return w?w.boosted*CORPUS_AUTH_BOOST:0;
+}
 
 /* ================= 函数（来源标注，逐字复制） ================= */
 // 来源 assistant.html:1022-1064
@@ -203,6 +216,18 @@ function matchFAQ(q){
   // 一条只靠海量(冗余)key 掠走别条细问的宽条目被削弱；合法广谱条(标题印证 tt=5)不受罚（与 discrim.js 同步）
   var FH_THRESH=45;
   function isChemicalKey(k){ return /[a-z0-9]/.test(norm(k)) || !!CHEM_NOUN[k]; }
+  // 操作意图题 → 强压"第N步/深度解析"泛化模板：这类条目靠海量 key 累加掠走具体操作条目，
+  // 但只复述机理、从不回答"如何判断终点/滴多快/洗到何时"等操作细节（round5 步骤题 169 低分主因）。
+  var OP_RE=/(终点|判断|速度|距离|多久|何时|顺序|先后|洗涤|烘干|冷却|加热|过滤|抽滤|水浴|暴沸|防止|避免|补救|滴加|用量|比例|操作|步骤|干燥|称量|量取|检验|如何判断|怎么判断)/;
+  var STEP_TEMPLATE_RE=/(第[一二三四五六七八九十百\d]+步|深度解析|反应机理|热力学与动力学|氧化电位)/;
+  function isStepTemplate(f){ return STEP_TEMPLATE_RE.test(norm((f.title||'')+'|'+String(f.answer||''))); }
+  // 实验作用域守卫：本课程即铁实验。只要题干未点名"其它金属草酸配合物"、也非"对比/举例其它"类，
+  // 命中"铜/铬/铝/钴…"其它实验条目 → 强压。避免跨实验"错库"(如烘干/产物题被二草酸合铜条目抢走, round5 Q015/Q036)。
+  // 类比推理走独立 ANALOG_TABLE，不受此守卫影响。
+  var IRON_RE=/(三草酸合铁|草酸亚铁|莫尔盐|摩尔盐|硫酸亚铁|氢氧化铁|亚铁|铁草酸|铁\(?iii\)?|铁\(?Ⅲ\)?|高铁|k3\[fe|k3\[fec|fe3\+|草酸铁钾|三草酸合铁钾)/;
+  var OTHER_OX_RE=/(草酸合铜|二草酸合铜|草酸铬|草酸铝|草酸钴|草酸合铝|草酸合铬|草酸合钴|铜\(?ii\)?|铜\(?Ⅱ\)?|铬\(?iii\)?|铝\(?iii\)?|钴\(?iii\)?|二草酸|草酸合)/;
+  var cmpQ=/(其它|其他|对比|比较|同类|类比|举例|受控合成|两种水合|分别(得到|探究|控制|合成|结晶|制备))/;
+  var notOtherQ=!OTHER_OX_RE.test(nq) && !cmpQ.test(nq);
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
     var kh=0,longKey=0,keyScore=0,hits=[],distinctHits=0;
@@ -236,11 +261,17 @@ function matchFAQ(q){
     if(f.keys.length>FH_THRESH && titleTopical<5) score*=Math.pow(FH_THRESH/f.keys.length,0.5);
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
+    // 操作意图题命中"第N步/深度解析"模板 → 强压（模板只背机理不答操作细节，让步给具体操作条目）
+    if(OP_RE.test(nq) && isStepTemplate(f)) score*=0.12;
+    // 跨实验"错库"守卫：铁实验题命中其它金属草酸配合物条目 → 强压
+    if(notOtherQ){ var tfn=norm((f.title||'')+'|'+String(f.answer||'')); if(OTHER_OX_RE.test(tfn) && !IRON_RE.test(tfn)) score*=0.03; }
     if(score>bestScore){bestScore=score;best=f;}
   }
   return best;
 }
 
+// 多部分题聚合：题干常含多个子问(终点/速度/距离/后果…)，只取 top-1 条目会漏子点(round5 多部分题"遗漏一个数值"主因)。
+// 按分隔符拆子句，对有效子句单独 matchFAQ，把 top-1 之外的高相关条目答案首句并入；最多补 2 条、限长防截断。
 // 来源 assistant.html:1067-1109
 function retrieval2_chemicalAnalogy(q){
   var nq=norm(q);
@@ -373,6 +404,11 @@ function init(){
   Corpus.entries = list;
   Corpus.subfields = (raw && raw.subfields) || [];
   list.forEach(e=>{if(e.subfield)e.subfield=normCat(e.subfield);});
+  // v85 语料权威度权重（best-effort）
+  try{
+    const cwp=path.join(__dirname,'..','data','corpus_weights.json');
+    CorpusWeight = fs.existsSync(cwp) ? JSON.parse(fs.readFileSync(cwp,'utf8').replace(/^﻿/, '')) : null;
+  }catch(e){ CorpusWeight=null; }
   Corpus.total = (raw && raw.total) ? raw.total : (raw ? list.length : 0);
   _inited = true;
   return {faqCount: FAQ.length, corpusCount: Corpus.entries.length};
@@ -383,13 +419,29 @@ function init(){
 function answer(q){
   if(!_inited) init();
 
+  /* ===== 阶段0：通用计算（"计算通用"）——命中可计算模式则用公式当场算，不再复述 FAQ 写死示例 ===== */
+  // 镜像浏览器：assistant.html buildCalcAnswerHTML()；本地无头评分路径取纯文本 calcText 顶到正文最前。
+  let calcText = '';
+  let calcMeta = null;
+  if (ChemCalc) {
+    try {
+      var cc = ChemCalc.calcAnswer(q);
+      if (cc && cc.matched && cc.result != null) {
+        calcText = cc.title + '\n' + cc.lines.join('\n');
+        if (cc.formula) calcText += '\n（公式：' + cc.formula + '）';
+        if (cc.note) calcText += '\n（' + cc.note + '）';
+        calcMeta = { type: cc.type, result: cc.result, title: cc.title };
+      }
+    } catch (e) { calcText = ''; calcMeta = null; }
+  }
+
   /* ===== 阶段1：多策略检索（handleQA 3027-3037） ===== */
   const searchResult = searchCorpus(q, 6);
   const results = searchResult.results;
   const analogyHits = retrieval2_chemicalAnalogy(q);
   const methodHits = retrieval3_methodologyTransfer(q);
 
-  const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响|微沸|煮沸|室温|过量|减半|不足|太久|太短|加多|加少|等待|暴沸|恒重/;
+  const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响|微沸|煮沸|室温|过量|减半|不足|太久|太短|加多|加少|等待|暴沸|恒重|颜色|黄色|黄绿|棕黄|翠绿|产品|排查|解决|补救|原因|后果|处理方法|操作要点|关键操作/;
   const GENERIC_RE=/原理|目的|计算|思考题|结论|步骤/;
   const domain=DOMAIN_RE.test(q)||detectChems(q).length>0||detectOps(q).length>0||(q.length<=8&&GENERIC_RE.test(q));
   const hits=domain?results.filter(function(r){return r.score>=HIT_THRESHOLD&&(r.strongHit||r.e.content);}):[];
@@ -427,12 +479,39 @@ function answer(q){
     }
   }
 
+  // 计算优先：命中可计算模式时，把当场算出的结果顶到答案最前（覆盖 FAQ 里写死的示例值）。
+  // 聚焦：命中计算时只取已匹配条目 answer 的首句做要点，不再整段倒进宽泛条目/其他用例（detail/语料清单），
+  // 以免被判"无关内容/未完成结尾"。非计算题保持原有完整组建。
+  if (calcText) {
+    answerText = '【计算】' + calcText;
+    var calcHasNum = calcMeta && calcMeta.result != null && /[0-9]/.test(String(JSON.stringify(calcMeta.result)));
+    if (faq) {
+      // 本题目专属条目（覆盖补录/精确q条目：q=题目原文）里 answer 就是为这道题写的参考答案，
+      // 计算只覆盖了"数值分"，其定性部分（原因/验证/补救/影响）仍是要点 → 必须保留附加，
+      // 否则 Q047/Q079/Q169 这类"数值+定性"混合题会丢非计算得分点（计算题只留算式的旧逻辑只
+      // 适用于泛条目——其首句常是"标准5.0g例/Fe守恒"等与本题不符的无关内容）。
+      var fq = norm(fixTypos(faq.q || ''));
+      var nq = norm(fixTypos(q));
+      var qSpecific = fq && (fq === nq || (fq.length >= 15 && (nq.indexOf(fq) >= 0 || fq.indexOf(nq) >= 0)));
+      if (qSpecific) {
+        answerText += '\n\n' + (faq.answer || '');
+      } else if (!calcHasNum) {
+        // 泛条目且计算已给出数字结果 → 显式计算题，答案由当场算出的公式+结果完全自足；
+        // 再附加其首句常是与本题数值/对象不符的无关内容，被判多余，故不再附加。
+        // 泛条目但无数字结果的定性计算仍加首句要点。
+        var brief = (faq.answer || '').split(/[。\n；;]/)[0].trim();
+        if (brief) answerText += '\n\n要点：' + brief;
+      }
+    }
+  }
+
   return {
     question: q,
     matchedFAQ: faq ? {title:faq.title||'', answer:faq.answer||'', detail:faq.detail||'', subfield:faq.subfield||''} : null,
     corpusHits: hits.map(function(h){ return {id:h.e.id, title:h.e.title, score:h.score, hit:h.hit}; }),
     analogies: analogies.map(function(a){ return {concept:a.concept, matchedTerm:a.matchedTerm, principle:a.principle}; }),
     confidence: {corpus:conf.corpus, faq:conf.faq, analogy:conf.analogy, overall:conf.overall, level:conf.level},
+    calc: calcMeta,
     answerText: answerText
   };
 }

@@ -1,0 +1,1339 @@
+{
+  "round": "core-19",
+  "source": "agent-B-calc",
+  "questions": [
+    {
+      "id": "c19-b001",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "制备 K₃[Fe(C₂O₄)₃]·3H₂O 实验中称取 5.00 g 莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O，设铁全部定量转化。求理论产量（g，保留两位小数）。",
+      "answer": "6.26 g",
+      "key_points": [
+        "Fe守恒 1 mol 莫尔盐→1 mol 产物",
+        "n=5.00/392.14",
+        "m=n×491.25"
+      ],
+      "explanation": "n(莫尔盐)=5.00/392.14=0.01275 mol，理论产量=n×491.25=6.26 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "6.26 g(6.26 g)"
+    },
+    {
+      "id": "c19-b002",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "某组称取 5.00 g 莫尔盐，实际得到 4.20 g K₃[Fe(C₂O₄)₃]·3H₂O 晶体，求产率（%，保留一位小数）。",
+      "answer": "67.1 %",
+      "key_points": [
+        "理论产量 6.26 g",
+        "产率=实际/理论×100%",
+        "4.20/6.26"
+      ],
+      "explanation": "先求理论产量=6.26 g，产率=4.20/6.26×100%=67.1%。",
+      "faq_verify": "产率计算",
+      "referenceAnswer": "67.1 %(67.1%)"
+    },
+    {
+      "id": "c19-b003",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 3.75 g 莫尔盐，求理论产物 K₃[Fe(C₂O₄)₃]·3H₂O 质量（g，保留两位小数）。",
+      "answer": "4.70 g",
+      "key_points": [
+        "摩尔比1:1",
+        "3.75/392.14×491.25",
+        "Fe守恒"
+      ],
+      "explanation": "理论产量=3.75/392.14×491.25=4.70 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "4.70 g(4.70 g)"
+    },
+    {
+      "id": "c19-b004",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "标准投料 5.00 g 莫尔盐，实际得 3.50 g 产物，求产率（%）。",
+      "answer": "55.9 %",
+      "key_points": [
+        "理论产量 6.26 g",
+        "3.50/6.26×100%"
+      ],
+      "explanation": "产率=3.50/6.26×100%=55.9%。",
+      "faq_verify": "产率计算",
+      "referenceAnswer": "55.9 %(55.9%)"
+    },
+    {
+      "id": "c19-b005",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 7.60 g 莫尔盐，理论可得 K₃[Fe(C₂O₄)₃]·3H₂O多少克？",
+      "answer": "9.52 g",
+      "key_points": [
+        "7.60/392.14×491.25",
+        "1:1反应"
+      ],
+      "explanation": "理论产量=7.60/392.14×491.25=9.52 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "9.52 g(9.52 g)"
+    },
+    {
+      "id": "c19-b006",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "标准投料 5.00 g 莫尔盐，实际得 5.10 g 产物，求产率（%）。",
+      "answer": "81.4 %",
+      "key_points": [
+        "5.10/6.26×100%"
+      ],
+      "explanation": "产率=5.10/6.26×100%=81.4%。",
+      "faq_verify": "产率计算",
+      "referenceAnswer": "81.4 %(81.5%)"
+    },
+    {
+      "id": "c19-b007",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 2.50 g 莫尔盐，理论可得产物多少克？",
+      "answer": "3.13 g",
+      "key_points": [
+        "2.50/392.14×491.25"
+      ],
+      "explanation": "理论产量=2.50/392.14×491.25=3.13 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "3.13 g(3.13 g)"
+    },
+    {
+      "id": "c19-b008",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "标准投料 5.00 g 莫尔盐，实际得 4.85 g 产物，求产率（%）。",
+      "answer": "77.4 %",
+      "key_points": [
+        "4.85/6.26×100%"
+      ],
+      "explanation": "产率=4.85/6.26×100%=77.4%。",
+      "faq_verify": "产率计算",
+      "referenceAnswer": "77.4 %(77.5%)"
+    },
+    {
+      "id": "c19-b009",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 6.30 g 莫尔盐，求理论产物质量（g）。",
+      "answer": "7.89 g",
+      "key_points": [
+        "6.30/392.14×491.25"
+      ],
+      "explanation": "理论产量=6.30/392.14×491.25=7.89 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "7.89 g(7.89 g)"
+    },
+    {
+      "id": "c19-b010",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 4.90 g 莫尔盐（理论产量 6.14 g），实际得到 4.59 g 产物，求产率（%）。",
+      "answer": "74.8 %",
+      "key_points": [
+        "理论产量 6.14 g",
+        "4.59/6.14×100%"
+      ],
+      "explanation": "产率=4.59/6.14×100%=74.8%。",
+      "faq_verify": "产率计算",
+      "referenceAnswer": "74.8 %"
+    },
+    {
+      "id": "c19-b011",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 8.20 g 莫尔盐，求理论产物质量（g）。",
+      "answer": "10.27 g",
+      "key_points": [
+        "8.20/392.14×491.25"
+      ],
+      "explanation": "理论产量=8.20/392.14×491.25=10.27 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "10.27 g(10.27 g)"
+    },
+    {
+      "id": "c19-b012",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "称取 2.86 g 莫尔盐，求理论产物质量（g）。",
+      "answer": "3.58 g",
+      "key_points": [
+        "2.86/392.14×491.25"
+      ],
+      "explanation": "理论产量=2.86/392.14×491.25=3.58 g。",
+      "faq_verify": "理论产量计算",
+      "referenceAnswer": "3.58 g(3.58 g)"
+    },
+    {
+      "id": "c19-b013",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 0.1500 g 产物，用 0.0200 mol/L KMnO₄ 标准溶液滴定其中的 C₂O₄²⁻，消耗 18.25 mL。求产物中草酸根的质量分数（%，保留一位小数）。",
+      "answer": "53.5 %",
+      "key_points": [
+        "n(MnO₄⁻)=c×V",
+        "n(C₂O₄²⁻)=5/2×n(MnO₄⁻)",
+        "w=n×88.02/m(样品)"
+      ],
+      "explanation": "n(MnO₄⁻)=0.0200×18.25/1000=3.65e-4 mol，n(C₂O₄²⁻)=9.12e-4 mol，m(C₂O₄²⁻)=0.0803 g，w=0.0803/0.1500×100%=53.5%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "53.5 %(53.6%)"
+    },
+    {
+      "id": "c19-b014",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "求 0.0200 mol/L KMnO₄ 溶液 18.25 mL 中 KMnO₄ 的物质的量（mol）。",
+      "answer": "3.65e-4 mol",
+      "key_points": [
+        "n=c×V",
+        "V换算为 L"
+      ],
+      "explanation": "n(MnO₄⁻)=0.0200×18.25/1000=3.65e-4 mol。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "3.65×10⁻⁴ mol"
+    },
+    {
+      "id": "c19-b015",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 0.2000 g 样品，用 0.0200 mol/L KMnO₄ 滴定，消耗 20.00 mL。求样品中草酸根质量分数（%）。",
+      "answer": "44.0 %",
+      "key_points": [
+        "n(C₂O₄²⁻)=5/2×n(MnO₄⁻)",
+        "n(MnO₄⁻)=4.000×10⁻⁴"
+      ],
+      "explanation": "n(MnO₄⁻)=4.000×10⁻⁴ mol，n(C₂O₄²⁻)=1.000×10⁻³ mol，m=0.0880 g，w=0.0880/0.2000×100%=44.0%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "44.0 %(44.0%)"
+    },
+    {
+      "id": "c19-b016",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 0.1800 g 样品，用 0.0240 mol/L KMnO₄ 滴定，消耗 22.50 mL。求草酸根质量分数（%）。",
+      "answer": "66.0 %",
+      "key_points": [
+        "n(MnO₄⁻)=5.400×10⁻⁴",
+        "n(C₂O₄²⁻)=1.350×10⁻³"
+      ],
+      "explanation": "w=0.1188/0.1800×100%=66.0%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "66.0 %(66.0%)"
+    },
+    {
+      "id": "c19-b017",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 0.1600 g 样品，用 0.0180 mol/L KMnO₄ 滴定，消耗 25.00 mL。求草酸根质量分数（%）。",
+      "answer": "61.9 %",
+      "key_points": [
+        "n(MnO₄⁻)=4.500×10⁻⁴",
+        "m(C₂O₄²⁻)=0.0990 g"
+      ],
+      "explanation": "w=0.0990/0.1600×100%=61.9%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "61.9 %(61.9%)"
+    },
+    {
+      "id": "c19-b018",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "称取 0.2100 g 样品，用 0.0212 mol/L KMnO₄ 滴定，消耗 19.60 mL。求样品中草酸根质量分数（%）及 C₂O₄²⁻ 的质量（g）。",
+      "answer": "43.5 %；0.0914 g",
+      "key_points": [
+        "n(MnO₄⁻)=0.0212×19.60/1000",
+        "两问即 w 与 m(C₂O₄²⁻)"
+      ],
+      "explanation": "n(MnO₄⁻)=4.155e-4 mol，n(C₂O₄²⁻)=1.039e-3 mol，m=0.0914 g，w=0.0914/0.2100×100%=43.5%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "43.5 %（0.0914 g）"
+    },
+    {
+      "id": "c19-b019",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 0.2500 g 样品，用 0.0250 mol/L KMnO₄ 滴定，消耗 16.40 mL。求草酸根质量分数（%）。",
+      "answer": "36.1 %",
+      "key_points": [
+        "n(MnO₄⁻)=4.100×10⁻⁴",
+        "m(C₂O₄²⁻)=0.0902 g"
+      ],
+      "explanation": "m(C₂O₄²⁻)=0.0902 g，w=0.0902/0.2500×100%=36.1%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "36.1 %(36.1%)"
+    },
+    {
+      "id": "c19-b020",
+      "category": "分析测定",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "酸性条件下 KMnO₄ 滴定 C₂O₄²⁻，n(MnO₄⁻)∶n(C₂O₄²⁻)=______，即 n(C₂O₄²⁻)=______×n(MnO₄⁻)。",
+      "answer": "2∶5；5/2",
+      "key_points": [
+        "2MnO₄⁻+5C₂O₄²⁻+16H⁺→2Mn²⁺+10CO₂+8H₂O",
+        "计量比 2:5"
+      ],
+      "explanation": "由配平方程式，n(MnO₄⁻):n(C₂O₄²⁻)=2:5，故 n(C₂O₄²⁻)=(5/2)×n(MnO₄⁻)。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "2∶5；5/2"
+    },
+    {
+      "id": "c19-b021",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "由分子式 K₃[Fe(C₂O₄)₃]·3H₂O 计算 C₂O₄²⁻ 的理论质量分数（%，保留一位小数）。",
+      "answer": "53.8 %",
+      "key_points": [
+        "3 个 C₂O₄²⁻",
+        "3×88.02/491.25"
+      ],
+      "explanation": "w=3×88.02/491.25×100%=53.8%。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "53.8 %(53.8%)"
+    },
+    {
+      "id": "c19-b022",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "某产物经滴定得 n(C₂O₄²⁻)=9.125×10⁻⁴ mol。用 0.0200 mol/L KMnO₄ 滴定，需消耗 KMnO₄ 体积多少 mL？",
+      "answer": "18.25 mL",
+      "key_points": [
+        "n(MnO₄⁻)=(2/5)×n(C₂O₄²⁻)",
+        "V=n/c"
+      ],
+      "explanation": "n(MnO₄⁻)=(2/5)×9.125×10⁻⁴=3.650×10⁻⁴ mol，V=3.650×10⁻⁴/0.0200=18.25 mL。",
+      "faq_verify": "KMnO4滴定含量",
+      "referenceAnswer": "18.25 mL"
+    },
+    {
+      "id": "c19-b023",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "求 K₃[Fe(C₂O₄)₃]·3H₂O 中结晶水的质量分数（%，保留一位小数）。",
+      "answer": "11.0 %",
+      "key_points": [
+        "3×18.02/491.25×100%"
+      ],
+      "explanation": "w=3×18.02/491.25×100%=11.0%。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "11.0 %(11.0%)"
+    },
+    {
+      "id": "c19-b024",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "将 3.75 g K₃[Fe(C₂O₄)₃]·3H₂O 晶体加热至完全失去结晶水，求失水质量与无水产物质量（g）。",
+      "answer": "0.413 g；3.337 g",
+      "key_points": [
+        "失水= m×11.005%",
+        "无水= m×(1-11.005%)"
+      ],
+      "explanation": "失水=3.75×11.00%=0.413 g，无水产物=3.75-0.413=3.337 g。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "0.413 g；3.337 g"
+    },
+    {
+      "id": "c19-b025",
+      "category": "分析测定",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "K₃[Fe(C₂O₄)₃]·3H₂O 每摩尔含______个结晶水分子，理论含水量约______%。",
+      "answer": "3；11.0",
+      "key_points": [
+        "水合系数 3",
+        "11.0%"
+      ],
+      "explanation": "分子式标 ·3H₂O 表示含 3 个结晶水，理论含水量=3×18.02/491.25×100%=11.0%。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "3；11.0%"
+    },
+    {
+      "id": "c19-b026",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 5.00 g K₃[Fe(C₂O₄)₃]·3H₂O，求其中结晶水的质量（g）。",
+      "answer": "0.550 g",
+      "key_points": [
+        "m(水)=m×11.005%"
+      ],
+      "explanation": "m(结晶水)=5.00×11.00%=0.550 g。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "0.550 g"
+    },
+    {
+      "id": "c19-b027",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取 6.26 g K₃[Fe(C₂O₄)₃]·3H₂O，求无水 K₃[Fe(C₂O₄)₃] 的质量（g）。",
+      "answer": "5.571 g",
+      "key_points": [
+        "无水= m×(1-11.005%)"
+      ],
+      "explanation": "无水产物=6.26×(1-11.00%)=5.571 g。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "5.571 g"
+    },
+    {
+      "id": "c19-b028",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "1.234 g K₃[Fe(C₂O₄)₃]·3H₂O 完全脱水，求失去的水的质量（g）。",
+      "answer": "0.136 g",
+      "key_points": [
+        "m(水)=1.234×11.005%"
+      ],
+      "explanation": "失水=1.234×11.00%=0.136 g。",
+      "faq_verify": "结晶水含量",
+      "referenceAnswer": "0.136 g"
+    },
+    {
+      "id": "c19-b029",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "求 K₃[Fe(C₂O₄)₃]·3H₂O 的摩尔质量（g/mol）。",
+      "answer": "491.25 g/mol",
+      "key_points": [
+        "由原子量加和"
+      ],
+      "explanation": "由原子量加和求得 M=491.25 g/mol。",
+      "faq_verify": "摩尔质量",
+      "referenceAnswer": "491.25 g/mol"
+    },
+    {
+      "id": "c19-b030",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "求莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 的摩尔质量（g/mol）。",
+      "answer": "392.14 g/mol",
+      "key_points": [
+        "由原子量加和"
+      ],
+      "explanation": "M=392.14 g/mol。",
+      "faq_verify": "摩尔质量",
+      "referenceAnswer": "392.14 g/mol"
+    },
+    {
+      "id": "c19-b031",
+      "category": "分析测定",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "无水 K₃[Fe(C₂O₄)₃] 的摩尔质量为______ g/mol，比三水合物少______ g/mol。",
+      "answer": "437.20；54.06",
+      "key_points": [
+        "437.20",
+        "3×18.02=54.06"
+      ],
+      "explanation": "无水盐 M=437.20 g/mol，三水合物 491.25 g/mol，差值为 3×18.02=54.06 g/mol。",
+      "faq_verify": "摩尔质量",
+      "referenceAnswer": "437.20；54.06"
+    },
+    {
+      "id": "c19-b032",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "由分子式验证 K₃[Fe(C₂O₄)₃]·3H₂O 中 Fe 的质量分数（%）。",
+      "answer": "11.4 %",
+      "key_points": [
+        "Fe 折合 55.845",
+        "55.845/491.25×100%"
+      ],
+      "explanation": "w(Fe)=55.845/491.25×100%=11.4%。",
+      "faq_verify": "摩尔质量",
+      "referenceAnswer": "11.4 %(11.4%)"
+    },
+    {
+      "id": "c19-b033",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "要配制 0.0500 mol/L K₃[Fe(C₂O₄)₃]·3H₂O 溶液 250 mL，需称取产物多少克？",
+      "answer": "6.14 g",
+      "key_points": [
+        "m=c·V·M",
+        "V=0.250 L"
+      ],
+      "explanation": "m=0.0500×0.250×491.25=6.14 g。",
+      "faq_verify": "溶液配制",
+      "referenceAnswer": "6.14 g"
+    },
+    {
+      "id": "c19-b034",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "配制 0.100 mol/L 无水 K₃[Fe(C₂O₄)₃] 溶液 200 mL，需称取多少克？",
+      "answer": "8.74 g",
+      "key_points": [
+        "用无水盐 M=437.20"
+      ],
+      "explanation": "m=0.100×0.200×437.20=8.74 g。",
+      "faq_verify": "溶液配制",
+      "referenceAnswer": "8.74 g"
+    },
+    {
+      "id": "c19-b035",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "配制 0.0200 mol/L KMnO₄ 溶液 500 mL，需称取 KMnO₄ 多少克？",
+      "answer": "1.58 g",
+      "key_points": [
+        "M(KMnO₄)=158.03"
+      ],
+      "explanation": "m=0.0200×0.500×158.03=1.58 g。",
+      "faq_verify": "溶液配制",
+      "referenceAnswer": "1.58 g"
+    },
+    {
+      "id": "c19-b036",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "配制 0.100 mol/L 草酸(H₂C₂O₄·2H₂O)溶液 100 mL，需称取草酸二水物多少克？",
+      "answer": "1.26 g",
+      "key_points": [
+        "M(草酸二水物)=126.07"
+      ],
+      "explanation": "m=0.100×0.100×126.07=1.26 g。",
+      "faq_verify": "溶液配制",
+      "referenceAnswer": "1.26 g"
+    },
+    {
+      "id": "c19-b037",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "平行 5 次测得产率分别为 62.3%、61.8%、62.1%、63.0%、61.9%，求平均值（%）。",
+      "answer": "62.22 %",
+      "key_points": [
+        "均值=Σx/n"
+      ],
+      "explanation": "均值=(62.3+61.8+62.1+63.0+61.9)/5=62.22%。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "62.22 %(62.2%)"
+    },
+    {
+      "id": "c19-b038",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "接上题 5 次产率数据（62.3、61.8、62.1、63.0、61.9），求相对标准偏差 RSD（%）。",
+      "answer": "0.77 %",
+      "key_points": [
+        "s=√[Σ(x-ξ)²/(n-1)]",
+        "RSD=s/均值×100%"
+      ],
+      "explanation": "均值=62.22%，样本标准偏差 s≈0.476%，RSD=0.77%（<2%，精密度良好）。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "0.77 %(0.77%)"
+    },
+    {
+      "id": "c19-b039",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "平行 5 次测得草酸根含量 53.5%、53.9%、53.2%、53.7%、53.6%，求平均值与 RSD（%）。",
+      "answer": "53.58 %；0.48 %",
+      "key_points": [
+        "均值 53.58%",
+        "RSD 0.48%"
+      ],
+      "explanation": "均值=53.58%，RSD=0.48%。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "53.58 %；0.48 %"
+    },
+    {
+      "id": "c19-b040",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "平行 5 次测产率 67.0%、67.4%、67.1%、66.8%、67.3%，求平均值（%）。",
+      "answer": "67.12 %",
+      "key_points": [
+        "均值=Σx/5"
+      ],
+      "explanation": "均值=(67.0+67.4+67.1+66.8+67.3)/5=67.12%。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "67.12 %(67.1%)"
+    },
+    {
+      "id": "c19-b041",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "接上题 5 次产率数据（67.0、67.4、67.1、66.8、67.3），求 RSD 并判断精密度是否良好（%）。",
+      "answer": "0.36 %；精密度良好（<2%）",
+      "key_points": [
+        "RSD=0.36%",
+        "<2% 精密度良好"
+      ],
+      "explanation": "RSD=0.36%，远小于 2%，说明平行测定精密度良好。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "0.36 %（良好）"
+    },
+    {
+      "id": "c19-b042",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "平行测定得平均产率 62.22%，标准偏差 s=0.477%，求相对标准偏差 RSD（%，保留两位）。",
+      "answer": "0.77 %",
+      "key_points": [
+        "RSD=s/均值×100%",
+        "0.477/62.22×100%"
+      ],
+      "explanation": "RSD=0.477/62.22×100%=0.77%。",
+      "faq_verify": "平均值RSD",
+      "referenceAnswer": "0.77 %(0.77%)"
+    },
+    {
+      "id": "c19-b043",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "称取产物 0.3000 g，测得其中有效成分 K₃[Fe(C₂O₄)₃]·3H₂O 为 0.2900 g，求产品纯度（%）。",
+      "answer": "96.7 %",
+      "key_points": [
+        "纯度=m(有效)/m(样品)×100%"
+      ],
+      "explanation": "纯度=0.2900/0.3000×100%=96.7%。",
+      "faq_verify": "纯度",
+      "referenceAnswer": "96.7 %(96.7%)"
+    },
+    {
+      "id": "c19-b044",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "产品理论 Fe 质量分数 11.4%，某样品实测 Fe 质量分数为 10.9%，假设杂质不含 Fe，求样品中有效产物纯度（%）。",
+      "answer": "95.9 %",
+      "key_points": [
+        "纯度=实测/理论×100%",
+        "10.9/11.4×100%"
+      ],
+      "explanation": "纯度=10.9/11.4×100%=95.9%（杂质不含 Fe 时）。",
+      "faq_verify": "纯度",
+      "referenceAnswer": "95.9 %"
+    },
+    {
+      "id": "c19-b045",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "纯产物含结晶水 11.005%。某样品 0.5000 g 加热失水 0.0520 g，假设杂质不含结晶水，求样品纯度（%）。",
+      "answer": "94.5 %",
+      "key_points": [
+        "m(纯)=失水/11.005%",
+        "纯度=m(纯)/0.5000"
+      ],
+      "explanation": "纯品含结晶水 0.5000×11.005%=0.0550 g，0.0520 g 失水对应纯品 m=0.0520/0.11005=0.4725 g，纯度=0.4725/0.5000×100%=94.5%。",
+      "faq_verify": "纯度",
+      "referenceAnswer": "94.5 %(94.5%)"
+    },
+    {
+      "id": "c19-b046",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "产品样品 0.3000 g 中有效产物为 0.2850 g，求产品纯度（%）。",
+      "answer": "95.0 %",
+      "key_points": [
+        "纯度=m(有效)/m(样品)×100%"
+      ],
+      "explanation": "纯度=0.2850/0.3000×100%=95.0%。",
+      "faq_verify": "纯度",
+      "referenceAnswer": "95.0 %(95.0%)"
+    },
+    {
+      "id": "c19-b047",
+      "category": "分析测定",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "0.1500 g 这一数值有______位有效数字。",
+      "answer": "4",
+      "key_points": [
+        "非零数字及中间/末尾0均为有效",
+        "0.1500 有 4 位"
+      ],
+      "explanation": "0.1500 中 1、5 为有效数字，末尾两个 0 也是有效数字，共 4 位。",
+      "faq_verify": "有效数字",
+      "referenceAnswer": "4 位"
+    },
+    {
+      "id": "c19-b048",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "easy",
+      "question": "某次称量读数为 5.25 g，真实值为 5.00 g，求相对误差（%）。",
+      "answer": "5.00 %",
+      "key_points": [
+        "相对误差=(测量值-真值)/真值×100%"
+      ],
+      "explanation": "相对误差=(5.25-5.00)/5.00×100%=5.00%。",
+      "faq_verify": "误差有效数字",
+      "referenceAnswer": "5.00 %"
+    },
+    {
+      "id": "c19-b049",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "用 0.1500 g 样品滴定得 Fe 0.0170 g，求 Fe 质量分数（%）并判断与理论值 11.4% 的偏差方向。",
+      "answer": "11.3 %；偏低",
+      "key_points": [
+        "w=0.0170/0.1500×100%",
+        "11.3% < 11.4%"
+      ],
+      "explanation": "w(Fe)=0.0170/0.1500×100%=11.3%，略低于理论 11.4%，结果偏低。",
+      "faq_verify": "误差有效数字",
+      "referenceAnswer": "11.3 %（偏低）"
+    },
+    {
+      "id": "c19-b050",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "分析天平感量（绝对误差）为 0.0001 g，称取 0.2000 g 样品，求相对误差（%）。",
+      "answer": "0.05 %",
+      "key_points": [
+        "相对误差=绝对误差/称样量×100%"
+      ],
+      "explanation": "相对误差=0.0001/0.2000×100%=0.05%。",
+      "faq_verify": "误差有效数字",
+      "referenceAnswer": "0.05 %"
+    },
+    {
+      "id": "c19-b051",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "合成分三步进行，每步产率分别为 95%、90%、85%，求总产率（%）。",
+      "answer": "72.7 %",
+      "key_points": [
+        "总产率=各步产率连乘",
+        "0.95×0.90×0.85"
+      ],
+      "explanation": "总产率=95%×90%×85%=72.7%。",
+      "faq_verify": "多步产率",
+      "referenceAnswer": "72.7 %(72.7%)"
+    },
+    {
+      "id": "c19-b052",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "三步产率分别为 98%、95%、97%，求总产率（%）。",
+      "answer": "90.3 %",
+      "key_points": [
+        "0.98×0.95×0.97"
+      ],
+      "explanation": "总产率=98%×95%×97%=90.3%。",
+      "faq_verify": "多步产率",
+      "referenceAnswer": "90.3 %(90.3%)"
+    },
+    {
+      "id": "c19-b053",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "三步产率分别为 90%、92%、88%，标准投料（5.00 g 莫尔盐，理论产量 6.26 g），求实际可得产物（g）。",
+      "answer": "4.56 g",
+      "key_points": [
+        "总产率 0.72864",
+        "实际=理论×总产率"
+      ],
+      "explanation": "总产率=90%×92%×88%=72.9%，实际产物=6.26×0.72864=4.56 g。",
+      "faq_verify": "多步产率",
+      "referenceAnswer": "4.56 g(4.56 g)"
+    },
+    {
+      "id": "c19-b054",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "三步产率分别为 85%、80%、75%，以 2.50 g 莫尔盐（理论产量 3.13 g）为基准，求总产率与实际产量（g）。",
+      "answer": "51.0 %；1.60 g",
+      "key_points": [
+        "0.85×0.80×0.75=0.51",
+        "0.51×3.13"
+      ],
+      "explanation": "总产率=85%×80%×75%=51.0%，实际产物=3.13×0.51=1.60 g。",
+      "faq_verify": "多步产率",
+      "referenceAnswer": "51.0 %；1.60 g"
+    },
+    {
+      "id": "c19-b055",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "用 KMnO₄ 滴定莫尔盐中 Fe²⁺：0.0200 mol/L KMnO₄ 消耗 18.25 mL。求 n(Fe²⁺) 与 m(Fe)（g）。",
+      "answer": "1.82e-3 mol；0.1019 g",
+      "key_points": [
+        "n(Fe²⁺)=5×n(MnO₄⁻)",
+        "m=nt×55.845"
+      ],
+      "explanation": "n(MnO₄⁻)=3.65e-4 mol，n(Fe²⁺)=5×3.65e-4=1.82e-3 mol，m(Fe)=1.82e-3×55.845=0.1019 g。",
+      "faq_verify": "Fe含量",
+      "referenceAnswer": "1.825×10⁻³ mol；0.1019 g"
+    },
+    {
+      "id": "c19-b056",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "求莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 中 Fe 的质量分数（%）。",
+      "answer": "14.2 %",
+      "key_points": [
+        "55.845/392.14×100%"
+      ],
+      "explanation": "w(Fe)=55.845/392.14×100%=14.2%。",
+      "faq_verify": "Fe含量",
+      "referenceAnswer": "14.2 %(14.2%)"
+    },
+    {
+      "id": "c19-b057",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "莫尔盐样品 0.5000 g，测得其中 n(Fe²⁺)=1.200×10⁻³ mol。求样品 Fe 质量分数（%）及样品纯度（%，纯品 Fe 14.24%）。",
+      "answer": "13.40 %；94.1 %",
+      "key_points": [
+        "m(Fe)=n×55.845",
+        "纯度=实测/理论×100%"
+      ],
+      "explanation": "m(Fe)=1.200×10⁻³×55.845=0.0670 g，w=13.40%；纯度=13.40%/14.24%×100%=94.1%。",
+      "faq_verify": "Fe含量",
+      "referenceAnswer": "13.40 %；94.1 %"
+    },
+    {
+      "id": "c19-b058",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "预期产率为 80%，要得到 5.00 g K₃[Fe(C₂O₄)₃]·3H₂O，需称取莫尔盐多少克（理论）？",
+      "answer": "4.99 g",
+      "key_points": [
+        "所需理论产量=5.00/0.80",
+        "m(莫尔盐)=m理论×392.14/491.25"
+      ],
+      "explanation": "所需理论产量=5.00/0.80=6.25 g，n(产物)=6.25/491.25=0.01272 mol，对应 m(莫尔盐)=0.01272×392.14=4.99 g。",
+      "faq_verify": "含量反推投料",
+      "referenceAnswer": "4.99 g"
+    },
+    {
+      "id": "c19-b059",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "产物 0.1500 g 滴定消耗 0.0200 mol/L KMnO₄ 18.25 mL，实测草酸根质量分数 53.55%。已知纯品理论 53.8%，求产物纯度（%）。",
+      "answer": "99.6 %",
+      "key_points": [
+        "纯度=实测/理论×100%",
+        "53.55/53.8×100%"
+      ],
+      "explanation": "纯度=53.55/53.8×100%=99.6%（杂质不含草酸根时）。",
+      "faq_verify": "纯度",
+      "referenceAnswer": "99.6 %"
+    },
+    {
+      "id": "c19-b060",
+      "category": "分析测定",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "产物样品 0.2000 g，分光法测得 Fe 质量 0.0228 g，求 Fe 质量分数（%）及相对理论值 11.37% 的偏差（%）。",
+      "answer": "11.4 %；+0.26 %",
+      "key_points": [
+        "w=0.0228/0.2000×100%",
+        "(实测-理论)/理论×100%"
+      ],
+      "explanation": "w(Fe)=0.0228/0.2000×100%=11.4%，偏差=(11.4-11.37)/11.37×100%=+0.26%。",
+      "faq_verify": "Fe含量",
+      "referenceAnswer": "11.4 %；+0.28%"
+    },
+    {
+      "id": "c19-b061",
+      "category": "反应原理",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "酸性介质中 H₂O₂ 氧化 Fe²⁺的离子方程式为______。",
+      "answer": "2Fe²⁺ + H₂O₂ + 2H⁺ → 2Fe³⁺ + 2H₂O",
+      "key_points": [
+        "酸性条件",
+        "H₂O₂还原产物为水",
+        "电子守恒 2Fe²⁺→2Fe³⁺"
+      ],
+      "explanation": "H₂O₂ 在酸性中把 Fe²⁺氧化为 Fe³⁺，自身被还原为水，离子方程式为 2Fe²⁺+H₂O₂+2H⁺→2Fe³⁺+2H₂O。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "2Fe²⁺ + H₂O₂ + 2H⁺ → 2Fe³⁺ + 2H₂O"
+    },
+    {
+      "id": "c19-b062",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "easy",
+      "question": "H₂O₂ 作氧化剂时其还原产物是什么？为何被称为“绿色氧化剂”？",
+      "answer": "还原产物为水(H₂O)；因不引入杂质、过量后加热即可分解（2H₂O₂→2H₂O+O₂↑）。",
+      "key_points": [
+        "还原产物 H₂O",
+        "过量加热分解除去"
+      ],
+      "explanation": "H₂O₂ 被还原为水，不带来 Mn²⁺、NO₃⁻ 等副产物，过量 H₂O₂ 加热分解即可消除，故称绿色氧化剂。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "水(H₂O)；绿色氧化剂"
+    },
+    {
+      "id": "c19-b063",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "本实验选取 H₂O₂ 而不用 KMnO₄ 作氧化剂，理由有哪些？（写出两点）",
+      "answer": "1) H₂O₂ 还原产物是水，不引入 Mn²⁺ 杂质；2) 过量 H₂O₂ 加热分解即可除去，无需额外处理。",
+      "key_points": [
+        "不引入杂质",
+        "过量易除去"
+      ],
+      "explanation": "KMnO₄ 会引入 Mn²⁺ 离子杂质，且过量 MnO₄⁻ 难以除去；H₂O₂ 优势明显。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "无 Mn²⁺ 杂质；过量 H₂O₂ 分解除去"
+    },
+    {
+      "id": "c19-b064",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "为何不宜用硝酸 HNO₃ 作氧化剂将 Fe²⁺氧化为 Fe³⁺？",
+      "answer": "HNO₃ 氧化性强，易将 Fe²⁺“过度氧化”或氧化草酸根，且会引入 NO₃⁻ 及氮氧化物还原产物，影响产物纯度。",
+      "key_points": [
+        "氧化性过强副反应",
+        "引入 NO₃⁻/NOx"
+      ],
+      "explanation": "HNO₃ 具强氧化性且易得复杂还原产物（NO、NO₂），既可能破坏草酸根配体又引入杂质，故不用。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "过度氧化且引入 NO₃⁻/NOx 杂质"
+    },
+    {
+      "id": "c19-b065",
+      "category": "反应原理",
+      "type": "fill",
+      "difficulty": "medium",
+      "question": "草酸在实验中的三重作用：①沉淀 Fe²⁺ 为 FeC₂O₄；②与草酸钾共同提供______（配体）；③提供酸性介质，防止 Fe³⁺______。",
+      "answer": "C₂O₄²⁻（草酸根）；水解",
+      "key_points": [
+        "配体来源",
+        "酸性防 Fe³⁺ 水解"
+      ],
+      "explanation": "草酸既是沉淀剂，又是 C₂O₄²⁻ 配体来源，同时创造酸性环境抑制 Fe³⁺ 水解生成 Fe(OH)₃。",
+      "faq_verify": "草酸作用",
+      "referenceAnswer": "C₂O₄²⁻（草酸根）；水解"
+    },
+    {
+      "id": "c19-b066",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "为何选用莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 作铁源，而不直接用 FeSO₄？",
+      "answer": "莫尔盐是双盐结晶，比 FeSO₄ 更稳定、不易被空气氧化、易重结晶提纯、Fe²⁺在固态中保持稳定，Fe 含量确定。",
+      "key_points": [
+        "稳定不易氧化",
+        "纯度高易提纯"
+      ],
+      "explanation": "莫尔盐中 Fe²⁺ 被 NH₄⁺ 和 SO₄²⁻ 稳定，固体不易氧化，便于准确称量作铁源。",
+      "faq_verify": "莫尔盐铁源",
+      "referenceAnswer": "稳定不易氧化、纯度高"
+    },
+    {
+      "id": "c19-b067",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "为何“先沉淀 FeC₂O₄、后氧化”，而不先把 Fe²⁺氧化为 Fe³⁺再沉淀？",
+      "answer": "Fe³⁺ 在 pH 稍高时极易水解成 Fe(OH)₃ 沉淀，且 Fe³⁺ 与草酸根配位强烈、反应复杂，先沉淀可控制中间体形态、避免 Fe³⁺ 水解与副配位竞争。",
+      "key_points": [
+        "Fe³⁺易水解",
+        "配位竞争控制"
+      ],
+      "explanation": "先得纯净 FeC₂O₄，再在过量 C₂O₄²⁻ 存在下氧化并配位，可避免 Fe³⁺ 水解和无关配位产物。",
+      "faq_verify": "先沉淀后氧化",
+      "referenceAnswer": "防 Fe³⁺ 水解与配位竞争"
+    },
+    {
+      "id": "c19-b068",
+      "category": "反应原理",
+      "type": "fill",
+      "difficulty": "easy",
+      "question": "第一步：Fe²⁺ 与草酸生成草酸亚铁沉淀的离子方程式为______。",
+      "answer": "Fe²⁺ + C₂O₄²⁻ → FeC₂O₄↓",
+      "key_points": [
+        "沉淀反应",
+        "FeC₂O₄ 难溶"
+      ],
+      "explanation": "Fe²⁺ 与草酸根结合生成难溶的 FeC₂O₄ 沉淀，即 Fe²⁺+C₂O₄²⁻→FeC₂O₄↓。",
+      "faq_verify": "草酸作用",
+      "referenceAnswer": "Fe²⁺ + C₂O₄²⁻ → FeC₂O₄↓"
+    },
+    {
+      "id": "c19-b069",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "hard",
+      "question": "第二步在过量草酸根存在下，H₂O₂ 氧化 FeC₂O₄ 的整个过程可写成 H₂O₂ 氧化 Fe²⁺与 Fe³⁺配位两步。写出这两步的名称。",
+      "answer": "①H₂O₂ 把 Fe²⁺ 氧化为 Fe³⁺（2Fe²⁺+H₂O₂+2H⁺→2Fe³⁺+2H₂O）；②Fe³⁺ 与过量 C₂O₄²⁻ 配位生成 [Fe(C₂O₄)₃]³⁻。",
+      "key_points": [
+        "氧化",
+        "配位"
+      ],
+      "explanation": "过程为氧化+配位两步：先氧化生成 Fe³⁺，再在过量草酸根作用下形成稳定的三草酸合铁(III)配离子。",
+      "faq_verify": "氧化配位",
+      "referenceAnswer": "氧化 + 配位"
+    },
+    {
+      "id": "c19-b070",
+      "category": "反应原理",
+      "type": "fill",
+      "difficulty": "medium",
+      "question": "配离子形成的平衡方程式：Fe³⁺ + 3C₂O₄²⁻ ⇌ ______。",
+      "answer": "[Fe(C₂O₄)₃]³⁻",
+      "key_points": [
+        "1:3 配位",
+        "八面体",
+        "三草酸合铁(III)"
+      ],
+      "explanation": "Fe³⁺ 与 3 个 C₂O₄²⁻ 双齿螯合形成 [Fe(C₂O₄)₃]³⁻，平衡常数即配合物稳定常数 Kf。",
+      "faq_verify": "氧化配位",
+      "referenceAnswer": "[Fe(C₂O₄)₃]³⁻"
+    },
+    {
+      "id": "c19-b071",
+      "category": "反应原理",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "已知 H₂O₂/H₂O 标准电极电势 E°=1.776 V，Fe³⁺/Fe²⁺ E°=0.771 V。求该氧化反应的电池电动势 ΔE°（V）。",
+      "answer": "1.005 V",
+      "key_points": [
+        "ΔE°=E°(正极)-E°(负极)",
+        "1.776-0.771"
+      ],
+      "explanation": "ΔE°=1.776-0.771=1.005 V，ΔE°>0，反应自发。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "1.005 V(1.005 V)"
+    },
+    {
+      "id": "c19-b072",
+      "category": "反应原理",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "接上题，ΔE°=1.005 V，每摩尔 H₂O₂ 得 2 个电子（n=2）。求该反应的平衡常数 lgK 与 K。",
+      "answer": "lgK≈34.0；K≈9.0e+33",
+      "key_points": [
+        "lgK=nΔE°/0.0592",
+        "0.0592（24℃）"
+      ],
+      "explanation": "lgK=2×1.005/0.0592=34.0，K=10^34.0≈9.0e+33，反应几乎进行完全。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "lgK≈34.0；K≈9.0×10³³"
+    },
+    {
+      "id": "c19-b073",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "为什么说 H₂O₂ 氧化 Fe²⁺ 能“定量、完全”？用平衡常数说明。",
+      "answer": "因 ΔE°=1.005 V，lgK≈34、K≈10³⁴，反应平衡常数极大，正反应几乎进行到底，因此能定量氧化。",
+      "key_points": [
+        "K 极大",
+        "反应趋完全"
+      ],
+      "explanation": "K≈10³⁴ 表明正反应占绝对优势，Fe²⁺ 可定量转化为 Fe³⁺。",
+      "faq_verify": "氧化反应电位",
+      "referenceAnswer": "K≈10³⁴ → 定量完全"
+    },
+    {
+      "id": "c19-b074",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "草酸为弱酸，反应体系酸度如何影响配位平衡 Fe³⁺+3C₂O₄²⁻⇌[Fe(C₂O₄)₃]³⁻？",
+      "answer": "酸度增大([H⁺]高)，C₂O₄²⁻ 被质子化，配体浓度下降，配位平衡向左移动，配合物稳定性降低；故需控制合适 pH。",
+      "key_points": [
+        "酸效应",
+        "配体质子化"
+      ],
+      "explanation": "H⁺ 消耗 C₂O₄²⁻ 形成 HC₂O₄⁻/H₂C₂O₄，降低配体有效浓度，使平衡左移。",
+      "faq_verify": "配位平衡移动",
+      "referenceAnswer": "酸效应使平衡左移"
+    },
+    {
+      "id": "c19-b075",
+      "category": "反应原理",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "设 [Fe(C₂O₄)₃]³⁻ 总浓度 0.010 mol/L，游离草酸根 [C₂O₄²⁻]=0.50 mol/L，配合物稳常 Kf=1.0×10²⁰。求游离 Fe³⁺ 浓度（mol/L）。",
+      "answer": "8.00e-22 mol/L",
+      "key_points": [
+        "[Fe³⁺]≈总浓度/(Kf·[C₂O₄²⁻]³)",
+        "稳常≈配离子/游离离子"
+      ],
+      "explanation": "[Fe³⁺]≈0.010/(1.0×10²⁰×0.50³)=8.00e-22 mol/L，游离 Fe³⁺ 极微量，说明配合物极稳定。",
+      "faq_verify": "Kf反推杂质",
+      "referenceAnswer": "8.0×10⁻²² mol/L"
+    },
+    {
+      "id": "c19-b076",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "向三草酸合铁(III)配离子溶液中滴加强酸，观察到什么现象？配位平衡如何移动？",
+      "answer": "溶液紫绿色逐渐变浅，因 H⁺ 与 C₂O₄²⁻ 结合，游离配体减少，配位平衡 Fe³⁺+3C₂O₄²⁻⇌[Fe(C₂O₄)₃]³⁻ 向左移动，释放出淡黄色 Fe³⁺。",
+      "key_points": [
+        "加酸平衡左移",
+        "配体质子化"
+      ],
+      "explanation": "酸效应降低 [C₂O₄²⁻]，配合物部分解离，颜色改变，性质由 C₂O₄²⁻ 的“酸效应”决定。",
+      "faq_verify": "配位平衡移动",
+      "referenceAnswer": "平衡左移、颜色变浅"
+    },
+    {
+      "id": "c19-b077",
+      "category": "反应原理",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "第一步沉淀反应 Fe²⁺+H₂C₂O₄→FeC₂O₄↓+2H⁺，若投入 0.01275 mol Fe²⁺，求所需 H₂C₂O₄ 的物质的量（mol）。",
+      "answer": "0.01275 mol",
+      "key_points": [
+        "1:1计量",
+        "n(H₂C₂O₄)=n(Fe²⁺)"
+      ],
+      "explanation": "由反应计量比 1:1，n(H₂C₂O₄)=n(Fe²⁺)=0.01275 mol。",
+      "faq_verify": "草酸配比",
+      "referenceAnswer": "0.01275 mol"
+    },
+    {
+      "id": "c19-b078",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "easy",
+      "question": "为何实验中草酸和草酸钾通常过量加入？",
+      "answer": "保证 Fe²⁺ 完全沉淀、并为配位提供充足 C₂O₄²⁻，同时抑制 Fe³⁺ 水解，提高产率和产物稳定性。",
+      "key_points": [
+        "沉淀完全",
+        "配体过量"
+      ],
+      "explanation": "过量沉淀剂使 Fe²⁺ 沉淀更完全；过量草酸根既作配体又抑制 Fe³⁺ 水解，利于生成稳定配合物。",
+      "faq_verify": "草酸配比",
+      "referenceAnswer": "沉淀完全、配体充足"
+    },
+    {
+      "id": "c19-b079",
+      "category": "反应原理",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "在 2Fe²⁺+H₂O₂+2H⁺→2Fe³⁺+2H₂O 中，2 mol Fe²⁺ 转化为 Fe³⁺ 共转移多少 mol 电子？1 mol H₂O₂ 得到多少 mol 电子？",
+      "answer": "2 mol；2 mol",
+      "key_points": [
+        "每 mol Fe²⁺ 失 1 e",
+        "H₂O₂ 得 2 e"
+      ],
+      "explanation": "2 mol Fe²⁺ → Fe³⁺ 共失 2 mol e；H₂O₂ 中 O 从-1价还原为-2价，1 mol H₂O₂ 得 2 mol e，得失守恒。",
+      "faq_verify": "电子转移",
+      "referenceAnswer": "2 mol；2 mol"
+    },
+    {
+      "id": "c19-b080",
+      "category": "反应原理",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "实验为何要在酸性介质中进行（加稀 H₂SO₄/HCl 调节）？",
+      "answer": "酸性防止 Fe³⁺ 水解生成 Fe(OH)₃ 沉淀、维持 Fe²⁺/Fe³⁺ 氧化还原电位稳定，也使 H₂O₂ 氧化方向与钾盐配位得以进行。",
+      "key_points": [
+        "防 Fe³⁺ 水解",
+        "稳定电位"
+      ],
+      "explanation": "pH 控制避免副反应，保障氧化和配位依序定量进行，产品纯净。",
+      "faq_verify": "酸度控制",
+      "referenceAnswer": "防 Fe³⁺ 水解、稳定电位"
+    },
+    {
+      "id": "c19-b081",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "三草酸合铁(III)中 Fe³⁺ 为高自旋 d⁵。求其仅自旋磁矩 μeff（BM）。",
+      "answer": "5.92 BM",
+      "key_points": [
+        "d⁵高自旋 5 个单电子",
+        "μeff=√[5×(5+2)]=√35"
+      ],
+      "explanation": "d⁵ 高自旋有 5 个未成对电子，μeff=√[n(n+2)]=√35≈5.92 BM。",
+      "faq_verify": "磁矩",
+      "referenceAnswer": "5.92 BM(5.92 BM)"
+    },
+    {
+      "id": "c19-b082",
+      "category": "高等理论",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "Fe³⁺ 高自旋 d⁵ 的磁矩约为 5.92 BM，而 Fe²⁺ 高自旋 d⁶ 约为多少？（写出计算式并给出近似值）",
+      "answer": "μeff=√[4×(4+2)]=√24≈4.90 BM",
+      "key_points": [
+        "d⁶高自旋 4 个单电子",
+        "√24"
+      ],
+      "explanation": "d⁶ 高自旋有 4 个未成对电子，μeff=√[4×(4+2)]=√24≈4.90 BM。",
+      "faq_verify": "磁矩",
+      "referenceAnswer": "4.90 BM"
+    },
+    {
+      "id": "c19-b083",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "某 d⁶ 低自旋配合物（如 [Fe(C₂O₄)₃]³⁻ 的类比体系）所有电子配对，求其磁矩 μeff（BM）。",
+      "answer": "0 BM",
+      "key_points": [
+        "低自旋 d⁶ 无未成对电子",
+        "n=0"
+      ],
+      "explanation": "低自旋 d⁶ 电子全部配对，n=0，μeff=0 BM（逆磁性）。",
+      "faq_verify": "磁矩",
+      "referenceAnswer": "0 BM"
+    },
+    {
+      "id": "c19-b084",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "计算高自旋 d⁵（电子构型 t₂g³eg²）的 CFSE（用 Δo 表示）。",
+      "answer": "0 Δo",
+      "key_points": [
+        "CFSE=(-0.4×3+0.6×2)Δo",
+        "高自旋 d⁵ 无反稳定化"
+      ],
+      "explanation": "CFSE=(-0.4×t₂g+0.6×eg)Δo=(-0.4×3+0.6×2)Δo=0 Δo（无配体场稳定化）。",
+      "faq_verify": "CFSE",
+      "referenceAnswer": "0 Δo"
+    },
+    {
+      "id": "c19-b085",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "计算低自旋 d⁶（t₂g⁶eg⁰）的 CFSE（用 Δo 表示）。",
+      "answer": "-2.40 Δo",
+      "key_points": [
+        "CFSE=(-0.4×6+0.6×0)Δo",
+        "低自旋 d⁶"
+      ],
+      "explanation": "CFSE=(-0.4×6+0.6×0)Δo=-2.40 Δo（电子全填入 t₂g，稳定性显著）。",
+      "faq_verify": "CFSE",
+      "referenceAnswer": "-2.40 Δo"
+    },
+    {
+      "id": "c19-b086",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "电池由 H₂O₂/H₂O 与 Fe³⁺/Fe²⁺ 两个电极构成，E°(正极)=1.776 V，E°(负极)=0.771 V，n=2。求标准电动势 E°cell 及 lgK。",
+      "answer": "E°cell=1.005 V；lgK≈34.0",
+      "key_points": [
+        "E°cell=1.776-0.771",
+        "lgK=nE°/0.0592"
+      ],
+      "explanation": "E°cell=1.776-0.771=1.005 V，lgK=2×1.005/0.0592=34.0，K≈9.0e+33。",
+      "faq_verify": "能斯特电动势",
+      "referenceAnswer": "1.005 V；34.0"
+    },
+    {
+      "id": "c19-b087",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "medium",
+      "question": "已知配合物稳定常数 Kf=1.0×10²⁰（25℃），求标准生成自由能 ΔG°（kJ/mol）。",
+      "answer": "-114.1 kJ/mol",
+      "key_points": [
+        "ΔG°=-RT lnKf",
+        "T=298K"
+      ],
+      "explanation": "ΔG°=-8.314×298×ln(1.0×10²⁰)/1000=-114.1 kJ/mol，ΔG°<0 表明配位反应自发强烈。",
+      "faq_verify": "ΔG Kf",
+      "referenceAnswer": "-114.1 kJ/mol(-114.1 kJ/mol)"
+    },
+    {
+      "id": "c19-b088",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "草酸 H₂C₂O₄ 的 pKa₁=1.23、pKa₂=4.19。求 pH=7 时草酸根 C₂O₄²⁻ 的分布系数 α₂。",
+      "answer": "0.9985",
+      "key_points": [
+        "α₂=Ka₁Ka₂/([H⁺]²+Ka₁[H⁺]+Ka₁Ka₂)",
+        "pH=7 时主态为 C₂O₄²⁻"
+      ],
+      "explanation": "α₂=Ka₁Ka₂/([H⁺]²+Ka₁[H⁺]+Ka₁Ka₂)，pH=7 时 [H⁺]=1e-7，α₂≈0.9985，说明中性条件下草酸几乎全部以 C₂O₄²⁻ 存在。",
+      "faq_verify": "分布系数酸效应",
+      "referenceAnswer": "0.9985"
+    },
+    {
+      "id": "c19-b089",
+      "category": "高等理论",
+      "type": "short",
+      "difficulty": "medium",
+      "question": "随 pH 降低（酸度增大），草酸根的分布系数 α₂ 如何变化？这对配离子稳定有何影响？",
+      "answer": "α₂ 减小，C₂O₄²⁻ 占比下降；配体有效浓度降低使 [Fe(C₂O₄)₃]³⁻ 稳定性下降（酸效应）。",
+      "key_points": [
+        "α₂ 随 pH 降低而降低",
+        "酸效应使配合物不稳"
+      ],
+      "explanation": "pH 降低时 [H⁺] 增大，草酸根被质子化，α₂ 变小，弱化配位，配合物倾向解离。",
+      "faq_verify": "分布系数酸效应",
+      "referenceAnswer": "α₂ 减小、配位减弱"
+    },
+    {
+      "id": "c19-b090",
+      "category": "高等理论",
+      "type": "calc",
+      "difficulty": "hard",
+      "question": "某组 5 次平行产率平均 62.22%，样本标准偏差 s=0.477%。按经验判据“RSD<2% 表示精密度良好”，该组 RSD 为多少（%）并判断精密度。",
+      "answer": "0.77 %；精密度良好",
+      "key_points": [
+        "RSD=s/均值×100%",
+        "0.477/62.22×100%"
+      ],
+      "explanation": "RSD=0.477/62.22×100%=0.77%<2%，故精密度良好（可用 t 检验进一步确认均值是否可信）。",
+      "faq_verify": "t检验RSD",
+      "referenceAnswer": "0.77 %；良好"
+    }
+  ]
+}

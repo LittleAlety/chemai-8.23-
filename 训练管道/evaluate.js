@@ -6,7 +6,8 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { readJSON, norm, bm25MatchKB, createKBIndex } = require('../scripts/rag-utils');
+const { readJSON, norm, createKBIndex } = require('../scripts/rag-utils'); // bm25MatchKB 用下方本地自定义实现，不从 rag-utils 导入（避免重复声明）
+const ChemCalc = require('../scripts/lib-calc.js'); // 通用化学计算引擎（消除 MOLAR/qaCalc 的重复逻辑）
 
 const KB_DATA = readJSON(path.join(__dirname, '..', 'data', 'kb.json'));
 const AUTO_FAQ = readJSON(path.join(__dirname, '..', 'data', 'faq_unified.json'));
@@ -62,90 +63,17 @@ function matchFAQ(q) {
   return best;
 }
 
-// Calculator
-const MOLAR = {'莫尔盐':392.14,'摩尔盐':392.14,'硫酸亚铁铵':392.14,'产物':491.25,
-  '三草酸合铁酸钾':491.25,'产品':491.25,'草酸':126.07,'草酸二水合物':126.07,
-  '草酸钾':184.24,'草酸亚铁':179.90,'fec2o4':179.90,'h2c2o4':126.07,'k2c2o4':184.24,'水':18.02};
-
+// Calculator —— 统一代理到 lib-calc.js 单一真相源（原 MOLAR 常量与 qaCalc 手写逻辑已移除，避免三处漂移）
 function qaCalc(q) {
-  const nums = [];
-  let m; const re = /(\d+(?:\.\d+)?)\s*(mg|g|克|毫升|ml|l|mol|%|个|bm|v)?/gi;
-  while ((m = re.exec(q)) !== null) nums.push({ v: parseFloat(m[1]), u: (m[2] || '').toLowerCase() });
-
-  if (/摩尔质量|分子量/.test(q))
-    for (const k in MOLAR) { if (q.includes(k)) return k + '的摩尔质量 M = ' + MOLAR[k] + ' g/mol。'; }
-
-  // Yield calculation - broader detection
-  const hasY = /产率|理论产量|可制得|理论上能|能生成多少|得多少克|多少克产品|获得|制得|称取/.test(q);
-  if (hasY) {
-    let mMohr = null, mAct = null;
-    const gmNums = q.match(/(\d+(?:\.\d+)?)\s*(?:g|克)/g);
-    const vals = gmNums ? gmNums.map(s => parseFloat(s)) : [];
-    if (/莫尔盐|摩尔盐|硫酸亚铁铵/.test(q) && vals.length) mMohr = vals[0];
-    const actM = q.match(/(?:实际|实得|得到|产量|产出|称得|获得|制得)[^0-9]{0,6}(\d+(?:\.\d+)?)/);
-    if (actM) mAct = parseFloat(actM[1]);
-    else if (vals.length >= 2) mAct = vals[vals.length - 1];
-    if (mMohr && mAct) {
-      const n = mMohr / 392.14, theo = n * 491.25;
-      return '产率计算：n(莫尔盐)=' + mMohr + ' g ÷ 392.14 g/mol = ' + n.toFixed(5) + ' mol；理论产量=' + theo.toFixed(2) + ' g；产率 = ' + mAct + ' ÷ ' + theo.toFixed(2) + ' × 100% = ' + (mAct/theo*100).toFixed(1) + '%。';
+  try {
+    const r = ChemCalc.calcAnswer(q);
+    if (r && r.matched && r.result != null) {
+      let s = r.title.replace(/^🧮\s*/, '') + '：' + r.lines.join('；');
+      if (r.formula) s += '（公式：' + r.formula + '）';
+      if (r.note) s += '（' + r.note + '）';
+      return s + '。';
     }
-    if (mMohr && !mAct && vals.length) { const n = mMohr / 392.14;
-      return '理论产量 = (' + mMohr + ' g ÷ 392.14 g/mol) × 491.25 g/mol = ' + (n*491.25).toFixed(2) + ' g。'; }
-    // Generic yield: any two masses
-    if (vals.length >= 2 && /产率/.test(q)) {
-      const mm = vals[0], ma = vals[vals.length - 1];
-      return '产率 = ' + ma + ' ÷ ' + mm + ' × 100% = ' + (ma/mm*100).toFixed(1) + '%。';
-    }
-  }
-
-  // Magnetic moment - also detect d5, d4, Fe3+, Fe2+ patterns
-  if (/磁矩|b\.m\.|bm/i.test(q)) {
-    const n = nums.find(x => x.u === '个' || x.u === '');
-    if (n && n.v >= 1 && n.v <= 7) return '仅自旋磁矩 μ = √[n(n+2)] = √[' + n.v + '×' + (n.v + 2) + '] = ' + Math.sqrt(n.v*(n.v+2)).toFixed(2) + ' BM。';
-    if (/高自旋.*d\^?5|d\^?5.*高自旋|fe\^?3\+|fe3\+/.test(q.toLowerCase())) return 'Fe³⁺高自旋d⁵有5个未成对电子，μeff = √(5×7) = √35 ≈ 5.92 BM。';
-    if (/低自旋.*d\^?5|d\^?5.*低自旋/.test(q.toLowerCase())) return '低自旋d⁵有1个未成对电子，μeff = √(1×3) = √3 ≈ 1.73 BM。';
-    if (/高自旋.*d\^?4|fe\^?2\+|fe2\+/.test(q.toLowerCase())) return 'Fe²⁺高自旋d⁴有4个未成对电子，μeff = √(4×6) = √24 ≈ 4.90 BM。';
-    if (nums.length >= 1 && nums[0].v > 0) {
-      const mu = nums[0].v; const n2 = Math.round((Math.sqrt(1+4*mu*mu)-1)/2);
-      return '有效磁矩 μeff ≈ ' + mu.toFixed(1) + ' BM，对应约 ' + n2 + ' 个未成对电子（μeff ≈ √[n(n+2)]）。';
-    }
-  }
-
-  // CFSE
-  if (/cfse|稳定化能|晶体场稳定化/i.test(q)) {
-    const m2 = q.match(/t2g\^?(\d)\s*eg\^?(\d)/i) || q.match(/t₂g(\d).*?eg(\d)/i);
-    if (m2) { const a = +m2[1], b = +m2[2];
-      return 'CFSE = (-0.4×' + a + ' + 0.6×' + b + ')Δo = ' + (-0.4*a+0.6*b).toFixed(1) + 'Δo（t₂g' + a + ' eg' + b + '）。'; }
-    if (/高自旋.*d5|d5.*高自旋/.test(q)) return '高自旋d⁵（t₂g³ eg²）CFSE = (-0.4×3 + 0.6×2)Δo = 0Δo。';
-    if (/低自旋.*d6|d6.*低自旋/.test(q)) return '低自旋d⁶（t₂g⁶ eg⁰）CFSE = (-0.4×6 + 0.6×0)Δo = -2.4Δo。';
-  }
-
-  // Crystallization water mass fraction
-  if (/结晶水.*(?:质量|百分|含量|失重)|(?:质量|百分|含量|失重).*结晶水/.test(q)) {
-    const n = nums.find(x => x.u === '个' || x.u === '');
-    const nw = n ? n.v : 3;
-    return '结晶水质量分数 = ' + nw + '×18.02 ÷ 491.25 × 100% = ' + (nw*18.02/491.25*100).toFixed(1) + '%。';
-  }
-
-  // Standard Gibbs free energy from Kf
-  if (/自由能|Δg|δg|gibbs/i.test(q) && /kf|稳定常数|平衡常数/.test(q)) {
-    const kfMatch = q.match(/(\d+(?:\.\d+)?)\s*[×x×]\s*10\^?(\d+)/i);
-    if (kfMatch) {
-      const kf = parseFloat(kfMatch[1]) * Math.pow(10, parseInt(kfMatch[2]));
-      const dg = -8.314 * 298 * Math.log(kf) / 1000;
-      return 'ΔG° = -RT lnKf = -8.314 × 298 × ln(' + kfMatch[1] + '×10^' + kfMatch[2] + ') ÷ 1000 ≈ ' + dg.toFixed(1) + ' kJ/mol（25℃）。';
-    }
-  }
-
-  // Nernst equation / cell potential
-  if (/电动势|ecell|电位|电势|标准电极/.test(q)) {
-    const vMatch = q.match(/(\d+\.?\d*)\s*v.*?(\d+\.?\d*)\s*v/i);
-    if (vMatch) {
-      const e1 = parseFloat(vMatch[1]), e2 = parseFloat(vMatch[2]);
-      return 'E°cell = E°(氧化剂) - E°(还原剂) = ' + Math.max(e1,e2).toFixed(3) + ' - ' + Math.min(e1,e2).toFixed(3) + ' = ' + Math.abs(e1-e2).toFixed(3) + ' V。E°cell > 0 则反应自发。';
-    }
-  }
-
+  } catch (e) { /* fallthrough */ }
   return null;
 }
 

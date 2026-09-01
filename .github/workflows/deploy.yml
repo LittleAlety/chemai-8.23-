@@ -28,13 +28,17 @@ jobs:
         run: |
           mkdir -p _site
           # 网页页面（index=React 落地页；main=实验手册；assistant=AI助手；knowledge=知识图谱；prep=课前预习；corpus=语料库）
-          cp index.html main.html assistant.html knowledge.html prep.html corpus.html _site/
+          cp index.html main.html assistant.html knowledge.html prep.html corpus.html generator.html _site/
           # 资源：React bundle / CSS / KaTeX 字体 / vendor(pdf.js) / 实验图片
           cp -r assets _site/
+          # 本机脚本（assistant.html 通过 <script src="scripts/lib-calc.js"> 加载通用计算引擎）
+          mkdir -p _site/scripts
+          cp scripts/lib-calc.js _site/scripts/
           # 仅运行时需要的 data（其余 dev 产物如 kb/lexicon/questions_master 不部署）
           mkdir -p _site/data
           cp data/manual.json data/corpus.json data/images.json data/faq_runtime.js _site/data/
           cp data/kg.json data/questions_bank.json data/report_rubric.json data/faq_unified.json _site/data/
+          cp data/categories.json data/corpus_weights.json _site/data/
           cp CNAME _site/
           touch _site/.nojekyll
 

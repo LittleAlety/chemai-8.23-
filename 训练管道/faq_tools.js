@@ -16,6 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const { normalize } = require('../scripts/category-utils');
 const { readJSON } = require('../scripts/rag-utils');
+const { readFAQRuntime } = require('../scripts/lib-assistant-faq.js');
 
 const BASE = path.join(__dirname, '..');
 const FAQ_PATH = path.join(BASE, 'data', 'faq_unified.json');
@@ -344,10 +345,10 @@ function cmdApplyFixes(inputFile) {
   console.log('✓ 已应用: ' + applied + ' (新条目: ' + newEntries + ', 修改: ' + (applied - newEntries) + ', 跳过: ' + skipped + ')');
 }
 
-// ===== stats: FAQ 统计（含质量报告）=====
+// ===== stats: FAQ 统计（含质量报告）→ 运行时数据源 data/faq_runtime.js =====
 function cmdStats() {
-  console.log('=== FAQ 统计 ===');
-  var faq = readJSON(FAQ_PATH);
+  console.log('=== FAQ 统计 · 运行时数据源 data/faq_runtime.js ===');
+  var faq = readFAQRuntime();
   console.log('总条目: ' + faq.length);
 
   // 分类分布

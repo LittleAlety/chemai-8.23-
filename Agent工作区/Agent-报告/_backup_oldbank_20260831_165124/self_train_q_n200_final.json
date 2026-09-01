@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "Q001",
+    "question": "制备 K₃[Fe(C₂O₄)₃]·3H₂O 实验中称取 5.00 g 莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O，设铁全部定量转化。求理论产量（g，保留两位小数）。",
+    "referenceAnswer": "6.26 g(6.26 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q002",
+    "question": "某组称取 5.00 g 莫尔盐，实际得到 4.20 g K₃[Fe(C₂O₄)₃]·3H₂O 晶体，求产率（%，保留一位小数）。",
+    "referenceAnswer": "67.1 %(67.1%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q003",
+    "question": "称取 3.75 g 莫尔盐，求理论产物 K₃[Fe(C₂O₄)₃]·3H₂O 质量（g，保留两位小数）。",
+    "referenceAnswer": "4.70 g(4.70 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q004",
+    "question": "标准投料 5.00 g 莫尔盐，实际得 3.50 g 产物，求产率（%）。",
+    "referenceAnswer": "55.9 %(55.9%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q005",
+    "question": "称取 7.60 g 莫尔盐，理论可得 K₃[Fe(C₂O₄)₃]·3H₂O多少克？",
+    "referenceAnswer": "9.52 g(9.52 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q006",
+    "question": "标准投料 5.00 g 莫尔盐，实际得 5.10 g 产物，求产率（%）。",
+    "referenceAnswer": "81.4 %(81.5%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q007",
+    "question": "称取 2.50 g 莫尔盐，理论可得产物多少克？",
+    "referenceAnswer": "3.13 g(3.13 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q008",
+    "question": "标准投料 5.00 g 莫尔盐，实际得 4.85 g 产物，求产率（%）。",
+    "referenceAnswer": "77.4 %(77.5%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q009",
+    "question": "称取 6.30 g 莫尔盐，求理论产物质量（g）。",
+    "referenceAnswer": "7.89 g(7.89 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q010",
+    "question": "称取 4.90 g 莫尔盐（理论产量 6.14 g），实际得到 4.59 g 产物，求产率（%）。",
+    "referenceAnswer": "74.8 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q011",
+    "question": "称取 8.20 g 莫尔盐，求理论产物质量（g）。",
+    "referenceAnswer": "10.27 g(10.27 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q012",
+    "question": "称取 2.86 g 莫尔盐，求理论产物质量（g）。",
+    "referenceAnswer": "3.58 g(3.58 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q013",
+    "question": "称取 0.1500 g 产物，用 0.0200 mol/L KMnO₄ 标准溶液滴定其中的 C₂O₄²⁻，消耗 18.25 mL。求产物中草酸根的质量分数（%，保留一位小数）。",
+    "referenceAnswer": "53.5 %(53.6%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q014",
+    "question": "求 0.0200 mol/L KMnO₄ 溶液 18.25 mL 中 KMnO₄ 的物质的量（mol）。",
+    "referenceAnswer": "3.65×10⁻⁴ mol",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q015",
+    "question": "称取 0.2000 g 样品，用 0.0200 mol/L KMnO₄ 滴定，消耗 20.00 mL。求样品中草酸根质量分数（%）。",
+    "referenceAnswer": "44.0 %(44.0%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q016",
+    "question": "称取 0.1800 g 样品，用 0.0240 mol/L KMnO₄ 滴定，消耗 22.50 mL。求草酸根质量分数（%）。",
+    "referenceAnswer": "66.0 %(66.0%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q017",
+    "question": "称取 0.1600 g 样品，用 0.0180 mol/L KMnO₄ 滴定，消耗 25.00 mL。求草酸根质量分数（%）。",
+    "referenceAnswer": "61.9 %(61.9%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q018",
+    "question": "称取 0.2100 g 样品，用 0.0212 mol/L KMnO₄ 滴定，消耗 19.60 mL。求样品中草酸根质量分数（%）及 C₂O₄²⁻ 的质量（g）。",
+    "referenceAnswer": "43.5 %（0.0914 g）",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q019",
+    "question": "称取 0.2500 g 样品，用 0.0250 mol/L KMnO₄ 滴定，消耗 16.40 mL。求草酸根质量分数（%）。",
+    "referenceAnswer": "36.1 %(36.1%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q020",
+    "question": "酸性条件下 KMnO₄ 滴定 C₂O₄²⁻，n(MnO₄⁻)∶n(C₂O₄²⁻)=______，即 n(C₂O₄²⁻)=______×n(MnO₄⁻)。",
+    "referenceAnswer": "2∶5；5/2",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q021",
+    "question": "由分子式 K₃[Fe(C₂O₄)₃]·3H₂O 计算 C₂O₄²⁻ 的理论质量分数（%，保留一位小数）。",
+    "referenceAnswer": "53.8 %(53.8%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q022",
+    "question": "某产物经滴定得 n(C₂O₄²⁻)=9.125×10⁻⁴ mol。用 0.0200 mol/L KMnO₄ 滴定，需消耗 KMnO₄ 体积多少 mL？",
+    "referenceAnswer": "18.25 mL",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q023",
+    "question": "求 K₃[Fe(C₂O₄)₃]·3H₂O 中结晶水的质量分数（%，保留一位小数）。",
+    "referenceAnswer": "11.0 %(11.0%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q024",
+    "question": "将 3.75 g K₃[Fe(C₂O₄)₃]·3H₂O 晶体加热至完全失去结晶水，求失水质量与无水产物质量（g）。",
+    "referenceAnswer": "0.413 g；3.337 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q025",
+    "question": "K₃[Fe(C₂O₄)₃]·3H₂O 每摩尔含______个结晶水分子，理论含水量约______%。",
+    "referenceAnswer": "3；11.0%",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q026",
+    "question": "称取 5.00 g K₃[Fe(C₂O₄)₃]·3H₂O，求其中结晶水的质量（g）。",
+    "referenceAnswer": "0.550 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q027",
+    "question": "称取 6.26 g K₃[Fe(C₂O₄)₃]·3H₂O，求无水 K₃[Fe(C₂O₄)₃] 的质量（g）。",
+    "referenceAnswer": "5.571 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q028",
+    "question": "1.234 g K₃[Fe(C₂O₄)₃]·3H₂O 完全脱水，求失去的水的质量（g）。",
+    "referenceAnswer": "0.136 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q029",
+    "question": "求 K₃[Fe(C₂O₄)₃]·3H₂O 的摩尔质量（g/mol）。",
+    "referenceAnswer": "491.25 g/mol",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q030",
+    "question": "求莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 的摩尔质量（g/mol）。",
+    "referenceAnswer": "392.14 g/mol",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q031",
+    "question": "无水 K₃[Fe(C₂O₄)₃] 的摩尔质量为______ g/mol，比三水合物少______ g/mol。",
+    "referenceAnswer": "437.20；54.06",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q032",
+    "question": "由分子式验证 K₃[Fe(C₂O₄)₃]·3H₂O 中 Fe 的质量分数（%）。",
+    "referenceAnswer": "11.4 %(11.4%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q033",
+    "question": "要配制 0.0500 mol/L K₃[Fe(C₂O₄)₃]·3H₂O 溶液 250 mL，需称取产物多少克？",
+    "referenceAnswer": "6.14 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q034",
+    "question": "配制 0.100 mol/L 无水 K₃[Fe(C₂O₄)₃] 溶液 200 mL，需称取多少克？",
+    "referenceAnswer": "8.74 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q035",
+    "question": "配制 0.0200 mol/L KMnO₄ 溶液 500 mL，需称取 KMnO₄ 多少克？",
+    "referenceAnswer": "1.58 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q036",
+    "question": "配制 0.100 mol/L 草酸(H₂C₂O₄·2H₂O)溶液 100 mL，需称取草酸二水物多少克？",
+    "referenceAnswer": "1.26 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q037",
+    "question": "平行 5 次测得产率分别为 62.3%、61.8%、62.1%、63.0%、61.9%，求平均值（%）。",
+    "referenceAnswer": "62.22 %(62.2%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q038",
+    "question": "接上题 5 次产率数据（62.3、61.8、62.1、63.0、61.9），求相对标准偏差 RSD（%）。",
+    "referenceAnswer": "0.77 %(0.77%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q039",
+    "question": "平行 5 次测得草酸根含量 53.5%、53.9%、53.2%、53.7%、53.6%，求平均值与 RSD（%）。",
+    "referenceAnswer": "53.58 %；0.48 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q040",
+    "question": "平行 5 次测产率 67.0%、67.4%、67.1%、66.8%、67.3%，求平均值（%）。",
+    "referenceAnswer": "67.12 %(67.1%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q041",
+    "question": "接上题 5 次产率数据（67.0、67.4、67.1、66.8、67.3），求 RSD 并判断精密度是否良好（%）。",
+    "referenceAnswer": "0.36 %（良好）",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q042",
+    "question": "平行测定得平均产率 62.22%，标准偏差 s=0.477%，求相对标准偏差 RSD（%，保留两位）。",
+    "referenceAnswer": "0.77 %(0.77%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q043",
+    "question": "称取产物 0.3000 g，测得其中有效成分 K₃[Fe(C₂O₄)₃]·3H₂O 为 0.2900 g，求产品纯度（%）。",
+    "referenceAnswer": "96.7 %(96.7%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q044",
+    "question": "产品理论 Fe 质量分数 11.4%，某样品实测 Fe 质量分数为 10.9%，假设杂质不含 Fe，求样品中有效产物纯度（%）。",
+    "referenceAnswer": "95.9 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q045",
+    "question": "纯产物含结晶水 11.005%。某样品 0.5000 g 加热失水 0.0520 g，假设杂质不含结晶水，求样品纯度（%）。",
+    "referenceAnswer": "94.5 %(94.5%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q046",
+    "question": "产品样品 0.3000 g 中有效产物为 0.2850 g，求产品纯度（%）。",
+    "referenceAnswer": "95.0 %(95.0%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q047",
+    "question": "0.1500 g 这一数值有______位有效数字。",
+    "referenceAnswer": "4 位",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q048",
+    "question": "某次称量读数为 5.25 g，真实值为 5.00 g，求相对误差（%）。",
+    "referenceAnswer": "5.00 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q049",
+    "question": "用 0.1500 g 样品滴定得 Fe 0.0170 g，求 Fe 质量分数（%）并判断与理论值 11.4% 的偏差方向。",
+    "referenceAnswer": "11.3 %（偏低）",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q050",
+    "question": "分析天平感量（绝对误差）为 0.0001 g，称取 0.2000 g 样品，求相对误差（%）。",
+    "referenceAnswer": "0.05 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q051",
+    "question": "合成分三步进行，每步产率分别为 95%、90%、85%，求总产率（%）。",
+    "referenceAnswer": "72.7 %(72.7%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q052",
+    "question": "三步产率分别为 98%、95%、97%，求总产率（%）。",
+    "referenceAnswer": "90.3 %(90.3%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q053",
+    "question": "三步产率分别为 90%、92%、88%，标准投料（5.00 g 莫尔盐，理论产量 6.26 g），求实际可得产物（g）。",
+    "referenceAnswer": "4.56 g(4.56 g)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q054",
+    "question": "三步产率分别为 85%、80%、75%，以 2.50 g 莫尔盐（理论产量 3.13 g）为基准，求总产率与实际产量（g）。",
+    "referenceAnswer": "51.0 %；1.60 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q055",
+    "question": "用 KMnO₄ 滴定莫尔盐中 Fe²⁺：0.0200 mol/L KMnO₄ 消耗 18.25 mL。求 n(Fe²⁺) 与 m(Fe)（g）。",
+    "referenceAnswer": "1.825×10⁻³ mol；0.1019 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q056",
+    "question": "求莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 中 Fe 的质量分数（%）。",
+    "referenceAnswer": "14.2 %(14.2%)",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q057",
+    "question": "莫尔盐样品 0.5000 g，测得其中 n(Fe²⁺)=1.200×10⁻³ mol。求样品 Fe 质量分数（%）及样品纯度（%，纯品 Fe 14.24%）。",
+    "referenceAnswer": "13.40 %；94.1 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q058",
+    "question": "预期产率为 80%，要得到 5.00 g K₃[Fe(C₂O₄)₃]·3H₂O，需称取莫尔盐多少克（理论）？",
+    "referenceAnswer": "4.99 g",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q059",
+    "question": "产物 0.1500 g 滴定消耗 0.0200 mol/L KMnO₄ 18.25 mL，实测草酸根质量分数 53.55%。已知纯品理论 53.8%，求产物纯度（%）。",
+    "referenceAnswer": "99.6 %",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q060",
+    "question": "产物样品 0.2000 g，分光法测得 Fe 质量 0.0228 g，求 Fe 质量分数（%）及相对理论值 11.37% 的偏差（%）。",
+    "referenceAnswer": "11.4 %；+0.28%",
+    "focusArea": "数据计算",
+    "subfield": "分析测定",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q061",
+    "question": "酸性介质中 H₂O₂ 氧化 Fe²⁺的离子方程式为______。",
+    "referenceAnswer": "2Fe²⁺ + H₂O₂ + 2H⁺ → 2Fe³⁺ + 2H₂O",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q062",
+    "question": "H₂O₂ 作氧化剂时其还原产物是什么？为何被称为“绿色氧化剂”？",
+    "referenceAnswer": "水(H₂O)；绿色氧化剂",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q063",
+    "question": "本实验选取 H₂O₂ 而不用 KMnO₄ 作氧化剂，理由有哪些？（写出两点）",
+    "referenceAnswer": "无 Mn²⁺ 杂质；过量 H₂O₂ 分解除去",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q064",
+    "question": "为何不宜用硝酸 HNO₃ 作氧化剂将 Fe²⁺氧化为 Fe³⁺？",
+    "referenceAnswer": "过度氧化且引入 NO₃⁻/NOx 杂质",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q065",
+    "question": "草酸在实验中的三重作用：①沉淀 Fe²⁺ 为 FeC₂O₄；②与草酸钾共同提供______（配体）；③提供酸性介质，防止 Fe³⁺______。",
+    "referenceAnswer": "C₂O₄²⁻（草酸根）；水解",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q066",
+    "question": "为何选用莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O 作铁源，而不直接用 FeSO₄？",
+    "referenceAnswer": "稳定不易氧化、纯度高",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q067",
+    "question": "为何“先沉淀 FeC₂O₄、后氧化”，而不先把 Fe²⁺氧化为 Fe³⁺再沉淀？",
+    "referenceAnswer": "防 Fe³⁺ 水解与配位竞争",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q068",
+    "question": "第一步：Fe²⁺ 与草酸生成草酸亚铁沉淀的离子方程式为______。",
+    "referenceAnswer": "Fe²⁺ + C₂O₄²⁻ → FeC₂O₄↓",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q069",
+    "question": "第二步在过量草酸根存在下，H₂O₂ 氧化 FeC₂O₄ 的整个过程可写成 H₂O₂ 氧化 Fe²⁺与 Fe³⁺配位两步。写出这两步的名称。",
+    "referenceAnswer": "氧化 + 配位",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q070",
+    "question": "配离子形成的平衡方程式：Fe³⁺ + 3C₂O₄²⁻ ⇌ ______。",
+    "referenceAnswer": "[Fe(C₂O₄)₃]³⁻",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q071",
+    "question": "已知 H₂O₂/H₂O 标准电极电势 E°=1.776 V，Fe³⁺/Fe²⁺ E°=0.771 V。求该氧化反应的电池电动势 ΔE°（V）。",
+    "referenceAnswer": "1.005 V(1.005 V)",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q072",
+    "question": "接上题，ΔE°=1.005 V，每摩尔 H₂O₂ 得 2 个电子（n=2）。求该反应的平衡常数 lgK 与 K。",
+    "referenceAnswer": "lgK≈34.0；K≈9.0×10³³",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q073",
+    "question": "为什么说 H₂O₂ 氧化 Fe²⁺ 能“定量、完全”？用平衡常数说明。",
+    "referenceAnswer": "K≈10³⁴ → 定量完全",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q074",
+    "question": "草酸为弱酸，反应体系酸度如何影响配位平衡 Fe³⁺+3C₂O₄²⁻⇌[Fe(C₂O₄)₃]³⁻？",
+    "referenceAnswer": "酸效应使平衡左移",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q075",
+    "question": "设 [Fe(C₂O₄)₃]³⁻ 总浓度 0.010 mol/L，游离草酸根 [C₂O₄²⁻]=0.50 mol/L，配合物稳常 Kf=1.0×10²⁰。求游离 Fe³⁺ 浓度（mol/L）。",
+    "referenceAnswer": "8.0×10⁻²² mol/L",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q076",
+    "question": "向三草酸合铁(III)配离子溶液中滴加强酸，观察到什么现象？配位平衡如何移动？",
+    "referenceAnswer": "平衡左移、颜色变浅",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q077",
+    "question": "第一步沉淀反应 Fe²⁺+H₂C₂O₄→FeC₂O₄↓+2H⁺，若投入 0.01275 mol Fe²⁺，求所需 H₂C₂O₄ 的物质的量（mol）。",
+    "referenceAnswer": "0.01275 mol",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q078",
+    "question": "为何实验中草酸和草酸钾通常过量加入？",
+    "referenceAnswer": "沉淀完全、配体充足",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q079",
+    "question": "在 2Fe²⁺+H₂O₂+2H⁺→2Fe³⁺+2H₂O 中，2 mol Fe²⁺ 转化为 Fe³⁺ 共转移多少 mol 电子？1 mol H₂O₂ 得到多少 mol 电子？",
+    "referenceAnswer": "2 mol；2 mol",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q080",
+    "question": "实验为何要在酸性介质中进行（加稀 H₂SO₄/HCl 调节）？",
+    "referenceAnswer": "防 Fe³⁺ 水解、稳定电位",
+    "focusArea": "反应原理",
+    "subfield": "反应机理",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q081",
+    "question": "三草酸合铁(III)中 Fe³⁺ 为高自旋 d⁵。求其仅自旋磁矩 μeff（BM）。",
+    "referenceAnswer": "5.92 BM(5.92 BM)",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q082",
+    "question": "Fe³⁺ 高自旋 d⁵ 的磁矩约为 5.92 BM，而 Fe²⁺ 高自旋 d⁶ 约为多少？（写出计算式并给出近似值）",
+    "referenceAnswer": "4.90 BM",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q083",
+    "question": "某 d⁶ 低自旋配合物（如 [Fe(C₂O₄)₃]³⁻ 的类比体系）所有电子配对，求其磁矩 μeff（BM）。",
+    "referenceAnswer": "0 BM",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q084",
+    "question": "计算高自旋 d⁵（电子构型 t₂g³eg²）的 CFSE（用 Δo 表示）。",
+    "referenceAnswer": "0 Δo",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q085",
+    "question": "计算低自旋 d⁶（t₂g⁶eg⁰）的 CFSE（用 Δo 表示）。",
+    "referenceAnswer": "-2.40 Δo",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q086",
+    "question": "电池由 H₂O₂/H₂O 与 Fe³⁺/Fe²⁺ 两个电极构成，E°(正极)=1.776 V，E°(负极)=0.771 V，n=2。求标准电动势 E°cell 及 lgK。",
+    "referenceAnswer": "1.005 V；34.0",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q087",
+    "question": "已知配合物稳定常数 Kf=1.0×10²⁰（25℃），求标准生成自由能 ΔG°（kJ/mol）。",
+    "referenceAnswer": "-114.1 kJ/mol(-114.1 kJ/mol)",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q088",
+    "question": "草酸 H₂C₂O₄ 的 pKa₁=1.23、pKa₂=4.19。求 pH=7 时草酸根 C₂O₄²⁻ 的分布系数 α₂。",
+    "referenceAnswer": "0.9985",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q089",
+    "question": "随 pH 降低（酸度增大），草酸根的分布系数 α₂ 如何变化？这对配离子稳定有何影响？",
+    "referenceAnswer": "α₂ 减小、配位减弱",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q090",
+    "question": "某组 5 次平行产率平均 62.22%，样本标准偏差 s=0.477%。按经验判据“RSD<2% 表示精密度良好”，该组 RSD 为多少（%）并判断精密度。",
+    "referenceAnswer": "0.77 %；良好",
+    "focusArea": "理论计算",
+    "subfield": "高等理论",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q091",
+    "question": "三草酸合铁(III)酸钾的制备共分七个主要大步骤，请按正确的先后顺序排列：A 溶解（配制摩尔盐、草酸两溶液） B 氧化（H₂O₂ 氧化 Fe²⁺） C 沉结晶（加乙醇析出晶体） D 洗涤（乙醇洗涤晶体） E 干燥（50 ℃ 烘干） F 配位（草酸溶解 Fe(OH)₃ 得翠绿色配离子） G 沉淀（生成草酸亚铁沉淀 FeC₂O₄·2H₂O）。",
+    "referenceAnswer": "正确的七步顺序是：溶解→草酸亚铁沉淀→氧化→配位→沉结晶→洗涤→干燥，即 A(G) 溶解与沉淀、B 氧化、F 配位、C 沉结晶、D 洗涤、E 干燥。",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q092",
+    "question": "第一步制备草酸亚铁二水合物，请排列内部操作顺序：① 加数滴 3 mol/L H₂SO₄ 和约 15 mL 蒸馏水溶解 5.0 g 摩尔盐 ② 用倾滗法分离沉淀 ③ 两溶液分别加热至近沸 ④ 称取 5.0 g 硫酸亚铁铵 ⑤ 另一烧杯称 1.7 g 草酸、加约 10 mL 水 ⑥ 将草酸溶液缓慢倒入摩尔盐溶液中并搅拌 ⑦ 加热至微沸保持约 4 分钟 ⑧ 用热水洗涤沉淀至无 SO₄²⁻（BaCl₂ 检验）。",
+    "referenceAnswer": "④ 称 5.0 g 摩尔盐 → ① 加硫酸和水溶解 → ⑤ 称 1.7 g 草酸加水 → ③ 两液分别加热至近沸 → ⑥ 草酸液缓慢倒入摩尔盐液 → ⑦ 微沸 4 分钟 → ② 倾滗分离 → ⑧ 热水洗涤至无 SO₄²⁻。",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q093",
+    "question": "制备实验中，硫酸亚铁铵（摩尔盐）的称取用量为 ____ g。",
+    "referenceAnswer": "5.0 g",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q094",
+    "question": "第一步制备草酸亚铁时，草酸二水合物（H₂C₂O₄·2H₂O）的用量是？",
+    "referenceAnswer": "1.7 g",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q095",
+    "question": "氧化步骤中加入的草酸钾一水合物（K₂C₂O₄·H₂O）用量为 ____ g。",
+    "referenceAnswer": "3.5 g",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q096",
+    "question": "氧化步骤所用 6% 过氧化氢溶液的总量约为 ____ mL（讲义控制参数）。",
+    "referenceAnswer": "8 mL",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q097",
+    "question": "第四步结晶时加入的 95% 乙醇用量约为 ____ mL。",
+    "referenceAnswer": "10 mL",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q098",
+    "question": "第二步氧化反应应控制在水浴的哪个温度？",
+    "referenceAnswer": "40 ℃ 水浴",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q099",
+    "question": "第三步配位反应中，草酸溶液逐滴滴加到热的产物液，应保持溶液处于什么状态？",
+    "referenceAnswer": "微沸（约 95–100 ℃）",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q100",
+    "question": "产物晶体在烘箱中烘干，温度上限应控制在？",
+    "referenceAnswer": "50 ℃",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q101",
+    "question": "第一步生成草酸亚铁沉淀后，需加热至微沸保持约 ____ 分钟使沉淀颗粒长大。",
+    "referenceAnswer": "4 分钟",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q102",
+    "question": "氧化完全后，需加热至沸腾保持 ____ 分钟以除去过量 H₂O₂。",
+    "referenceAnswer": "2 分钟",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q103",
+    "question": "氧化步骤中，H₂O₂ 滴加完毕后需继续在 40 ℃ 水浴中搅拌 ____ 分钟。",
+    "referenceAnswer": "5 分钟",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q104",
+    "question": "产物在 50 ℃ 烘箱中烘干约 ____ 分钟，冷却后称量记录产量。",
+    "referenceAnswer": "20 分钟",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q105",
+    "question": "判断第一步草酸亚铁沉淀是否洗涤完全，应使用哪种试剂检验？",
+    "referenceAnswer": "用 BaCl₂ 检验，无白色 BaSO₄ 沉淀即洗涤完全",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q106",
+    "question": "如何判断 Fe²⁺ 已被完全氧化为 Fe³⁺？",
+    "referenceAnswer": "用 K₃Fe(CN)₆ 检验，无蓝色沉淀出现即氧化完全",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q107",
+    "question": "第三步配位反应的正确终点判断是？",
+    "referenceAnswer": "微沸下溶液澄清透明、呈翠绿色且无悬浮物即到达终点",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q108",
+    "question": "滴加 H₂O₂ 时最佳的操作速率是？",
+    "referenceAnswer": "每秒 1–2 滴，边滴边充分搅拌",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q109",
+    "question": "第一步溶解摩尔盐时为何要加入数滴 3 mol/L H₂SO₄？",
+    "referenceAnswer": "加入数滴 3 mol/L H₂SO₄ 可抑制 Fe²⁺ 水解，确保铁以可溶 Fe²⁺ 存在",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q110",
+    "question": "第一步为何要先把摩尔盐溶液与草酸溶液分别加热至近沸，再混合？",
+    "referenceAnswer": "两液分别加热至近沸再混合，避免局部过冷，使沉淀颗粒长大、易分离",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q111",
+    "question": "第一步为何要将草酸溶液缓慢倒入摩尔盐溶液中并不断搅拌，而不是一次倒完？",
+    "referenceAnswer": "缓慢加入并搅拌，控制过饱和度，使沉淀颗粒长大而非生成细小沉淀",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q112",
+    "question": "分离第一步草酸亚铁沉淀时，常选用倾滗法而非直接抽滤，其优点是什么？",
+    "referenceAnswer": "倾滗法操作快、不穿滤，可减少沉淀损失",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q113",
+    "question": "洗涤草酸亚铁沉淀时为何要用热水而不是冷水？",
+    "referenceAnswer": "用热水洗涤可减少 FeC₂O₄ 溶解损失，同时有效去除可溶性杂质",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q114",
+    "question": "第一步洗涤草酸亚铁沉淀至无 SO₄²⁻，主要目的是去除哪种离子？",
+    "referenceAnswer": "去除摩尔盐带入的 SO₄²⁻，防止硫酸盐杂质共结晶",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q115",
+    "question": "为何 H₂O₂ 必须缓慢滴加而不能快速倒入？",
+    "referenceAnswer": "缓慢滴加以防局部过热、Fe(OH)₃ 大量生成，保证氧化均匀使产率不下降",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q116",
+    "question": "H₂O₂ 滴加过快最可能导致的不良后果是？",
+    "referenceAnswer": "局部过热，促进 Fe(OH)₃ 生成并导致氧化不完全，产率降低",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q117",
+    "question": "若 H₂O₂ 滴加过慢，会带来什么后果？",
+    "referenceAnswer": "H₂O₂ 分解失效，氧化不完全，Fe²⁺ 残留使产物发黄",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q118",
+    "question": "氧化完全后为何要加热至沸腾 2 分钟？",
+    "referenceAnswer": "加热至沸 2 分钟使过量 H₂O₂ 分解成水和氧气，避免干扰后续反应",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q119",
+    "question": "氧化好后加热至沸腾 2 分钟的目的与下列哪一项直接相关？",
+    "referenceAnswer": "除去过量 H₂O₂",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q120",
+    "question": "H₂O₂ 滴加完毕并继续在水浴搅拌 ____ 分钟后，才进行加热煮沸除过量 H₂O₂。",
+    "referenceAnswer": "5 分钟",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q121",
+    "question": "排列第二步氧化反应的内部操作顺序：① 加热至沸腾保持 2 分钟除过量 H₂O₂ ② 置 40 ℃ 水浴中搅拌使草酸钾溶解 ③ 向含 FeC₂O₄·2H₂O 的烧杯加入 3.5 g 草酸钾和约 10 mL 水 ④ 继续水浴搅拌 5 分钟 ⑤ 用 K₃Fe(CN)₆ 检验 Fe²⁺ 是否氧化完全 ⑥ 用滴管缓慢滴加 6% H₂O₂。",
+    "referenceAnswer": "③ 加草酸钾和水 → ② 40 ℃ 溶解 → ⑥ 缓慢滴加 H₂O₂ → ④ 搅拌 5 分钟 → ① 煮沸 2 分钟 → ⑤ K₃Fe(CN)₆ 检验",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q122",
+    "question": "氧化步骤中加入草酸钾 K₂C₂O₄·H₂O 的主要作用是？",
+    "referenceAnswer": "提供草酸根 C₂O₄²⁻ 与 Fe³⁺ 配位，稳定 Fe³⁺ 并抑制其水解",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q123",
+    "question": "第三步配位反应中加入草酸溶液的作用是什么？",
+    "referenceAnswer": "草酸溶解 Fe(OH)₃，并与 Fe³⁺ 配位生成翠绿色 [Fe(C₂O₄)₃]³⁻",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q124",
+    "question": "配位步骤中草酸为何不能过量？",
+    "referenceAnswer": "草酸过量使配位平衡左移、产物解离变淡黄，并可能共结晶影响纯度",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q125",
+    "question": "结晶步骤中为何要向翠绿色溶液加入 95% 乙醇？",
+    "referenceAnswer": "乙醇降低混合溶剂介电常数，使产物溶解度下降而析出晶体",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q126",
+    "question": "加入乙醇后产物溶解度降低的根本原因是？",
+    "referenceAnswer": "混合溶剂介电常数降低",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q127",
+    "question": "结晶时为何要在溶液中央悬挂一根棉线？",
+    "referenceAnswer": "棉线提供稳定晶核，促进晶体缓慢有序生长",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q128",
+    "question": "结晶时为何要覆盖表面皿并置于暗处静置？",
+    "referenceAnswer": "产物光敏，避光防光分解，覆盖静置减少扰动利于晶体生长",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q129",
+    "question": "结晶时溶液置于暗处，适宜的静置时间约为？",
+    "referenceAnswer": "数小时至过夜",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q130",
+    "question": "抽滤后的晶体需用少量乙醇洗涤 ____ 次。",
+    "referenceAnswer": "2 次",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q131",
+    "question": "为何用乙醇洗涤晶体而不是用水（尤其考虑到表面发白问题）？",
+    "referenceAnswer": "乙醇不溶解产物又能洗去水溶性杂质，且易挥发利于干燥",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q132",
+    "question": "产物在 50 ℃ 烘干 20 分钟，若温度升到 110 ℃ 以上会发生什么？",
+    "referenceAnswer": "产物约 100 ℃ 失去 3 分子结晶水，110 ℃ 以上分解，故烘干限温 50 ℃",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q133",
+    "question": "三草酸合铁(III)酸钾在约多少摄氏度失去结晶水？",
+    "referenceAnswer": "约 100 ℃",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q134",
+    "question": "晶体析出后的处理与称量，请排列顺序：① 冷却后称量并记录产量 ② 将晶体置于表面皿 ③ 50 ℃ 烘箱烘干 20 分钟 ④ 晶体析出后抽滤分离 ⑤ 用少量乙醇洗涤晶体 2 次。",
+    "referenceAnswer": "④ 抽滤 → ⑤ 乙醇洗涤 2 次 → ② 置表面皿 → ③ 50 ℃ 烘干 20 分钟 → ① 冷却称量",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q135",
+    "question": "为何不用蒸发浓缩法来结晶，而要采用加乙醇降低溶解度的方法？",
+    "referenceAnswer": "产物热敏光敏，蒸发浓缩会致热/光分解与杂质共结晶，故用乙醇降溶解度结晶",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q136",
+    "question": "第一步加热沉淀时，为何用微沸（约 95–100 ℃）而不是剧烈沸腾？",
+    "referenceAnswer": "微沸可防止暴沸与沉淀飞溅，同时可控地让沉淀颗粒长大",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q137",
+    "question": "第一步溶解 5.0 g 摩尔盐时，除加数滴 3 mol/L H₂SO₄ 外，还需加入约 ____ mL 蒸馏水。",
+    "referenceAnswer": "约 15 mL",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q138",
+    "question": "第一步中，草酸二水合物（1.7 g）需加入约 ____ mL 蒸馏水溶解。",
+    "referenceAnswer": "约 10 mL",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q139",
+    "question": "第一步在摩尔盐溶液中加数滴 3 mol/L H₂SO₄，除了抑制 Fe²⁺ 水解，还有什么实际作用？",
+    "referenceAnswer": "维持酸性环境，既抑制 Fe²⁺ 水解又减缓其被氧化，保证铁以 Fe²⁺ 有效存在",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q140",
+    "question": "若最终产品不够翠绿、明显偏黄（黄绿色），最应采取的补救措施是？",
+    "referenceAnswer": "补加 H₂O₂ 继续氧化至 K₃Fe(CN)₆ 检验无蓝色",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q141",
+    "question": "用 K₃Fe(CN)₆ 检验氧化完全时若出现蓝色沉淀（滕氏蓝），说明什么？应如何处理？",
+    "referenceAnswer": "有 Fe²⁺ 残留，补加 H₂O₂ 继续氧化至无蓝色",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q142",
+    "question": "若产品呈棕黄色或褐色，其可能原因与补救措施是什么？",
+    "referenceAnswer": "Fe(OH)₃ 未完全溶解，逐滴补加草酸至溶液澄清翠绿色",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q143",
+    "question": "第一步草酸亚铁沉淀洗涤过度，最主要的后果是？",
+    "referenceAnswer": "沉淀溶解损失，产率下降",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q144",
+    "question": "加热过程中溶液发生暴沸，下列处理方法不当的是？",
+    "referenceAnswer": "不当做法是直接猛火加热；应改用水浴、搅拌并加沸石/玻璃珠",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q145",
+    "question": "抽滤时发现滤液浑浊（穿滤），下列应急处理方案错误的是？",
+    "referenceAnswer": "错误做法是继续用原滤纸；应换慢速滤纸/双层滤纸或 G3/G4 玻砂漏斗",
+    "focusArea": "操作步骤",
+    "subfield": "实验操作",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q146",
+    "question": "本实验为何不直接让 Fe³⁺ 与草酸钾反应，而是先让 Fe²⁺ 沉淀为草酸亚铁、再氧化成 Fe³⁺（先沉淀后氧化）？",
+    "referenceAnswer": "Fe³⁺ 易水解，先沉淀为 FeC₂O₄ 可除去 SO₄²⁻ 等杂质并控铁量，再在草酸根存在下氧化，使 Fe³⁺ 被配位稳定以避免水解损失",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q147",
+    "question": "在合成中，硫酸亚铁铵（摩尔盐）所起的作用是？",
+    "referenceAnswer": "作为铁源提供 Fe²⁺，也是产率计算的基准",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q148",
+    "question": "第一步中的草酸（1.7 g）所起的主要作用是？",
+    "referenceAnswer": "作沉淀剂，与 Fe²⁺ 生成 FeC₂O₄·2H₂O 沉淀",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q149",
+    "question": "氧化步骤中加入草酸钾（3.5 g）的主要作用是？",
+    "referenceAnswer": "提供草酸根作配位剂，与 Fe³⁺ 配位生成 [Fe(C₂O₄)₃]³⁻",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q150",
+    "question": "第二步中的 6% H₂O₂ 所起的作用是？",
+    "referenceAnswer": "作氧化剂，将 Fe²⁺ 氧化为 Fe³⁺",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q151",
+    "question": "第四步加入的 95% 乙醇，在制备中的作用是？",
+    "referenceAnswer": "降低产物溶解度，促使晶体析出（盐析/结晶剂）",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q152",
+    "question": "溶解摩尔盐时加入的数滴 3 mol/L H₂SO₄ 所起的作用是？",
+    "referenceAnswer": "抑制 Fe²⁺ 水解，维持弱酸性保证铁以 Fe²⁺ 存在",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q153",
+    "question": "为何选用硫酸亚铁铵作铁源，而不是直接用三氯化铁？",
+    "referenceAnswer": "Fe²⁺ 稳定不易水解，利于先沉淀后氧化；且沉淀洗涤可除去杂质",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q154",
+    "question": "整个制备流程中，哪一个步骤属于氧化还原反应？",
+    "referenceAnswer": "第二步氧化反应，Fe²⁺ 被 H₂O₂ 氧化为 Fe³⁺",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q155",
+    "question": "哪一个步骤属于配位反应？",
+    "referenceAnswer": "第三步配位反应，生成 [Fe(C₂O₄)₃]³⁻",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q156",
+    "question": "有报道将草酸钾从 3.5 g 增至 3.8 g（过量 10%）可提高产率，其原因是？",
+    "referenceAnswer": "C₂O₄²⁻ 过量使配位平衡右移，减少 Fe³⁺ 水解损失，提高产率",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q157",
+    "question": "若直接用 Fe³⁺ 盐（如 FeCl₃）与草酸钾反应合成，会有什么问题？",
+    "referenceAnswer": "Fe³⁺ 强烈水解生成 Fe(OH)₃，铁大量损失、产物不纯",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q158",
+    "question": "Fe³⁺ 与 C₂O₄²⁻ 的配位平衡方程是？",
+    "referenceAnswer": "Fe³⁺ + 3C₂O₄²⁻ ⇌ [Fe(C₂O₄)₃]³⁻",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q159",
+    "question": "为何产率计算可以以 1 mol 摩尔盐对应 1 mol 产物？",
+    "referenceAnswer": "铁元素守恒，摩尔盐中的铁全部进入产物",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q160",
+    "question": "产率计算以铁元素守恒为基准，以 ____ g 摩尔盐作为理论产量计算起点。",
+    "referenceAnswer": "5.0 g（n≈0.01275 mol，理论产量 6.26 g）",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q161",
+    "question": "产率计算为什么必须以铁元素的物质的量为基准，而不是以草酸钾或草酸为基准？",
+    "referenceAnswer": "以铁元素守恒为基准，因铁全流程守恒且是产物关键组分",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q162",
+    "question": "本实验最终产物的化学式是？",
+    "referenceAnswer": "K₃[Fe(C₂O₄)₃]·3H₂O",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q163",
+    "question": "产物 K₃[Fe(C₂O₄)₃]·3H₂O 的摩尔质量为 ____ g/mol。",
+    "referenceAnswer": "491.25 g/mol",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q164",
+    "question": "正确的产物的外观特征是？",
+    "referenceAnswer": "翠绿色晶体",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q165",
+    "question": "蓝晒法中，利用产物与铁氰化钾反应可生成哪一种蓝色物质？写出其化学式。",
+    "referenceAnswer": "KFe[Fe(CN)₆]",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q166",
+    "question": "产物的光敏性体现在哪一现象上？",
+    "referenceAnswer": "翠绿色晶体见光分解，生成 Fe²⁺，需避光保存",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q167",
+    "question": "配离子 [Fe(C₂O₄)₃]³⁻ 的稳定常数约为多少（数量级）？它说明了什么？",
+    "referenceAnswer": "约 1.6×10²⁰，说明内界配离子非常稳定",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q168",
+    "question": "第三步配位反应中草酸的用量约为多少？",
+    "referenceAnswer": "约 1.5 g",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q169",
+    "question": "第三步用于溶解 Fe(OH)₃ 的草酸溶液浓度约为？",
+    "referenceAnswer": "约 0.5 mol/L",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q170",
+    "question": "为什么 Fe²⁺ 的氧化必须在草酸钾存在下进行，而不能先氧化再配位？",
+    "referenceAnswer": "生成的 Fe³⁺ 需立即被 C₂O₄²⁻ 配位稳定，否则水解成 Fe(OH)₃ 损失",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q171",
+    "question": "若第一步使用的摩尔盐已经发黄（Fe²⁺ 被氧化），会对实验产生什么影响？",
+    "referenceAnswer": "Fe²⁺ 被氧化后无法形成草酸亚铁沉淀，铁损失，产率大降",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q172",
+    "question": "本实验加热操作多选用水浴而不是直接明火加热，主要原因是？",
+    "referenceAnswer": "水浴温度均匀易控，避免局部过热与暴沸",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q173",
+    "question": "第三步配位反应为何要保持微沸？",
+    "referenceAnswer": "高温促进 Fe(OH)₃ 溶解和配位，利于均匀混合与终点判断",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q174",
+    "question": "三草酸合铁(III)酸钾的制备实验综合了哪三类化学反应？",
+    "referenceAnswer": "沉淀反应、氧化还原反应、配位反应",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q175",
+    "question": "向翠绿色产物溶液中加入 NaOH 或氨水，可观察到什么现象？它验证了什么？",
+    "referenceAnswer": "生成棕红色 Fe(OH)₃ 沉淀，证明配离子受碱影响解离、配位平衡移动",
+    "focusArea": "制备流程",
+    "subfield": "合成制备",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q176",
+    "question": "产物呈正常翠绿色，其颜色来源于？",
+    "referenceAnswer": "d-d 跃迁吸收橙红光（约 600–700 nm）",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q177",
+    "question": "产品发黄（黄绿色）时，怎样诊断并补救？",
+    "referenceAnswer": "Fe²⁺ 未氧化完全，K₃Fe(CN)₆ 呈蓝色确认后补加 H₂O₂ 继续氧化",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q178",
+    "question": "产品呈棕黄色时，怎样诊断并补救？",
+    "referenceAnswer": "Fe(OH)₃ 未完全溶解，逐滴补加草酸至澄清翠绿色",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q179",
+    "question": "产品偏淡黄色时，原因与补救措施是什么？",
+    "referenceAnswer": "草酸过量使配位平衡左移，应控制草酸用量避免过量",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q180",
+    "question": "产品呈暗绿色或灰绿色时，原因与补救措施是什么？",
+    "referenceAnswer": "光分解产物 FeC₂O₄ 混入，应在结晶与保存全程严格避光",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q181",
+    "question": "产品表面发白是什么原因？如何补救？",
+    "referenceAnswer": "K₂SO₄ 白色残留，用少量冷蒸馏水快速冲洗后抽干",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q182",
+    "question": "产物产率低于 45% 时，通常说明什么？",
+    "referenceAnswer": "有明显操作失误，需查找原因并重做",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q183",
+    "question": "产率超过 95% 属于异常，可能原因是什么？应如何处理？",
+    "referenceAnswer": "未干燥完全或含无机盐杂质，应检查纯度并烘干至恒重",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q184",
+    "question": "产率在 60%–75% 之间属于哪个等级？",
+    "referenceAnswer": "良好",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q185",
+    "question": "比较‘蒸发结晶’与‘加乙醇结晶’两种方法，哪一种更适合本实验，为什么？",
+    "referenceAnswer": "加乙醇结晶更合适，避免蒸发加热带来的热/光分解与杂质共结晶",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q186",
+    "question": "为什么不能用 FeCl₃ 与 K₂C₂O₄ 直接混合来制备，而必须走先沉淀后氧化的路线？",
+    "referenceAnswer": "Fe³⁺ 强水解生成 Fe(OH)₃，故需先沉淀后氧化以配位稳定 Fe³⁺",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q187",
+    "question": "课堂对比实验中，‘快滴 H₂O₂’与‘慢滴 H₂O₂’两组产品会有何差异？",
+    "referenceAnswer": "快滴组 Fe(OH)₃ 多、氧化不完全、产品发黄产率低；慢滴组翠绿产率高",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q188",
+    "question": "成品三草酸合铁(III)酸钾应如何正确保存？",
+    "referenceAnswer": "密封并用棕色瓶或铝箔包裹避光保存",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q189",
+    "question": "当产率低于 50% 时，请按顺序系统排查其原因。",
+    "referenceAnswer": "按试剂质量→氧化完全→洗涤过度→Fe(OH)₃溶解→结晶条件→避光 六项逐一排查",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "较难"
+  },
+  {
+    "id": "Q190",
+    "question": "晶体细小、形貌差的最常见原因是？",
+    "referenceAnswer": "乙醇加入过快导致爆发性成核，应缓慢加入",
+    "focusArea": "综合",
+    "subfield": "综合研究",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q191",
+    "question": "使用草酸（H₂C₂O₄）时应采取哪些安全措施？",
+    "referenceAnswer": "戴手套护目镜，通风橱内操作",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q192",
+    "question": "6% H₂O₂ 在操作与保存上的注意事项是？",
+    "referenceAnswer": "氧化性，避免接触有机物并避光保存，缓慢滴加",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q193",
+    "question": "95% 乙醇属于哪类危险性质？操作上要注意什么？",
+    "referenceAnswer": "易燃液体（闪点约 13 ℃），远离明火与热源",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q194",
+    "question": "含有 K₃Fe(CN)₆ 的含氰废液应如何处置？",
+    "referenceAnswer": "单独收集，碱性氯化法处理至 CN⁻<0.5 mg/L 后排放",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q195",
+    "question": "H₂SO₄/H₂C₂O₄ 等酸性废液应如何处理后才排放？",
+    "referenceAnswer": "中和至 pH 6–9 后达标排放",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q196",
+    "question": "含 Fe³⁺/Fe²⁺ 的重金属废液如何处理？",
+    "referenceAnswer": "加 NaOH 沉淀 Fe(OH)₃，过滤后滤液达标排放",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q197",
+    "question": "含乙醇的有机废液应如何处置？",
+    "referenceAnswer": "回收再利用或大量水稀释后排放",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q198",
+    "question": "实验时正确的个人防护（PPE）应包括哪些？",
+    "referenceAnswer": "护目镜、长袖实验服、耐腐蚀手套，长发束起",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "易"
+  },
+  {
+    "id": "Q199",
+    "question": "为什么产物保存与结晶过程都要避光？",
+    "referenceAnswer": "产物光敏，见光分解生成 Fe²⁺，须避光保存",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "中"
+  },
+  {
+    "id": "Q200",
+    "question": "化学品（如 H₂O₂ 溶液）不慎溅入眼睛，正确的应急处理是？",
+    "referenceAnswer": "洗眼器冲洗≥15 分钟，撑开眼睑转动眼球，冲洗后就医",
+    "focusArea": "安全",
+    "subfield": "安全规范",
+    "difficulty": "较难"
+  }
+]

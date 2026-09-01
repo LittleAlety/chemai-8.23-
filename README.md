@@ -1,15 +1,18 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://k3fec2o43.clawdbot.ggff.net/)
-[![Version](https://img.shields.io/badge/version-v74-blue)](https://github.com/LittleAlety/chemai-8.23-)
-[![FAQ](https://img.shields.io/badge/FAQ-3102条-green)](https://github.com/LittleAlety/chemai-8.23-)
+[![Version](https://img.shields.io/badge/version-v85-blue)](https://github.com/LittleAlety/chemai-8.23-)
+[![FAQ](https://img.shields.io/badge/FAQ-3326条-green)](https://github.com/LittleAlety/chemai-8.23-)
 [![Corpus](https://img.shields.io/badge/语料库-445篇-orange)](https://github.com/LittleAlety/chemai-8.23-)
 [![KG](https://img.shields.io/badge/知识图谱-123节点-blueviolet)](https://github.com/LittleAlety/chemai-8.23-)
 [![Videos](https://img.shields.io/badge/本地视频-4部-teal)](https://github.com/LittleAlety/chemai-8.23-)
+[![AI 模型](https://img.shields.io/badge/AI神经网络模式-诚实工程架构-green)](./docs/AI模型架构.md)
 
 **ChemAI** 是面向大学化学实验教学的 AI 智能平台，以 **三草酸合铁(III)酸钾 K₃[Fe(C₂O₄)₃]·3H₂O** 制备实验为核心，集成 **LLM-RAG 智能问答、智能体集群、知识图谱可视化、语料库文献检索、掌握度自适应测评、科普探索、本地教学视频、深度问题自学习迭代**等功能。
 
 自 v69 起，AI 助手完成**模型化改造**，输入框上方以 **6 个工作模式 chips** 自由切换：💬 **学习问答**（快速本地答案）/ 🧠 **深度求解**（计划+集群联网）/ 📝 **智能测验**（掌握度测评）/ 🌐 **深度研究**（强制联网检索，多源权威校验）/ 📊 **可视化**（10 类富模板图）/ 🎯 **精通之路**（SM-2 间隔复习 + 学习画像）。集群模式由 5 个智能体（检索官 / 推理官 / 网页研究员 / 编辑官 / 质检官）协作，可在站内题库、PubChem、维基百科、Bing 等来源间**按需联网检索**，并对网页资料与实验讲义做**权威冲突校验**。平台内置 **4 部本地录制教学视频**（制备 / 性质 / 配离子电荷）、**白天 / 夜晚双主题**（导航栏 🌓 一键切换，自动记忆偏好）、面向非化学专业的 **科普探索页** 与 **教师命题大板块**，构建"图文 + 视频 + AI 问答 + 测评"四位一体的学习闭环。FAQ 检索历经 **R2–R15 鉴别力路由修复**（复杂/难题 86 题 100%）与**答非所问根治**，搭配 **MSDS 查询网** 与化学实体特异性识别，确保重要内容不答非所问。
+
+**关于"AI 神经网络模式"的诚实说明**（详见 [`docs/AI模型架构.md`](./docs/AI模型架构.md)）：本平台作答所用的**检索排序不是神经网络**——`searchCorpus` / `matchFAQ` 是一张**手工设定的、无梯度、跨轮次稳定**的权重打分表（语料字段 10/6/6/4/4/3、CONCEPT_BOOST +8、HIT_THRESHOLD=6；FAQ 按 keyScore+entScore+longKey·0.5+lenBonus+titleTopical+distinctHits·2）。全系统**唯一含神经网络**的是 **DeepSeek Transformer 大语言模型**（生成层 + 评分层，托管 API、权重冻结、ChemAI 侧零微调）。v85 起新增**语料权威度权重**：由离线作业 [`训练管道/corpus_weight_analysis.js`](./训练管道/corpus_weight_analysis.js) 读透全部 445 篇文献后，计算每条语料 `A(id)`、子域覆盖度/反挤占 boost，以及"语料子域→权威 FAQ 子域"映射，**加法式/门禁级**注入运行时（不进 `matchFAQ` 基础公式），详见 [`docs/语料权重分析报告.md`](./docs/语料权重分析报告.md)。
 
 ---
 
@@ -18,7 +21,7 @@
 | 页面 | 文件 | 说明 |
 |------|------|------|
 | **首页入口** | `index.html` | React SPA 首页，**命名路由**（`#/assistant`、`#/videos`…）才接管、裸 `#/` 回落地页；身份选择（非化学专业 / 化学专业 / **教师**），含 LLM 配置面板；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
-| **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3102 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
+| **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**3326 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**v85 语料权威度 hook**（`loadCorpus` 摄取 `corpus_weights.json` → `searchCorpus` 加法权威 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，全部不进 `matchFAQ` 基础公式）；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
 | **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染；教师快捷入口已加 **genCard（智能命题·教师门控）**，模块计数 6→7 |
 | **教师命题** | `generator.html` | **教师门控命题大板块**：智能生成 + 自主选题 + Word/PDF 导出 + 超星风格分节渲染 + 化学式上下标；答案契约（`referenceAnswer`）＋字母分配，AI 补全选项/难度系数 |
 | **知识图谱** | `knowledge.html` | 123 节点 / 195 关联的交互式配位化学知识网络，**高区分 5 色分区配色**（祖母绿/暖橙/玫红/靛蓝/深紫） |
@@ -37,7 +40,7 @@
 
 ## 深度问题自学习迭代体系
 
-通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **3102 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环**（详见 [版本历史](#版本历史)）。
+通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **3326 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环**（详见 [版本历史](#版本历史)）。
 
 ### 迭代历程
 
@@ -70,14 +73,20 @@
 
 ## 技术架构
 
-### AI 问答流水线 — 智能体集群
+### AI 问答流水线 — 确定性检索-评分层 + 智能体集群
+
+> 检索与排序是一条**手工设定权重的确定性打分表**（无梯度、无反向传播、无 embedding）；真正的神经网络是生成/评分所用的 DeepSeek Transformer LLM（权重冻结）。详见 [`docs/AI模型架构.md`](./docs/AI模型架构.md)。
 
 ```
 用户提问
   ↓
-阶段 1：多策略检索（BM25 + IDF 加权 + 化学实体类比 + 方法学转移）
+阶段 1：确定性检索-评分层【层1 · 手调权重 · 无学习】
+         ├─ searchCorpus：字段 10/6/6/4/4/3 + CONCEPT_BOOST +8/子域 + 反馈净重 + 语料权威度 A(id)·boost（v85，加法）
+         ├─ matchFAQ：keyScore + entScore + longKey·0.5 + lenBonus + titleTopical + distinctHits·2
+         │          （+200 exactQ、×0.12 OP_RE、×0.03 OTHER_OX、√FH_THRESH、IDF/GENERIC/CHEM_NOUN）
+         └─ confidenceScore / relatedFAQs（子域偏好 v85）/ bestOnTopicFAQ
   ↓
-阶段 2：类比推理引擎（24 组跨体系概念映射）
+阶段 2：类比推理引擎（24 组跨体系概念映射）+ 确定性计算层【层2 · lib-calc.js 公式引擎】
   ↓
 阶段 3：置信度评分 + 混合答案生成（FAQ / 类比 / LLM / 网络回退）
   ↓
@@ -85,6 +94,11 @@
   ↓
 阶段 5：网页研究员（集群模式 · 站内→PubChem→维基→Bing 多源，熔断降级）
 ```
+
+> - **层1 确定性检索-评分层**：`searchCorpus` / `matchFAQ` 权重全是代码常数，跨轮次稳定；权威度 boost 走**加法式**（只在已命中条目 `.a×≈4`），不改 `matchFAQ` 基础公式。
+> - **层2 确定性计算层**：`scripts/lib-calc.js` 对任意输入按公式当场计算产率/摩尔质量/结晶水/滴定/RSD/磁矩，不背诵 FAQ 示例值。
+> - **层3 DeepSeek Transformer 生成层**（唯一神经网络）：`api.deepseek.com/v1/chat/completions`，`model=deepseek-chat` 默认 / `deepseek-v4-flash`，`temp 0.2`、`max_tokens 1000`、SSE、重试×3；`buildLLMContext` 取 matchFAQ top-1 + searchCorpus 权威优先 top-2。
+> - **层4 LLM-as-Judge 自学习门禁**：`_score_baseline.js` GATE=9.5 + `run_pipeline.js` 五智能体（RUBRIC 准确 30/完整 20/化学规范 15/来源 15/清晰 10/安全 10=100）+ `self_train.js` 三优化循环。
 
 由 **6 个工作模式 chips** 驱动（输入框上方切换，localStorage 记忆，默认学习问答），每个模式经 `MODE_RECIPES` 声明 `cluster/web/llm/plan/stream/route` 参数，自动派生「正常 / 集群」行为（`cluster:true` 即进入 5-agent 集群工作台）：
 - **集群模式**（深度学习 / 深度研究触发）：5-agent 集群工作台 + 按置信度自适应联网检索（低置信度自动触发；含"搜索/查一下/pubchem"等词手动触发），支持 重新生成 / 加强网页检索 / LLM重答 / 集群状态 操作；对话按用户身份（学生/教师等）切换语言风格。
@@ -106,12 +120,17 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 ```
 chemai-8.23-/
 ├── index.html                 # 首页入口（React SPA，命名路由，含视频资源库页 + 科普探索页）
-├── assistant.html             # AI 助手（3102 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评）
+├── assistant.html             # AI 助手（4211 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
 ├── main.html                  # 实验手册（11 章，教师快捷入口 genCard）
 ├── generator.html             # 教师命题大板块（教师门控，智能生成 + 自主选题 + Word/PDF 导出）
 ├── knowledge.html             # 知识图谱（123 节点 / 195 关联，5 色分区）
 ├── corpus.html                # 语料库（445 篇）
 ├── prep.html                  # 课前预习
+├── docs/
+│   ├── AI模型架构.md          # AI「神经网络模式」说明（诚实的工程架构）
+│   ├── 语料权重分析报告.md    # 语料权威度权重分析报告（离线作业生成）
+│   ├── knowledge-reextract-report.md # 语料知识清单再检索报告（v85，540 数值句 + 14 条权威事实）
+│   ├── CHANGELOG_v35.md / 训练数据与成绩总览.md / MEMORY.md # 变更/训练统计/开发备忘
 ├── assets/
 │   ├── assistant-model.js    # v69/v72 助手模型（IIFE：6 工作模式 MODE_RECIPES + 10 类可视化构建器 + SM-2 复习 + loadKG）
 │   ├── agent-cluster.js      # 网页研究员模块（v56，自包含 IIFE：站内/PubChem/维基/Bing 多源+熔断+冲突校验）
@@ -120,18 +139,27 @@ chemai-8.23-/
 │   ├── images/              # 实验实拍图 + 科普探索页插图（assets/images/explore/）
 │   └── ...                   # CSS / JS
 ├── data/
-│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，3102 条，window.FAQ=）
+│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，4211 条，window.FAQ=）
 │   ├── manual.json           # 实验手册（11 章 / 42 节）
 │   ├── corpus.json           # 语料库清单（445 篇）
+│   ├── corpus_weights.json   # 语料权威度权重（离线生成，v85；`npm run corpus:weights`）
+│   ├── corpus_authoritative_facts.json # 14 条语料权威事实（v85，注入 faq_runtime.js）
+│   ├── categories.json       # 权威 17 官方案 + ~70 别名（子域归一 + faqMapping，已部署）
 │   ├── images.json           # 实验图片索引（76 张）
 │   ├── kg.json / questions_bank.json / report_rubric.json
 │   └── academic_lexicon.json # 学术词表（dev-only，不部署）
 │   # 其余 dev-only（不部署）：kb.json（遗留知识块）、questions_master.json（题库池）、
-│   #   categories.json、assessment_kp.json、lexicon_sources_dump.json、all_cycle_questions.json、faq_key_blacklist.json
-├── scripts/                   # 工具脚本（lib-assistant-faq.js、v44/v66/v67/v68-inject-*.js、v45-round.js 等）
-├── Agent工作区/ 训练管道/ 诊断与调试/ 试题迭代记录/
+│   #   assessment_kp.json、lexicon_sources_dump.json、all_cycle_questions.json、faq_key_blacklist.json
+├── scripts/                   # 工具脚本（lib-assistant-faq.js、lib-calc.js 通用计算引擎、v44/v66/v67/v68-inject-*.js、v45-round.js 等）
+├── 训练管道/
+│   ├── corpus_weight_analysis.js  # 语料权威度离线作业（读透 445 篇，输出 corpus_weights.json + 报告）
+│   ├── corpus_extract_facts.js    # 语料数值句只读抽取（v85，输出 540 句 + 14 条权威事实）
+│   ├── inject_authoritative_facts.js # 语料权威事实幂等注入器（v85，纯追加到 faq_runtime.js）
+│   ├── local_answer.js            # 答题路径无头官方复刻（逐字镜像 assistant.html，供回归/评分）
+│   └── _score_baseline.js         # 阶段四基准评分：round4 题本地回复 → LLM 评分（门禁 9.5）
+├── Agent工作区/ 试题迭代记录/
 ├── 三草酸合铁酸钾资料/        # 原始语料 + 视频资料（含 _原版备份）
-├── _archive/                  # 历史归档（v47–v55 时代脚本 / 快照 / 截图）
+├── _archive/                  # 历史归档：调试脚本(7组)/报告与诊断/数据备份/临时产物/资料汇编/杂项 + js/jpg/json/...
 ├── .github/workflows/deploy.yml  # Actions 备用部署（手动触发）
 └── README.md / DEPLOY.md
 ```
@@ -162,7 +190,7 @@ npx serve .                     # Node.js
 
 ### 启用 LLM
 
-在「AI 助手」页面左侧 **🤖 LLM AI 配置** 面板粘贴 DeepSeek API Key 即可；不配置则自动回退本地检索 + 类比推理模式。
+在「AI 助手」页面左侧 **🤖 LLM AI 配置** 面板粘贴 DeepSeek API Key 即可；不配置则自动回退本地检索 + 类比推理模式。离线训练/评分（`npm run pipeline`、`node 训练管道/_score_baseline.js`）走 DeepSeek 托管 API，需要 `DEEPSEEK_KEY` 环境变量；`npm run corpus:weights` 为纯离线确定性作业，**无需任何 key**。
 
 ### 体验集群模式
 
@@ -172,21 +200,23 @@ npx serve .                     # Node.js
 
 ## 部署
 
-- **实际部署**：站点由 GitHub 内置 **「从 master 分支构建」Pages 服务** 发布——向 `master` 推送即自动重建，**部署分支里所有已提交文件**（含 `assets/`、`data/`、视频、`docs/` 等）。未提交的 untracked 文件不会上线。
-- **Actions 备用**：`.github/workflows/deploy.yml` 为手动触发的精简 `_site` 组装（仅 6 页面 + assets + 8 个运行时 data），**不是实际部署源**；除非在仓库 Settings→Pages 将 Source 从「Deploy from a branch」切换为「GitHub Actions」，否则改它不影响线上。
+- **实际部署**：站点由 GitHub 内置 **「从 master 分支构建」Pages 服务** 发布——向 `master` 推送即自动重建，**部署分支里所有已提交文件**（含 `assets/`、`data/`、视频、`docs/`、`scripts/lib-calc.js` 等）。未提交的 untracked 文件不会上线。
+- **Actions 备用**：`.github/workflows/deploy.yml` 为手动触发的精简 `_site` 组装（7 页面 + assets + 10 个运行时 data + `scripts/lib-calc.js` + `CNAME`），**不是实际部署源**；除非在仓库 Settings→Pages 将 Source 从「Deploy from a branch」切换为「GitHub Actions」，否则改它不影响线上。
 - **验证部署**：推送后约 2–3 分钟重建生效；可用线上 `assistant.html` 的 git blob 哈希与仓库 HEAD 对比确认。
+- **本地生成权重**：改动 `data/corpus.json` 或 `data/categories.json` 后，先 `npm run corpus:weights`（= `node 训练管道/corpus_weight_analysis.js`，无需 LLM）再部署，否则运行时语料权威度未更新。
 - 详见 [DEPLOY.md](./DEPLOY.md)。
 
 ---
 
 ## 版本历史
 
-> 版本线 v30 → v74（2026-07 至 2026-08-25）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载。
+> 版本线 v30 → v85（2026-07 至 2026-09）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载；v85 起含「语料权威度权重 + AI 模型架构文档 + 部署补齐」。
 
-### 近期（v56 → v74）
+### 近期（v56 → v85）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v85** | 09-01 | **全局优化 + 语料权威度 + AI 模型文档 + 部署补齐**（本交付）：① **读透全部 445 篇语料**——新增离线确定性作业 `训练管道/corpus_weight_analysis.js`（`npm run corpus:weights`，无需 LLM），计算每条语料权威度 `A(id)=0.40·doctype+0.20·abstract_type+0.20·depth+0.20·元数据完整度` × 子域反挤占 boost（`clamp(1+0.35·(MEDIAN−count)/MEDIAN, 0.85, 1.45)`），产出 `data/corpus_weights.json` + `docs/语料权重分析报告.md`（445 条全遍历：权威分层、13 子域覆盖 over/under、语料→FAQ 权威映射）；② **加法式/门禁级运行时 hook**——`loadCorpus` 摄取 `corpus_weights.json` → `searchCorpus` 加法 `entryAuthority[id].a×≈4` + `buildLLMContext` 权威优先 cherry-pick top-2（含子域多样性 tie-break）+ `relatedFAQs` 子域偏好（`link.w×3`），**全部不进 `matchFAQ` 基础公式**（diff 回归验证）；`local_answer.js` 逐字镜像；③ **AI 模型文档**——`docs/AI模型架构.md` 如实说明"检索排序是手调权重无学习、唯一神经网络是 DeepSeek Transformer（冻结、零微调）"，杜绝虚构网络层；④ **README 重写**（计数 3326/445/123，加 AI 模型徽章 + 权威度说明）；⑤ **部署补齐**——`deploy.yml` 补 `generator.html`/`data/categories.json`/`data/corpus_weights.json`/`scripts/lib-calc.js`（后者此前 untracked），`package.json` repository.url 修正为 `chemai-8.23-`；⑥ 基础设施——把 `normCat` 别名表同步到权威 `data/categories.json`（~70 别名，gate 级）。✅ matchFAQ 基础表达式逐字节不变、`local_answer.js` 双副本一致、corpusTotal=445、boost 范围 0.85–1.29、over/under 与计数对称 |
 | **v74** | 08-25 | **assistant 助手重构落地（v72/v72.1 全部项）**：① **LLM 质检兜底**——`llmAnswerText` 记录 LLM 全文，`selfCheck`/讲义核对(`scanFacts`)运行对象改 `usedLLM?llmAnswerText:html`，LLM 编造数值/方程式不再绕过质检官与讲义核对；② **async 管道**——答案注入包装 `injectDone` Promise，网页研究员/技能官并发 `Promise.all([injectDone,webP,skillP])`，`qaBusy` 待三者全完成后复位，消除打字/提交竞态；每气泡自持 `_qaCtx`/`_skillCtx`+`_qaCtxOf(btn)`，旧答案按钮不误作用新问题；技能卡 `runSkills(...,injectDone)` 不与打字机交错；`fbStatus` id→class；③ **置信度口径**——新增 `faqConfidence()`(0.5~0.95 映射)替换「命中即0.9」，与 `local_answer.js` 双副本逐字同步；④ **知识图谱深链**——`knowledge.html` 新增 `SUBFIELD_ALIAS`(6 子领域→节点)+`resolveNodeTarget`(id→节点名→子领域三级)+`resolveDeepLink`(双 rAF 定位)，图谱官 `kgSkill` 返回 `?node=<id>`，assistant `extendHTML`/`kgResultHTML`/`suggestHTML` 生成 `?node=<…>` 深链、缺 id 回退 subfield、「节点/相关」措辞；⑤ **安全**——上传文件包 `<user-file name>`+system prompt 第5条防提示词注入、PDF 解析改本地 `assets/vendor/pdf.min.js`(去 CDN)；⑥ **代码/口径**——`quiz/mastery` chips 改动作入口、合并 `AUTHORITY_DOMAIN_RE`+`DOMAIN_RE`→单一 `const DOMAIN_RE`、删死代码(`setRole`/`refreshRoleSwitch`/`_lastRoleIntro`/`[data-role]`/死CSS，保留身份讲稿/深度门控)、「⏹结束并生成报告」未开始不再误触发。✅ `matchFAQ`/`norm`/`confidenceScore`/`faqConfidence` 等 twin 两副本逐字一致、check-all 全绿(3102 FAQ 0 问题段)、npm test 67/67、node --check 通过；⚠ `injectDone` 打字机分支取消挂起风险与原行为一致、`extendHTML` 深链用节点名(接收端按名解析等价) |
 | **v73** | 08-25 | **FAQ 答非所问内容轮**（纯 `data/faq_runtime.js` 数据修复，多 agent-loop 两轮 21 对抗题→真实 `matchFAQ`→判分→修数据，**21 题全命中**；代码零改、不涉 matchFAQ 两副本同步）：① **数值/错记纠偏**——莫尔盐称 **5.0g**(笔记误记 1.5)→本实验称取莫尔盐的质量、H₂O₂ **8mL**(误记 12)→6%H2O2 8mL具体用量、双氧水 **6%**(当 30%)→过氧化氢浓度规格、草酸 **0.5mol/L**(当 0.05)→配位用草酸浓度；② **跨实验/机理-vs-操作**——制备摩尔盐保持酸性+铁屑过量→制备硫酸亚铁铵时为什么要保持溶液酸性(先前被「稳A对比」掠走)、加双氧水为什么逐滴+搅拌→为何逐滴加入过氧化氢(先前被「草酸为何逐滴加入」掠走)；③ **错配合物**——三草酸合锰酸钾草酸根含量测定→三草酸合锰(III)酸钾(先前被铁 KMnO₄ 滴定掠走)；④ **trim 裸键治 title-topical 磁吸**——删「草酸为何逐滴加入」裸动词键(全倒进去/一口气/倒进去)、删「自催化化学发光/经典动力学」裸`高锰酸钾`键→`能换成高锰酸钾吗加多少`恢复→用H2O2不用KMnO4；⑤ **答案补句**——莫尔盐摩尔质量补「含6个结晶水(·6H₂O)」。✅ 23 题关键回归 0 劫持(「双氧水多少毫升」→8mL、critical「为什么用100度烘干」仍→100℃失水)、check-all 全绿(3102 条 0 问题段)、verify-lecture-facts 权威层干净(110℃/30% 均以讲义为准)；⚠ 遗留「X带几个结晶水」含多词时被 理论产量6.26g(标题topical+5) 压过——score 层标题优势，未动 |
 | **v72.1** | 08-25 | **assistant 可视化再扩展 + 答非所问根治 + MSDS 查询网 + 化学实体特异性**：① 可视化扩至 **10 类富模板**（`detectVizType` 从特异到通用分派 isomer→crystal→complex→apparatus→thermal→titration→redox→safety→kg→flow）+ **双路径出图**（调用点从 `!usedLLM` 块内移到 if/else 后共享区，配 DeepSeek Key 的 LLM 流式与本地打字机**都出图**）；修复流程图 `H` 未声明回归（生产里一直是"想可视化？"兜底文案而非真图）；② **答非所问根治**：`matchFAQ` `norm` **温度归一化**（`℃/摄氏度/°c`→`度`，修复「110度」错配「d5构型CFSE」）+ **疑问词泛词化**（为什么/如何/怎么…入 GENERIC_KEYS，离线误中 5→2）+ `bestOnTopicFAQ` 宽松兜底 + `onTopic` 域内门控（彻底无内容→明确"与实验无关"拒答）；③ **MSDS 查询网**：ChemicalBook 检索不到过氧化氢，`msdsCardHTML` 前置 **somsds.com**「MSDS查询网」链接；④ **detectChems 特异性**：CHEM_DB 补草酸钾/草酸亚铁独立条目，消「草酸钾」误报为「草酸」、`K2C2O4` 漏检；⑤ pipeline(`local_answer.js`) 同步。**核心内容 64/64 命中、离线误中 5→2** |
@@ -256,7 +286,7 @@ npx serve .                     # Node.js
 
 ### FAQ 自训练增长链（"重复任务"时间线）
 
-FAQ 累计 3102 条的演进路径（含跨版本的自训练轮次）：
+FAQ 累计 3326 条的演进路径（含跨版本的自训练轮次）：
 
 | 阶段 | FAQ 数 | 说明 |
 |------|:------:|------|
@@ -266,8 +296,9 @@ FAQ 累计 3102 条的演进路径（含跨版本的自训练轮次）：
 | 自训练 1–5 次 | 1055 → 2649 | 200 道深度题循环（5 次全部 200/200 ≥9.5，avg 9.78） |
 | 第 6 次 | 2649 → 2846 | 199/199 ≥9.5，assistant 同步 v55 |
 | 第 7 次 | 2848 → 3047 | **循环内首次直接过门禁**（199/199 ≥9.5） |
-| v60 后（推算） | 3047 → 3102 | 语料库扩容 + 深度问题自训练累计（运行时 FAQ 当前 3102 条） |
+| v60 后（推算） | 3047 → 3102 | 语料库扩容 + 深度问题自训练累计 |
 | 5 轮门禁收尾 | → 3102 | 门禁 9.5：avg 4.28→9.92，final 199/199 avg 9.97 |
+| v72.1–v74 内容轮 | 3102 → 3326 | 答非所问内容轮（v73 对抗 21 题全命中，v72.1 离线误中 5→2，v74 质检兜底/置信度口径重构）+ 语料权威度 hook（v85，+224 内容/覆盖补录） |
 
 > 自训练门禁（v46+）：`训练管道/self_train.js` 5 轮循环，出题→审核→本地回复→评分（门禁 9.5）→3 优化（检索/答案/覆盖）→确定性覆盖补录，全部 ≥9.5 提前结束；重复 ID 由题目文本对齐修复。
 

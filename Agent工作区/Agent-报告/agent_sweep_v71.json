@@ -1,0 +1,344 @@
+{
+  "total_faq": 3102,
+  "corpus_n": 445,
+  "conflicts": [],
+  "invalidRefs": [],
+  "mismatch": [
+    {
+      "index": 350,
+      "title": "第一步草酸用量",
+      "ref": 14,
+      "token": "1.7g",
+      "citeTitle": "思政 基于三草酸合铁（Ⅲ）酸钾配阴离子电荷测定实验——探索《"
+    },
+    {
+      "index": 350,
+      "title": "第一步草酸用量",
+      "ref": 37,
+      "token": "1.7g",
+      "citeTitle": "三草酸合铁 酸钾制备实验探索"
+    },
+    {
+      "index": 834,
+      "title": "经典蓝晒感光液A液、B液如何配制？柠檬酸铁铵和铁氰化钾的配比是多少？",
+      "ref": 329,
+      "token": "200g",
+      "citeTitle": "蓝晒工艺研究与实践"
+    },
+    {
+      "index": 928,
+      "title": "蓝晒感光液的标准配方",
+      "ref": 329,
+      "token": "0.2g",
+      "citeTitle": "蓝晒工艺研究与实践"
+    },
+    {
+      "index": 928,
+      "title": "蓝晒感光液的标准配方",
+      "ref": 327,
+      "token": "100g",
+      "citeTitle": "基于纺织品的浸轧-蓝晒工艺优化及性能评价"
+    },
+    {
+      "index": 930,
+      "title": "织物蓝晒的浸轧工艺优化",
+      "ref": 327,
+      "token": "140g",
+      "citeTitle": "基于纺织品的浸轧-蓝晒工艺优化及性能评价"
+    },
+    {
+      "index": 935,
+      "title": "蓝晒科普实验的设计",
+      "ref": 340,
+      "token": "0.3g",
+      "citeTitle": "借光执笔的“蓝色精灵”——蓝晒中奇妙的光化学反应"
+    },
+    {
+      "index": 935,
+      "title": "蓝晒科普实验的设计",
+      "ref": 339,
+      "token": "0.3g",
+      "citeTitle": "化学科普创作的多元化艺术表达——以蓝晒为例"
+    },
+    {
+      "index": 983,
+      "title": "回收废料重结晶培养大晶体",
+      "ref": 250,
+      "token": "100g",
+      "citeTitle": "junk-et-al-2021-growing-a-disp"
+    },
+    {
+      "index": 1124,
+      "title": "K₃[Fe(C₂O₄)₃]·3H₂O干燥温度禁忌与失水程度判定",
+      "ref": 16,
+      "token": "491.25g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1263,
+      "title": "延长微沸时间对沉淀粒径和氧化速率的影响",
+      "ref": 36,
+      "token": "3.5g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1270,
+      "title": "第二步6%H₂O₂理论用量与8mL过量倍数分析",
+      "ref": 16,
+      "token": "5.0g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1275,
+      "title": "第三步配位所需草酸理论用量与1.5g取量的依据",
+      "ref": 36,
+      "token": "5.0g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1275,
+      "title": "第三步配位所需草酸理论用量与1.5g取量的依据",
+      "ref": 41,
+      "token": "5.0g",
+      "citeTitle": "三草酸合铁(Ⅲ)酸钾制备条件的优化"
+    },
+    {
+      "index": 1276,
+      "title": "第一步沉淀热水洗涤对FeC₂O₄损失的影响",
+      "ref": 36,
+      "token": "0.06g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1276,
+      "title": "第一步沉淀热水洗涤对FeC₂O₄损失的影响",
+      "ref": 20,
+      "token": "0.06g",
+      "citeTitle": "Fe OH 3溶胶制备及其纯化新方法"
+    },
+    {
+      "index": 1289,
+      "title": "三草酸合铁酸钾理论产量推导与低产率原因分析",
+      "ref": 16,
+      "token": "5.0g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1292,
+      "title": "第二步反应H₂O₂与K₂C₂O₄理论用量计算及过量原因分析",
+      "ref": 16,
+      "token": "2.35g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1294,
+      "title": "第二步氧化反应中草酸钾过量的化学本质与后果分析",
+      "ref": 16,
+      "token": "3.5g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1307,
+      "title": "K₂C₂O₄过量使用的原因及理论量的影响",
+      "ref": 41,
+      "token": "2.4g",
+      "citeTitle": "三草酸合铁(Ⅲ)酸钾制备条件的优化"
+    },
+    {
+      "index": 1307,
+      "title": "K₂C₂O₄过量使用的原因及理论量的影响",
+      "ref": 36,
+      "token": "2.4g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1322,
+      "title": "摩尔盐制备三草酸合铁(III)酸钾的理论产量计算与损失影响",
+      "ref": 36,
+      "token": "5.0g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1326,
+      "title": "草酸钾用量对产率的影响及化学计量核算",
+      "ref": 28,
+      "token": "5.0g",
+      "citeTitle": "ed051p129-Preparation and prop"
+    },
+    {
+      "index": 1331,
+      "title": "第二步氧化中H₂O₂与K₂C₂O₄过量原因及减量后果分析",
+      "ref": 36,
+      "token": "2.4g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1346,
+      "title": "K₂C₂O₄与H₂O₂配比依据及用量不足的影响",
+      "ref": 10,
+      "token": "5.0g",
+      "citeTitle": "Oxalate Stoichiometry ed100270"
+    },
+    {
+      "index": 1360,
+      "title": "配位反应终点判断：翠绿与黄绿色差异的配位平衡解释",
+      "ref": 39,
+      "token": "1.5g",
+      "citeTitle": "三草酸合铁 酸钾制备条件的优化"
+    },
+    {
+      "index": 1364,
+      "title": "草酸钾过量50%的原因及对配位反应的影响",
+      "ref": 15,
+      "token": "3.5g",
+      "citeTitle": "1970-convenient-procedure-for-"
+    },
+    {
+      "index": 1364,
+      "title": "草酸钾过量50%的原因及对配位反应的影响",
+      "ref": 38,
+      "token": "3.5g",
+      "citeTitle": "三草酸合铁 酸钾制备实验的探究"
+    },
+    {
+      "index": 1379,
+      "title": "氧化5.0g摩尔盐所需6%H₂O₂理论体积计算及过量原因分析",
+      "ref": 15,
+      "token": "5.0g",
+      "citeTitle": "1970-convenient-procedure-for-"
+    },
+    {
+      "index": 1395,
+      "title": "第二步氧化中草酸钾用量计算及不足后果",
+      "ref": 1,
+      "token": "5.0g",
+      "citeTitle": "Fe（Ⅲ）-草酸盐络合物／H2O2／日光体系对垃圾渗滤液的处"
+    },
+    {
+      "index": 1412,
+      "title": "三草酸合铁酸钾制备中H₂O₂用量的计算与过量设计",
+      "ref": 15,
+      "token": "5.0g",
+      "citeTitle": "1970-convenient-procedure-for-"
+    },
+    {
+      "index": 1419,
+      "title": "第一步沉淀中不加酸对Fe²⁺沉淀完全程度的影响",
+      "ref": 16,
+      "token": "5.0g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1530,
+      "title": "烘干温度超50℃对三草酸合铁(Ⅲ)酸钾组成和产率的影响",
+      "ref": 36,
+      "token": "6.26g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1599,
+      "title": "草酸钾用量不足对三草酸合铁(Ⅲ)酸钾产率的影响",
+      "ref": 7,
+      "token": "3.5g",
+      "citeTitle": "三草酸根合铁(Ⅲ)酸钾结晶...法 比较和光致还原性验证"
+    },
+    {
+      "index": 1599,
+      "title": "草酸钾用量不足对三草酸合铁(Ⅲ)酸钾产率的影响",
+      "ref": 41,
+      "token": "3.5g",
+      "citeTitle": "三草酸合铁(Ⅲ)酸钾制备条件的优化"
+    },
+    {
+      "index": 1686,
+      "title": "草酸用量加倍对FeC₂O₄沉淀的影响分析",
+      "ref": 10,
+      "token": "1.7g",
+      "citeTitle": "Oxalate Stoichiometry ed100270"
+    },
+    {
+      "index": 1686,
+      "title": "草酸用量加倍对FeC₂O₄沉淀的影响分析",
+      "ref": 39,
+      "token": "1.7g",
+      "citeTitle": "三草酸合铁 酸钾制备条件的优化"
+    },
+    {
+      "index": 1694,
+      "title": "草酸加倍对FeC₂O₄沉淀产率和第二步氧化的影响",
+      "ref": 10,
+      "token": "5.0g",
+      "citeTitle": "Oxalate Stoichiometry ed100270"
+    },
+    {
+      "index": 1694,
+      "title": "草酸加倍对FeC₂O₄沉淀产率和第二步氧化的影响",
+      "ref": 11,
+      "token": "5.0g",
+      "citeTitle": "ANALYSIS OF A COMPLEX IRON"
+    },
+    {
+      "index": 1694,
+      "title": "草酸加倍对FeC₂O₄沉淀产率和第二步氧化的影响",
+      "ref": 12,
+      "token": "5.0g",
+      "citeTitle": "OxalateTitration"
+    },
+    {
+      "index": 1696,
+      "title": "根据失重数据计算产物结晶水数目并判断合格性",
+      "ref": 11,
+      "token": "0.0550g",
+      "citeTitle": "ANALYSIS OF A COMPLEX IRON"
+    },
+    {
+      "index": 1696,
+      "title": "根据失重数据计算产物结晶水数目并判断合格性",
+      "ref": 29,
+      "token": "0.0550g",
+      "citeTitle": "ed061p1098-Preparation and ana"
+    },
+    {
+      "index": 1696,
+      "title": "根据失重数据计算产物结晶水数目并判断合格性",
+      "ref": 16,
+      "token": "0.0550g",
+      "citeTitle": "1984-preparation-and-analysis-"
+    },
+    {
+      "index": 1721,
+      "title": "草酸高浓度快速加入对FeC₂O₄·2H₂O沉淀形态和纯度的影响",
+      "ref": 36,
+      "token": "1.7g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1721,
+      "title": "草酸高浓度快速加入对FeC₂O₄·2H₂O沉淀形态和纯度的影响",
+      "ref": 53,
+      "token": "1.7g",
+      "citeTitle": "三草酸合铁（Ⅲ）酸钾的制备和组成测定"
+    },
+    {
+      "index": 1727,
+      "title": "草酸称量失误导致沉淀不完全的推演及影响",
+      "ref": 36,
+      "token": "3.1g",
+      "citeTitle": "三草酸合铁 (III)酸钾的合成"
+    },
+    {
+      "index": 1751,
+      "title": "95%乙醇加入量对K₃[Fe(C₂O₄)₃]结晶产率和纯度的影响",
+      "ref": 41,
+      "token": "6.26g",
+      "citeTitle": "三草酸合铁(Ⅲ)酸钾制备条件的优化"
+    },
+    {
+      "index": 3057,
+      "title": "学生实验废料回收与悬线法培养大晶体",
+      "ref": 322,
+      "token": "74g",
+      "citeTitle": "Instructions for Growing a Dis"
+    }
+  ]
+}

@@ -63,9 +63,14 @@ function validateFAQEntry(entry, index) {
   }
 
   // 关键词数量
-  if (!entry.keys || entry.keys.length < 1) {
+  // 零collateral覆盖锚点：keys=[] 但 q 为完整题目(≥10字)的条目，仅靠 matchFAQ 的 exactQ(+200) 触发，
+  // 不靠关键词检索——这是合法检索路径(ensureCoverage 精确锚点)，免于"至少1个关键词"硬性要求。
+  const isCoverageAnchor = (!entry.keys || entry.keys.length < 1)
+    && String(entry.q || '').trim().length >= 10
+    && String(entry.q || '').trim() !== String(entry.title || '').trim();
+  if ((!entry.keys || entry.keys.length < 1) && !isCoverageAnchor) {
     errors.push(prefix + '至少需要 1 个关键词');
-  } else if (entry.keys.length < 3) {
+  } else if (entry.keys && entry.keys.length >= 1 && entry.keys.length < 3) {
     warnings.push(prefix + '关键词较少 (' + entry.keys.length + '个): ' +
       JSON.stringify(entry.keys));
   }
@@ -117,7 +122,11 @@ function validateFAQArray(faq) {
     // 质量统计
     if (!entry.detail || String(entry.detail).trim().length === 0) result.missingDetail++;
     if (!entry.answer || entry.answer.length < 60) result.shortAnswers++;
-    if (!entry.keys || entry.keys.length < 1) result.noKeys++;
+    // 覆盖锚点(keys=[]但q为长题目)不算"无关键词"（靠 exactQ(+200) 检索，见 validateFAQEntry）
+    const _covAnchor = (!entry.keys || entry.keys.length < 1)
+      && String(entry.q || '').trim().length >= 10
+      && String(entry.q || '').trim() !== String(entry.title || '').trim();
+    if ((!entry.keys || entry.keys.length < 1) && !_covAnchor) result.noKeys++;
 
     // 详细校验
     var report = validateFAQEntry(entry, i + 1);

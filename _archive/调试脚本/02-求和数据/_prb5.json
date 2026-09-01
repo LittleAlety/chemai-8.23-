@@ -1,0 +1,498 @@
+[
+  {
+    "q": "一瓶莫尔盐（硫酸亚铁铵）结晶体里到底带几个结晶水？",
+    "expected_topic": null,
+    "winner": "理论产量6.26g推导及额外结晶水对产率的影响",
+    "top": [
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 16.596249999999998,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 2,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 2,
+        "total": 16.596249999999998
+      },
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 15.42,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 2,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 15.42
+      },
+      {
+        "title": "巧制硫酸亚铁铵晶体的结晶技术",
+        "score": 14.872499999999999,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 0.3725,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.872499999999999
+      },
+      {
+        "title": "莫尔盐摩尔质量",
+        "score": 14.87125,
+        "keyScore": 6,
+        "entScore": 1,
+        "longKey": 3,
+        "lenBonus": 0.37125,
+        "titleTopical": 0,
+        "distinctHits": 3,
+        "total": 14.87125
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 14.6975,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.6975
+      }
+    ]
+  },
+  {
+    "q": "硫酸亚铁铵几个结晶水",
+    "expected_topic": null,
+    "winner": "理论产量6.26g推导及额外结晶水对产率的影响",
+    "top": [
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 16.596249999999998,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 2,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 2,
+        "total": 16.596249999999998
+      },
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 15.42,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 2,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 15.42
+      },
+      {
+        "title": "选用硫酸亚铁铵（摩尔盐）作为Fe²⁺源的根本原因",
+        "score": 14.13625,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 1.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.13625
+      },
+      {
+        "title": "巧制硫酸亚铁铵晶体的结晶技术",
+        "score": 13.872499999999999,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3725,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.872499999999999
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 13.6975,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.6975
+      }
+    ]
+  },
+  {
+    "q": "产物有几个结晶水",
+    "expected_topic": null,
+    "winner": "理论产量6.26g推导及额外结晶水对产率的影响",
+    "top": [
+      {
+        "title": "理论产量6.26g推导及额外结晶水对产率的影响",
+        "score": 12.09625,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.59625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.09625
+      },
+      {
+        "title": "95%乙醇作为沉淀剂对结晶速率和结晶水含量的影响",
+        "score": 12.0875,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.5875,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.0875
+      },
+      {
+        "title": "辨析：结晶水是配位水",
+        "score": 11.89125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.39125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.89125
+      },
+      {
+        "title": "结晶水数目成因",
+        "score": 11.88125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.38125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.88125
+      },
+      {
+        "title": "烘干温度误用80℃的影响及结晶水判断",
+        "score": 11.817499999999999,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3175,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.817499999999999
+      }
+    ]
+  },
+  {
+    "q": "莫尔盐是什么",
+    "expected_topic": null,
+    "winner": "莫尔盐是什么",
+    "top": [
+      {
+        "title": "莫尔盐是什么",
+        "score": 206.79875,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.29875,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 206.79875
+      },
+      {
+        "title": "本实验称取莫尔盐的质量",
+        "score": 6.955,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.455,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.955
+      },
+      {
+        "title": "莫尔盐安全",
+        "score": 6.8774999999999995,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3775,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8774999999999995
+      },
+      {
+        "title": "莫尔盐作为分析化学测试材料",
+        "score": 6.8475,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3475,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8475
+      },
+      {
+        "title": "摩尔盐发黄怎么办",
+        "score": 3.9050000000000002,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.405,
+        "titleTopical": 0,
+        "distinctHits": 0,
+        "total": 3.9050000000000002
+      }
+    ]
+  },
+  {
+    "q": "硫酸亚铁铵是什么",
+    "expected_topic": null,
+    "winner": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+    "top": [
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 15.42,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 2,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 15.42
+      },
+      {
+        "title": "选用硫酸亚铁铵（摩尔盐）作为Fe²⁺源的根本原因",
+        "score": 14.13625,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 1.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.13625
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 13.6975,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.6975
+      },
+      {
+        "title": "选用硫酸亚铁铵而非FeSO₄·7H₂O的原因及误用影响",
+        "score": 12.2125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.7125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.2125
+      },
+      {
+        "title": "巧制硫酸亚铁铵晶体的结晶技术",
+        "score": 11.872499999999999,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3725,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.872499999999999
+      }
+    ]
+  },
+  {
+    "q": "硫酸亚铁铵的制备原理",
+    "expected_topic": null,
+    "winner": "硫酸亚铁铵的制备原理是什么，为什么复盐溶解度小？",
+    "top": [
+      {
+        "title": "硫酸亚铁铵的制备原理是什么，为什么复盐溶解度小？",
+        "score": 212.055,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.555,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 212.055
+      },
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 15.42,
+        "keyScore": 4,
+        "entScore": 3,
+        "longKey": 2,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 15.42
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 14.6975,
+        "keyScore": 5,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.6975
+      },
+      {
+        "title": "选用硫酸亚铁铵（摩尔盐）作为Fe²⁺源的根本原因",
+        "score": 14.13625,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 1.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.13625
+      },
+      {
+        "title": "硫酸亚铁铵制备实验的改进",
+        "score": 12.85,
+        "keyScore": 3,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.35,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.85
+      }
+    ]
+  },
+  {
+    "q": "硫酸亚铁铵为啥比硫酸亚铁稳定",
+    "expected_topic": null,
+    "winner": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+    "top": [
+      {
+        "title": "硫酸亚铁铵与硫酸亚铁的稳定性对比",
+        "score": 19.92,
+        "keyScore": 6,
+        "entScore": 3,
+        "longKey": 3,
+        "lenBonus": 0.42,
+        "titleTopical": 5,
+        "distinctHits": 2,
+        "total": 19.92
+      },
+      {
+        "title": "选用硫酸亚铁铵（摩尔盐）作为Fe²⁺源的根本原因",
+        "score": 14.13625,
+        "keyScore": 2,
+        "entScore": 3,
+        "longKey": 1,
+        "lenBonus": 1.63625,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 14.13625
+      },
+      {
+        "title": "硫酸亚铁铵制备的安全注意",
+        "score": 13.6975,
+        "keyScore": 4,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.1975,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 13.6975
+      },
+      {
+        "title": "选用硫酸亚铁铵而非FeSO₄·7H₂O的原因及误用影响",
+        "score": 12.2125,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.7125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.2125
+      },
+      {
+        "title": "巧制硫酸亚铁铵晶体的结晶技术",
+        "score": 11.872499999999999,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.3725,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 11.872499999999999
+      }
+    ]
+  },
+  {
+    "q": "莫尔盐摩尔质量",
+    "expected_topic": null,
+    "winner": "莫尔盐摩尔质量",
+    "top": [
+      {
+        "title": "莫尔盐摩尔质量",
+        "score": 215.37125,
+        "keyScore": 4,
+        "entScore": 1,
+        "longKey": 2,
+        "lenBonus": 0.37125,
+        "titleTopical": 5,
+        "distinctHits": 2,
+        "total": 215.37125
+      },
+      {
+        "title": "关键摩尔质量",
+        "score": 12.2375,
+        "keyScore": 2,
+        "entScore": 2,
+        "longKey": 1,
+        "lenBonus": 0.7375,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 12.2375
+      },
+      {
+        "title": "密度与摩尔质量",
+        "score": 10.14125,
+        "keyScore": 2,
+        "entScore": 0,
+        "longKey": 1,
+        "lenBonus": 0.64125,
+        "titleTopical": 5,
+        "distinctHits": 1,
+        "total": 10.14125
+      },
+      {
+        "title": "本实验称取莫尔盐的质量",
+        "score": 6.955,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.455,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.955
+      },
+      {
+        "title": "莫尔盐安全",
+        "score": 6.8774999999999995,
+        "keyScore": 2,
+        "entScore": 1,
+        "longKey": 1,
+        "lenBonus": 0.3775,
+        "titleTopical": 3,
+        "distinctHits": 0,
+        "total": 6.8774999999999995
+      }
+    ]
+  }
+]

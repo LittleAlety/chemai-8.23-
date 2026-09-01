@@ -12,9 +12,13 @@
 ├── index.html          # 首页（React SPA：身份选择/视频库/习题/错题本等）
 ├── main.html           # 主页（实验手册全文，11 章 42 节）
 ├── assistant.html      # AI助手（FAQ 问答 + 掌握度测评 + 4 部本地视频）
-├── knowledge.html      # 知识图谱（97 节点 / 136 关联）
+├── knowledge.html      # 知识图谱（123 节点 / 195 关联）
 ├── prep.html           # 课前预习
-├── corpus.html         # 语料库管理（365 篇，上传/学习迭代/云端同步）
+├── corpus.html         # 语料库管理（445 篇，上传/学习迭代/云端同步）
+├── generator.html      # 智能命题（教师组卷，教师门禁）
+├── docs/
+│   ├── AI模型架构.md   # AI「神经网络模式」说明（诚实的工程架构）
+│   └── 语料权重分析报告.md
 ├── DEPLOY.md           # 本文档
 ├── assets/
 │   ├── index-*.js      # 主应用（React SPA，已压缩）
@@ -22,15 +26,17 @@
 │   ├── images/         # 实验图片（76 张，经 data/images.json 接入）
 │   ├── KaTeX_*.woff/woff2/ttf   # 公式字体
 │   └── vendor/         # 第三方库（jszip、pdf.js 等）
-├── data/               # 运行时数据（deploy.yml 组装 8 个）
-│   ├── faq_runtime.js  # 运行时 FAQ（3047 条，唯一真相源）
-│   ├── corpus.json     # 语料库清单（365 篇）
+├── data/               # 运行时数据（deploy.yml 组装 10 个）
+│   ├── faq_runtime.js  # 运行时 FAQ（3326 条，唯一真相源）
+│   ├── corpus.json     # 语料库清单（445 篇）
+│   ├── corpus_weights.json # 语料权威度权重（离线生成，v85）
 │   ├── manual.json     # 实验手册（11 章 42 节）
 │   ├── images.json     # 图片索引（76 张）
-│   ├── kg.json         # 知识图谱（97 节点 / 136 关联）
-│   ├── questions_bank.json / report_rubric.json / faq_unified.json
+│   ├── kg.json         # 知识图谱（123 节点 / 195 关联）
+│   └── categories.json / questions_bank.json / report_rubric.json / faq_unified.json
 └── scripts/
-    └── corpus-server.py  # 可选：语料云端同步接收端
+    ├── lib-calc.js     # 通用计算引擎（assistant.html 运行时加载，deploy.yml 必须复制）
+    └── corpus-server.py # 可选：语料云端同步接收端
 ```
 
 ## 二、快速部署（任选其一）
@@ -103,3 +109,4 @@ python3 scripts/corpus-server.py 8765
 - 首次打开会向 kimi.com 请求一个统计 SDK（不可达不影响功能）；本地 4 部视频随仓库部署，在线直接播放；离线环境显示占位。
 - 各页面数据通过相对路径加载 `data/*.json`，部署时请保持目录结构完整。
 - 如需修改语料/图谱/手册内容，直接编辑 `data/` 下对应 JSON 即可。
+- 语料权威度权重 `data/corpus_weights.json` 由离线作业生成：`npm run corpus:weights`（`node 训练管道/corpus_weight_analysis.js`，无需 LLM）。若改动 `data/corpus.json` 或 `data/categories.json`，请重跑该脚本再部署，否则运行时权威度加成未更新。

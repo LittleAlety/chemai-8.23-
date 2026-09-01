@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://zh.wikipedia.org">
 <link rel="preconnect" href="https://en.wikipedia.org">
 <link rel="preconnect" href="https://pubchem.ncbi.nlm.nih.gov">
+<script src="scripts/lib-calc.js" defer></script>
 <script src="assets/agent-cluster.js" defer></script>
 <script src="assets/assistant-model.js" defer></script>
 <title>AI 助手 · ChemAI 三草酸合铁酸钾制备实验</title>
@@ -655,7 +656,7 @@ const SUBMAP={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':
 const norm=s=>String(s||'').toLowerCase().replace(/双氧水/g,'过氧化氢').replace(/[₀₁₂₃₄₅₆₇₈₉⁻⁺⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>SUBMAP[c]||c).replace(/摄氏度|℃|°c/g,'度').replace(/\s+/g,'');
 
 // 分类归一化 (同步自 data/categories.json — 唯一权威来源)
-const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理'};
+const CATEGORY_ALIAS_MAP={'安全废物':'安全与废物处理','配位理论':'配位化学理论','热化学分析':'热分析','情景分析':'综合研究','比较分析':'综合研究','计算应用':'高等理论','其他':'综合研究','综合':'综合研究','分析表征':'分析测定','实验原理与方程式':'反应原理','操作步骤与参数':'实验操作','物质性质与原因':'综合研究','安全与分析':'安全与废物处理','化合物性质':'综合研究','制备原理':'合成制备','制备原理深度解析':'合成制备','配合物性质':'配位化学理论','配合物性质实验':'配位化学理论','晶体场理论':'配位化学理论','光化学性质':'光化学应用','安全与废液处理':'安全与废物处理','安全规范与废液处理':'安全与废物处理','安全规范':'安全与废物处理','安全与环保':'安全与废物处理','安全环保':'安全与废物处理','操作安全':'安全与废物处理','安全与废液':'安全与废物处理','实验报告':'实验教学','实验报告撰写规范':'实验教学','报告撰写':'实验教学','报告规范':'实验教学','报告与数据处理':'实验教学','实验报告与数据处理':'实验教学','故障排查':'实验操作','实验故障排查':'实验操作','常见实验故障排查':'实验操作','操作步骤完全指南':'实验操作','操作步骤':'实验操作','操作规范':'实验操作','操作技巧':'实验操作','性质实验':'实验操作','扩展知识':'综合研究','历史背景':'化学史','教学反思':'实验教学','教学反思与改进':'实验教学','实验反思':'实验教学','实验改进':'实验教学','基础理论':'高等理论','物理性质':'结构表征','理论计算':'高等理论','计算与应用':'高等理论','化学计算':'高等理论','数据分析':'分析测定','数据处理':'分析测定','实验数据分析':'分析测定','误差分析':'分析测定','数据与计算':'分析测定','实验设计':'实验教学','实验技能':'实验教学','实验概述':'实验教学','物理化学':'反应原理','无机化学':'反应原理','分析化学':'反应原理','理论化学':'高等理论','化学原理':'反应原理','反应机理':'反应原理','反应机理与动力学':'反应原理','化学热力学与动力学':'反应原理','配合物化学':'配位化学理论','性质分析':'综合研究','文献新发现':'综合研究','教学采用历史':'化学史','数据与误差':'分析测定','氧化还原反应':'反应原理','无机合成':'合成制备','温度测量误差与校准':'分析测定','玻璃仪器选择与清洗':'实验操作','时间控制与反应终止':'实验操作','观察与记录':'实验操作','学生操作心理学':'实验教学','环境因素':'综合研究'};
 const CANONICAL_CATS=new Set(['合成制备','反应原理','实验操作','分析测定','光化学应用','结构表征','磁性研究','热分析','安全与废物处理','配位化学理论','实验教学','综合研究','化学史','高等理论','蓝晒工艺','摩尔盐相关','草酸配合物']);
 function normCat(v){if(!v||typeof v!=='string')return'综合研究';var t=v.trim();if(!t)return'综合研究';if(CANONICAL_CATS.has(t))return t;if(CATEGORY_ALIAS_MAP[t])return CATEGORY_ALIAS_MAP[t];return t;}
 
@@ -800,7 +801,7 @@ async function callLLM(question, context, streamCallback){
   // 上下文放在用户消息中（带XML标记隔离），防止Prompt Injection
   var userMsg=question;
   if(context && context.trim()){
-    userMsg='<corpus-context>\n'+context.slice(0,4000)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
+    userMsg='<corpus-context>\n'+context.slice(0,4500)+'\n</corpus-context>\n\n---\n用户问题：\n'+question;
   }
   messages.push({role:'user', content: userMsg});
 
@@ -887,10 +888,11 @@ function buildLLMContext(q){
   }
   var faq=matchFAQ(q);
   if(faq){ parts.push('【FAQ: '+faq.title+'】\n'+stripHTML(faq.answer)+(faq.detail?'\n'+stripHTML(faq.detail):'')); }
-  var searchResult2=searchCorpus(q, 3);
+  var searchResult2=searchCorpus(q, 6);
   if(searchResult2 && searchResult2.results && searchResult2.results.length){
-    for(var rj=0;rj<Math.min(searchResult2.results.length,2);rj++){
-      var rr=searchResult2.results[rj];
+    var picked=pickAuthoritative(searchResult2.results,2);
+    for(var rj=0;rj<picked.length;rj++){
+      var rr=picked[rj];
       parts.push('【文献: '+rr.e.title+'】\n'+(rr.e.abstract||rr.e.objects||''));
     }
   }
@@ -918,6 +920,39 @@ function buildLLMContext(q){
 
 /* ================= 语料库 ================= */
 const Corpus={entries:[],total:0,subfields:[],loaded:false,uploaded:0};
+// v85 语料权威度权重（best-effort；缺失/加载失败 ⇒ 现行行为零回归）。见训练管道/corpus_weight_analysis.js。
+let CorpusWeight=null;
+const CORPUS_AUTH_BOOST=4;
+/* 命中语料的权威度加成（加法式，不改 matchFAQ 基础打分） */
+function corpusAuthValue(e){
+  if(!CorpusWeight||!CorpusWeight.entryAuthority||!e) return 0;
+  var w=CorpusWeight.entryAuthority[e.id];
+  return w?w.boosted*CORPUS_AUTH_BOOST:0;
+}
+/* 权威优先重排 + 子域多样性（top-n）：先按 score+权威度 降序取最权威，再去重子域避免两篇同类挤占 LLM 窗口 */
+function pickAuthoritative(results,n){
+  var arr=results.map(function(r){return {r:r,v:r.score+corpusAuthValue(r.e)};}).sort(function(a,b){return b.v-a.v;});
+  var out=[],seen={};
+  for(var i=0;i<arr.length&&out.length<n;i++){
+    var sf=arr[i].r.e&&arr[i].r.e.subfield;
+    if(out.length===0||!seen[sf]){ out.push(arr[i].r); if(sf) seen[sf]=1; }
+  }
+  for(var j=0;j<arr.length&&out.length<n;j++){
+    if(out.indexOf(arr[j].r)<0) out.push(arr[j].r);
+  }
+  return out;
+}
+/* 依据问题主导语料子域 → 该子域关联的 FAQ 官方案子域集（语料→FAQ 映射），供相关问答择优 */
+function preferredFAQSubfields(q){
+  if(!CorpusWeight||!CorpusWeight.faqMapping) return null;
+  try{
+    var sr=searchCorpus(q,1);
+    var dom=sr&&sr.results&&sr.results[0]&&sr.results[0].e&&sr.results[0].e.subfield;
+    if(!dom) return null;
+    for(var i=0;i<CorpusWeight.faqMapping.length;i++){ if(CorpusWeight.faqMapping[i].source===dom) return CorpusWeight.faqMapping[i].links; }
+  }catch(e){}
+  return null;
+}
 async function loadCorpus(){
   let base=null;
   try{
@@ -937,6 +972,11 @@ async function loadCorpus(){
   var normSubs=new Set();(base&&base.subfields||[]).forEach(s=>{normSubs.add(normCat(s));});Corpus.subfields=Array.from(normSubs);
   Corpus.total=base&&base.total?base.total:(base?list.length:0);
   Corpus.uploaded=Array.isArray(up)?up.filter(u=>u&&u.title).length:0;
+  // v85 权威度权重（best-effort，不要卡主流程）
+  try{
+    const wr=await fetch('data/corpus_weights.json',{cache:'default'});
+    CorpusWeight = wr.ok ? await wr.json() : null;
+  }catch(e){ CorpusWeight=null; }
   const st=$('#corpusStatus'),tx=$('#corpusStatusTxt');
   if(Corpus.loaded){
     st.className='corpus-status ok';
@@ -1049,7 +1089,7 @@ function searchCorpus(q,topN){
       if(w>0){s+=w;hit.add(t);if(strong.has(t))sh=true;}
     }
     for(const b of boosts){ if(f.subfield===norm(b.sub)){ s+=b.bonus; sh=true; hit.add('领域:'+b.sub);} }
-    if(s>0){ s+=(fb[e.id]||0); out.push({e,score:s,hit:Array.from(hit),strongHit:sh}); }
+    if(s>0){ s+=corpusAuthValue(e); s+=(fb[e.id]||0); out.push({e,score:s,hit:Array.from(hit),strongHit:sh}); }
   }
   out.sort((a,b)=>b.score-a.score);
   return {terms:all,results:out.slice(0,topN||6)};
@@ -1140,6 +1180,17 @@ function matchFAQ(q){
   var CHEM_NOUN={'草酸':1,'莫尔盐':1,'摩尔盐':1,'乙醇':1,'过氧化氢':1,'铁氰化钾':1,'硫酸亚铁':1,'草酸钾':1,'草酸根':1,'三草酸':1,'氢氧化铁':1,'硫酸':1,'氨水':1,'双氧水':1,'配离子':1,'酸根':1,'草酸氢钾':1,'草酸亚铁':1};
   var FH_THRESH=45; // firehose 降权阈值：keys>FH_THRESH 且标题未印证(tt<5)的漂流 firehose 用 sqrt 阻尼——只靠海量冗余 key 掠走细问的宽条目被削弱；合法广谱条(标题印证 tt=5)不受罚
   function isChemicalKey(k){ return /[a-z0-9]/.test(norm(k)) || !!CHEM_NOUN[k]; }
+  // 操作意图题 → 强压"第N步/深度解析"泛化模板：这类条目靠海量 key 累加掠走具体操作条目，
+  // 但只复述机理、从不回答"如何判断终点/滴多快/洗到何时"等操作细节（round5 步骤题主因）。与 local_answer.js 同步。
+  var OP_RE=/(终点|判断|速度|距离|多久|何时|顺序|先后|洗涤|烘干|冷却|加热|过滤|抽滤|水浴|暴沸|防止|避免|补救|滴加|用量|比例|操作|步骤|干燥|称量|量取|检验|如何判断|怎么判断)/;
+  var STEP_TEMPLATE_RE=/(第[一二三四五六七八九十百\d]+步|深度解析|反应机理|热力学与动力学|氧化电位)/;
+  function isStepTemplate(f){ return STEP_TEMPLATE_RE.test(norm((f.title||'')+'|'+String(f.answer||''))); }
+  // 实验作用域守卫：本课程即铁实验。只要题干未点名"其它金属草酸配合物"、也非"对比/举例其它"类，
+  // 命中"铜/铬/铝/钴…"其它实验条目 → 强压。类比推理走独立 ANALOG_TABLE，不受此守卫影响。与 local_answer.js 同步。
+  var IRON_RE=/(三草酸合铁|草酸亚铁|莫尔盐|摩尔盐|硫酸亚铁|氢氧化铁|亚铁|铁草酸|铁\(?iii\)?|铁\(?Ⅲ\)?|高铁|k3\[fe|k3\[fec|fe3\+|草酸铁钾|三草酸合铁钾)/;
+  var OTHER_OX_RE=/(草酸合铜|二草酸合铜|草酸铬|草酸铝|草酸钴|草酸合铝|草酸合铬|草酸合钴|铜\(?ii\)?|铜\(?Ⅱ\)?|铬\(?iii\)?|铝\(?iii\)?|钴\(?iii\)?|二草酸|草酸合)/;
+  var cmpQ=/(其它|其他|对比|比较|同类|类比|举例|受控合成|两种水合|分别(得到|探究|控制|合成|结晶|制备))/;
+  var notOtherQ=!OTHER_OX_RE.test(nq) && !cmpQ.test(nq);
   for(var i=0;i<FAQ.length;i++){
     var f=FAQ[i];
     var kh=0,longKey=0,keyScore=0,hits=[],distinctHits=0;
@@ -1173,6 +1224,10 @@ function matchFAQ(q){
     if(f.keys.length>FH_THRESH && titleTopical<5) score*=Math.pow(FH_THRESH/f.keys.length,0.5);
     // 问题完全一致/长问题包含 → 决定性优先（针对性FAQ条目；短q的通用条目不误触发）
     if(exactQ || (fq.length>=15 && (nq.indexOf(fq)>=0 || fq.indexOf(nq)>=0))) score+=200;
+    // 操作意图题命中"第N步/深度解析"模板 → 强压（模板只背机理不答操作细节，让步给具体操作条目）
+    if(OP_RE.test(nq) && isStepTemplate(f)) score*=0.12;
+    // 跨实验"错库"守卫：铁实验题命中其它金属草酸配合物条目 → 强压
+    if(notOtherQ){ var tfn=norm((f.title||'')+'|'+String(f.answer||'')); if(OTHER_OX_RE.test(tfn) && !IRON_RE.test(tfn)) score*=0.03; }
     if(score>bestScore){bestScore=score;best=f;}
   }
   return best;
@@ -1305,6 +1360,7 @@ function confidenceBarHTML(label, val, level){
 }
 
 function buildHybridAnswerHTML(q, ctx){
+  _CURRENT_Q=q;   // 注入当前问题，供 roleCoreHTML 内的计算卡片读取
   var faq=ctx.faq, directHits=ctx.directHits, conf=ctx.conf, chems=ctx.chems, ops=ctx.ops;
   var body;
   if(conf.level==='high'&&directHits.length>0){
@@ -1323,16 +1379,37 @@ function roleSec(summary, body, forceOpen){
   var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
   return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
 }
+/* ===== 通用计算（"计算通用"）卡片 =====
+   命中可计算模式（产率/理论产量/滴定含量/摩尔质量/结晶水/RSD/磁矩/CFSE/能斯特/配制）时，
+   用公式对学生的实际输入当场算出，取代 FAQ 里写死的示例值。与 scripts/lib-calc.js 单一真相源一致
+   （local_answer.js 无头评分路径已镜像化，见其 阶段0）。 */
+var _CURRENT_Q='';   // 由 buildHybridAnswerHTML 注入当前问题，供 roleCoreHTML 取用于计算卡片
+function buildCalcAnswerHTML(q){
+  if(!q || !window.ChemCalc) return '';
+  var cc;
+  try{ cc=window.ChemCalc.calcAnswer(q); }catch(e){ return ''; }
+  if(!cc || !cc.matched || cc.result==null) return '';
+  var h='<div class="ans-sec calc-banner"><h4>🧮 '+esc(cc.title.replace(/^🧮\s*/,''))+'</h4><div class="rich-answer">';
+  for(var i=0;i<cc.lines.length;i++) h+='<p style="margin:2px 0">'+esc(cc.lines[i])+'</p>';
+  if(cc.formula) h+='<p class="muted" style="margin:4px 0 0">公式：'+esc(cc.formula)+'</p>';
+  if(cc.note) h+='<p class="muted" style="margin:2px 0 0">'+esc(cc.note)+'</p>';
+  h+='</div></div>';
+  return h;
+}
 /* 身份差异化呈现（不改写正文、不臆造内容）：
    ① 融进「核心解答」的一行引导句（roleLeadHTML，非独立浮框）——承诺与后续内容一致；
    ② 非化学：核心解答包「白话版」卡 + 淡显公式符号（CSS .role-plain .ans-sub/.ans-sup），深机理折叠——读起来更浅；化学/教师：原样铺开全深度。 */
 function roleCoreHTML(innerHTML){
   var role=chatRole();
   var lead=roleLeadHTML(role);
+  var calc=buildCalcAnswerHTML(_CURRENT_Q);   // 计算优先：命中可计算模式即把当场算出的结果顶到「核心解答」最前
+  var calced=(calc!=='');
+  // 计算命中时，答案由当场算出的公式+结果完全自足，不再叠加大段 FAQ 正文——FAQ 首句常是"标准5.0g例/Fe守恒/
+  // 产率等级"等与本题数值或对象不符的无关内容。与 local_answer.js 无头评分路径镜像化（阶段0 计算优先）。
   if(role==='non-chemistry'){
-    return lead+'<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+innerHTML+'</div>';
+    return lead+'<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+calc+(calced?'':innerHTML)+'</div>';
   }
-  return lead+innerHTML;
+  return lead+calc+(calced?'':innerHTML);
 }
 function buildAnalogyBridgedAnswer(q, ctx){
   var faq=ctx.faq, directHits=ctx.directHits, analogyHits=ctx.analogyHits;
@@ -1471,6 +1548,7 @@ function selfCheckHTML(result){
 function relatedFAQs(q,exclude,n){
   try {
     var nq=norm(q), scored=[];
+    var pref=preferredFAQSubfields(q);
     for(var i=0;i<FAQ.length;i++){
       var f=FAQ[i];
       if(f===exclude) continue;
@@ -1478,6 +1556,7 @@ function relatedFAQs(q,exclude,n){
       for(var j=0;j<(f.ents||[]).length;j++){if(nq.indexOf(norm(f.ents[j]))>=0) s+=3;}
       if(exclude){for(var j2=0;j2<(f.ents||[]).length;j2++){if((exclude.ents||[]).indexOf(f.ents[j2])>=0) s+=2;}}
       for(var k=0;k<f.keys.length;k++){if(nq.indexOf(norm(f.keys[k]))>=0) s+=1;}
+      if(pref&&f.subfield){ for(var p=0;p<pref.length;p++){ if(pref[p].sf===f.subfield){ s+=pref[p].w*3; break; } } }
       if(s>0) scored.push({f:f,s:s});
     }
     scored.sort(function(a,b){return b.s-a.s;});
@@ -1636,7 +1715,7 @@ function webFallbackHTML(q){
 }
 /* v60 讲义权威进主路径：normal+cluster 双模式给答案附「📖 讲义原文」引用 + 「⚠ 讲义核对」冲突修正。
  * 渲染层增强：无头路径(local_answer.js)已 stub 本函数，不参与本地答案评分，零漂移。 */
-const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响|微沸|煮沸|室温|过量|减半|不足|太久|太短|加多|加少|等待|暴沸|恒重/;
+const DOMAIN_RE=/实验|化学|配合物|配位|沉淀|晶体|光化学|光致|方程式|磁化|摩尔|产率|结晶|滴定|蓝晒|试剂|过滤|抽滤|水浴|加热|误差|废液|避光|洗涤|蒸干|称量|溶解|浓度|制备|合成|络合|螯合|烧杯|漏斗|滤纸|天平|滴加|步骤|操作|温度|烘干|干燥|光照|用量|溶剂|乙醇|分解|测定|配制|滤液|母液|产物|原料|陈化|静置|酸化|氧化|还原|检验|显色|纯度|终点|杂质|pH|机理|后果|影响|微沸|煮沸|室温|过量|减半|不足|太久|太短|加多|加少|等待|暴沸|恒重|颜色|黄色|黄绿|棕黄|翠绿|产品|排查|解决|补救|原因|后果|处理方法|操作要点|关键操作/;
 async function manualAuthorityHTML(q, kws, html){
   if(!q||!DOMAIN_RE.test(q)) return '';
   var AC=null;
@@ -2301,8 +2380,8 @@ var CALC_MODES=[
  ],hint:'Fe³⁺ 还原为 Fe²⁺ 后用 KMnO₄ 滴定：5Fe²⁺+MnO₄⁻+8H⁺→5Fe³⁺+Mn²⁺+4H₂O，n(Fe)=n(KMnO₄)×5。产物理论 Fe 含量 11.4%。',
  run:function(){var mid=this.id,ckm=calcNum(mid,'ckm'),vkm=calcNum(mid,'vkm'),mp=calcNum(mid,'mprod');
   if(ckm==null||vkm==null||mp==null||!mp){calcErr('请输入完整数据');return;}
-  var nkm=ckm*vkm/1000, nfe=nkm*5, mfe=nfe*55.85, w=mfe/mp*100;
-  calcOut('<b>Fe 含量 = '+w.toFixed(1)+'%</b><span style="color:var(--t2);font-size:12px">（理论 11.4%，M(Fe)=55.85）'+(Math.abs(w-11.4)>1.5?' ｜ 偏离&gt;1.5% 提示纯度或滴定误差':' ｜ 与理论吻合')+'</span><br><span style="color:var(--t2);font-size:12px">步骤：n(Fe)=n(KMnO₄)×5='+nfe.toFixed(6)+' mol → m(Fe)='+nfe.toFixed(6)+'×55.85='+mfe.toFixed(4)+' g → '+mfe.toFixed(4)+'÷'+mp+'×100%</span>');}},
+  var nkm=ckm*vkm/1000, nfe=nkm*5, mfe=nfe*55.845, w=mfe/mp*100;
+  calcOut('<b>Fe 含量 = '+w.toFixed(1)+'%</b><span style="color:var(--t2);font-size:12px">（理论 11.4%，M(Fe)=55.845）'+(Math.abs(w-11.4)>1.5?' ｜ 偏离&gt;1.5% 提示纯度或滴定误差':' ｜ 与理论吻合')+'</span><br><span style="color:var(--t2);font-size:12px">步骤：n(Fe)=n(KMnO₄)×5='+nfe.toFixed(6)+' mol → m(Fe)='+nfe.toFixed(6)+'×55.845='+mfe.toFixed(4)+' g → '+mfe.toFixed(4)+'÷'+mp+'×100%</span>');}},
 
  {id:'ksp',cat:2,icon:'🪨',label:'Ksp 沉淀判断',fields:[
    {k:'ppt',l:'沉淀',type:'sel'},
@@ -3309,7 +3388,7 @@ const KP=[
   follow:'提示：想想"Fe 原子守恒"——1 mol 起始铁源理论上生成几 mol 产物？哪种试剂的量决定了理论产量的上限？',
   hint:'提示：基准试剂是"限量且组成确定"的那种，其余试剂都过量。产物与它的摩尔比是 1:1（按 Fe 守恒）。',
   groups:[['产率','百分产率'],['理论产量','实际产量'],['莫尔盐','硫酸亚铁铵','基准','限量'],['100%','百分比','除以'],['摩尔','物质的量','n(','1:1','计量比'],['491','392','摩尔质量','相对分子质量']],
-  explain:'<b>直接讲解：</b>产率 = 实际产量 ÷ 理论产量 × 100%。基准试剂为<b>莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O</b>（M=392.14 g/mol）：它是限量试剂，且 Fe 原子守恒，1 mol 莫尔盐理论生成 1 mol 产物（M=491.24 g/mol），故理论产量 = m(莫尔盐) × 491.24/392.14——例如 5.00 g 莫尔盐对应约 6.26 g 产物。计算题答案：n(莫尔盐)=5.0/392.14=0.01275 mol，理论产量=0.01275×491.25=6.26 g，产率=3.8/6.26×100%=60.7%。'},
+  explain:'<b>直接讲解：</b>产率 = 实际产量 ÷ 理论产量 × 100%。基准试剂为<b>莫尔盐 (NH₄)₂Fe(SO₄)₂·6H₂O</b>（M=392.14 g/mol）：它是限量试剂，且 Fe 原子守恒，1 mol 莫尔盐理论生成 1 mol 产物（M=491.25 g/mol），故理论产量 = m(莫尔盐) × 491.25/392.14——例如 5.00 g 莫尔盐对应约 6.26 g 产物。计算题答案：n(莫尔盐)=5.0/392.14=0.01275 mol，理论产量=0.01275×491.25=6.26 g，产率=3.8/6.26×100%=60.7%。'},
  {name:'误差分析',weight:10,subfield:'综合研究',knode:'误差来源与产率异常',videos:[3,4],dim:'comprehensive',
   main:'如果测得的<b>产率明显偏低（或超过 100%）</b>，可能有哪些原因？请从操作角度做误差分析。',
   alt1:'【案例分析】某同学产率仅 42%，晶体颜色正常但量很少。请诊断至少 3 个可能原因并给出改进建议。',

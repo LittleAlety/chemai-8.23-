@@ -17,8 +17,14 @@
     "faq:sync-kg": "node 训练管道/faq_tools.js sync-kg",
     "faq:validate": "node scripts/validate-faq.js",
     "faq:refine": "node 训练管道/faq_tools.js refine",
+    "faq:inject-authoritative": "node 训练管道/inject_authoritative_facts.js",
     "faq:merge": "node 训练管道/faq_tools.js merge",
     "faq:apply-fixes": "node 训练管道/faq_tools.js apply-fixes",
+    "corpus:weights": "node 训练管道/corpus_weight_analysis.js",
+    "self-train": "node 训练管道/self_train_loop.js",
+    "outer-loop": "node 训练管道/outer_loop.js",
+    "verify-web": "node 训练管道/verify_web_ready.js",
+    "clean-mojibake": "node 训练管道/clean_garbled.js --check",
     "score": "node 训练管道/score_answers.js"
   },
   "keywords": [
@@ -33,6 +39,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LittleAlety/chemai-8.6-.git"
+    "url": "https://github.com/LittleAlety/chemai-8.23-.git"
   }
 }

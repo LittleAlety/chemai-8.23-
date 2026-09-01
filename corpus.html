@@ -693,7 +693,7 @@ function refreshDoctypeChart(){
   const max=rows.length?rows[0][1]:1;
   const total=rows.reduce((a,[,v])=>a+v,0)||1;
   const el=document.getElementById('doctypeChart');
-  el.innerHTML=rows.slice(0,12).map(([k,v])=>{
+  el.innerHTML=rows.map(([k,v])=>{
     const col=DOC_COLORS[k]||'#2dd4bf';
     const pct=(v/total*100);
     return '<div class="bar-row bar-clickable" data-doctype="'+esc(k)+'" title="'+esc(k)+' · '+v+' 条 ('+pct.toFixed(1)+'%) · 点击筛选">'

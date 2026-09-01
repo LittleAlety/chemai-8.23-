@@ -987,15 +987,18 @@ function graphBounds(){
   for(const n of nodes){
     if(!n.visible) continue;
     c++;
-    x0=Math.min(x0, n.x-n.r); x1=Math.max(x1, n.x+n.r);
-    y0=Math.min(y0, n.y-n.r); y1=Math.max(y1, n.y+n.r);
+    // 预留径向标签外延：level>0 节点标签置于节点外侧(off≈n.r+字宽)，不含标签会算偏小→自动取景裁切外圈标签
+    const rad = n.r + (n.level===0 ? 40 : 96);
+    x0=Math.min(x0, n.x-rad); x1=Math.max(x1, n.x+rad);
+    y0=Math.min(y0, n.y-rad); y1=Math.max(y1, n.y+rad);
   }
   if(!c) return {x:0, y:0, w:1600, h:1200};
   return {x:(x0+x1)/2, y:(y0+y1)/2, w:Math.max(x1-x0, 200), h:Math.max(y1-y0, 200)};
 }
 function fitTarget(){
   const b = graphBounds();
-  const k = Math.min(W/(b.w+260), H/(b.h+240));
+  // 标签已计入 bounds，padding 收紧，避免整图因重复留白被过度缩小
+  const k = Math.min(W/(b.w+150), H/(b.h+150));
   return {x:b.x, y:b.y, k:Math.min(Math.max(k, 0.15), 1.35)};
 }
 function resetView(anim){
@@ -1508,6 +1511,20 @@ function scoreEntry(e, kws, nameN){
   if(nameN && norm(e.title).includes(nameN)) s += 15;
   return {s: s + hits.size*3, hits: hits.size};
 }
+/* 语料子域 ↔ KG 节点子域 匹配（含别名桥接）：
+   语料用「配位化学理论/安全与废物处理」等标签，KG 用「磁性研究/实验教学」等覆盖同一内容——
+   直接判等会漏掉这些同源条目；经 SUBFIELD_ALIAS 映射到 KG 节点后二次判等，让详情面板关联文献不漏。 */
+function subfieldMatch(node, eSub){
+  if(!node.subfield || !eSub) return false;
+  const en = norm(eSub);
+  if(en === norm(node.subfield)) return true;
+  const mapped = SUBFIELD_ALIAS[eSub];                 // 语料标签 → KG 节点 id
+  if(mapped) return mapped === node.id;
+  for(const k in SUBFIELD_ALIAS){                      // 反向：节点子域别名映射 → 语料标签
+    if(SUBFIELD_ALIAS[k] === node.id && norm(k) === en) return true;
+  }
+  return false;
+}
 function relatedDocs(n){
   if(!corpus.length) return {list:[], failed: corpusFailed};
   const kws = nodeKeywords(n);
@@ -1515,8 +1532,8 @@ function relatedDocs(n){
   const scored = [];
   for(const e of corpus){
     const r = scoreEntry(e, kws, nameN);
-    // 节点 subfield 与语料条目 subfield 匹配时强加分
-    if(n.subfield && e.subfield && norm(e.subfield) === norm(n.subfield)) r.s += 30;
+    // 节点 subfield 与语料条目 subfield 匹配（含别名桥接）时强加分
+    if(subfieldMatch(n, e.subfield)) r.s += 30;
     if(r.hits >= 2 && r.s >= 15) scored.push({e, s: r.s});
   }
   scored.sort((a,b)=>b.s - a.s);

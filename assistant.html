@@ -792,7 +792,8 @@ async function callLLM(question, context, streamCallback){
     '【输出格式】\n'+
     '- 用中文，专业简洁；分点用 · 或数字编号，多步流程可分段以清晰呈现。\n'+
     '- 化学式一律用 Unicode 上下标（如 K₃[Fe(C₂O₄)₃]·3H₂O、Fe³⁺、C₂O₄²⁻、FeC₂O₄↓、CO₂↑）。\n'+
-    '- 每个答案控制在 300 字以内，保留关键数字与化学式；如需更深入，可在结尾提示"可继续追问"。\n\n'+
+    '- 每个答案控制在 300 字以内，保留关键数字与化学式；如需更深入，可在结尾提示"可继续追问"。\n'+
+    '- 涉及复杂机理/推导时，先加一句大白话点明核心（如"简单说，就是…"），再展开术语细节；通俗解释直接写进正文，不要单独开辟"白话版"栏目。\n\n'+
     '【限制】\n'+
     '1. 严格基于提供的参考知识库内容回答，不编造事实、数值或文献。\n'+
     '2. 参考内容不足时如实说明"根据现有知识库，无法确定该问题的答案"，再给出最相关的已知信息。\n'+
@@ -878,8 +879,8 @@ function buildLLMContext(q){
   // 角色镜头：让 LLM 按身份调整口吻与深度（本地路径另行用 intro/outro 包裹）
   var roleLens={
     'non-chemistry':'你的用户是非化学专业人士：请用生活化、口语化的中文，避免术语堆砌和公式轰炸；必要时用生活类比帮助理解；凡涉及操作，讲完请补一句安全提醒；去掉浓重的学术腔。',
-    'chemistry':'你的用户是化学专业人士：请保持专业严谨的学术风格，直接给出配位化学、晶体场理论、热力学机理与定量推导的依据和参数；术语与化学式务必准确；无需做通俗化铺垫。',
-    'teacher':'你的用户是化学教师：请以教学引导的口吻组织内容——先点出本节学习目标，再分步讲解，最后做小结；主动指出学生易犯的常见误区，并提示这个知识点适合出题检查的要点；必要时给出教学设计思路。'
+    'chemistry':'你的用户是化学专业人士：请保持专业严谨的学术风格，直接给出配位化学、晶体场理论、热力学机理与定量推导的依据和参数；术语与化学式务必准确；涉及复杂机理/推导时先加一句大白话点明核心（如"简单说，就是…"）再展开细节，避免晦涩。',
+    'teacher':'你的用户是化学教师：请以教学引导的口吻组织内容——先点出本节学习目标，再分步讲解，最后做小结；主动指出学生易犯的常见误区，并提示这个知识点适合出题检查的要点；必要时给出教学设计思路；对复杂机理同理先一句大白话点明再展开，避免晦涩。'
   };
   parts.push('【身份】'+ (roleLens[chatRole()]||roleLens.chemistry));
   if(CHAT_HISTORY.length>1){
@@ -1376,7 +1377,7 @@ function buildHybridAnswerHTML(q, ctx){
 
 /* ===== 身份化深度门控：非化学折叠技术性小节（看干净简易答案），化学/教师铺开全深度。
    同一知识底座按身份分层呈现——不臆造内容，只改变默认展开程度与展示顺序。 ===== */
-function roleDepthOpen(){ return chatRole()!=='non-chemistry'; }
+function roleDepthOpen(){ return false; }
 function roleSec(summary, body, forceOpen){
   var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
   return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
@@ -1400,7 +1401,8 @@ function buildCalcAnswerHTML(q){
 }
 /* 身份差异化呈现（不改写正文、不臆造内容）：
    ① 融进「核心解答」的一行引导句（roleLeadHTML，非独立浮框）——承诺与后续内容一致；
-   ② 非化学：核心解答包「白话版」卡 + 淡显公式符号（CSS .role-plain .ans-sub/.ans-sup），深机理折叠——读起来更浅；化学/教师：原样铺开全深度。 */
+   ② 直白化并入正文（LLM 提示词已指导「简单说…」开篇），不再用独立「白话版」盒割裂包装；
+     计算命中时（buildCalcAnswerHTML）把当场算出的结果置于「核心解答」最前，否则叠 FAQ 正文。 */
 function roleCoreHTML(innerHTML){
   var role=chatRole();
   var lead=roleLeadHTML(role);
@@ -1408,9 +1410,7 @@ function roleCoreHTML(innerHTML){
   var calced=(calc!=='');
   // 计算命中时，答案由当场算出的公式+结果完全自足，不再叠加大段 FAQ 正文——FAQ 首句常是"标准5.0g例/Fe守恒/
   // 产率等级"等与本题数值或对象不符的无关内容。与 local_answer.js 无头评分路径镜像化（阶段0 计算优先）。
-  if(role==='non-chemistry'){
-    return lead+'<div class="role-plain"><span class="rp-tag">💬 白话版</span>'+calc+(calced?'':innerHTML)+'</div>';
-  }
+  // 直白化并入正文（LLM 提示词已指导"简单说…"开篇），不再用独立「白话版」盒割裂包装。
   return lead+calc+(calced?'':innerHTML);
 }
 function buildAnalogyBridgedAnswer(q, ctx){
@@ -1441,16 +1441,15 @@ function buildAnalogyBridgedAnswer(q, ctx){
   }
   s+=roleCoreHTML(_coreBody);
   if(analogies.length>0){
-    s+='<div class="ans-sec"><h4>🔗 类比推理桥接</h4>';
-    s+='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
+    var _ab='<p class="muted" style="margin-bottom:6px">以下内容通过与已知化学概念的<b>类比</b>生成——并非本知识库的直接答案，但基于相同的化学原理可合理推断：</p>';
     for(var ai=0;ai<analogies.length;ai++){
       var a=analogies[ai];
-      s+='<div class="analogy-banner">';
-      s+='<div style="font-size:13px;margin-bottom:4px"><span class="bridge-icon">🔗</span><b>'+esc(a.concept)+'</b> ← 匹配自「'+esc(a.matchedTerm)+'」</div>';
-      s+='<div style="font-size:12px;color:var(--t2);line-height:1.65">'+esc(a.principle)+'</div>';
-      s+='</div>';
+      _ab+='<div class="analogy-banner">';
+      _ab+='<div style="font-size:13px;margin-bottom:4px"><span class="bridge-icon">🔗</span><b>'+esc(a.concept)+'</b> ← 匹配自「'+esc(a.matchedTerm)+'」</div>';
+      _ab+='<div style="font-size:12px;color:var(--t2);line-height:1.65">'+esc(a.principle)+'</div>';
+      _ab+='</div>';
     }
-    s+='</div>';
+    s+='<div class="ans-sec">'+roleSec('🔗 类比推理桥接', _ab)+'</div>';
   }
   var allAnalogyRefs=analogyHits.concat(methodHits);
   if(allAnalogyRefs.length>0){
@@ -1473,7 +1472,7 @@ function buildAnalogyBridgedAnswer(q, ctx){
   if(directHits.length>0){
     s+='<div class="ans-sec">'+roleSec('📚 文献支持（'+directHits.length+' 篇）','<ol class="cite-list">'+directHits.map(citationHTML).join('')+'</ol>')+'</div>';
   }
-  s+='<div class="ans-sec"><h4>🌐 网络补充</h4>'+webFallbackHTML(q)+'</div>';
+  s+='<div class="ans-sec">'+roleSec('🌐 网络补充', webFallbackHTML(q))+'</div>';
   s+=extendHTML(q, faq, directHits.length>0?directHits:allAnalogyRefs.slice(0,3));
   return s;
 }
@@ -1764,7 +1763,7 @@ async function roleSafetyHTML(q, chems){
       return '<div class="web-item"><div class="web-top"><span class="web-src">⚠ '+esc(it.chem)+'</span><span class="auth-tag local">安全提醒</span></div>'
         +'<div class="web-snippet"><b>危害：</b>'+esc(it.hazard)+'<br><b>防护：</b>'+esc(it.advice)+'</div></div>';
     }).join('');
-    return '<div class="ans-sec" style="margin-top:4px"><div class="link-card warn"><h4>🛡️ 安全提醒（先看这个）</h4>'+items+'</div></div>';
+    return '<div class="ans-sec">'+roleSec('🛡️ 安全提醒','<div class="link-card warn"><h4>🛡️ 安全提醒（先看这个）</h4>'+items+'</div>')+'</div>';
   }catch(e){ return ''; }
 }
 function msdsCardHTML(chems){
@@ -1880,12 +1879,12 @@ function extendHTML(q,faq,hits){
   const kgHref='knowledge.html?node='+encodeURIComponent(kgNode);
   const kgLabel=knode?'知识图谱「'+esc(knode)+'」节点':'知识图谱「相关」节点';
   const corpusLink='corpus.html'+(subfield?'?subfield='+enc(subfield):'');
-  let s='<div class="ans-sec"><h4>💡 知识延伸</h4><p style="font-size:13px">🔗 <a href="'+kgHref+'" target="_blank">'+kgLabel+'</a>　·　📚 <a href="'+corpusLink+'" target="_blank">语料库「'+esc(subfield)+'」子领域</a>';
+  let inner='<p style="font-size:13px">🔗 <a href="'+kgHref+'" target="_blank">'+kgLabel+'</a>　·　📚 <a href="'+corpusLink+'" target="_blank">语料库「'+esc(subfield)+'」子领域</a>';
   if(rel.length){
-    s+='<div style="margin-top:7px"><span class="muted" style="font-size:12px">你可能还想问：</span><div style="margin-top:5px;display:flex;flex-wrap:wrap;gap:6px">'
+    inner+='<div style="margin-top:7px"><span class="muted" style="font-size:12px">你可能还想问：</span><div style="margin-top:5px;display:flex;flex-wrap:wrap;gap:6px">'
      +rel.map(f=>'<button class="chip faq-chip" data-q="'+esc(f.q)+'">'+esc(f.title)+'</button>').join('')+'</div></div>';
   }
-  return s+'</div>';
+  return '<div class="ans-sec">'+roleSec('💡 知识延伸', inner)+'</div>';
 }
 
 /* ================= 富文本答案渲染（LaTeX → Unicode + 上下标 + 结构化排版） ================= */
@@ -1900,6 +1899,10 @@ function renderLatexBody(body, G){
   s=s.replace(/\^(\d[+\-])/g,'<sup class="ans-sup">$1</sup>');
   s=s.replace(/\^(\d+)/g,'<sup class="ans-sup">$1</sup>');
   s=s.replace(/\^·/g,'<sup class="ans-sup">·</sup>');
+  // 负指数 / 括号指数 / 分数指数：须在单字符规则之前，避免 ^( 或 ^- 被单字符规则拆断成 <sup>(</sup>… 或 <sup>-</sup>…
+  s=s.replace(/\^-(\d+(?:\.\d+)?)/g,'<sup class="ans-sup">-$1</sup>');
+  s=s.replace(/\^\(([^()]{1,30})\)/g,'<sup class="ans-sup">($1)</sup>');
+  s=s.replace(/\^([½¼¾²³])/g,'<sup class="ans-sup">$1</sup>');
   s=s.replace(/\^([a-zA-Z0-9\+\-])/g,'<sup class="ans-sup">$1</sup>');
   s=s.replace(/\\frac\{([\s\S]*?)\}\{([\s\S]*?)\}/g,'($1)/($2)');
   s=s.replace(/\\sqrt(?:\[([^\]]*)\])?\{([^{}]*)\}/g,'√($2)');
@@ -1911,11 +1914,31 @@ function renderLatexBody(body, G){
   s=s.replace(/\\left|\\right|\\bigl|\\bigr|\\Bigl|\\Bigr|\\big|\\Big/g,'');
   var keys=Object.keys(G);
   for(var i=0;i<keys.length;i++){s=s.split(keys[i]).join(G[keys[i]]);}
+  // 常用箭头/数目/文本命令：避免被下方 \\([a-zA-Z]+) 剥成英文单词（如 \downarrow -> downarrow、\text{..} -> text..）
+  s=s.replace(/\\leftrightharpoons|\\rightleftharpoons|\\rightleftarrows|\\rightlefthar/g,'⇌');
+  s=s.replace(/\\longleftrightarrow/g,'↔');
+  s=s.replace(/\\leftrightarrow/g,'↔');
+  s=s.replace(/\\longrightarrow/g,'→');
+  s=s.replace(/\\rightarrow/g,'→');
+  s=s.replace(/\\longleftarrow/g,'←');
+  s=s.replace(/\\leftarrow/g,'←');
+  s=s.replace(/\\updownarrow/g,'↕');
+  s=s.replace(/\\downarrow/g,'↓');
+  s=s.replace(/\\uparrow/g,'↑');
+  s=s.replace(/\\sum/g,'Σ');
+  s=s.replace(/\\text\{([^{}]*)\}/g,'$1');
+  // 下标含汉字 / 希腊字母（如 m_理论、_λ）：置于符号替换后，因希腊字母此时已由 \lambda 转成 λ
+  s=s.replace(/_([一-鿿]+)/g,'<sub class="ans-sub">$1</sub>');
+  s=s.replace(/_([α-ωΑ-Ω])/g,'<sub class="ans-sub">$1</sub>');
   s=s.replace(/\\q?quad(?![a-zA-Z])/g,' ');
   s=s.replace(/(^|[^\\\w])quad(?![a-zA-Z])/g,'$1 ');
   s=s.replace(/\\([a-zA-Z]+)/g,'$1');
   s=s.replace(/\\/g,'');
   s=s.replace(/[{}]/g,'');
+  // 去掉 $$ 显示模式定界符（内层公式已在上文转 sub/sup 等）；若只有一个悬空 $$ 也一并去掉
+  s=s.replace(/\$\$([\s\S]*?)\$\$|\$\$/g,'$1');
+  // **加粗** -> <b></b>：否则正文会显式泄漏星号（如 **公式**）
+  s=s.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>');
   return s;
 }
 
@@ -2069,11 +2092,11 @@ function findImages(q, faq){
 }
 function imagesHTML(imgs){
   if(!imgs||!imgs.length) return '';
-  return '<div class="ans-sec"><h4>📷 相关实验图片</h4><div class="img-grid">'
+  return '<div class="ans-sec"><details class="ref-fold"><summary>📷 相关实验图片<span class="rf-arrow">▸</span></summary><div class="ref-fold-body"><div class="img-grid">'
     + imgs.map(function(im){
         return '<figure class="img-card"><img src="'+encodeURI(im.file)+'?v=2" alt="'+esc(im.caption||'')+'"><figcaption>'+esc(im.caption||'')+'</figcaption></figure>';
       }).join('')
-    + '</div></div>';
+    + '</div></div></details></div>';
 }
 /* 配图灯箱：点击缩略图查看全图，Esc/点背景/点✕ 关闭 */
 (function(){
@@ -2107,11 +2130,11 @@ function buildAnswerHTML(q,ctx){
       s+=answerHeaderHTML({level:'high'},'faq',0,false);
       s+='<div class="ans-sec"><h4>📌 核心解答</h4>'+roleCoreHTML('<div class="rich-answer">'+renderRichAnswer(faq.answer)+'</div>')+'</div>';
       if(faq.detail) s+='<div class="ans-sec">'+roleSec('📖 原理与细节（想看更深的解释？点开）','<div class="rich-answer">'+renderRichAnswer(faq.detail)+'</div>')+'</div>';
-      s+='<div class="ans-sec"><h4>🌐 网络补充</h4><p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q)+'</div>';
+      s+='<div class="ans-sec">'+roleSec('🌐 网络补充','<p class="muted" style="margin-bottom:4px">内置知识库已作答；如需更多文献证据可网络搜索：</p>'+webFallbackHTML(q))+'</div>';
       s+=extendHTML(q,faq,hits);
     }else{
       s+='<div class="ans-sec"><h4>📌 核心解答</h4><div class="rich-answer"><p>该问题超出了本实验知识清单（'+(Corpus.total||365)+' 篇）与内置知识库的覆盖范围。本助手专注于<b>三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验</b>（原理、试剂、操作、产率、误差、安全、表征与拓展应用），建议换用实验相关关键词提问（如"原理""产率""抽滤""避光"），或使用下面的网络检索链接自行查阅。</p></div></div>';
-      s+='<div class="ans-sec"><h4>🌐 网络检索</h4>'+webFallbackHTML(q)+'</div>';
+      s+='<div class="ans-sec">'+roleSec('🌐 网络检索', webFallbackHTML(q))+'</div>';
       s+=extendHTML(q,null,hits);
     }
     s+=imagesHTML(findImages(q,faq));
@@ -3111,12 +3134,10 @@ async function handleQA(q){
           try{
             var live=ans.querySelector('.stream-live');
             if(!live){
-              var _role=chatRole(), _wrap=_role==='non-chemistry';
+              var _role=chatRole();
               var sec=document.createElement('div'); sec.className='ans-sec stream-sec';
               sec.innerHTML='<h4 style="font-size:13px;color:var(--t2);margin:0 0 6px">🤖 LLM 生成</h4>'
-                +(_wrap?'<div class="role-plain"><span class="rp-tag">💬 白话版</span>':'')
-                +'<div class="rich-answer stream-live"></div>'
-                +(_wrap?'</div>':'');
+                +'<div class="rich-answer stream-live"></div>';
               /* 身份镜头统一（与本地路径一致，修复「3身份风格未融入对话」）：教师工具条 + 引导句置顶 */
               ans.insertAdjacentHTML('beforeend', teacherBarHTML()+roleLeadHTML(_role));
               ans.appendChild(sec); live=sec.querySelector('.stream-live');
@@ -3129,12 +3150,10 @@ async function handleQA(q){
         if(llmAnswer){
           llmAnswerText = llmAnswer; /* v72.1 记录 LLM 全文，供质检官/讲义核对扫描 */
           if(!ans.querySelector('.stream-live')){
-            var _fallRole=chatRole(), _fwrap=_fallRole==='non-chemistry';
+            var _fallRole=chatRole();
             ans.insertAdjacentHTML('beforeend', teacherBarHTML()+roleLeadHTML(_fallRole)
               +'<div class="ans-sec"><div class="rich-answer">'
-              +(_fwrap?'<div class="role-plain"><span class="rp-tag">💬 白话版</span>':'')
               +renderRichAnswer(llmAnswer)
-              +(_fwrap?'</div>':'')
               +'</div></div>');
           }
           usedLLM=true; streamedLive=true; html=''; // 已流式写入 ans，避免尾部 innerHTML 覆盖
@@ -3146,14 +3165,14 @@ async function handleQA(q){
   if(!usedLLM){
     var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops, onTopic:domain};
     html=buildHybridAnswerHTML(q, hybridCtx);
-    if(chems.length) html+=msdsCardHTML(chems);
+    if(chems.length) html+='<div class="ans-sec">'+roleSec('🧯 MSDS 安全数据', msdsCardHTML(chems))+'</div>';
     /* v61.1 视频默认折叠，点击展开（避免每条回答内嵌播放器占版面） */
     if(ops.length){
       html+='<div class="ans-sec"><details class="ref-fold"><summary>🎥 相关视频（操作：'+esc(ops.slice(0,4).join('、'))+'）<span class="rf-arrow">▸</span></summary>'
         +'<div class="ref-fold-body">'+localVideoCardHTML(ops,q)+videoCardHTML(ops,q)+'</div></details></div>';
     }
     if(llmNote) html=llmNote+html;
-    html='<div class="ans-sec" style="margin-bottom:4px">'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level)+'</div>'+html;
+    html='<div class="ans-sec">'+roleSec('📊 置信度',confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('类比推理',conf.analogy,conf.analogy>=0.7?'high':conf.analogy>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level))+'</div>'+html;
     /* v69 可视化：非 kg 类型随 html 一起渲染；kg 类下方统一处理 */
   }
 
@@ -3192,14 +3211,14 @@ async function handleQA(q){
   await animatePipe(bub,4);
   var checkResult=selfCheck(q, usedLLM?llmAnswerText:html, {chems:chems, ops:ops, analogies:analogies, conf:conf});
   var warnHTML=selfCheckHTML(checkResult);
-  if(warnHTML){ html+=warnHTML; }
+  if(warnHTML){ html+='<div class="ans-sec">'+roleSec('🔍 自我检查', warnHTML)+'</div>'; }
   /* v60 讲义权威进主路径（normal+cluster 均执行；渲染层增强，无头路径已 stub）。
      异步弹入：不阻塞答案渲染，manual.json 就绪后补插「讲义原文/核对」块，保持正常模式"快速本地答案"。 */
   var maPromise = manualAuthorityHTML(q, kws, usedLLM?llmAnswerText:html);
   /* 非化学安全提醒：置顶注入（仅非化学，异步，失败静默） */
   var roleSafPromise = roleSafetyHTML(q, chems);
-  if(UPLOADED_FILE && detectReportIntent(rawQ)){ html=reportAnalysisHTML(UPLOADED_FILE.text)+html; }
-  if(UPLOADED_FILE){ html+=fileContextHTML(q); }
+  if(UPLOADED_FILE && detectReportIntent(rawQ)){ html='<div class="ans-sec">'+roleSec('📄 报告解析', reportAnalysisHTML(UPLOADED_FILE.text))+'</div>'+html; }
+  if(UPLOADED_FILE){ html+='<div class="ans-sec">'+roleSec('🗂 文件上下文', fileContextHTML(q))+'</div>'; }
 
   var totalRefs=hits.length+analogyHits.length+methodHits.length;
   var confLabel=conf.level==='high'?'高置信度':(conf.level==='medium'?'中置信度':'低置信度');
@@ -3290,7 +3309,7 @@ async function handleQA(q){
   });
 
   /* v60 讲义权威异步弹入：答案先渲染，讲义原文/核对块就绪后补插 */
-  maPromise.then(function(ma){ if(ma&&ans&&ans.isConnected) ans.insertAdjacentHTML('beforeend', ma); }).catch(function(){});
+  maPromise.then(function(ma){ if(ma&&ans&&ans.isConnected) ans.insertAdjacentHTML('beforeend', '<div class="ans-sec">'+roleSec('📖 讲义核对', ma)+'</div>'); }).catch(function(){});
   roleSafPromise.then(function(rs){ if(rs&&ans&&ans.isConnected) ans.insertAdjacentHTML('afterbegin', rs); }).catch(function(){});
   /* v72.1 并发：注入打完 + 网页研究员 + 技能官 三者并行，qaBusy 待全部完成后复位——消除「打字/提交中」竞态 */
   var webP=Promise.resolve();
@@ -3326,7 +3345,7 @@ var ROLE_META={
 function _esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 function chatRole(){ try{ var u=JSON.parse(localStorage.getItem('chem-user')||'{}'); return (u.state&&u.state.role)||'chemistry'; }catch(e){ return 'chemistry'; } }
 function roleLeadHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<p class="role-lead"><span class="rl-ic"></span>'+(m.lead?'<span>'+_esc(m.lead)+'</span>':'')+'</p>'; }
-function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro"><div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div></div>'; }
+function roleOutroHTML(role){ var m=ROLE_META[role]||ROLE_META.chemistry; return '<div class="ans-sec role-outro">'+roleSec('💬 还想接着聊','<div class="ro-txt">还想接着聊：</div><div class="ro-chips">'+m.outro.map(function(o){ return '<button class="btn ghost sm" data-q="'+_esc(o)+'">'+_esc(o)+'</button>'; }).join('')+'</div>')+'</div>'; }
 function askUser(t,mode){ if(mode) setWorkMode(mode); var inp=document.getElementById('qaInput'); if(inp) inp.value=t; qaSubmit(); }
 document.addEventListener('click',function(e){
   var qbtn=e.target.closest('[data-q]'); if(qbtn){ askUser(qbtn.getAttribute('data-q')); return; }

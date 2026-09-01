@@ -25,11 +25,11 @@ body::before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;inset:0;poi
 a{text-decoration:none;color:inherit}
 button{font-family:inherit}
 /* ===== 导航（与全站统一） ===== */
-.navbar{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd2)}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--bd2)}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer}
 .logo-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;background:linear-gradient(135deg,rgba(16,185,129,.25),rgba(45,212,191,.12));border:1px solid rgba(16,185,129,.35);animation:chemaiPulse 3.5s ease-in-out infinite}
-.logo-name{font-weight:700;font-size:17px;background:linear-gradient(90deg,var(--emerald),var(--teal),#60a5fa,#a78bfa,var(--teal),var(--emerald));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:chemaiFlow 5s linear infinite;filter:drop-shadow(0 0 5px rgba(45,212,191,.35))}
+.logo-name{font-weight:700;font-size:17px;background:linear-gradient(90deg,var(--emerald),var(--teal),#60a5fa,#a78bfa,var(--teal),var(--emerald));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:chemaiFlow 9s linear infinite;filter:drop-shadow(0 0 1px rgba(45,212,191,.15))}
 .logo-sub{font-size:11px;color:var(--t3);letter-spacing:.2px}
 @keyframes chemaiFlow{0%{background-position:0% 0}100%{background-position:220% 0}}@keyframes chemaiPulse{0%,100%{box-shadow:0 0 6px rgba(16,185,129,.22)}50%{box-shadow:0 0 18px rgba(45,212,191,.5)}}
 .nav-links{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
@@ -1650,7 +1650,7 @@ window.addEventListener('DOMContentLoaded',function(){
 /* —— 悬浮：明显抬起 + 光晕 + 微放大 —— */
 .card,.side-card,.calc-card,.wrong-item,.doc-card,.qcard,.learn-card,.stat-card{transition:transform .32s cubic-bezier(.2,.9,.3,1.25),box-shadow .32s ease,border-color .32s ease,filter .32s ease}
 .card:hover,.side-card:hover,.calc-card:hover,.wrong-item:hover,.doc-card:hover,.qcard:hover,.learn-card:hover{transform:translateY(-7px) scale(1.018);border-color:rgba(16,185,129,.5);box-shadow:0 20px 48px rgba(2,6,23,.38),0 0 0 1px rgba(16,185,129,.12),0 0 30px rgba(16,185,129,.18);filter:brightness(1.05)}
-.stat-card:hover{transform:translateY(-5px) scale(1.03);border-color:rgba(16,185,129,.45);box-shadow:0 16px 38px rgba(2,6,23,.34),0 0 24px rgba(16,185,129,.16)}
+.stat-card:hover{transform:translateY(-5px) scale(1.03);border-color:rgba(16,185,129,.45);box-shadow:0 16px 38px rgba(2,6,23,.34),0 0 24px rgba(16,185,129,.07)}
 
 /* —— 按钮：按下回弹 + 主按钮悬浮光晕 —— */
 .btn{transition:transform .15s cubic-bezier(.2,.9,.3,1.5),box-shadow .25s ease,filter .25s ease,background .2s ease,border-color .2s ease,color .2s ease}
@@ -1733,10 +1733,10 @@ window.addEventListener('DOMContentLoaded',function(){
 
 /* === ChemAI 全局显示 v52 === */
 /* 环境光斑(固定层, 不挡交互) */
-body::after{content:"";position:fixed;inset:auto;width:560px;height:560px;left:-180px;top:-140px;z-index:0;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.16),transparent 68%);filter:blur(70px);animation:chemaiDrift 26s ease-in-out infinite}
+body::after{content:"";position:fixed;inset:auto;width:560px;height:560px;left:-180px;top:-140px;z-index:0;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.07),transparent 68%);filter:blur(40px);animation:chemaiDrift 44s ease-in-out infinite}
 @keyframes chemaiDrift{0%,100%{transform:translate(0,0)}33%{transform:translate(90px,60px) scale(1.08)}66%{transform:translate(30px,-50px)}}
 /* 导航: 更透毛玻璃 + 激活/悬浮下划线动画 */
-.navbar{backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid rgba(45,212,191,.14)}
+.navbar{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid rgba(45,212,191,.14)}
 .nav-links a{position:relative;isolation:isolate}
 .nav-links a::after{content:"";position:absolute;left:11px;right:11px;bottom:3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--em,var(--emerald,#10b981)),var(--teal,#2dd4bf));transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.8,.3,1);box-shadow:0 0 10px rgba(45,212,191,.55)}
 .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
@@ -1775,7 +1775,7 @@ footer{border-top:1px solid rgba(45,212,191,.15);background:linear-gradient(180d
 /* D) 卡片悬浮: 去掉 scale 抖动, 优雅抬升 + 光晕收敛 */
 .card:hover,.side-card:hover,.calc-card:hover,.wrong-item:hover,.doc-card:hover,.qcard:hover,.learn-card:hover,.stat-card:hover{
   transform:translateY(-4px);
-  box-shadow:0 18px 44px rgba(2,6,23,.42),0 0 0 1px rgba(16,185,129,.16),0 0 22px rgba(16,185,129,.12);
+  box-shadow:0 18px 44px rgba(2,6,23,.42),0 0 0 1px rgba(16,185,129,.07),0 0 22px rgba(16,185,129,.12);
   border-color:rgba(16,185,129,.45);
 }
 /* E) 卡片顶部发丝高光(悬浮显现) */

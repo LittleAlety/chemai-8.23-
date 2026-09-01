@@ -225,9 +225,11 @@ a:hover{color:var(--em)}
 .chem-row .cn{font-size:13px;font-weight:600;color:var(--yellow);min-width:130px}
 
 /* chips / 快捷 */
-.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 10px}
-.chip{font-size:12px;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:20px;padding:5px 12px;cursor:pointer;transition:.18s}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 10px;align-items:center}
+.chip{font-size:12px;line-height:1.55;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:20px;padding:5px 13px;cursor:pointer;transition:.18s;white-space:normal;max-width:100%}
 .chip:hover{color:var(--em);border-color:rgba(16,185,129,.45);background:rgba(16,185,129,.08)}
+/* 手机端：问题 chip 触控高度从 ~27px 提至 40px，窄屏长问法不溢出 */
+@media (max-width:820px){.chip{min-height:40px;padding:8px 14px;font-size:12.5px}}
 .composer{display:flex;gap:10px;padding:12px 18px 16px;border-top:1px solid var(--bd);background:var(--bg2);align-items:flex-end}
 .composer textarea{flex:1;resize:none;background:var(--card);border:1px solid var(--bd2);border-radius:12px;color:var(--t1);padding:11px 14px;font-size:14px;font-family:inherit;line-height:1.55;max-height:130px;outline:none;transition:.2s}
 .composer textarea:focus{border-color:rgba(16,185,129,.55);box-shadow:0 0 0 3px rgba(16,185,129,.12)}

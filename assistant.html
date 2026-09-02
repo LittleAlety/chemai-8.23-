@@ -3171,7 +3171,14 @@ async function handleQA(q){
   if(q&&q.trim()&&!isReanswer){ CHAT_HISTORY.push(q.trim()); if(CHAT_HISTORY.length>8) CHAT_HISTORY=CHAT_HISTORY.slice(-8); }
   var rawQ=q;
   var ctxNote=isReanswer?'🔄 智能体集群重答（策略变更，原提问保留）':'';
-  if(!isReanswer&&CHAT_HISTORY.length>=2 && (rawQ.length<8 || /它|这个|该|其|上述|此/.test(rawQ))){
+  /* 修复：上文合并仅在「真正回指/极短追问」时触发。
+     旧逻辑 (rawQ.length<8 || /它|这个|该|其|上述|此/.test(rawQ)) 是子串匹配，会把含 应该/其他/因此 等
+     的独立新问题也误判为追问，被拼上前一条(多为预设长问题)的检索串，导致之后问什么都回预设问题答案。
+     改为：仅真回指代词(它/这个/那个/上述/其中 且≤8字) 或 极短且非"那/还有/再/这"新话题引导(≤4字) 才合并。 */
+  var ctxRaw=(rawQ||'').trim();
+  var ctxRef=/^(它|这个|那个|上述|其中)/.test(ctxRaw);
+  var ctxBare=ctxRaw.length<=4 && !/^(那|还有|再|这)/.test(ctxRaw);
+  if(!isReanswer&&CHAT_HISTORY.length>=2 && (ctxBare || (ctxRef&&ctxRaw.length<=8))){
     q=CHAT_HISTORY[CHAT_HISTORY.length-2]+'，'+rawQ;
     ctxNote='🔁 已结合上文理解：「'+esc(CHAT_HISTORY[CHAT_HISTORY.length-2].slice(0,20))+'…」+「'+esc(rawQ.slice(0,15))+'」';
   }

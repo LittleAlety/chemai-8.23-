@@ -39,6 +39,8 @@ function phOf(href){for(var i=0;i<PHMAP.length;i++)if(PHMAP[i].re.test(href||'')
   var sub=logo.querySelector('.logo-sub');
   if(!sub){sub=document.createElement('div');sub.className='logo-sub';logo.appendChild(sub);}
   sub.textContent='返回主页';
+  logo.setAttribute('href','main.html');            /* 返回主页统一指向 main.html（全站一致） */
+  logo.setAttribute('title','返回主页');
 })();
 
 /* 3) 「🧭 怎么用」按钮：data-href 以 # 开头 → 页内平滑滚动；否则跳转 */

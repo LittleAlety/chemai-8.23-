@@ -153,7 +153,7 @@ button{font-family:inherit;cursor:pointer}
         </div>
       </a>
       <div class="nav-links">
-        <a href="index.html" class="active">主页</a>
+        <a href="main.html">主页</a>
         <a href="assistant.html">AI助手</a>
         <a href="knowledge.html">知识图谱</a>
         <a href="prep.html">课前预习</a>
@@ -237,7 +237,7 @@ button{font-family:inherit;cursor:pointer}
   };
   function getRole(){try{var raw=localStorage.getItem("chem-user");if(!raw)return null;var o=JSON.parse(raw);var r=o&&o.state?o.state.role:null;return ROLES[r]?r:null;}catch(e){return null;}}
   var role=getRole();
-  // 应用身份：更新右上角徽章 + 角色门控（切换身份后原地刷新，停留 index，不跳 main）
+  // 应用身份：更新右上角徽章 + 角色门控（选择身份后跳转 main，进入主页）
   function applyRole(r){
     var bn=$("#roleName"),bd=$("#roleBadge");
     if(r&&bn&&bd){var m=ROLES[r];bn.textContent=m.name;bd.style.color=m.color;bd.style.borderColor=m.color+"66";bd.style.background=m.color+"1a";var dot=bd.querySelector(".rdot");if(dot)dot.style.background=m.color;}
@@ -245,12 +245,12 @@ button{font-family:inherit;cursor:pointer}
     for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}
   }
   applyRole(role);
-  // 身份卡点击：写入身份后原地刷新徽章/门控，停留在 index（不再跳 main.html）
+  // 身份卡点击：写入身份后跳转 main.html 进入主页（不再停留 index）
   document.querySelectorAll(".role-card").forEach(function(card){
     card.addEventListener("click",function(){
       var r=card.getAttribute("data-role");
       try{localStorage.setItem("chem-user",JSON.stringify({state:{role:r,isLoggedIn:true}}));}catch(e){}
-      applyRole(r);
+      location.href="main.html";
     });
   });
 

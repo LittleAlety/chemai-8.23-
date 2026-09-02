@@ -42,7 +42,7 @@
 
 ## 深度问题自学习迭代体系
 
-通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **4211 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环**（详见 [版本历史](#版本历史)）。
+通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **4547 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环** + **本会话 30 条工业/实验专项 + self-train 3×100（净增 299）**（详见 [版本历史](#版本历史)）。
 
 ### 迭代历程
 
@@ -129,7 +129,7 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 ```
 chemai-8.23-/
 ├── index.html                 # 首页入口（React SPA，命名路由 + v86 身份切换停留 index + 主题桥接，含视频资源库页 + 科普探索页）
-├── assistant.html             # AI 助手（4211 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
+├── assistant.html             # AI 助手（4547 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
 ├── main.html                  # 实验手册（11 章，教师快捷入口 genCard）
 ├── generator.html             # 教师命题大板块（教师门控，智能生成 + 自主选题 + Word/PDF 导出）
 ├── knowledge.html             # 知识图谱（123 节点 / 195 关联，5 色分区 + 手机端字号自适应）
@@ -221,12 +221,13 @@ npx serve .                     # Node.js
 
 ## 版本历史
 
-> 版本线 v30 → v86（2026-07 至 2026-09）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载；v85 起含「语料权威度权重 + AI 模型架构文档 + 部署补齐」；v86 起取回 demo 精华做体验对齐。
+> 版本线 v30 → v87（2026-07 至 2026-09）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载；v85 起含「语料权威度权重 + AI 模型架构文档 + 部署补齐」；v86 起取回 demo 精华做体验对齐；v87 起含「工业/实验专项问答 + 检索门回归修正 + 学习式重排对比实验」。
 
 ### 近期（v74 → v86）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v87** | 09-02/03 | **工业/实验专项问答 + 训练 + 检索门回归修正 + 学习式重排对比实验**：① **30 条工业/实验问答**（三价铁能否作铁源、工业制备三草酸合铁酸钾、摩尔盐选择、实验室vs工业差异、母液回收、磁矩/高自旋等，含权威数值 45℃/91.6%、磁矩 5.92、烘干50℃/失水~100℃、铁13.09wt%/草酸根53.9wt% 等），均以**真实已有 corpus#id 文献锚定**（不凭空造文献）；② **self-train 3×100**（`self_train_loop.js`，判官门禁≥9.5 + `ensureCoverage` 确定性补录 + `cleanArtifacts`），FAQ 4545→4547，全库审计 **98.0%→98.8%**（4356 题，无命中 78→39，低置信 0）；③ **DOMAIN_RE 检索门放宽再修**——单靠放宽会引进离题误命中，改为**只留化学专属词**（磁矩/Gouy/Jahn/稳定常数/配体场/配离子/异构体/TG-DSC/离子交换/普鲁士蓝等），删风险词（电荷/异构/再生/热重/自旋/树脂/畸变/失重），离题零误命中、化学缺口保留；④ **学习式 MLP 重排器对比实验**（`训练管道/mlp_reranker.js`，202 参数、从零 Adam/反向传播、无暴露标注）——**结论：手工 `matchFAQ` 获胜**（改写题全库 3.9% vs 17.3%、原题 39.2% vs 95.3%），**保留手工检索**，神经网络为研究记录（静态站无推理后端，与架构文档一致）；由多 Agent 集群（改进×2 + 对抗质疑×2）完成"构建 vs 质疑"双线并行。✅ validate 0 错误、verify_web_ready 全绿、无乱码 |
 | **v86** | 09-01 | **对齐 demo 精华（本交付）**：取回 `emblulol/Chemai-demo` 留而未用的体验功能，本地与线上已成并行分叉、互有取舍，此版专搬"本地回退/未做而 demo 保留"的部分，**不搬**会回归本地的 v73 身份/引导/管理员架构、hallmark 样式覆盖层、level4→level3 归并。① **主题跨页桥接**——`index.html` 加桥接脚本：加载时把权威键 `chemaiTheme` 灌进 SPA 的 `chem-theme`（Zustand persist，保留 `version` 与其余 state，只覆写 `state.theme`），并用 `MutationObserver` 监听 `<html data-theme>` 回写，静态页与 SPA（`#/report|explore|quiz|generator|videos|agent`）切主题全站一致，消除"经 SPA 切主题回静态页断链"；② **移动端安全区/触控/文字缩放**——`assets/mobile-content-guard.css` **合并补回** demo 手机端块（`text-size-adjust:100%`、`body padding-bottom:env(safe-area-inset-bottom)`、`.navbar padding-top:env(safe-area-inset-top)`、≤820px 导航/发送钮≥44px、图例/缩放钮≥40px、中文 11→12/13px），**保留本地已有的全宽 overflow-wrap 规则**（合并非覆盖），7 页 viewport meta 补 `viewport-fit=cover`；③ **知识图谱手机端**——`knowledge.html` 加 `fsScale=min(1,max(0.75,W/700))` 标签字号随视口宽等比缩小 + `scale=max(0.45,·/1400)` 缩放下限，`wf` 三处乘 `fsScale`，窄屏图谱不被过度缩小；④ **color-scheme meta 全站统一**——6 页 `<meta name="color-scheme" content="dark light">`；⑤ **身份切换停留 index**——身份卡点击后写入 `chem-user` 并原地 `applyRole` 刷新右上角徽章与角色门控，停留 index 不跳 main（采纳用户意见：切换身份应落在 index，撤 demo 的"身份识别一次自动进手册"重定向与 `getChemRole` 全局）；⑥ **干净化**——`kg.json` 删 15 个死字段 `cat`（全项目无代码读 `node.cat`，行级删除保留多行数组格式）、`corpus.json` 15 条裸 `中` 难度归一为 `进阶级`（400 进阶级/7 入门/32 基础/6 提高；前端不显示语料难度，`gap-analysis` 对其优先级由 3 升 0）；⑦ **去 AI 味·减弱 chrome 特效（保留粒子）**——对齐 demo 观感：导航毛玻璃 `blur(20/14px)`→`blur(6px)` 去 `saturate(1.5)`、导航底更实（`rgba(10,14,26,.82)`→`.92`）、logo 流光 `chemaiFlow 5s`→`9s` + 辉光 `drop-shadow(0 0 5px .35)`→`drop-shadow(0 0 1px .15)`、环境光斑 `rgba(16,185,129,.16)`→`.07` 且 `blur(70px)`→`blur(40px)`、`chemaiDrift 26s`→`44s`；**字体收敛**——主体弃 Inter/Space Grotesk 统一系统字体栈（PingFang/YaHei/Noto Sans SC），仅保留 JetBrains Mono（公式/演示）；**粒子背景完整保留**（main/corpus/prep/assistant 走外部 `assets/bg-particles.js`，knowledge 内联，7 页 git diff 无粒子行删减）；⑧ **二遍去 AI 味·残余渐变光晕收敛**——标题渐变流光 `chemaiShine 7/8s`→`40s`（近乎静止）、index hero `gradFlow 6s`→`40s`，残留霓虹光晕按半强度收敛（`.stat-num .45`→`.2`、`.badge b .4`→`.2`、`.hl .35`→`.18`、`.panel-title .22`→`.12`、`.g-tag 10px`→`4px`、导航下划线 `.55`→`.3`、卡片悬浮 `.13`→`.06`、标题 drop-shadow `.3/.22`→`.15/.12`）；⑨ **assistant 问题排版**——"可能问题"chips（顶部 `MODE_CHIPS` 建议 + 答案内"你可能还想问" + 角色追问）共用 `.chip`，加 `line-height:1.55`/`white-space:normal`/`max-width:100%`（长问法多行换行不溢出）、`.chips` 容器 `align-items:center`、手机端 `.chip{min-height:40px;padding:8px 14px;font-size:12.5px}`（触控高度由 ~27px 提至 40px）；⑩ **assistant 答案文段分布**——答案文本以 `\n`（单换行）分隔各叙述句、`\n\n` 切段，但 `.ans-line`（单`\n`句）无 margin 与 `.ans-eq`(4px)/`.ans-head`(10/4)/`.ans-block`(9px) 节奏不一致，叙述句紧贴成一坨；现给 `.ans-line{margin:3px 0}`，形成"单`\n`微距 < 段距(9px) < 方程/标题"的清晰层级（纯 CSS，未动 `renderRichAnswer`，render-audit 0 段问题）。✅ 6 改动页内联脚本全解析 0 失败、kg/corpus JSON 校验通过、level4 9 节点未归并 |
 | **v85** | 09-01 | **全局优化 + 语料权威度 + AI 模型文档 + 部署补齐**：① **读透全部 445 篇语料**——离线确定性作业 `训练管道/corpus_weight_analysis.js`（`npm run corpus:weights`）计算权威度 `A(id)` + 子域反挤占 boost，产出 `data/corpus_weights.json` + `docs/语料权重分析报告.md`；② **加法式/门禁级运行时 hook**——`loadCorpus`→`searchCorpus` 加法 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，不进 `matchFAQ` 基础公式；③ **AI 模型文档** `docs/AI模型架构.md` 诚实说明检索排序非神经网络、唯一神经网络是 DeepSeek；④ **README 重写**；⑤ **部署补齐**——`deploy.yml` 补 `generator.html`/`data/categories.json`/`data/corpus_weights.json`/`scripts/lib-calc.js`，`package.json` repository.url 修正 |
 | **v74** | 08-25 | **assistant 助手重构落地（v72/v72.1 全部项）**：① **LLM 质检兜底**——`llmAnswerText` 记录 LLM 全文，`selfCheck`/讲义核对运行对象改 `usedLLM?llmAnswerText:html`；② **async 管道**——答案注入包装 `injectDone` Promise，`Promise.all([injectDone,webP,skillP])` 消除竞态；③ **置信度口径**——`faqConfidence()`(0.5~0.95) 替换「命中即0.9」；④ **知识图谱深链**——`SUBFIELD_ALIAS`+`resolveNodeTarget`+`resolveDeepLink`，图谱官返回 `?node=<id>` 深链；⑤ **安全**——上传包裹 `<user-file name>`+system prompt 防提示词注入、PDF 解析改本地 vendor；⑥ **代码清理**——删死代码、合并 DOMAIN_RE |

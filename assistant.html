@@ -3574,21 +3574,45 @@ function buildQuizPool(){
 function normAns(s){
   return String(s==null?'':s)
     .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,function(m){return '0123456789'['⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(m)];})
-    .replace(/[⁺⁻]/g,'').replace(/[·.,]/g,'').replace(/[℃度°]/g,'').replace(/[（(]/g,'').replace(/[）)]/g,'')
+    .replace(/[⁺⁻]/g,'').replace(/[··,]/g,'').replace(/[℃度°]/g,'').replace(/[（(]/g,'').replace(/[）)]/g,'')
     .replace(/[\s ]+/g,'').toLowerCase();
 }
 function numEq(a,b){var x=parseFloat(String(a).replace(/[^\d.+-]/g,'')),y=parseFloat(String(b).replace(/[^\d.+-]/g,''));return isFinite(x)&&isFinite(y)&&Math.abs(x-y)<0.02;}
+var COLOR_CHARS='翠绿黄蓝红橙棕紫黑白灰';   // 颜色色系字符
+function colorTok(s){ var m=String(s||'').match(new RegExp('['+COLOR_CHARS+'无色]+')); return m?m[0]:''; }
+var ALIAS={ '过氧化氢':['过氧化氢','双氧水','h2o2','过氧化氢溶液'],'双氧水':['过氧化氢','双氧水','h2o2'],'h2o2':['过氧化氢','双氧水','h2o2'],
+  '莫尔盐':['莫尔盐','摩尔盐','摩尔','硫酸亚铁铵'],'摩尔盐':['莫尔盐','摩尔盐','摩尔','硫酸亚铁铵'],'硫酸亚铁铵':['莫尔盐','摩尔盐','摩尔','硫酸亚铁铵'],
+  '乙醇':['乙醇','酒精'],'草酸':['草酸','乙二酸'],'抽滤':['抽滤','减压过滤','真空过滤'] };
+function oneBlankMatch(un, expected){
+  var en=normAns(expected); if(!en) return true;
+  if(un===en) return true;
+  if(numEq(un, expected)) return true;
+  if(/^[\d.\-+]+$/.test(en)) return false;   // 纯数值：只走 numEq，防 140 误中 40
+  if(un.indexOf(en)>=0) return true;         // 输入含期望（"翠绿色的" 含 "翠绿色"）
+  if(en.indexOf(un)>=0) return true;         // 输入是期望子串（"绿色" ⊂ "翠绿色"，"40"⊂"40℃"）
+  var ec=colorTok(en), uc=colorTok(un);      // 色系匹配：翠绿≈绿≈绿色，排除黄绿≠翠绿
+  if(ec&&uc&&(ec.indexOf(uc)>=0||uc.indexOf(ec)>=0)) return true;
+  var base=normAns(expected).replace(/[^a-z0-9一-龥]/g,'');
+  var aliases=ALIAS[base]||ALIAS[String(expected).trim()];
+  if(aliases){ for(var a=0;a<aliases.length;a++){ if(un.indexOf(normAns(aliases[a]))>=0) return true; } }
+  return false;
+}
 function abMatch(user, q, isChoice){
   if(isChoice){ // 选择题：选 A/B/C/D 或选中答案文本即对
     var u=normAns(user);
-    var letterSel=false;
     var letters=['a','b','c','d','e'];
-    for(var li=0;li<letters.length;li++){ if(u===letters[li]+(li===q.correctIdx?'':'')&&u===letters[li]){ if(li===q.correctIdx) return 1; } }
+    for(var li=0;li<letters.length;li++){ if(u===letters[li]&&li===q.correctIdx) return 1; }
     if(normAns(q.opts[q.correctIdx])===u) return 1;
     return 0;
   }
   var un=normAns(user);
-  for(var k=0;k<q.refs.length;k++){ var r=q.refs[k]; if(un===normAns(r)||numEq(un,r)) return 1; }
+  var tokens=String(user||'').split(/[，,;；\s／\/]+/).map(function(t){return normAns(t);}).filter(Boolean);
+  if(!tokens.length) tokens=[un];
+  var blanks=String(q.ans||'').replace(/[；;|]/g,';').split(';').map(function(s){return String(s).trim();}).filter(Boolean);
+  if(!blanks.length){ (q.refs||[]).forEach(function(r){ if(r) blanks.push(String(r)); }); }
+  var correct=0;
+  blanks.forEach(function(b){ if(tokens.some(function(t){return oneBlankMatch(t, b);})) correct++; });
+  if(blanks.length) return correct/blanks.length;   // 多空按正确比例计分
   var kp=q.key_points||[];
   if(kp.length&&normAns(q.ans)){ var hits=0; for(var j=0;j<kp.length;j++) if(kp[j]&&un.indexOf(normAns(kp[j]))>=0) hits++; if(hits) return Math.min(0.85,0.4+hits/kp.length*0.45); }
   return 0;

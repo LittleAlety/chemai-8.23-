@@ -546,26 +546,18 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
     </ol>
   </section>
 
-  <!-- 实验手册 -->
+  <!-- 实验手册（已移至课前预习：完整手册 10 部分在 prep.html） -->
   <div class="manual-head">
-    <h2>📖 实验手册全文</h2>
-    <span class="mh-chip">共 <b id="mhCh">12</b> 章 · <b id="mhSec">47</b> 节</span>
-    <span class="mh-chip">💡 全部内容已展开，可通过左侧目录快速定位</span>
+    <h2>📖 实验手册</h2>
+    <span class="mh-chip">完整手册已移至<b>「课前预习 · 实验手册」</b>板块（按学习顺序：目的→原理→操作→性质→表征→安全→拓展）</span>
   </div>
-
-  <div class="toc-mobile">
-    <select id="tocSelect" aria-label="手册章节目录">
-      <option value="">📑 跳转到章节…</option>
-    </select>
-  </div>
-
   <div class="manual-wrap">
-    <aside class="toc" id="tocBox">
-      <div class="toc-title">📑 章节目录</div>
-      <nav id="tocNav"></nav>
-    </aside>
-    <div id="manualBox">
-      <div class="loading-box"><div class="spin"></div>正在加载实验手册…</div>
+    <div id="manualBox" style="grid-column:1/-1">
+      <div class="path-banner">
+        <div class="pb-ico">📖</div>
+        <div class="pb-body"><b>实验手册（10 部分完整版）</b>现在放在<b>课前预习页</b>，按「01 目的 → 02 基础原理与性质 → 03 操作步骤 → … → 11 常见故障」顺序展开。<span>点下方按钮前往阅读。</span></div>
+        <a class="btn" style="--accent:var(--emerald);--accent2:var(--teal)" href="prep.html">📖 去课前预习 · 读实验手册 →</a>
+      </div>
     </div>
   </div>
 
@@ -812,8 +804,8 @@ function initSpy(){
     });
   });
 }
-/* 移动端目录跳转 */
-$("#tocSelect").addEventListener("change",function(){
+/* 移动端目录跳转（手册已移至课前，tocSelect 可能不存在） */
+if($("#tocSelect"))$("#tocSelect").addEventListener("change",function(){
   var id=this.value;if(!id)return;
   var el=document.getElementById(id);
   if(el)el.scrollIntoView({behavior:"smooth",block:"start"});
@@ -852,10 +844,9 @@ function showError(err){
     if(f){ var img=f.querySelector('img'); if(img) openLb(img); }
   });
 })();
-fetch("data/manual.json",{cache:'no-store'}).then(function(r){
-  if(!r.ok)throw new Error("HTTP "+r.status);
-  return r.json();
-}).then(renderManual).catch(showError);
+fetch("data/manual.json",{cache:'no-store'}).then(function(r){return r;}).then(function(){
+  // 实验手册已移至「课前预习 · 实验手册」板块（完整 10 部分在 prep.html），主页不再渲染
+}).catch(function(){});
 
 /* ================= 新用户导航：学习路径 / 快速找 / 首访横幅 / 阶段跳转 ================= */
 function jumpToChapter(id){

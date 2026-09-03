@@ -237,6 +237,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
       </div>
       <a class="btn" style="--accent:var(--emerald);--accent2:var(--teal)" href="main.html" title="打开完整实验手册">📖 完整手册（42 节）<span class="arr">→</span></a>
     </div>
+    <div class="mb-side" id="mbSide"></div>
     <div class="mb-grid" id="mbGrid"><div class="loading-line">正在加载实验手册…</div></div>
   </section>
 
@@ -553,7 +554,19 @@ document.addEventListener('DOMContentLoaded',function(){
 (function(){
   "use strict";
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function md(s){ /* 极简 markdown：**加粗** / #标题 / -列表 / |表格| */
+  function fU(t){ /* $...$ 公式 → 可读 Unicode（K_3[Fe(C_2O_4)_3]→K₃[Fe(C₂O₄)₃]） */
+    var SUBD={'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉'};
+    var SUPD={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+    return t.replace(/\$+([^$]+)\$+/g,function(m,inner){
+      var s=inner.replace(/\\cdot/g,'·').replace(/\\rightarrow/g,'→').replace(/\\times/g,'×').replace(/\\Rightarrow/g,'⇒').replace(/\\to/g,'→').replace(/\\downarrow/g,'↓').replace(/\\uparrow/g,'↑').replace(/\\approx/g,'≈').replace(/\\geq/g,'≥').replace(/\\leq/g,'≤');
+      s=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'($1)/($2)').replace(/\\sqrt\{([^{}]*)\}/g,'√($1)');
+      s=s.replace(/\\ce\{([^{}]*)\}/g,'$1').replace(/\\mathrm\{([^{}]*)\}/g,'$1').replace(/\\text\{([^{}]*)\}/g,'$1');
+      s=s.replace(/_\{([0-9])\}/g,function(m,d){return SUBD[d];}).replace(/\^\{([0-9])\}/g,function(m,d){return SUPD[d];});
+      s=s.replace(/_([0-9])/g,function(m,d){return SUBD[d];}).replace(/\^([0-9])/g,function(m,d){return SUPD[d];});
+      return s;
+    });
+  }
+  function md(s){ /* 极简 markdown：**加粗** / #标题 / -列表 / |表格| / $公式$ */
     if(!s)return'';
     var h=esc(s);
     h=h.replace(/^\s*#+\s*(.+)$/gm,'<div class="mb-h">$1</div>');
@@ -566,34 +579,45 @@ document.addEventListener('DOMContentLoaded',function(){
       return '<table class="mb-tb">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</table>';
     });
     h=h.replace(/\n\n+/g,'</p><p>').replace(/\n/g,'<br>');
-    return '<p>'+h+'</p>';
+    return '<p>'+fU(h)+'</p>';
   }
-  function card(sec,icon,star){
-    if(!sec)return '';
-    return '<details class="mb-card" open style="--rc:'+(star?'#fbbf24':'#10b981')+'">'
-      +'<summary class="mb-card-head"><span class="mb-ico">'+icon+'</span><span class="mb-title">'+esc(sec.title)+'</span>'
-      +'<span class="mb-cat">'+esc(sec.category||'')+'</span>'+(star?'<span class="mb-star">★核心</span>':'')+'</summary>'
-      +'<div class="mb-body">'+md(sec.content||'')+'</div></details>';
+  var DISPLAY=[
+    {t:'实验目的',ic:'🎯',ids:['ch1-s3']},
+    {t:'实验基础原理与化合物性质详解',ic:'⚗️',ids:['ch3-s1','ch2-s1','ch2-s2','ch2-s3','ch2-s4']},
+    {t:'操作步骤完全指南',ic:'🧪',ids:['ch4-s1','ch4-s2','ch4-s3','ch4-s4']},
+    {t:'配合物性质实验',ic:'🔬',ids:['ch5-s1','ch5-s2','ch5-s3','ch5-s4']},
+    {t:'制备原理深度解析',ic:'📐',ids:['ch3-s2','ch3-s3','ch3-s4','ch3-s5']},
+    {t:'光化学性质',ic:'☀️',ids:['ch6-s1','ch6-s2','ch6-s3']},
+    {t:'晶体场理论',ic:'💎',ids:['ch7-s1','ch7-s2','ch7-s3','ch7-s4']},
+    {t:'安全规范与废液处理',ic:'🛡️',ids:['ch8-s1','ch8-s2','ch8-s3','ch8-s4']},
+    {t:'扩展知识与实验背景概论',ic:'📚',ids:['ch9-s1','ch9-s2','ch9-s3','ch10-s1','ch10-s2','ch10-s3','ch1-s1','ch1-s2']},
+    {t:'常见实验故障排查',ic:'🔧',ids:['ch11-s1','ch11-s2','ch11-s3','ch11-s4','ch11-s5']}
+  ];
+  function secHtml(s){
+    if(!s) return '';
+    var h='<div class="mb-sec" id="'+esc(s.id)+'"><div class="mb-sec-h"><span class="mb-cat">'+esc(s.category||'')+'</span><b>'+esc(s.title)+'</b></div><div class="mb-body">'+md(s.content||'')+'</div>';
+    if(s.images&&s.images.length){ h+='<div class="mb-figs">'+s.images.map(function(im){return '&nbsp;<img class="mb-img" src="'+encodeURI('assets/images/'+im.file)+'" alt="'+esc(im.caption||'')+'">';}).join('')+'</div>'; }
+    return h+'</div>';
+  }
+  function partHtml(g,gi){
+    var arr=(g.ids||[]).map(function(id){return all[id];}).filter(Boolean);
+    return '<details class="mb-card mb-part" open><summary class="mb-card-head"><span class="mb-ico">'+g.ic+'</span>'+('<span class="mb-title">'+("0"+(gi+1)).slice(-2)+' · '+esc(g.t)+'</span>')+'<span class="mb-cat">'+arr.length+' 节</span></summary>'
+      +'<div class="mb-part-body">'+arr.map(secHtml).join('')+'</div></details>';
   }
   fetch('data/manual.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
-    var chs=(d&&d.chapters)||[],all={};
+    var chs=(d&&d.chapters)||[];
     chs.forEach(function(ch){(ch.sections||[]).forEach(function(s){all[s.id]=s;});});
     var g=document.getElementById('mbGrid');
-    if(g){ g.innerHTML=card(all['ch1-s3'],'🎯',false)+card(all['ch3-s1'],'⚗️',false)+card(all['ch4-s1'],'🧪',true); }
+    if(g){ g.innerHTML=DISPLAY.map(partHtml).join(''); }
+    var side=document.getElementById('mbSide');
+    if(side){ side.innerHTML=DISPLAY.map(function(x,gi){return '<a class="mb-s-a" href="#part'+("0"+(gi+1)).slice(-2)+'"><b>'+("0"+(gi+1)).slice(-2)+'</b> '+esc(x.t.slice(0,12))+'</a>';}).join(''); }
     var steps=document.getElementById('tpSteps');
     if(steps){
-      var arr=[
-        ['1','📖 读实验目的','目标（知识/能力/素养）· ch1-s3','#manualBoard'],
-        ['2','📖 读制备原理','沉淀→氧化→配位，四步机理 · ch3','#manualBoard'],
-        ['3','📖 读操作步骤','试剂/参数/操作要点 · ch4-s1','#manualBoard'],
-        ['4','🖼 看关键图','装置与现象图','#manualBoard'],
-        ['5','💬 对话测评','多轮答题定位薄弱 · 8 检查点','assistant.html?mode=assess'],
-        ['6','📝 题库自测','实验核心题','index.html#/quiz']];
-      steps.innerHTML=arr.map(function(s){
-        return '<li class="tp"><span class="tp-num">'+s[0]+'</span><div><div class="tp-t">'+s[1]+'</div><div class="tp-d">'+s[2]+'</div></div><a class="tp-go" href="'+s[3]+'">去完成 <span class="arr">→</span></a></li>';
-      }).join('');
+      var arr=[['1','📖 读实验目的','目标（知识/能力/素养）· 01','#part01'],['2','📖 读基础原理与性质','02 部分','#part02'],['3','📖 读操作步骤','试剂/参数/要点 · 03','#part03'],['4','🖼 看关键图','装置与现象图','#manualBoard'],['5','💬 对话测评','多轮答题定位薄弱','assistant.html?mode=assess'],['6','📝 题库自测','实验核心题','index.html#/quiz']];
+      steps.innerHTML=arr.map(function(s){ return '<li class="tp"><span class="tp-num">'+s[0]+'</span><div><div class="tp-t">'+s[1]+'</div><div class="tp-d">'+s[2]+'</div></div><a class="tp-go" href="'+s[3]+'">去完成 <span class="arr">→</span></a></li>'; }).join('');
     }
   }).catch(function(){var g=document.getElementById('mbGrid'); if(g) g.innerHTML='<div class="loading-line">手册加载失败（请用本地服务通过 HTTP 打开）</div>';});
+  var all={};
 })();
 </script>
 <style id="manual-board-css">
@@ -601,7 +625,18 @@ document.addEventListener('DOMContentLoaded',function(){
 .manual-board-head,.task-pack-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
 .manual-board-head h2,.task-pack-head h2{font-size:clamp(19px,2.8vw,24px);font-weight:700;margin:0}
 .mb-sub{font-size:13px;color:var(--t2)}
-.mb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mb-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.mb-side{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.mb-s-a{font-size:12.5px;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:999px;padding:6px 12px;text-decoration:none}
+.mb-s-a:hover{border-color:var(--emerald,#10b981);color:var(--emerald,#10b981)}
+.mb-s-a b{color:var(--emerald,#10b981);margin-right:5px}
+.mb-part{margin-bottom:0}
+.mb-part-body{padding:4px 18px 16px}
+.mb-sec{padding:10px 0;border-top:1px solid var(--bd);}
+.mb-sec:first-child{border-top:none}
+.mb-sec-h{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.mb-figs{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.mb-img{max-width:220px;border-radius:8px;border:1px solid var(--bd2)}
 .mb-card{background:var(--card,#1a2235);border:1px solid var(--bd2);border-radius:14px;overflow:hidden;border-top:3px solid var(--rc,#10b981)}
 .mb-card[open]{box-shadow:0 12px 30px rgba(0,0,0,.28)}
 .mb-card-head{display:flex;align-items:center;gap:9px;padding:13px 15px;cursor:pointer;font-weight:600;list-style:none}

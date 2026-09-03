@@ -729,22 +729,36 @@ var PH_LABEL={pre:"课前",mid:"课中",post:"课后",all:"全流程"};
 var CH_PHASE={ch1:"pre",ch2:"pre",ch3:"pre",ch4:"mid",ch5:"mid",ch6:"post",ch7:"post",ch8:"pre",ch9:"post",ch10:"post",ch11:"mid"};
 function phOf(id){return CH_PHASE[id]||"all";}
 
-/* ================= 手册渲染 ================= */
+/* ================= 手册渲染（按"编写顺序"01→11 显示；页边栏随之） ================= */
+var DISPLAY=[
+ {t:'实验目的',ic:'🎯',ids:['ch1-s3']},
+ {t:'实验基础原理与化合物性质详解',ic:'⚗️',ids:['ch3-s1','ch2-s1','ch2-s2','ch2-s3','ch2-s4']},
+ {t:'操作步骤完全指南',ic:'🧪',ids:['ch4-s1','ch4-s2','ch4-s3','ch4-s4']},
+ {t:'配合物性质实验',ic:'🔬',ids:['ch5-s1','ch5-s2','ch5-s3','ch5-s4']},
+ {t:'制备原理深度解析',ic:'📐',ids:['ch3-s2','ch3-s3','ch3-s4','ch3-s5']},
+ {t:'光化学性质',ic:'☀️',ids:['ch6-s1','ch6-s2','ch6-s3']},
+ {t:'晶体场理论',ic:'💎',ids:['ch7-s1','ch7-s2','ch7-s3','ch7-s4']},
+ {t:'安全规范与废液处理',ic:'🛡️',ids:['ch8-s1','ch8-s2','ch8-s3','ch8-s4']},
+ {t:'扩展知识与实验背景概论',ic:'📚',ids:['ch9-s1','ch9-s2','ch9-s3','ch10-s1','ch10-s2','ch10-s3','ch1-s1','ch1-s2']},
+ {t:'常见实验故障排查',ic:'🔧',ids:['ch11-s1','ch11-s2','ch11-s3','ch11-s4','ch11-s5']}
+];
 function renderManual(data){
   var chapters=(data&&data.chapters)||[];
   if(!chapters.length)throw new Error("手册数据为空");
-  var CORE=/^(ch1-s3|ch3-|ch4-)/;   // 目的(ch1-s3) + 制备原理(ch3) + 操作步骤(ch4)
-  var secTotal=0,tocHtml="",sel=$("#tocSelect"),bodyHtml="";
-  var coreArr=[],extraChaps=[];
+  var all={},secTotal=0,tocHtml="",sel=$("#tocSelect"),bodyHtml="";
   chapters.forEach(function(ch){
-    var secs=ch.sections||[];secTotal+=secs.length;
-    var num=("0"+ch.number).slice(-2);
-    tocHtml+='<a href="#'+esc(ch.id)+'"><span class="tnum">'+num+'</span><span class="toc-ph" data-ph="'+phOf(ch.id)+'"></span><span>'+esc(ch.title)+"</span></a>";
+    (ch.sections||[]).forEach(function(s){ all[s.id]=s; });
     var op=document.createElement("option");op.value=ch.id;op.textContent="第 "+ch.number+" 章 · "+ch.title;sel.appendChild(op);
-    var coreSecs=secs.filter(function(s){return CORE.test(s.id);});
-    var extraSecs=secs.filter(function(s){return !CORE.test(s.id);});
-    coreSecs.forEach(function(s){coreArr.push(s);});
-    if(extraSecs.length) extraChaps.push({ch:ch, secs:extraSecs});
+  });
+  DISPLAY.forEach(function(g,gi){
+    var gid='part'+("0"+(gi+1)).slice(-2);
+    var arr=(g.ids||[]).map(function(id){return all[id];}).filter(Boolean);
+    secTotal+=arr.length;
+    var secs=arr.map(secHtml).join("");
+    bodyHtml+='<section class="chapter" id="'+gid+'">'
+      +'<div class="ch-head"><span class="ch-num">'+g.ic+' '+("0"+(gi+1)).slice(-2)+'</span><h2>'+esc(g.t)+'</h2></div>'
+      +secs+'</section>';
+    tocHtml+='<a href="#'+gid+'"><span class="tnum">'+("0"+(gi+1)).slice(-2)+'</span><span class="toc-ph" data-ph="'+phOf(arr[0]?arr[0].id.slice(0,3):'')+'"></span><span>'+esc(g.t)+"</span></a>";
   });
   function secHtml(s){
     var h='<div class="sec" id="'+esc(s.id)+'">';
@@ -760,26 +774,11 @@ function renderManual(data){
        '<span class="conf" style="color:'+cc+";border-color:"+cc+"55;background:"+cc+'14">'+esc(s.confidence)+"</span></div>";
     return h+"</div>";
   }
-  /* 核心先读（目的 → 原理 → 步骤）前置、默认展开；其余折叠为额外阅读 */
-  bodyHtml+='<section class="chapter core-chapter" id="corePath">'
-    +'<div class="ch-head"><span class="ch-num">🔑 核心先读</span><h2>目的 → 原理 → 步骤</h2><span class="ch-ph" data-ph="pre">课前</span></div>'
-    +'<div class="ch-summary"><b>先看这三块</b>（实验要怎么做是关键）。背景 / 性质 / 扩展 / 反思 / 故障等请到下方「额外阅读」。</div>'
-    +coreArr.map(secHtml).join("")+'</section>';
-  var extraHtml=extraChaps.map(function(ec){
-    var ch=ec.ch,secs=ec.secs;
-    var h='<section class="chapter" id="'+esc(ch.id)+'">';
-    h+='<div class="ch-head"><span class="ch-num">第 '+ch.number+' 章</span><h2>'+esc(ch.title)+'</h2><span class="ch-ph" data-ph="'+phOf(ch.id)+'">'+PH_LABEL[phOf(ch.id)]+"</span></div>";
-    if(ch.summary)h+='<div class="ch-summary"><b>本章导读</b>'+esc(ch.summary)+"</div>";
-    h+=secs.map(secHtml).join("")+"</section>";
-    return h;
-  }).join("");
-  bodyHtml+='<details class="extra-read" id="extraRead"><summary>📚 额外阅读（背景 / 性质 / 扩展 / 反思 / 故障） · 共 '+(secTotal-coreArr.length)+' 节 <span class="rf-arrow">▸</span></summary>'+extraHtml+'</details>';
-  tocHtml='<a href="#corePath"><span class="tnum">🔑</span><span class="toc-ph" data-ph="pre"></span><span>核心先读 · 目的/原理/步骤</span></a>'+tocHtml;
   $("#tocNav").innerHTML=tocHtml;
   $("#manualBox").innerHTML=bodyHtml;
-  $("#statCh").textContent=chapters.length;$("#mhCh").textContent=chapters.length;
+  $("#statCh").textContent=DISPLAY.length;$("#mhCh").textContent=DISPLAY.length;
   $("#statSec").textContent=secTotal;$("#mhSec").textContent=secTotal;
-  $("#bannerSub").textContent="从实验原理到操作细节的完整手册："+chapters.length+" 章 "+secTotal+" 节；「核心先读」= 目的→原理→步骤，其余为额外阅读。";
+  $("#bannerSub").textContent="从实验原理到操作细节的完整手册："+DISPLAY.length+" 部分 "+secTotal+" 节，按「目的→原理→操作→性质→表征→安全→拓展」顺序展开。";
   initSpy();
 }
 /* 目录滚动高亮 */

@@ -1364,8 +1364,11 @@ function confidenceBarHTML(label, val, level){
   return '<div class="confidence-bar '+cls+'"><span class="cf-label">'+esc(label)+'</span><span class="cf-track"><span class="cf-fill" style="width:'+pct+'%"></span></span><span class="cf-pct">'+pct+'%</span></div>';
 }
 
+var _MODE_DEPTH=false;   // 由 buildHybridAnswerHTML 按工作模式设置：study=折叠(入门), deep/research/visual=展开(全深度)
 function buildHybridAnswerHTML(q, ctx){
   _CURRENT_Q=q;   // 注入当前问题，供 roleCoreHTML 内的计算卡片读取
+  var mode=ctx.mode||'study';
+  _MODE_DEPTH=(mode==='deep'||mode==='research'||mode==='visual');
   var faq=ctx.faq, directHits=ctx.directHits, conf=ctx.conf, chems=ctx.chems, ops=ctx.ops;
   var body;
   if(conf.level==='high'&&directHits.length>0){
@@ -1373,13 +1376,18 @@ function buildHybridAnswerHTML(q, ctx){
   }else{
     body=buildAnalogyBridgedAnswer(q, ctx);
   }
+  // 模式镜头：同一知识底座按【工作模式】差异化——study=入门精简(技术小节折叠)，deep/research=展开全深度(机理/文献)，visual=图示优先
+  var modeLead={study:'<div class="ans-lead">📘 入门版 · 先给核心结论，进阶细节可点开</div>',
+    deep:'<div class="ans-lead">🧠 深度版 · 展开完整机理与推导</div>',
+    research:'<div class="ans-lead">📚 文献版 · 优先检索语料与文献依据</div>',
+    visual:'<div class="ans-lead">📊 图示版 · 附可视化说明</div>'}[mode]||'';
   // 角色镜头：同一知识底座按身份差异化呈现（教师工具条 + 正文[内含融进的引导句] + 后续追问 chips）
-  return teacherBarHTML()+body+roleOutroHTML(chatRole());
+  return teacherBarHTML()+modeLead+body+roleOutroHTML(chatRole());
 }
 
 /* ===== 身份化深度门控：非化学折叠技术性小节（看干净简易答案），化学/教师铺开全深度。
    同一知识底座按身份分层呈现——不臆造内容，只改变默认展开程度与展示顺序。 ===== */
-function roleDepthOpen(){ return false; }
+function roleDepthOpen(){ return _MODE_DEPTH; }
 function roleSec(summary, body, forceOpen){
   var open=(forceOpen===undefined)?roleDepthOpen():forceOpen;
   return '<details class="ref-fold"'+(open?' open':'')+'><summary>'+summary+'<span class="rf-arrow">▸</span></summary><div class="ref-fold-body">'+body+'</div></details>';
@@ -2615,7 +2623,7 @@ function relatedBankQuestions(it,limit){
   if(!QUESTION_BANK.length) return [];
   var kws=extractSearchKeywords((it.title||'')+' '+(it.q||''));
   var cat=SUB2CAT[it.subfield]||'';
-  var scored=QUESTION_BANK.map(function(qb){
+  var scored=QUESTION_BANK.filter(function(x){return !isOffTopic(x.category);}).map(function(qb){
     var sc=0;
     if(cat&&qb.category===cat) sc+=3;
     for(var i=0;i<kws.length;i++){ if((qb.question||'').indexOf(kws[i])>=0) sc+=2; if((qb.answer||'').indexOf(kws[i])>=0) sc+=1; }
@@ -3252,7 +3260,7 @@ async function handleQA(q){
   }
 
   if(!usedLLM){
-    var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops, onTopic:domain};
+    var hybridCtx={faq:faq, directHits:hits, analogyHits:analogyHits, methodHits:methodHits, analogies:analogies, conf:conf, chems:chems, ops:ops, onTopic:domain, mode:WORK_MODE};
     html=buildHybridAnswerHTML(q, hybridCtx);
     if(chems.length) html+='<div class="ans-sec">'+roleSec('🧯 MSDS 安全数据', msdsCardHTML(chems))+'</div>';
     /* v61.1 视频默认折叠，点击展开（避免每条回答内嵌播放器占版面） */
@@ -3359,9 +3367,9 @@ async function handleQA(q){
       if(conf) bodyHTML+='<div class="rc-h">📊 置信度</div>'+confidenceBarHTML('语料库直接命中',conf.corpus,conf.corpus>=0.7?'high':conf.corpus>=0.35?'medium':'low')+confidenceBarHTML('综合置信度',conf.overall,conf.level);
       if(checkResult){ var _ck=selfCheckHTML(checkResult); if(_ck) bodyHTML+='<div class="rc-h">🔍 自我检查</div>'+_ck; }
       if(!bodyHTML) bodyHTML='<div style="font-size:12px;color:var(--t3)">本次无检索依据。</div>';
-      var trace={ counts:{hits:hits.length, analogy:analogyHits.length+methodHits.length}, label:confLabel, bodyHTML:bodyHTML };
+      var trace={ counts:{hits:hits.length, analogy:analogyHits.length+methodHits.length}, label:confLabel, bodyHTML:bodyHTML, open:false };
       var _rHTML=(_am&&_am.buildReasoningHTML)?_am.buildReasoningHTML(trace):'';
-      if(_rHTML){ var _rt=document.createElement('div'); _rt.innerHTML=_rHTML; bub.insertBefore(_rt.firstChild, ans); }
+      if(_rHTML){ ans.insertAdjacentHTML('afterend', _rHTML); }
     }catch(e){}
   }
 
@@ -3541,6 +3549,50 @@ const KP=[
   explain:'<b>直接讲解：</b>TG-DSC 三步分解：①<b>失结晶水（70-100℃）</b>：K₃[Fe(C₂O₄)₃]·3H₂O→K₃[Fe(C₂O₄)₃]+3H₂O↑，DSC 吸热峰 ~100℃。理论失重=54.06/491.25×100%=11.0%。②<b>草酸根分解（280-400℃）</b>：K₃[Fe(C₂O₄)₃]→3/2K₂CO₃+½Fe₂O₃+3/2CO↑+3/2CO₂↑，失重约 43%。③<b>碳酸盐进一步分解（400-600℃）</b>。TG-DSC 是判断产物纯度的关键——若第一步失重偏离 11.0%，说明结晶水含量异常。注意：产物烘干温度=50℃，TG 失水温度=100℃，二者是完全不同的概念。'}
 ];
 var MAX_ROUND=20,MIN_ROUND=10;
+/* ===== 掌握度测评 v2：题库驱动的题型化测评（填空+选择，按题型判分，真实掌握度） =====
+   旧机(coverageOf 关键词云判分)无法判分填空/选择——改由 QUESTION_BANK(fill+short)驱动，
+   fill→填空题(归一匹配 answer/referenceAnswer)，并由 fill 派生选择题(正确项+同类别3干扰项)。 */
+var SBANK=[], SMAX=12, SIDX=-1;
+var SRES={scores:[], answered:0, correct:0, perCat:{}};
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function catWeight(c){return {反应原理:20,实验操作:25,安全与废物处理:10,分析测定:15,综合研究:15}[c]||12;}
+function isOffTopic(cat){return cat==='高等理论';}   // 顺铂/Ziegler/EAN 等与本实验无关，不用于测评
+function buildQuizPool(){
+  var qs=(QUESTION_BANK||[]).filter(function(x){return !isOffTopic(x.category)&&x.answer;});
+  var pool=shuffle(qs.slice()).slice(0,SMAX);
+  SBANK=pool.map(function(x){
+    var opts=[x.answer];
+    var same=qs.filter(function(o){return o!==x&&o.category===x.category&&o.answer&&String(o.answer)!==String(x.answer);}).map(function(o){return o.answer;});
+    var dp=shuffle(same).slice(0,3); while(dp.length<3) dp.push('（以上皆非）');
+    opts=shuffle(opts.concat(dp));
+    return {id:x.id, type:x.type, cat:x.category, q:String(x.question), ans:String(x.answer||''), refs:[x.answer,x.referenceAnswer].filter(Boolean), key_points:x.key_points||[], opts:opts, correctIdx:opts.indexOf(String(x.answer)), weight:catWeight(x.category)};
+  });
+  SRES={scores:new Array(SBANK.length).fill(null), answered:0, correct:0, perCat:{}};
+  SIDX=0;
+}
+/* 答案归一：去单位/℃/度、去上标(⁺²³⁻)、去空格/圆括号、全半角、大小写；数值容差 */
+function normAns(s){
+  return String(s==null?'':s)
+    .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,function(m){return '0123456789'['⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(m)];})
+    .replace(/[⁺⁻]/g,'').replace(/[·.,]/g,'').replace(/[℃度°]/g,'').replace(/[（(]/g,'').replace(/[）)]/g,'')
+    .replace(/[\s ]+/g,'').toLowerCase();
+}
+function numEq(a,b){var x=parseFloat(String(a).replace(/[^\d.+-]/g,'')),y=parseFloat(String(b).replace(/[^\d.+-]/g,''));return isFinite(x)&&isFinite(y)&&Math.abs(x-y)<0.02;}
+function abMatch(user, q, isChoice){
+  if(isChoice){ // 选择题：选 A/B/C/D 或选中答案文本即对
+    var u=normAns(user);
+    var letterSel=false;
+    var letters=['a','b','c','d','e'];
+    for(var li=0;li<letters.length;li++){ if(u===letters[li]+(li===q.correctIdx?'':'')&&u===letters[li]){ if(li===q.correctIdx) return 1; } }
+    if(normAns(q.opts[q.correctIdx])===u) return 1;
+    return 0;
+  }
+  var un=normAns(user);
+  for(var k=0;k<q.refs.length;k++){ var r=q.refs[k]; if(un===normAns(r)||numEq(un,r)) return 1; }
+  var kp=q.key_points||[];
+  if(kp.length&&normAns(q.ans)){ var hits=0; for(var j=0;j<kp.length;j++) if(kp[j]&&un.indexOf(normAns(kp[j]))>=0) hits++; if(hits) return Math.min(0.85,0.4+hits/kp.length*0.45); }
+  return 0;
+}
 var A={
   started:false,finished:false,idx:0,round:0,
   stage:'main', // main | retry | follow | retest
@@ -3563,11 +3615,9 @@ function isDontKnow(t){
   return s.length<=14&&DK_SUB.some(k=>s.includes(k));
 }
 function updateProgress(){
-  var done=A.results.filter(function(r){return r.mastery!==null;}).length;
-  var total=KP.length;
-  var shown=Math.min(total,Math.max(done,A.idx+(A.finished?0:0)));
-  $('#apTxt').innerHTML='知识点 <b>'+Math.min(total,shown)+'/'+total+'</b> · 第 <b>'+A.round+'</b> 轮'+(A.inRetest?' · 薄弱点复测中':'');
-  $('#apBar').style.width=Math.round(done/total*100)+'%';
+  var total=SBANK.length||1;
+  $('#apTxt').innerHTML='已完成 <b>'+SRES.answered+'/'+total+'</b> 题 · 答对 <b>'+Math.round(SRES.correct)+'</b> · 第 <b>'+A.round+'</b> 轮';
+  $('#apBar').style.width=Math.round(SRES.answered/total*100)+'%';
 }
 function aiSay(html,cb){
   asBusy=true;asSend.disabled=true;
@@ -3578,111 +3628,45 @@ function aiSay(html,cb){
 function userSay(text){addMsg(asChat,'user',esc(text),false);}
 function nextQuestion(){
   updateProgress();
-  if(A.round>=MAX_ROUND){finishAssess('已达到最大轮次 '+MAX_ROUND+'，测评自动结束。');return;}
-  // 找下一个未完成知识点
-  if(!A.inRetest){
-    while(A.idx<KP.length&&A.results[A.idx].mastery!==null)A.idx++;
-    if(A.idx>=KP.length){
-      A.retestQueue=KP.map((p,i)=>i).filter(i=>A.results[i].mastery!==null&&A.results[i].mastery<0.6);
-      if(A.retestQueue.length&&A.round<MAX_ROUND){
-        A.inRetest=true;
-        aiSay(KP.length+' 个知识点已测完一轮 🎉。你中有 '+A.retestQueue.length+' 个知识点掌握度偏低，我们换个问法<b>复测</b>一下（不影响已得成绩，只可能加分）：',()=>setTimeout(askCurrent,650));
-        return;
-      }
-      finishAssess();return;
-    }
-  }
+  if(SIDX>=SBANK.length){ finishAssess(); return; }
   askCurrent();
 }
+/* 出题：交替「选择题(A/B/C/D) / 填空题」，题干由题库驱动，均有真实标准答案 */
 function askCurrent(){
-  if(A.round>=MAX_ROUND){finishAssess('已达到最大轮次 '+MAX_ROUND+'，测评自动结束。');return;}
+  if(SIDX>=SBANK.length){ finishAssess(); return; }
   A.round++;
-  var i=A.inRetest?A.retestQueue[0]:A.idx;
-  var kp=KP[i];
-  A.stage=A.inRetest?'retest':'main';
-  var mainQ=kp.main;
-  // 多题型轮换：round%3==0 用 alt1，round%3==1 用 alt2，round%3==2 用 main
-  if(!A.inRetest){
-    if(A.round%3===0&&kp.alt1) mainQ=kp.alt1;
-    else if(A.round%3===1&&kp.alt2) mainQ=kp.alt2;
-  }
-  var tag=A.inRetest?('🔄 复测 · 知识点 '+(i+1)+'/'+KP.length+'（'+kp.name+'，权重 '+kp.weight+'）'):('📌 知识点 '+(i+1)+'/'+KP.length+'：'+kp.name+'（权重 '+kp.weight+' 分）');
-  var q=A.inRetest?(kp.alt1||kp.alt2||kp.follow.replace('提示：','')||kp.main):mainQ;
-  aiSay('<div class="muted" style="margin-bottom:5px">'+tag+' · 第 '+A.round+' 轮</div>'+(A.inRetest?retestText(i):q),function(){});
+  var it=SBANK[SIDX]; var isChoice=(SIDX%2===0);
+  var letters=['A','B','C','D'];
+  var opts=it.opts.map(function(o,i){return '<div style="margin:3px 0"><b>'+letters[i]+'</b>) '+esc(o)+'</div>';}).join('');
+  var blank=String(it.q).replace(/_{2,}|_____|___/g,'（　）');
+  var head='<div class="muted" style="margin-bottom:5px">📌 第 '+(SIDX+1)+'/'+SBANK.length+' 题 · '+esc(it.cat)+'（权重 '+it.weight+' 分）</div>';
+  var body;
+  if(isChoice){ body=head+'<b>选择：</b>'+esc(blank)+'<div style="margin:8px 0">'+opts+'</div><div class="muted">请回复选项字母（A/B/C/D）或直接输入答案内容。</div>'; }
+  else{ body=head+'<b>填空：</b>'+esc(blank)+'<div class="muted" style="margin-top:6px">请填写答案（数值/名称，单位可省略）。</div>'; }
+  aiSay(body, function(){ try{ if(asInput) asInput.focus(); }catch(e){} });
 }
-function retestText(i){
-  const alt=[
-   '换个角度：'+KP[i].name+'——请用你自己的话再概述一下核心内容。',
-   '复测：关于「'+KP[i].name+'」，如果让你给同学讲 1 分钟，你会讲哪几个要点？'
-  ];
-  return alt[A.round%alt.length];
-}
+/* 判分：按题型——选择=选项字母/内容匹配；填空=归一匹配 answer/referenceAnswer/key_points */
 function handleAnswer(text){
   if(A.finished||asBusy)return;
-  if(!A.started){startAssess();return;}
+  if(!A.started){ startAssess(); return; }
+  if(SIDX<0||SIDX>=SBANK.length) return;
   userSay(text);
-  const i=A.inRetest?A.retestQueue[0]:A.idx;
-  const kp=KP[i],res=A.results[i];
-  const dk=isDontKnow(text);
-  const {cov,hit}=coverageOf(text,kp.groups);
-  const pct=Math.round(cov*100);
-  if(A.stage==='retest'){
-    let nm=cov>=0.6?0.85:(cov>=0.3?0.6:0.3);
-    const old=res.mastery||0;
-    res.mastery=Math.max(old,nm);
-    res.note=(res.note?res.note+'；':'')+'复测覆盖 '+pct+'%'+(nm>old?'，掌握度提升':'');
-    A.retestQueue.shift();
-    if(!A.retestQueue.length)A.inRetest=false;
-    aiSay(nm>old?('👍 复测有进步！该知识点掌握度更新为 <b>'+Math.round(res.mastery*100)+'%</b>。'):('好的，该知识点掌握度维持 <b>'+Math.round(res.mastery*100)+'%</b>。建议课后按报告中的建议重点复习。'),
-      ()=>setTimeout(nextQuestion,650));
-    return;
-  }
-  if(A.stage==='main'){
-    if(dk||cov<0.3){
-      A.stage='retry';
-      aiSay('没关系 🤝 先给你一个提示，请<b>再试答一次</b>：<br>'+kp.hint+'<div class="muted" style="margin-top:6px">（仍答不出我会直接讲解；也可以点"跳过本题"）</div>');
-      return;
-    }
-    if(cov<0.6){
-      res.mastery=0.5;res.note='主问题覆盖 '+pct+'%（部分掌握），追加引导式追问';
-      A.stage='follow';
-      aiSay('你答到了要点（'+esc(hit.slice(0,3).join('、'))+'），但还不够完整（覆盖 '+pct+'%）。我们深入一步：<br>'+kp.follow);
-      return;
-    }
-    res.mastery=Math.min(1,0.85+((cov-0.6)/0.4)*0.15);
-    res.note='主问题覆盖 '+pct+'%，掌握良好';
-    aiSay(praise()+' 覆盖度 '+pct+'%，该知识点掌握度记 <b>'+Math.round(res.mastery*100)+'%</b> ✅',()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
-    return;
-  }
-  if(A.stage==='retry'){
-    if(dk||cov<0.3){
-      res.mastery=0.3;res.note='提示后仍无法作答，已直接讲解，掌握度记 30%';
-      aiSay('好的，那我直接为你讲解这一知识点 📖：<br>'+kp.explain+'<div class="muted" style="margin-top:6px">掌握度暂记 30%，后面会复测。我们继续下一题。</div>',()=>setTimeout(()=>{A.idx++;nextQuestion();},900));
-      return;
-    }
-    if(cov<0.6){
-      res.mastery=0.5;res.note='提示后覆盖 '+pct+'%（部分掌握），追加引导式追问';
-      A.stage='follow';
-      aiSay('有进步！再追问一步：<br>'+kp.follow);
-      return;
-    }
-    res.mastery=0.75;res.note='提示后覆盖 '+pct+'%，掌握较好';
-    aiSay('答得不错 👏 提示后覆盖 '+pct+'%，掌握度记 <b>75%</b>。',()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
-    return;
-  }
-  if(A.stage==='follow'){
-    res.mastery=Math.min(0.8,Math.max(0.6,0.6+cov*0.2));
-    res.note=(res.note?res.note+'；':'')+'追问覆盖 '+pct+'%';
-    aiSay((cov>=0.5?'很好，追问后理解更到位了 👏':'明白了，这一部分先记录到这里。')+' 该知识点掌握度记 <b>'+Math.round(res.mastery*100)+'%</b>。',()=>setTimeout(()=>{A.idx++;nextQuestion();},650));
-    return;
-  }
+  var it=SBANK[SIDX]; var isChoice=(SIDX%2===0);
+  if(isDontKnow(text)){ aiSay('没关系，正确答案：<b>'+esc(it.ans)+'</b>。'+(it.key_points&&it.key_points.length?esc(it.key_points.join('；')):'')+' 我们继续下一题。', function(){ SIDX++; setTimeout(nextQuestion,550); }); return; }
+  var score=abMatch(text, it, isChoice);
+  SRES.scores[SIDX]=score; SRES.answered++; SRES.correct+=score;
+  SRES.perCat[it.cat]=(SRES.perCat[it.cat]||0)+score;
+  if(score>=0.7){ aiSay(praise()+' 回答正确，该题掌握度记 <b>'+Math.round(score*100)+'%</b> ✅', function(){ SIDX++; setTimeout(nextQuestion,520); }); }
+  else if(score>=0.4){ aiSay('说到点上了，但不够完整（记 '+Math.round(score*100)+'%）。参考答案：<b>'+esc(it.ans)+'</b>', function(){ SIDX++; setTimeout(nextQuestion,520); }); }
+  else{ aiSay('这题没答对。正确答案：<b>'+esc(it.ans)+'</b>。'+(it.key_points&&it.key_points.length?esc(it.key_points.join('；')):''), function(){ SIDX++; setTimeout(nextQuestion,520); }); }
 }
 function praise(){const p=['回答得很好！👏','非常棒，要点齐全！🎉','很好，理解到位！✅','不错不错，基本功扎实！💪'];return p[Math.floor(Math.random()*p.length)];}
 
 function startAssess(){
   if(A.started)return;
   A.started=true;
-  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。接下来通过<b>多轮对话</b>检测你对「三草酸合铁酸钾制备实验」的掌握水平：</p><ul style="margin-left:18px"><li>共 <b>'+KP.length+' 个知识点</b>（权重合计 105 分，总分按 100 分制归一），涵盖基础到进阶，题型多样（简答/判断/选择/填空/计算/案例分析）；</li><li>回答得好 → 直接过关；答得不全 → <b>引导式追问</b>；答不出 → 先给提示，仍不会则<b>直接讲解</b>；</li><li>薄弱知识点最后会<b>换问法复测</b>，轮次 '+MIN_ROUND+'~'+MAX_ROUND+' 动态调整；</li><li>跳过会提供完整讲解，帮助理解；</li><li>可随时点「结束并生成报告」，报告支持导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？我们开始第一题 👇</p>',
+  buildQuizPool();
+  aiSay('<p>你好！我是 <b>掌握度测评助手</b> 📝。用 <b>'+SBANK.length+' 道实验题</b>（填空 + 选择，配标准答案）检测你对「三草酸合铁酸钾制备实验」的掌握：</p><ul style="margin-left:18px"><li>题型：<b>填空</b>与<b>单选</b>交替（填数值/名称，或选 A/B/C/D）；</li><li>答对记分；答错会给标准答案与要点；<b>未答不计入总分</b>；</li><li>随时点「结束并生成报告」，报告可导出 Word / TXT。</li></ul><p style="margin-top:6px">准备好了吗？开始第一题 👇</p>',
     function(){setTimeout(nextQuestion,900);});
 }
 function kpComment(m){
@@ -3698,23 +3682,23 @@ function gradeOf(total){
   return['不及格','g-fail'];
 }
 function buildReportData(){
-  let total=0;KP.forEach((kp,i)=>{total+=kp.weight*(A.results[i].mastery||0);});
-  const MAXPTS=KP.reduce((s,k)=>s+k.weight,0)||1;
-  total=Math.round(total/MAXPTS*1000)/10;   // 权重合计 105 → 归一化到 100 分制（阈值/环形图/报告均按 /100）
-  const items=KP.map((kp,i)=>({name:kp.name,weight:kp.weight,m:A.results[i].mastery,note:A.results[i].note,kp}));
-  const assessed=items.filter(x=>x.m!==null);
-  const strengths=assessed.filter(x=>x.m>=0.8).sort((a,b)=>b.m-a.m);
-  const weakness=assessed.filter(x=>x.m<0.6).sort((a,b)=>a.m-b.m);
-  const unassessed=items.filter(x=>x.m===null);
+  // 按 category 聚合真实正确率（每题 score∈[0,1]）；未答题不进入分母（未测≠0）
+  var byCat={}, wsum=0, wcorr=0;
+  SBANK.forEach(function(it,idx){ var s=SRES.scores[idx]; if(s===null||s===undefined) return; var w=it.weight; if(!byCat[it.cat]) byCat[it.cat]={sum:0,n:0,weight:w}; byCat[it.cat].sum+=s; byCat[it.cat].n++; wsum+=w; wcorr+=s*w; });
+  var items=Object.keys(byCat).map(function(cat){ var g=byCat[cat]; return {name:cat, weight:g.weight, m:g.n?Math.round(g.sum/g.n*100)/100:0, note:'', kp:null}; });
+  var total=wsum>0?Math.round(wcorr/wsum*1000)/10:0;
+  var strengths=items.filter(x=>x.m>=0.8).sort((a,b)=>b.m-a.m);
+  var weakness=items.filter(x=>x.m<0.6).sort((a,b)=>a.m-b.m);
+  var unassessed=items.filter(x=>x.m===null);
   return{total,items,strengths,weakness,unassessed,rounds:A.round,date:new Date()};
 }
 function suggestHTML(w){
   const kp=w.kp;
-  let s='<li><b>'+esc(w.name)+'</b>（掌握度 '+Math.round(w.m*100)+'%）：'
-    +'建议到 <a href="knowledge.html?node='+encodeURIComponent(kp.knode||kp.subfield||'')+'" target="_blank">知识图谱</a> 复习「'+esc(kp.knode)+'」节点；'
-    +'在 <a href="corpus.html" target="_blank">语料库</a> 检索「'+esc(kp.subfield)+'」子领域文献；';
-  if(kp.videos&&kp.videos.length){
-    s+='观看视频 '+kp.videos.map(vi=>'<a href="'+VIDEO_BV[vi].u+'" target="_blank" rel="noopener">《'+esc(VIDEO_BV[vi].t)+'》</a>').join('、')+'；';
+  let s='<li><b>'+esc(w.name)+'</b>（掌握度 '+Math.round(w.m*100)+'%）：';
+  if(kp&&typeof kp.subfield==='string'&&kp.subfield){
+    s+='建议到 <a href="knowledge.html" target="_blank">知识图谱</a> 与 <a href="corpus.html" target="_blank">语料库</a> 复习「'+esc(kp.subfield)+'」相关内容；';
+  }else{
+    s+='建议到 <a href="knowledge.html" target="_blank">知识图谱</a> 与 <a href="corpus.html" target="_blank">语料库</a> 按「'+esc(w.name)+'」类别复习相应内容；';
   }
   return s+'完成后可回到本页重新测评检验提升效果。</li>';
 }
@@ -3742,10 +3726,10 @@ function finishAssess(reason){
    +'<div class="rp-sub">三草酸合铁酸钾 K₃[Fe(C₂O₄)₃]·3H₂O 制备实验 · 测评时间 '+dateStr+' · 共 '+d.rounds+' 轮对话'+(reason?(' · '+esc(reason)):'')+'</div>'
    +'<div class="rp-top"><div class="ring">'+ringSVG(d.total)+'<div class="ring-txt"><b>'+d.total+'</b><span>总分 / 100</span></div></div>'
    +'<div class="rp-grade"><span class="g-tag '+gcls+'">'+gname+'</span>'
-   +'<div class="rp-meta">已测知识点 '+d.items.filter(x=>x.m!==null).length+'/10 · 优势项 '+d.strengths.length+' 个 · 薄弱项 '+d.weakness.length+' 个'
-   +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ 提前结束：'+d.unassessed.length+' 个知识点未测评，按 0 计入总分</span>'):'')
+   +'<div class="rp-meta">已测类别 '+d.items.filter(x=>x.m!==null).length+'/'+d.items.length+' · 优势项 '+d.strengths.length+' 个 · 薄弱项 '+d.weakness.length+' 个'
+   +(d.unassessed.length?('<br><span style="color:#fbbf24">⚠ 提前结束：'+d.unassessed.length+' 个类别未测评，按 0 计入总分</span>'):'')
    +'</div></div></div>'
-   +'<div class="rp-sec"><h3>📊 各知识点掌握度（权重 × 掌握度 = 得分）</h3>';
+   +'<div class="rp-sec"><h3>📊 各类别掌握度（权重 × 掌握度 = 得分）</h3>';
   d.items.forEach(x=>{
     const m=x.m||0,pct=Math.round(m*100);
     const col=m>=0.85?'#10b981':m>=0.6?'#2dd4bf':m>=0.5?'#fbbf24':'#f87171';

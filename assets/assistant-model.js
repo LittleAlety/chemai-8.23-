@@ -88,6 +88,8 @@
         if(i>=blocks.length){ finish(false); return; }
         var b=blocks[i++];
         if(b.kind==='instant'){ target.insertAdjacentHTML('beforeend', b.html); onTick(); setTimeout(next, blockDelay); return; }
+        /* 长段直接注入：避免打字机把整段富文本压成"去空白长串"导致不知所云；短块保留逐字动画 */
+        if(b.kind==='rich' && (b.plain||'').length>60){ target.insertAdjacentHTML('beforeend', b.html); onTick(); setTimeout(next, blockDelay); return; }
         var ghost=document.createElement('span'); ghost.className='tw-ghost';
         target.appendChild(ghost);
         var txt=document.createTextNode(''); ghost.appendChild(txt);

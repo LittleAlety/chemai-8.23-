@@ -228,6 +228,29 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
     </div>
   </section>
 
+  <!-- 📖 实验手册（课前）独立板块 -->
+  <section class="manual-board" id="manualBoard">
+    <div class="manual-board-head">
+      <div>
+        <h2>📖 实验手册 · 课前必读</h2>
+        <span class="mb-sub">先看「怎么做」—— <b>目的 → 原理 → 步骤</b>，其余为额外阅读</span>
+      </div>
+      <a class="btn" style="--accent:var(--emerald);--accent2:var(--teal)" href="main.html" title="打开完整实验手册">📖 完整手册（42 节）<span class="arr">→</span></a>
+    </div>
+    <div class="mb-grid" id="mbGrid"><div class="loading-line">正在加载实验手册…</div></div>
+  </section>
+
+  <!-- 🧭 学习通任务包 -->
+  <section class="task-pack" id="taskPack">
+    <div class="task-pack-head">
+      <div>
+        <h2>🧭 任务包 · 按步骤走</h2>
+        <span class="mb-sub">读 → 看 → 练 → 测，做完再去下一站</span>
+      </div>
+    </div>
+    <ol class="tp-steps" id="tpSteps"></ol>
+  </section>
+
   <!-- 三大模块 -->
   <section class="grid">
     <!-- 模块 1：多轮对话测评 -->
@@ -525,5 +548,77 @@ document.addEventListener('DOMContentLoaded',function(){
 <script>/* 角色门控：科普探索仅非化学专业、报告评估仅教师 */
 (function(){var u,r=null;try{u=JSON.parse(localStorage.getItem('chem-user')||'{}');r=(u&&u.state&&u.state.role)||null;}catch(e){}var el=document.querySelectorAll('[data-role-gate]');for(var i=0;i<el.length;i++){var n=el[i].getAttribute('data-role-gate');el[i].style.display=(r===n)?'':'none';}})();</script>
 <script src="assets/nav-guide.js" defer></script>
+<script>
+/* Phase2：课前实验手册独立板块 + 学习通任务包（数据驱动：manual.json / assessment_kp / images） */
+(function(){
+  "use strict";
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function md(s){ /* 极简 markdown：**加粗** / #标题 / -列表 / |表格| */
+    if(!s)return'';
+    var h=esc(s);
+    h=h.replace(/^\s*#+\s*(.+)$/gm,'<div class="mb-h">$1</div>');
+    h=h.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
+    h=h.replace(/^\s*[-*]\s+(.+)$/gm,'<div class="mb-li">• $1</div>');
+    h=h.replace(/((?:^\|[^\n]+\|\s*$\n?)+)/gm,function(block){
+      var rows=block.trim().split('\n').map(function(r){return r.replace(/^\||\|$/g,'').split('|').map(function(c){return c.trim();});});
+      if(rows.length>1&&rows[0].every(function(c){return /^:?-{2,}:?$/.test(c.replace(/\s/g,''));})) rows.shift();
+      if(!rows.length)return'';
+      return '<table class="mb-tb">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</table>';
+    });
+    h=h.replace(/\n\n+/g,'</p><p>').replace(/\n/g,'<br>');
+    return '<p>'+h+'</p>';
+  }
+  function card(sec,icon,star){
+    if(!sec)return '';
+    return '<details class="mb-card" open style="--rc:'+(star?'#fbbf24':'#10b981')+'">'
+      +'<summary class="mb-card-head"><span class="mb-ico">'+icon+'</span><span class="mb-title">'+esc(sec.title)+'</span>'
+      +'<span class="mb-cat">'+esc(sec.category||'')+'</span>'+(star?'<span class="mb-star">★核心</span>':'')+'</summary>'
+      +'<div class="mb-body">'+md(sec.content||'')+'</div></details>';
+  }
+  fetch('data/manual.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    var chs=(d&&d.chapters)||[],all={};
+    chs.forEach(function(ch){(ch.sections||[]).forEach(function(s){all[s.id]=s;});});
+    var g=document.getElementById('mbGrid');
+    if(g){ g.innerHTML=card(all['ch1-s3'],'🎯',false)+card(all['ch3-s1'],'⚗️',false)+card(all['ch4-s1'],'🧪',true); }
+    var steps=document.getElementById('tpSteps');
+    if(steps){
+      var arr=[
+        ['1','📖 读实验目的','目标（知识/能力/素养）· ch1-s3','#manualBoard'],
+        ['2','📖 读制备原理','沉淀→氧化→配位，四步机理 · ch3','#manualBoard'],
+        ['3','📖 读操作步骤','试剂/参数/操作要点 · ch4-s1','#manualBoard'],
+        ['4','🖼 看关键图','装置与现象图','#manualBoard'],
+        ['5','💬 对话测评','多轮答题定位薄弱 · 8 检查点','assistant.html?mode=assess'],
+        ['6','📝 题库自测','实验核心题','index.html#/quiz']];
+      steps.innerHTML=arr.map(function(s){
+        return '<li class="tp"><span class="tp-num">'+s[0]+'</span><div><div class="tp-t">'+s[1]+'</div><div class="tp-d">'+s[2]+'</div></div><a class="tp-go" href="'+s[3]+'">去完成 <span class="arr">→</span></a></li>';
+      }).join('');
+    }
+  }).catch(function(){var g=document.getElementById('mbGrid'); if(g) g.innerHTML='<div class="loading-line">手册加载失败（请用本地服务通过 HTTP 打开）</div>';});
+})();
+</script>
+<style id="manual-board-css">
+.manual-board,.task-pack{max-width:1160px;margin:30px auto 6px;padding:0 20px}
+.manual-board-head,.task-pack-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.manual-board-head h2,.task-pack-head h2{font-size:clamp(19px,2.8vw,24px);font-weight:700;margin:0}
+.mb-sub{font-size:13px;color:var(--t2)}
+.mb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mb-card{background:var(--card,#1a2235);border:1px solid var(--bd2);border-radius:14px;overflow:hidden;border-top:3px solid var(--rc,#10b981)}
+.mb-card[open]{box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.mb-card-head{display:flex;align-items:center;gap:9px;padding:13px 15px;cursor:pointer;font-weight:600;list-style:none}
+.mb-card-head::-webkit-details-marker{display:none}
+.mb-ico{font-size:20px}.mb-title{flex:1;min-width:0}.mb-cat{font-size:11px;color:var(--t3);background:var(--bg2);border:1px solid var(--bd);padding:2px 8px;border-radius:999px}
+.mb-star{font-size:11px;font-weight:700;color:#fbbf24;background:rgba(251,191,36,.12);padding:2px 8px;border-radius:999px}
+.mb-body{padding:4px 16px 14px;font-size:13.5px;line-height:1.7;color:var(--t2)}
+.mb-h{font-weight:700;color:var(--t1);margin:8px 0 3px}.mb-li{margin:2px 0}
+.mb-tb{border-collapse:collapse;margin:8px 0;width:100%}.mb-tb td{border:1px solid var(--bd2);padding:4px 8px;font-size:12.5px}
+.loading-line{color:var(--t3);font-size:13px;grid-column:1/-1;padding:12px}
+.tp-steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0;margin:0}
+.tp{display:flex;gap:10px;align-items:flex-start;background:var(--card,#1a2235);border:1px solid var(--bd2);border-radius:14px;padding:14px 15px}
+.tp-num{width:26px;height:26px;border-radius:50%;background:var(--emerald,#10b981);color:#03130d;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.tp-t{font-weight:600;font-size:14px}.tp-d{font-size:12.5px;color:var(--t3);margin-top:2px}
+.tp-go{margin-left:auto;font-size:12.5px;color:var(--emerald,#10b981);white-space:nowrap}
+.tp-go .arr{transition:transform .2s}.tp:hover .tp-go .arr{transform:translateX(3px)}
+@media(max-width:920px){.mb-grid,.tp-steps{grid-template-columns:1fr}.manual-board-head,.task-pack-head{flex-direction:column;align-items:flex-start}}
+</style>
 </body>
 </html>

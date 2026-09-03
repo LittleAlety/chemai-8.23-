@@ -368,6 +368,19 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
   .notice{margin:8px 8px 0;padding:8px 10px;font-size:12px}
 }
 </style>
+<style id="extra-read-css">
+/* 核心先读 chapter + 额外阅读折叠桶 */
+.chapter.core-chapter{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.3);border-radius:var(--r)}
+.chapter.core-chapter .ch-num{background:#10b981;color:#03130d}
+.extra-read{margin-top:16px;border:1px solid var(--bd2);border-radius:var(--r);background:var(--card);overflow:hidden}
+.extra-read>summary{cursor:pointer;font-weight:700;padding:16px 20px;color:var(--t2);display:flex;align-items:center;gap:8px;list-style:none}
+.extra-read>summary::-webkit-details-marker{display:none}
+.extra-read>summary .rf-arrow{transition:transform .2s}
+.extra-read[open]>summary .rf-arrow{transform:rotate(90deg)}
+.extra-read[open]>summary{color:var(--t1);border-bottom:1px solid var(--bd2)}
+.extra-read .chapter{border-top:1px solid var(--bd);border-radius:0}
+.extra-read .chapter:first-child{border-top:none}
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -720,36 +733,53 @@ function phOf(id){return CH_PHASE[id]||"all";}
 function renderManual(data){
   var chapters=(data&&data.chapters)||[];
   if(!chapters.length)throw new Error("手册数据为空");
+  var CORE=/^(ch1-s3|ch3-|ch4-)/;   // 目的(ch1-s3) + 制备原理(ch3) + 操作步骤(ch4)
   var secTotal=0,tocHtml="",sel=$("#tocSelect"),bodyHtml="";
+  var coreArr=[],extraChaps=[];
   chapters.forEach(function(ch){
     var secs=ch.sections||[];secTotal+=secs.length;
     var num=("0"+ch.number).slice(-2);
     tocHtml+='<a href="#'+esc(ch.id)+'"><span class="tnum">'+num+'</span><span class="toc-ph" data-ph="'+phOf(ch.id)+'"></span><span>'+esc(ch.title)+"</span></a>";
     var op=document.createElement("option");op.value=ch.id;op.textContent="第 "+ch.number+" 章 · "+ch.title;sel.appendChild(op);
+    var coreSecs=secs.filter(function(s){return CORE.test(s.id);});
+    var extraSecs=secs.filter(function(s){return !CORE.test(s.id);});
+    coreSecs.forEach(function(s){coreArr.push(s);});
+    if(extraSecs.length) extraChaps.push({ch:ch, secs:extraSecs});
+  });
+  function secHtml(s){
+    var h='<div class="sec" id="'+esc(s.id)+'">';
+    h+='<div class="sec-head"><span class="sec-cat">'+esc(s.category)+"</span><h3>"+esc(s.title)+"</h3></div>";
+    h+='<div class="sec-body">'+renderMd(s.content)+"</div>";
+    if(s.images&&s.images.length){
+      h+='<div class="sec-figs">'+s.images.map(function(img){
+        return '<figure class="'+(img.big?'fig-big':'')+'"><img src="'+encodeURI('assets/images/'+img.file)+'?v=2" alt="'+esc(img.caption||'')+'"><figcaption>'+esc(img.caption||'')+'</figcaption></figure>';
+      }).join("")+'</div>';
+    }
+    var cc=CONF_COLOR[s.confidence]||"#94a3b8";
+    h+='<div class="sec-meta"><span class="src">📚 来源：'+esc(s.source)+"</span>"+
+       '<span class="conf" style="color:'+cc+";border-color:"+cc+"55;background:"+cc+'14">'+esc(s.confidence)+"</span></div>";
+    return h+"</div>";
+  }
+  /* 核心先读（目的 → 原理 → 步骤）前置、默认展开；其余折叠为额外阅读 */
+  bodyHtml+='<section class="chapter core-chapter" id="corePath">'
+    +'<div class="ch-head"><span class="ch-num">🔑 核心先读</span><h2>目的 → 原理 → 步骤</h2><span class="ch-ph" data-ph="pre">课前</span></div>'
+    +'<div class="ch-summary"><b>先看这三块</b>（实验要怎么做是关键）。背景 / 性质 / 扩展 / 反思 / 故障等请到下方「额外阅读」。</div>'
+    +coreArr.map(secHtml).join("")+'</section>';
+  var extraHtml=extraChaps.map(function(ec){
+    var ch=ec.ch,secs=ec.secs;
     var h='<section class="chapter" id="'+esc(ch.id)+'">';
     h+='<div class="ch-head"><span class="ch-num">第 '+ch.number+' 章</span><h2>'+esc(ch.title)+'</h2><span class="ch-ph" data-ph="'+phOf(ch.id)+'">'+PH_LABEL[phOf(ch.id)]+"</span></div>";
     if(ch.summary)h+='<div class="ch-summary"><b>本章导读</b>'+esc(ch.summary)+"</div>";
-    secs.forEach(function(s){
-      h+='<div class="sec" id="'+esc(s.id)+'">';
-      h+='<div class="sec-head"><span class="sec-cat">'+esc(s.category)+"</span><h3>"+esc(s.title)+"</h3></div>";
-      h+='<div class="sec-body">'+renderMd(s.content)+"</div>";
-      if(s.images&&s.images.length){
-        h+='<div class="sec-figs">'+s.images.map(function(img){
-          return '<figure class="'+(img.big?'fig-big':'')+'"><img src="'+encodeURI('assets/images/'+img.file)+'?v=2" alt="'+esc(img.caption||'')+'"><figcaption>'+esc(img.caption||'')+'</figcaption></figure>';
-        }).join("")+'</div>';
-      }
-      var cc=CONF_COLOR[s.confidence]||"#94a3b8";
-      h+='<div class="sec-meta"><span class="src">📚 来源：'+esc(s.source)+"</span>"+
-         '<span class="conf" style="color:'+cc+";border-color:"+cc+"55;background:"+cc+'14">'+esc(s.confidence)+"</span></div>";
-      h+="</div>";
-    });
-    bodyHtml+=h+"</section>";
-  });
+    h+=secs.map(secHtml).join("")+"</section>";
+    return h;
+  }).join("");
+  bodyHtml+='<details class="extra-read" id="extraRead"><summary>📚 额外阅读（背景 / 性质 / 扩展 / 反思 / 故障） · 共 '+(secTotal-coreArr.length)+' 节 <span class="rf-arrow">▸</span></summary>'+extraHtml+'</details>';
+  tocHtml='<a href="#corePath"><span class="tnum">🔑</span><span class="toc-ph" data-ph="pre"></span><span>核心先读 · 目的/原理/步骤</span></a>'+tocHtml;
   $("#tocNav").innerHTML=tocHtml;
   $("#manualBox").innerHTML=bodyHtml;
   $("#statCh").textContent=chapters.length;$("#mhCh").textContent=chapters.length;
   $("#statSec").textContent=secTotal;$("#mhSec").textContent=secTotal;
-  $("#bannerSub").textContent="从实验原理到操作细节的完整手册："+chapters.length+" 章 "+secTotal+" 节系统讲解三草酸合铁(III)酸钾的制备、性质与应用，全部内容一站式展开阅读。";
+  $("#bannerSub").textContent="从实验原理到操作细节的完整手册："+chapters.length+" 章 "+secTotal+" 节；「核心先读」= 目的→原理→步骤，其余为额外阅读。";
   initSpy();
 }
 /* 目录滚动高亮 */

@@ -554,32 +554,57 @@ document.addEventListener('DOMContentLoaded',function(){
 (function(){
   "use strict";
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function fU(t){ /* $...$ 公式 → 可读 Unicode（K_3[Fe(C_2O_4)_3]→K₃[Fe(C₂O₄)₃]） */
-    var SUBD={'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉'};
-    var SUPD={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
-    return t.replace(/\$+([^$]+)\$+/g,function(m,inner){
-      var s=inner.replace(/\\cdot/g,'·').replace(/\\rightarrow/g,'→').replace(/\\times/g,'×').replace(/\\Rightarrow/g,'⇒').replace(/\\to/g,'→').replace(/\\downarrow/g,'↓').replace(/\\uparrow/g,'↑').replace(/\\approx/g,'≈').replace(/\\geq/g,'≥').replace(/\\leq/g,'≤');
-      s=s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'($1)/($2)').replace(/\\sqrt\{([^{}]*)\}/g,'√($1)');
-      s=s.replace(/\\ce\{([^{}]*)\}/g,'$1').replace(/\\mathrm\{([^{}]*)\}/g,'$1').replace(/\\text\{([^{}]*)\}/g,'$1');
-      s=s.replace(/_\{([0-9])\}/g,function(m,d){return SUBD[d];}).replace(/\^\{([0-9])\}/g,function(m,d){return SUPD[d];});
-      s=s.replace(/_([0-9])/g,function(m,d){return SUBD[d];}).replace(/\^([0-9])/g,function(m,d){return SUPD[d];});
-      return s;
-    });
+  function renderFormula(tex){ /* —— 从 main.html 移植：$...$ 类 LaTeX → 可读（含上下标/运算符/希腊字母） —— */
+    var t=String(tex);
+    t=t.replace(/\\\\/g,"\\");
+    t=t.replace(/\\xrightarrow(?:\[[^\]]*\])?\{([^{}]*)\}/g," ⟶($1) ");
+    t=t.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,"($1)/($2)");
+    t=t.replace(/\\sqrt\[?([^\]{}]*)\]?\{([^{}]*)\}/g,"√($2)");
+    var G={cdot:"·",times:"×",div:"÷",approx:"≈",sim:"∼",neq:"≠",gg:"≫",ll:"≪",geq:"≥",leq:"≤",pm:"±",mp:"∓",
+      rightarrow:"→",to:"→",longrightarrow:"→",implies:"⇒",Rightleftharpoons:"⇌",rightleftharpoons:"⇌",leftrightarrow:"↔",leftarrow:"←",xrightarrow:"→",xleftarrow:"←",
+      uparrow:"↑",downarrow:"↓",updownarrow:"↕",nearrow:"↗",nwarrow:"↖",
+      Delta:"Δ",delta:"δ",alpha:"α",beta:"β",gamma:"γ",lambda:"λ",mu:"μ",nu:"ν",pi:"π",sigma:"σ",theta:"θ",phi:"φ",varphi:"φ",rho:"ρ",omega:"ω",Omega:"Ω",kappa:"κ",eta:"η",
+      varepsilon:"ε",epsilon:"ε",infty:"∞",partial:"∂",nabla:"∇",circ:"°",degree:"°",bullet:"•",ast:"∗",star:"★",
+      equiv:"≡",Phi:"Φ",Longrightarrow:"⟹",mathrm:"",text:"",mbox:"",quad:" ",qquad:"  ",hspace:"",left:"",right:"",Big:"",big:"",displaystyle:"",lg:"lg",ln:"ln",log:"log",sin:"sin",cos:"cos",tan:"tan",exp:"exp"};
+    t=t.replace(/\\([a-zA-Z]+)/g,function(m,n){return Object.prototype.hasOwnProperty.call(G,n)?G[n]:n;});
+    t=t.replace(/\\(.)/g,"$1");  t=t.replace(/\\/g,"");
+    t=t.replace(/[ \t]{2,}/g," ").trim();
+    t=esc(t);
+    t=t.replace(/_\{([^{}]*)\}/g,"<sub>$1</sub>").replace(/\^\{([^{}]*)\}/g,"<sup>$1</sup>");
+    t=t.replace(/_([A-Za-z0-9+\-])/g,"<sub>$1</sub>").replace(/\^([A-Za-z0-9+\-]+)/g,"<sup>$1</sup>");
+    t=t.replace(/[{}]/g,"");
+    return t;
   }
-  function md(s){ /* 极简 markdown：**加粗** / #标题 / -列表 / |表格| / $公式$ */
-    if(!s)return'';
-    var h=esc(s);
-    h=h.replace(/^\s*#+\s*(.+)$/gm,'<div class="mb-h">$1</div>');
-    h=h.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
-    h=h.replace(/^\s*[-*]\s+(.+)$/gm,'<div class="mb-li">• $1</div>');
-    h=h.replace(/((?:^\|[^\n]+\|\s*$\n?)+)/gm,function(block){
-      var rows=block.trim().split('\n').map(function(r){return r.replace(/^\||\|$/g,'').split('|').map(function(c){return c.trim();});});
-      if(rows.length>1&&rows[0].every(function(c){return /^:?-{2,}:?$/.test(c.replace(/\s/g,''));})) rows.shift();
-      if(!rows.length)return'';
-      return '<table class="mb-tb">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</table>';
-    });
-    h=h.replace(/\n\n+/g,'</p><p>').replace(/\n/g,'<br>');
-    return '<p>'+fU(h)+'</p>';
+  function inline(s){
+    var blocks=[];
+    s=String(s).replace(/\$\$([\s\S]+?)\$\$/g,function(m,f){blocks.push(f);return "\u0001"+(blocks.length-1)+"\u0002";});
+    s=esc(s);
+    s=s.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>");
+    s=s.replace(/\$([^$]+)\$/g,function(m,f){return '<span class="fx">'+renderFormula(f)+"</span>";});
+    s=s.replace(/\u0001(\d+)\u0002/g,function(m,i){return '<span class="fx fx-block">'+renderFormula(blocks[+i])+"</span>";});
+    return s;
+  }
+  function renderMd(md){
+    var lines=String(md).split("\n"),out=[],i=0;
+    function isSep(l){return /^\s*\|?[\s:\-|]+\|?\s*$/.test(l)&&l.indexOf("-")>-1;}
+    function parseRow(l){var t=l.trim();if(t.charAt(0)==="|")t=t.slice(1);if(t.charAt(t.length-1)==="|")t=t.slice(0,-1);return t.split("|").map(function(c){return c.trim();});}
+    var reUL=/^\s*[-•]\s+/,reOL=/^\s*\d{1,2}\s*[.、\)]\s+/;
+    while(i<lines.length){
+      var line=lines[i]; if(!line.trim()){i++;continue;}
+      if(line.indexOf("|")>-1&&i+1<lines.length&&isSep(lines[i+1])){
+        var head=parseRow(line);i+=2;var body=[];
+        while(i<lines.length&&lines[i].trim()&&lines[i].indexOf("|")>-1){body.push(parseRow(lines[i]));i++;}
+        var h='<div class="tbl-wrap"><table><thead><tr>'+head.map(function(c){return "<th>"+inline(c)+"</th>";}).join("")+"</tr></thead><tbody>";
+        body.forEach(function(r){h+="<tr>"+r.map(function(c){return "<td>"+inline(c)+"</td>";}).join("")+"</tr>";});
+        out.push(h+"</tbody></table></div>");continue;
+      }
+      if(reUL.test(line)){var h2="<ul>";while(i<lines.length&&reUL.test(lines[i])){h2+="<li>"+inline(lines[i].replace(reUL,""))+"</li>";i++;}out.push(h2+"</ul>");continue;}
+      if(reOL.test(line)){var h3="<ol>";while(i<lines.length&&reOL.test(lines[i])){h3+="<li>"+inline(lines[i].replace(reOL,""))+"</li>";i++;}out.push(h3+"</ol>");continue;}
+      var buf=[line];i++;
+      while(i<lines.length&&lines[i].trim()){var l=lines[i];if(reUL.test(l)||reOL.test(l))break;if(l.indexOf("|")>-1&&i+1<lines.length&&isSep(lines[i+1]))break;buf.push(l);i++;}
+      out.push("<p>"+inline(buf.join("\n")).replace(/\n/g,"<br>")+"</p>");
+    }
+    return out.join("");
   }
   var DISPLAY=[
     {t:'实验目的',ic:'🎯',ids:['ch1-s3']},
@@ -595,8 +620,8 @@ document.addEventListener('DOMContentLoaded',function(){
   ];
   function secHtml(s){
     if(!s) return '';
-    var h='<div class="mb-sec" id="'+esc(s.id)+'"><div class="mb-sec-h"><span class="mb-cat">'+esc(s.category||'')+'</span><b>'+esc(s.title)+'</b></div><div class="mb-body">'+md(s.content||'')+'</div>';
-    if(s.images&&s.images.length){ h+='<div class="mb-figs">'+s.images.map(function(im){return '&nbsp;<img class="mb-img" src="'+encodeURI('assets/images/'+im.file)+'" alt="'+esc(im.caption||'')+'">';}).join('')+'</div>'; }
+    var h='<div class="mb-sec" id="'+esc(s.id)+'"><div class="mb-sec-h"><span class="mb-cat">'+esc(s.category||'')+'</span><b>'+esc(s.title)+'</b></div><div class="mb-body">'+renderMd(s.content||'')+'</div>';
+    if(s.images&&s.images.length){ h+='<div class="sec-figs">'+s.images.map(function(img){return '<figure class="'+(img.big?'fig-big':'')+'"><img src="'+encodeURI('assets/images/'+img.file)+'?v=2" alt="'+esc(img.caption||'')+'" loading="lazy"><figcaption>'+esc(img.caption||'')+'</figcaption></figure>';}).join('')+'</div>'; }
     return h+'</div>';
   }
   function partHtml(g,gi){
@@ -655,5 +680,40 @@ document.addEventListener('DOMContentLoaded',function(){
 .tp-go .arr{transition:transform .2s}.tp:hover .tp-go .arr{transform:translateX(3px)}
 @media(max-width:920px){.mb-grid,.tp-steps{grid-template-columns:1fr}.manual-board-head,.task-pack-head{flex-direction:column;align-items:flex-start}}
 </style>
+<style id="manual-md-css">
+/* —— 从 main.html 移植：公式(.fx)/表格(.tbl-wrap)/图片(.sec-figs)/灯箱(.lb) 样式 —— */
+.fx{font-style:normal;color:#6ee7b7;font-weight:500;font-family:"Times New Roman",Georgia,serif;letter-spacing:.2px}
+.fx sub,.fx sup{font-style:normal;font-size:.72em}
+.fx-block{display:block;text-align:center;font-size:15.5px;padding:13px 18px;margin:12px 0;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.18);border-radius:12px;overflow-x:auto;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;margin:0 0 14px;border:1px solid var(--bd2);border-radius:12px}
+.mb-body table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
+.mb-body th{background:rgba(16,185,129,.1);color:var(--t1);font-weight:700;text-align:left;padding:10px 14px;border-bottom:1px solid var(--bd2);white-space:nowrap}
+.mb-body td{padding:9px 14px;border-bottom:1px solid var(--bd);color:#cfd8e6;line-height:1.65;vertical-align:top}
+.mb-body tr:last-child td{border-bottom:none}.mb-body tr:hover td{background:rgba(148,163,184,.04)}
+.sec-figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin:14px 0 6px}
+.sec-figs figure{margin:0;display:flex;flex-direction:column;background:rgba(148,163,184,.06);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:transform .18s,border-color .18s,box-shadow .18s}
+.sec-figs figure:hover{transform:translateY(-2px);border-color:var(--bd2);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.sec-figs img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#fff}
+.sec-figs figcaption{width:100%;font-size:12.5px;color:var(--t3);padding:8px 10px;line-height:1.5;text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.sec-figs .fig-big{grid-column:1/-1;max-width:760px;justify-self:center;width:100%}
+.sec-figs .fig-big img{aspect-ratio:auto;object-fit:contain}
+.lb{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;background:rgba(4,9,20,.93);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;padding:28px}
+.lb.open{display:flex}.lb img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 10px 50px rgba(0,0,0,.6);background:#fff}
+.lb .lb-cap{color:#dbe4f0;font-size:13.5px;line-height:1.7;margin-top:16px;text-align:center;max-width:82vw}
+.lb .lb-x{position:absolute;top:16px;right:22px;color:#fff;font-size:30px;cursor:pointer;line-height:1;opacity:.85;transition:opacity .15s}.lb .lb-x:hover{opacity:1}
+</style>
+<script>/* 图片灯箱（从 main 移植）：点缩略图看全图 */
+(function(){
+  var lb=document.createElement('div'); lb.className='lb';
+  lb.innerHTML='<span class="lb-x">✕</span><img alt=""><div class="lb-cap"></div>';
+  lb.addEventListener('click',function(e){ if(e.target===lb||e.target.className==='lb-x') lb.classList.remove('open'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') lb.classList.remove('open'); });
+  document.body.appendChild(lb);
+  document.addEventListener('click',function(e){
+    var f=e.target&&e.target.closest?e.target.closest('.sec-figs figure'):null;
+    if(f){ var img=f.querySelector('img'); if(img){ lb.querySelector('img').src=img.currentSrc||img.src; var c=f.querySelector('figcaption'); lb.querySelector('.lb-cap').textContent=c?c.textContent:''; lb.classList.add('open'); } }
+  });
+})();
+</script>
 </body>
 </html>

@@ -20,9 +20,9 @@
 .banner-stats .bstat .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .banner-stats .bstat b{color:var(--t1,#f1f5f9);font-weight:700}
 @media(max-width:640px){.banner{padding:20px 18px 18px}.banner h1{font-size:20px}.banner-stats{gap:10px 16px}}
-/* —— 紧凑页头（知识图谱等全屏工具页：图谱要占满 → 单行薄条，隐藏副标题/指标，只留 kicker+内容名+课前中后顺序）—— */
+/* —— 超薄页头（六内容页统一：单行内联，kicker│内容名│课前中后顺序，隐藏副标题/指标，内容最大化）—— */
 .banner-slim{padding:8px 12px!important;border-radius:12px!important;margin-bottom:10px!important;display:flex!important;align-items:center!important;gap:10px!important;flex-wrap:wrap!important}
 .banner-slim .banner-tag{margin:0!important;font-size:11px!important;padding:3px 9px!important;white-space:nowrap!important}
 .banner-slim h1{font-size:17px!important;margin:0!important;font-weight:800!important;white-space:nowrap!important}
 .banner-slim .phase-steps{margin:0 0 0 auto!important;font-size:11px!important}
-.banner-slim .banner-sub,.banner-slim .banner-stats{display:none!important}
+.banner-slim .banner-sub,.banner-slim #bannerSub,.banner-slim .banner-stats{display:none!important}

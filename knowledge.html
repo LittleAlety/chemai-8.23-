@@ -17,7 +17,7 @@
 :root{
   --bg:#0a0e1a; --bg2:#111827; --card:#1a2235; --hover:#243049;
   --emerald:#10b981; --teal:#2dd4bf; --purple:#a78bfa; --yellow:#fbbf24; --red:#f87171; --blue:#60a5fa;
-  --txt:#f1f5f9; --txt2:#94a3b8; --txt3:#64748b;
+  --txt:#f1f5f9; --txt2:#bfcbd9; --txt3:#64748b;
   --border:rgba(148,163,184,.08); --border2:rgba(148,163,184,.15);
   --radius:16px;
   --kg-pill:rgba(10,14,26,.78);--kg-label-text:rgba(255,255,255,.78);--kg-stroke:rgba(10,14,26,.92);--kg-minimap:rgba(10,14,26,.88);--kg-node-label:#dbe4f0;--kg-node-center:#f8fafc;--kg-glow:rgba(45,212,191,.42);
@@ -980,7 +980,7 @@ function iterate(){
     const a = ns[i];
     for(let j=i+1;j<ns.length;j++){
       const b = ns[j];
-      const minD = a.r + b.r + 14;
+      const minD = a.r + b.r + 30;
       let dx = b.x-a.x, dy = b.y-a.y;
       const d2 = dx*dx + dy*dy;
       if(d2 >= minD*minD) continue;
@@ -1287,11 +1287,11 @@ function draw(){
     if(n.level === 0){ show = true; fs = 16; }
     else if(n.level === 1){ show = true; fs = 13.5; }
     else if(n.level === 2){
-      const thresh = Math.min(1, Math.max(0, (view.k - 0.25) / 0.55));
+      const thresh = Math.min(1, Math.max(0, (view.k - 0.95) / 0.7));
       show = true; labelAlpha = thresh; fs = 11.5;
     }
     else {
-      const thresh = Math.min(1, Math.max(0, (view.k - 0.5) / 0.55));
+      const thresh = Math.min(1, Math.max(0, (view.k - 1.35) / 0.7));
       show = true; labelAlpha = thresh; fs = 10.5;
     }
     if(isSel || isHov || isMatch || (focusSet && focusSet.has(n.id) && view.k > 0.32)){ show = true; labelAlpha = 1; }

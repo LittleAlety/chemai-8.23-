@@ -556,12 +556,30 @@ document.addEventListener('DOMContentLoaded',function(){
 (function(){
   "use strict";
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function renderFormula(tex){ /* —— 从 main.html 移植：$...$ 类 LaTeX → 可读（含上下标/运算符/希腊字母） —— */
-    var t=String(tex);
+  function renderFormula(tex){ /* —— 从 main.html 移植：$...$ 类 LaTeX → 可读（含上下标/运算符/希腊字母/真分数） —— */
+    var t=String(tex), fracs=[];
+    // ◇ 先抽取 \frac{num}{den}（括号配对、可嵌套），存为 @FRAC<i>@ 占位符；num/den 稍后递归渲染成上/下堆叠真分数
+    function readGroup(start){
+      var depth=0;
+      for(var i=start;i<t.length;i++){ if(t[i]==='{')depth++; else if(t[i]==='}'){ depth--; if(depth===0) return {content:t.slice(start+1,i), end:i}; } }
+      return null;
+    }
+    while(true){
+      var idx=t.search(/\\frac/);
+      if(idx<0) break;
+      var p=idx+5; while(p<t.length&&/\s/.test(t[p])) p++;
+      if(t[p]!=='{'){ t=t.slice(0,idx)+'frac'+t.slice(p); continue; }
+      var g1=readGroup(p); if(!g1){ t=t.slice(0,idx)+'frac'+t.slice(p); continue; }
+      var q=g1.end+1; while(q<t.length&&/\s/.test(t[q])) q++;
+      if(t[q]!=='{'){ t=t.slice(0,idx)+'frac'+t.slice(p); continue; }
+      var g2=readGroup(q); if(!g2){ t=t.slice(0,idx)+'frac'+t.slice(p); continue; }
+      var bi=fracs.length; fracs.push({num:g1.content, den:g2.content});
+      t=t.slice(0,idx)+'@FRAC'+bi+'@'+t.slice(g2.end+1);
+    }
     t=t.replace(/\\\\/g,"\\");
     t=t.replace(/\\xrightarrow(?:\[[^\]]*\])?\{([^{}]*)\}/g," ⟶($1) ");
-    t=t.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,"($1)/($2)");
-    t=t.replace(/\\sqrt\[?([^\]{}]*)\]?\{([^{}]*)\}/g,"√($2)");
+    // \sqrt 保留可选下标：\sqrt[n]{x} → √₍n₎(x)；\sqrt{x} → √(x)
+    t=t.replace(/\\sqrt(\[[^\]]*\])?\{([^{}]*)\}/g,function(m,idx,body){ return idx ? '√['+idx.slice(1,-1)+']('+body+')' : '√('+body+')'; });
     var G={cdot:"·",times:"×",div:"÷",approx:"≈",sim:"∼",neq:"≠",gg:"≫",ll:"≪",geq:"≥",leq:"≤",pm:"±",mp:"∓",
       rightarrow:"→",to:"→",longrightarrow:"→",implies:"⇒",Rightleftharpoons:"⇌",rightleftharpoons:"⇌",leftrightarrow:"↔",leftarrow:"←",xrightarrow:"→",xleftarrow:"←",
       uparrow:"↑",downarrow:"↓",updownarrow:"↕",nearrow:"↗",nwarrow:"↖",
@@ -575,6 +593,13 @@ document.addEventListener('DOMContentLoaded',function(){
     t=t.replace(/_\{([^{}]*)\}/g,"<sub>$1</sub>").replace(/\^\{([^{}]*)\}/g,"<sup>$1</sup>");
     t=t.replace(/_([A-Za-z0-9+\-])/g,"<sub>$1</sub>").replace(/\^([A-Za-z0-9+\-]+)/g,"<sup>$1</sup>");
     t=t.replace(/[{}]/g,"");
+    // ◇ 还原真分数占位符（num/den 各自递归渲染，支持嵌套；置于 esc/sub-sup 之后，故为原始 HTML）
+    if(fracs.length){
+      t=t.replace(/@FRAC(\d+)@/g,function(m,i){
+        var f=fracs[+i];
+        return '<span class="fx-frac"><span class="fx-num">'+renderFormula(f.num)+'</span><span class="fx-den">'+renderFormula(f.den)+'</span></span>';
+      });
+    }
     return t;
   }
   function inline(s){
@@ -688,16 +713,19 @@ document.addEventListener('DOMContentLoaded',function(){
 .mb-part-body{padding:4px 18px 16px}
 .mb-sec{padding:10px 0;border-top:1px solid var(--bd);}
 .mb-sec:first-child{border-top:none}
-.mb-sec-h{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.mb-sec-h{display:flex;align-items:center;gap:8px;margin:4px 0 7px}.mb-sec-h b{font-size:16px;font-weight:700;color:var(--t1)}
 .mb-figs{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
 .mb-img{max-width:220px;border-radius:8px;border:1px solid var(--bd2)}
 .mb-card{background:var(--card,#1a2235);border:1px solid var(--bd2);border-radius:14px;overflow:hidden;border-top:3px solid var(--rc,#10b981)}
 .mb-card[open]{box-shadow:0 12px 30px rgba(0,0,0,.28)}
-.mb-card-head{display:flex;align-items:center;gap:9px;padding:13px 15px;cursor:pointer;font-weight:600;list-style:none}
+.mb-card-head{display:flex;align-items:center;gap:9px;padding:15px 18px;cursor:pointer;font-weight:600;list-style:none}
+.mb-card-head:hover{background:rgba(16,185,129,.05)}
 .mb-card-head::-webkit-details-marker{display:none}
-.mb-ico{font-size:20px}.mb-title{flex:1;min-width:0}.mb-cat{font-size:11px;color:var(--t3);background:var(--bg2);border:1px solid var(--bd);padding:2px 8px;border-radius:999px}
+.mb-ico{font-size:21px}.mb-title{flex:1;min-width:0;font-size:15px;font-weight:600;color:var(--t1)}.mb-cat{font-size:11px;color:var(--t3);background:var(--bg2);border:1px solid var(--bd);padding:2px 8px;border-radius:999px;white-space:nowrap}
 .mb-star{font-size:11px;font-weight:700;color:#fbbf24;background:rgba(251,191,36,.12);padding:2px 8px;border-radius:999px}
-.mb-body{padding:4px 16px 14px;font-size:13.5px;line-height:1.7;color:var(--t2)}
+.mb-body{padding:6px 20px 18px;font-family:"Times New Roman","SimSun","宋体","Songti SC",serif;font-size:16px;line-height:1.9;color:var(--t2)}
+/* 手册正文：中文宋体、字母 Times New Roman（.fx 公式亦 Times）；表格/列表继承 */
+.mb-body p,.mb-body li,.mb-body td{font-family:"Times New Roman","SimSun","宋体","Songti SC",serif}
 .mb-h{font-weight:700;color:var(--t1);margin:8px 0 3px}.mb-li{margin:2px 0}
 .mb-tb{border-collapse:collapse;margin:8px 0;width:100%}.mb-tb td{border:1px solid var(--bd2);padding:4px 8px;font-size:12.5px}
 .loading-line{color:var(--t3);font-size:13px;grid-column:1/-1;padding:12px}
@@ -720,7 +748,13 @@ document.addEventListener('DOMContentLoaded',function(){
 /* —— 从 main.html 移植：公式(.fx)/表格(.tbl-wrap)/图片(.sec-figs)/灯箱(.lb) 样式 —— */
 .fx{font-style:normal;color:#6ee7b7;font-weight:500;font-family:"Times New Roman",Georgia,serif;letter-spacing:.2px}
 .fx sub,.fx sup{font-style:normal;font-size:.72em}
-.fx-block{display:block;text-align:center;font-size:15.5px;padding:13px 18px;margin:12px 0;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.18);border-radius:12px;overflow-x:auto;white-space:nowrap}
+/* 真分数：上/下堆叠 + 分数线（.fx-num/.fx-den 由 renderFormula 生成，字母用 Times 继承 .fx） */
+.fx-frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:-.38em;line-height:1.05;margin:0 3px}
+.fx-frac .fx-num{display:block;padding:0 3px 1px;border-bottom:1px solid currentColor}
+.fx-frac .fx-den{display:block;padding:1px 3px 0}
+.fx-frac .fx-num,.fx-frac .fx-den{font-size:.82em}
+.fx-block .fx-frac{vertical-align:middle}
+.fx-block{display:block;text-align:center;font-size:16px;padding:14px 20px;margin:12px 0;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.18);border-radius:12px;overflow-x:auto;white-space:nowrap}
 .tbl-wrap{overflow-x:auto;margin:0 0 14px;border:1px solid var(--bd2);border-radius:12px}
 .mb-body table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:480px}
 .mb-body th{background:rgba(16,185,129,.1);color:var(--t1);font-weight:700;text-align:left;padding:10px 14px;border-bottom:1px solid var(--bd2);white-space:nowrap}

@@ -730,6 +730,16 @@ document.addEventListener('DOMContentLoaded',function(){
 .mb-body{padding:6px 20px 18px;font-family:"Times New Roman","SimSun","宋体","Songti SC",serif;font-size:16px;line-height:1.9;color:var(--t2)}
 /* 手册正文：中文宋体、字母 Times New Roman（.fx 公式亦 Times）；表格/列表继承 */
 .mb-body p,.mb-body li,.mb-body td{font-family:"Times New Roman","SimSun","宋体","Songti SC",serif}
+/* 手册正文：自然段节奏 —— 中文段首缩进(仅散文段，公式/居中段除外) + 段距 + 行高 + 列表/表格节奏 */
+.mb-body p{margin:.2em 0 .85em;line-height:1.95}
+.mb-body p:not(:has(.fx-block)){text-indent:2em}
+.mb-body p:first-of-type{margin-top:.35em}
+.mb-body p:last-of-type{margin-bottom:.25em}
+.mb-body strong{color:var(--t1)}
+.mb-body ul,.mb-body ol{margin:.35em 0 .9em;padding-left:1.5em}
+.mb-body li{margin:.3em 0}
+.mb-body table{margin:.5em 0 1em}
+.mb-body .fx-block{margin:.85em 0}
 .mb-h{font-weight:700;color:var(--t1);margin:8px 0 3px}.mb-li{margin:2px 0}
 .mb-tb{border-collapse:collapse;margin:8px 0;width:100%}.mb-tb td{border:1px solid var(--bd2);padding:4px 8px;font-size:12.5px}
 .loading-line{color:var(--t3);font-size:13px;grid-column:1/-1;padding:12px}

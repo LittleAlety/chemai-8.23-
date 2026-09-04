@@ -5,6 +5,8 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <link rel="stylesheet" href="assets/nav-guide.css">
+<link rel="stylesheet" href="assets/page-header.css">
+<script src="assets/page-header.js" defer></script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>智能命题 — 三草酸合铁酸钾制备实验 · ChemAI</title>
@@ -264,10 +266,18 @@ input,select,textarea{font-family:inherit}
   </div>
 
   <div id="appBox" style="display:none">
-    <div class="banner">
-      <div class="banner-tag">📝 QUESTION &amp; PAPER BUILDER</div>
-      <h1>智能命题 —— <span class="hl">智能生成 + 自主选题 + 下载 Word/PDF</span></h1>
-      <p class="sub">基于全站 1113 题真实题库（<span id="bankStat"></span>）。可依「试卷信息 / 题型分配 / 难度分布 / 知识点范围」智能组卷，也可逐题浏览筛选、手动挑选组卷，最后预览并下载为 Word（.doc）或导出 PDF。教师专用。</p>
+    <div class="banner" data-page="generator">
+      <div class="banner-tag">📝 课前 · 教师组卷</div>
+      <h1>智能命题</h1>
+      <div class="phase-steps">
+        <span class="ps data-ph-pre cur">课前</span><span class="ps-arrow">→</span><span class="ps data-ph-mid">课中</span><span class="ps-arrow">→</span><span class="ps data-ph-post">课后</span>
+      </div>
+      <p class="banner-sub" id="bannerSub">精确组卷：题型分配/难度分布/知识点范围可控，一键导出 Word/PDF。</p>
+      <div class="banner-stats">
+        <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b id="bankStat"></b>&nbsp;题库总数</div>
+        <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>17</b>&nbsp;知识点方向</div>
+        <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>多</b>&nbsp;种题型</div>
+      </div>
     </div>
 
     <div class="tabs">

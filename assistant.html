@@ -5,6 +5,8 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/mobile-content-guard.css">
 <link rel="stylesheet" href="assets/nav-guide.css">
+<link rel="stylesheet" href="assets/page-header.css">
+<script src="assets/page-header.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark light">
@@ -443,19 +445,20 @@ details.ref-fold[open]>summary .rf-arrow{transform:rotate(90deg)}
 </nav>
 
 <main class="wrap">
-  <div class="hero">
-    <div class="hero-badge">🧪 ChemAI · 三草酸合铁酸钾制备实验</div>
+  <section class="banner" data-page="assistant">
+    <div class="banner-tag">🧪 课中 · 实验室里</div>
     <h1>⚗️ AI 实验助手</h1>
-    <p class="sub">多策略检索 → 类比推理 → 置信度评分 → 自我检查 · 智能体集群 · 可折叠思考链</p>
+    <div class="phase-steps">
+      <span class="ps data-ph-pre">课前</span><span class="ps-arrow">→</span><span class="ps data-ph-mid cur">课中</span><span class="ps-arrow">→</span><span class="ps data-ph-post">课后</span>
+    </div>
+    <p class="banner-sub" id="bannerSub">多策略检索 → 类比推理 → 置信度评分 → 自我检查 · 智能体集群 · 可折叠思考链。</p>
+    <div class="banner-stats">
+      <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b id="statCorpus">—</b>&nbsp;知识清单文献</div>
+      <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b id="statFAQ">—</b>&nbsp;内置问答条目</div>
+      <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>24</b>&nbsp;类比规则</div>
+    </div>
     <button type="button" class="hero-cta" onclick="var i=document.getElementById('qaInput');if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});}">开始提问 ↓</button>
-  </div>
-
-  <div class="stat-cards">
-    <div class="stat-card"><span class="stat-icon">📚</span><div class="stat-info"><span class="stat-num" id="statCorpus">—</span><span class="stat-label">知识清单文献</span></div></div>
-    <div class="stat-card"><span class="stat-icon">🧠</span><div class="stat-info"><span class="stat-num" id="statFAQ">—</span><span class="stat-label">内置问答条目</span></div></div>
-    <div class="stat-card"><span class="stat-icon">🔗</span><div class="stat-info"><span class="stat-num">24</span><span class="stat-label">知识图谱类比规则</span></div></div>
-    <div class="stat-card"><span class="stat-icon">🎯</span><div class="stat-info"><span class="stat-num">10</span><span class="stat-label">掌握度测评知识点</span></div></div>
-  </div>
+  </section>
 
   <div class="grid">
     <section class="col-main">

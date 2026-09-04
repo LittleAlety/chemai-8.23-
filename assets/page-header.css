@@ -1,0 +1,22 @@
+/* ===== ChemAI 统一页头（六内容页共用）=====
+   覆盖各页原 .banner 差异：统一 kicker/渐变标题/课前中后顺序指示器/副标题/指标行。
+   用 !important 压过各页内联 .banner 变体；index 落地 hero 不加载本文件。 */
+.banner{position:relative;overflow:hidden;border-radius:18px;padding:28px 30px 26px;border:1px solid rgba(16,185,129,.25)!important;background:linear-gradient(120deg,rgba(16,185,129,.07),rgba(45,212,191,.07),rgba(167,139,250,.10))!important;margin-bottom:22px!important}
+.banner::after{content:"⚗️";position:absolute;right:18px;bottom:6px;font-size:96px;opacity:.05;pointer-events:none;line-height:1}
+.banner-tag{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.04em;padding:6px 13px;border-radius:999px;border:1px solid;margin-bottom:13px;color:var(--emerald,#10b981);border-color:color-mix(in srgb,var(--emerald,#10b981) 42%,transparent)!important;background:color-mix(in srgb,var(--emerald,#10b981) 12%,transparent)!important}
+.banner h1{font-size:clamp(22px,3.4vw,30px)!important;font-weight:800;line-height:1.2;margin:0 0 10px;font-family:inherit}
+.banner h1 .hl,.banner h1 [class*="grad"]{background:linear-gradient(90deg,var(--emerald,#10b981),var(--teal,#2dd4bf),var(--blue,#60a5fa));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+/* —— 课前→课中→课后 顺序指示器 —— */
+.phase-steps{display:flex;align-items:center;gap:0;font-size:12.5px;color:var(--t3,#94a3b8);margin:0 0 14px;flex-wrap:wrap}
+.phase-steps .ps{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;border:1px solid var(--bd2,rgba(148,163,184,.15));background:var(--bg2,rgba(148,163,184,.06));font-weight:600;line-height:1;color:var(--t2,#94a3b8)}
+.phase-steps .ps.data-ph-pre{color:var(--emerald,#10b981);border-color:color-mix(in srgb,var(--emerald,#10b981) 40%,transparent)}
+.phase-steps .ps.data-ph-mid{color:var(--teal,#2dd4bf);border-color:color-mix(in srgb,var(--teal,#2dd4bf) 40%,transparent)}
+.phase-steps .ps.data-ph-post{color:var(--purple,#a78bfa);border-color:color-mix(in srgb,var(--purple,#a78bfa) 40%,transparent)}
+.phase-steps .ps.cur{color:#03130d!important;background:linear-gradient(135deg,var(--emerald,#10b981),var(--teal,#2dd4bf))!important;border-color:transparent!important;font-weight:800}
+.phase-steps .ps-arrow{margin:0 7px;color:var(--t3,#64748b)}
+.banner-sub{max-width:760px;color:var(--t2,#94a3b8);font-size:14px;line-height:1.7;margin:0 0 14px}
+.banner-stats{display:flex;gap:16px 22px;flex-wrap:wrap;margin-top:2px}
+.banner-stats .bstat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--t2,#94a3b8);white-space:nowrap}
+.banner-stats .bstat .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.banner-stats .bstat b{color:var(--t1,#f1f5f9);font-weight:700}
+@media(max-width:640px){.banner{padding:20px 18px 18px}.banner h1{font-size:20px}.banner-stats{gap:10px 16px}}

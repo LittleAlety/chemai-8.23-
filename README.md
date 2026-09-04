@@ -1,8 +1,8 @@
 # ChemAI — 三草酸合铁(III)酸钾制备实验 智能教学平台
 
 [![Deploy](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://k3fec2o43.clawdbot.ggff.net/)
-[![Version](https://img.shields.io/badge/version-v86-blue)](https://github.com/LittleAlety/chemai-8.23-)
-[![FAQ](https://img.shields.io/badge/FAQ-4211条-green)](https://github.com/LittleAlety/chemai-8.23-)
+[![Version](https://img.shields.io/badge/version-v88-blue)](https://github.com/LittleAlety/chemai-8.23-)
+[![FAQ](https://img.shields.io/badge/FAQ-4588条-green)](https://github.com/LittleAlety/chemai-8.23-)
 [![Corpus](https://img.shields.io/badge/语料库-445篇-orange)](https://github.com/LittleAlety/chemai-8.23-)
 [![KG](https://img.shields.io/badge/知识图谱-123节点-blueviolet)](https://github.com/LittleAlety/chemai-8.23-)
 [![Videos](https://img.shields.io/badge/本地视频-4部-teal)](https://github.com/LittleAlety/chemai-8.23-)
@@ -23,12 +23,12 @@
 | 页面 | 文件 | 说明 |
 |------|------|------|
 | **首页入口** | `index.html` | React SPA 首页，**命名路由**（`#/report`、`#/explore`…）才接管、裸 `#/` 回落地页；身份选择（非化学专业 / 化学专业 / **教师**），含 LLM 配置面板；**v86 身份切换停留 index**——选身份/切换身份后原地刷新右上角徽章与角色门控，不自动跳 main（`main.html` 手册由「查看实验手册」等导航进入）；**视频资源库页**（`#/videos`）含 4 部本地视频 + 精选 bilibili 教学视频；**科普探索页**（`#/explore`）面向非化学专业，含「实验现象画廊」6 卡与「生活中的化学」4 卡，卡片配图科普 |
-| **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**4211 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**v85 语料权威度 hook**（`loadCorpus` 摄取 `corpus_weights.json` → `searchCorpus` 加法权威 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，全部不进 `matchFAQ` 基础公式）；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
-| **实验手册** | `main.html` | 11 章全文浏览器，LaTeX 公式 Unicode 渲染；教师快捷入口已加 **genCard（智能命题·教师门控）**，模块计数 6→7 |
+| **AI 助手** | `assistant.html` | **6 工作模式 chips**（v69 模型化：💬学习问答 / 🧠深度求解 / 📝智能测验 / 🌐深度研究 / 📊可视化 / 🎯精通之路）；多策略检索 + 类比推理 + DeepSeek RAG 问答；**4588 条 FAQ**（运行时 `data/faq_runtime.js`）+ 鉴别力路由修复 **R2–R15**（复杂/难题 86 题 100%），`matchFAQ` 温度归一化 + 疑问词泛词化**根治答非所问**；**v85 语料权威度 hook**（`loadCorpus` 摄取 `corpus_weights.json` → `searchCorpus` 加法权威 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，全部不进 `matchFAQ` 基础公式）；**5-agent 集群工作台**（检索官/推理官/网页研究员/编辑官/质检官 + 集群日志 + 重答/加强网页检索/LLM重答/集群状态）；**网页研究员**（站内题库/KG→PubChem→维基→Bing·实验性 多源降级，熔断容错，权威冲突校验）；**可视化 10 类富模板**（v72.1 `detectVizType` 分派：异构/晶体场/配合物/装置/热分析/滴定/氧化还原/安全/知识图谱/流程，**有/无 DeepSeek Key 两路径都出图**）；**SM-2 间隔复习 + 学习画像导出**、10 KP 掌握度自适应测评、三维度雷达图 + 学习建议；对话**按身份切换语言风格**（v65，LLM 路径身份镜头统一）；**MSDS 查询网 somds.com** + `detectChems` 化学实体特异性识别；12 条 selfCheck；侧栏**视频资源板块内嵌 4 部本地视频播放器**（默认折叠，点击展开） |
+| **主页 / 实验手册入口** | `main.html` | 主页：按「课前 / 课中 / 课后」分组的快捷入口（含 **📖 实验手册**、**操作步骤**、AI助手等），学习路径导引；实验手册全文已迁至 `prep.html`，本页作入口与导览 |
 | **教师命题** | `generator.html` | **教师门控命题大板块**：智能生成 + 自主选题 + Word/PDF 导出 + 超星风格分节渲染 + 化学式上下标；答案契约（`referenceAnswer`）＋字母分配，AI 补全选项/难度系数 |
 | **知识图谱** | `knowledge.html` | 123 节点 / 195 关联的交互式配位化学知识网络，**高区分 5 色分区配色**（祖母绿/暖橙/玫红/靛蓝/深紫）；**v86 手机端字号自适应 + 缩放下限**，窄屏图谱不被过度缩小、标签随视口宽等比缩放 |
 | **语料库** | `corpus.html` | **445 篇**中英文文献知识清单，PDF/PPTX/DOCX 上传解析，子领域分布 + URL 深链；难度字段已归一（v86：400 进阶级 / 7 入门级 / 32 基础级 / 6 提高级，无裸 `中`） |
-| **课前预习** | `prep.html` | 多轮对话预习 + 自适应习题检测 + 错题本 |
+| **课前预习 / 实验手册** | `prep.html` | 独立承载**实验手册板块**（10 部分 / 11 章 42 节，左侧章节索引粘性侧栏 + 随滚动高亮，LaTeX Unicode 渲染）+ 学习通任务包 + 多轮对话测评 + 习题检测（题库练习 7 大知识方向 · 4 种题型 / 错题本） |
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## 深度问题自学习迭代体系
 
-通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **4547 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环** + **本会话 30 条工业/实验专项 + self-train 3×100（净增 299）**（详见 [版本历史](#版本历史)）。
+通过 **多 Agent 集群 + 对抗评分代理** 持续生成、审计、修正实验问答与 FAQ，目前运行时 FAQ 累计 **4588 条**，历经 **7 次"重复任务"自训练** + **5 轮门禁循环** + **本会话 30 条工业/实验专项 + self-train 3×100（净增 299）**（详见 [版本历史](#版本历史)）。
 
 ### 迭代历程
 
@@ -129,8 +129,8 @@ AI 助手 ──文献卡片/引用──→ 语料库（精确定位条目）
 ```
 chemai-8.23-/
 ├── index.html                 # 首页入口（React SPA，命名路由 + v86 身份切换停留 index + 主题桥接，含视频资源库页 + 科普探索页）
-├── assistant.html             # AI 助手（4547 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
-├── main.html                  # 实验手册（11 章，教师快捷入口 genCard）
+├── assistant.html             # AI 助手（4588 FAQ + 6 工作模式 + 智能体集群 + 10 类可视化 + 测评 + 语料权威度 hook）
+├── main.html                  # 主页/入口（按课前课中课后分组快捷入口 + 学习路径；实验手册全文在 prep.html）
 ├── generator.html             # 教师命题大板块（教师门控，智能生成 + 自主选题 + Word/PDF 导出）
 ├── knowledge.html             # 知识图谱（123 节点 / 195 关联，5 色分区 + 手机端字号自适应）
 ├── corpus.html                # 语料库（445 篇，难度字段已归一）
@@ -148,7 +148,7 @@ chemai-8.23-/
 │   ├── images/              # 实验实拍图 + 科普探索页插图（assets/images/explore/）
 │   └── ...                   # CSS / JS
 ├── data/
-│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，4211 条，window.FAQ=）
+│   ├── faq_runtime.js        # 运行时 FAQ（v37.6+ 唯一真相源，4588 条，window.FAQ=）
 │   ├── manual.json           # 实验手册（11 章 / 42 节）
 │   ├── corpus.json           # 语料库清单（445 篇；难度归一 400 进阶级/7 入门/32 基础/6 提高）
 │   ├── corpus_weights.json   # 语料权威度权重（离线生成，v85；`npm run corpus:weights`）
@@ -178,7 +178,7 @@ chemai-8.23-/
 
 ## 已知限制
 
-- **SPA 落地页内嵌手册为历史快照**：`assets/index-B-pT4Snc.js`（React 落地页构建产物）内嵌旧 12 章版实验手册（含已删除的「实验报告撰写规范」章），与 `main.html` 的动态手册（11 章）分叉。React 源码未随仓库维护，暂不重建；**实验手册以 `main.html` 为准**。
+- **SPA 落地页内嵌手册为历史快照**：`assets/index-B-pT4Snc.js`（React 落地页构建产物）内嵌旧 12 章版实验手册（含已删除的「实验报告撰写规范」章），与 `prep.html` 的动态手册（11 章）分叉。React 源码未随仓库维护，暂不重建；**实验手册以 `prep.html` 为准**。
 - **本地视频部署依赖分支构建**：4 部本地视频位于 `三草酸合铁酸钾资料/三草酸合铁酸钾视频资料/`，是否在线可播取决于部署机制（内置「Deploy from a branch」会发布整个仓库根目录；`deploy.yml` 的 `_site` 精简组装不含该文件夹）。
 - **自定义域名已迁移**：旧 `fec2o4.apay.eu.cc` 因被网络按主机名拦截（同一 GitHub IP 下 `github.io` 可访问、唯该域名握手被 reset）而弃用，站点现用专属子域名 **`k3fec2o43.clawdbot.ggff.net`**（`ggff.net` 后缀实测无代理可握手）。DNS 已在 Cloudflare 配置为 DNS-only（灰云）CNAME → `littlealety.github.io`，仓库 Pages 已设自定义域名并启用 Enforce HTTPS。
 - **网页研究员依赖 CORS 网络**：PubChem / 维基百科为 CORS 开放接口可直连；Bing 经第三方代理（实验性，熔断自动停用）；知网/万方/百度学术/ChemicalBook 无浏览器 CORS，仅提供搜索链接兜底；**MSDS 查询网 / ChemicalBook / PubChem 为外链跳转**（`msdsCardHTML` 前置 somds.com）。
@@ -221,12 +221,13 @@ npx serve .                     # Node.js
 
 ## 版本历史
 
-> 版本线 v30 → v87（2026-07 至 2026-09）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载；v85 起含「语料权威度权重 + AI 模型架构文档 + 部署补齐」；v86 起取回 demo 精华做体验对齐；v87 起含「工业/实验专项问答 + 检索门回归修正 + 学习式重排对比实验」。
+> 版本线 v30 → v88（2026-07 至 2026-09）。v45 起版本号由「语料自学习轮次 + UI 注入脚本」共同承载；v85 起含「语料权威度权重 + AI 模型架构文档 + 部署补齐」；v86 起取回 demo 精华做体验对齐；v87 起含「工业/实验专项问答 + 检索门回归修正 + 学习式重排对比实验」；v88 起含「主页/实验手册一体化 + 题库版式修正 + 助手换问法压测」。
 
 ### 近期（v74 → v86）
 
 | 版本 | 日期 | 主要变更 |
 |------|------|----------|
+| **v88** | 09-04 | **主页/实验手册一体化 + 题库版式修正 + 助手换问法压测（本交付）**：① **实验手册集约到 `prep.html`**——完整手册（10 部分 / 11 章 42 节）独立板块，`main.html` 变入口：课前组新增「📖 实验手册」卡、课中卡改「操作步骤」（删旧标题 4 字），模块计数 9→10、删冗余 `.manual-head`/`#manualBox` 块；② **手册板块排版**——改「左里章节索引 + 内容」双栏（对齐页面 1280px），章节索引为粘性侧栏并**随滚动高亮**（对齐主站 toc 的 initSpy 风格），修复全部 `#partNN` 断链与"异步渲染后锚点落位"，宽高/留白对齐其它模块；③ **修复手册内容渲染双重转义**——`inline()` 此前先整体 `esc()` 再交由 `renderFormula` 二次转义，导致 `>`/`<`/`&` 显示成裸 `&gt;`/`&lt;`（如 `Δ₀ > P`、`\xrightarrow{>200°C}`）；改为只转义散文、数学段各转一次，实测 0 段残留（`render-audit` 无关）；④ **题库练习版式/文案对齐实时题库页**——134 题/5 方向/2 题型 → **7 大知识方向 · 4 种题型** + 4 种练习模式 chips，题目数改为计数无关"百余道"；⑤ **助手换问法压测（多 Agent 集群，5 轮 + 终验）**——A 换问法→B 捕获本地命中→C 以**讲义为绝对权威**、**精准度绝对优先**比对→D 安全补 key：共测 15 个等价改写问法，初始仅 **7%** 命中（揭示 `matchFAQ` 对措辞脆弱），按精准度人工复核后安全补 key（6 条目 +10 词，如 `氯化铁`/`对光敏感`/`三水合物`；拒绝 `哪三样`/`高自旋`/`用场` 等泛词），修复后 **13%**，无回归（条目数 4588 稳定、讲义侧 `faq_verify` 15/15 仍全命中、`render-audit` 0 问题）；新增确定性工具 `scripts/assistant_capture.js`、`scripts/assistant_apply_keys.js`。✅ 各页内联脚本解析 0 错误、无乱码 |
 | **v87** | 09-02/03 | **工业/实验专项问答 + 训练 + 检索门回归修正 + 学习式重排对比实验**：① **30 条工业/实验问答**（三价铁能否作铁源、工业制备三草酸合铁酸钾、摩尔盐选择、实验室vs工业差异、母液回收、磁矩/高自旋等，含权威数值 45℃/91.6%、磁矩 5.92、烘干50℃/失水~100℃、铁13.09wt%/草酸根53.9wt% 等），均以**真实已有 corpus#id 文献锚定**（不凭空造文献）；② **self-train 3×100**（`self_train_loop.js`，判官门禁≥9.5 + `ensureCoverage` 确定性补录 + `cleanArtifacts`），FAQ 4545→4547，全库审计 **98.0%→98.8%**（4356 题，无命中 78→39，低置信 0）；③ **DOMAIN_RE 检索门放宽再修**——单靠放宽会引进离题误命中，改为**只留化学专属词**（磁矩/Gouy/Jahn/稳定常数/配体场/配离子/异构体/TG-DSC/离子交换/普鲁士蓝等），删风险词（电荷/异构/再生/热重/自旋/树脂/畸变/失重），离题零误命中、化学缺口保留；④ **学习式 MLP 重排器对比实验**（`训练管道/mlp_reranker.js`，202 参数、从零 Adam/反向传播、无暴露标注）——**结论：手工 `matchFAQ` 获胜**（改写题全库 3.9% vs 17.3%、原题 39.2% vs 95.3%），**保留手工检索**，神经网络为研究记录（静态站无推理后端，与架构文档一致）；由多 Agent 集群（改进×2 + 对抗质疑×2）完成"构建 vs 质疑"双线并行。✅ validate 0 错误、verify_web_ready 全绿、无乱码 |
 | **v86** | 09-01 | **对齐 demo 精华（本交付）**：取回 `emblulol/Chemai-demo` 留而未用的体验功能，本地与线上已成并行分叉、互有取舍，此版专搬"本地回退/未做而 demo 保留"的部分，**不搬**会回归本地的 v73 身份/引导/管理员架构、hallmark 样式覆盖层、level4→level3 归并。① **主题跨页桥接**——`index.html` 加桥接脚本：加载时把权威键 `chemaiTheme` 灌进 SPA 的 `chem-theme`（Zustand persist，保留 `version` 与其余 state，只覆写 `state.theme`），并用 `MutationObserver` 监听 `<html data-theme>` 回写，静态页与 SPA（`#/report|explore|quiz|generator|videos|agent`）切主题全站一致，消除"经 SPA 切主题回静态页断链"；② **移动端安全区/触控/文字缩放**——`assets/mobile-content-guard.css` **合并补回** demo 手机端块（`text-size-adjust:100%`、`body padding-bottom:env(safe-area-inset-bottom)`、`.navbar padding-top:env(safe-area-inset-top)`、≤820px 导航/发送钮≥44px、图例/缩放钮≥40px、中文 11→12/13px），**保留本地已有的全宽 overflow-wrap 规则**（合并非覆盖），7 页 viewport meta 补 `viewport-fit=cover`；③ **知识图谱手机端**——`knowledge.html` 加 `fsScale=min(1,max(0.75,W/700))` 标签字号随视口宽等比缩小 + `scale=max(0.45,·/1400)` 缩放下限，`wf` 三处乘 `fsScale`，窄屏图谱不被过度缩小；④ **color-scheme meta 全站统一**——6 页 `<meta name="color-scheme" content="dark light">`；⑤ **身份切换停留 index**——身份卡点击后写入 `chem-user` 并原地 `applyRole` 刷新右上角徽章与角色门控，停留 index 不跳 main（采纳用户意见：切换身份应落在 index，撤 demo 的"身份识别一次自动进手册"重定向与 `getChemRole` 全局）；⑥ **干净化**——`kg.json` 删 15 个死字段 `cat`（全项目无代码读 `node.cat`，行级删除保留多行数组格式）、`corpus.json` 15 条裸 `中` 难度归一为 `进阶级`（400 进阶级/7 入门/32 基础/6 提高；前端不显示语料难度，`gap-analysis` 对其优先级由 3 升 0）；⑦ **去 AI 味·减弱 chrome 特效（保留粒子）**——对齐 demo 观感：导航毛玻璃 `blur(20/14px)`→`blur(6px)` 去 `saturate(1.5)`、导航底更实（`rgba(10,14,26,.82)`→`.92`）、logo 流光 `chemaiFlow 5s`→`9s` + 辉光 `drop-shadow(0 0 5px .35)`→`drop-shadow(0 0 1px .15)`、环境光斑 `rgba(16,185,129,.16)`→`.07` 且 `blur(70px)`→`blur(40px)`、`chemaiDrift 26s`→`44s`；**字体收敛**——主体弃 Inter/Space Grotesk 统一系统字体栈（PingFang/YaHei/Noto Sans SC），仅保留 JetBrains Mono（公式/演示）；**粒子背景完整保留**（main/corpus/prep/assistant 走外部 `assets/bg-particles.js`，knowledge 内联，7 页 git diff 无粒子行删减）；⑧ **二遍去 AI 味·残余渐变光晕收敛**——标题渐变流光 `chemaiShine 7/8s`→`40s`（近乎静止）、index hero `gradFlow 6s`→`40s`，残留霓虹光晕按半强度收敛（`.stat-num .45`→`.2`、`.badge b .4`→`.2`、`.hl .35`→`.18`、`.panel-title .22`→`.12`、`.g-tag 10px`→`4px`、导航下划线 `.55`→`.3`、卡片悬浮 `.13`→`.06`、标题 drop-shadow `.3/.22`→`.15/.12`）；⑨ **assistant 问题排版**——"可能问题"chips（顶部 `MODE_CHIPS` 建议 + 答案内"你可能还想问" + 角色追问）共用 `.chip`，加 `line-height:1.55`/`white-space:normal`/`max-width:100%`（长问法多行换行不溢出）、`.chips` 容器 `align-items:center`、手机端 `.chip{min-height:40px;padding:8px 14px;font-size:12.5px}`（触控高度由 ~27px 提至 40px）；⑩ **assistant 答案文段分布**——答案文本以 `\n`（单换行）分隔各叙述句、`\n\n` 切段，但 `.ans-line`（单`\n`句）无 margin 与 `.ans-eq`(4px)/`.ans-head`(10/4)/`.ans-block`(9px) 节奏不一致，叙述句紧贴成一坨；现给 `.ans-line{margin:3px 0}`，形成"单`\n`微距 < 段距(9px) < 方程/标题"的清晰层级（纯 CSS，未动 `renderRichAnswer`，render-audit 0 段问题）。✅ 6 改动页内联脚本全解析 0 失败、kg/corpus JSON 校验通过、level4 9 节点未归并 |
 | **v85** | 09-01 | **全局优化 + 语料权威度 + AI 模型文档 + 部署补齐**：① **读透全部 445 篇语料**——离线确定性作业 `训练管道/corpus_weight_analysis.js`（`npm run corpus:weights`）计算权威度 `A(id)` + 子域反挤占 boost，产出 `data/corpus_weights.json` + `docs/语料权重分析报告.md`；② **加法式/门禁级运行时 hook**——`loadCorpus`→`searchCorpus` 加法 boost + `buildLLMContext` 权威优先 cherry-pick + `relatedFAQs` 子域偏好，不进 `matchFAQ` 基础公式；③ **AI 模型文档** `docs/AI模型架构.md` 诚实说明检索排序非神经网络、唯一神经网络是 DeepSeek；④ **README 重写**；⑤ **部署补齐**——`deploy.yml` 补 `generator.html`/`data/categories.json`/`data/corpus_weights.json`/`scripts/lib-calc.js`，`package.json` repository.url 修正 |
@@ -296,7 +297,7 @@ npx serve .                     # Node.js
 
 ### FAQ 自训练增长链（"重复任务"时间线）
 
-FAQ 累计 4211 条的演进路径（含跨版本的自训练轮次）：
+FAQ 累计 4588 条的演进路径（含跨版本的自训练轮次）：
 
 | 阶段 | FAQ 数 | 说明 |
 |------|:------:|------|

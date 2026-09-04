@@ -137,6 +137,8 @@ a{text-decoration:none;color:inherit}
 .subcard-title{font-size:15.5px;font-weight:700}
 .subcard .feat{margin-bottom:16px}
 .subcard .btn{padding:9px 16px;font-size:13px;border-radius:10px}
+.sub-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.sub-tags .st{font-size:11.5px;line-height:1;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:999px;padding:4px 9px}
 /* 建议流程 */
 .flow{
   margin-top:30px;background:var(--bg2);border:1px dashed var(--bd2);border-radius:var(--r);
@@ -222,10 +224,21 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
     <p>在走进实验室之前，通过 AI 多轮对话测评定位知识薄弱点，再结合题库练习与错题本针对性巩固，最后完成预习检测，为「三草酸合铁酸钾的制备」实验做好充分准备。</p>
     <div class="banner-stats">
       <div class="bstat"><span class="dot" style="background:var(--emerald)"></span><b>3</b>&nbsp;大预习模块</div>
-      <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>134</b>&nbsp;道精选习题</div>
-      <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>5</b>&nbsp;大知识方向</div>
-      <div class="bstat"><span class="dot" style="background:var(--yellow)"></span><b>2</b>&nbsp;种题型模式</div>
+      <div class="bstat"><span class="dot" style="background:var(--blue)"></span><b>百余</b>&nbsp;道精选习题</div>
+      <div class="bstat"><span class="dot" style="background:var(--purple)"></span><b>7</b>&nbsp;大知识方向</div>
+      <div class="bstat"><span class="dot" style="background:var(--yellow)"></span><b>4</b>&nbsp;种题型模式</div>
     </div>
+  </section>
+
+  <!-- 🧭 学习通任务包（置顶） -->
+  <section class="task-pack" id="taskPack">
+    <div class="task-pack-head">
+      <div>
+        <h2>🧭 任务包 · 按步骤走</h2>
+        <span class="mb-sub">读 → 看 → 练 → 测，做完再去下一站</span>
+      </div>
+    </div>
+    <ol class="tp-steps" id="tpSteps"></ol>
   </section>
 
   <!-- 📖 实验手册（课前）独立板块 -->
@@ -235,21 +248,10 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
         <h2>📖 实验手册 · 课前必读</h2>
         <span class="mb-sub">先看「怎么做」—— <b>目的 → 原理 → 步骤</b>，其余为额外阅读</span>
       </div>
-      <a class="btn" style="--accent:var(--emerald);--accent2:var(--teal)" href="main.html" title="打开完整实验手册">📖 完整手册（42 节）<span class="arr">→</span></a>
+      <a class="btn" style="--accent:var(--emerald);--accent2:var(--teal)" href="#part01" title="从第 1 部分开始阅读全文">📖 完整手册 · 11 章 42 节<span class="arr">→</span></a>
     </div>
     <div class="mb-side" id="mbSide"></div>
     <div class="mb-grid" id="mbGrid"><div class="loading-line">正在加载实验手册…</div></div>
-  </section>
-
-  <!-- 🧭 学习通任务包 -->
-  <section class="task-pack" id="taskPack">
-    <div class="task-pack-head">
-      <div>
-        <h2>🧭 任务包 · 按步骤走</h2>
-        <span class="mb-sub">读 → 看 → 练 → 测，做完再去下一站</span>
-      </div>
-    </div>
-    <ol class="tp-steps" id="tpSteps"></ol>
   </section>
 
   <!-- 三大模块 -->
@@ -294,7 +296,7 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
         <div class="card-icon">📝</div>
         <div>
           <div class="card-title">习题检测</div>
-          <div class="card-desc">题库练习 + 错题本双引擎，系统巩固实验相关的五大化学知识方向</div>
+          <div class="card-desc">题库练习 + 错题本双引擎，系统巩固实验相关的七大知识方向（含四类题型）</div>
         </div>
       </div>
       <div class="subgrid">
@@ -303,10 +305,10 @@ footer{margin-top:44px;text-align:center;color:var(--t3);font-size:12.5px;line-h
             <div class="subcard-icon">🗂️</div>
             <div class="subcard-title">题库练习</div>
           </div>
+          <div class="sub-tags"><span class="st">顺序练习</span><span class="st">随机抽测</span><span class="st">错题回顾</span><span class="st">模拟考试</span></div>
           <ul class="feat">
-            <li>精选 <strong>134 道题目</strong>，覆盖 <strong>5 大知识方向</strong></li>
-            <li>2 种题型 · 顺序练习 / 随机抽测 / 模拟考试</li>
-            <li>配位化学、氧化还原、分析化学、物理化学全覆盖</li>
+            <li>覆盖 <strong>7 大知识方向</strong> · <strong>4 种题型</strong>，题库持续更新</li>
+            <li>反应原理、实验操作、实验现象、物质性质、实验安全、配位化学、氧化还原</li>
           </ul>
           <a class="btn" style="--accent:var(--blue);--accent2:var(--purple)" href="index.html#/quiz">进入题库练习 <span class="arr">→</span></a>
         </div>
@@ -577,12 +579,14 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   function inline(s){
     var blocks=[];
-    s=String(s).replace(/\$\$([\s\S]+?)\$\$/g,function(m,f){blocks.push(f);return "\u0001"+(blocks.length-1)+"\u0002";});
-    s=esc(s);
-    s=s.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>");
-    s=s.replace(/\$([^$]+)\$/g,function(m,f){return '<span class="fx">'+renderFormula(f)+"</span>";});
-    s=s.replace(/\u0001(\d+)\u0002/g,function(m,i){return '<span class="fx fx-block">'+renderFormula(blocks[+i])+"</span>";});
-    return s;
+    // 只转义「非数学」散文，数学片段交由 renderFormula 各自转义一次，避免 `>`/`<`/`&` 被双重转义成裸 &gt;/&lt;
+    var src=String(s).replace(/\$\$([\s\S]+?)\$\$/g,function(m,f){blocks.push(f);return "\u0001"+(blocks.length-1)+"\u0002";});
+    var out="",m,last=0,re=/\$([^$]+)\$/g;
+    while((m=re.exec(src))){ out+=esc(src.slice(last,m.index)); out+='<span class="fx">'+renderFormula(m[1])+"</span>"; last=re.lastIndex; }
+    out+=esc(src.slice(last));
+    out=out.replace(/\u0001(\d+)\u0002/g,function(m,i){return '<span class="fx fx-block">'+renderFormula(blocks[+i])+"</span>";});
+    out=out.replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>");
+    return out;
   }
   function renderMd(md){
     var lines=String(md).split("\n"),out=[],i=0;
@@ -626,7 +630,7 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   function partHtml(g,gi){
     var arr=(g.ids||[]).map(function(id){return all[id];}).filter(Boolean);
-    return '<details class="mb-card mb-part" open><summary class="mb-card-head"><span class="mb-ico">'+g.ic+'</span>'+('<span class="mb-title">'+("0"+(gi+1)).slice(-2)+' · '+esc(g.t)+'</span>')+'<span class="mb-cat">'+arr.length+' 节</span></summary>'
+    return '<details class="mb-card mb-part" id="part'+("0"+(gi+1)).slice(-2)+'" open><summary class="mb-card-head"><span class="mb-ico">'+g.ic+'</span>'+('<span class="mb-title">'+("0"+(gi+1)).slice(-2)+' · '+esc(g.t)+'</span>')+'<span class="mb-cat">'+arr.length+' 节</span></summary>'
       +'<div class="mb-part-body">'+arr.map(secHtml).join('')+'</div></details>';
   }
   fetch('data/manual.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
@@ -635,27 +639,52 @@ document.addEventListener('DOMContentLoaded',function(){
     var g=document.getElementById('mbGrid');
     if(g){ g.innerHTML=DISPLAY.map(partHtml).join(''); }
     var side=document.getElementById('mbSide');
-    if(side){ side.innerHTML=DISPLAY.map(function(x,gi){return '<a class="mb-s-a" href="#part'+("0"+(gi+1)).slice(-2)+'"><b>'+("0"+(gi+1)).slice(-2)+'</b> '+esc(x.t.slice(0,12))+'</a>';}).join(''); }
+    if(side){ side.innerHTML=DISPLAY.map(function(x,gi){return '<a class="mb-s-a" href="#part'+("0"+(gi+1)).slice(-2)+'"><b>'+("0"+(gi+1)).slice(-2)+'</b><span>'+esc(x.t)+'</span></a>';}).join(''); }
     var steps=document.getElementById('tpSteps');
     if(steps){
       var arr=[['1','📖 读实验目的','目标（知识/能力/素养）· 01','#part01'],['2','📖 读基础原理与性质','02 部分','#part02'],['3','📖 读操作步骤','试剂/参数/要点 · 03','#part03'],['4','🖼 看关键图','装置与现象图','#manualBoard'],['5','💬 对话测评','多轮答题定位薄弱','assistant.html?mode=assess'],['6','📝 题库自测','实验核心题','index.html#/quiz']];
       steps.innerHTML=arr.map(function(s){ return '<li class="tp"><span class="tp-num">'+s[0]+'</span><div><div class="tp-t">'+s[1]+'</div><div class="tp-d">'+s[2]+'</div></div><a class="tp-go" href="'+s[3]+'">去完成 <span class="arr">→</span></a></li>'; }).join('');
     }
+    /* 手册异步渲染后，若 URL 带 #partNN / #manualBoard 锚点，补一次平滑滚动（浏览器初次 # 定位发生在元素生成前） */
+    var hid=location.hash?location.hash.slice(1):'';
+    if(hid){ var he=document.getElementById(hid); if(he){ he.scrollIntoView({behavior:'smooth',block:'start'}); } }
+    /* 章节索引滚动高亮：当前可见部分在侧栏高亮（对齐主站 toc 的 initSpy 风格） */
+    (function(){
+      var links=Array.prototype.slice.call(document.querySelectorAll('.mb-side .mb-s-a'));
+      var parts=Array.prototype.slice.call(document.querySelectorAll('.mb-grid .mb-part'));
+      if(!links.length||!parts.length||!('IntersectionObserver' in window))return;
+      var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+      function setActive(id){
+        links.forEach(function(l){l.classList.remove('active');});
+        var a=map[id];if(!a)return;a.classList.add('active');
+        var sb=document.getElementById('mbSide');
+        if(sb){var r=a.getBoundingClientRect(),sr=sb.getBoundingClientRect();
+          if(r.top<sr.top+10||r.bottom>sr.bottom-10)a.scrollIntoView({block:'nearest'});}
+      }
+      var obs=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting)setActive(e.target.id);});
+      },{rootMargin:'-70px 0px -70% 0px',threshold:0});
+      parts.forEach(function(p){obs.observe(p);});
+    })();
   }).catch(function(){var g=document.getElementById('mbGrid'); if(g) g.innerHTML='<div class="loading-line">手册加载失败（请用本地服务通过 HTTP 打开）</div>';});
   var all={};
 })();
 </script>
 <style id="manual-board-css">
-.manual-board,.task-pack{max-width:1160px;margin:30px auto 6px;padding:0 20px}
-.manual-board-head,.task-pack-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.task-pack{max-width:1160px;margin:30px auto 6px;padding:0 20px}
+.manual-board{max-width:1280px;margin:30px auto 6px;padding:0;display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px 22px;align-items:start;scroll-margin-top:84px}
+.manual-board-head,.task-pack-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;grid-column:1/-1}
 .manual-board-head h2,.task-pack-head h2{font-size:clamp(19px,2.8vw,24px);font-weight:700;margin:0}
 .mb-sub{font-size:13px;color:var(--t2)}
 .mb-grid{display:grid;grid-template-columns:1fr;gap:14px}
-.mb-side{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.mb-s-a{font-size:12.5px;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:999px;padding:6px 12px;text-decoration:none}
-.mb-s-a:hover{border-color:var(--emerald,#10b981);color:var(--emerald,#10b981)}
-.mb-s-a b{color:var(--emerald,#10b981);margin-right:5px}
-.mb-part{margin-bottom:0}
+.mb-side{position:sticky;top:84px;align-self:start;display:flex;flex-direction:column;gap:6px;max-height:calc(100vh - 104px);overflow-y:auto;background:var(--card,#1a2235);border:1px solid var(--bd2);border-radius:14px;padding:12px 10px;scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.35) transparent}
+.mb-s-a{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--t2);background:var(--bg2);border:1px solid var(--bd2);border-radius:10px;padding:8px 11px;line-height:1.4;text-decoration:none}
+.mb-s-a:hover{border-color:var(--emerald,#10b981);color:var(--emerald,#10b981);background:rgba(16,185,129,.06)}
+.mb-s-a b{color:var(--emerald,#10b981);font-size:11px;flex-shrink:0;min-width:22px}
+.mb-s-a span{min-width:0;overflow-wrap:anywhere}
+.mb-s-a.active{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.55);color:var(--emerald,#10b981);box-shadow:0 0 0 1px rgba(16,185,129,.15)}
+.mb-s-a.active b{color:var(--emerald,#10b981)}
+.mb-part{scroll-margin-top:84px;margin-bottom:0}
 .mb-part-body{padding:4px 18px 16px}
 .mb-sec{padding:10px 0;border-top:1px solid var(--bd);}
 .mb-sec:first-child{border-top:none}
@@ -678,7 +707,14 @@ document.addEventListener('DOMContentLoaded',function(){
 .tp-t{font-weight:600;font-size:14px}.tp-d{font-size:12.5px;color:var(--t3);margin-top:2px}
 .tp-go{margin-left:auto;font-size:12.5px;color:var(--emerald,#10b981);white-space:nowrap}
 .tp-go .arr{transition:transform .2s}.tp:hover .tp-go .arr{transform:translateX(3px)}
-@media(max-width:920px){.mb-grid,.tp-steps{grid-template-columns:1fr}.manual-board-head,.task-pack-head{flex-direction:column;align-items:flex-start}}
+@media(max-width:920px){
+  .manual-board{grid-template-columns:1fr}
+  .mb-grid,.tp-steps{grid-template-columns:1fr}
+  .manual-board-head,.task-pack-head{flex-direction:column;align-items:flex-start}
+  .mb-side{position:static;flex-direction:row;flex-wrap:wrap;max-height:none;overflow:visible;background:transparent;border:none;padding:0;gap:8px;margin-bottom:14px}
+  .mb-s-a{border-radius:999px;padding:6px 12px;font-size:12px}
+  .mb-s-a b{min-width:auto}
+}
 </style>
 <style id="manual-md-css">
 /* —— 从 main.html 移植：公式(.fx)/表格(.tbl-wrap)/图片(.sec-figs)/灯箱(.lb) 样式 —— */

@@ -16,3 +16,10 @@ main .max-w-3xl .rounded-2xl .grid .flex.items-center{gap:.7rem!important}
 /* ---- 会话/答题卡：玻璃渐变 + 选项/按钮 hover ---- */
 main .max-w-2xl{max-width:48rem!important}
 main .max-w-2xl .rounded-xl.border{background:linear-gradient(180deg,var(--bg-secondary),color-mix(in srgb,var(--bg-primary) 94%,transparent))!important;border:1px solid var(--border-subtle)!important;border-radius:1rem!important;box-shadow:0 6px 24px rgba(0,0,0,.14)!important}
+/* ==== ChemAI: quiz 二期布局微调（hover 强调 + 间距，纯 CSS 安全）==== */
+main .max-w-3xl.mx-auto.space-y-6{row-gap:1rem!important;margin-top:1rem!important}
+main .max-w-3xl .text-center.mb-8{margin-bottom:1.6rem!important}
+main .max-w-3xl .grid .flex.items-start.gap-3,main .max-w-2xl .w-full.text-left.px-4.py-3{transition:border-color .16s ease,background .16s ease,transform .16s ease!important}
+main .max-w-3xl .grid .flex.items-start.gap-3:hover{border-color:color-mix(in srgb,var(--accent-primary) 55%,transparent)!important;background:color-mix(in srgb,var(--accent-primary) 8%,transparent)!important}
+main .max-w-3xl .grid .flex.items-start.gap-3:hover svg,main .max-w-3xl .grid .flex.items-start.gap-3:hover [class*="h-9"]{transform:scale(1.05)!important}
+main .max-w-2xl .w-full.text-left.px-4.py-3:hover{border-color:color-mix(in srgb,var(--accent-primary) 50%,transparent)!important;background:color-mix(in srgb,var(--accent-primary) 7%,transparent)!important}
